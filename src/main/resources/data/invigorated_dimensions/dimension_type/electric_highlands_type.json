@@ -1,0 +1,16 @@
+{
+  "name": "invigorated_dimensions:electric_highlands",
+  "ultrawarm": true,
+  "natural": false,
+  "piglin_safe": false,
+  "respawn_anchor_works": false,
+  "bed_works": false,
+  "has_raids": false,
+  "has_skylight": true,
+  "has_ceiling": false,
+  "coordinate_scale": 5,
+  "ambient_light": 0.6,
+  "logical_height": 256,
+  "effects": "minecraft:overworld",
+  "infiniburn": "minecraft:infiniburn_overworld"
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "invigorated_dimensions:block/crystallized_leaves"
+  }
+}
