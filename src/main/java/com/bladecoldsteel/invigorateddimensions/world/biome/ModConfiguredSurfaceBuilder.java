@@ -11,7 +11,7 @@ import net.minecraft.world.gen.surfacebuilders.SurfaceBuilderConfig;
 
 public class ModConfiguredSurfaceBuilder {
 
-    public static ConfiguredSurfaceBuilder<?> ELECTRIC_RIFT_SURFACE = register("electric_rift_surface",
+    public static ConfiguredSurfaceBuilder<?> ELECTRIC_SURFACE = register("electric_surface",
             SurfaceBuilder.DEFAULT.configured(new SurfaceBuilderConfig(
                     Blocks.GRASS_BLOCK.defaultBlockState(),
                     Blocks.DIRT.defaultBlockState(),

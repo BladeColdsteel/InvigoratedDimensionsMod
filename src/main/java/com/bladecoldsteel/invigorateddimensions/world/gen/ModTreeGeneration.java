@@ -1,6 +1,6 @@
 package com.bladecoldsteel.invigorateddimensions.world.gen;
 
-import com.bladecoldsteel.invigorateddimensions.world.biome.ModBiomes;
+import com.bladecoldsteel.invigorateddimensions.world.biome.ModBiomesDatapack;
 import net.minecraft.util.RegistryKey;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.biome.Biome;
@@ -24,8 +24,8 @@ public class ModTreeGeneration {
 
         LOGGER.info("Checking biome: {}", key.location());
 
-        if(event.getName().equals(ModBiomes.ELECTRIC_RIFT_BIOME.get().getRegistryName())) {
-            LOGGER.info("Generating trees for ELECTRIC_RIFT_BIOME");
+        if(event.getName().equals(ModBiomesDatapack.ELECTRIC_RIFT.getRegistryName())) {
+            LOGGER.info("Generating trees for the Electric Rift");
                 List<Supplier<ConfiguredFeature<?, ?>>> base =
                         event.getGeneration().getFeatures(GenerationStage.Decoration.VEGETAL_DECORATION);
 
@@ -34,7 +34,20 @@ public class ModTreeGeneration {
                         .decorated(Placement.COUNT_EXTRA.configured(
                                 new AtSurfaceWithExtraConfig(1, .15f, 2))));
         } else {
-            LOGGER.info("Biome {} does not match ELECTRIC_RIFT_BIOME", key.location());
+            LOGGER.info("Biome {} does not match the Electric Rift", key.location());
+        }
+
+        if(event.getName().equals(ModBiomesDatapack.THUNDERING_PLAINS.getRegistryName())) {
+            LOGGER.info("Generating trees for the Thundering Plains");
+            List<Supplier<ConfiguredFeature<?, ?>>> base =
+                    event.getGeneration().getFeatures(GenerationStage.Decoration.VEGETAL_DECORATION);
+
+            base.add(() -> ModConfiguredFeatures.ELECTRICALLY_CHARGED
+                    .decorated(Features.Placements.HEIGHTMAP_SQUARE)
+                    .decorated(Placement.COUNT_EXTRA.configured(
+                            new AtSurfaceWithExtraConfig(0, .015f, 1))));
+        } else {
+            LOGGER.info("Biome {} does not match the Thundering Plains", key.location());
         }
     }
 }

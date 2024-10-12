@@ -1,124 +1,75 @@
 {
-  "type": "invigorated_dimensions:electric_highlands_type",
+  "type": {
+    "name": "invigorated_dimensions:electric_highlands_dimtype",
+    "ultrawarm": false,
+    "natural": false,
+    "piglin_safe": false,
+    "respawn_anchor_works": false,
+    "bed_works": false,
+    "has_raids": false,
+    "has_skylight": true,
+    "has_ceiling": false,
+    "coordinate_scale": 5,
+    "ambient_light": 0.7,
+    "logical_height": 256,
+    "effects": "minecraft:overworld",
+    "infiniburn": "minecraft:infiniburn_overworld"
+  },
   "generator": {
-    "type": "minecraft:noise",
-    "seed": 2127749049,
-    "settings": {
-      "type": "minecraft:noise",
-      "seed": 2127749049,
-      "settings": {
-        "name": "invigorated_dimensions:electric_highlands",
-        "bedrock_roof_position": -10,
-        "bedrock_floor_position": 0,
-        "sea_level": 63,
-        "disable_mob_generation": false,
-        "default_block": {
-          "Name": "minecraft:grass_block",
-          "Properties": {
-            "snowy": "false"
-          }
-        },
-        "default_fluid": {
-          "Name": "minecraft:water",
-          "Properties": {
-            "level": "0"
-          }
-        },
-        "noise": {
-          "height": 256,
-          "density_factor": 1,
-          "density_offset": -0.46875,
-          "size_horizontal": 1,
-          "size_vertical": 2,
-          "simplex_surface_noise": true,
-          "random_density_offset": true,
-          "island_noise_override": true,
-          "amplified": false,
-          "sampling": {
-            "xz_scale": 1,
-            "y_scale": 1,
-            "xz_factor": 80,
-            "y_factor": 160
-          },
-          "bottom_slide": {
-            "target": -30,
-            "size": 0,
-            "offset": 0
-          },
-          "top_slide": {
-            "target": -10,
-            "size": 3,
-            "offset": 0
-          }
-        },
-        "structures": {
-          "structures": {}
-        }
-      },
-      "biome_source": {
-        "type": "minecraft:multi_noise",
-        "seed": 2127749049,
-        "altitude_noise": {
-          "firstOctave": -7,
-          "amplitudes": [
-            -1,
-            1
-          ]
-        },
-        "temperature_noise": {
-          "firstOctave": -7,
-          "amplitudes": [
-            -1,
-            1
-          ]
-        },
-        "humidity_noise": {
-          "firstOctave": -7,
-          "amplitudes": [
-            -1,
-            1
-          ]
-        },
-        "weirdness_noise": {
-          "firstOctave": -7,
-          "amplitudes": [
-            -1,
-            1
-          ]
-        },
-        "biomes": [
-          {
-            "biome": "minecraft:plains",
-            "parameters": {
-              "altitude": 0.5,
-              "temperature": 0,
-              "humidity": 0,
-              "weirdness": 1,
-              "offset": 0
-            }
-          },
-          {
-            "biome": "minecraft:dark_forest",
-            "parameters": {
-              "altitude": 1,
-              "temperature": 0.5,
-              "humidity": 1,
-              "weirdness": 0,
-              "offset": 0
-            }
-          },
-          {
-            "biome": "minecraft:bamboo_jungle",
-            "parameters": {
-              "altitude": 0,
-              "temperature": 1,
-              "humidity": 1,
-              "weirdness": 0,
-              "offset": 0
-            }
-          }
+    "type": "invigorated_dimensions:chunk_generator",
+    "settings": "invigorated_dimensions:electric_highlands",
+    "biome_source": {
+      "type": "invigorated_dimensions:biome_provider",
+      "altitude_noise": {
+        "firstOctave": -7,
+        "amplitudes": [
+          1,
+          1
         ]
-      }
+      },
+      "temperature_noise": {
+        "firstOctave": -7,
+        "amplitudes": [
+          1,
+          1
+        ]
+      },
+      "humidity_noise": {
+        "firstOctave": -7,
+        "amplitudes": [
+          1,
+          1
+        ]
+      },
+      "weirdness_noise": {
+        "firstOctave": -7,
+        "amplitudes": [
+          1,
+          1
+        ]
+      },
+      "biomes": [
+        {
+          "biome": "invigorated_dimensions:flashing_hills",
+          "parameters": {
+            "altitude": 0.2,
+            "temperature": 0.65,
+            "humidity": 0.3,
+            "weirdness": -0.1,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "invigorated_dimensions:thundering_plains",
+          "parameters": {
+            "altitude": 0,
+            "temperature": 0.6,
+            "humidity": 0.4,
+            "weirdness": 0.1,
+            "offset": 0
+          }
+        }
+      ]
     }
   }
 }

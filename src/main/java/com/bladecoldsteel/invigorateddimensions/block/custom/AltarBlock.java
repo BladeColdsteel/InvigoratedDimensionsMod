@@ -1,6 +1,7 @@
 package com.bladecoldsteel.invigorateddimensions.block.custom;
 
 import com.bladecoldsteel.invigorateddimensions.InvigoratedDimensions;
+import com.bladecoldsteel.invigorateddimensions.world.dimension.ModDimensions;
 import com.bladecoldsteel.invigorateddimensions.world.dimension.SimpleTeleporter;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -34,7 +35,7 @@ public class AltarBlock extends Block {
                     System.out.println("Server is available.");
 
                     // Check which dimension the player is currently in
-                    if (world.dimension() == InvigoratedDimensions.ELECTRIC_HIGHLANDS_WORLD) {
+                    if (world.dimension() == ModDimensions.ELECTRIC_HIGHLANDS) {
                         System.out.println("Player is in Electric Highlands.");
 
                         ServerWorld overWorld = server.getLevel(World.OVERWORLD);
@@ -47,7 +48,7 @@ public class AltarBlock extends Block {
                     } else {
                         System.out.println("Player is not in Electric Highlands. Trying to teleport to Electric Highlands.");
 
-                        ServerWorld electricHighlands = server.getLevel(InvigoratedDimensions.ELECTRIC_HIGHLANDS_WORLD);
+                        ServerWorld electricHighlands = server.getLevel(ModDimensions.ELECTRIC_HIGHLANDS);
                         if (electricHighlands != null) {
                             System.out.println("Electric Highlands found, teleporting player to Electric Dimension.");
                             player.changeDimension(electricHighlands, new SimpleTeleporter(pos, true));

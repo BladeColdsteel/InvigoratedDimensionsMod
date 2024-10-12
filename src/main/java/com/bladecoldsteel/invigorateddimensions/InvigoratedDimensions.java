@@ -2,17 +2,14 @@ package com.bladecoldsteel.invigorateddimensions;
 
 import com.bladecoldsteel.invigorateddimensions.block.ModBlocks;
 import com.bladecoldsteel.invigorateddimensions.item.ModItems;
-import com.bladecoldsteel.invigorateddimensions.world.biome.ModBiomes;
-import com.bladecoldsteel.invigorateddimensions.world.gen.ModBiomeGeneration;
+import com.bladecoldsteel.invigorateddimensions.world.biome.ModBiomesDatapack;
+import com.bladecoldsteel.invigorateddimensions.world.dimension.CustomSurfaceBuilders;
+import com.bladecoldsteel.invigorateddimensions.world.dimension.ModDimensions;
 import com.google.common.collect.ImmutableMap;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.item.AxeItem;
-import net.minecraft.util.RegistryKey;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.registry.Registry;
-import net.minecraft.world.World;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -33,12 +30,8 @@ import org.apache.logging.log4j.Logger;
 public class InvigoratedDimensions
 {
     public static final String MOD_ID = "invigorated_dimensions";
-    public static final RegistryKey<World> ELECTRIC_HIGHLANDS_WORLD = RegistryKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation(InvigoratedDimensions.MOD_ID, "electric_highlands"));
 
-
-
-    // Directly reference a log4j logger.
-    private static final Logger LOGGER = LogManager.getLogger();
+    public static final Logger LOGGER = LogManager.getLogger();
 
     public InvigoratedDimensions() {
 
@@ -46,7 +39,8 @@ public class InvigoratedDimensions
 
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
-        ModBiomes.register(eventBus);
+        ModBiomesDatapack.register(eventBus);
+        CustomSurfaceBuilders.register(eventBus);
 
         // Register the setup method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
@@ -63,15 +57,15 @@ public class InvigoratedDimensions
 
     private void setup(final FMLCommonSetupEvent event)
     {
-
-        ModBiomeGeneration.generateBiomes();
-
         event.enqueueWork(() -> {
+
+            ModDimensions.register();
 
             AxeItem.STRIPABLES = new ImmutableMap.Builder<Block, Block>().putAll(AxeItem.STRIPABLES)
                     .put(ModBlocks.ELECTRICALLY_CHARGED_LOG.get(), ModBlocks.STRIPPED_ELECTRICALLY_CHARGED_LOG.get())
                     .put(ModBlocks.ELECTRICALLY_CHARGED_WOOD.get(), ModBlocks.STRIPPED_ELECTRICALLY_CHARGED_WOOD.get())
                     .build();
+
         });
 
     }

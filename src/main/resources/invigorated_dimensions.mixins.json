@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "com.bladecoldsteel.invigorateddimensions.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "invigorated_dimensions.refmap.json",
+  "mixins": [
+    "DimensionGeneratorSettingsMixin"
+  ],
+  "client": [],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "minVersion": "0.8"
+}
