@@ -17,8 +17,7 @@ public class ElectricOres extends OreBlock {
             return MathHelper.nextInt(random, 0, 2);
         } else {
             return this == ElectricHighlandsBlocks.CHARGED_DIAMOND_ORE.get()
-                    || this == ElectricHighlandsBlocks.CHARGED_GLOWSTONE_ORE.get()
-                    || this == ElectricHighlandsBlocks.CHARGED_VOLTCRYST_ORE.get() ? MathHelper.nextInt(random, 4, 8) : 0;
+                    || this == ElectricHighlandsBlocks.CHARGED_GLOWSTONE_ORE.get() ? MathHelper.nextInt(random, 4, 8) : 0;
         }
     }
 }
