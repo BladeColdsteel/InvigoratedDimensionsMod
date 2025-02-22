@@ -1,0 +1,20 @@
+{
+    "id": "Mega Gyarados",
+    "spawnInfos": [
+        {
+            "spec": "species:Gyarados",
+            "stringLocationTypes": [
+                "Water"
+            ],
+            "spawnSpecificBossRate": 1,
+            "condition": {
+                "stringBiomes": [
+                    "na water"
+                ]
+            },
+            "interval": "megaBoss",
+            "typeID": "pokemon",
+            "rarity": 0.3
+        }
+    ]
+}

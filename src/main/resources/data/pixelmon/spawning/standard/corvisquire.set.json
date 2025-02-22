@@ -1,0 +1,40 @@
+{
+    "id": "Corvisquire",
+    "spawnInfos": [
+        {
+            "spec": "species:Corvisquire",
+            "stringLocationTypes": [
+                "Air",
+                "Headbutt"
+            ],
+            "minLevel": 18,
+            "maxLevel": 35,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DUSK",
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "na flying"
+                ]
+            },
+            "rarity": 90.0
+        },
+        {
+            "spec": "species:Corvisquire",
+            "stringLocationTypes": [
+                "Air"
+            ],
+            "minLevel": 18,
+            "maxLevel": 35,
+            "typeID": "pokemon",
+            "condition": {
+                "stringBiomes": [
+                    "na flying"
+                ]
+            },
+            "rarity": 100.0
+        }
+    ]
+}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "invigorated_dimensions:electrically_charged_stone"
+  },
+  "result": "invigorated_dimensions:electrically_charged_stone_brick_slab",
+  "count": 2
+}

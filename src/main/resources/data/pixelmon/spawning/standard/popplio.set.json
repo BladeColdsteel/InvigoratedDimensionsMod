@@ -1,0 +1,33 @@
+{
+    "id": "Popplio",
+    "spawnInfos": [
+        {
+            "spec": "species:Popplio",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 5,
+            "maxLevel": 16,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "MORNING"
+                ],
+                "stringBiomes": [
+                    "na water"
+                ]
+            },
+            "rarityMultipliers": [
+                {
+                    "multiplier": 2,
+                    "condition": {
+                        "weathers": [
+                            "CLEAR"
+                        ]
+                    }
+                }
+            ],
+            "rarity": 10.0
+        }
+    ]
+}

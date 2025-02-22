@@ -1,0 +1,83 @@
+{
+    "id": "Arcanine",
+    "spawnInfos": [
+        {
+            "spec": "species:Arcanine",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 25,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "AFTERNOON"
+                ],
+                "weathers": [
+                    "CLEAR"
+                ],
+                "stringBiomes": [
+                    "nether fire"
+                ]
+            },
+            "rarity": 0.5
+        },
+        {
+            "spec": "species:Arcanine form:hisuian",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 25,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "AFTERNOON"
+                ],
+                "weathers": [
+                    "CLEAR"
+                ],
+                "stringBiomes": [
+                    "nether fire"
+                ]
+            },
+            "rarity": 0.01
+        },
+        {
+            "spec": "species:Arcanine form:hisuian",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 25,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAY"
+                ],
+                "stringBiomes": [
+                    "nether fire"
+                ]
+            },
+            "rarity": 5.0
+        },
+        {
+            "spec": "species:Arcanine palette:ashen",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 25,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "AFTERNOON"
+                ],
+                "stringBiomes": [
+                    "nether fire"
+                ]
+            },
+            "rarity": 0.5
+        }
+    ]
+}

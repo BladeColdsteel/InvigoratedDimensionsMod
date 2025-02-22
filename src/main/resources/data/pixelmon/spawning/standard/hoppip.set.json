@@ -1,0 +1,23 @@
+{
+    "id": "Hoppip",
+    "spawnInfos": [
+        {
+            "spec": "species:Hoppip",
+            "stringLocationTypes": [
+                "Air"
+            ],
+            "minLevel": 5,
+            "maxLevel": 17,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "AFTERNOON"
+                ],
+                "stringBiomes": [
+                    "na grass"
+                ]
+            },
+            "rarity": 250.0
+        }
+    ]
+}

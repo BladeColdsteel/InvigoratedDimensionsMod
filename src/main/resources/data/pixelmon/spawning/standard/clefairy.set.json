@@ -1,0 +1,100 @@
+{
+    "id": "Clefairy",
+    "spawnInfos": [
+        {
+            "spec": "species:Clefairy",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 15,
+            "maxLevel": 35,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:moon_stone",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "times": [
+                    "DUSK",
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "na fairy"
+                ],
+                "minY": 70
+            },
+            "rarity": 8.0
+        },
+        {
+            "spec": "species:Clefairy",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 15,
+            "maxLevel": 35,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:moon_stone",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "stringBiomes": [
+                    "na fairy"
+                ]
+            },
+            "rarity": 8.0
+        },
+        {
+            "spec": "species:Clefairy",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 15,
+            "maxLevel": 35,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:moon_stone",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "na fairy"
+                ]
+            },
+            "rarity": 100.0
+        },
+        {
+            "spec": "species:Clefairy",
+            "stringLocationTypes": [
+                "Underground"
+            ],
+            "minLevel": 15,
+            "maxLevel": 35,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:moon_stone",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "minY": 70
+            },
+            "anticondition": {
+                "stringBiomes": [
+                    "ultra space"
+                ]
+            },
+            "rarity": 8.0
+        }
+    ]
+}

@@ -1,0 +1,118 @@
+{
+    "id": "Cofagrigus",
+    "spawnInfos": [
+        {
+            "spec": "species:Cofagrigus",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 35,
+            "maxLevel": 47,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:spell_tag",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "na ghost"
+                ]
+            },
+            "rarityMultipliers": [
+                {
+                    "multiplier": 2,
+                    "condition": {
+                        "neededNearbyBlocks": [
+                            "minecraft:sandstone"
+                        ]
+                    }
+                }
+            ],
+            "rarity": 0.5
+        },
+        {
+            "spec": "species:Cofagrigus",
+            "stringLocationTypes": [
+                "Underground"
+            ],
+            "minLevel": 35,
+            "maxLevel": 47,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:spell_tag",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "na ghost"
+                ]
+            },
+            "rarityMultipliers": [
+                {
+                    "multiplier": 2,
+                    "condition": {
+                        "neededNearbyBlocks": [
+                            "minecraft:sandstone"
+                        ]
+                    }
+                }
+            ],
+            "rarity": 0.5
+        },
+        {
+            "spec": "species:Cofagrigus",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 35,
+            "maxLevel": 47,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:spell_tag",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "na ghost"
+                ]
+            },
+            "rarity": 25.0
+        },
+        {
+            "spec": "species:Cofagrigus",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 35,
+            "maxLevel": 47,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:spell_tag",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "stringBiomes": [
+                    "na ghost"
+                ]
+            },
+            "rarity": 0.5
+        }
+    ]
+}

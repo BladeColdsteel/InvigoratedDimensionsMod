@@ -1,0 +1,41 @@
+{
+    "id": "Larvesta",
+    "spawnInfos": [
+        {
+            "spec": "species:Larvesta",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 5,
+            "maxLevel": 30,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAY"
+                ],
+                "stringBiomes": [
+                    "na bug"
+                ]
+            },
+            "rarity": 30.0
+        },
+        {
+            "spec": "species:Larvesta",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 5,
+            "maxLevel": 30,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAY"
+                ],
+                "stringBiomes": [
+                    "na bug"
+                ]
+            },
+            "rarity": 100.0
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+{
+    "id": "Arctibax",
+    "spawnInfos": [
+        {
+            "spec": "species:Arctibax",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 35,
+            "maxLevel": 53,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "end dragon"
+                ]
+            },
+            "rarity": 5.0
+        },
+        {
+            "spec": "species:Arctibax",
+            "stringLocationTypes": [
+                "Underground"
+            ],
+            "minLevel": 35,
+            "maxLevel": 53,
+            "typeID": "pokemon",
+            "condition": {
+                "stringBiomes": [
+                    "end dragon"
+                ],
+                "minY": 70
+            },
+            "rarity": 5.0
+        }
+    ]
+}

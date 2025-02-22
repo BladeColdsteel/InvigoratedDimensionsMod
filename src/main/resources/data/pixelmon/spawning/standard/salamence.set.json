@@ -1,0 +1,77 @@
+{
+    "id": "Salamence",
+    "spawnInfos": [
+        {
+            "spec": "species:Salamence",
+            "stringLocationTypes": [
+                "Air"
+            ],
+            "minLevel": 50,
+            "maxLevel": 60,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:dragon_fang",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "end dragon"
+                ]
+            },
+            "rarity": 0.1
+        },
+        {
+            "spec": "species:Salamence",
+            "stringLocationTypes": [
+                "Air"
+            ],
+            "minLevel": 50,
+            "maxLevel": 60,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:dragon_fang",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "times": [
+                    "DAY"
+                ],
+                "stringBiomes": [
+                    "end dragon"
+                ]
+            },
+            "rarity": 1.0
+        },
+        {
+            "spec": "species:Salamence palette:alter",
+            "stringLocationTypes": [
+                "Air"
+            ],
+            "minLevel": 50,
+            "maxLevel": 60,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:dragon_fang",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "times": [
+                    "MIDDAY"
+                ],
+                "stringBiomes": [
+                    "end dragon"
+                ]
+            },
+            "rarity": 0.5
+        }
+    ]
+}

@@ -1,0 +1,77 @@
+{
+    "id": "Jolteon",
+    "spawnInfos": [
+        {
+            "spec": "species:Jolteon",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 35,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "highlands electric"
+                ]
+            },
+            "rarity": 0.5
+        },
+        {
+            "spec": "species:Jolteon",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 35,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAY"
+                ],
+                "stringBiomes": [
+                    "highlands electric"
+                ]
+            },
+            "rarity": 25.0
+        },
+        {
+            "spec": "species:Jolteon palette:strike",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 35,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "highlands electric"
+                ]
+            },
+            "rarity": 1.0
+        },
+        {
+            "spec": "species:Jolteon palette:spirit",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 35,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "structures": [
+                    "pixelmon:graveyard"
+                ]
+            },
+            "rarity": 0.05
+        }
+    ]
+}

@@ -1,0 +1,41 @@
+{
+    "id": "Pheromosa",
+    "spawnInfos": [
+        {
+            "spec": "species:Pheromosa",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "tags": [
+                "ultrabeast"
+            ],
+            "minLevel": 60,
+            "maxLevel": 60,
+            "typeID": "pokemon",
+            "condition": {
+                "stringBiomes": [
+                    "na bug"
+                ]
+            },
+            "rarity": 0.5
+        },
+        {
+            "spec": "species:Pheromosa",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "tags": [
+                "ultrabeast"
+            ],
+            "minLevel": 60,
+            "maxLevel": 60,
+            "typeID": "pokemon",
+            "condition": {
+                "stringBiomes": [
+                    "na bug"
+                ]
+            },
+            "rarity": 5.0
+        }
+    ]
+}

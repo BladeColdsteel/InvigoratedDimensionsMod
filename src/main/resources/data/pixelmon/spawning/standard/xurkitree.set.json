@@ -1,0 +1,41 @@
+{
+    "id": "Xurkitree",
+    "spawnInfos": [
+        {
+            "spec": "species:Xurkitree",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "tags": [
+                "ultrabeast"
+            ],
+            "minLevel": 60,
+            "maxLevel": 60,
+            "typeID": "pokemon",
+            "condition": {
+                "stringBiomes": [
+                    "highlands electric"
+                ]
+            },
+            "rarity": 0.5
+        },
+        {
+            "spec": "species:Xurkitree",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "tags": [
+                "ultrabeast"
+            ],
+            "minLevel": 60,
+            "maxLevel": 60,
+            "typeID": "pokemon",
+            "condition": {
+                "stringBiomes": [
+                    "highlands electric"
+                ]
+            },
+            "rarity": 5.0
+        }
+    ]
+}

@@ -1,0 +1,150 @@
+{
+    "id": "Graveler",
+    "spawnInfos": [
+        {
+            "spec": "species:Graveler",
+            "stringLocationTypes": [
+                "Land",
+                "Rock Smash"
+            ],
+            "minLevel": 25,
+            "maxLevel": 36,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:ever_stone",
+                    "percentChance": 5
+                },
+                {
+                    "itemID": "pixelmon:black_augurite",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "stringBiomes": [
+                    "na rock"
+                ],
+                "maxY": 80
+            },
+            "rarity": 40.0
+        },
+        {
+            "spec": "species:Graveler",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 25,
+            "maxLevel": 36,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:ever_stone",
+                    "percentChance": 5
+                },
+                {
+                    "itemID": "pixelmon:black_augurite",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "stringBiomes": [
+                    "na rock"
+                ]
+            },
+            "rarity": 100.0
+        },
+        {
+            "spec": "species:Graveler form:alolan",
+            "stringLocationTypes": [
+                "Land",
+                "Rock Smash"
+            ],
+            "minLevel": 25,
+            "maxLevel": 36,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:cell_battery",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "stringBiomes": [
+                    "na rock"
+                ]
+            },
+            "rarity": 0.5
+        },
+        {
+            "spec": "species:Graveler form:alolan",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 25,
+            "maxLevel": 36,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:cell_battery",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "stringBiomes": [
+                    "na rock"
+                ]
+            },
+            "rarity": 100.0
+        },
+        {
+            "spec": "species:Graveler",
+            "stringLocationTypes": [
+                "Underground"
+            ],
+            "minLevel": 25,
+            "maxLevel": 36,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:ever_stone",
+                    "percentChance": 5
+                },
+                {
+                    "itemID": "pixelmon:black_augurite",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "maxY": 70
+            },
+            "anticondition": {
+                "stringBiomes": [
+                    "ultra space"
+                ]
+            },
+            "rarity": 40.0
+        },
+        {
+            "spec": "species:Graveler form:alolan",
+            "stringLocationTypes": [
+                "Underground"
+            ],
+            "minLevel": 25,
+            "maxLevel": 36,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:cell_battery",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "stringBiomes": [
+                    "na rock"
+                ],
+                "maxY": 70
+            },
+            "rarity": 0.5
+        }
+    ]
+}

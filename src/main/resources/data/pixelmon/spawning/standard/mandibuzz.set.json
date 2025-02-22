@@ -1,0 +1,45 @@
+{
+    "id": "Mandibuzz",
+    "spawnInfos": [
+        {
+            "spec": "species:Mandibuzz",
+            "stringLocationTypes": [
+                "Air"
+            ],
+            "minLevel": 55,
+            "maxLevel": 63,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "AFTERNOON",
+                    "DUSK",
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "na dark"
+                ]
+            },
+            "anticondition": {
+                "stringBiomes": [
+                    "minecraft:desert_lakes"
+                ]
+            },
+            "rarity": 0.5
+        },
+        {
+            "spec": "species:Mandibuzz",
+            "stringLocationTypes": [
+                "Air"
+            ],
+            "minLevel": 55,
+            "maxLevel": 63,
+            "typeID": "pokemon",
+            "condition": {
+                "stringBiomes": [
+                    "na dark"
+                ]
+            },
+            "rarity": 100.0
+        }
+    ]
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_top_rh",
+  "textures": {
+    "top": "invigorated_dimensions:block/electrically_charged_door_top",
+    "bottom": "invigorated_dimensions:block/electrically_charged_door_bottom"
+  }
+}

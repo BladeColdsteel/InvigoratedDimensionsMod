@@ -1,0 +1,26 @@
+{
+    "id": "Clobbopus",
+    "spawnInfos": [
+        {
+            "spec": "species:Clobbopus",
+            "stringLocationTypes": [
+                "Seafloor"
+            ],
+            "minLevel": 10,
+            "maxLevel": 30,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:lucky_punch",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "stringBiomes": [
+                    "na fighting"
+                ]
+            },
+            "rarity": 100.0
+        }
+    ]
+}

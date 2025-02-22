@@ -1,0 +1,40 @@
+{
+    "id": "Lombre",
+    "spawnInfos": [
+        {
+            "spec": "species:Lombre",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 25,
+            "maxLevel": 40,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:mental_herb",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "weathers": [
+                    "RAIN"
+                ],
+                "stringBiomes": [
+                    "na water"
+                ]
+            },
+            "rarityMultipliers": [
+                {
+                    "multiplier": 2,
+                    "condition": {
+                        "neededNearbyBlocks": [
+                            "minecraft:lily_pad",
+                            "byg:tiny_lilypads"
+                        ]
+                    }
+                }
+            ],
+            "rarity": 8.0
+        }
+    ]
+}

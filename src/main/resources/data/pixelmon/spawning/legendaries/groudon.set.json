@@ -1,0 +1,54 @@
+{
+    "id": "Groudon",
+    "spawnInfos": [
+        {
+            "spec": "species:Groudon level:70",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "tags": [
+                "legendary"
+            ],
+            "interval": "legendary",
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAY"
+                ],
+                "weathers": [
+                    "CLEAR"
+                ],
+                "stringBiomes": [
+                    "na ground"
+                ]
+            },
+            "rarity": 1.0
+        },
+        {
+            "spec": "species:Groudon palette:meta level:70",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "tags": [
+                "legendary"
+            ],
+            "interval": "legendary",
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAY"
+                ],
+                "weathers": [
+                    "CLEAR"
+                ],
+                "stringBiomes": [
+                    "na ground"
+                ],
+                "partyHeadSpecies": [
+                    "Jirachi"
+                ]
+            },
+            "rarity": 0.5
+        }
+    ]
+}

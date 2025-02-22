@@ -1,0 +1,20 @@
+{
+    "id": "Maushold",
+    "spawnInfos": [
+        {
+            "spec": "species:Maushold form:family_of_four",
+            "stringLocationTypes": [
+                "Indoors"
+            ],
+            "minLevel": 25,
+            "maxLevel": 35,
+            "typeID": "pokemon",
+            "condition": {
+                "stringBiomes": [
+                    "overworld normal"
+                ]
+            },
+            "rarity": 10.0
+        }
+    ]
+}

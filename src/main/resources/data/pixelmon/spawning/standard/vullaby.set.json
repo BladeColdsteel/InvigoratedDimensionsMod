@@ -1,0 +1,27 @@
+{
+    "id": "Vullaby",
+    "spawnInfos": [
+        {
+            "spec": "species:Vullaby",
+            "stringLocationTypes": [
+                "Land",
+                "Tree Top",
+                "Headbutt"
+            ],
+            "minLevel": 42,
+            "maxLevel": 53,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "AFTERNOON",
+                    "DUSK",
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "na dark"
+                ]
+            },
+            "rarity": 130.0
+        }
+    ]
+}

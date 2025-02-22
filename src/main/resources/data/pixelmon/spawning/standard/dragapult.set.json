@@ -1,0 +1,59 @@
+{
+    "id": "Dragapult",
+    "spawnInfos": [
+        {
+            "spec": "species:Dragapult",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 60,
+            "maxLevel": 75,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "end dragon"
+                ]
+            },
+            "rarity": 0.1
+        },
+        {
+            "spec": "species:Dragapult",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 60,
+            "maxLevel": 75,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "end dragon"
+                ]
+            },
+            "rarity": 1.0
+        },
+        {
+            "spec": "species:Dragapult palette:spirit",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 60,
+            "maxLevel": 75,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "MIDNIGHT"
+                ],
+                "structures": [
+                    "pixelmon:graveyard"
+                ]
+            },
+            "rarity": 0.05
+        }
+    ]
+}

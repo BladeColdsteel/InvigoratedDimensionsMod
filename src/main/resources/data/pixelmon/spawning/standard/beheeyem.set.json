@@ -1,0 +1,54 @@
+{
+    "id": "Beheeyem",
+    "spawnInfos": [
+        {
+            "spec": "species:Beheeyem",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 43,
+            "maxLevel": 54,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAWN",
+                    "DUSK"
+                ],
+                "stringBiomes": [
+                    "na psychic"
+                ]
+            },
+            "rarity": 0.5
+        },
+        {
+            "spec": "species:Beheeyem",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 43,
+            "maxLevel": 54,
+            "typeID": "pokemon",
+            "condition": {
+                "stringBiomes": [
+                    "na psychic"
+                ]
+            },
+            "rarity": 0.5
+        },
+        {
+            "spec": "species:Beheeyem",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 43,
+            "maxLevel": 54,
+            "typeID": "pokemon",
+            "condition": {
+                "stringBiomes": [
+                    "na psychic"
+                ]
+            },
+            "rarity": 25.0
+        }
+    ]
+}

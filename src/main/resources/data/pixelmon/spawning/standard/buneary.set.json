@@ -1,0 +1,23 @@
+{
+    "id": "Buneary",
+    "spawnInfos": [
+        {
+            "spec": "species:Buneary",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 7,
+            "maxLevel": 17,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAY"
+                ],
+                "stringBiomes": [
+                    "overworld normal"
+                ]
+            },
+            "rarity": 130.0
+        }
+    ]
+}

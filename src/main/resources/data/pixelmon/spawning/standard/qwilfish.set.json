@@ -1,0 +1,118 @@
+{
+    "id": "Qwilfish",
+    "spawnInfos": [
+        {
+            "spec": "species:Qwilfish",
+            "stringLocationTypes": [
+                "Water"
+            ],
+            "minLevel": 5,
+            "maxLevel": 45,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:poison_barb",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "na water"
+                ],
+                "maxY": 50
+            },
+            "rarity": 90.0
+        },
+        {
+            "spec": "species:Qwilfish",
+            "stringLocationTypes": [
+                "Water"
+            ],
+            "minLevel": 5,
+            "maxLevel": 45,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:poison_barb",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "stringBiomes": [
+                    "na water"
+                ]
+            },
+            "rarity": 90.0
+        },
+        {
+            "spec": "species:Qwilfish form:hisuian",
+            "stringLocationTypes": [
+                "Water"
+            ],
+            "minLevel": 5,
+            "maxLevel": 45,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:poison_barb",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "na water"
+                ],
+                "maxY": 50
+            },
+            "rarity": 5.0
+        },
+        {
+            "spec": "species:Qwilfish form:hisuian",
+            "stringLocationTypes": [
+                "Water"
+            ],
+            "minLevel": 5,
+            "maxLevel": 45,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:poison_barb",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "stringBiomes": [
+                    "na water"
+                ]
+            },
+            "rarity": 10.0
+        },
+        {
+            "spec": "species:Qwilfish palette:drowned",
+            "stringLocationTypes": [
+                "Water"
+            ],
+            "minLevel": 5,
+            "maxLevel": 45,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:poison_barb",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "stringBiomes": [
+                    "na water"
+                ]
+            },
+            "rarity": 90.0
+        }
+    ]
+}

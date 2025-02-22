@@ -1,0 +1,23 @@
+{
+    "id": "Scovillain",
+    "spawnInfos": [
+        {
+            "spec": "species:Scovillain",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 30,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAY"
+                ],
+                "stringBiomes": [
+                    "na grass"
+                ]
+            },
+            "rarity": 5.0
+        }
+    ]
+}

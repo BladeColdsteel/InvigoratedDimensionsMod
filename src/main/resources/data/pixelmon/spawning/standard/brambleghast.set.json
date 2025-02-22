@@ -1,0 +1,38 @@
+{
+    "id": "Brambleghast",
+    "spawnInfos": [
+        {
+            "spec": "species:Brambleghast",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 30,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "stringBiomes": [
+                    "na grass"
+                ]
+            },
+            "rarity": 1.0
+        },
+        {
+            "spec": "species:Brambleghast palette:tangela",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 30,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "stringBiomes": [
+                    "na grass"
+                ],
+                "partyHeadSpecies": [
+                    "Tangrowth"
+                ]
+            },
+            "rarity": 0.1
+        }
+    ]
+}

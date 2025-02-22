@@ -1,27 +1,42 @@
 package com.bladecoldsteel.invigorateddimensions;
 
-import com.bladecoldsteel.invigorateddimensions.block.ModBlocks;
-import com.bladecoldsteel.invigorateddimensions.item.ModItems;
+import com.bladecoldsteel.invigorateddimensions.electrichighlands.block.ElectricHighlandsBlocks;
+import com.bladecoldsteel.invigorateddimensions.electrichighlands.block.ElectricHighlandsWoodTypes;
+import com.bladecoldsteel.invigorateddimensions.electrichighlands.item.ElectricHighlandsItems;
+import com.bladecoldsteel.invigorateddimensions.electrichighlands.tileentity.ElectricHighlandsTileEntities;
+import com.bladecoldsteel.invigorateddimensions.electrichighlands.util.ElectricHighlandsSoundEvents;
+import com.bladecoldsteel.invigorateddimensions.world.ElectricHighlandsStructures;
+import com.bladecoldsteel.invigorateddimensions.world.ModParticleTypes;
+import com.bladecoldsteel.invigorateddimensions.world.ModPointsOfInterest;
 import com.bladecoldsteel.invigorateddimensions.world.biome.ModBiomesDatapack;
 import com.bladecoldsteel.invigorateddimensions.world.dimension.CustomSurfaceBuilders;
 import com.bladecoldsteel.invigorateddimensions.world.dimension.ModDimensions;
+import com.bladecoldsteel.invigorateddimensions.world.gen.features.ElectricFeatures;
 import com.google.common.collect.ImmutableMap;
 import net.minecraft.block.Block;
+import net.minecraft.block.WoodType;
+import net.minecraft.client.renderer.Atlases;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
+import net.minecraft.client.renderer.tileentity.SignTileEntityRenderer;
 import net.minecraft.item.AxeItem;
+import net.minecraft.util.registry.WorldGenRegistries;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.ExtensionPoint;
 import net.minecraftforge.fml.InterModComms;
+import net.minecraftforge.fml.ModLoadingContext;
+import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
-import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
+import net.minecraftforge.fml.event.lifecycle.*;
 import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.network.FMLNetworkConstants;
+import net.minecraftforge.registries.DeferredRegister;
+import org.apache.commons.lang3.tuple.Pair;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -35,12 +50,33 @@ public class InvigoratedDimensions
 
     public InvigoratedDimensions() {
 
+        ModLoadingContext.get().registerExtensionPoint(
+                ExtensionPoint.DISPLAYTEST,
+                () -> Pair.of(() -> FMLNetworkConstants.IGNORESERVERONLY, (remote, isServer) -> true)
+        );
+
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        ModItems.register(eventBus);
-        ModBlocks.register(eventBus);
+        IEventBus forgeBus = MinecraftForge.EVENT_BUS;
+        forgeBus.addListener(EventPriority.NORMAL, ElectricHighlandsStructures::addDimensionalSpacing);
+
+        ElectricHighlandsItems.register(eventBus);
+        ElectricHighlandsBlocks.register(eventBus);
         ModBiomesDatapack.register(eventBus);
         CustomSurfaceBuilders.register(eventBus);
+        ModParticleTypes.register(eventBus);
+        ElectricHighlandsSoundEvents.register(eventBus);
+        ModPointsOfInterest.register(eventBus);
+        ElectricHighlandsTileEntities.register(eventBus);
+
+        DeferredRegister<?>[] registers = {
+          ElectricFeatures.ELECTRIC_FEATURES,
+          ElectricHighlandsStructures.STRUCTURES
+        };
+
+        for (DeferredRegister<?> register : registers) {
+            register.register(eventBus);
+        }
 
         // Register the setup method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
@@ -57,24 +93,45 @@ public class InvigoratedDimensions
 
     private void setup(final FMLCommonSetupEvent event)
     {
+
         event.enqueueWork(() -> {
 
             ModDimensions.register();
+            ElectricFeatures.registerConfiguredFeatures();
+            ElectricHighlandsStructures.registerStructures();
+            ElectricHighlandsStructures.registerConfiguredStructures();
 
             AxeItem.STRIPABLES = new ImmutableMap.Builder<Block, Block>().putAll(AxeItem.STRIPABLES)
-                    .put(ModBlocks.ELECTRICALLY_CHARGED_LOG.get(), ModBlocks.STRIPPED_ELECTRICALLY_CHARGED_LOG.get())
-                    .put(ModBlocks.ELECTRICALLY_CHARGED_WOOD.get(), ModBlocks.STRIPPED_ELECTRICALLY_CHARGED_WOOD.get())
+                    .put(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_LOG.get(), ElectricHighlandsBlocks.STRIPPED_ELECTRICALLY_CHARGED_LOG.get())
+                    .put(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_WOOD.get(), ElectricHighlandsBlocks.STRIPPED_ELECTRICALLY_CHARGED_WOOD.get())
                     .build();
+
+            WoodType.register(ElectricHighlandsWoodTypes.ELECTRICALLY_CHARGED);
+
+            InvigoratedDimensions.LOGGER.info("Registered Trees: {}", WorldGenRegistries.CONFIGURED_FEATURE.keySet());
+
+            InvigoratedDimensions.LOGGER.info("Registered Feature Key: {}",
+                    WorldGenRegistries.CONFIGURED_FEATURE.getKey(ElectricFeatures.ConfiguredFeatures.ELECTRIC_TREE));
 
         });
 
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {
-        // do something that can only be done on the client
 
-        RenderTypeLookup.setRenderLayer(ModBlocks.CRYSTALLIZED_LEAVES.get(), RenderType.cutout());
-        RenderTypeLookup.setRenderLayer(ModBlocks.ELECTRICALLY_CHARGED_SAPLING.get(), RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(ElectricHighlandsBlocks.CRYSTALLIZED_LEAVES.get(), RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_SAPLING.get(), RenderType.cutout());
+
+        RenderTypeLookup.setRenderLayer(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_DOOR.get(), RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_WOODEN_TRAPDOOR.get(), RenderType.cutout());
+
+        ClientRegistry.bindTileEntityRenderer(ElectricHighlandsTileEntities.SIGN_TILE_ENTITIES.get(),
+                SignTileEntityRenderer::new);
+        Atlases.addWoodType(ElectricHighlandsWoodTypes.ELECTRICALLY_CHARGED);
+    }
+
+    public void gatherData(GatherDataEvent event) {
+
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event)

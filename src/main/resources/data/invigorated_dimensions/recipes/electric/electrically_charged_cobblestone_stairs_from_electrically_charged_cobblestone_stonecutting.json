@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "invigorated_dimensions:electrically_charged_cobblestone"
+  },
+  "result": "invigorated_dimensions:electrically_charged_cobblestone_stairs",
+  "count": 1
+}

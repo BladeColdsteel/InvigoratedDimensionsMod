@@ -1,0 +1,38 @@
+{
+    "id": "Absol",
+    "spawnInfos": [
+        {
+            "spec": "species:Absol",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 5,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "MIDNIGHT"
+                ],
+                "stringBiomes": [
+                    "na dark"
+                ]
+            },
+            "rarity": 90.0
+        },
+        {
+            "spec": "species:Absol",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 5,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "stringBiomes": [
+                    "na dark"
+                ]
+            },
+            "rarity": 90.0
+        }
+    ]
+}

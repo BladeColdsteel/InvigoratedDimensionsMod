@@ -1,0 +1,51 @@
+{
+    "id": "Oshawott",
+    "spawnInfos": [
+        {
+            "spec": "species:Oshawott",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 5,
+            "maxLevel": 16,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "AFTERNOON"
+                ],
+                "stringBiomes": [
+                    "na water"
+                ]
+            },
+            "rarityMultipliers": [
+                {
+                    "multiplier": 2,
+                    "condition": {
+                        "weathers": [
+                            "RAIN"
+                        ]
+                    }
+                }
+            ],
+            "rarity": 10.0
+        },
+        {
+            "spec": "species:Oshawott",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 5,
+            "maxLevel": 16,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAY"
+                ],
+                "stringBiomes": [
+                    "na water"
+                ]
+            },
+            "rarity": 10.0
+        }
+    ]
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "invigorated_dimensions:block/electrically_charged_cobblestone",
+    "top": "invigorated_dimensions:block/electrically_charged_cobblestone",
+    "side": "invigorated_dimensions:block/electrically_charged_cobblestone"
+  }
+}

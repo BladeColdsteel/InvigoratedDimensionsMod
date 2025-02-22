@@ -1,0 +1,43 @@
+{
+    "id": "Passimian",
+    "spawnInfos": [
+        {
+            "spec": "species:Passimian",
+            "stringLocationTypes": [
+                "Land",
+                "Tree Top"
+            ],
+            "minLevel": 15,
+            "maxLevel": 40,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAY"
+                ],
+                "stringBiomes": [
+                    "na fighting"
+                ]
+            },
+            "rarity": 8.0
+        },
+        {
+            "spec": "species:Passimian",
+            "stringLocationTypes": [
+                "Land",
+                "Tree Top"
+            ],
+            "minLevel": 15,
+            "maxLevel": 40,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAY"
+                ],
+                "stringBiomes": [
+                    "na fighting"
+                ]
+            },
+            "rarity": 25.0
+        }
+    ]
+}

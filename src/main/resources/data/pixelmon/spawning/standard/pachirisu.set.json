@@ -1,0 +1,25 @@
+{
+    "id": "Pachirisu",
+    "spawnInfos": [
+        {
+            "spec": "species:Pachirisu",
+            "stringLocationTypes": [
+                "Land",
+                "Tree Top",
+                "Headbutt"
+            ],
+            "minLevel": 5,
+            "maxLevel": 20,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAY"
+                ],
+                "stringBiomes": [
+                    "highlands electric"
+                ]
+            },
+            "rarity": 250.0
+        }
+    ]
+}

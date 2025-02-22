@@ -1,0 +1,51 @@
+{
+    "id": "Primeape",
+    "spawnInfos": [
+        {
+            "spec": "species:Primeape",
+            "stringLocationTypes": [
+                "Tree Top",
+                "Headbutt"
+            ],
+            "minLevel": 28,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "stringBiomes": [
+                    "na fighting"
+                ]
+            },
+            "rarity": 40.0
+        },
+        {
+            "spec": "species:Primeape palette:pink",
+            "stringLocationTypes": [
+                "Tree Top"
+            ],
+            "minLevel": 28,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "stringBiomes": [
+                    "na fighting"
+                ]
+            },
+            "rarity": 0.5
+        },
+        {
+            "spec": "species:Primeape",
+            "stringLocationTypes": [
+                "Tree Top"
+            ],
+            "minLevel": 28,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "stringBiomes": [
+                    "na fighting"
+                ]
+            },
+            "rarity": 100.0
+        }
+    ]
+}

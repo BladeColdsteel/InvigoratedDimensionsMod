@@ -1,0 +1,42 @@
+{
+    "id": "Swablu",
+    "spawnInfos": [
+        {
+            "spec": "species:Swablu",
+            "stringLocationTypes": [
+                "Air",
+                "Headbutt"
+            ],
+            "minLevel": 5,
+            "maxLevel": 34,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAY"
+                ],
+                "stringBiomes": [
+                    "overworld normal"
+                ]
+            },
+            "rarity": 130.0
+        },
+        {
+            "spec": "species:Swablu",
+            "stringLocationTypes": [
+                "Air"
+            ],
+            "minLevel": 5,
+            "maxLevel": 34,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "AFTERNOON"
+                ],
+                "stringBiomes": [
+                    "overworld normal"
+                ]
+            },
+            "rarity": 100.0
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "invigorated_dimensions:electrically_charged_stone"
+    }
+  },
+  "result": {
+    "item": "invigorated_dimensions:electrically_charged_stone_slab",
+    "count": 6
+  }
+}

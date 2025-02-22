@@ -1,0 +1,21 @@
+{
+    "id": "Bergmite",
+    "spawnInfos": [
+        {
+            "spec": "species:Bergmite",
+            "stringLocationTypes": [
+                "Land",
+                "Rock Smash"
+            ],
+            "minLevel": 23,
+            "maxLevel": 36,
+            "typeID": "pokemon",
+            "condition": {
+                "stringBiomes": [
+                    "na ice"
+                ]
+            },
+            "rarity": 130.0
+        }
+    ]
+}

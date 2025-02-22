@@ -1,0 +1,23 @@
+{
+    "id": "Fuecoco",
+    "spawnInfos": [
+        {
+            "spec": "species:Fuecoco",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 5,
+            "maxLevel": 16,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "nether fire"
+                ]
+            },
+            "rarity": 10.0
+        }
+    ]
+}

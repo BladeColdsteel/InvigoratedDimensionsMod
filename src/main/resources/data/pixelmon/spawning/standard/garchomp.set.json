@@ -1,0 +1,60 @@
+{
+    "id": "Garchomp",
+    "spawnInfos": [
+        {
+            "spec": "species:Garchomp",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 49,
+            "maxLevel": 61,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "end dragon"
+                ],
+                "maxY": 80
+            },
+            "rarity": 0.1
+        },
+        {
+            "spec": "species:Garchomp",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 49,
+            "maxLevel": 61,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "end dragon"
+                ]
+            },
+            "rarity": 0.1
+        },
+        {
+            "spec": "species:Garchomp",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 49,
+            "maxLevel": 61,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "end dragon"
+                ]
+            },
+            "rarity": 10.0
+        }
+    ]
+}

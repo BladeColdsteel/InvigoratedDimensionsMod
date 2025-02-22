@@ -13,13 +13,13 @@ public class ModDimensions {
 
     public static void register() {
 
-        System.out.println("Registering dimensions...");
+        System.out.println("Registering Chunk Generator and Biome Provider...");
 
         Registry.register(Registry.CHUNK_GENERATOR, new ResourceLocation(InvigoratedDimensions.MOD_ID, "chunk_generator"),
                 CustomChunkGenerator.CODEC);
         Registry.register(Registry.BIOME_SOURCE, new ResourceLocation(InvigoratedDimensions.MOD_ID, "biome_provider"),
-                CustomBiomeProvider.CODEC);
+                CustomNetherBiomeProvider.NETHER_CODEC);
 
-        System.out.println("Custom dimensions registered successfully!");
+        System.out.println("Custom Chunk Generator and Biome Provider registered successfully!");
     }
 }

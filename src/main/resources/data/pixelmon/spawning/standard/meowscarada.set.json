@@ -1,0 +1,23 @@
+{
+    "id": "Meowscarada",
+    "spawnInfos": [
+        {
+            "spec": "species:Meowscarada",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 36,
+            "maxLevel": 55,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAY"
+                ],
+                "stringBiomes": [
+                    "na grass"
+                ]
+            },
+            "rarity": 1.0
+        }
+    ]
+}

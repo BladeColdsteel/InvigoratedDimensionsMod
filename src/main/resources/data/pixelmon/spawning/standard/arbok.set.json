@@ -1,0 +1,134 @@
+{
+    "id": "Arbok",
+    "spawnInfos": [
+        {
+            "spec": "species:Arbok",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 22,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "stringBiomes": [
+                    "na poison"
+                ]
+            },
+            "rarity": 8.0
+        },
+        {
+            "spec": "species:Arbok",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 22,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "stringBiomes": [
+                    "na poison"
+                ]
+            },
+            "rarity": 50.0
+        },
+        {
+            "spec": "species:Arbok palette:main_circular",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 22,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "stringBiomes": [
+                    "na poison"
+                ]
+            },
+            "rarity": 8.0
+        },
+        {
+            "spec": "species:Arbok palette:main_circular",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 22,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "MORNING"
+                ],
+                "stringBiomes": [
+                    "na poison"
+                ]
+            },
+            "rarity": 25.0
+        },
+        {
+            "spec": "species:Arbok palette:secondary_circular",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 22,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "stringBiomes": [
+                    "na poison"
+                ]
+            },
+            "rarity": 8.0
+        },
+        {
+            "spec": "species:Arbok palette:secondary_circular",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 22,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "AFTERNOON"
+                ],
+                "stringBiomes": [
+                    "na poison"
+                ]
+            },
+            "rarity": 25.0
+        },
+        {
+            "spec": "species:Arbok palette:dark",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 22,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "stringBiomes": [
+                    "na poison"
+                ]
+            },
+            "rarity": 8.0
+        },
+        {
+            "spec": "species:Arbok palette:dark",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 22,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "na poison"
+                ]
+            },
+            "rarity": 25.0
+        }
+    ]
+}

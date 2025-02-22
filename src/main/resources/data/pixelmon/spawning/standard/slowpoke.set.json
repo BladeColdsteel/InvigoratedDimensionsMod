@@ -1,0 +1,57 @@
+{
+    "id": "Slowpoke",
+    "spawnInfos": [
+        {
+            "spec": "species:Slowpoke",
+            "stringLocationTypes": [
+                "Land",
+                "Sweet Scent"
+            ],
+            "minLevel": 15,
+            "maxLevel": 37,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:lagging_tail",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "times": [
+                    "AFTERNOON",
+                    "DUSK"
+                ],
+                "stringBiomes": [
+                    "na water"
+                ]
+            },
+            "rarity": 100.0
+        },
+        {
+            "spec": "species:Slowpoke form:galarian",
+            "stringLocationTypes": [
+                "Land",
+                "Sweet Scent"
+            ],
+            "minLevel": 15,
+            "maxLevel": 37,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:lagging_tail",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "times": [
+                    "DAWN",
+                    "MORNING"
+                ],
+                "stringBiomes": [
+                    "na water"
+                ]
+            },
+            "rarity": 50.0
+        }
+    ]
+}

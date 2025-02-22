@@ -1,0 +1,42 @@
+{
+    "id": "Buzzwole",
+    "spawnInfos": [
+        {
+            "spec": "species:Buzzwole",
+            "stringLocationTypes": [
+                "Land",
+                "Tree Top"
+            ],
+            "tags": [
+                "ultrabeast"
+            ],
+            "minLevel": 60,
+            "maxLevel": 60,
+            "typeID": "pokemon",
+            "condition": {
+                "stringBiomes": [
+                    "na bug"
+                ]
+            },
+            "rarity": 0.5
+        },
+        {
+            "spec": "species:Buzzwole",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "tags": [
+                "ultrabeast"
+            ],
+            "minLevel": 60,
+            "maxLevel": 60,
+            "typeID": "pokemon",
+            "condition": {
+                "stringBiomes": [
+                    "na bug"
+                ]
+            },
+            "rarity": 5.0
+        }
+    ]
+}

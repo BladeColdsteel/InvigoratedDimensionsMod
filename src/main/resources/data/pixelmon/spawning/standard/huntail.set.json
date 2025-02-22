@@ -1,0 +1,55 @@
+{
+    "id": "Huntail",
+    "spawnInfos": [
+        {
+            "spec": "species:Huntail",
+            "stringLocationTypes": [
+                "Water"
+            ],
+            "minLevel": 30,
+            "maxLevel": 40,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:deep_sea_tooth",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "na water"
+                ],
+                "maxY": 40
+            },
+            "rarity": 1.0
+        },
+        {
+            "spec": "species:Huntail",
+            "stringLocationTypes": [
+                "Water",
+                "Underground Water"
+            ],
+            "minLevel": 30,
+            "maxLevel": 40,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:deep_sea_tooth",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "structures": [
+                    "pixelmon:water_chalice"
+                ],
+                "stringBiomes": [
+                    "na water"
+                ]
+            },
+            "rarity": 5.0
+        }
+    ]
+}

@@ -1,0 +1,20 @@
+{
+    "id": "Bonsly",
+    "spawnInfos": [
+        {
+            "spec": "species:Bonsly",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 5,
+            "maxLevel": 15,
+            "typeID": "pokemon",
+            "condition": {
+                "stringBiomes": [
+                    "na rock"
+                ]
+            },
+            "rarity": 10.0
+        }
+    ]
+}

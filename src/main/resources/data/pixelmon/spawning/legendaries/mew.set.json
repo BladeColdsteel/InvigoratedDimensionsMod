@@ -1,0 +1,32 @@
+{
+    "id": "Mew",
+    "spawnInfos": [
+        {
+            "spec": "species:Mew level:70",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "tags": [
+                "legendary",
+                "mythical"
+            ],
+            "interval": "legendary",
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:lum_berry",
+                    "percentChance": 100
+                }
+            ],
+            "condition": {
+                "times": [
+                    "DAY"
+                ],
+                "stringBiomes": [
+                    "na psychic"
+                ]
+            },
+            "rarity": 0.1
+        }
+    ]
+}

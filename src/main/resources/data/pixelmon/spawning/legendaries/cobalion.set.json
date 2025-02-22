@@ -1,0 +1,25 @@
+{
+    "id": "Cobalion",
+    "spawnInfos": [
+        {
+            "spec": "species:Cobalion level:70",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "tags": [
+                "legendary"
+            ],
+            "interval": "legendary",
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "na steel"
+                ]
+            },
+            "rarity": 3.0
+        }
+    ]
+}

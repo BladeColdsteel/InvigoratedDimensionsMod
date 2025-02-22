@@ -1,0 +1,39 @@
+{
+    "id": "Perrserker",
+    "spawnInfos": [
+        {
+            "spec": "species:Perrserker",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 28,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:quick_claw",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "na steel"
+                ]
+            },
+            "rarityMultipliers": [
+                {
+                    "multiplier": 1.5,
+                    "condition": {
+                        "neededNearbyBlocks": [
+                            "minecraft:grass_path"
+                        ]
+                    }
+                }
+            ],
+            "rarity": 10.0
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "id": "Archen",
+    "spawnInfos": [
+        {
+            "spec": "species:Archen",
+            "stringLocationTypes": [
+                "Tree Top"
+            ],
+            "minLevel": 5,
+            "maxLevel": 35,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAY"
+                ],
+                "stringBiomes": [
+                    "na rock"
+                ]
+            },
+            "rarity": 50.0
+        }
+    ]
+}

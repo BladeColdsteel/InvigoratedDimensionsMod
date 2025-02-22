@@ -1,0 +1,79 @@
+{
+    "id": "Hoothoot",
+    "spawnInfos": [
+        {
+            "spec": "species:Hoothoot",
+            "stringLocationTypes": [
+                "Tree Top",
+                "Headbutt",
+                "Sweet Scent"
+            ],
+            "minLevel": 5,
+            "maxLevel": 19,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "overworld normal"
+                ]
+            },
+            "rarity": 300.0
+        },
+        {
+            "spec": "species:Hoothoot",
+            "stringLocationTypes": [
+                "Tree Top"
+            ],
+            "minLevel": 5,
+            "maxLevel": 19,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "overworld normal"
+                ]
+            },
+            "rarity": 100.0
+        },
+        {
+            "spec": "species:Hoothoot",
+            "stringLocationTypes": [
+                "Air"
+            ],
+            "minLevel": 5,
+            "maxLevel": 19,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "overworld normal"
+                ]
+            },
+            "rarity": 200.0
+        },
+        {
+            "spec": "species:Hoothoot",
+            "stringLocationTypes": [
+                "Air"
+            ],
+            "minLevel": 5,
+            "maxLevel": 19,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "overworld normal"
+                ]
+            },
+            "rarity": 100.0
+        }
+    ]
+}

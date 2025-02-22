@@ -1,0 +1,113 @@
+{
+    "id": "Lycanroc",
+    "spawnInfos": [
+        {
+            "spec": "species:Lycanroc form:midday",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 25,
+            "maxLevel": 40,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAY"
+                ],
+                "stringBiomes": [
+                    "na rock"
+                ]
+            },
+            "rarity": 8.0
+        },
+        {
+            "spec": "species:Lycanroc form:midday",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 25,
+            "maxLevel": 40,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAY"
+                ],
+                "stringBiomes": [
+                    "na rock"
+                ]
+            },
+            "rarity": 50.0
+        },
+        {
+            "spec": "species:Lycanroc form:midnight",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 25,
+            "maxLevel": 40,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "na rock"
+                ]
+            },
+            "rarity": 8.0
+        },
+        {
+            "spec": "species:Lycanroc form:midnight",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 25,
+            "maxLevel": 40,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "na rock"
+                ]
+            },
+            "rarity": 50.0
+        },
+        {
+            "spec": "species:Lycanroc form:dusk",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 25,
+            "maxLevel": 40,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DUSK"
+                ],
+                "stringBiomes": [
+                    "na rock"
+                ]
+            },
+            "rarity": 8.0
+        },
+        {
+            "spec": "species:Lycanroc form:dusk",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 25,
+            "maxLevel": 40,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DUSK"
+                ],
+                "stringBiomes": [
+                    "na rock"
+                ]
+            },
+            "rarity": 50.0
+        }
+    ]
+}

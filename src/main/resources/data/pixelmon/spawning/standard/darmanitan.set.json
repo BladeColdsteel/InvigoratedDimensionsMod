@@ -1,0 +1,61 @@
+{
+    "id": "Darmanitan",
+    "spawnInfos": [
+        {
+            "spec": "species:Darmanitan",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 36,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAWN",
+                    "DAY"
+                ],
+                "stringBiomes": [
+                    "nether fire"
+                ]
+            },
+            "rarity": 0.5
+        },
+        {
+            "spec": "species:Darmanitan",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 36,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAY"
+                ],
+                "stringBiomes": [
+                    "nether fire"
+                ]
+            },
+            "rarity": 25.0
+        },
+        {
+            "spec": "species:Darmanitan form:galarian",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 36,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DUSK",
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "nether fire"
+                ]
+            },
+            "rarity": 0.5
+        }
+    ]
+}

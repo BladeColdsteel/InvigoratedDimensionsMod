@@ -1,0 +1,33 @@
+{
+    "id": "Piplup",
+    "spawnInfos": [
+        {
+            "spec": "species:Piplup",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 5,
+            "maxLevel": 10,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "na water"
+                ]
+            },
+            "rarityMultipliers": [
+                {
+                    "multiplier": 2,
+                    "condition": {
+                        "weathers": [
+                            "RAIN"
+                        ]
+                    }
+                }
+            ],
+            "rarity": 10.0
+        }
+    ]
+}

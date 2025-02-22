@@ -1,0 +1,54 @@
+{
+    "id": "Gorebyss",
+    "spawnInfos": [
+        {
+            "spec": "species:Gorebyss",
+            "stringLocationTypes": [
+                "Water"
+            ],
+            "minLevel": 30,
+            "maxLevel": 40,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:deep_sea_scale",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "times": [
+                    "DAY"
+                ],
+                "stringBiomes": [
+                    "na water"
+                ]
+            },
+            "rarity": 1.0
+        },
+        {
+            "spec": "species:Gorebyss",
+            "stringLocationTypes": [
+                "Water",
+                "Underground Water"
+            ],
+            "minLevel": 30,
+            "maxLevel": 40,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:deep_sea_scale",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "structures": [
+                    "pixelmon:water_chalice"
+                ],
+                "stringBiomes": [
+                    "na water"
+                ]
+            },
+            "rarity": 5.0
+        }
+    ]
+}

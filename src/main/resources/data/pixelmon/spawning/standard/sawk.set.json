@@ -1,0 +1,53 @@
+{
+    "id": "Sawk",
+    "spawnInfos": [
+        {
+            "spec": "species:Sawk",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 34,
+            "maxLevel": 48,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:black_belt",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "times": [
+                    "AFTERNOON"
+                ],
+                "stringBiomes": [
+                    "na fighting"
+                ]
+            },
+            "rarity": 30.0
+        },
+        {
+            "spec": "species:Sawk",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 34,
+            "maxLevel": 48,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:black_belt",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "na fighting"
+                ]
+            },
+            "rarity": 25.0
+        }
+    ]
+}

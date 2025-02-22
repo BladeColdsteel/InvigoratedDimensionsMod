@@ -1,0 +1,24 @@
+{
+    "id": "Falinks",
+    "spawnInfos": [
+        {
+            "spec": "species:Falinks",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 15,
+            "maxLevel": 40,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAWN",
+                    "DUSK"
+                ],
+                "stringBiomes": [
+                    "na fighting"
+                ]
+            },
+            "rarity": 30.0
+        }
+    ]
+}

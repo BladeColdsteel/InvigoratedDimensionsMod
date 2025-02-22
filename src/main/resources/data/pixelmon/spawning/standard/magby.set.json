@@ -1,0 +1,53 @@
+{
+    "id": "Magby",
+    "spawnInfos": [
+        {
+            "spec": "species:Magby",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 5,
+            "maxLevel": 10,
+            "typeID": "pokemon",
+            "condition": {
+                "stringBiomes": [
+                    "nether fire"
+                ]
+            },
+            "rarity": 0.5
+        },
+        {
+            "spec": "species:Magby",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 5,
+            "maxLevel": 10,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAY"
+                ],
+                "stringBiomes": [
+                    "nether fire"
+                ]
+            },
+            "rarity": 50.0
+        },
+        {
+            "spec": "species:Magby",
+            "stringLocationTypes": [
+                "Lava Floor"
+            ],
+            "minLevel": 5,
+            "maxLevel": 10,
+            "typeID": "pokemon",
+            "condition": {
+                "stringBiomes": [
+                    "nether fire"
+                ]
+            },
+            "rarity": 0.5
+        }
+    ]
+}

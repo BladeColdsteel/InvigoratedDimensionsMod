@@ -1,0 +1,41 @@
+{
+    "id": "Snivy",
+    "spawnInfos": [
+        {
+            "spec": "species:Snivy",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 5,
+            "maxLevel": 16,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAY"
+                ],
+                "stringBiomes": [
+                    "na grass"
+                ]
+            },
+            "rarity": 5.0
+        },
+        {
+            "spec": "species:Snivy",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 5,
+            "maxLevel": 16,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "AFTERNOON"
+                ],
+                "stringBiomes": [
+                    "na grass"
+                ]
+            },
+            "rarity": 10.0
+        }
+    ]
+}

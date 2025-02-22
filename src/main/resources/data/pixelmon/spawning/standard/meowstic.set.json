@@ -1,0 +1,23 @@
+{
+    "id": "Meowstic",
+    "spawnInfos": [
+        {
+            "spec": "species:Meowstic",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 26,
+            "maxLevel": 38,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "AFTERNOON"
+                ],
+                "stringBiomes": [
+                    "na psychic"
+                ]
+            },
+            "rarity": 6.0
+        }
+    ]
+}

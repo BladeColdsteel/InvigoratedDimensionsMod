@@ -1,0 +1,41 @@
+{
+    "id": "Avalugg",
+    "spawnInfos": [
+        {
+            "spec": "species:Avalugg",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 38,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "na ice"
+                ]
+            },
+            "rarity": 0.5
+        },
+        {
+            "spec": "species:Avalugg form:hisuian",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 38,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "na ice"
+                ]
+            },
+            "rarity": 0.01
+        }
+    ]
+}

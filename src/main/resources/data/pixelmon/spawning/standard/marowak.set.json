@@ -1,0 +1,54 @@
+{
+    "id": "Marowak",
+    "spawnInfos": [
+        {
+            "spec": "species:Marowak",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 28,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:thick_club",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "times": [
+                    "DUSK",
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "na ground"
+                ]
+            },
+            "rarity": 8.0
+        },
+        {
+            "spec": "species:Marowak form:alolan",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 28,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:thick_club",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "na ground"
+                ]
+            },
+            "rarity": 0.1
+        }
+    ]
+}

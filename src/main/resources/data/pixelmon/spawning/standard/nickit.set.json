@@ -1,0 +1,24 @@
+{
+    "id": "Nickit",
+    "spawnInfos": [
+        {
+            "spec": "species:Nickit",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 5,
+            "maxLevel": 17,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAWN",
+                    "DAY"
+                ],
+                "stringBiomes": [
+                    "na dark"
+                ]
+            },
+            "rarity": 50.0
+        }
+    ]
+}

@@ -1,0 +1,41 @@
+{
+    "id": "Appletun",
+    "spawnInfos": [
+        {
+            "spec": "species:Appletun",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 30,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAY"
+                ],
+                "stringBiomes": [
+                    "na grass"
+                ]
+            },
+            "rarity": 0.5
+        },
+        {
+            "spec": "species:Appletun",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 30,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAY"
+                ],
+                "stringBiomes": [
+                    "na grass"
+                ]
+            },
+            "rarity": 25.0
+        }
+    ]
+}

@@ -1,0 +1,41 @@
+{
+    "id": "Servine",
+    "spawnInfos": [
+        {
+            "spec": "species:Servine",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 17,
+            "maxLevel": 35,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAY"
+                ],
+                "stringBiomes": [
+                    "na grass"
+                ]
+            },
+            "rarity": 0.5
+        },
+        {
+            "spec": "species:Servine",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 17,
+            "maxLevel": 35,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "AFTERNOON"
+                ],
+                "stringBiomes": [
+                    "na grass"
+                ]
+            },
+            "rarity": 1.0
+        }
+    ]
+}

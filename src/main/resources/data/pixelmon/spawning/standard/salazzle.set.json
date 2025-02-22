@@ -1,0 +1,53 @@
+{
+    "id": "Salazzle",
+    "spawnInfos": [
+        {
+            "spec": "species:Salazzle",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 33,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:smoke_ball",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "weathers": [
+                    "CLEAR"
+                ],
+                "stringBiomes": [
+                    "na poison"
+                ]
+            },
+            "rarity": 0.5
+        },
+        {
+            "spec": "species:Salazzle",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 33,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:smoke_ball",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "stringBiomes": [
+                    "na poison"
+                ]
+            },
+            "rarity": 0.5
+        }
+    ]
+}

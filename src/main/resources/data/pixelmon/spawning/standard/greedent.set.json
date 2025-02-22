@@ -1,0 +1,31 @@
+{
+    "id": "Greedent",
+    "spawnInfos": [
+        {
+            "spec": "species:Greedent",
+            "stringLocationTypes": [
+                "Land",
+                "Tree Top",
+                "Headbutt"
+            ],
+            "minLevel": 25,
+            "maxLevel": 40,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:sitrus_berry",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "times": [
+                    "DAY"
+                ],
+                "stringBiomes": [
+                    "overworld normal"
+                ]
+            },
+            "rarity": 100.0
+        }
+    ]
+}

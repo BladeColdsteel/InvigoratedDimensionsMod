@@ -1,0 +1,48 @@
+{
+    "id": "Naclstack",
+    "spawnInfos": [
+        {
+            "spec": "species:Naclstack",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 24,
+            "maxLevel": 37,
+            "typeID": "pokemon",
+            "condition": {
+                "stringBiomes": [
+                    "na rock"
+                ]
+            },
+            "rarity": 50.0
+        },
+        {
+            "spec": "species:Naclstack",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 24,
+            "maxLevel": 37,
+            "typeID": "pokemon",
+            "condition": {
+                "stringBiomes": [
+                    "na rock"
+                ]
+            },
+            "rarity": 100.0
+        },
+        {
+            "spec": "species:Naclstack",
+            "stringLocationTypes": [
+                "Underground"
+            ],
+            "minLevel": 24,
+            "maxLevel": 37,
+            "typeID": "pokemon",
+            "condition": {
+                "maxY": 64
+            },
+            "rarity": 50.0
+        }
+    ]
+}

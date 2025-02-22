@@ -1,0 +1,41 @@
+{
+    "id": "Xatu",
+    "spawnInfos": [
+        {
+            "spec": "species:Xatu",
+            "stringLocationTypes": [
+                "Air"
+            ],
+            "minLevel": 25,
+            "maxLevel": 60,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "na psychic"
+                ]
+            },
+            "rarity": 8.0
+        },
+        {
+            "spec": "species:Xatu",
+            "stringLocationTypes": [
+                "Air"
+            ],
+            "minLevel": 25,
+            "maxLevel": 60,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "na psychic"
+                ]
+            },
+            "rarity": 50.0
+        }
+    ]
+}

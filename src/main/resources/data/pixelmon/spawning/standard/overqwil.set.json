@@ -1,0 +1,51 @@
+{
+    "id": "Overqwil",
+    "spawnInfos": [
+        {
+            "spec": "species:Overqwil",
+            "stringLocationTypes": [
+                "Water"
+            ],
+            "minLevel": 45,
+            "maxLevel": 55,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:poison_barb",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "na dark"
+                ],
+                "maxY": 50
+            },
+            "rarity": 0.05
+        },
+        {
+            "spec": "species:Overqwil",
+            "stringLocationTypes": [
+                "Water"
+            ],
+            "minLevel": 45,
+            "maxLevel": 55,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:poison_barb",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "stringBiomes": [
+                    "na dark"
+                ]
+            },
+            "rarity": 0.5
+        }
+    ]
+}

@@ -1,0 +1,57 @@
+{
+    "id": "Flygon",
+    "spawnInfos": [
+        {
+            "spec": "species:Flygon",
+            "stringLocationTypes": [
+                "Air"
+            ],
+            "minLevel": 45,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DUSK",
+                    "DAWN"
+                ],
+                "stringBiomes": [
+                    "na ground"
+                ]
+            },
+            "rarity": 0.1
+        },
+        {
+            "spec": "species:Flygon",
+            "stringLocationTypes": [
+                "Air"
+            ],
+            "minLevel": 45,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAY"
+                ],
+                "stringBiomes": [
+                    "na ground"
+                ]
+            },
+            "rarity": 5.0
+        },
+        {
+            "spec": "species:Flygon palette:drowned",
+            "stringLocationTypes": [
+                "Water"
+            ],
+            "minLevel": 45,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "stringBiomes": [
+                    "na ground"
+                ]
+            },
+            "rarity": 5.0
+        }
+    ]
+}

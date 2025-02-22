@@ -1,0 +1,51 @@
+{
+    "id": "Orbeetle",
+    "spawnInfos": [
+        {
+            "spec": "species:Orbeetle",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 30,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:psychic_seed",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "times": [
+                    "DUSK",
+                    "DAWN"
+                ],
+                "stringBiomes": [
+                    "na bug"
+                ]
+            },
+            "rarity": 0.5
+        },
+        {
+            "spec": "species:Orbeetle",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 30,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:psychic_seed",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "stringBiomes": [
+                    "na bug"
+                ]
+            },
+            "rarity": 0.5
+        }
+    ]
+}

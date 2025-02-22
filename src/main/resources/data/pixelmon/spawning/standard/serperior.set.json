@@ -1,0 +1,42 @@
+{
+    "id": "Serperior",
+    "spawnInfos": [
+        {
+            "spec": "species:Serperior",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 36,
+            "maxLevel": 45,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAWN",
+                    "DUSK"
+                ],
+                "stringBiomes": [
+                    "na grass"
+                ]
+            },
+            "rarity": 0.5
+        },
+        {
+            "spec": "species:Serperior",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 36,
+            "maxLevel": 45,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "AFTERNOON"
+                ],
+                "stringBiomes": [
+                    "na grass"
+                ]
+            },
+            "rarity": 1.0
+        }
+    ]
+}

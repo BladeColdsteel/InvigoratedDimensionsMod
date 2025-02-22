@@ -1,0 +1,60 @@
+{
+    "id": "Gardevoir",
+    "spawnInfos": [
+        {
+            "spec": "species:Gardevoir",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 30,
+            "maxLevel": 65,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAWN",
+                    "DUSK"
+                ],
+                "stringBiomes": [
+                    "na psychic"
+                ]
+            },
+            "rarity": 0.5
+        },
+        {
+            "spec": "species:Gardevoir",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 30,
+            "maxLevel": 65,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "AFTERNOON"
+                ],
+                "stringBiomes": [
+                    "na psychic"
+                ]
+            },
+            "rarity": 5.0
+        },
+        {
+            "spec": "species:Gardevoir palette:strike",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 30,
+            "maxLevel": 65,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "na psychic"
+                ]
+            },
+            "rarity": 0.5
+        }
+    ]
+}

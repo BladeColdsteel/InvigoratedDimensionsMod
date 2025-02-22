@@ -1,0 +1,31 @@
+{
+    "id": "Abomasnow",
+    "spawnInfos": [
+        {
+            "spec": "species:Abomasnow",
+            "stringLocationTypes": [
+                "Land",
+                "Sweet Scent"
+            ],
+            "minLevel": 40,
+            "maxLevel": 45,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:never_melt_ice",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "times": [
+                    "DAWN",
+                    "MORNING"
+                ],
+                "stringBiomes": [
+                    "na grass"
+                ]
+            },
+            "rarity": 8.0
+        }
+    ]
+}

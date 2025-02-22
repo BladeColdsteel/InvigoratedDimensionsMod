@@ -1,0 +1,9 @@
+
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "invigorated_dimensions:block/electrically_charged_stone_bricks",
+    "top": "invigorated_dimensions:block/electrically_charged_stone_bricks",
+    "side": "invigorated_dimensions:block/electrically_charged_stone_bricks"
+  }
+}

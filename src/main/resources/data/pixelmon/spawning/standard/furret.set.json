@@ -1,0 +1,20 @@
+{
+    "id": "Furret",
+    "spawnInfos": [
+        {
+            "spec": "species:Furret",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 15,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "stringBiomes": [
+                    "overworld normal"
+                ]
+            },
+            "rarity": 40.0
+        }
+    ]
+}

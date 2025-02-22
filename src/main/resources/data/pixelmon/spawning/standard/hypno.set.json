@@ -1,0 +1,23 @@
+{
+    "id": "Hypno",
+    "spawnInfos": [
+        {
+            "spec": "species:Hypno",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 26,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "na psychic"
+                ]
+            },
+            "rarity": 5.0
+        }
+    ]
+}

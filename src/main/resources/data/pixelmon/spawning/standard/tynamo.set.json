@@ -1,0 +1,40 @@
+{
+    "id": "Tynamo",
+    "spawnInfos": [
+        {
+            "spec": "species:Tynamo",
+            "stringLocationTypes": [
+                "Water"
+            ],
+            "minLevel": 24,
+            "maxLevel": 38,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "highlands electric"
+                ],
+                "maxY": 35
+            },
+            "rarity": 130.0
+        },
+        {
+            "spec": "species:Tynamo",
+            "stringLocationTypes": [
+                "Underground Water"
+            ],
+            "minLevel": 24,
+            "maxLevel": 38,
+            "typeID": "pokemon",
+            "anticondition": {
+                "stringBiomes": [
+                    "drowned",
+                    "ultra space"
+                ]
+            },
+            "rarity": 100.0
+        }
+    ]
+}

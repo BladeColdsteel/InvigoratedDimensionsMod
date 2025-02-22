@@ -1,0 +1,20 @@
+{
+    "id": "Tadbulb",
+    "spawnInfos": [
+        {
+            "spec": "species:Tadbulb",
+            "stringLocationTypes": [
+                "Water"
+            ],
+            "minLevel": 5,
+            "maxLevel": 25,
+            "typeID": "pokemon",
+            "condition": {
+                "stringBiomes": [
+                    "highlands electric"
+                ]
+            },
+            "rarity": 100.0
+        }
+    ]
+}

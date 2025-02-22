@@ -1,0 +1,39 @@
+{
+    "id": "Eelektrik",
+    "spawnInfos": [
+        {
+            "spec": "species:Eelektrik",
+            "stringLocationTypes": [
+                "Water"
+            ],
+            "minLevel": 40,
+            "maxLevel": 52,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "highlands electric"
+                ],
+                "maxY": 35
+            },
+            "rarity": 8.0
+        },
+        {
+            "spec": "species:Eelektrik",
+            "stringLocationTypes": [
+                "Water"
+            ],
+            "minLevel": 40,
+            "maxLevel": 52,
+            "typeID": "pokemon",
+            "condition": {
+                "stringBiomes": [
+                    "highlands electric"
+                ]
+            },
+            "rarity": 8.0
+        }
+    ]
+}

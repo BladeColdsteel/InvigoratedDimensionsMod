@@ -1,0 +1,59 @@
+{
+    "id": "Noibat",
+    "spawnInfos": [
+        {
+            "spec": "species:Noibat",
+            "stringLocationTypes": [
+                "Air"
+            ],
+            "minLevel": 31,
+            "maxLevel": 47,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "na flying"
+                ]
+            },
+            "rarity": 90.0
+        },
+        {
+            "spec": "species:Noibat",
+            "stringLocationTypes": [
+                "Air"
+            ],
+            "minLevel": 31,
+            "maxLevel": 47,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "na flying"
+                ]
+            },
+            "rarity": 100.0
+        },
+        {
+            "spec": "species:Noibat",
+            "stringLocationTypes": [
+                "Underground"
+            ],
+            "minLevel": 31,
+            "maxLevel": 47,
+            "typeID": "pokemon",
+            "condition": {
+                "maxLightLevel": 0
+            },
+            "anticondition": {
+                "stringBiomes": [
+                    "ultra space"
+                ]
+            },
+            "rarity": 0.5
+        }
+    ]
+}

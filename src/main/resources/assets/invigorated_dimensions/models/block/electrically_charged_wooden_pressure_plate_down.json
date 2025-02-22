@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/pressure_plate_down",
+  "textures": {
+    "texture": "invigorated_dimensions:block/electrically_charged_planks"
+  }
+}

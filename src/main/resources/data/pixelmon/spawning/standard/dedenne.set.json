@@ -1,0 +1,51 @@
+{
+    "id": "Dedenne",
+    "spawnInfos": [
+        {
+            "spec": "species:Dedenne",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 12,
+            "maxLevel": 23,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAY"
+                ],
+                "stringBiomes": [
+                    "highlands electric"
+                ]
+            },
+            "rarityMultipliers": [
+                {
+                    "multiplier": 1.5,
+                    "condition": {
+                        "weathers": [
+                            "STORM"
+                        ]
+                    }
+                }
+            ],
+            "rarity": 130.0
+        },
+        {
+            "spec": "species:Dedenne",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 12,
+            "maxLevel": 23,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAY"
+                ],
+                "stringBiomes": [
+                    "highlands electric"
+                ]
+            },
+            "rarity": 100.0
+        }
+    ]
+}

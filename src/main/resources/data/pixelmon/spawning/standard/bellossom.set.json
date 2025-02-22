@@ -1,0 +1,110 @@
+{
+    "id": "Bellossom",
+    "spawnInfos": [
+        {
+            "spec": "species:Bellossom",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 35,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:absorb_bulb",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "times": [
+                    "MORNING"
+                ],
+                "weathers": [
+                    "CLEAR"
+                ],
+                "stringBiomes": [
+                    "na grass"
+                ]
+            },
+            "rarity": 0.5
+        },
+        {
+            "spec": "species:Bellossom",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 35,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:absorb_bulb",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "times": [
+                    "MORNING"
+                ],
+                "stringBiomes": [
+                    "na grass"
+                ]
+            },
+            "rarity": 25.0
+        },
+        {
+            "spec": "species:Bellossom palette:valencian",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 35,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:absorb_bulb",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "times": [
+                    "MORNING"
+                ],
+                "weathers": [
+                    "CLEAR"
+                ],
+                "stringBiomes": [
+                    "na grass"
+                ]
+            },
+            "rarity": 0.01
+        },
+        {
+            "spec": "species:Bellossom palette:pink",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 35,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:absorb_bulb",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "times": [
+                    "MORNING"
+                ],
+                "weathers": [
+                    "CLEAR"
+                ],
+                "stringBiomes": [
+                    "na grass"
+                ]
+            },
+            "rarity": 0.01
+        }
+    ]
+}

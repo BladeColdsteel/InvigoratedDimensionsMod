@@ -1,0 +1,39 @@
+{
+    "id": "Jellicent",
+    "spawnInfos": [
+        {
+            "spec": "species:Jellicent",
+            "stringLocationTypes": [
+                "Water"
+            ],
+            "minLevel": 41,
+            "maxLevel": 57,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "na water"
+                ],
+                "maxY": 50
+            },
+            "rarity": 6.0
+        },
+        {
+            "spec": "species:Jellicent",
+            "stringLocationTypes": [
+                "Water"
+            ],
+            "minLevel": 41,
+            "maxLevel": 57,
+            "typeID": "pokemon",
+            "condition": {
+                "stringBiomes": [
+                    "na water"
+                ]
+            },
+            "rarity": 6.0
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "id": "Thievul",
+    "spawnInfos": [
+        {
+            "spec": "species:Thievul",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 18,
+            "maxLevel": 35,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAWN",
+                    "DAY"
+                ],
+                "stringBiomes": [
+                    "na dark"
+                ]
+            },
+            "rarity": 5.0
+        }
+    ]
+}

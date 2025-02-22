@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "invigorated_dimensions:block/electrically_charged_cobblestone"
+  }
+}

@@ -1,0 +1,42 @@
+{
+    "id": "Altaria",
+    "spawnInfos": [
+        {
+            "spec": "species:Altaria",
+            "stringLocationTypes": [
+                "Air",
+                "Headbutt"
+            ],
+            "minLevel": 35,
+            "maxLevel": 55,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAY"
+                ],
+                "stringBiomes": [
+                    "end dragon"
+                ]
+            },
+            "rarity": 6.0
+        },
+        {
+            "spec": "species:Altaria",
+            "stringLocationTypes": [
+                "Air"
+            ],
+            "minLevel": 35,
+            "maxLevel": 55,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "AFTERNOON"
+                ],
+                "stringBiomes": [
+                    "end dragon"
+                ]
+            },
+            "rarity": 25.0
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "id": "Sprigatito",
+    "spawnInfos": [
+        {
+            "spec": "species:Sprigatito",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 5,
+            "maxLevel": 16,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAY"
+                ],
+                "stringBiomes": [
+                    "na grass"
+                ]
+            },
+            "rarity": 10.0
+        }
+    ]
+}

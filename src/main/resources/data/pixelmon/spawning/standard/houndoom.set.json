@@ -1,0 +1,111 @@
+{
+    "id": "Houndoom",
+    "spawnInfos": [
+        {
+            "spec": "species:Houndoom",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 24,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "na dark"
+                ]
+            },
+            "groupSpawnSettings": [
+                {
+                    "spec": "Houndour",
+                    "amount": {
+                        "min_value": 3,
+                        "max_value": 4
+                    },
+                    "spawn_range_minimum": {
+                        "x": 1,
+                        "y": 1,
+                        "z": 1
+                    },
+                    "spawn_range_maximum": {
+                        "x": 5,
+                        "y": 5,
+                        "z": 5
+                    },
+                    "chance": 0.5
+                }
+            ],
+            "rarity": 8.0
+        },
+        {
+            "spec": "species:Houndoom",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 24,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "stringBiomes": [
+                    "na dark"
+                ]
+            },
+            "groupSpawnSettings": [
+                {
+                    "spec": "Houndour",
+                    "amount": {
+                        "min_value": 3,
+                        "max_value": 4
+                    },
+                    "spawn_range_minimum": {
+                        "x": 1,
+                        "y": 1,
+                        "z": 1
+                    },
+                    "spawn_range_maximum": {
+                        "x": 5,
+                        "y": 5,
+                        "z": 5
+                    },
+                    "chance": 0.5
+                }
+            ],
+            "rarity": 8.0
+        },
+        {
+            "spec": "species:Houndoom",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 24,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "stringBiomes": [
+                    "na dark"
+                ]
+            },
+            "rarity": 50.0
+        },
+        {
+            "spec": "species:Houndoom palette:ashen",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 24,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "AFTERNOON"
+                ],
+                "stringBiomes": [
+                    "na dark"
+                ]
+            },
+            "rarity": 0.5
+        }
+    ]
+}

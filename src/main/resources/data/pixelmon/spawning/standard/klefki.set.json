@@ -1,0 +1,23 @@
+{
+    "id": "Klefki",
+    "spawnInfos": [
+        {
+            "spec": "species:Klefki",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 42,
+            "maxLevel": 54,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "na steel"
+                ]
+            },
+            "rarity": 40.0
+        }
+    ]
+}

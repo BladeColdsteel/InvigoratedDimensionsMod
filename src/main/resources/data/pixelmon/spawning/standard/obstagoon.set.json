@@ -1,0 +1,23 @@
+{
+    "id": "Obstagoon",
+    "spawnInfos": [
+        {
+            "spec": "species:Obstagoon",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 35,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "na dark"
+                ]
+            },
+            "rarity": 1.0
+        }
+    ]
+}

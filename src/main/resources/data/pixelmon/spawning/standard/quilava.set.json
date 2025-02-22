@@ -1,0 +1,41 @@
+{
+    "id": "Quilava",
+    "spawnInfos": [
+        {
+            "spec": "species:Quilava",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 14,
+            "maxLevel": 36,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAY"
+                ],
+                "stringBiomes": [
+                    "nether fire"
+                ]
+            },
+            "rarity": 1.0
+        },
+        {
+            "spec": "species:Quilava",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 14,
+            "maxLevel": 36,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "nether fire"
+                ]
+            },
+            "rarity": 1.0
+        }
+    ]
+}

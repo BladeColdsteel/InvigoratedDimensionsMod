@@ -1,0 +1,25 @@
+{
+    "id": "Terrakion",
+    "spawnInfos": [
+        {
+            "spec": "species:Terrakion level:70",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "tags": [
+                "legendary"
+            ],
+            "interval": "legendary",
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "na rock"
+                ]
+            },
+            "rarity": 3.0
+        }
+    ]
+}

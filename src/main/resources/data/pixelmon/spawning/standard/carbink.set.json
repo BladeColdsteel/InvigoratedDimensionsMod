@@ -1,0 +1,72 @@
+{
+    "id": "Carbink",
+    "spawnInfos": [
+        {
+            "spec": "species:Carbink",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 12,
+            "maxLevel": 23,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "na rock"
+                ]
+            },
+            "rarity": 90.0
+        },
+        {
+            "spec": "species:Carbink",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 12,
+            "maxLevel": 23,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "na rock"
+                ]
+            },
+            "rarity": 100.0
+        },
+        {
+            "spec": "species:Carbink",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 12,
+            "maxLevel": 23,
+            "typeID": "pokemon",
+            "condition": {
+                "stringBiomes": [
+                    "na rock"
+                ]
+            },
+            "rarity": 90.0
+        },
+        {
+            "spec": "species:Carbink",
+            "stringLocationTypes": [
+                "Underground"
+            ],
+            "minLevel": 12,
+            "maxLevel": 23,
+            "typeID": "pokemon",
+            "condition": {
+                "stringBiomes": [
+                    "na rock"
+                ],
+                "maxY": 40
+            },
+            "rarity": 20.0
+        }
+    ]
+}

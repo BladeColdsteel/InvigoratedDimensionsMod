@@ -1,0 +1,25 @@
+{
+    "id": "Spheal",
+    "spawnInfos": [
+        {
+            "spec": "species:Spheal",
+            "stringLocationTypes": [
+                "Water",
+                "Land"
+            ],
+            "minLevel": 5,
+            "maxLevel": 30,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DUSK",
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "na ice"
+                ]
+            },
+            "rarity": 250.0
+        }
+    ]
+}

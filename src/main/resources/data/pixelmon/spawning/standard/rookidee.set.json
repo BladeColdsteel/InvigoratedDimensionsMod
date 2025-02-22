@@ -1,0 +1,60 @@
+{
+    "id": "Rookidee",
+    "spawnInfos": [
+        {
+            "spec": "species:Rookidee",
+            "stringLocationTypes": [
+                "Tree Top",
+                "Headbutt"
+            ],
+            "minLevel": 7,
+            "maxLevel": 17,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DUSK",
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "na flying"
+                ]
+            },
+            "rarity": 300.0
+        },
+        {
+            "spec": "species:Rookidee",
+            "stringLocationTypes": [
+                "Air"
+            ],
+            "minLevel": 7,
+            "maxLevel": 17,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DUSK",
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "na flying"
+                ]
+            },
+            "rarity": 200.0
+        },
+        {
+            "spec": "species:Rookidee",
+            "stringLocationTypes": [
+                "Land",
+                "Manmade"
+            ],
+            "minLevel": 7,
+            "maxLevel": 17,
+            "typeID": "pokemon",
+            "condition": {
+                "structures": [
+                    "pixelmon:graveyard"
+                ]
+            },
+            "rarity": 200.0
+        }
+    ]
+}

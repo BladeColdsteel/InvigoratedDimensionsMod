@@ -1,0 +1,9 @@
+{
+  "electric_highlands_portal_ambient": {
+    "category": "blocks",
+    "subtitle": "invigorated_dimensions.electric_highlands_portal_ambient",
+    "sounds": [
+      "invigorated_dimensions:electric_highlands_portal_ambient"
+    ]
+  }
+}

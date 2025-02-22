@@ -1,0 +1,103 @@
+{
+    "id": "Sinistea",
+    "spawnInfos": [
+        {
+            "spec": "species:Sinistea palette:phony",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 10,
+            "maxLevel": 30,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:cracked_pot",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "times": [
+                    "DAY"
+                ],
+                "stringBiomes": [
+                    "na ghost"
+                ]
+            },
+            "rarity": 110.0
+        },
+        {
+            "spec": "species:Sinistea palette:phony",
+            "stringLocationTypes": [
+                "Indoors",
+                "Land"
+            ],
+            "minLevel": 10,
+            "maxLevel": 30,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:cracked_pot",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "structures": [
+                    "pixelmon:haunted_tower"
+                ],
+                "stringBiomes": [
+                    "na ghost"
+                ]
+            },
+            "rarity": 110.0
+        },
+        {
+            "spec": "species:Sinistea palette:authentic",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 10,
+            "maxLevel": 30,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:chipped_pot",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "times": [
+                    "DAY"
+                ],
+                "stringBiomes": [
+                    "na ghost"
+                ]
+            },
+            "rarity": 20.0
+        },
+        {
+            "spec": "species:Sinistea palette:authentic",
+            "stringLocationTypes": [
+                "Indoors",
+                "Land"
+            ],
+            "minLevel": 10,
+            "maxLevel": 30,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:chipped_pot",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "structures": [
+                    "pixelmon:haunted_tower"
+                ],
+                "stringBiomes": [
+                    "na ghost"
+                ]
+            },
+            "rarity": 20.0
+        }
+    ]
+}

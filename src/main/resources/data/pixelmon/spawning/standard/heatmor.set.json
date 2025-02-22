@@ -1,0 +1,43 @@
+{
+    "id": "Heatmor",
+    "spawnInfos": [
+        {
+            "spec": "species:Heatmor",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 34,
+            "maxLevel": 46,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAWN",
+                    "DUSK"
+                ],
+                "stringBiomes": [
+                    "nether fire"
+                ],
+                "maxY": 75
+            },
+            "rarity": 30.0
+        },
+        {
+            "spec": "species:Heatmor",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 34,
+            "maxLevel": 46,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAY"
+                ],
+                "stringBiomes": [
+                    "nether fire"
+                ]
+            },
+            "rarity": 50.0
+        }
+    ]
+}

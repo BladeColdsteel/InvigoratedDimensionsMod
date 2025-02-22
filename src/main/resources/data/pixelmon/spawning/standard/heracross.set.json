@@ -1,0 +1,45 @@
+{
+    "id": "Heracross",
+    "spawnInfos": [
+        {
+            "spec": "species:Heracross",
+            "stringLocationTypes": [
+                "Land",
+                "Headbutt",
+                "Sweet Scent"
+            ],
+            "minLevel": 25,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAWN",
+                    "DUSK"
+                ],
+                "stringBiomes": [
+                    "na bug"
+                ]
+            },
+            "rarity": 8.0
+        },
+        {
+            "spec": "species:Heracross",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 25,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAWN",
+                    "DAY"
+                ],
+                "stringBiomes": [
+                    "na bug"
+                ]
+            },
+            "rarity": 50.0
+        }
+    ]
+}

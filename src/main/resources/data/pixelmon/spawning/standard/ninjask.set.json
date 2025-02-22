@@ -1,0 +1,42 @@
+{
+    "id": "Ninjask",
+    "spawnInfos": [
+        {
+            "spec": "species:Ninjask",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 20,
+            "maxLevel": 40,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAWN",
+                    "DUSK"
+                ],
+                "stringBiomes": [
+                    "na bug"
+                ]
+            },
+            "rarity": 8.0
+        },
+        {
+            "spec": "species:Ninjask",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 20,
+            "maxLevel": 40,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "na bug"
+                ]
+            },
+            "rarity": 50.0
+        }
+    ]
+}

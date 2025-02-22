@@ -1,0 +1,42 @@
+{
+    "id": "Delibird",
+    "spawnInfos": [
+        {
+            "spec": "species:Delibird",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 10,
+            "maxLevel": 55,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "na ice"
+                ],
+                "minY": 120
+            },
+            "rarity": 30.0
+        },
+        {
+            "spec": "species:Delibird",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 10,
+            "maxLevel": 55,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "na ice"
+                ]
+            },
+            "rarity": 30.0
+        }
+    ]
+}

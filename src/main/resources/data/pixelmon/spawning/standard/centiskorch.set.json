@@ -1,0 +1,82 @@
+{
+    "id": "Centiskorch",
+    "spawnInfos": [
+        {
+            "spec": "species:Centiskorch",
+            "stringLocationTypes": [
+                "Land",
+                "Headbutt"
+            ],
+            "minLevel": 28,
+            "maxLevel": 40,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAWN",
+                    "NIGHT",
+                    "DUSK"
+                ],
+                "stringBiomes": [
+                    "nether fire"
+                ]
+            },
+            "rarity": 0.5
+        },
+        {
+            "spec": "species:Centiskorch",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 28,
+            "maxLevel": 40,
+            "typeID": "pokemon",
+            "condition": {
+                "stringBiomes": [
+                    "nether fire"
+                ]
+            },
+            "anticondition": {
+                "stringBiomes": [
+                    "byg:subzero_hypogeal"
+                ]
+            },
+            "rarity": 0.5
+        },
+        {
+            "spec": "species:Centiskorch",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 28,
+            "maxLevel": 40,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAY"
+                ],
+                "stringBiomes": [
+                    "nether fire"
+                ]
+            },
+            "rarity": 25.0
+        },
+        {
+            "spec": "species:Centiskorch palette:ashen",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 28,
+            "maxLevel": 40,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "AFTERNOON"
+                ],
+                "stringBiomes": [
+                    "nether fire"
+                ]
+            },
+            "rarity": 0.5
+        }
+    ]
+}

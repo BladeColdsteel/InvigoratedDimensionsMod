@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "invigorated_dimensions:electrically_charged_stone_bricks"
+    }
+  },
+  "result": {
+    "item": "invigorated_dimensions:electrically_charged_stone_brick_stairs",
+    "count": 4
+  }
+}

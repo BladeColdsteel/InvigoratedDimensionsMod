@@ -1,0 +1,59 @@
+{
+    "id": "Pupitar",
+    "spawnInfos": [
+        {
+            "spec": "species:Pupitar",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 30,
+            "maxLevel": 54,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "na rock"
+                ]
+            },
+            "rarity": 6.0
+        },
+        {
+            "spec": "species:Pupitar",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 30,
+            "maxLevel": 54,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "na rock"
+                ]
+            },
+            "rarity": 25.0
+        },
+        {
+            "spec": "species:Pupitar",
+            "stringLocationTypes": [
+                "Underground"
+            ],
+            "minLevel": 30,
+            "maxLevel": 54,
+            "typeID": "pokemon",
+            "condition": {
+                "maxY": 50
+            },
+            "anticondition": {
+                "stringBiomes": [
+                    "ultra space"
+                ]
+            },
+            "rarity": 0.5
+        }
+    ]
+}

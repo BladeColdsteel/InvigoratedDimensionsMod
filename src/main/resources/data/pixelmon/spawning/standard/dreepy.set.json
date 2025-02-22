@@ -1,0 +1,59 @@
+{
+    "id": "Dreepy",
+    "spawnInfos": [
+        {
+            "spec": "species:Dreepy",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 25,
+            "maxLevel": 45,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "end dragon"
+                ]
+            },
+            "rarity": 30.0
+        },
+        {
+            "spec": "species:Dreepy",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 25,
+            "maxLevel": 45,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "end dragon"
+                ]
+            },
+            "rarity": 50.0
+        },
+        {
+            "spec": "species:Dreepy palette:spirit",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 25,
+            "maxLevel": 45,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "structures": [
+                    "pixelmon:graveyard"
+                ]
+            },
+            "rarity": 5.0
+        }
+    ]
+}

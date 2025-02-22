@@ -1,0 +1,39 @@
+{
+    "id": "Frigibax",
+    "spawnInfos": [
+        {
+            "spec": "species:Frigibax",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 15,
+            "maxLevel": 34,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "end dragon"
+                ]
+            },
+            "rarity": 50.0
+        },
+        {
+            "spec": "species:Frigibax",
+            "stringLocationTypes": [
+                "Underground"
+            ],
+            "minLevel": 15,
+            "maxLevel": 34,
+            "typeID": "pokemon",
+            "condition": {
+                "stringBiomes": [
+                    "end dragon"
+                ],
+                "minY": 70
+            },
+            "rarity": 50.0
+        }
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "id": "Virizion",
+    "spawnInfos": [
+        {
+            "spec": "species:Virizion level:70",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "tags": [
+                "legendary"
+            ],
+            "interval": "legendary",
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAY"
+                ],
+                "stringBiomes": [
+                    "na grass"
+                ]
+            },
+            "rarity": 3.0
+        }
+    ]
+}

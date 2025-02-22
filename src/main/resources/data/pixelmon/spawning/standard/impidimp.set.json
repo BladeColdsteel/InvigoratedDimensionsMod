@@ -1,0 +1,39 @@
+{
+    "id": "Impidimp",
+    "spawnInfos": [
+        {
+            "spec": "species:Impidimp",
+            "stringLocationTypes": [
+                "Land",
+                "Sweet Scent"
+            ],
+            "minLevel": 10,
+            "maxLevel": 30,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "na dark"
+                ]
+            },
+            "rarity": 100.0
+        },
+        {
+            "spec": "species:Impidimp",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 10,
+            "maxLevel": 30,
+            "typeID": "pokemon",
+            "condition": {
+                "stringBiomes": [
+                    "na dark"
+                ]
+            },
+            "rarity": 100.0
+        }
+    ]
+}

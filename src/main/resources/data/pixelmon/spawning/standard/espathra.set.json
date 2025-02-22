@@ -1,0 +1,23 @@
+{
+    "id": "Espathra",
+    "spawnInfos": [
+        {
+            "spec": "species:Espathra",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 35,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAY"
+                ],
+                "stringBiomes": [
+                    "na psychic"
+                ]
+            },
+            "rarity": 10.0
+        }
+    ]
+}

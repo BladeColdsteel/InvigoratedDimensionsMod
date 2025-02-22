@@ -1,0 +1,24 @@
+{
+    "id": "Ariados",
+    "spawnInfos": [
+        {
+            "spec": "species:Ariados",
+            "stringLocationTypes": [
+                "Land",
+                "Headbutt"
+            ],
+            "minLevel": 22,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "na bug"
+                ]
+            },
+            "rarity": 8.0
+        }
+    ]
+}

@@ -1,0 +1,59 @@
+{
+    "id": "Weepinbell",
+    "spawnInfos": [
+        {
+            "spec": "species:Weepinbell",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 21,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAY"
+                ],
+                "stringBiomes": [
+                    "na grass"
+                ]
+            },
+            "rarity": 40.0
+        },
+        {
+            "spec": "species:Weepinbell palette:valencian",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 21,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAY"
+                ],
+                "stringBiomes": [
+                    "na grass"
+                ]
+            },
+            "rarity": 0.5
+        },
+        {
+            "spec": "species:Weepinbell palette:pink",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 21,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAY"
+                ],
+                "stringBiomes": [
+                    "na grass"
+                ]
+            },
+            "rarity": 0.5
+        }
+    ]
+}

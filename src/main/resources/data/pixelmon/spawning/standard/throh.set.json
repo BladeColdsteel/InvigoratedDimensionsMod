@@ -1,0 +1,53 @@
+{
+    "id": "Throh",
+    "spawnInfos": [
+        {
+            "spec": "species:Throh",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 34,
+            "maxLevel": 48,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:black_belt",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "times": [
+                    "MORNING"
+                ],
+                "stringBiomes": [
+                    "na fighting"
+                ]
+            },
+            "rarity": 30.0
+        },
+        {
+            "spec": "species:Throh",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 34,
+            "maxLevel": 48,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:black_belt",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "times": [
+                    "DAY"
+                ],
+                "stringBiomes": [
+                    "na fighting"
+                ]
+            },
+            "rarity": 25.0
+        }
+    ]
+}

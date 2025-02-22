@@ -1,0 +1,28 @@
+{
+    "id": "Unfezant",
+    "spawnInfos": [
+        {
+            "spec": "species:Unfezant",
+            "stringLocationTypes": [
+                "Air"
+            ],
+            "minLevel": 33,
+            "maxLevel": 47,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAWN",
+                    "DAY",
+                    "DUSK"
+                ],
+                "weathers": [
+                    "CLEAR"
+                ],
+                "stringBiomes": [
+                    "overworld normal"
+                ]
+            },
+            "rarity": 0.5
+        }
+    ]
+}

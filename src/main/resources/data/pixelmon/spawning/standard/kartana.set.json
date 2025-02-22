@@ -1,0 +1,41 @@
+{
+    "id": "Kartana",
+    "spawnInfos": [
+        {
+            "spec": "species:Kartana",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "tags": [
+                "ultrabeast"
+            ],
+            "minLevel": 60,
+            "maxLevel": 60,
+            "typeID": "pokemon",
+            "condition": {
+                "stringBiomes": [
+                    "na grass"
+                ]
+            },
+            "rarity": 0.5
+        },
+        {
+            "spec": "species:Kartana",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "tags": [
+                "ultrabeast"
+            ],
+            "minLevel": 60,
+            "maxLevel": 60,
+            "typeID": "pokemon",
+            "condition": {
+                "stringBiomes": [
+                    "na grass"
+                ]
+            },
+            "rarity": 5.0
+        }
+    ]
+}

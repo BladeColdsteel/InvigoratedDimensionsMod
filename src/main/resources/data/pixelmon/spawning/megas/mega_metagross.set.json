@@ -1,0 +1,20 @@
+{
+    "id": "Mega Metagross",
+    "spawnInfos": [
+        {
+            "spec": "species:Metagross",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "spawnSpecificBossRate": 1,
+            "condition": {
+                "stringBiomes": [
+                    "na steel"
+                ]
+            },
+            "interval": "megaBoss",
+            "typeID": "pokemon",
+            "rarity": 0.3
+        }
+    ]
+}

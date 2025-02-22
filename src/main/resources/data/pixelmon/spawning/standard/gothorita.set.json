@@ -1,0 +1,58 @@
+{
+    "id": "Gothorita",
+    "spawnInfos": [
+        {
+            "spec": "species:Gothorita",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 33,
+            "maxLevel": 40,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "na psychic"
+                ]
+            },
+            "rarity": 8.0
+        },
+        {
+            "spec": "species:Gothorita",
+            "stringLocationTypes": [
+                "Land",
+                "Indoors",
+                "Manmade"
+            ],
+            "minLevel": 33,
+            "maxLevel": 40,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAY"
+                ],
+                "structures": [
+                    "pixelmon:pumpkin_house"
+                ]
+            },
+            "rarity": 50.0
+        },
+        {
+            "spec": "species:Gothorita",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 33,
+            "maxLevel": 40,
+            "typeID": "pokemon",
+            "condition": {
+                "stringBiomes": [
+                    "na psychic"
+                ]
+            },
+            "rarity": 8.0
+        }
+    ]
+}

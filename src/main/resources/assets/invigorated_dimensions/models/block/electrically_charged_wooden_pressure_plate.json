@@ -1,0 +1,6 @@
+{
+  "parent": "block/pressure_plate_up",
+  "textures": {
+    "texture": "invigorated_dimensions:block/electrically_charged_planks"
+  }
+}

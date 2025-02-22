@@ -1,0 +1,80 @@
+{
+    "id": "Snorlax",
+    "spawnInfos": [
+        {
+            "spec": "species:Snorlax",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 40,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:leftovers",
+                    "percentChance": 100
+                }
+            ],
+            "condition": {
+                "times": [
+                    "AFTERNOON",
+                    "DUSK"
+                ],
+                "stringBiomes": [
+                    "overworld normal"
+                ]
+            },
+            "rarity": 6.0
+        },
+        {
+            "spec": "species:Snorlax palette:snow",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 40,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:leftovers",
+                    "percentChance": 100
+                }
+            ],
+            "condition": {
+                "times": [
+                    "DAWN",
+                    "MORNING"
+                ],
+                "stringBiomes": [
+                    "overworld normal"
+                ]
+            },
+            "rarity": 0.5
+        },
+        {
+            "spec": "species:Snorlax palette:summer",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 40,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:leftovers",
+                    "percentChance": 100
+                }
+            ],
+            "condition": {
+                "times": [
+                    "DAWN",
+                    "MORNING"
+                ],
+                "stringBiomes": [
+                    "overworld normal"
+                ]
+            },
+            "rarity": 0.05
+        }
+    ]
+}

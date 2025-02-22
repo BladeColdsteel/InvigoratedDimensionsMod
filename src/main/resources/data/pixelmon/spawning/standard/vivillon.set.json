@@ -1,0 +1,388 @@
+{
+    "id": "Vivillon",
+    "spawnInfos": [
+        {
+            "spec": "species:Vivillon palette:archipelago",
+            "stringLocationTypes": [
+                "Air"
+            ],
+            "minLevel": 13,
+            "maxLevel": 24,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "MORNING"
+                ],
+                "stringBiomes": [
+                    "na bug"
+                ]
+            },
+            "rarity": 5.0
+        },
+        {
+            "spec": "species:Vivillon palette:continental",
+            "stringLocationTypes": [
+                "Air"
+            ],
+            "minLevel": 13,
+            "maxLevel": 24,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "MORNING"
+                ],
+                "stringBiomes": [
+                    "na bug"
+                ]
+            },
+            "rarity": 5.0
+        },
+        {
+            "spec": "species:Vivillon palette:elegant",
+            "stringLocationTypes": [
+                "Air"
+            ],
+            "minLevel": 13,
+            "maxLevel": 24,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "MORNING"
+                ],
+                "stringBiomes": [
+                    "na bug"
+                ]
+            },
+            "rarity": 5.0
+        },
+        {
+            "spec": "species:Vivillon palette:garden",
+            "stringLocationTypes": [
+                "Air"
+            ],
+            "minLevel": 13,
+            "maxLevel": 24,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "MORNING"
+                ],
+                "stringBiomes": [
+                    "na bug"
+                ]
+            },
+            "rarity": 5.0
+        },
+        {
+            "spec": "species:Vivillon palette:high_plains",
+            "stringLocationTypes": [
+                "Air"
+            ],
+            "minLevel": 13,
+            "maxLevel": 24,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "MORNING"
+                ],
+                "stringBiomes": [
+                    "na bug"
+                ]
+            },
+            "rarity": 5.0
+        },
+        {
+            "spec": "species:Vivillon palette:icy_snow",
+            "stringLocationTypes": [
+                "Air"
+            ],
+            "minLevel": 13,
+            "maxLevel": 24,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "MORNING"
+                ],
+                "stringBiomes": [
+                    "na bug"
+                ]
+            },
+            "rarity": 5.0
+        },
+        {
+            "spec": "species:Vivillon palette:jungle",
+            "stringLocationTypes": [
+                "Air"
+            ],
+            "minLevel": 13,
+            "maxLevel": 24,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "MORNING"
+                ],
+                "stringBiomes": [
+                    "na bug"
+                ]
+            },
+            "rarity": 5.0
+        },
+        {
+            "spec": "species:Vivillon palette:marine",
+            "stringLocationTypes": [
+                "Air"
+            ],
+            "minLevel": 13,
+            "maxLevel": 24,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "MORNING"
+                ],
+                "stringBiomes": [
+                    "na bug"
+                ]
+            },
+            "rarity": 5.0
+        },
+        {
+            "spec": "species:Vivillon palette:meadow",
+            "stringLocationTypes": [
+                "Air"
+            ],
+            "minLevel": 13,
+            "maxLevel": 24,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "MORNING"
+                ],
+                "stringBiomes": [
+                    "na bug"
+                ]
+            },
+            "rarity": 5.0
+        },
+        {
+            "spec": "species:Vivillon palette:modern",
+            "stringLocationTypes": [
+                "Air"
+            ],
+            "minLevel": 13,
+            "maxLevel": 24,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "MORNING"
+                ],
+                "stringBiomes": [
+                    "na bug"
+                ]
+            },
+            "rarity": 5.0
+        },
+        {
+            "spec": "species:Vivillon palette:monsoon",
+            "stringLocationTypes": [
+                "Air"
+            ],
+            "minLevel": 13,
+            "maxLevel": 24,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "MORNING"
+                ],
+                "stringBiomes": [
+                    "na bug"
+                ]
+            },
+            "rarity": 5.0
+        },
+        {
+            "spec": "species:Vivillon palette:ocean",
+            "stringLocationTypes": [
+                "Air"
+            ],
+            "minLevel": 13,
+            "maxLevel": 24,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "MORNING"
+                ],
+                "stringBiomes": [
+                    "na bug"
+                ]
+            },
+            "rarity": 5.0
+        },
+        {
+            "spec": "species:Vivillon palette:polar",
+            "stringLocationTypes": [
+                "Air"
+            ],
+            "minLevel": 13,
+            "maxLevel": 24,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "MORNING"
+                ],
+                "stringBiomes": [
+                    "na bug"
+                ]
+            },
+            "rarity": 5.0
+        },
+        {
+            "spec": "species:Vivillon palette:river",
+            "stringLocationTypes": [
+                "Air"
+            ],
+            "minLevel": 13,
+            "maxLevel": 24,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "MORNING"
+                ],
+                "stringBiomes": [
+                    "na bug"
+                ]
+            },
+            "rarity": 5.0
+        },
+        {
+            "spec": "species:Vivillon palette:sandstorm",
+            "stringLocationTypes": [
+                "Air"
+            ],
+            "minLevel": 13,
+            "maxLevel": 24,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "MORNING"
+                ],
+                "stringBiomes": [
+                    "na bug"
+                ]
+            },
+            "anticondition": {
+                "stringBiomes": [
+                    "minecraft:desert_lakes"
+                ]
+            },
+            "rarity": 5.0
+        },
+        {
+            "spec": "species:Vivillon palette:savanna",
+            "stringLocationTypes": [
+                "Air"
+            ],
+            "minLevel": 13,
+            "maxLevel": 24,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "MORNING"
+                ],
+                "stringBiomes": [
+                    "na bug"
+                ]
+            },
+            "rarity": 5.0
+        },
+        {
+            "spec": "species:Vivillon palette:sun",
+            "stringLocationTypes": [
+                "Air"
+            ],
+            "minLevel": 13,
+            "maxLevel": 24,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "MORNING"
+                ],
+                "stringBiomes": [
+                    "na bug"
+                ]
+            },
+            "rarity": 5.0
+        },
+        {
+            "spec": "species:Vivillon palette:tundra",
+            "stringLocationTypes": [
+                "Air"
+            ],
+            "minLevel": 13,
+            "maxLevel": 24,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "MORNING"
+                ],
+                "stringBiomes": [
+                    "na bug"
+                ]
+            },
+            "rarity": 5.0
+        },
+        {
+            "spec": "species:Vivillon palette:fancy",
+            "stringLocationTypes": [
+                "Air"
+            ],
+            "minLevel": 13,
+            "maxLevel": 24,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "MORNING"
+                ],
+                "stringBiomes": [
+                    "na bug"
+                ]
+            },
+            "rarity": 5.0
+        },
+        {
+            "spec": "species:Vivillon palette:poke_ball",
+            "stringLocationTypes": [
+                "Air"
+            ],
+            "minLevel": 13,
+            "maxLevel": 24,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "MORNING"
+                ],
+                "stringBiomes": [
+                    "na bug"
+                ]
+            },
+            "rarity": 5.0
+        },
+        {
+            "spec": "species:Vivillon palette:strike",
+            "stringLocationTypes": [
+                "Air"
+            ],
+            "minLevel": 13,
+            "maxLevel": 24,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "na bug"
+                ]
+            },
+            "rarity": 5.0
+        }
+    ]
+}

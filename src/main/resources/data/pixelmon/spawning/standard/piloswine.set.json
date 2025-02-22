@@ -1,0 +1,26 @@
+{
+    "id": "Piloswine",
+    "spawnInfos": [
+        {
+            "spec": "species:Piloswine",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 33,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "stringBiomes": [
+                    "na ice"
+                ],
+                "maxY": 80
+            },
+            "anticondition": {
+                "stringBiomes": [
+                    "freezing forests"
+                ]
+            },
+            "rarity": 40.0
+        }
+    ]
+}

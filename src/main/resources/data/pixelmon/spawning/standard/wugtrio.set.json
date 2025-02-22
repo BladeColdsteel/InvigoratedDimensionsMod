@@ -1,0 +1,21 @@
+{
+    "id": "Wugtrio",
+    "spawnInfos": [
+        {
+            "spec": "species:Wugtrio",
+            "stringLocationTypes": [
+                "Land",
+                "Seafloor"
+            ],
+            "minLevel": 26,
+            "maxLevel": 39,
+            "typeID": "pokemon",
+            "condition": {
+                "stringBiomes": [
+                    "na water"
+                ]
+            },
+            "rarity": 20.0
+        }
+    ]
+}

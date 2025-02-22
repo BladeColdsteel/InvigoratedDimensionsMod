@@ -1,0 +1,76 @@
+{
+    "id": "Gible",
+    "spawnInfos": [
+        {
+            "spec": "species:Gible",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 14,
+            "maxLevel": 23,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "end dragon"
+                ],
+                "maxY": 80
+            },
+            "rarity": 90.0
+        },
+        {
+            "spec": "species:Gible",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 14,
+            "maxLevel": 23,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "end dragon"
+                ]
+            },
+            "rarity": 90.0
+        },
+        {
+            "spec": "species:Gible",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 14,
+            "maxLevel": 23,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "end dragon"
+                ]
+            },
+            "rarity": 100.0
+        },
+        {
+            "spec": "species:Gible",
+            "stringLocationTypes": [
+                "Underground"
+            ],
+            "minLevel": 14,
+            "maxLevel": 23,
+            "typeID": "pokemon",
+            "condition": {
+                "stringBiomes": [
+                    "end dragon"
+                ],
+                "maxY": 70
+            },
+            "rarity": 6.0
+        }
+    ]
+}

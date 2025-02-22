@@ -1,0 +1,42 @@
+{
+    "id": "Haxorus",
+    "spawnInfos": [
+        {
+            "spec": "species:Haxorus",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 49,
+            "maxLevel": 57,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAWN",
+                    "DUSK"
+                ],
+                "stringBiomes": [
+                    "end dragon"
+                ]
+            },
+            "rarity": 0.1
+        },
+        {
+            "spec": "species:Haxorus",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 49,
+            "maxLevel": 57,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "end dragon"
+                ]
+            },
+            "rarity": 5.0
+        }
+    ]
+}

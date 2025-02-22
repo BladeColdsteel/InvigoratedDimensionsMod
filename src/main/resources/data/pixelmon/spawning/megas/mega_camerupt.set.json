@@ -1,0 +1,20 @@
+{
+    "id": "Mega Camerupt",
+    "spawnInfos": [
+        {
+            "spec": "species:Camerupt",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "spawnSpecificBossRate": 1,
+            "condition": {
+                "stringBiomes": [
+                    "nether fire"
+                ]
+            },
+            "interval": "megaBoss",
+            "typeID": "pokemon",
+            "rarity": 0.3
+        }
+    ]
+}

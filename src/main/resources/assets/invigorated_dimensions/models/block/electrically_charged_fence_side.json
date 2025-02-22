@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_side",
+  "textures": {
+    "texture": "invigorated_dimensions:block/electrically_charged_planks"
+  }
+}

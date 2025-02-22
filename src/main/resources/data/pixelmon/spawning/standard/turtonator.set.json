@@ -1,0 +1,76 @@
+{
+    "id": "Turtonator",
+    "spawnInfos": [
+        {
+            "spec": "species:Turtonator",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 25,
+            "maxLevel": 55,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:charcoal",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "times": [
+                    "DAY"
+                ],
+                "stringBiomes": [
+                    "nether fire"
+                ]
+            },
+            "rarity": 8.0
+        },
+        {
+            "spec": "species:Turtonator",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 25,
+            "maxLevel": 55,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:charcoal",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "stringBiomes": [
+                    "nether fire"
+                ]
+            },
+            "anticondition": {
+                "stringBiomes": [
+                    "byg:subzero_hypogeal"
+                ]
+            },
+            "rarity": 8.0
+        },
+        {
+            "spec": "species:Turtonator",
+            "stringLocationTypes": [
+                "Lava Floor"
+            ],
+            "minLevel": 25,
+            "maxLevel": 55,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:charcoal",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "stringBiomes": [
+                    "nether fire"
+                ]
+            },
+            "rarity": 8.0
+        }
+    ]
+}

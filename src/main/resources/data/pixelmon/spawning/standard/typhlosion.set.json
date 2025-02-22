@@ -1,0 +1,59 @@
+{
+    "id": "Typhlosion",
+    "spawnInfos": [
+        {
+            "spec": "species:Typhlosion",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 36,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAY"
+                ],
+                "stringBiomes": [
+                    "nether fire"
+                ]
+            },
+            "rarity": 1.0
+        },
+        {
+            "spec": "species:Typhlosion",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 36,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "nether fire"
+                ]
+            },
+            "rarity": 1.0
+        },
+        {
+            "spec": "species:Typhlosion form:hisuian",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 36,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "nether fire"
+                ]
+            },
+            "rarity": 0.5
+        }
+    ]
+}

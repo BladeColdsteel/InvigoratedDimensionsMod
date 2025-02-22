@@ -1,0 +1,23 @@
+{
+    "id": "Baxcalibur",
+    "spawnInfos": [
+        {
+            "spec": "species:Baxcalibur",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 54,
+            "maxLevel": 65,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "end dragon"
+                ]
+            },
+            "rarity": 0.01
+        }
+    ]
+}

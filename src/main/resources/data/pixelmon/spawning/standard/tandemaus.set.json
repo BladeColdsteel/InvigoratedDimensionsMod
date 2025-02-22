@@ -1,0 +1,20 @@
+{
+    "id": "Tandemaus",
+    "spawnInfos": [
+        {
+            "spec": "species:Tandemaus",
+            "stringLocationTypes": [
+                "Indoors"
+            ],
+            "minLevel": 10,
+            "maxLevel": 25,
+            "typeID": "pokemon",
+            "condition": {
+                "stringBiomes": [
+                    "overworld normal"
+                ]
+            },
+            "rarity": 100.0
+        }
+    ]
+}

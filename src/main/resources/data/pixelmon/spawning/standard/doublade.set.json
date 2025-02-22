@@ -1,0 +1,99 @@
+{
+    "id": "Doublade",
+    "spawnInfos": [
+        {
+            "spec": "species:Doublade",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 36,
+            "maxLevel": 49,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "na steel"
+                ]
+            },
+            "rarity": 6.0
+        },
+        {
+            "spec": "species:Doublade",
+            "stringLocationTypes": [
+                "Manmade"
+            ],
+            "minLevel": 36,
+            "maxLevel": 49,
+            "typeID": "pokemon",
+            "condition": {
+                "stringBiomes": [
+                    "na steel"
+                ]
+            },
+            "rarity": 6.0
+        },
+        {
+            "spec": "species:Doublade palette:alter",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 36,
+            "maxLevel": 49,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "na steel"
+                ]
+            },
+            "rarity": 1.0
+        },
+        {
+            "spec": "species:Doublade",
+            "stringLocationTypes": [
+                "Indoors",
+                "Land"
+            ],
+            "minLevel": 36,
+            "maxLevel": 49,
+            "typeID": "pokemon",
+            "condition": {
+                "structures": [
+                    "pixelmon:haunted_tower"
+                ],
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "na steel"
+                ]
+            },
+            "rarity": 6.0
+        },
+        {
+            "spec": "species:Doublade",
+            "stringLocationTypes": [
+                "Manmade"
+            ],
+            "minLevel": 36,
+            "maxLevel": 49,
+            "typeID": "pokemon",
+            "condition": {
+                "structures": [
+                    "pixelmon:land_chalice"
+                ],
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "na steel"
+                ]
+            },
+            "rarity": 6.0
+        }
+    ]
+}

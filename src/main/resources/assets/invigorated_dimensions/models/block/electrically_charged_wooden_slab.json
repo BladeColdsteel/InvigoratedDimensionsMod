@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "invigorated_dimensions:block/electrically_charged_planks",
+    "top": "invigorated_dimensions:block/electrically_charged_planks",
+    "side": "invigorated_dimensions:block/electrically_charged_planks"
+  }
+}

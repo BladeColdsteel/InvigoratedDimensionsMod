@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "invigorated_dimensions:stripped_electrically_charged_wood"
+    }
+  ],
+  "result": {
+    "item": "invigorated_dimensions:electrically_charged_planks",
+    "count": 4
+  }
+}

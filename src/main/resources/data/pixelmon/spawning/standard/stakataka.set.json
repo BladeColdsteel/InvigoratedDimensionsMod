@@ -1,0 +1,41 @@
+{
+    "id": "Stakataka",
+    "spawnInfos": [
+        {
+            "spec": "species:Stakataka",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "tags": [
+                "ultrabeast"
+            ],
+            "minLevel": 60,
+            "maxLevel": 60,
+            "typeID": "pokemon",
+            "condition": {
+                "stringBiomes": [
+                    "na rock"
+                ]
+            },
+            "rarity": 0.5
+        },
+        {
+            "spec": "species:Stakataka",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "tags": [
+                "ultrabeast"
+            ],
+            "minLevel": 60,
+            "maxLevel": 60,
+            "typeID": "pokemon",
+            "condition": {
+                "stringBiomes": [
+                    "na rock"
+                ]
+            },
+            "rarity": 5.0
+        }
+    ]
+}

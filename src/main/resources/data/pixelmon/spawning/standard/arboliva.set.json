@@ -1,0 +1,24 @@
+{
+    "id": "Arboliva",
+    "spawnInfos": [
+        {
+            "spec": "species:Arboliva",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 35,
+            "maxLevel": 45,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAWN",
+                    "MORNING"
+                ],
+                "stringBiomes": [
+                    "na grass"
+                ]
+            },
+            "rarity": 5.0
+        }
+    ]
+}

@@ -1,0 +1,45 @@
+{
+    "id": "Scyther",
+    "spawnInfos": [
+        {
+            "spec": "species:Scyther",
+            "stringLocationTypes": [
+                "Land",
+                "Sweet Scent"
+            ],
+            "minLevel": 15,
+            "maxLevel": 35,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAWN",
+                    "DUSK",
+                    "DAY"
+                ],
+                "stringBiomes": [
+                    "na bug"
+                ]
+            },
+            "rarity": 8.0
+        },
+        {
+            "spec": "species:Scyther",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 15,
+            "maxLevel": 35,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAWN",
+                    "DAY"
+                ],
+                "stringBiomes": [
+                    "na bug"
+                ]
+            },
+            "rarity": 50.0
+        }
+    ]
+}

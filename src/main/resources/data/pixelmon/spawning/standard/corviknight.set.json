@@ -1,0 +1,50 @@
+{
+    "id": "Corviknight",
+    "spawnInfos": [
+        {
+            "spec": "species:Corviknight",
+            "stringLocationTypes": [
+                "Air"
+            ],
+            "minLevel": 38,
+            "maxLevel": 55,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:metal_coat",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "na flying"
+                ]
+            },
+            "rarity": 0.5
+        },
+        {
+            "spec": "species:Corviknight",
+            "stringLocationTypes": [
+                "Air"
+            ],
+            "minLevel": 38,
+            "maxLevel": 55,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:metal_coat",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "stringBiomes": [
+                    "na flying"
+                ]
+            },
+            "rarity": 25.0
+        }
+    ]
+}

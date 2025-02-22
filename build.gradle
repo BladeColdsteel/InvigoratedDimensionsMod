@@ -1,22 +1,30 @@
 buildscript {
     repositories {
         maven { url = 'https://maven.minecraftforge.net' }
+        jcenter()
+        maven { url='https://repo.spongepowered.org/repository/maven-public/' }
         mavenCentral()
     }
     dependencies {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
+        classpath group: 'org.spongepowered', name: 'mixingradle', version: '0.7-SNAPSHOT'
     }
 }
 apply plugin: 'net.minecraftforge.gradle'
 // Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
+apply plugin: 'org.spongepowered.mixin'
 
 version = '1.16.5-0.1.0'
 group = 'com.bladecoldsteel.invigorateddimensions' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'invigorateddimensions'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(8) // Mojang ships Java 8 to end users, so your mod should target Java 8.
+
+mixin {
+    add sourceSets.main, "invigorated_dimensions.refmap.json"
+}
 
 println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version') + '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
 minecraft {
@@ -42,6 +50,8 @@ minecraft {
         client {
             workingDirectory project.file('run')
 
+            arg "-mixin.config=invigorated_dimensions.mixins.json"
+
             // Recommended logging data for a userdev environment
             // The markers can be changed as needed.
             // "SCAN": For mods scan.
@@ -63,6 +73,8 @@ minecraft {
 
         server {
             workingDirectory project.file('run')
+
+            arg "-mixin.config=invigorated_dimensions.mixins.json"
 
             // Recommended logging data for a userdev environment
             // The markers can be changed as needed.
@@ -120,6 +132,11 @@ repositories {
             includeGroup "curse.maven"
         }
     }
+    maven {
+        // location of the maven that hosts JEI files
+        name = "Progwml6 maven"
+        url = "https://dvs1.progwml6.com/files/maven/"
+    }
 }
 
 dependencies {
@@ -128,7 +145,14 @@ dependencies {
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
     minecraft 'net.minecraftforge:forge:1.16.5-36.2.34'
 
-    implementation fg.deobf("curse.maven:pixelmon-389487:5209074")
+    implementation fg.deobf("curse.maven:pixelmon-389487:5209074") //Pixelmon
+
+    if (project.hasProperty('mixin_version')) {
+        annotationProcessor "org.spongepowered:mixin:${mixin_version}:processor".toString() //Mixin
+    }
+
+    compileOnly fg.deobf ("mezz.jei:jei-1.16.5:7.7.1.153:api") //JEI
+    runtimeOnly fg.deobf ("mezz.jei:jei-1.16.5:7.7.1.153") //JEI
 
     // You may put jars on which you depend on in ./libs or you may define them like so..
     // compile "some.group:artifact:version:classifier"

@@ -1,0 +1,41 @@
+{
+    "id": "Heliolisk",
+    "spawnInfos": [
+        {
+            "spec": "species:Heliolisk",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 25,
+            "maxLevel": 37,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "MORNING"
+                ],
+                "stringBiomes": [
+                    "highlands electric"
+                ]
+            },
+            "rarity": 6.0
+        },
+        {
+            "spec": "species:Heliolisk",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 25,
+            "maxLevel": 37,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAY"
+                ],
+                "stringBiomes": [
+                    "highlands electric"
+                ]
+            },
+            "rarity": 50.0
+        }
+    ]
+}

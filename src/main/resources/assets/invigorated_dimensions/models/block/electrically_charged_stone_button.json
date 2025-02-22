@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button",
+  "textures": {
+    "texture": "invigorated_dimensions:block/electrically_charged_stone"
+  }
+}

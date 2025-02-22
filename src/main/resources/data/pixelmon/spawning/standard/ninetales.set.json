@@ -1,0 +1,98 @@
+{
+    "id": "Ninetales",
+    "spawnInfos": [
+        {
+            "spec": "species:Ninetales",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 20,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:charcoal",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "weathers": [
+                    "CLEAR"
+                ],
+                "stringBiomes": [
+                    "nether fire"
+                ]
+            },
+            "rarity": 0.5
+        },
+        {
+            "spec": "species:Ninetales",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 20,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:charcoal",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "times": [
+                    "DAY"
+                ],
+                "stringBiomes": [
+                    "nether fire"
+                ]
+            },
+            "rarity": 0.5
+        },
+        {
+            "spec": "species:Ninetales form:alolan",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 20,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:snowball",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "times": [
+                    "DAY"
+                ],
+                "stringBiomes": [
+                    "nether fire"
+                ]
+            },
+            "rarity": 0.1
+        },
+        {
+            "spec": "species:Ninetales form:base palette:strike",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 20,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "nether fire"
+                ]
+            },
+            "rarity": 5.0
+        }
+    ]
+}

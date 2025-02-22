@@ -1,0 +1,26 @@
+{
+    "id": "Eternatus",
+    "spawnInfos": [
+        {
+            "spec": "species:Eternatus level:70",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "tags": [
+                "legendary"
+            ],
+            "interval": "legendary",
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAWN",
+                    "MORNING"
+                ],
+                "stringBiomes": [
+                    "na poison"
+                ]
+            },
+            "rarity": 3.0
+        }
+    ]
+}

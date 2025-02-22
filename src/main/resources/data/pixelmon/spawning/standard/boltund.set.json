@@ -1,0 +1,42 @@
+{
+    "id": "Boltund",
+    "spawnInfos": [
+        {
+            "spec": "species:Boltund",
+            "stringLocationTypes": [
+                "Land",
+                "Sweet Scent"
+            ],
+            "minLevel": 25,
+            "maxLevel": 40,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "MORNING"
+                ],
+                "stringBiomes": [
+                    "highlands electric"
+                ]
+            },
+            "rarity": 50.0
+        },
+        {
+            "spec": "species:Boltund palette:strike",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 25,
+            "maxLevel": 40,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "highlands electric"
+                ]
+            },
+            "rarity": 5.0
+        }
+    ]
+}

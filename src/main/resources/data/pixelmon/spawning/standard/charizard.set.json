@@ -1,0 +1,44 @@
+{
+    "id": "Charizard",
+    "spawnInfos": [
+        {
+            "spec": "species:Charizard",
+            "stringLocationTypes": [
+                "Air"
+            ],
+            "minLevel": 36,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAY"
+                ],
+                "weathers": [
+                    "CLEAR"
+                ],
+                "stringBiomes": [
+                    "nether fire"
+                ]
+            },
+            "rarity": 0.5
+        },
+        {
+            "spec": "species:Charizard",
+            "stringLocationTypes": [
+                "Air"
+            ],
+            "minLevel": 36,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "MORNING"
+                ],
+                "stringBiomes": [
+                    "nether fire"
+                ]
+            },
+            "rarity": 0.5
+        }
+    ]
+}

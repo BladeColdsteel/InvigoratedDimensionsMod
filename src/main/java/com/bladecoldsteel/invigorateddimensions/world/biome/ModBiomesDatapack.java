@@ -16,8 +16,7 @@ public class ModBiomesDatapack {
             = DeferredRegister.create(ForgeRegistries.BIOMES, InvigoratedDimensions.MOD_ID);
 
     public static RegistryKey<Biome> ELECTRIC_RIFT = registerBiome("electric_rift");
-    public static RegistryKey<Biome> FLASHING_HILLS = registerBiome("flashing_hills");
-    public static RegistryKey<Biome> THUNDERING_PLAINS = registerBiome("thundering_plains");
+    public static RegistryKey<Biome> ELECTRIC_HIGHLANDS = registerBiome("electric_highlands");
 
     private static RegistryKey<Biome> registerBiome(String name) {
         BIOMES.register(name, BiomeMaker::theVoidBiome);
@@ -28,7 +27,6 @@ public class ModBiomesDatapack {
         BIOMES.register(eventBus);
 
         BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(ELECTRIC_RIFT, 20));
-        BiomeManager.addBiome(BiomeManager.BiomeType.DESERT, new BiomeManager.BiomeEntry(FLASHING_HILLS, 20));
-        BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(THUNDERING_PLAINS, 20));
+        BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(ELECTRIC_HIGHLANDS, 0));
     }
 }

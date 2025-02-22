@@ -1,0 +1,50 @@
+{
+    "id": "Cleffa",
+    "spawnInfos": [
+        {
+            "spec": "species:Cleffa",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 5,
+            "maxLevel": 10,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:moon_stone",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "stringBiomes": [
+                    "na fairy"
+                ]
+            },
+            "rarity": 0.5
+        },
+        {
+            "spec": "species:Cleffa",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 5,
+            "maxLevel": 10,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:moon_stone",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "na fairy"
+                ]
+            },
+            "rarity": 50.0
+        }
+    ]
+}

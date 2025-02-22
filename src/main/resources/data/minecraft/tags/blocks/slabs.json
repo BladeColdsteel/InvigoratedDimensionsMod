@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "invigorated_dimensions:electrically_charged_wooden_slab",
+    "invigorated_dimensions:electrically_charged_stone_slab",
+    "invigorated_dimensions:electrically_charged_cobblestone_slab",
+    "invigorated_dimensions:electrically_charged_stone_brick_slab"
+  ]
+}

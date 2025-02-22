@@ -1,0 +1,30 @@
+{
+    "id": "Uxie",
+    "spawnInfos": [
+        {
+            "spec": "species:Uxie level:50",
+            "stringLocationTypes": [
+                "Surface Water"
+            ],
+            "tags": [
+                "legendary"
+            ],
+            "interval": "legendary",
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "AFTERNOON"
+                ],
+                "stringBiomes": [
+                    "na psychic"
+                ]
+            },
+            "anticondition": {
+                "stringBiomes": [
+                    "minecraft:desert_lakes"
+                ]
+            },
+            "rarity": 2.0
+        }
+    ]
+}

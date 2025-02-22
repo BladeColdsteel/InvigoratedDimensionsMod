@@ -1,0 +1,41 @@
+{
+    "id": "Togekiss",
+    "spawnInfos": [
+        {
+            "spec": "species:Togekiss",
+            "stringLocationTypes": [
+                "Air"
+            ],
+            "minLevel": 45,
+            "maxLevel": 55,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "MORNING"
+                ],
+                "stringBiomes": [
+                    "na fairy"
+                ]
+            },
+            "rarity": 0.2
+        },
+        {
+            "spec": "species:Togekiss",
+            "stringLocationTypes": [
+                "Air"
+            ],
+            "minLevel": 45,
+            "maxLevel": 55,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "MORNING"
+                ],
+                "stringBiomes": [
+                    "na fairy"
+                ]
+            },
+            "rarity": 5.0
+        }
+    ]
+}

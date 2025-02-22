@@ -1,0 +1,35 @@
+{
+    "id": "Lumineon",
+    "spawnInfos": [
+        {
+            "spec": "species:Lumineon",
+            "stringLocationTypes": [
+                "Seafloor"
+            ],
+            "minLevel": 32,
+            "maxLevel": 43,
+            "typeID": "pokemon",
+            "condition": {
+                "stringBiomes": [
+                    "na water"
+                ]
+            },
+            "rarity": 10.0
+        },
+        {
+            "spec": "species:Lumineon palette:drowned",
+            "stringLocationTypes": [
+                "Water"
+            ],
+            "minLevel": 32,
+            "maxLevel": 43,
+            "typeID": "pokemon",
+            "condition": {
+                "stringBiomes": [
+                    "na water"
+                ]
+            },
+            "rarity": 100.0
+        }
+    ]
+}

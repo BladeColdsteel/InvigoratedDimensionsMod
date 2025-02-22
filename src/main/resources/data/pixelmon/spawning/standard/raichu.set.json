@@ -1,0 +1,101 @@
+{
+    "id": "Raichu",
+    "spawnInfos": [
+        {
+            "spec": "species:Raichu",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 25,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "AFTERNOON"
+                ],
+                "stringBiomes": [
+                    "highlands electric"
+                ]
+            },
+            "rarityMultipliers": [
+                {
+                    "multiplier": 1.5,
+                    "condition": {
+                        "weathers": [
+                            "STORM"
+                        ]
+                    }
+                }
+            ],
+            "rarity": 0.5
+        },
+        {
+            "spec": "species:Raichu",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 25,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "AFTERNOON"
+                ],
+                "stringBiomes": [
+                    "highlands electric"
+                ]
+            },
+            "rarity": 10.0
+        },
+        {
+            "spec": "species:Raichu form:alolan",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 25,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "MORNING"
+                ],
+                "stringBiomes": [
+                    "highlands electric"
+                ]
+            },
+            "rarityMultipliers": [
+                {
+                    "multiplier": 1.5,
+                    "condition": {
+                        "weathers": [
+                            "STORM"
+                        ]
+                    }
+                }
+            ],
+            "rarity": 0.1
+        },
+        {
+            "spec": "species:Raichu form:alolan palette:summer",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 25,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAWN",
+                    "DUSK"
+                ],
+                "weathers": [
+                    "CLEAR"
+                ],
+                "stringBiomes": [
+                    "highlands electric"
+                ]
+            },
+            "rarity": 0.05
+        }
+    ]
+}

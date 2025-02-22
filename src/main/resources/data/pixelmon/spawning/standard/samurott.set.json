@@ -1,0 +1,69 @@
+{
+    "id": "Samurott",
+    "spawnInfos": [
+        {
+            "spec": "species:Samurott",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 36,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "AFTERNOON"
+                ],
+                "stringBiomes": [
+                    "na water"
+                ]
+            },
+            "rarityMultipliers": [
+                {
+                    "multiplier": 2,
+                    "condition": {
+                        "weathers": [
+                            "RAIN"
+                        ]
+                    }
+                }
+            ],
+            "rarity": 1.0
+        },
+        {
+            "spec": "species:Samurott",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 36,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAY"
+                ],
+                "stringBiomes": [
+                    "na water"
+                ]
+            },
+            "rarity": 1.0
+        },
+        {
+            "spec": "species:Samurott form:hisuian",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 36,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "AFTERNOON"
+                ],
+                "stringBiomes": [
+                    "na water"
+                ]
+            },
+            "rarity": 0.5
+        }
+    ]
+}

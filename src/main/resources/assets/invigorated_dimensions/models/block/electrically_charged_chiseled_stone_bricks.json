@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "invigorated_dimensions:block/electrically_charged_chiseled_stone_bricks"
+  }
+}

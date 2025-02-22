@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "invigorated_dimensions:electrically_charged_wooden_stairs",
+    "invigorated_dimensions:electrically_charged_stone_stairs",
+    "invigorated_dimensions:electrically_charged_cobblestone_stairs",
+    "invigorated_dimensions:electrically_charged_stone_brick_stairs"
+  ]
+}

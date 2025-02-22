@@ -1,0 +1,26 @@
+{
+    "id": "Cinccino",
+    "spawnInfos": [
+        {
+            "spec": "species:Cinccino",
+            "stringLocationTypes": [
+                "Land",
+                "Sweet Scent"
+            ],
+            "minLevel": 25,
+            "maxLevel": 37,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAWN",
+                    "NIGHT",
+                    "DUSK"
+                ],
+                "stringBiomes": [
+                    "overworld normal"
+                ]
+            },
+            "rarity": 6.0
+        }
+    ]
+}

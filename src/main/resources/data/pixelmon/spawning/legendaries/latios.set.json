@@ -1,0 +1,25 @@
+{
+    "id": "Latios",
+    "spawnInfos": [
+        {
+            "spec": "species:Latios level:70",
+            "stringLocationTypes": [
+                "Air"
+            ],
+            "tags": [
+                "legendary"
+            ],
+            "interval": "legendary",
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "AFTERNOON"
+                ],
+                "stringBiomes": [
+                    "end dragon"
+                ]
+            },
+            "rarity": 2.0
+        }
+    ]
+}

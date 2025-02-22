@@ -1,0 +1,48 @@
+{
+    "id": "Weedle",
+    "spawnInfos": [
+        {
+            "spec": "species:Weedle",
+            "stringLocationTypes": [
+                "Land",
+                "Tree Top",
+                "Headbutt",
+                "Sweet Scent",
+                "Forage"
+            ],
+            "minLevel": 2,
+            "maxLevel": 7,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "AFTERNOON",
+                    "DUSK"
+                ],
+                "stringBiomes": [
+                    "na bug"
+                ]
+            },
+            "rarity": 300.0
+        },
+        {
+            "spec": "species:Weedle palette:pink",
+            "stringLocationTypes": [
+                "Land",
+                "Tree Top"
+            ],
+            "minLevel": 2,
+            "maxLevel": 7,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "AFTERNOON",
+                    "DUSK"
+                ],
+                "stringBiomes": [
+                    "na bug"
+                ]
+            },
+            "rarity": 5.0
+        }
+    ]
+}

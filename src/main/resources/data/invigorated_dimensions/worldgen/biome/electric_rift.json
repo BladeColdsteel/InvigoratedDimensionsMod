@@ -1,7 +1,7 @@
 {
   "surface_builder": "invigorated_dimensions:grass_surface",
-  "depth": 0.2,
-  "scale": 0.3,
+  "depth": 0.1,
+  "scale": 0.15,
   "temperature": 0.8,
   "downfall": 0,
   "precipitation": "none",
@@ -18,42 +18,13 @@
       "options": {
         "type": "minecraft:cloud"
       },
-      "probability": 0.05
+      "probability": 0.0001
     }
   },
   "starts": [
-    "minecraft:mineshaft",
-    "minecraft:pillager_outpost",
-    "minecraft:ruined_portal",
-    "minecraft:village_savanna"
+    "invigorated_dimensions:electric_rift_structure"
   ],
   "spawners": {
-    "water_creature": [
-      {
-        "type": "minecraft:cod",
-        "weight": 5,
-        "minCount": 2,
-        "maxCount": 6
-      },
-      {
-        "type": "minecraft:dolphin",
-        "weight": 10,
-        "minCount": 1,
-        "maxCount": 1
-      },
-      {
-        "type": "minecraft:salmon",
-        "weight": 5,
-        "minCount": 2,
-        "maxCount": 6
-      },
-      {
-        "type": "minecraft:squid",
-        "weight": 10,
-        "minCount": 1,
-        "maxCount": 3
-      }
-    ],
     "creature": [
       {
         "type": "minecraft:cow",
@@ -173,16 +144,10 @@
     ],
     [],
     [
-      "minecraft:patch_tall_grass_2",
-      "minecraft:plain_vegetation",
-      "minecraft:flower_plain_decorated",
-      "minecraft:patch_grass_plain",
-      "minecraft:brown_mushroom_normal",
-      "minecraft:red_mushroom_normal",
-      "minecraft:patch_sugar_cane",
-      "minecraft:patch_pumpkin",
-      "minecraft:spring_water",
-      "minecraft:spring_lava"
+      "invigorated_dimensions:electric_tree"
+    ],
+    [
+      "minecraft:freeze_top_layer"
     ]
   ]
 }

@@ -1,0 +1,23 @@
+{
+    "id": "Drifblim",
+    "spawnInfos": [
+        {
+            "spec": "species:Drifblim",
+            "stringLocationTypes": [
+                "Air"
+            ],
+            "minLevel": 30,
+            "maxLevel": 40,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "na ghost"
+                ]
+            },
+            "rarity": 6.0
+        }
+    ]
+}

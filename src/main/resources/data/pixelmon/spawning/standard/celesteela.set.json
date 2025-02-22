@@ -1,0 +1,41 @@
+{
+    "id": "Celesteela",
+    "spawnInfos": [
+        {
+            "spec": "species:Celesteela",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "tags": [
+                "ultrabeast"
+            ],
+            "minLevel": 60,
+            "maxLevel": 60,
+            "typeID": "pokemon",
+            "condition": {
+                "stringBiomes": [
+                    "na steel"
+                ]
+            },
+            "rarity": 0.5
+        },
+        {
+            "spec": "species:Celesteela",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "tags": [
+                "ultrabeast"
+            ],
+            "minLevel": 60,
+            "maxLevel": 60,
+            "typeID": "pokemon",
+            "condition": {
+                "stringBiomes": [
+                    "na steel"
+                ]
+            },
+            "rarity": 5.0
+        }
+    ]
+}

@@ -1,0 +1,42 @@
+{
+    "id": "Taillow",
+    "spawnInfos": [
+        {
+            "spec": "species:Taillow",
+            "stringLocationTypes": [
+                "Tree Top",
+                "Headbutt"
+            ],
+            "minLevel": 5,
+            "maxLevel": 20,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAY"
+                ],
+                "stringBiomes": [
+                    "overworld normal"
+                ]
+            },
+            "rarity": 250.0
+        },
+        {
+            "spec": "species:Taillow",
+            "stringLocationTypes": [
+                "Air"
+            ],
+            "minLevel": 5,
+            "maxLevel": 20,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAY"
+                ],
+                "stringBiomes": [
+                    "overworld normal"
+                ]
+            },
+            "rarity": 150.0
+        }
+    ]
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "invigorated_dimensions:block/electrically_charged_wooden_slab"
+    },
+    "type=double": {
+      "model": "invigorated_dimensions:block/electrically_charged_planks"
+    },
+    "type=top": {
+      "model": "invigorated_dimensions:block/electrically_charged_wooden_slab_top"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+    "id": "Cyclizar",
+    "spawnInfos": [
+        {
+            "spec": "species:Cyclizar",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 25,
+            "maxLevel": 55,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAY"
+                ],
+                "stringBiomes": [
+                    "end dragon"
+                ]
+            },
+            "rarity": 1.0
+        }
+    ]
+}

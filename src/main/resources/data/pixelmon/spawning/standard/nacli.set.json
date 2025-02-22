@@ -1,0 +1,34 @@
+{
+    "id": "Nacli",
+    "spawnInfos": [
+        {
+            "spec": "species:Nacli",
+            "stringLocationTypes": [
+                "Land",
+                "Rock Smash"
+            ],
+            "minLevel": 7,
+            "maxLevel": 23,
+            "typeID": "pokemon",
+            "condition": {
+                "stringBiomes": [
+                    "na rock"
+                ]
+            },
+            "rarity": 150.0
+        },
+        {
+            "spec": "species:Nacli",
+            "stringLocationTypes": [
+                "Underground"
+            ],
+            "minLevel": 7,
+            "maxLevel": 23,
+            "typeID": "pokemon",
+            "condition": {
+                "maxY": 64
+            },
+            "rarity": 150.0
+        }
+    ]
+}

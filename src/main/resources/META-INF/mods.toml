@@ -40,7 +40,7 @@ This mod is mostly intended to work within my modpack, Invigorated Monsters 2, a
 
 Sadly, some of the dimension mods I initially installed do not work with Pixelmon and it's BetterSpawnerConfig, so I decided to create this mod to replace those dimensions!
 
-The base idea of this mod is to cover a select few dimensions and pokemon typings, namely; Electric, Water, Ice, Flying, Bug, Fighting, Ghost, Steel, Rock, and Grass. This mod will include a dimension for each mod, including Pixelmon integration.
+The base idea of this mod is to cover a select few dimensions and pokemon typings, namely; Electric, Water, Ice, Flying, Bug, Fighting, Ghost, Steel, Rock, and Grass. This mod will include a dimension for each type, including Pixelmon integration.
 
 This mod will require Pixelmon to work as it uses a few of it's ores in generation. It also uses some of Pixelmons loot tables/items.
 
@@ -70,5 +70,12 @@ I hope to include the Pokemon spawning methods inside of this mod as well, unsur
     modId = "pixelmon"
     mandatory = true
     versionRange = "[9.1.11,)"
-    ordering = "NONE"
+    ordering = "AFTER"
     side = "BOTH"
+[[dependencies.invigorated_dimensions]]
+    modId = "jei"
+    mandatory = false
+    versionRange = "[7.7.1.153,)"
+    ordering = "AFTER"
+    side = "BOTH"
+

@@ -1,0 +1,51 @@
+{
+    "id": "Sharpedo",
+    "spawnInfos": [
+        {
+            "spec": "species:Sharpedo",
+            "stringLocationTypes": [
+                "Water"
+            ],
+            "minLevel": 30,
+            "maxLevel": 45,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:deep_sea_tooth",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "stringBiomes": [
+                    "na water"
+                ]
+            },
+            "rarity": 20.0
+        },
+        {
+            "spec": "species:Sharpedo",
+            "stringLocationTypes": [
+                "Water",
+                "Underground Water"
+            ],
+            "minLevel": 30,
+            "maxLevel": 45,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:deep_sea_tooth",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "structures": [
+                    "pixelmon:water_chalice"
+                ],
+                "stringBiomes": [
+                    "na water"
+                ]
+            },
+            "rarity": 50.0
+        }
+    ]
+}

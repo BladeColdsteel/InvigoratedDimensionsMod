@@ -1,0 +1,45 @@
+{
+    "id": "Xerneas",
+    "spawnInfos": [
+        {
+            "spec": "species:Xerneas level:70",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "tags": [
+                "legendary"
+            ],
+            "interval": "legendary",
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAY"
+                ],
+                "stringBiomes": [
+                    "na fairy"
+                ]
+            },
+            "rarity": 0.5
+        },
+        {
+            "spec": "species:Xerneas palette:creator level:70",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "tags": [
+                "legendary"
+            ],
+            "interval": "legendary",
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "MIDDAY"
+                ],
+                "stringBiomes": [
+                    "na fairy"
+                ]
+            },
+            "rarity": 0.05
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "id": "Drowzee",
+    "spawnInfos": [
+        {
+            "spec": "species:Drowzee",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 15,
+            "maxLevel": 26,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "na psychic"
+                ]
+            },
+            "rarity": 100.0
+        }
+    ]
+}

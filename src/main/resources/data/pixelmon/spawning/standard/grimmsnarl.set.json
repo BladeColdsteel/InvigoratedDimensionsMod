@@ -1,0 +1,38 @@
+{
+    "id": "Grimmsnarl",
+    "spawnInfos": [
+        {
+            "spec": "species:Grimmsnarl",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 42,
+            "maxLevel": 55,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "na dark"
+                ]
+            },
+            "rarity": 0.1
+        },
+        {
+            "spec": "species:Grimmsnarl",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 42,
+            "maxLevel": 55,
+            "typeID": "pokemon",
+            "condition": {
+                "stringBiomes": [
+                    "na dark"
+                ]
+            },
+            "rarity": 0.1
+        }
+    ]
+}

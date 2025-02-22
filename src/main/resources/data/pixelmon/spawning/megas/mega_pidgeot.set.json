@@ -1,0 +1,23 @@
+{
+    "id": "Mega Pidgeot",
+    "spawnInfos": [
+        {
+            "spec": "species:Pidgeot",
+            "stringLocationTypes": [
+                "Air"
+            ],
+            "spawnSpecificBossRate": 1,
+            "condition": {
+                "times": [
+                    "DAY"
+                ],
+                "stringBiomes": [
+                    "overworld normal"
+                ]
+            },
+            "interval": "megaBoss",
+            "typeID": "pokemon",
+            "rarity": 0.3
+        }
+    ]
+}

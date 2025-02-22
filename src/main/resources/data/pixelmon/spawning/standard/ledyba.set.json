@@ -1,0 +1,25 @@
+{
+    "id": "Ledyba",
+    "spawnInfos": [
+        {
+            "spec": "species:Ledyba",
+            "stringLocationTypes": [
+                "Air",
+                "Headbutt",
+                "Sweet Scent"
+            ],
+            "minLevel": 5,
+            "maxLevel": 17,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "MORNING"
+                ],
+                "stringBiomes": [
+                    "na bug"
+                ]
+            },
+            "rarity": 250.0
+        }
+    ]
+}

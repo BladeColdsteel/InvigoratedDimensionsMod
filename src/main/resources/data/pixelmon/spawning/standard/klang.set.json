@@ -1,0 +1,57 @@
+{
+    "id": "Klang",
+    "spawnInfos": [
+        {
+            "spec": "species:Klang",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 38,
+            "maxLevel": 48,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAWN",
+                    "MORNING"
+                ],
+                "stringBiomes": [
+                    "na steel"
+                ]
+            },
+            "rarity": 8.0
+        },
+        {
+            "spec": "species:Klang",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 38,
+            "maxLevel": 48,
+            "typeID": "pokemon",
+            "condition": {
+                "stringBiomes": [
+                    "na steel"
+                ]
+            },
+            "rarity": 50.0
+        },
+        {
+            "spec": "species:Klang",
+            "stringLocationTypes": [
+                "Underground"
+            ],
+            "minLevel": 38,
+            "maxLevel": 48,
+            "typeID": "pokemon",
+            "condition": {
+                "maxY": 50
+            },
+            "anticondition": {
+                "stringBiomes": [
+                    "ultra space"
+                ]
+            },
+            "rarity": 5.0
+        }
+    ]
+}

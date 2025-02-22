@@ -1,0 +1,58 @@
+{
+    "id": "Gothitelle",
+    "spawnInfos": [
+        {
+            "spec": "species:Gothitelle",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 42,
+            "maxLevel": 54,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "na psychic"
+                ]
+            },
+            "rarity": 0.5
+        },
+        {
+            "spec": "species:Gothitelle",
+            "stringLocationTypes": [
+                "Land",
+                "Indoors",
+                "Manmade"
+            ],
+            "minLevel": 42,
+            "maxLevel": 54,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAY"
+                ],
+                "structures": [
+                    "pixelmon:pumpkin_house"
+                ]
+            },
+            "rarity": 10.0
+        },
+        {
+            "spec": "species:Gothitelle",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 42,
+            "maxLevel": 54,
+            "typeID": "pokemon",
+            "condition": {
+                "stringBiomes": [
+                    "na psychic"
+                ]
+            },
+            "rarity": 0.5
+        }
+    ]
+}

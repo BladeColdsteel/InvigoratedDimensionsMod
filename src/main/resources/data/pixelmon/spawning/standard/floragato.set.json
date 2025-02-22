@@ -1,0 +1,23 @@
+{
+    "id": "Floragato",
+    "spawnInfos": [
+        {
+            "spec": "species:Floragato",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 16,
+            "maxLevel": 36,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAY"
+                ],
+                "stringBiomes": [
+                    "na grass"
+                ]
+            },
+            "rarity": 1.0
+        }
+    ]
+}

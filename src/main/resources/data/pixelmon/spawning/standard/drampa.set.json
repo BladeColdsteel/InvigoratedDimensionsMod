@@ -1,0 +1,51 @@
+{
+    "id": "Drampa",
+    "spawnInfos": [
+        {
+            "spec": "species:Drampa",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 35,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:persim_berry",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "times": [
+                    "DAWN",
+                    "DUSK"
+                ],
+                "stringBiomes": [
+                    "overworld normal"
+                ]
+            },
+            "rarity": 6.0
+        },
+        {
+            "spec": "species:Drampa",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 35,
+            "maxLevel": 50,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:persim_berry",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "stringBiomes": [
+                    "overworld normal"
+                ]
+            },
+            "rarity": 6.0
+        }
+    ]
+}

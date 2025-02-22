@@ -1,0 +1,27 @@
+{
+    "id": "Scatterbug",
+    "spawnInfos": [
+        {
+            "spec": "species:Scatterbug",
+            "stringLocationTypes": [
+                "Land",
+                "Tree Top",
+                "Forage",
+                "Headbutt"
+            ],
+            "minLevel": 3,
+            "maxLevel": 8,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAWN",
+                    "MORNING"
+                ],
+                "stringBiomes": [
+                    "na bug"
+                ]
+            },
+            "rarity": 300.0
+        }
+    ]
+}

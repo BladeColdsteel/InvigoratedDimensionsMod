@@ -1,0 +1,78 @@
+{
+    "id": "Dusclops",
+    "spawnInfos": [
+        {
+            "spec": "species:Dusclops",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 38,
+            "maxLevel": 51,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:kasib_berry",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "na ghost"
+                ]
+            },
+            "rarity": 6.0
+        },
+        {
+            "spec": "species:Dusclops",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 38,
+            "maxLevel": 51,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:kasib_berry",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "stringBiomes": [
+                    "na ghost"
+                ]
+            },
+            "rarity": 6.0
+        },
+        {
+            "spec": "species:Dusclops",
+            "stringLocationTypes": [
+                "Indoors",
+                "Land"
+            ],
+            "minLevel": 38,
+            "maxLevel": 51,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:kasib_berry",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "structures": [
+                    "pixelmon:haunted_tower"
+                ],
+                "times": [
+                    "NIGHT"
+                ],
+                "stringBiomes": [
+                    "na ghost"
+                ]
+            },
+            "rarity": 6.0
+        }
+    ]
+}

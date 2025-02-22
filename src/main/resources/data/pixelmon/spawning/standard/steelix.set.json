@@ -1,0 +1,23 @@
+{
+    "id": "Steelix",
+    "spawnInfos": [
+        {
+            "spec": "species:Steelix",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 40,
+            "maxLevel": 60,
+            "typeID": "pokemon",
+            "condition": {
+                "times": [
+                    "DAY"
+                ],
+                "stringBiomes": [
+                    "na steel"
+                ]
+            },
+            "rarity": 5.0
+        }
+    ]
+}

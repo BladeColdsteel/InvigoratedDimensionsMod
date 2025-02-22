@@ -1,0 +1,54 @@
+{
+    "id": "Pangoro",
+    "spawnInfos": [
+        {
+            "spec": "species:Pangoro",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 33,
+            "maxLevel": 49,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:mental_herb",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "times": [
+                    "DAWN",
+                    "DUSK"
+                ],
+                "stringBiomes": [
+                    "na fighting"
+                ]
+            },
+            "rarity": 0.5
+        },
+        {
+            "spec": "species:Pangoro",
+            "stringLocationTypes": [
+                "Land"
+            ],
+            "minLevel": 33,
+            "maxLevel": 49,
+            "typeID": "pokemon",
+            "heldItems": [
+                {
+                    "itemID": "pixelmon:mental_herb",
+                    "percentChance": 5
+                }
+            ],
+            "condition": {
+                "times": [
+                    "DAY"
+                ],
+                "stringBiomes": [
+                    "na fighting"
+                ]
+            },
+            "rarity": 50.0
+        }
+    ]
+}
