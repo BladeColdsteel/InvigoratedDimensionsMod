@@ -2098,20 +2098,6 @@
       "byg:seasonal_taiga_hills",
       "byg:zelkova_forest_hills"
     ],
-    "ultra space": [
-      "pixelmon:ultra_forest",
-      "pixelmon:ultra_deep_sea",
-      "pixelmon:ultra_jungle",
-      "pixelmon:ultra_plant",
-      "pixelmon:ultra_crater",
-      "pixelmon:ultra_ruin",
-      "pixelmon:ultra_cliff",
-      "pixelmon:ultra_water",
-      "pixelmon:ultra_rocky",
-      "pixelmon:ultra_cave",
-      "pixelmon:ultra_megalopolis",
-      "pixelmon:ultra_desert"
-    ],
     "evil": [
       "biomesoplenty:dead_forest",
       "biomesoplenty:ominous_mire",
@@ -2151,9 +2137,19 @@
       "pixelmon:drowned_dark",
       "pixelmon:drowned_warm"
     ],
-    "highlands electric": [
-      "invigorated_dimensions:electric_rift",
-      "invigorated_dimensions:electric_highlands"
+    "ultra space": [
+      "pixelmon:ultra_forest",
+      "pixelmon:ultra_deep_sea",
+      "pixelmon:ultra_jungle",
+      "pixelmon:ultra_plant",
+      "pixelmon:ultra_crater",
+      "pixelmon:ultra_ruin",
+      "pixelmon:ultra_cliff",
+      "pixelmon:ultra_water",
+      "pixelmon:ultra_rocky",
+      "pixelmon:ultra_cave",
+      "pixelmon:ultra_megalopolis",
+      "pixelmon:ultra_desert"
     ],
     "overworld normal": [
       "minecraft:badlands",
@@ -2418,6 +2414,10 @@
       "byg:ethereal_clearing",
       "byg:shattered_desert_isles",
       "byg:imparius_clearing"
+    ],
+    "highlands electric": [
+      "invigorated_dimensions:electric_rift",
+      "invigorated_dimensions:electric_highlands"
     ],
     "na dark": [
       "minecraft:end_barrens",
