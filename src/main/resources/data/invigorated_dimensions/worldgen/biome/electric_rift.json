@@ -5,7 +5,7 @@
   "temperature": 0.8,
   "downfall": 0,
   "precipitation": "none",
-  "category": "none",
+  "category": "extreme_hills",
   "player_spawn_friendly": true,
   "effects": {
     "sky_color": 14737426,
