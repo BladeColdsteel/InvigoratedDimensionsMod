@@ -18,7 +18,7 @@ public class ElectricHighlandsActivatorItem extends Item {
 
     public ElectricHighlandsActivatorItem() {
         super(new Properties()
-                .tab(ElectricHighlandsItemGroup.INVIGORATED_DIMENSIONS_GROUP)
+                .tab(ElectricHighlandsItemGroup.ELECTRIC_HIGHLANDS_GROUP)
                 .stacksTo(1)
                 .rarity(Rarity.RARE));
     }

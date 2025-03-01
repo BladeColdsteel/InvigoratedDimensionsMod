@@ -216,7 +216,7 @@ public class ElectricHighlandsBlocks {
 
     private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block) {
         ElectricHighlandsItems.ITEMS.register(name, () -> new BlockItem(block.get(),
-                new Item.Properties().tab(ElectricHighlandsItemGroup.INVIGORATED_DIMENSIONS_GROUP)));
+                new Item.Properties().tab(ElectricHighlandsItemGroup.ELECTRIC_HIGHLANDS_GROUP)));
     }
 
     public static void register(IEventBus eventBus) {
