@@ -3,6 +3,7 @@ package com.bladecoldsteel.invigorateddimensions.world.gen.features;
 
 import com.bladecoldsteel.invigorateddimensions.InvigoratedDimensions;
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.block.ElectricHighlandsBlocks;
+import com.bladecoldsteel.invigorateddimensions.universal.block.UniversalBlocks;
 import com.bladecoldsteel.invigorateddimensions.util.InvigoratedTags;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.registry.Registry;
@@ -29,7 +30,7 @@ public class ElectricFeatures {
         public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ELECTRIC_TREE = Feature.TREE.configured(
                 new BaseTreeFeatureConfig.Builder(
                         new SimpleBlockStateProvider(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_LOG.get().defaultBlockState()),
-                        new SimpleBlockStateProvider(ElectricHighlandsBlocks.CRYSTALLIZED_LEAVES.get().defaultBlockState()),
+                        new SimpleBlockStateProvider(UniversalBlocks.CRYSTALLIZED_LEAVES.get().defaultBlockState()),
                         new SpruceFoliagePlacer(FeatureSpread.fixed(4), FeatureSpread.fixed(2), FeatureSpread.fixed(1)),
                         new StraightTrunkPlacer(6, 4, 3),
                         new TwoLayerFeature(1, 0, 1))

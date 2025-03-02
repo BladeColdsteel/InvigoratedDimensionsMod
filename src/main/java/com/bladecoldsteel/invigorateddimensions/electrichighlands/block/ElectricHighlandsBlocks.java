@@ -40,11 +40,6 @@ public class ElectricHighlandsBlocks {
     public static final RegistryObject<Block> STRIPPED_ELECTRICALLY_CHARGED_WOOD = registerBlock("stripped_electrically_charged_wood",
             () -> new RotatedPillarBlock(AbstractBlock.Properties.copy(Blocks.STRIPPED_OAK_WOOD)
                     .harvestTool(ToolType.AXE)));
-    public static final RegistryObject<Block> CRYSTALLIZED_LEAVES = registerBlock("crystallized_leaves",
-            () -> new LeavesBlock(AbstractBlock.Properties.copy(Blocks.OAK_LEAVES)
-                    .sound(SoundType.GLASS)
-                    .harvestTool(ToolType.HOE)
-                    .strength(0.2f)));
 
     public static final RegistryObject<Block> ELECTRICALLY_CHARGED_PLANKS = registerBlock("electrically_charged_planks",
             () -> new Block(AbstractBlock.Properties.copy(Blocks.OAK_PLANKS)
