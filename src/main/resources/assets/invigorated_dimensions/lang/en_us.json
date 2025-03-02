@@ -42,5 +42,8 @@
   "block.invigorated_dimensions.electrically_charged_fence_gate": "Electrically Charged Fence Gate",
   "block.invigorated_dimensions.electrically_charged_sign": "Electrically Charged Sign",
 
-  "itemGroup.invigorated_dimensions_electric_highlands_mod_tab": "ID: Electric Highlands"
+  "block.invigorated_dimensions.watery_logs": "Watery Log",
+
+  "itemGroup.invigorated_dimensions_electric_highlands_mod_tab": "ID: Electric Highlands",
+  "itemGroup.invigorated_dimensions_watery_depths_mod_tab": "ID: Watery Depths"
 }
