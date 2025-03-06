@@ -133,6 +133,7 @@
       "minecraft:ore_diamond",
       "minecraft:ore_lapis",
       "minecraft:ore_magma",
+      "invigorated_dimensions:netherrack_patch",
       "minecraft:disk_sand",
       "minecraft:disk_clay",
       "minecraft:disk_gravel"
@@ -140,7 +141,8 @@
     [],
     [
       "invigorated_dimensions:embered_tree_straight",
-      "invigorated_dimensions:embered_tree_funky"
+      "invigorated_dimensions:embered_tree_funky",
+      "invigorated_dimensions:netherrack_boulder"
     ],
     [
       "minecraft:freeze_top_layer"
