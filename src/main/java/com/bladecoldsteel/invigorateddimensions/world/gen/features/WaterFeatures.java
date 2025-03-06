@@ -27,9 +27,9 @@ public class WaterFeatures {
                 new BaseTreeFeatureConfig.Builder(
                         new SimpleBlockStateProvider(WateryDepthsBlocks.WATERY_LOG.get().defaultBlockState()),
                         new SimpleBlockStateProvider(UniversalBlocks.CRYSTALLIZED_LEAVES.get().defaultBlockState()),
-                        new AcaciaFoliagePlacer(FeatureSpread.fixed(3), FeatureSpread.fixed(1)),
+                        new AcaciaFoliagePlacer(FeatureSpread.fixed(2), FeatureSpread.fixed(1)),
                         new ForkyTrunkPlacer(4, 1, 3),
-                        new TwoLayerFeature(1, 0, 2))
+                        new TwoLayerFeature(1, 0, 1))
                         .ignoreVines().build());
     }
 
