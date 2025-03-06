@@ -45,6 +45,11 @@
   "block.invigorated_dimensions.watery_logs": "Watery Log",
   "block.invigorated_dimensions.watery_sapling": "Watery Sapling",
 
+  "block.invigorated_dimensions.embered_logs": "Embered Log",
+  "block.invigorated_dimensions.embered_sapling": "Embered Sapling",
+
+  "itemGroup.invigorated_dimensions": "Invigorated Dimensions",
   "itemGroup.invigorated_dimensions_electric_highlands_mod_tab": "ID: Electric Highlands",
-  "itemGroup.invigorated_dimensions_watery_depths_mod_tab": "ID: Watery Depths"
+  "itemGroup.invigorated_dimensions_watery_depths_mod_tab": "ID: Watery Depths",
+  "itemGroup.invigorated_dimensions_emberwilds_mod_tab": "ID: Emberwilds"
 }

@@ -1,6 +1,7 @@
 package com.bladecoldsteel.invigorateddimensions.universal.block.custom;
 
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.block.ElectricHighlandsBlocks;
+import com.bladecoldsteel.invigorateddimensions.emberwilds.block.EmberwildsBlocks;
 import com.bladecoldsteel.invigorateddimensions.waterydepths.block.WateryDepthsBlocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
@@ -71,24 +72,6 @@ public class CrystallizedLeavesBlock extends LeavesBlock {
         return drops;
     }
 
-    private boolean shouldDropSapling(Random random, int fortuneLevel) {
-        float baseChance = 0.05f;
-        if (fortuneLevel > 0) {
-            baseChance += fortuneLevel * 0.025f;
-        }
-        return random.nextFloat() < baseChance;
-    }
-
-    @Override
-    public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-        super.randomTick(state, world, pos, random);
-    }
-
-    @Override
-    public boolean isRandomlyTicking(BlockState p_149653_1_) {
-        return true;
-    }
-
     @Override
     public boolean isFlammable(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
         return true;
@@ -102,6 +85,14 @@ public class CrystallizedLeavesBlock extends LeavesBlock {
     @Override
     public int getFireSpreadSpeed(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
         return 30;
+    }
+
+    private boolean shouldDropSapling(Random random, int fortuneLevel) {
+        float baseChance = 0.05f;
+        if (fortuneLevel > 0) {
+            baseChance += fortuneLevel * 0.025f;
+        }
+        return random.nextFloat() < baseChance;
     }
 
     private boolean isElectricBiome(ResourceLocation biomeKey) {
@@ -164,7 +155,7 @@ public class CrystallizedLeavesBlock extends LeavesBlock {
         } else if (isWaterBiome(biomeKey)) {
             return new ItemStack(WateryDepthsBlocks.WATERY_SAPLING.get());
         } else if (isFireBiome(biomeKey)) {
-            return new ItemStack(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_SAPLING.get());
+            return new ItemStack(EmberwildsBlocks.EMBERED_SAPLING.get());
         } else if (isGrassBiome(biomeKey)) {
             return new ItemStack(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_SAPLING.get());
         } else if (isIceBiome(biomeKey)) {
@@ -194,7 +185,17 @@ public class CrystallizedLeavesBlock extends LeavesBlock {
         } else if (isFairyBiome(biomeKey)) {
             return new ItemStack(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_SAPLING.get());
         } else {
-            return null;
+            return randomSapling();
         }
+    }
+
+    private ItemStack randomSapling() {
+        ItemStack[] saplings = {
+                new ItemStack(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_SAPLING.get()),
+                new ItemStack(WateryDepthsBlocks.WATERY_SAPLING.get()),
+                new ItemStack(EmberwildsBlocks.EMBERED_SAPLING.get())
+        };
+
+        return saplings[new Random().nextInt(saplings.length)];
     }
 }

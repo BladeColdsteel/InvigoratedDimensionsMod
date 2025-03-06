@@ -5,6 +5,9 @@ import com.bladecoldsteel.invigorateddimensions.electrichighlands.block.Electric
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.item.ElectricHighlandsItems;
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.tileentity.ElectricHighlandsTileEntities;
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.util.ElectricHighlandsSoundEvents;
+import com.bladecoldsteel.invigorateddimensions.emberwilds.block.EmberwildsBlocks;
+import com.bladecoldsteel.invigorateddimensions.emberwilds.block.EmberwildsWoodTypes;
+import com.bladecoldsteel.invigorateddimensions.emberwilds.item.EmberwildsItems;
 import com.bladecoldsteel.invigorateddimensions.universal.block.UniversalBlocks;
 import com.bladecoldsteel.invigorateddimensions.universal.item.UniversalItems;
 import com.bladecoldsteel.invigorateddimensions.waterydepths.block.WateryDepthsBlocks;
@@ -17,6 +20,7 @@ import com.bladecoldsteel.invigorateddimensions.world.biome.ModBiomesDatapack;
 import com.bladecoldsteel.invigorateddimensions.world.dimension.CustomSurfaceBuilders;
 import com.bladecoldsteel.invigorateddimensions.world.dimension.ModDimensions;
 import com.bladecoldsteel.invigorateddimensions.world.gen.features.ElectricFeatures;
+import com.bladecoldsteel.invigorateddimensions.world.gen.features.FireFeatures;
 import com.bladecoldsteel.invigorateddimensions.world.gen.features.WaterFeatures;
 import com.google.common.collect.ImmutableMap;
 import net.minecraft.block.Block;
@@ -79,13 +83,18 @@ public class InvigoratedDimensions
         //Water
         WateryDepthsItems.register(eventBus);
         WateryDepthsBlocks.register(eventBus);
+        //Fire
+        EmberwildsBlocks.register(eventBus);
+        EmberwildsItems.register(eventBus);
 
         DeferredRegister<?>[] registers = {
                 //Electric
           ElectricFeatures.ELECTRIC_FEATURES,
           ElectricHighlandsStructures.STRUCTURES,
                 //Water
-          WaterFeatures.WATER_FEATURES
+          WaterFeatures.WATER_FEATURES,
+                //Fire
+          FireFeatures.FIRE_FEATURES
         };
 
         for (DeferredRegister<?> register : registers) {
@@ -117,6 +126,8 @@ public class InvigoratedDimensions
             ElectricHighlandsStructures.registerConfiguredStructures();
             //Water
             WaterFeatures.registerConfiguredFeatures();
+            //Fire
+            FireFeatures.registerConfiguredFeatures();
 
             //Strippable Wood
             AxeItem.STRIPABLES = new ImmutableMap.Builder<Block, Block>().putAll(AxeItem.STRIPABLES)
@@ -128,6 +139,7 @@ public class InvigoratedDimensions
 
             WoodType.register(ElectricHighlandsWoodTypes.ELECTRICALLY_CHARGED);
             WoodType.register(WateryDepthsWoodTypes.WATERY);
+            WoodType.register(EmberwildsWoodTypes.EMBERED);
 
             InvigoratedDimensions.LOGGER.info("Registered Trees: {}", WorldGenRegistries.CONFIGURED_FEATURE.keySet());
 
@@ -135,6 +147,10 @@ public class InvigoratedDimensions
                     WorldGenRegistries.CONFIGURED_FEATURE.getKey(ElectricFeatures.ConfiguredFeatures.ELECTRIC_TREE));
             InvigoratedDimensions.LOGGER.info("Registered Feature Key: {}",
                     WorldGenRegistries.CONFIGURED_FEATURE.getKey(WaterFeatures.ConfiguredFeatures.WATERY_TREE));
+            InvigoratedDimensions.LOGGER.info("Registered Feature Key: {}",
+                    WorldGenRegistries.CONFIGURED_FEATURE.getKey(FireFeatures.ConfiguredFeatures.FIRE_TREE_STRAIGHT));
+            InvigoratedDimensions.LOGGER.info("Registered Feature Key: {}",
+                    WorldGenRegistries.CONFIGURED_FEATURE.getKey(FireFeatures.ConfiguredFeatures.FIRE_TREE_FUNKY));
 
         });
 
@@ -142,8 +158,10 @@ public class InvigoratedDimensions
 
     private void doClientStuff(final FMLClientSetupEvent event) {
 
-        //Electric
+        //Universal
         RenderTypeLookup.setRenderLayer(UniversalBlocks.CRYSTALLIZED_LEAVES.get(), RenderType.cutout());
+
+        //Electric
         RenderTypeLookup.setRenderLayer(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_SAPLING.get(), RenderType.cutout());
 
         RenderTypeLookup.setRenderLayer(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_DOOR.get(), RenderType.cutout());
@@ -155,9 +173,13 @@ public class InvigoratedDimensions
         //Water
         RenderTypeLookup.setRenderLayer(WateryDepthsBlocks.WATERY_SAPLING.get(), RenderType.cutout());
 
+        //Fire
+        RenderTypeLookup.setRenderLayer(EmberwildsBlocks.EMBERED_SAPLING.get(), RenderType.cutout());
+
         //Wood Types
         Atlases.addWoodType(ElectricHighlandsWoodTypes.ELECTRICALLY_CHARGED);
         Atlases.addWoodType(WateryDepthsWoodTypes.WATERY);
+        Atlases.addWoodType(EmberwildsWoodTypes.EMBERED);
     }
 
     public void gatherData(GatherDataEvent event) {
