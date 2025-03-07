@@ -1,5 +1,8 @@
 package com.bladecoldsteel.invigorateddimensions;
 
+import com.bladecoldsteel.invigorateddimensions.draconicrift.block.DraconicRiftBlocks;
+import com.bladecoldsteel.invigorateddimensions.draconicrift.block.DraconicRiftWoodTypes;
+import com.bladecoldsteel.invigorateddimensions.draconicrift.item.DraconicRiftItems;
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.block.ElectricHighlandsBlocks;
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.block.ElectricHighlandsWoodTypes;
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.item.ElectricHighlandsItems;
@@ -19,6 +22,7 @@ import com.bladecoldsteel.invigorateddimensions.world.ModPointsOfInterest;
 import com.bladecoldsteel.invigorateddimensions.world.biome.ModBiomesDatapack;
 import com.bladecoldsteel.invigorateddimensions.world.dimension.CustomSurfaceBuilders;
 import com.bladecoldsteel.invigorateddimensions.world.dimension.ModDimensions;
+import com.bladecoldsteel.invigorateddimensions.world.gen.features.DragonFeatures;
 import com.bladecoldsteel.invigorateddimensions.world.gen.features.ElectricFeatures;
 import com.bladecoldsteel.invigorateddimensions.world.gen.features.FireFeatures;
 import com.bladecoldsteel.invigorateddimensions.world.gen.features.WaterFeatures;
@@ -86,6 +90,9 @@ public class InvigoratedDimensions
         //Fire
         EmberwildsBlocks.register(eventBus);
         EmberwildsItems.register(eventBus);
+        //Dragon
+        DraconicRiftBlocks.register(eventBus);
+        DraconicRiftItems.register(eventBus);
 
         DeferredRegister<?>[] registers = {
                 //Electric
@@ -94,7 +101,9 @@ public class InvigoratedDimensions
                 //Water
           WaterFeatures.WATER_FEATURES,
                 //Fire
-          FireFeatures.FIRE_FEATURES
+          FireFeatures.FIRE_FEATURES,
+                //Dragon
+          DragonFeatures.DRAGON_FEATURE
         };
 
         for (DeferredRegister<?> register : registers) {
@@ -128,6 +137,8 @@ public class InvigoratedDimensions
             WaterFeatures.registerConfiguredFeatures();
             //Fire
             FireFeatures.registerConfiguredFeatures();
+            //Dragon
+            DragonFeatures.registerConfiguredFeatures();
 
             //Strippable Wood
             AxeItem.STRIPABLES = new ImmutableMap.Builder<Block, Block>().putAll(AxeItem.STRIPABLES)
@@ -140,6 +151,7 @@ public class InvigoratedDimensions
             WoodType.register(ElectricHighlandsWoodTypes.ELECTRICALLY_CHARGED);
             WoodType.register(WateryDepthsWoodTypes.WATERY);
             WoodType.register(EmberwildsWoodTypes.EMBERED);
+            WoodType.register(DraconicRiftWoodTypes.DRACONIC);
 
             InvigoratedDimensions.LOGGER.info("Registered Trees: {}", WorldGenRegistries.CONFIGURED_FEATURE.keySet());
 
@@ -151,6 +163,8 @@ public class InvigoratedDimensions
                     WorldGenRegistries.CONFIGURED_FEATURE.getKey(FireFeatures.ConfiguredFeatures.FIRE_TREE_STRAIGHT));
             InvigoratedDimensions.LOGGER.info("Registered Feature Key: {}",
                     WorldGenRegistries.CONFIGURED_FEATURE.getKey(FireFeatures.ConfiguredFeatures.FIRE_TREE_FUNKY));
+            InvigoratedDimensions.LOGGER.info("Registered Feature Key: {}",
+                    WorldGenRegistries.CONFIGURED_FEATURE.getKey(DragonFeatures.ConfiguredFeatures.DRACONIC_TREE));
 
         });
 
@@ -176,10 +190,14 @@ public class InvigoratedDimensions
         //Fire
         RenderTypeLookup.setRenderLayer(EmberwildsBlocks.EMBERED_SAPLING.get(), RenderType.cutout());
 
+        //Dragon
+        RenderTypeLookup.setRenderLayer(DraconicRiftBlocks.DRACONIC_SAPLING.get(), RenderType.cutout());
+
         //Wood Types
         Atlases.addWoodType(ElectricHighlandsWoodTypes.ELECTRICALLY_CHARGED);
         Atlases.addWoodType(WateryDepthsWoodTypes.WATERY);
         Atlases.addWoodType(EmberwildsWoodTypes.EMBERED);
+        Atlases.addWoodType(DraconicRiftWoodTypes.DRACONIC);
     }
 
     public void gatherData(GatherDataEvent event) {
