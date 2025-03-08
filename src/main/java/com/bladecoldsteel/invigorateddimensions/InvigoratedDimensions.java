@@ -11,6 +11,9 @@ import com.bladecoldsteel.invigorateddimensions.electrichighlands.util.ElectricH
 import com.bladecoldsteel.invigorateddimensions.emberwilds.block.EmberwildsBlocks;
 import com.bladecoldsteel.invigorateddimensions.emberwilds.block.EmberwildsWoodTypes;
 import com.bladecoldsteel.invigorateddimensions.emberwilds.item.EmberwildsItems;
+import com.bladecoldsteel.invigorateddimensions.grassyknoll.block.GrassyKnollBlocks;
+import com.bladecoldsteel.invigorateddimensions.grassyknoll.block.GrassyKnollWoodTypes;
+import com.bladecoldsteel.invigorateddimensions.grassyknoll.item.GrassyKnollItems;
 import com.bladecoldsteel.invigorateddimensions.universal.block.UniversalBlocks;
 import com.bladecoldsteel.invigorateddimensions.universal.item.UniversalItems;
 import com.bladecoldsteel.invigorateddimensions.waterydepths.block.WateryDepthsBlocks;
@@ -22,10 +25,7 @@ import com.bladecoldsteel.invigorateddimensions.world.ModPointsOfInterest;
 import com.bladecoldsteel.invigorateddimensions.world.biome.ModBiomesDatapack;
 import com.bladecoldsteel.invigorateddimensions.world.dimension.CustomSurfaceBuilders;
 import com.bladecoldsteel.invigorateddimensions.world.dimension.ModDimensions;
-import com.bladecoldsteel.invigorateddimensions.world.gen.features.DragonFeatures;
-import com.bladecoldsteel.invigorateddimensions.world.gen.features.ElectricFeatures;
-import com.bladecoldsteel.invigorateddimensions.world.gen.features.FireFeatures;
-import com.bladecoldsteel.invigorateddimensions.world.gen.features.WaterFeatures;
+import com.bladecoldsteel.invigorateddimensions.world.gen.features.*;
 import com.google.common.collect.ImmutableMap;
 import net.minecraft.block.Block;
 import net.minecraft.block.WoodType;
@@ -93,6 +93,9 @@ public class InvigoratedDimensions
         //Dragon
         DraconicRiftBlocks.register(eventBus);
         DraconicRiftItems.register(eventBus);
+        //Grass
+        GrassyKnollBlocks.register(eventBus);
+        GrassyKnollItems.register(eventBus);
 
         DeferredRegister<?>[] registers = {
                 //Electric
@@ -103,7 +106,9 @@ public class InvigoratedDimensions
                 //Fire
           FireFeatures.FIRE_FEATURES,
                 //Dragon
-          DragonFeatures.DRAGON_FEATURE
+          DragonFeatures.DRAGON_FEATURE,
+                //Grass
+          GrassFeatures.GRASS_FEATURES
         };
 
         for (DeferredRegister<?> register : registers) {
@@ -139,6 +144,8 @@ public class InvigoratedDimensions
             FireFeatures.registerConfiguredFeatures();
             //Dragon
             DragonFeatures.registerConfiguredFeatures();
+            //Grass
+            GrassFeatures.registerConfiguredFeatures();
 
             //Strippable Wood
             AxeItem.STRIPABLES = new ImmutableMap.Builder<Block, Block>().putAll(AxeItem.STRIPABLES)
@@ -152,6 +159,7 @@ public class InvigoratedDimensions
             WoodType.register(WateryDepthsWoodTypes.WATERY);
             WoodType.register(EmberwildsWoodTypes.EMBERED);
             WoodType.register(DraconicRiftWoodTypes.DRACONIC);
+            WoodType.register(GrassyKnollWoodTypes.GRASSY);
 
             InvigoratedDimensions.LOGGER.info("Registered Trees: {}", WorldGenRegistries.CONFIGURED_FEATURE.keySet());
 
@@ -165,6 +173,8 @@ public class InvigoratedDimensions
                     WorldGenRegistries.CONFIGURED_FEATURE.getKey(FireFeatures.ConfiguredFeatures.FIRE_TREE_FUNKY));
             InvigoratedDimensions.LOGGER.info("Registered Feature Key: {}",
                     WorldGenRegistries.CONFIGURED_FEATURE.getKey(DragonFeatures.ConfiguredFeatures.DRACONIC_TREE));
+            InvigoratedDimensions.LOGGER.info("Registered Feature Key: {}",
+                    WorldGenRegistries.CONFIGURED_FEATURE.getKey(GrassFeatures.ConfiguredFeatures.GRASSY_TREE));
 
         });
 
@@ -193,11 +203,15 @@ public class InvigoratedDimensions
         //Dragon
         RenderTypeLookup.setRenderLayer(DraconicRiftBlocks.DRACONIC_SAPLING.get(), RenderType.cutout());
 
+        //Grass
+        RenderTypeLookup.setRenderLayer(GrassyKnollBlocks.GRASSY_SAPLING.get(), RenderType.cutout());
+
         //Wood Types
         Atlases.addWoodType(ElectricHighlandsWoodTypes.ELECTRICALLY_CHARGED);
         Atlases.addWoodType(WateryDepthsWoodTypes.WATERY);
         Atlases.addWoodType(EmberwildsWoodTypes.EMBERED);
         Atlases.addWoodType(DraconicRiftWoodTypes.DRACONIC);
+        Atlases.addWoodType(GrassyKnollWoodTypes.GRASSY);
     }
 
     public void gatherData(GatherDataEvent event) {
