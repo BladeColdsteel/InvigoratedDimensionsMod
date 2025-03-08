@@ -1,7 +1,6 @@
 package com.bladecoldsteel.invigorateddimensions.draconicrift.item;
 
 import com.bladecoldsteel.invigorateddimensions.draconicrift.block.DraconicRiftBlocks;
-import com.bladecoldsteel.invigorateddimensions.emberwilds.block.EmberwildsBlocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 
