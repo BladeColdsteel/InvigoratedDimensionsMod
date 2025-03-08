@@ -2,6 +2,7 @@ package com.bladecoldsteel.invigorateddimensions.emberwilds.block;
 
 import com.bladecoldsteel.invigorateddimensions.InvigoratedDimensions;
 import com.bladecoldsteel.invigorateddimensions.emberwilds.item.EmberwildsItemGroup;
+import com.bladecoldsteel.invigorateddimensions.emberwilds.item.EmberwildsItems;
 import com.bladecoldsteel.invigorateddimensions.waterydepths.item.WateryDepthsItemGroup;
 import com.bladecoldsteel.invigorateddimensions.waterydepths.item.WateryDepthsItems;
 import com.bladecoldsteel.invigorateddimensions.world.gen.features.trees.FireTreeStraight;
@@ -33,7 +34,7 @@ public class EmberwildsBlocks {
     }
 
     private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block) {
-        WateryDepthsItems.ITEMS.register(name, () -> new BlockItem(block.get(),
+        EmberwildsItems.ITEMS.register(name, () -> new BlockItem(block.get(),
                 new Item.Properties().tab(EmberwildsItemGroup.EMBERWILDS_GROUP)));
     }
 

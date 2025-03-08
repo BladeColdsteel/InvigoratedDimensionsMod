@@ -2,6 +2,7 @@ package com.bladecoldsteel.invigorateddimensions.grassyknoll.block;
 
 import com.bladecoldsteel.invigorateddimensions.InvigoratedDimensions;
 import com.bladecoldsteel.invigorateddimensions.grassyknoll.item.GrassyKnollItemGroup;
+import com.bladecoldsteel.invigorateddimensions.grassyknoll.item.GrassyKnollItems;
 import com.bladecoldsteel.invigorateddimensions.waterydepths.item.WateryDepthsItems;
 import com.bladecoldsteel.invigorateddimensions.world.gen.features.trees.GrassTree;
 import net.minecraft.block.*;
@@ -32,7 +33,7 @@ public class GrassyKnollBlocks {
     }
 
     private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block) {
-        WateryDepthsItems.ITEMS.register(name, () -> new BlockItem(block.get(),
+        GrassyKnollItems.ITEMS.register(name, () -> new BlockItem(block.get(),
                 new Item.Properties().tab(GrassyKnollItemGroup.GRASSY_KNOLL_GROUP)));
     }
 

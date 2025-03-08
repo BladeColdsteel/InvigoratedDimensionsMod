@@ -2,6 +2,7 @@ package com.bladecoldsteel.invigorateddimensions.draconicrift.block;
 
 import com.bladecoldsteel.invigorateddimensions.InvigoratedDimensions;
 import com.bladecoldsteel.invigorateddimensions.draconicrift.item.DraconicRiftItemGroup;
+import com.bladecoldsteel.invigorateddimensions.draconicrift.item.DraconicRiftItems;
 import com.bladecoldsteel.invigorateddimensions.waterydepths.item.WateryDepthsItems;
 import com.bladecoldsteel.invigorateddimensions.world.gen.features.trees.DragonTree;
 import net.minecraft.block.*;
@@ -32,7 +33,7 @@ public class DraconicRiftBlocks {
     }
 
     private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block) {
-        WateryDepthsItems.ITEMS.register(name, () -> new BlockItem(block.get(),
+        DraconicRiftItems.ITEMS.register(name, () -> new BlockItem(block.get(),
                 new Item.Properties().tab(DraconicRiftItemGroup.DRACONIC_RIFT_GROUP)));
     }
 

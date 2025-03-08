@@ -2,7 +2,7 @@ package com.bladecoldsteel.invigorateddimensions.insectoidparadisio.block;
 
 import com.bladecoldsteel.invigorateddimensions.InvigoratedDimensions;
 import com.bladecoldsteel.invigorateddimensions.insectoidparadisio.item.InsectoidParadisioItemGroup;
-import com.bladecoldsteel.invigorateddimensions.waterydepths.item.WateryDepthsItems;
+import com.bladecoldsteel.invigorateddimensions.insectoidparadisio.item.InsectoidParadisioItems;
 import com.bladecoldsteel.invigorateddimensions.world.gen.features.trees.BugTree;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
@@ -32,7 +32,7 @@ public class InsectoidParadisioBlocks {
     }
 
     private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block) {
-        WateryDepthsItems.ITEMS.register(name, () -> new BlockItem(block.get(),
+        InsectoidParadisioItems.ITEMS.register(name, () -> new BlockItem(block.get(),
                 new Item.Properties().tab(InsectoidParadisioItemGroup.INSECTOID_PARADISIO_GROUP)));
     }
 
