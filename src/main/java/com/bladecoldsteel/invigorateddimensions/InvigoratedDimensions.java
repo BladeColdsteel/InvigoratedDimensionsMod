@@ -14,6 +14,9 @@ import com.bladecoldsteel.invigorateddimensions.emberwilds.item.EmberwildsItems;
 import com.bladecoldsteel.invigorateddimensions.grassyknoll.block.GrassyKnollBlocks;
 import com.bladecoldsteel.invigorateddimensions.grassyknoll.block.GrassyKnollWoodTypes;
 import com.bladecoldsteel.invigorateddimensions.grassyknoll.item.GrassyKnollItems;
+import com.bladecoldsteel.invigorateddimensions.insectoidparadisio.block.InsectoidParadisioBlocks;
+import com.bladecoldsteel.invigorateddimensions.insectoidparadisio.block.InsectoidParadisioWoodTypes;
+import com.bladecoldsteel.invigorateddimensions.insectoidparadisio.item.InsectoidParadisioItems;
 import com.bladecoldsteel.invigorateddimensions.universal.block.UniversalBlocks;
 import com.bladecoldsteel.invigorateddimensions.universal.item.UniversalItems;
 import com.bladecoldsteel.invigorateddimensions.waterydepths.block.WateryDepthsBlocks;
@@ -96,6 +99,9 @@ public class InvigoratedDimensions
         //Grass
         GrassyKnollBlocks.register(eventBus);
         GrassyKnollItems.register(eventBus);
+        //Bug
+        InsectoidParadisioBlocks.register(eventBus);
+        InsectoidParadisioItems.register(eventBus);
 
         DeferredRegister<?>[] registers = {
                 //Electric
@@ -108,7 +114,9 @@ public class InvigoratedDimensions
                 //Dragon
           DragonFeatures.DRAGON_FEATURE,
                 //Grass
-          GrassFeatures.GRASS_FEATURES
+          GrassFeatures.GRASS_FEATURES,
+                //Bug
+          BugFeatures.BUG_FEATURES
         };
 
         for (DeferredRegister<?> register : registers) {
@@ -146,6 +154,8 @@ public class InvigoratedDimensions
             DragonFeatures.registerConfiguredFeatures();
             //Grass
             GrassFeatures.registerConfiguredFeatures();
+            //Bug
+            BugFeatures.registerConfiguredFeatures();
 
             //Strippable Wood
             AxeItem.STRIPABLES = new ImmutableMap.Builder<Block, Block>().putAll(AxeItem.STRIPABLES)
@@ -160,6 +170,7 @@ public class InvigoratedDimensions
             WoodType.register(EmberwildsWoodTypes.EMBERED);
             WoodType.register(DraconicRiftWoodTypes.DRACONIC);
             WoodType.register(GrassyKnollWoodTypes.GRASSY);
+            WoodType.register(InsectoidParadisioWoodTypes.BUGGED);
 
             InvigoratedDimensions.LOGGER.info("Registered Trees: {}", WorldGenRegistries.CONFIGURED_FEATURE.keySet());
 
@@ -175,6 +186,8 @@ public class InvigoratedDimensions
                     WorldGenRegistries.CONFIGURED_FEATURE.getKey(DragonFeatures.ConfiguredFeatures.DRACONIC_TREE));
             InvigoratedDimensions.LOGGER.info("Registered Feature Key: {}",
                     WorldGenRegistries.CONFIGURED_FEATURE.getKey(GrassFeatures.ConfiguredFeatures.GRASSY_TREE));
+            InvigoratedDimensions.LOGGER.info("Registered Feature Key: {}",
+                    WorldGenRegistries.CONFIGURED_FEATURE.getKey(BugFeatures.ConfiguredFeatures.BUGGED_TREE));
 
         });
 
@@ -206,12 +219,16 @@ public class InvigoratedDimensions
         //Grass
         RenderTypeLookup.setRenderLayer(GrassyKnollBlocks.GRASSY_SAPLING.get(), RenderType.cutout());
 
+        //Bug
+        RenderTypeLookup.setRenderLayer(InsectoidParadisioBlocks.BUGGED_SAPLING.get(), RenderType.cutout());
+
         //Wood Types
         Atlases.addWoodType(ElectricHighlandsWoodTypes.ELECTRICALLY_CHARGED);
         Atlases.addWoodType(WateryDepthsWoodTypes.WATERY);
         Atlases.addWoodType(EmberwildsWoodTypes.EMBERED);
         Atlases.addWoodType(DraconicRiftWoodTypes.DRACONIC);
         Atlases.addWoodType(GrassyKnollWoodTypes.GRASSY);
+        Atlases.addWoodType(InsectoidParadisioWoodTypes.BUGGED);
     }
 
     public void gatherData(GatherDataEvent event) {
