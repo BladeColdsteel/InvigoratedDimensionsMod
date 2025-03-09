@@ -57,11 +57,15 @@
   "block.invigorated_dimensions.bugged_logs": "Bugged Log",
   "block.invigorated_dimensions.bugged_sapling": "Bugged Sapling",
 
+  "block.invigorated_dimensions.darkened_logs": "Darkened Log",
+  "block.invigorated_dimensions.darkened_sapling": "Darkened Sapling",
+
   "itemGroup.invigorated_dimensions": "Invigorated Dimensions",
   "itemGroup.invigorated_dimensions_electric_highlands_mod_tab": "ID: Electric Highlands",
   "itemGroup.invigorated_dimensions_watery_depths_mod_tab": "ID: Watery Depths",
   "itemGroup.invigorated_dimensions_emberwilds_mod_tab": "ID: Emberwilds",
   "itemGroup.invigorated_dimensions_draconic_mod_tab": "ID: Draconic Rift",
   "itemGroup.invigorated_dimensions_grassy_knoll_mod_tab": "ID: Grassy Knoll",
-  "itemGroup.invigorated_dimensions_buggy_mod_tab": "ID: Insectoid Paradisio"
+  "itemGroup.invigorated_dimensions_buggy_mod_tab": "ID: Insectoid Paradisio",
+  "itemGroup.invigorated_dimensions_darkened_mod_tab": "ID: Valley of Death"
 }
