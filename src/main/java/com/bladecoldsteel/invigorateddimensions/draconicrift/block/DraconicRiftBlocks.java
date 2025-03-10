@@ -3,7 +3,6 @@ package com.bladecoldsteel.invigorateddimensions.draconicrift.block;
 import com.bladecoldsteel.invigorateddimensions.InvigoratedDimensions;
 import com.bladecoldsteel.invigorateddimensions.draconicrift.item.DraconicRiftItemGroup;
 import com.bladecoldsteel.invigorateddimensions.draconicrift.item.DraconicRiftItems;
-import com.bladecoldsteel.invigorateddimensions.waterydepths.item.WateryDepthsItems;
 import com.bladecoldsteel.invigorateddimensions.world.gen.features.trees.DragonTree;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
