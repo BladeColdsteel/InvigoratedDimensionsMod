@@ -3,6 +3,7 @@ package com.bladecoldsteel.invigorateddimensions.universal.block.custom;
 import com.bladecoldsteel.invigorateddimensions.draconicrift.block.DraconicRiftBlocks;
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.block.ElectricHighlandsBlocks;
 import com.bladecoldsteel.invigorateddimensions.emberwilds.block.EmberwildsBlocks;
+import com.bladecoldsteel.invigorateddimensions.feywildexpanse.block.FeywildExpanseBlocks;
 import com.bladecoldsteel.invigorateddimensions.grassyknoll.block.GrassyKnollBlocks;
 import com.bladecoldsteel.invigorateddimensions.insectoidparadisio.block.InsectoidParadisioBlocks;
 import com.bladecoldsteel.invigorateddimensions.valleydeath.block.ValleyDeathBlocks;
@@ -187,7 +188,7 @@ public class CrystallizedLeavesBlock extends LeavesBlock {
         } else if (isSteelBiome(biomeKey)) {
             return new ItemStack(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_SAPLING.get());
         } else if (isFairyBiome(biomeKey)) {
-            return new ItemStack(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_SAPLING.get());
+            return new ItemStack(FeywildExpanseBlocks.FEYAN_SAPLING.get());
         } else {
             return randomSapling();
         }
@@ -201,7 +202,8 @@ public class CrystallizedLeavesBlock extends LeavesBlock {
                 new ItemStack(DraconicRiftBlocks.DRACONIC_SAPLING.get()),
                 new ItemStack(GrassyKnollBlocks.GRASSY_SAPLING.get()),
                 new ItemStack(InsectoidParadisioBlocks.BUGGED_SAPLING.get()),
-                new ItemStack(ValleyDeathBlocks.DARKENED_SAPLING.get())
+                new ItemStack(ValleyDeathBlocks.DARKENED_SAPLING.get()),
+                new ItemStack(FeywildExpanseBlocks.FEYAN_SAPLING.get())
         };
 
         return saplings[new Random().nextInt(saplings.length)];

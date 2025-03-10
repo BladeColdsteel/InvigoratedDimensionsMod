@@ -11,6 +11,9 @@ import com.bladecoldsteel.invigorateddimensions.electrichighlands.util.ElectricH
 import com.bladecoldsteel.invigorateddimensions.emberwilds.block.EmberwildsBlocks;
 import com.bladecoldsteel.invigorateddimensions.emberwilds.block.EmberwildsWoodTypes;
 import com.bladecoldsteel.invigorateddimensions.emberwilds.item.EmberwildsItems;
+import com.bladecoldsteel.invigorateddimensions.feywildexpanse.block.FeywildExpanseBlocks;
+import com.bladecoldsteel.invigorateddimensions.feywildexpanse.block.FeywildExpanseWoodTypes;
+import com.bladecoldsteel.invigorateddimensions.feywildexpanse.item.FeywildExpanseItems;
 import com.bladecoldsteel.invigorateddimensions.grassyknoll.block.GrassyKnollBlocks;
 import com.bladecoldsteel.invigorateddimensions.grassyknoll.block.GrassyKnollWoodTypes;
 import com.bladecoldsteel.invigorateddimensions.grassyknoll.item.GrassyKnollItems;
@@ -108,6 +111,9 @@ public class InvigoratedDimensions
         //Dark
         ValleyDeathBlocks.register(eventBus);
         ValleyDeathItems.register(eventBus);
+        //Fairy
+        FeywildExpanseBlocks.register(eventBus);
+        FeywildExpanseItems.register(eventBus);
 
         DeferredRegister<?>[] registers = {
                 //Electric
@@ -124,7 +130,9 @@ public class InvigoratedDimensions
                 //Bug
           BugFeatures.BUG_FEATURES,
                 //Dark
-          DarkFeatures.DARK_FEATURES
+          DarkFeatures.DARK_FEATURES,
+                //Fairy
+          FairyFeatures.FAIRY_FEATURES
         };
 
         for (DeferredRegister<?> register : registers) {
@@ -166,6 +174,8 @@ public class InvigoratedDimensions
             BugFeatures.registerConfiguredFeatures();
             //Dark
             DarkFeatures.registerConfiguredFeatures();
+            //Fairy
+            FairyFeatures.registerConfiguredFeatures();
 
             //Strippable Wood
             AxeItem.STRIPABLES = new ImmutableMap.Builder<Block, Block>().putAll(AxeItem.STRIPABLES)
@@ -182,6 +192,7 @@ public class InvigoratedDimensions
             WoodType.register(GrassyKnollWoodTypes.GRASSY);
             WoodType.register(InsectoidParadisioWoodTypes.BUGGED);
             WoodType.register(ValleyDeathWoodTypes.DARKENED);
+            WoodType.register(FeywildExpanseWoodTypes.FEYAN);
 
         });
 
@@ -219,6 +230,9 @@ public class InvigoratedDimensions
         //Dark
         RenderTypeLookup.setRenderLayer(ValleyDeathBlocks.DARKENED_SAPLING.get(), RenderType.cutout());
 
+        //Fairy
+        RenderTypeLookup.setRenderLayer(FeywildExpanseBlocks.FEYAN_SAPLING.get(), RenderType.cutout());
+
         //Wood Types
         Atlases.addWoodType(ElectricHighlandsWoodTypes.ELECTRICALLY_CHARGED);
         Atlases.addWoodType(WateryDepthsWoodTypes.WATERY);
@@ -227,6 +241,7 @@ public class InvigoratedDimensions
         Atlases.addWoodType(GrassyKnollWoodTypes.GRASSY);
         Atlases.addWoodType(InsectoidParadisioWoodTypes.BUGGED);
         Atlases.addWoodType(ValleyDeathWoodTypes.DARKENED);
+        Atlases.addWoodType(FeywildExpanseWoodTypes.FEYAN);
     }
 
     public void gatherData(GatherDataEvent event) {

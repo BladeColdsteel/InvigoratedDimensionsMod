@@ -60,6 +60,9 @@
   "block.invigorated_dimensions.darkened_logs": "Darkened Log",
   "block.invigorated_dimensions.darkened_sapling": "Darkened Sapling",
 
+  "block.invigorated_dimensions.feyan_logs": "Feyan Log",
+  "block.invigorated_dimensions.feyan_sapling": "Feyan Sapling",
+
   "itemGroup.invigorated_dimensions": "Invigorated Dimensions",
   "itemGroup.invigorated_dimensions_electric_highlands_mod_tab": "ID: Electric Highlands",
   "itemGroup.invigorated_dimensions_watery_depths_mod_tab": "ID: Watery Depths",
@@ -67,5 +70,6 @@
   "itemGroup.invigorated_dimensions_draconic_mod_tab": "ID: Draconic Rift",
   "itemGroup.invigorated_dimensions_grassy_knoll_mod_tab": "ID: Grassy Knoll",
   "itemGroup.invigorated_dimensions_buggy_mod_tab": "ID: Insectoid Paradisio",
-  "itemGroup.invigorated_dimensions_darkened_mod_tab": "ID: Valley of Death"
+  "itemGroup.invigorated_dimensions_darkened_mod_tab": "ID: Valley of Death",
+  "itemGroup.invigorated_dimensions_feywild_mod_tab": "ID: Feywild Expanse"
 }
