@@ -17,6 +17,9 @@ import com.bladecoldsteel.invigorateddimensions.feywildexpanse.item.FeywildExpan
 import com.bladecoldsteel.invigorateddimensions.grassyknoll.block.GrassyKnollBlocks;
 import com.bladecoldsteel.invigorateddimensions.grassyknoll.block.GrassyKnollWoodTypes;
 import com.bladecoldsteel.invigorateddimensions.grassyknoll.item.GrassyKnollItems;
+import com.bladecoldsteel.invigorateddimensions.infinitedungeon.block.InfiniteDungeonBlocks;
+import com.bladecoldsteel.invigorateddimensions.infinitedungeon.block.InfiniteDungeonWoodTypes;
+import com.bladecoldsteel.invigorateddimensions.infinitedungeon.item.InfiniteDungeonItems;
 import com.bladecoldsteel.invigorateddimensions.insectoidparadisio.block.InsectoidParadisioBlocks;
 import com.bladecoldsteel.invigorateddimensions.insectoidparadisio.block.InsectoidParadisioWoodTypes;
 import com.bladecoldsteel.invigorateddimensions.insectoidparadisio.item.InsectoidParadisioItems;
@@ -114,6 +117,9 @@ public class InvigoratedDimensions
         //Fairy
         FeywildExpanseBlocks.register(eventBus);
         FeywildExpanseItems.register(eventBus);
+        //Fighting
+        InfiniteDungeonBlocks.register(eventBus);
+        InfiniteDungeonItems.register(eventBus);
 
         DeferredRegister<?>[] registers = {
                 //Electric
@@ -124,7 +130,7 @@ public class InvigoratedDimensions
                 //Fire
           FireFeatures.FIRE_FEATURES,
                 //Dragon
-          DragonFeatures.DRAGON_FEATURE,
+          DragonFeatures.DRAGON_FEATURES,
                 //Grass
           GrassFeatures.GRASS_FEATURES,
                 //Bug
@@ -132,7 +138,9 @@ public class InvigoratedDimensions
                 //Dark
           DarkFeatures.DARK_FEATURES,
                 //Fairy
-          FairyFeatures.FAIRY_FEATURES
+          FairyFeatures.FAIRY_FEATURES,
+                //Fighting
+          FightingFeatures.FIGHTING_FEATURES
         };
 
         for (DeferredRegister<?> register : registers) {
@@ -176,6 +184,8 @@ public class InvigoratedDimensions
             DarkFeatures.registerConfiguredFeatures();
             //Fairy
             FairyFeatures.registerConfiguredFeatures();
+            //Fighting
+            FightingFeatures.registerConfiguredFeatures();
 
             //Strippable Wood
             AxeItem.STRIPABLES = new ImmutableMap.Builder<Block, Block>().putAll(AxeItem.STRIPABLES)
@@ -193,6 +203,7 @@ public class InvigoratedDimensions
             WoodType.register(InsectoidParadisioWoodTypes.BUGGED);
             WoodType.register(ValleyDeathWoodTypes.DARKENED);
             WoodType.register(FeywildExpanseWoodTypes.FEYAN);
+            WoodType.register(InfiniteDungeonWoodTypes.TOUGH);
 
         });
 
@@ -233,6 +244,8 @@ public class InvigoratedDimensions
         //Fairy
         RenderTypeLookup.setRenderLayer(FeywildExpanseBlocks.FEYAN_SAPLING.get(), RenderType.cutout());
 
+        //Fighting
+
         //Wood Types
         Atlases.addWoodType(ElectricHighlandsWoodTypes.ELECTRICALLY_CHARGED);
         Atlases.addWoodType(WateryDepthsWoodTypes.WATERY);
@@ -242,6 +255,7 @@ public class InvigoratedDimensions
         Atlases.addWoodType(InsectoidParadisioWoodTypes.BUGGED);
         Atlases.addWoodType(ValleyDeathWoodTypes.DARKENED);
         Atlases.addWoodType(FeywildExpanseWoodTypes.FEYAN);
+        Atlases.addWoodType(InfiniteDungeonWoodTypes.TOUGH);
     }
 
     public void gatherData(GatherDataEvent event) {

@@ -166,7 +166,7 @@ public class CrystallizedLeavesBlock extends LeavesBlock {
         } else if (isIceBiome(biomeKey)) {
             return new ItemStack(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_SAPLING.get());
         } else if (isFightingBiome(biomeKey)) {
-            return new ItemStack(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_SAPLING.get());
+            return randomSapling();
         } else if (isPoisonBiome(biomeKey)) {
             return new ItemStack(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_SAPLING.get());
         } else if (isGroundBiome(biomeKey)) {
