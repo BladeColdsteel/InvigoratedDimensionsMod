@@ -12,10 +12,8 @@ import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.template.RuleTest;
 import net.minecraft.world.gen.feature.template.TagMatchRuleTest;
 import net.minecraft.world.gen.foliageplacer.JungleFoliagePlacer;
-import net.minecraft.world.gen.foliageplacer.MegaPineFoliagePlacer;
 import net.minecraft.world.gen.placement.AtSurfaceWithExtraConfig;
 import net.minecraft.world.gen.placement.Placement;
-import net.minecraft.world.gen.trunkplacer.GiantTrunkPlacer;
 import net.minecraft.world.gen.trunkplacer.MegaJungleTrunkPlacer;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.registries.DeferredRegister;
@@ -23,7 +21,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class DragonFeatures {
 
-    public static final DeferredRegister<Feature<?>> DRAGON_FEATURE = DeferredRegister.create(ForgeRegistries.FEATURES, InvigoratedDimensions.MOD_ID);
+    public static final DeferredRegister<Feature<?>> DRAGON_FEATURES = DeferredRegister.create(ForgeRegistries.FEATURES, InvigoratedDimensions.MOD_ID);
 
     public static final class ConfiguredFeatures {
         static final RuleTest OVERWORLD_FILLER = new TagMatchRuleTest(Tags.Blocks.STONE);
