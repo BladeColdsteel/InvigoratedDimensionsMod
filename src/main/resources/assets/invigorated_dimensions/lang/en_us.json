@@ -65,6 +65,9 @@
 
   "block.invigorated_dimensions.tough_logs": "Tough Log",
 
+  "block.invigorated_dimensions.grounded_logs": "Grounded Log",
+  "block.invigorated_dimensions.grounded_sapling": "Grounded Sapling",
+
   "itemGroup.invigorated_dimensions": "Invigorated Dimensions",
   "itemGroup.invigorated_dimensions_electric_highlands_mod_tab": "ID: Electric Highlands",
   "itemGroup.invigorated_dimensions_watery_depths_mod_tab": "ID: Watery Depths",
@@ -74,5 +77,6 @@
   "itemGroup.invigorated_dimensions_buggy_mod_tab": "ID: Insectoid Paradisio",
   "itemGroup.invigorated_dimensions_darkened_mod_tab": "ID: Valley of Death",
   "itemGroup.invigorated_dimensions_feywild_mod_tab": "ID: Feywild Expanse",
-  "itemGroup.invigorated_dimensions_fighting_mod_tab": "ID: Infinite Dungeon"
+  "itemGroup.invigorated_dimensions_fighting_mod_tab": "ID: Infinite Dungeon",
+  "itemGroup.invigorated_dimensions_grounded_mod_tab": "ID: Terra Nata"
 }

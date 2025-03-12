@@ -23,6 +23,9 @@ import com.bladecoldsteel.invigorateddimensions.infinitedungeon.item.InfiniteDun
 import com.bladecoldsteel.invigorateddimensions.insectoidparadisio.block.InsectoidParadisioBlocks;
 import com.bladecoldsteel.invigorateddimensions.insectoidparadisio.block.InsectoidParadisioWoodTypes;
 import com.bladecoldsteel.invigorateddimensions.insectoidparadisio.item.InsectoidParadisioItems;
+import com.bladecoldsteel.invigorateddimensions.terranata.block.TerraNataBlocks;
+import com.bladecoldsteel.invigorateddimensions.terranata.block.TerraNataWoodTypes;
+import com.bladecoldsteel.invigorateddimensions.terranata.item.TerraNataItems;
 import com.bladecoldsteel.invigorateddimensions.universal.block.UniversalBlocks;
 import com.bladecoldsteel.invigorateddimensions.universal.item.UniversalItems;
 import com.bladecoldsteel.invigorateddimensions.valleydeath.block.ValleyDeathBlocks;
@@ -120,6 +123,9 @@ public class InvigoratedDimensions
         //Fighting
         InfiniteDungeonBlocks.register(eventBus);
         InfiniteDungeonItems.register(eventBus);
+        //Ground
+        TerraNataBlocks.register(eventBus);
+        TerraNataItems.register(eventBus);
 
         DeferredRegister<?>[] registers = {
                 //Electric
@@ -140,7 +146,9 @@ public class InvigoratedDimensions
                 //Fairy
           FairyFeatures.FAIRY_FEATURES,
                 //Fighting
-          FightingFeatures.FIGHTING_FEATURES
+          FightingFeatures.FIGHTING_FEATURES,
+                //Ground
+          GroundFeatures.GROUND_FEATURES
         };
 
         for (DeferredRegister<?> register : registers) {
@@ -186,6 +194,8 @@ public class InvigoratedDimensions
             FairyFeatures.registerConfiguredFeatures();
             //Fighting
             FightingFeatures.registerConfiguredFeatures();
+            //Ground
+            GroundFeatures.registerConfiguredFeatures();
 
             //Strippable Wood
             AxeItem.STRIPABLES = new ImmutableMap.Builder<Block, Block>().putAll(AxeItem.STRIPABLES)
@@ -204,6 +214,7 @@ public class InvigoratedDimensions
             WoodType.register(ValleyDeathWoodTypes.DARKENED);
             WoodType.register(FeywildExpanseWoodTypes.FEYAN);
             WoodType.register(InfiniteDungeonWoodTypes.TOUGH);
+            WoodType.register(TerraNataWoodTypes.GROUNDED);
 
         });
 
@@ -246,6 +257,9 @@ public class InvigoratedDimensions
 
         //Fighting
 
+        //Ground
+        RenderTypeLookup.setRenderLayer(TerraNataBlocks.GROUNDED_SAPLING.get(), RenderType.cutout());
+
         //Wood Types
         Atlases.addWoodType(ElectricHighlandsWoodTypes.ELECTRICALLY_CHARGED);
         Atlases.addWoodType(WateryDepthsWoodTypes.WATERY);
@@ -256,6 +270,7 @@ public class InvigoratedDimensions
         Atlases.addWoodType(ValleyDeathWoodTypes.DARKENED);
         Atlases.addWoodType(FeywildExpanseWoodTypes.FEYAN);
         Atlases.addWoodType(InfiniteDungeonWoodTypes.TOUGH);
+        Atlases.addWoodType(TerraNataWoodTypes.GROUNDED);
     }
 
     public void gatherData(GatherDataEvent event) {
