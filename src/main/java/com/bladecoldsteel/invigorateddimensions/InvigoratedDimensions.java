@@ -1,5 +1,8 @@
 package com.bladecoldsteel.invigorateddimensions;
 
+import com.bladecoldsteel.invigorateddimensions.celestialrealm.block.HeavenlyRealmBlocks;
+import com.bladecoldsteel.invigorateddimensions.celestialrealm.block.HeavenlyRealmWoodTypes;
+import com.bladecoldsteel.invigorateddimensions.celestialrealm.item.HeavenlyRealmItems;
 import com.bladecoldsteel.invigorateddimensions.draconicrift.block.DraconicRiftBlocks;
 import com.bladecoldsteel.invigorateddimensions.draconicrift.block.DraconicRiftWoodTypes;
 import com.bladecoldsteel.invigorateddimensions.draconicrift.item.DraconicRiftItems;
@@ -94,6 +97,7 @@ public class InvigoratedDimensions
         ModPointsOfInterest.register(eventBus);
         UniversalBlocks.register(eventBus);
         UniversalItems.register(eventBus);
+        CustomFeatures.register(eventBus);
         //Electric
         ElectricHighlandsItems.register(eventBus);
         ElectricHighlandsBlocks.register(eventBus);
@@ -126,6 +130,9 @@ public class InvigoratedDimensions
         //Ground
         TerraNataBlocks.register(eventBus);
         TerraNataItems.register(eventBus);
+        //Flying
+        HeavenlyRealmBlocks.register(eventBus);
+        HeavenlyRealmItems.register(eventBus);
 
         DeferredRegister<?>[] registers = {
                 //Electric
@@ -148,7 +155,9 @@ public class InvigoratedDimensions
                 //Fighting
           FightingFeatures.FIGHTING_FEATURES,
                 //Ground
-          GroundFeatures.GROUND_FEATURES
+          GroundFeatures.GROUND_FEATURES,
+                //Flying
+          FlyingFeatures.FLYING_FEATURES
         };
 
         for (DeferredRegister<?> register : registers) {
@@ -196,6 +205,8 @@ public class InvigoratedDimensions
             FightingFeatures.registerConfiguredFeatures();
             //Ground
             GroundFeatures.registerConfiguredFeatures();
+            //Flying
+            FlyingFeatures.registerConfiguredFeatures();
 
             //Strippable Wood
             AxeItem.STRIPABLES = new ImmutableMap.Builder<Block, Block>().putAll(AxeItem.STRIPABLES)
@@ -215,6 +226,7 @@ public class InvigoratedDimensions
             WoodType.register(FeywildExpanseWoodTypes.FEYAN);
             WoodType.register(InfiniteDungeonWoodTypes.TOUGH);
             WoodType.register(TerraNataWoodTypes.GROUNDED);
+            WoodType.register(HeavenlyRealmWoodTypes.FLOATING);
 
         });
 
@@ -260,6 +272,9 @@ public class InvigoratedDimensions
         //Ground
         RenderTypeLookup.setRenderLayer(TerraNataBlocks.GROUNDED_SAPLING.get(), RenderType.cutout());
 
+        //Flying
+        RenderTypeLookup.setRenderLayer(HeavenlyRealmBlocks.FLOATING_SAPLING.get(), RenderType.cutout());
+
         //Wood Types
         Atlases.addWoodType(ElectricHighlandsWoodTypes.ELECTRICALLY_CHARGED);
         Atlases.addWoodType(WateryDepthsWoodTypes.WATERY);
@@ -271,6 +286,7 @@ public class InvigoratedDimensions
         Atlases.addWoodType(FeywildExpanseWoodTypes.FEYAN);
         Atlases.addWoodType(InfiniteDungeonWoodTypes.TOUGH);
         Atlases.addWoodType(TerraNataWoodTypes.GROUNDED);
+        Atlases.addWoodType(HeavenlyRealmWoodTypes.FLOATING);
     }
 
     public void gatherData(GatherDataEvent event) {

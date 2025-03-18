@@ -1,5 +1,6 @@
 package com.bladecoldsteel.invigorateddimensions.universal.block.custom;
 
+import com.bladecoldsteel.invigorateddimensions.celestialrealm.block.HeavenlyRealmBlocks;
 import com.bladecoldsteel.invigorateddimensions.draconicrift.block.DraconicRiftBlocks;
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.block.ElectricHighlandsBlocks;
 import com.bladecoldsteel.invigorateddimensions.emberwilds.block.EmberwildsBlocks;
@@ -173,7 +174,7 @@ public class CrystallizedLeavesBlock extends LeavesBlock {
         } else if (isGroundBiome(biomeKey)) {
             return new ItemStack(TerraNataBlocks.GROUNDED_SAPLING.get());
         } else if (isFlyingBiome(biomeKey)) {
-            return new ItemStack(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_SAPLING.get());
+            return new ItemStack(HeavenlyRealmBlocks.FLOATING_SAPLING.get());
         } else if (isPsychicBiome(biomeKey)) {
             return new ItemStack(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_SAPLING.get());
         } else if (isBugBiome(biomeKey)) {
@@ -205,7 +206,8 @@ public class CrystallizedLeavesBlock extends LeavesBlock {
                 new ItemStack(InsectoidParadisioBlocks.BUGGED_SAPLING.get()),
                 new ItemStack(ValleyDeathBlocks.DARKENED_SAPLING.get()),
                 new ItemStack(FeywildExpanseBlocks.FEYAN_SAPLING.get()),
-                new ItemStack(TerraNataBlocks.GROUNDED_SAPLING.get())
+                new ItemStack(TerraNataBlocks.GROUNDED_SAPLING.get()),
+                new ItemStack(HeavenlyRealmBlocks.FLOATING_SAPLING.get())
         };
 
         return saplings[new Random().nextInt(saplings.length)];
