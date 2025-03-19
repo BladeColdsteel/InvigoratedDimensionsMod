@@ -1,0 +1,155 @@
+{
+  "surface_builder": "invigorated_dimensions:snow_surface",
+  "depth": 0.425,
+  "scale": 0.3,
+  "temperature": 0,
+  "downfall": 0.5,
+  "precipitation": "snow",
+  "category": "none",
+  "player_spawn_friendly": true,
+  "effects": {
+    "sky_color": 9415679,
+    "fog_color": 6457076,
+    "water_color": 7114745,
+    "water_fog_color": 9415679,
+    "grass_color": 9414143,
+    "foliage_color": 9415679,
+    "particle": {
+      "options": {
+        "type": "minecraft:item_snowball"
+      },
+      "probability": 0.001
+    }
+  },
+  "starts": [
+
+  ],
+  "spawners": {
+    "creature": [
+      {
+        "type": "minecraft:cow",
+        "weight": 10,
+        "minCount": 2,
+        "maxCount": 4
+      },
+      {
+        "type": "minecraft:chicken",
+        "weight": 10,
+        "minCount": 2,
+        "maxCount": 4
+      },
+      {
+        "type": "minecraft:sheep",
+        "weight": 10,
+        "minCount": 2,
+        "maxCount": 4
+      },
+      {
+        "type": "minecraft:pig",
+        "weight": 10,
+        "minCount": 2,
+        "maxCount": 4
+      },
+      {
+        "type": "minecraft:donkey",
+        "weight": 5,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
+        "type": "minecraft:horse",
+        "weight": 5,
+        "minCount": 1,
+        "maxCount": 3
+      }
+    ],
+    "monster": [
+      {
+        "type": "minecraft:zombie",
+        "weight": 20,
+        "minCount": 1,
+        "maxCount": 4
+      },
+      {
+        "type": "minecraft:skeleton",
+        "weight": 25,
+        "minCount": 1,
+        "maxCount": 4
+      },
+      {
+        "type": "minecraft:creeper",
+        "weight": 25,
+        "minCount": 1,
+        "maxCount": 2
+      },
+      {
+        "type": "minecraft:enderman",
+        "weight": 10,
+        "minCount": 1,
+        "maxCount": 4
+      },
+      {
+        "type": "minecraft:witch",
+        "weight": 5,
+        "minCount": 1,
+        "maxCount": 2
+      },
+      {
+        "type": "minecraft:spider",
+        "weight": 25,
+        "minCount": 1,
+        "maxCount": 4
+      },
+      {
+        "type": "minecraft:zombie_villager",
+        "weight": 5,
+        "minCount": 1,
+        "maxCount": 1
+      }
+    ]
+  },
+  "spawn_costs": {},
+  "carvers": {
+    "air": [
+      "minecraft:cave",
+      "minecraft:canyon"
+    ]
+  },
+  "features": [
+    [],
+    [
+      "minecraft:ice_patch"
+    ],
+    [],
+    [
+      "minecraft:monster_room"
+    ],
+    [],
+    [],
+    [
+      "minecraft:ore_dirt",
+      "minecraft:ore_gravel",
+      "minecraft:ore_granite",
+      "minecraft:ore_diorite",
+      "minecraft:ore_andesite",
+      "minecraft:ore_coal",
+      "minecraft:ore_iron",
+      "minecraft:ore_gold",
+      "minecraft:ore_redstone",
+      "minecraft:ore_diamond",
+      "minecraft:ore_lapis",
+      "minecraft:disk_sand",
+      "minecraft:disk_clay",
+      "minecraft:disk_gravel",
+      "invigorated_dimensions:ice_stone_patch",
+      "invigorated_dimensions:ice_patch"
+    ],
+    [],
+    [
+      "invigorated_dimensions:ice_tree"
+    ],
+    [
+      "minecraft:freeze_top_layer"
+    ]
+  ]
+}

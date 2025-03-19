@@ -3,6 +3,9 @@ package com.bladecoldsteel.invigorateddimensions;
 import com.bladecoldsteel.invigorateddimensions.celestialrealm.block.HeavenlyRealmBlocks;
 import com.bladecoldsteel.invigorateddimensions.celestialrealm.block.HeavenlyRealmWoodTypes;
 import com.bladecoldsteel.invigorateddimensions.celestialrealm.item.HeavenlyRealmItems;
+import com.bladecoldsteel.invigorateddimensions.deeptundra.block.DeepTundraBlocks;
+import com.bladecoldsteel.invigorateddimensions.deeptundra.block.DeepTundraWoodTypes;
+import com.bladecoldsteel.invigorateddimensions.deeptundra.item.DeepTundraItems;
 import com.bladecoldsteel.invigorateddimensions.draconicrift.block.DraconicRiftBlocks;
 import com.bladecoldsteel.invigorateddimensions.draconicrift.block.DraconicRiftWoodTypes;
 import com.bladecoldsteel.invigorateddimensions.draconicrift.item.DraconicRiftItems;
@@ -52,7 +55,6 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.client.renderer.tileentity.SignTileEntityRenderer;
 import net.minecraft.item.AxeItem;
-import net.minecraft.util.registry.WorldGenRegistries;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
@@ -133,6 +135,9 @@ public class InvigoratedDimensions
         //Flying
         HeavenlyRealmBlocks.register(eventBus);
         HeavenlyRealmItems.register(eventBus);
+        //Ice
+        DeepTundraBlocks.register(eventBus);
+        DeepTundraItems.register(eventBus);
 
         DeferredRegister<?>[] registers = {
                 //Electric
@@ -157,7 +162,9 @@ public class InvigoratedDimensions
                 //Ground
           GroundFeatures.GROUND_FEATURES,
                 //Flying
-          FlyingFeatures.FLYING_FEATURES
+          FlyingFeatures.FLYING_FEATURES,
+                //Ice
+          IceFeatures.ICE_FEATURES
         };
 
         for (DeferredRegister<?> register : registers) {
@@ -207,6 +214,8 @@ public class InvigoratedDimensions
             GroundFeatures.registerConfiguredFeatures();
             //Flying
             FlyingFeatures.registerConfiguredFeatures();
+            //Ice
+            IceFeatures.registerConfiguredFeatures();
 
             //Strippable Wood
             AxeItem.STRIPABLES = new ImmutableMap.Builder<Block, Block>().putAll(AxeItem.STRIPABLES)
@@ -227,6 +236,7 @@ public class InvigoratedDimensions
             WoodType.register(InfiniteDungeonWoodTypes.TOUGH);
             WoodType.register(TerraNataWoodTypes.GROUNDED);
             WoodType.register(HeavenlyRealmWoodTypes.FLOATING);
+            WoodType.register(DeepTundraWoodTypes.ICEY);
 
         });
 
@@ -275,6 +285,9 @@ public class InvigoratedDimensions
         //Flying
         RenderTypeLookup.setRenderLayer(HeavenlyRealmBlocks.FLOATING_SAPLING.get(), RenderType.cutout());
 
+        //Ice
+        RenderTypeLookup.setRenderLayer(DeepTundraBlocks.ICEY_SAPLING.get(), RenderType.cutout());
+
         //Wood Types
         Atlases.addWoodType(ElectricHighlandsWoodTypes.ELECTRICALLY_CHARGED);
         Atlases.addWoodType(WateryDepthsWoodTypes.WATERY);
@@ -287,6 +300,7 @@ public class InvigoratedDimensions
         Atlases.addWoodType(InfiniteDungeonWoodTypes.TOUGH);
         Atlases.addWoodType(TerraNataWoodTypes.GROUNDED);
         Atlases.addWoodType(HeavenlyRealmWoodTypes.FLOATING);
+        Atlases.addWoodType(DeepTundraWoodTypes.ICEY);
     }
 
     public void gatherData(GatherDataEvent event) {
