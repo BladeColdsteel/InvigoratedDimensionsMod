@@ -3,6 +3,9 @@ package com.bladecoldsteel.invigorateddimensions;
 import com.bladecoldsteel.invigorateddimensions.celestialrealm.block.HeavenlyRealmBlocks;
 import com.bladecoldsteel.invigorateddimensions.celestialrealm.block.HeavenlyRealmWoodTypes;
 import com.bladecoldsteel.invigorateddimensions.celestialrealm.item.HeavenlyRealmItems;
+import com.bladecoldsteel.invigorateddimensions.corrosivefields.block.CorrosiveFieldsBlocks;
+import com.bladecoldsteel.invigorateddimensions.corrosivefields.block.CorrosiveFieldsWoodTypes;
+import com.bladecoldsteel.invigorateddimensions.corrosivefields.item.CorrosiveFieldsItems;
 import com.bladecoldsteel.invigorateddimensions.deeptundra.block.DeepTundraBlocks;
 import com.bladecoldsteel.invigorateddimensions.deeptundra.block.DeepTundraWoodTypes;
 import com.bladecoldsteel.invigorateddimensions.deeptundra.item.DeepTundraItems;
@@ -138,6 +141,9 @@ public class InvigoratedDimensions
         //Ice
         DeepTundraBlocks.register(eventBus);
         DeepTundraItems.register(eventBus);
+        //Poison
+        CorrosiveFieldsBlocks.register(eventBus);
+        CorrosiveFieldsItems.register(eventBus);
 
         DeferredRegister<?>[] registers = {
                 //Electric
@@ -164,7 +170,9 @@ public class InvigoratedDimensions
                 //Flying
           FlyingFeatures.FLYING_FEATURES,
                 //Ice
-          IceFeatures.ICE_FEATURES
+          IceFeatures.ICE_FEATURES,
+                //Poison
+          PoisonFeatures.POISON_FEATURES
         };
 
         for (DeferredRegister<?> register : registers) {
@@ -216,6 +224,8 @@ public class InvigoratedDimensions
             FlyingFeatures.registerConfiguredFeatures();
             //Ice
             IceFeatures.registerConfiguredFeatures();
+            //Poison
+            PoisonFeatures.registerConfiguredFeatures();
 
             //Strippable Wood
             AxeItem.STRIPABLES = new ImmutableMap.Builder<Block, Block>().putAll(AxeItem.STRIPABLES)
@@ -237,6 +247,7 @@ public class InvigoratedDimensions
             WoodType.register(TerraNataWoodTypes.GROUNDED);
             WoodType.register(HeavenlyRealmWoodTypes.FLOATING);
             WoodType.register(DeepTundraWoodTypes.ICEY);
+            WoodType.register(CorrosiveFieldsWoodTypes.CORROSIVE);
 
         });
 
@@ -288,6 +299,9 @@ public class InvigoratedDimensions
         //Ice
         RenderTypeLookup.setRenderLayer(DeepTundraBlocks.ICEY_SAPLING.get(), RenderType.cutout());
 
+        //Poison
+        RenderTypeLookup.setRenderLayer(CorrosiveFieldsBlocks.CORROSIVE_SAPLING.get(), RenderType.cutout());
+
         //Wood Types
         Atlases.addWoodType(ElectricHighlandsWoodTypes.ELECTRICALLY_CHARGED);
         Atlases.addWoodType(WateryDepthsWoodTypes.WATERY);
@@ -301,6 +315,7 @@ public class InvigoratedDimensions
         Atlases.addWoodType(TerraNataWoodTypes.GROUNDED);
         Atlases.addWoodType(HeavenlyRealmWoodTypes.FLOATING);
         Atlases.addWoodType(DeepTundraWoodTypes.ICEY);
+        Atlases.addWoodType(CorrosiveFieldsWoodTypes.CORROSIVE);
     }
 
     public void gatherData(GatherDataEvent event) {

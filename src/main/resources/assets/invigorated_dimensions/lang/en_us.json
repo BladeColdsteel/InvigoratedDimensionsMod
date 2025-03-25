@@ -76,6 +76,10 @@
   "block.invigorated_dimensions.icey_sapling": "Icey Sapling",
   "block.invigorated_dimensions.icey_stone": "Icey Stone",
 
+  "block.invigorated_dimensions.corrosive_logs": "Corrosive Log",
+  "block.invigorated_dimensions.corrosive_sapling": "Corrosive Sapling",
+  "block.invigorated_dimensions.corrosive_stone": "Corrosive Stone",
+
   "itemGroup.invigorated_dimensions": "Invigorated Dimensions",
   "itemGroup.invigorated_dimensions_electric_highlands_mod_tab": "ID: Electric Highlands",
   "itemGroup.invigorated_dimensions_watery_depths_mod_tab": "ID: Watery Depths",
@@ -88,5 +92,6 @@
   "itemGroup.invigorated_dimensions_fighting_mod_tab": "ID: Infinite Dungeon",
   "itemGroup.invigorated_dimensions_grounded_mod_tab": "ID: Terra Nata",
   "itemGroup.invigorated_dimensions_flying_mod_tab": "ID: Heavenly Realm",
-  "itemGroup.invigorated_dimensions_icy_mod_tab": "ID: Deep Tundra"
+  "itemGroup.invigorated_dimensions_icy_mod_tab": "ID: Deep Tundra",
+  "itemGroup.invigorated_dimensions_corrosive_mod_tab": "ID: Corrosive Fields"
 }
