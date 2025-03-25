@@ -80,6 +80,10 @@
   "block.invigorated_dimensions.corrosive_sapling": "Corrosive Sapling",
   "block.invigorated_dimensions.corrosive_stone": "Corrosive Stone",
 
+  "block.invigorated_dimensions.psychedelic_logs": "Psychedelic Log",
+  "block.invigorated_dimensions.psychedelic_sapling": "Psychedelic Sapling",
+  "block.invigorated_dimensions.psychedelic_stone": "Psychedelic Stone",
+
   "itemGroup.invigorated_dimensions": "Invigorated Dimensions",
   "itemGroup.invigorated_dimensions_electric_highlands_mod_tab": "ID: Electric Highlands",
   "itemGroup.invigorated_dimensions_watery_depths_mod_tab": "ID: Watery Depths",
@@ -93,5 +97,6 @@
   "itemGroup.invigorated_dimensions_grounded_mod_tab": "ID: Terra Nata",
   "itemGroup.invigorated_dimensions_flying_mod_tab": "ID: Heavenly Realm",
   "itemGroup.invigorated_dimensions_icy_mod_tab": "ID: Deep Tundra",
-  "itemGroup.invigorated_dimensions_corrosive_mod_tab": "ID: Corrosive Fields"
+  "itemGroup.invigorated_dimensions_corrosive_mod_tab": "ID: Corrosive Fields",
+  "itemGroup.invigorated_dimensions_psychedelic_mod_tab": "ID: Dreamland"
 }

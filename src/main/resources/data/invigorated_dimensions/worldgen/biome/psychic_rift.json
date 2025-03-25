@@ -1,24 +1,24 @@
 {
   "surface_builder": "invigorated_dimensions:grass_surface",
   "depth": 0.3,
-  "scale": 0.6,
-  "temperature": 0.8,
+  "scale": 0.2,
+  "temperature": 0.9,
   "downfall": 0,
-  "precipitation": "rain",
+  "precipitation": "none",
   "category": "none",
   "player_spawn_friendly": true,
   "effects": {
-    "sky_color": 10426778,
-    "fog_color": 7738482,
-    "water_color": 9772433,
-    "water_fog_color": 8598657,
-    "grass_color": 8260730,
-    "foliage_color": 10621341,
+    "sky_color": 15472869,
+    "fog_color": 12191924,
+    "water_color": 13314758,
+    "water_fog_color": 11023524,
+    "grass_color": 13766603,
+    "foliage_color": 12206262,
     "particle": {
       "options": {
-        "type": "minecraft:landing_obsidian_tear"
+        "type": "minecraft:enchanted_hit"
       },
-      "probability": 0.001
+      "probability": 0.0001
     }
   },
   "starts": [
@@ -141,11 +141,11 @@
       "minecraft:disk_sand",
       "minecraft:disk_clay",
       "minecraft:disk_gravel",
-      "invigorated_dimensions:poison_stone_patch"
+      "invigorated_dimensions:psychic_stone_patch"
     ],
     [],
     [
-      "invigorated_dimensions:poison_tree"
+      "invigorated_dimensions:psychic_tree"
     ],
     [
       "minecraft:freeze_top_layer"
