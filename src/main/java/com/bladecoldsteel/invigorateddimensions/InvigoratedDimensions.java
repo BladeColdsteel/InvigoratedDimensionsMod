@@ -1,5 +1,9 @@
 package com.bladecoldsteel.invigorateddimensions;
 
+import com.bladecoldsteel.invigorateddimensions.cavernouscove.block.CavernousCoveBlocks;
+import com.bladecoldsteel.invigorateddimensions.cavernouscove.block.CavernousCoveWoodTypes;
+import com.bladecoldsteel.invigorateddimensions.cavernouscove.item.CavernousCoveItemGroup;
+import com.bladecoldsteel.invigorateddimensions.cavernouscove.item.CavernousCoveItems;
 import com.bladecoldsteel.invigorateddimensions.celestialrealm.block.HeavenlyRealmBlocks;
 import com.bladecoldsteel.invigorateddimensions.celestialrealm.block.HeavenlyRealmWoodTypes;
 import com.bladecoldsteel.invigorateddimensions.celestialrealm.item.HeavenlyRealmItems;
@@ -150,6 +154,9 @@ public class InvigoratedDimensions
         //Psychic
         DreamlandBlocks.register(eventBus);
         DreamlandItems.register(eventBus);
+        //Rock
+        CavernousCoveBlocks.register(eventBus);
+        CavernousCoveItems.register(eventBus);
 
         DeferredRegister<?>[] registers = {
                 //Electric
@@ -180,7 +187,9 @@ public class InvigoratedDimensions
                 //Poison
           PoisonFeatures.POISON_FEATURES,
                 //Psychic
-          PsychicFeatures.PSYCHIC_FEATURES
+          PsychicFeatures.PSYCHIC_FEATURES,
+                //Rock
+          RockFeatures.ROCKY_FEATURES
         };
 
         for (DeferredRegister<?> register : registers) {
@@ -236,6 +245,8 @@ public class InvigoratedDimensions
             PoisonFeatures.registerConfiguredFeatures();
             //Psychic
             PsychicFeatures.registerConfiguredFeatures();
+            //Rock
+            RockFeatures.registerConfiguredFeatures();
 
             //Strippable Wood
             AxeItem.STRIPABLES = new ImmutableMap.Builder<Block, Block>().putAll(AxeItem.STRIPABLES)
@@ -259,6 +270,7 @@ public class InvigoratedDimensions
             WoodType.register(DeepTundraWoodTypes.ICEY);
             WoodType.register(CorrosiveFieldsWoodTypes.CORROSIVE);
             WoodType.register(DreamlandWoodTypes.PSYCHEDELIC);
+            WoodType.register(CavernousCoveWoodTypes.ROCKY);
 
         });
 
@@ -316,6 +328,8 @@ public class InvigoratedDimensions
         //Psychic
         RenderTypeLookup.setRenderLayer(DreamlandBlocks.PSYCHEDELIC_SAPLING.get(), RenderType.cutout());
 
+        //Rock
+
         //Wood Types
         Atlases.addWoodType(ElectricHighlandsWoodTypes.ELECTRICALLY_CHARGED);
         Atlases.addWoodType(WateryDepthsWoodTypes.WATERY);
@@ -331,6 +345,7 @@ public class InvigoratedDimensions
         Atlases.addWoodType(DeepTundraWoodTypes.ICEY);
         Atlases.addWoodType(CorrosiveFieldsWoodTypes.CORROSIVE);
         Atlases.addWoodType(DreamlandWoodTypes.PSYCHEDELIC);
+        Atlases.addWoodType(CavernousCoveWoodTypes.ROCKY);
     }
 
     public void gatherData(GatherDataEvent event) {

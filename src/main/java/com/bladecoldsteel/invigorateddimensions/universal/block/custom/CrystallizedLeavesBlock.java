@@ -183,7 +183,7 @@ public class CrystallizedLeavesBlock extends LeavesBlock {
         } else if (isBugBiome(biomeKey)) {
             return new ItemStack(InsectoidParadisioBlocks.BUGGED_SAPLING.get());
         } else if (isRockBiome(biomeKey)) {
-            return new ItemStack(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_SAPLING.get());
+            return randomSapling();
         } else if (isGhostBiome(biomeKey)) {
             return new ItemStack(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_SAPLING.get());
         } else if (isDragonBiome(biomeKey)) {
