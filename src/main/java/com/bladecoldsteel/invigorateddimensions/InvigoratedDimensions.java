@@ -30,6 +30,9 @@ import com.bladecoldsteel.invigorateddimensions.emberwilds.item.EmberwildsItems;
 import com.bladecoldsteel.invigorateddimensions.feywildexpanse.block.FeywildExpanseBlocks;
 import com.bladecoldsteel.invigorateddimensions.feywildexpanse.block.FeywildExpanseWoodTypes;
 import com.bladecoldsteel.invigorateddimensions.feywildexpanse.item.FeywildExpanseItems;
+import com.bladecoldsteel.invigorateddimensions.ghastlymarsh.block.GhastlyMarshBlocks;
+import com.bladecoldsteel.invigorateddimensions.ghastlymarsh.block.GhastlyMarshWoodTypes;
+import com.bladecoldsteel.invigorateddimensions.ghastlymarsh.item.GhastlyMarshItems;
 import com.bladecoldsteel.invigorateddimensions.grassyknoll.block.GrassyKnollBlocks;
 import com.bladecoldsteel.invigorateddimensions.grassyknoll.block.GrassyKnollWoodTypes;
 import com.bladecoldsteel.invigorateddimensions.grassyknoll.item.GrassyKnollItems;
@@ -157,6 +160,9 @@ public class InvigoratedDimensions
         //Rock
         CavernousCoveBlocks.register(eventBus);
         CavernousCoveItems.register(eventBus);
+        //Ghost
+        GhastlyMarshBlocks.register(eventBus);
+        GhastlyMarshItems.register(eventBus);
 
         DeferredRegister<?>[] registers = {
                 //Electric
@@ -189,7 +195,9 @@ public class InvigoratedDimensions
                 //Psychic
           PsychicFeatures.PSYCHIC_FEATURES,
                 //Rock
-          RockFeatures.ROCKY_FEATURES
+          RockFeatures.ROCKY_FEATURES,
+                //Ghost
+          GhostFeatures.GHOST_FEATURES
         };
 
         for (DeferredRegister<?> register : registers) {
@@ -247,6 +255,8 @@ public class InvigoratedDimensions
             PsychicFeatures.registerConfiguredFeatures();
             //Rock
             RockFeatures.registerConfiguredFeatures();
+            //Ghost
+            GhostFeatures.registerConfiguredFeatures();
 
             //Strippable Wood
             AxeItem.STRIPABLES = new ImmutableMap.Builder<Block, Block>().putAll(AxeItem.STRIPABLES)
@@ -271,6 +281,7 @@ public class InvigoratedDimensions
             WoodType.register(CorrosiveFieldsWoodTypes.CORROSIVE);
             WoodType.register(DreamlandWoodTypes.PSYCHEDELIC);
             WoodType.register(CavernousCoveWoodTypes.ROCKY);
+            WoodType.register(GhastlyMarshWoodTypes.SPOOKY);
 
         });
 
@@ -330,6 +341,9 @@ public class InvigoratedDimensions
 
         //Rock
 
+        //Ghost
+        RenderTypeLookup.setRenderLayer(GhastlyMarshBlocks.SPOOKY_SAPLING.get(), RenderType.cutout());
+
         //Wood Types
         Atlases.addWoodType(ElectricHighlandsWoodTypes.ELECTRICALLY_CHARGED);
         Atlases.addWoodType(WateryDepthsWoodTypes.WATERY);
@@ -346,6 +360,7 @@ public class InvigoratedDimensions
         Atlases.addWoodType(CorrosiveFieldsWoodTypes.CORROSIVE);
         Atlases.addWoodType(DreamlandWoodTypes.PSYCHEDELIC);
         Atlases.addWoodType(CavernousCoveWoodTypes.ROCKY);
+        Atlases.addWoodType(GhastlyMarshWoodTypes.SPOOKY);
     }
 
     public void gatherData(GatherDataEvent event) {

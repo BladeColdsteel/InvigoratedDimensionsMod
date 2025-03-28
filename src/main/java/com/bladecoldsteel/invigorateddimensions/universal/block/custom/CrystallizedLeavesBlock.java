@@ -8,6 +8,7 @@ import com.bladecoldsteel.invigorateddimensions.dreamland.block.DreamlandBlocks;
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.block.ElectricHighlandsBlocks;
 import com.bladecoldsteel.invigorateddimensions.emberwilds.block.EmberwildsBlocks;
 import com.bladecoldsteel.invigorateddimensions.feywildexpanse.block.FeywildExpanseBlocks;
+import com.bladecoldsteel.invigorateddimensions.ghastlymarsh.block.GhastlyMarshBlocks;
 import com.bladecoldsteel.invigorateddimensions.grassyknoll.block.GrassyKnollBlocks;
 import com.bladecoldsteel.invigorateddimensions.insectoidparadisio.block.InsectoidParadisioBlocks;
 import com.bladecoldsteel.invigorateddimensions.terranata.block.TerraNataBlocks;
@@ -185,7 +186,7 @@ public class CrystallizedLeavesBlock extends LeavesBlock {
         } else if (isRockBiome(biomeKey)) {
             return randomSapling();
         } else if (isGhostBiome(biomeKey)) {
-            return new ItemStack(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_SAPLING.get());
+            return new ItemStack(GhastlyMarshBlocks.SPOOKY_SAPLING.get());
         } else if (isDragonBiome(biomeKey)) {
             return new ItemStack(DraconicRiftBlocks.DRACONIC_SAPLING.get());
         } else if (isDarkBiome(biomeKey)) {
@@ -213,7 +214,8 @@ public class CrystallizedLeavesBlock extends LeavesBlock {
                 new ItemStack(HeavenlyRealmBlocks.FLOATING_SAPLING.get()),
                 new ItemStack(DeepTundraBlocks.ICEY_SAPLING.get()),
                 new ItemStack(CorrosiveFieldsBlocks.CORROSIVE_SAPLING.get()),
-                new ItemStack(DreamlandBlocks.PSYCHEDELIC_SAPLING.get())
+                new ItemStack(DreamlandBlocks.PSYCHEDELIC_SAPLING.get()),
+                new ItemStack(GhastlyMarshBlocks.SPOOKY_SAPLING.get())
         };
 
         return saplings[new Random().nextInt(saplings.length)];

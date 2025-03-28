@@ -87,6 +87,10 @@
   "block.invigorated_dimensions.rocky_logs": "Rocky Log",
   "block.invigorated_dimensions.rocky_stone": "Rocky Stone",
 
+  "block.invigorated_dimensions.spooky_logs": "Spooky Log",
+  "block.invigorated_dimensions.spooky_sapling": "Spooky Sapling",
+  "block.invigorated_dimensions.spooky_stone": "Spooky Stone",
+
   "itemGroup.invigorated_dimensions": "Invigorated Dimensions",
   "itemGroup.invigorated_dimensions_electric_highlands_mod_tab": "ID: Electric Highlands",
   "itemGroup.invigorated_dimensions_watery_depths_mod_tab": "ID: Watery Depths",
@@ -102,5 +106,6 @@
   "itemGroup.invigorated_dimensions_icy_mod_tab": "ID: Deep Tundra",
   "itemGroup.invigorated_dimensions_corrosive_mod_tab": "ID: Corrosive Fields",
   "itemGroup.invigorated_dimensions_psychedelic_mod_tab": "ID: Dreamland",
-  "itemGroup.invigorated_dimensions_rocky_mod_tab": "ID: Cavernous Cove"
+  "itemGroup.invigorated_dimensions_rocky_mod_tab": "ID: Cavernous Cove",
+  "itemGroup.invigorated_dimensions_spooky_mod_tab": "ID: Ghastly Marsh"
 }
