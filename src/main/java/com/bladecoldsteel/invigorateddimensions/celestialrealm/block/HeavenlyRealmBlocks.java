@@ -1,6 +1,7 @@
 package com.bladecoldsteel.invigorateddimensions.celestialrealm.block;
 
 import com.bladecoldsteel.invigorateddimensions.InvigoratedDimensions;
+import com.bladecoldsteel.invigorateddimensions.celestialrealm.block.custom.FloatingSaplingBlock;
 import com.bladecoldsteel.invigorateddimensions.celestialrealm.item.HeavenlyRealmItemGroup;
 import com.bladecoldsteel.invigorateddimensions.celestialrealm.item.HeavenlyRealmItems;
 import com.bladecoldsteel.invigorateddimensions.world.gen.features.trees.FlyingTree;
@@ -20,7 +21,7 @@ public class HeavenlyRealmBlocks {
             = DeferredRegister.create(ForgeRegistries.BLOCKS, InvigoratedDimensions.MOD_ID);
 
     public static final RegistryObject<Block> FLOATING_SAPLING = registerBlock("floating_sapling",
-            () -> new SaplingBlock(new FlyingTree(), AbstractBlock.Properties.copy(Blocks.OAK_SAPLING)));
+            () -> new FloatingSaplingBlock(new FlyingTree(), AbstractBlock.Properties.copy(Blocks.OAK_SAPLING)));
     public static final RegistryObject<Block> FLOATING_LOG = registerBlock("floating_logs",
             () -> new RotatedPillarBlock(AbstractBlock.Properties.copy(Blocks.JUNGLE_LOG)
                     .harvestTool(ToolType.AXE)));
