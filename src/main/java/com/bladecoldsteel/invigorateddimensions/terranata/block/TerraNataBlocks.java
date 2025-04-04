@@ -25,6 +25,13 @@ public class TerraNataBlocks {
             () -> new RotatedPillarBlock(AbstractBlock.Properties.copy(Blocks.OAK_LOG)
                     .harvestTool(ToolType.AXE)));
 
+    public static final RegistryObject<Block> GROUNDED_STONE = registerBlock("grounded_stone",
+            () -> new Block(AbstractBlock.Properties.copy(Blocks.STONE)
+                    .harvestLevel(1)
+                    .harvestTool(ToolType.PICKAXE)
+                    .requiresCorrectToolForDrops()
+                    .strength(3f)));
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);

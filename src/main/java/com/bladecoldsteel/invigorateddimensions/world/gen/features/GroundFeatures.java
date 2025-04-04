@@ -9,9 +9,12 @@ import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.WorldGenRegistries;
 import net.minecraft.world.gen.blockstateprovider.SimpleBlockStateProvider;
 import net.minecraft.world.gen.feature.*;
+import net.minecraft.world.gen.feature.template.RuleTest;
+import net.minecraft.world.gen.feature.template.TagMatchRuleTest;
 import net.minecraft.world.gen.foliageplacer.AcaciaFoliagePlacer;
 import net.minecraft.world.gen.placement.Placement;
 import net.minecraft.world.gen.trunkplacer.StraightTrunkPlacer;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
@@ -19,7 +22,7 @@ public class GroundFeatures {
     public static final DeferredRegister<Feature<?>> GROUND_FEATURES = DeferredRegister.create(ForgeRegistries.FEATURES, InvigoratedDimensions.MOD_ID);
 
     public static final class ConfiguredFeatures {
-
+        static final RuleTest OVERWORLD_FILLER = new TagMatchRuleTest(Tags.Blocks.STONE);
 
         public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> GROUNDED_TREE = Feature.TREE.configured(
                 new BaseTreeFeatureConfig.Builder(
@@ -39,6 +42,10 @@ public class GroundFeatures {
         public static final ConfiguredFeature<?, ?> GRAVEL_BOULDER = Feature.FOREST_ROCK.configured(
                 new BlockStateFeatureConfig(Blocks.GRAVEL.defaultBlockState())
         );
+
+        public static final ConfiguredFeature<?, ?> GROUNDED_STONE_PATCH = Feature.ORE.configured(
+                new OreFeatureConfig(OVERWORLD_FILLER, TerraNataBlocks.GROUNDED_STONE.get().defaultBlockState(), 33)
+        );
     }
 
     public static void registerConfiguredFeatures() {
@@ -51,6 +58,8 @@ public class GroundFeatures {
         register("stone_boulder", GroundFeatures.ConfiguredFeatures.STONE_BOULDER.range(256).squared().count(6));
         register("sand_boulder", GroundFeatures.ConfiguredFeatures.SAND_BOULDER.range(256).squared().count(6));
         register("gravel_boulder", GroundFeatures.ConfiguredFeatures.GRAVEL_BOULDER.range(256).squared().count(6));
+        //Ores
+        register("ground_stone_patch", GroundFeatures.ConfiguredFeatures.GROUNDED_STONE_PATCH.range(256).squared().count(30));
     }
 
     private static <FC extends IFeatureConfig> void register(String name, ConfiguredFeature<FC, ?> feature) {
