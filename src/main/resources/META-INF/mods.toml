@@ -40,11 +40,12 @@ This mod is mostly intended to work within my modpack, Invigorated Monsters 2, a
 
 Sadly, some of the dimension mods I initially installed do not work with Pixelmon and it's BetterSpawnerConfig, so I decided to create this mod to replace those dimensions!
 
-The base idea of this mod is to cover a select few dimensions and pokemon typings, namely; Electric, Water, Ice, Flying, Bug, Fighting, Ghost, Steel, Rock, and Grass. This mod will include a dimension for each type, including Pixelmon integration.
+This mod is a complete overhaul where Pokemon spawn with Pixelmon installed. It adds multiple biomes and dimensions that are based off the typing of the Pokemon. You won't be able to find many types in the overworld now as it is mostly just normal type pokemon.
+But if you're lucky, you can find the Elemental biomes related to each pokemon. Hoping to find a water-type? Try searching the Watery Rift! While the spawns are lower there, it does give you access to the Watery Depths! An all new dimension that has Water-Type Pokemon, and Spawns them in at higher rates!
 
-This mod will require Pixelmon to work as it uses a few of it's ores in generation. It also uses some of Pixelmons loot tables/items.
+There's a new biome and Dimension for each type to make Pokemon feel more rewarding when you find their biome/dimension!
 
-I hope to include the Pokemon spawning methods inside of this mod as well, unsure if I will be able to, but the goal is to add that as well. This mod might potentially just add the dimensions, loot tables, items and a few mobs and no Pokemon spawns so that people can add the Pokemon spawns in the dimensions however they want.
+(Not all dimensions/biomes are implemented, this is still a beta mod. They will be added as I go)
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.invigorated_dimensions]] #optional
