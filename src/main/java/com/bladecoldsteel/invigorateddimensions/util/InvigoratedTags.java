@@ -18,6 +18,8 @@ public class InvigoratedTags {
                 createTag("elemental_saplings");
         public static final Tags.IOptionalNamedTag<Block> ELEMENTAL_STONES_BLOCK =
                 createTag("elemental_stones");
+        public static final Tags.IOptionalNamedTag<Block> ELEMENTAL_LOGS_BLOCK =
+                createTag("elemental_logs");
 
         private static Tags.IOptionalNamedTag<Block> createTag(String name) {
             return BlockTags.createOptional(new ResourceLocation(InvigoratedDimensions.MOD_ID, name));
@@ -35,6 +37,7 @@ public class InvigoratedTags {
 
         public static final Tags.IOptionalNamedTag<Item> ELEMENTAL_SAPLINGS_ITEM = createTag("elemental_saplings");
         public static final Tags.IOptionalNamedTag<Item> ELEMENTAL_STONES_ITEM = createTag("elemental_stones");
+        public static final Tags.IOptionalNamedTag<Item> ELEMENTAL_LOGS_ITEM = createTag("elemental_logs");
 
         private static Tags.IOptionalNamedTag<Item> createTag(String name) {
             return ItemTags.createOptional(new ResourceLocation(InvigoratedDimensions.MOD_ID, name));
