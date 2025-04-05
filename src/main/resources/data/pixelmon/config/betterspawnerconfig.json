@@ -492,7 +492,23 @@
       "dtbop:magic_branch",
       "invigorated_dimensions:crystallized_leaves",
       "invigorated_dimensions:electrically_charged_logs",
-      "invigorated_dimensions:electrically_charged_wood"
+      "invigorated_dimensions:electrically_charged_wood",
+      "invigorated_dimensions:watery_logs",
+      "invigorated_dimensions:embered_logs",
+      "invigorated_dimensions:draconic_logs",
+      "invigorated_dimensions:grassy_logs",
+      "invigorated_dimensions:bugged_logs",
+      "invigorated_dimensions:darkened_logs",
+      "invigorated_dimensions:feyan_logs",
+      "invigorated_dimensions:tough_logs",
+      "invigorated_dimensions:grounded_logs",
+      "invigorated_dimensions:floating_logs",
+      "invigorated_dimensions:icey_logs",
+      "invigorated_dimensions:corrosive_logs",
+      "invigorated_dimensions:psychedelic_logs",
+      "invigorated_dimensions:rocky_logs",
+      "invigorated_dimensions:spooky_logs",
+      "invigorated_dimensions:metallic_logs"
     ],
     "beach": [
       "minecraft:sand",
@@ -616,7 +632,21 @@
       "byg:packed_black_ice",
       "byg:tiny_lilypads",
       "byg:ender_lily",
-      "invigorated_dimensions:electrically_charged_stone"
+      "invigorated_dimensions:electrically_charged_stone",
+      "invigorated_dimensions:watery_stone",
+      "invigorated_dimensions:grassy_stone",
+      "invigorated_dimensions:bugged_stone",
+      "invigorated_dimensions:darkened_stone",
+      "invigorated_dimensions:feyan_stone",
+      "invigorated_dimensions:tough_stone",
+      "invigorated_dimensions:grounded_stone",
+      "invigorated_dimensions:floating_stone",
+      "invigorated_dimensions:icey_stone",
+      "invigorated_dimensions:corrosive_stone",
+      "invigorated_dimensions:psychedelic_stone",
+      "invigorated_dimensions:rocky_stone",
+      "invigorated_dimensions:spooky_stone",
+      "invigorated_dimensions:metallic_stone"
     ],
     "air": [
       "minecraft:air",
@@ -1534,7 +1564,21 @@
       "invigorated_dimensions:electrically_charged_stone_stairs",
       "invigorated_dimensions:electrically_charged_stone_bricks",
       "invigorated_dimensions:electrically_charged_stone_brick_slab",
-      "invigorated_dimensions:electrically_charged_stone_brick_stairs"
+      "invigorated_dimensions:electrically_charged_stone_brick_stairs",
+      "invigorated_dimensions:watery_stone",
+      "invigorated_dimensions:grassy_stone",
+      "invigorated_dimensions:bugged_stone",
+      "invigorated_dimensions:darkened_stone",
+      "invigorated_dimensions:feyan_stone",
+      "invigorated_dimensions:tough_stone",
+      "invigorated_dimensions:grounded_stone",
+      "invigorated_dimensions:floating_stone",
+      "invigorated_dimensions:icey_stone",
+      "invigorated_dimensions:corrosive_stone",
+      "invigorated_dimensions:psychedelic_stone",
+      "invigorated_dimensions:rocky_stone",
+      "invigorated_dimensions:spooky_stone",
+      "invigorated_dimensions:metallic_stone"
     ]
   },
   "biomeCategories": {
@@ -2390,7 +2434,8 @@
       "byg:wailing_garth",
       "byg:withering_woods",
       "byg:weeping_mire",
-      "byg:quartz_desert"
+      "byg:quartz_desert",
+      "invigorated_dimensions:firey_rift"
     ],
     "end dragon": [
       "minecraft:end_barrens",
@@ -2413,109 +2458,54 @@
       "byg:ethereal_forest",
       "byg:ethereal_clearing",
       "byg:shattered_desert_isles",
-      "byg:imparius_clearing"
+      "byg:imparius_clearing",
+      "invigorated_dimensions:draconic_rift"
     ],
     "highlands electric": [
       "invigorated_dimensions:electric_rift",
       "invigorated_dimensions:electric_highlands"
     ],
     "na dark": [
-      "minecraft:end_barrens",
-      "minecraft:end_highlands",
-      "minecraft:end_midlands",
-      "minecraft:small_end_islands",
-      "minecraft:the_end"
+      "invigorated_dimensions:darkened_rift"
     ],
     "na water": [
-      "minecraft:end_barrens",
-      "minecraft:end_highlands",
-      "minecraft:end_midlands",
-      "minecraft:small_end_islands",
-      "minecraft:the_end"
+      "invigorated_dimensions:watery_rift"
     ],
     "na grass": [
-      "minecraft:end_barrens",
-      "minecraft:end_highlands",
-      "minecraft:end_midlands",
-      "minecraft:small_end_islands",
-      "minecraft:the_end"
+      "invigorated_dimensions:grassy_rift"
     ],
     "na psychic": [
-      "minecraft:end_barrens",
-      "minecraft:end_highlands",
-      "minecraft:end_midlands",
-      "minecraft:small_end_islands",
-      "minecraft:the_end"
+      "invigorated_dimensions:psychic_rift"
     ],
     "na rock": [
-      "minecraft:end_barrens",
-      "minecraft:end_highlands",
-      "minecraft:end_midlands",
-      "minecraft:small_end_islands",
-      "minecraft:the_end"
+      "invigorated_dimensions:rocky_rift"
     ],
     "na ghost": [
-      "minecraft:end_barrens",
-      "minecraft:end_highlands",
-      "minecraft:end_midlands",
-      "minecraft:small_end_islands",
-      "minecraft:the_end"
+      "invigorated_dimensions:spooky_rift"
     ],
     "na steel": [
-      "minecraft:end_barrens",
-      "minecraft:end_highlands",
-      "minecraft:end_midlands",
-      "minecraft:small_end_islands",
-      "minecraft:the_end"
+      "invigorated_dimensions:steely_rift"
     ],
     "na ice": [
-      "minecraft:end_barrens",
-      "minecraft:end_highlands",
-      "minecraft:end_midlands",
-      "minecraft:small_end_islands",
-      "minecraft:the_end"
+      "invigorated_dimensions:icey_rift"
     ],
     "na fairy": [
-      "minecraft:end_barrens",
-      "minecraft:end_highlands",
-      "minecraft:end_midlands",
-      "minecraft:small_end_islands",
-      "minecraft:the_end"
+      "invigorated_dimensions:fairy_rift"
     ],
     "na bug": [
-      "minecraft:end_barrens",
-      "minecraft:end_highlands",
-      "minecraft:end_midlands",
-      "minecraft:small_end_islands",
-      "minecraft:the_end"
+      "invigorated_dimensions:buggy_rift"
     ],
     "na ground": [
-      "minecraft:end_barrens",
-      "minecraft:end_highlands",
-      "minecraft:end_midlands",
-      "minecraft:small_end_islands",
-      "minecraft:the_end"
+      "invigorated_dimensions:grounded_rift"
     ],
     "na flying": [
-      "minecraft:end_barrens",
-      "minecraft:end_highlands",
-      "minecraft:end_midlands",
-      "minecraft:small_end_islands",
-      "minecraft:the_end"
+      "invigorated_dimensions:flying_rift"
     ],
     "na poison": [
-      "minecraft:end_barrens",
-      "minecraft:end_highlands",
-      "minecraft:end_midlands",
-      "minecraft:small_end_islands",
-      "minecraft:the_end"
+      "invigorated_dimensions:poison_rift"
     ],
     "na fighting": [
-      "minecraft:end_barrens",
-      "minecraft:end_highlands",
-      "minecraft:end_midlands",
-      "minecraft:small_end_islands",
-      "minecraft:the_end"
+      "invigorated_dimensions:fighting_rift"
     ]
   }
 }
