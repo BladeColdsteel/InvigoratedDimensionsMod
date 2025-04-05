@@ -14,6 +14,10 @@ public class InvigoratedTags {
 
         public static final Tags.IOptionalNamedTag<Block> BASE_STONE_ELECTRIC_HIGHLANDS =
                 createTag("base_stone_electric_highlands");
+        public static final Tags.IOptionalNamedTag<Block> ELEMENTAL_SAPLINGS_BLOCK =
+                createTag("elemental_saplings");
+        public static final Tags.IOptionalNamedTag<Block> ELEMENTAL_STONES_BLOCK =
+                createTag("elemental_stones");
 
         private static Tags.IOptionalNamedTag<Block> createTag(String name) {
             return BlockTags.createOptional(new ResourceLocation(InvigoratedDimensions.MOD_ID, name));
@@ -28,6 +32,9 @@ public class InvigoratedTags {
 
         public static final Tags.IOptionalNamedTag<Item> VOLTCRYST_FORGE = createForgeTag("gems/voltcryst");
         public static final Tags.IOptionalNamedTag<Item> VOLTCRYST_INVIGORATED = createTag("gems/voltcryst");
+
+        public static final Tags.IOptionalNamedTag<Item> ELEMENTAL_SAPLINGS_ITEM = createTag("elemental_saplings");
+        public static final Tags.IOptionalNamedTag<Item> ELEMENTAL_STONES_ITEM = createTag("elemental_stones");
 
         private static Tags.IOptionalNamedTag<Item> createTag(String name) {
             return ItemTags.createOptional(new ResourceLocation(InvigoratedDimensions.MOD_ID, name));

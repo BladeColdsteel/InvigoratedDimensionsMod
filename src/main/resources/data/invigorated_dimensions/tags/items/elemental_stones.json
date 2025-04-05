@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "invigorated_dimensions:electrically_charged_stone",
+    "invigorated_dimensions:watery_stone",
+    "minecraft:netherrack",
+    "minecraft:end_stone",
+    "invigorated_dimensions:grassy_stone",
+    "invigorated_dimensions:bugged_stone",
+    "invigorated_dimensions:darkened_stone",
+    "invigorated_dimensions:feyan_stone",
+    "invigorated_dimensions:tough_stone",
+    "invigorated_dimensions:grounded_stone",
+    "invigorated_dimensions:floating_stone",
+    "invigorated_dimensions:icey_stone",
+    "invigorated_dimensions:corrosive_stone",
+    "invigorated_dimensions:psychedelic_stone",
+    "invigorated_dimensions:rocky_stone",
+    "invigorated_dimensions:spooky_stone",
+    "invigorated_dimensions:metallic_stone"
+  ]
+}
