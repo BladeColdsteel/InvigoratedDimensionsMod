@@ -1,7 +1,4 @@
 {
-  "item.invigorated_dimensions.electric_highlands_activator": "Electric Highlands Activator",
-  "item.invigorated_dimensions.voltcryst": "Voltcryst",
-
   "block.invigorated_dimensions.electrically_charged_logs": "Electrically Charged Log",
   "block.invigorated_dimensions.stripped_electrically_charged_logs": "Stripped Electrically Charged Log",
   "block.invigorated_dimensions.electrically_charged_wood": "Electrically Charged Wood",
@@ -41,32 +38,43 @@
   "block.invigorated_dimensions.electrically_charged_fence": "Electrically Charged Fence",
   "block.invigorated_dimensions.electrically_charged_fence_gate": "Electrically Charged Fence Gate",
   "block.invigorated_dimensions.electrically_charged_sign": "Electrically Charged Sign",
+  "item.invigorated_dimensions.electric_highlands_activator": "Electric Highlands Activator",
+  "item.invigorated_dimensions.voltcryst": "Voltcryst",
 
   "block.invigorated_dimensions.watery_logs": "Watery Log",
   "block.invigorated_dimensions.watery_sapling": "Watery Sapling",
+  "block.invigorated_dimensions.watery_stone": "Watery Stone",
 
   "block.invigorated_dimensions.embered_logs": "Embered Log",
   "block.invigorated_dimensions.embered_sapling": "Embered Sapling",
+  "block.invigorated_dimensions.embered_stone": "Embered Stone",
 
   "block.invigorated_dimensions.draconic_logs": "Draconic Log",
   "block.invigorated_dimensions.draconic_sapling": "Draconic Sapling",
+  "block.invigorated_dimensions.draconic_stone": "Draconic Stone",
 
   "block.invigorated_dimensions.grassy_logs": "Grassy Log",
   "block.invigorated_dimensions.grassy_sapling": "Grassy Sapling",
+  "block.invigorated_dimensions.grassy_stone": "Grassy Stone",
 
   "block.invigorated_dimensions.bugged_logs": "Bugged Log",
   "block.invigorated_dimensions.bugged_sapling": "Bugged Sapling",
+  "block.invigorated_dimensions.bugged_stone": "Bugged Stone",
 
   "block.invigorated_dimensions.darkened_logs": "Darkened Log",
   "block.invigorated_dimensions.darkened_sapling": "Darkened Sapling",
+  "block.invigorated_dimensions.darkened_stone": "Darkened Stone",
 
   "block.invigorated_dimensions.feyan_logs": "Feyan Log",
   "block.invigorated_dimensions.feyan_sapling": "Feyan Sapling",
+  "block.invigorated_dimensions.feyan_stone": "Feyan Stone",
 
   "block.invigorated_dimensions.tough_logs": "Tough Log",
+  "block.invigorated_dimensions.tough_stone": "Tough Stone",
 
   "block.invigorated_dimensions.grounded_logs": "Grounded Log",
   "block.invigorated_dimensions.grounded_sapling": "Grounded Sapling",
+  "block.invigorated_dimensions.grounded_stone": "Grounded Stone",
 
   "block.invigorated_dimensions.floating_logs": "Floating Log",
   "block.invigorated_dimensions.floating_sapling": "Floating Sapling",
