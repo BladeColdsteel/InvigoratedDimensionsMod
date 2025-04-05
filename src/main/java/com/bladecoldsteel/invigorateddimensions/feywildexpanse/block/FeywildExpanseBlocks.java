@@ -25,6 +25,13 @@ public class FeywildExpanseBlocks {
             () -> new RotatedPillarBlock(AbstractBlock.Properties.copy(Blocks.JUNGLE_LOG)
                     .harvestTool(ToolType.AXE)));
 
+    public static final RegistryObject<Block> FEYAN_STONE = registerBlock("feyan_stone",
+            () -> new Block(AbstractBlock.Properties.copy(Blocks.STONE)
+                    .harvestLevel(1)
+                    .harvestTool(ToolType.PICKAXE)
+                    .requiresCorrectToolForDrops()
+                    .strength(3f)));
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
