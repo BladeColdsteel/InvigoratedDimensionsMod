@@ -32,6 +32,12 @@ public class GrassyKnollBlocks {
                     .harvestTool(ToolType.PICKAXE)
                     .requiresCorrectToolForDrops()
                     .strength(3f)));
+    public static final RegistryObject<Block> GRASSY_COBBLESTONE = registerBlock("grassy_cobblestone",
+            () -> new Block(AbstractBlock.Properties.copy(Blocks.COBBLESTONE)
+                    .harvestLevel(1)
+                    .requiresCorrectToolForDrops()
+                    .harvestTool(ToolType.PICKAXE)
+                    .strength(2f)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
