@@ -137,6 +137,7 @@ repositories {
         name = "Progwml6 maven"
         url = "https://dvs1.progwml6.com/files/maven/"
     }
+    mavenCentral()
 }
 
 dependencies {
@@ -144,6 +145,8 @@ dependencies {
     // that the dep is a ForgeGradle 'patcher' dependency. And it's patches will be applied.
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
     minecraft 'net.minecraftforge:forge:1.16.5-36.2.34'
+
+    implementation 'org.yaml:snakeyaml:1.33' //YAML
 
     implementation fg.deobf("curse.maven:pixelmon-389487:5209074") //Pixelmon
 
