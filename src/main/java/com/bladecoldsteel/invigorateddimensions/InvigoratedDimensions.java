@@ -6,6 +6,8 @@ import com.bladecoldsteel.invigorateddimensions.cavernouscove.item.CavernousCove
 import com.bladecoldsteel.invigorateddimensions.celestialrealm.block.HeavenlyRealmBlocks;
 import com.bladecoldsteel.invigorateddimensions.celestialrealm.block.HeavenlyRealmWoodTypes;
 import com.bladecoldsteel.invigorateddimensions.celestialrealm.item.HeavenlyRealmItems;
+import com.bladecoldsteel.invigorateddimensions.config.InvigoratedDimensionsConfig;
+import com.bladecoldsteel.invigorateddimensions.config.PixelmonConfigModifier;
 import com.bladecoldsteel.invigorateddimensions.corrosivefields.block.CorrosiveFieldsBlocks;
 import com.bladecoldsteel.invigorateddimensions.corrosivefields.block.CorrosiveFieldsWoodTypes;
 import com.bladecoldsteel.invigorateddimensions.corrosivefields.item.CorrosiveFieldsItems;
@@ -20,6 +22,8 @@ import com.bladecoldsteel.invigorateddimensions.dreamland.block.DreamlandWoodTyp
 import com.bladecoldsteel.invigorateddimensions.dreamland.item.DreamlandItems;
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.block.ElectricHighlandsBlocks;
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.block.ElectricHighlandsWoodTypes;
+import com.bladecoldsteel.invigorateddimensions.electrichighlands.entity.ElectricHighlandsEntityTypes;
+import com.bladecoldsteel.invigorateddimensions.electrichighlands.entity.render.ChargedCrawlerRender;
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.item.ElectricHighlandsItems;
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.tileentity.ElectricHighlandsTileEntities;
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.util.ElectricHighlandsSoundEvents;
@@ -70,6 +74,8 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.client.renderer.tileentity.SignTileEntityRenderer;
 import net.minecraft.item.AxeItem;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.GuiScreenEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
@@ -79,15 +85,20 @@ import net.minecraftforge.fml.ExtensionPoint;
 import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
+import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.*;
 import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.loading.FMLPaths;
 import net.minecraftforge.fml.network.FMLNetworkConstants;
 import net.minecraftforge.registries.DeferredRegister;
 import org.apache.commons.lang3.tuple.Pair;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import java.io.File;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(InvigoratedDimensions.MOD_ID)
@@ -115,11 +126,16 @@ public class InvigoratedDimensions
         UniversalBlocks.register(eventBus);
         UniversalItems.register(eventBus);
         CustomFeatures.register(eventBus);
+
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, InvigoratedDimensionsConfig.SPEC, "invigorated-dimensions-common.toml");
+        File configDir = FMLPaths.CONFIGDIR.get().toFile();
+        PixelmonConfigModifier.updatePixelmonConfig(configDir);
         //Electric
         ElectricHighlandsItems.register(eventBus);
         ElectricHighlandsBlocks.register(eventBus);
         ElectricHighlandsSoundEvents.register(eventBus);
         ElectricHighlandsTileEntities.register(eventBus);
+        ElectricHighlandsEntityTypes.register(eventBus);
         //Water
         WateryDepthsItems.register(eventBus);
         WateryDepthsBlocks.register(eventBus);
@@ -230,6 +246,7 @@ public class InvigoratedDimensions
         event.enqueueWork(() -> {
             //Base
             ModDimensions.register();
+            ModBiomesDatapack.toDictionary();
             //Electric
             ElectricFeatures.registerConfiguredFeatures();
             ElectricHighlandsStructures.registerStructures();
@@ -310,6 +327,8 @@ public class InvigoratedDimensions
 
         ClientRegistry.bindTileEntityRenderer(ElectricHighlandsTileEntities.SIGN_TILE_ENTITIES.get(),
                 SignTileEntityRenderer::new);
+
+        RenderingRegistry.registerEntityRenderingHandler(ElectricHighlandsEntityTypes.CHARGED_CRAWLER.get(), ChargedCrawlerRender::new);
 
         //Water
         RenderTypeLookup.setRenderLayer(WateryDepthsBlocks.WATERY_SAPLING.get(), RenderType.cutout());

@@ -6,6 +6,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.BiomeMaker;
+import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.common.BiomeManager;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -38,6 +39,28 @@ public class ModBiomesDatapack {
     private static RegistryKey<Biome> registerBiome(String name) {
         BIOMES.register(name, BiomeMaker::theVoidBiome);
         return RegistryKey.create(Registry.BIOME_REGISTRY, new ResourceLocation(InvigoratedDimensions.MOD_ID, name));
+    }
+
+    public static void toDictionary() {
+        BiomeDictionary.addTypes(ELECTRIC_RIFT, BiomeDictionary.Type.HOT, BiomeDictionary.Type.FOREST, BiomeDictionary.Type.CONIFEROUS, BiomeDictionary.Type.MAGICAL, BiomeDictionary.Type.OVERWORLD);
+        BiomeDictionary.addTypes(WATER_RIFT, BiomeDictionary.Type.WET, BiomeDictionary.Type.FOREST, BiomeDictionary.Type.PLAINS, BiomeDictionary.Type.WATER, BiomeDictionary.Type.SPARSE, BiomeDictionary.Type.MAGICAL, BiomeDictionary.Type.OVERWORLD);
+        BiomeDictionary.addTypes(FIRE_RIFT, BiomeDictionary.Type.HOT, BiomeDictionary.Type.FOREST, BiomeDictionary.Type.DENSE, BiomeDictionary.Type.HILLS, BiomeDictionary.Type.MAGICAL, BiomeDictionary.Type.OVERWORLD);
+        BiomeDictionary.addTypes(GRASS_RIFT, BiomeDictionary.Type.FOREST, BiomeDictionary.Type.DENSE, BiomeDictionary.Type.LUSH, BiomeDictionary.Type.MAGICAL, BiomeDictionary.Type.OVERWORLD);
+        BiomeDictionary.addTypes(ICE_RIFT, BiomeDictionary.Type.COLD, BiomeDictionary.Type.SPARSE, BiomeDictionary.Type.PLAINS, BiomeDictionary.Type.MAGICAL, BiomeDictionary.Type.OVERWORLD);
+        BiomeDictionary.addTypes(FIGHTING_RIFT, BiomeDictionary.Type.HOT, BiomeDictionary.Type.PLAINS, BiomeDictionary.Type.MAGICAL, BiomeDictionary.Type.OVERWORLD);
+        BiomeDictionary.addTypes(POISON_RIFT, BiomeDictionary.Type.HOT, BiomeDictionary.Type.FOREST, BiomeDictionary.Type.DENSE, BiomeDictionary.Type.SPOOKY, BiomeDictionary.Type.MAGICAL, BiomeDictionary.Type.OVERWORLD);
+        BiomeDictionary.addTypes(GROUND_RIFT, BiomeDictionary.Type.COLD, BiomeDictionary.Type.HILLS, BiomeDictionary.Type.MAGICAL, BiomeDictionary.Type.OVERWORLD);
+        BiomeDictionary.addTypes(FLYING_RIFT, BiomeDictionary.Type.COLD, BiomeDictionary.Type.MOUNTAIN, BiomeDictionary.Type.SPARSE, BiomeDictionary.Type.MAGICAL, BiomeDictionary.Type.OVERWORLD);
+        BiomeDictionary.addTypes(PSYCHIC_RIFT, BiomeDictionary.Type.COLD, BiomeDictionary.Type.FOREST, BiomeDictionary.Type.CONIFEROUS, BiomeDictionary.Type.MAGICAL, BiomeDictionary.Type.OVERWORLD);
+        BiomeDictionary.addTypes(BUG_RIFT, BiomeDictionary.Type.HOT, BiomeDictionary.Type.FOREST, BiomeDictionary.Type.CONIFEROUS, BiomeDictionary.Type.MAGICAL, BiomeDictionary.Type.OVERWORLD);
+        BiomeDictionary.addTypes(ROCK_RIFT, BiomeDictionary.Type.HOT, BiomeDictionary.Type.PLAINS, BiomeDictionary.Type.HILLS, BiomeDictionary.Type.MAGICAL, BiomeDictionary.Type.OVERWORLD);
+        BiomeDictionary.addTypes(GHOST_RIFT, BiomeDictionary.Type.COLD, BiomeDictionary.Type.FOREST, BiomeDictionary.Type.DENSE, BiomeDictionary.Type.SPOOKY, BiomeDictionary.Type.MAGICAL, BiomeDictionary.Type.OVERWORLD);
+        BiomeDictionary.addTypes(DRAGON_RIFT, BiomeDictionary.Type.COLD, BiomeDictionary.Type.FOREST, BiomeDictionary.Type.LUSH, BiomeDictionary.Type.MAGICAL, BiomeDictionary.Type.OVERWORLD);
+        BiomeDictionary.addTypes(DARK_RIFT, BiomeDictionary.Type.COLD, BiomeDictionary.Type.FOREST, BiomeDictionary.Type.DENSE, BiomeDictionary.Type.SPOOKY, BiomeDictionary.Type.MAGICAL, BiomeDictionary.Type.OVERWORLD);
+        BiomeDictionary.addTypes(STEEL_RIFT, BiomeDictionary.Type.HOT, BiomeDictionary.Type.FOREST, BiomeDictionary.Type.SPARSE, BiomeDictionary.Type.MOUNTAIN, BiomeDictionary.Type.MAGICAL, BiomeDictionary.Type.OVERWORLD);
+        BiomeDictionary.addTypes(FAIRY_RIFT, BiomeDictionary.Type.FOREST, BiomeDictionary.Type.SPARSE, BiomeDictionary.Type.MAGICAL, BiomeDictionary.Type.OVERWORLD);
+        BiomeDictionary.addTypes(ELECTRIC_HIGHLANDS, BiomeDictionary.Type.HOT, BiomeDictionary.Type.FOREST, BiomeDictionary.Type.CONIFEROUS, BiomeDictionary.Type.MAGICAL, BiomeDictionary.Type.OVERWORLD);
+        BiomeDictionary.addTypes(ELECTRIC_HIGHLANDS_FOREST, BiomeDictionary.Type.HOT, BiomeDictionary.Type.FOREST, BiomeDictionary.Type.CONIFEROUS, BiomeDictionary.Type.MAGICAL, BiomeDictionary.Type.OVERWORLD);
     }
 
     public static void register(IEventBus eventBus) {
