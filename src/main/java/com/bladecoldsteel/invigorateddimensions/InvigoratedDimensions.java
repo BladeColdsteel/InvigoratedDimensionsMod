@@ -22,6 +22,7 @@ import com.bladecoldsteel.invigorateddimensions.dreamland.block.DreamlandWoodTyp
 import com.bladecoldsteel.invigorateddimensions.dreamland.item.DreamlandItems;
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.block.ElectricHighlandsBlocks;
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.block.ElectricHighlandsWoodTypes;
+import com.bladecoldsteel.invigorateddimensions.electrichighlands.effects.ElectricHighlandsEffects;
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.entity.ElectricHighlandsEntityTypes;
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.entity.render.ChargedCrawlerRender;
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.item.ElectricHighlandsItems;
@@ -48,11 +49,15 @@ import com.bladecoldsteel.invigorateddimensions.insectoidparadisio.item.Insectoi
 import com.bladecoldsteel.invigorateddimensions.metallicmountains.block.MetallicMountainsBlocks;
 import com.bladecoldsteel.invigorateddimensions.metallicmountains.block.MetallicMountainsWoodTypes;
 import com.bladecoldsteel.invigorateddimensions.metallicmountains.item.MetallicMountainsItems;
+import com.bladecoldsteel.invigorateddimensions.network.InvigoratedDimensionsNetworkHandler;
 import com.bladecoldsteel.invigorateddimensions.terranata.block.TerraNataBlocks;
 import com.bladecoldsteel.invigorateddimensions.terranata.block.TerraNataWoodTypes;
 import com.bladecoldsteel.invigorateddimensions.terranata.item.TerraNataItems;
 import com.bladecoldsteel.invigorateddimensions.universal.block.UniversalBlocks;
 import com.bladecoldsteel.invigorateddimensions.universal.item.UniversalItems;
+import com.bladecoldsteel.invigorateddimensions.universal.screens.UniversalContainers;
+import com.bladecoldsteel.invigorateddimensions.universal.screens.custom.screens.EnergySinkScreen;
+import com.bladecoldsteel.invigorateddimensions.universal.tileentity.UniversalTileEntities;
 import com.bladecoldsteel.invigorateddimensions.valleydeath.block.ValleyDeathBlocks;
 import com.bladecoldsteel.invigorateddimensions.valleydeath.block.ValleyDeathWoodTypes;
 import com.bladecoldsteel.invigorateddimensions.valleydeath.item.ValleyDeathItems;
@@ -69,13 +74,12 @@ import com.bladecoldsteel.invigorateddimensions.world.gen.features.*;
 import com.google.common.collect.ImmutableMap;
 import net.minecraft.block.Block;
 import net.minecraft.block.WoodType;
+import net.minecraft.client.gui.ScreenManager;
 import net.minecraft.client.renderer.Atlases;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.client.renderer.tileentity.SignTileEntityRenderer;
 import net.minecraft.item.AxeItem;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.client.event.GuiScreenEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
@@ -125,6 +129,8 @@ public class InvigoratedDimensions
         ModPointsOfInterest.register(eventBus);
         UniversalBlocks.register(eventBus);
         UniversalItems.register(eventBus);
+        UniversalTileEntities.register(eventBus);
+        UniversalContainers.register(eventBus);
         CustomFeatures.register(eventBus);
 
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, InvigoratedDimensionsConfig.SPEC, "invigorated-dimensions-common.toml");
@@ -136,6 +142,7 @@ public class InvigoratedDimensions
         ElectricHighlandsSoundEvents.register(eventBus);
         ElectricHighlandsTileEntities.register(eventBus);
         ElectricHighlandsEntityTypes.register(eventBus);
+        ElectricHighlandsEffects.register(eventBus);
         //Water
         WateryDepthsItems.register(eventBus);
         WateryDepthsBlocks.register(eventBus);
@@ -242,6 +249,7 @@ public class InvigoratedDimensions
 
     private void setup(final FMLCommonSetupEvent event)
     {
+        InvigoratedDimensionsNetworkHandler.register();
 
         event.enqueueWork(() -> {
             //Base
@@ -315,6 +323,12 @@ public class InvigoratedDimensions
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {
+
+        //Screen Stuff
+        ScreenManager.register(
+                UniversalContainers.ENERGY_SINK_MENU.get(),
+                EnergySinkScreen::new
+        );
 
         //Universal
         RenderTypeLookup.setRenderLayer(UniversalBlocks.CRYSTALLIZED_LEAVES.get(), RenderType.cutout());

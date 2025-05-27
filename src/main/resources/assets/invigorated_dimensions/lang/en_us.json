@@ -1,11 +1,13 @@
 {
+  "block.invigorated_dimensions.crystallized_leaves": "Crystallized_Leaves",
+  "block.invigorated_dimensions.energy_sink": "Energy Sink",
+
   "block.invigorated_dimensions.electrically_charged_logs": "Electrically Charged Log",
   "block.invigorated_dimensions.stripped_electrically_charged_logs": "Stripped Electrically Charged Log",
   "block.invigorated_dimensions.electrically_charged_wood": "Electrically Charged Wood",
   "block.invigorated_dimensions.stripped_electrically_charged_wood": "Stripped Electrically Charged Wood",
   "block.invigorated_dimensions.electrically_charged_planks": "Electrically Charged Planks",
   "block.invigorated_dimensions.electrically_charged_sapling": "Electrically Charged Sapling",
-  "block.invigorated_dimensions.crystallized_leaves": "Crystallized_Leaves",
   "block.invigorated_dimensions.electric_highlands_portal": "Electric Highlands Portal",
   "block.invigorated_dimensions.electric_highlands_rift": "Electrically Charged Rift",
   "block.invigorated_dimensions.electrically_charged_stone": "Electrically Charged Stone",
@@ -41,6 +43,8 @@
   "item.invigorated_dimensions.electric_highlands_activator": "Electric Highlands Activator",
   "item.invigorated_dimensions.voltcryst": "Voltcryst",
   "entity.invigorated_dimensions.charged_crawler": "Charged Crawler",
+  "effect.invigorated_dimensions.charged": "Charged",
+  "effect.invigorated_dimensions.paralyzed": "Paralyzed",
 
   "block.invigorated_dimensions.watery_logs": "Watery Log",
   "block.invigorated_dimensions.watery_sapling": "Watery Sapling",
