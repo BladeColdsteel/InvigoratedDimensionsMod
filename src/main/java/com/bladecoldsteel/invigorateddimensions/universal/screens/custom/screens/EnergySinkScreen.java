@@ -1,16 +1,13 @@
 package com.bladecoldsteel.invigorateddimensions.universal.screens.custom.screens;
 
-import com.bladecoldsteel.invigorateddimensions.network.InvigoratedDimensionsNetworkHandler;
-import com.bladecoldsteel.invigorateddimensions.network.packets.RotateBlockPacket;
+import com.bladecoldsteel.invigorateddimensions.universal.network.InvigoratedDimensionsNetworkHandler;
+import com.bladecoldsteel.invigorateddimensions.universal.network.packets.RotateBlockPacket;
 import com.bladecoldsteel.invigorateddimensions.universal.screens.custom.containers.EnergySinkContainer;
 import com.bladecoldsteel.invigorateddimensions.universal.tileentity.custom.EnergySinkTileEntity;
 import com.mojang.blaze3d.matrix.MatrixStack;
-import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.gui.screen.inventory.ContainerScreen;
 import net.minecraft.client.gui.widget.button.Button;
-import net.minecraft.client.renderer.RenderHelper;
 import net.minecraft.entity.player.PlayerInventory;
-import net.minecraft.inventory.container.Slot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.ITextComponent;
