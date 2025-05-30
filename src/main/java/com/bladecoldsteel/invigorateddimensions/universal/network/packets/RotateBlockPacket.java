@@ -1,4 +1,4 @@
-package com.bladecoldsteel.invigorateddimensions.network.packets;
+package com.bladecoldsteel.invigorateddimensions.universal.network.packets;
 
 import com.bladecoldsteel.invigorateddimensions.universal.block.custom.EnergySinkBlock;
 import net.minecraft.block.BlockState;

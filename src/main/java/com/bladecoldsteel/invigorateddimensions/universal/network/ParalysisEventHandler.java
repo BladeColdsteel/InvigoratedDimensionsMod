@@ -1,4 +1,4 @@
-package com.bladecoldsteel.invigorateddimensions.network;
+package com.bladecoldsteel.invigorateddimensions.universal.network;
 
 import com.bladecoldsteel.invigorateddimensions.InvigoratedDimensions;
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.effects.ElectricHighlandsEffects;

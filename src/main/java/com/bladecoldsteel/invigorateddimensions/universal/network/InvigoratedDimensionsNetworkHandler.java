@@ -1,7 +1,7 @@
-package com.bladecoldsteel.invigorateddimensions.network;
+package com.bladecoldsteel.invigorateddimensions.universal.network;
 
 import com.bladecoldsteel.invigorateddimensions.InvigoratedDimensions;
-import com.bladecoldsteel.invigorateddimensions.network.packets.RotateBlockPacket;
+import com.bladecoldsteel.invigorateddimensions.universal.network.packets.RotateBlockPacket;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.network.NetworkRegistry;
 import net.minecraftforge.fml.network.simple.SimpleChannel;
