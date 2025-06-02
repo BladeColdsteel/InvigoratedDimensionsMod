@@ -49,7 +49,8 @@ import com.bladecoldsteel.invigorateddimensions.insectoidparadisio.item.Insectoi
 import com.bladecoldsteel.invigorateddimensions.metallicmountains.block.MetallicMountainsBlocks;
 import com.bladecoldsteel.invigorateddimensions.metallicmountains.block.MetallicMountainsWoodTypes;
 import com.bladecoldsteel.invigorateddimensions.metallicmountains.item.MetallicMountainsItems;
-import com.bladecoldsteel.invigorateddimensions.network.InvigoratedDimensionsNetworkHandler;
+import com.bladecoldsteel.invigorateddimensions.universal.network.EssenceDropHandler;
+import com.bladecoldsteel.invigorateddimensions.universal.network.InvigoratedDimensionsNetworkHandler;
 import com.bladecoldsteel.invigorateddimensions.terranata.block.TerraNataBlocks;
 import com.bladecoldsteel.invigorateddimensions.terranata.block.TerraNataWoodTypes;
 import com.bladecoldsteel.invigorateddimensions.terranata.item.TerraNataItems;
@@ -324,7 +325,7 @@ public class InvigoratedDimensions
 
     private void doClientStuff(final FMLClientSetupEvent event) {
 
-        //Screen Stuff
+        //Screen Stuff-
         ScreenManager.register(
                 UniversalContainers.ENERGY_SINK_MENU.get(),
                 EnergySinkScreen::new
