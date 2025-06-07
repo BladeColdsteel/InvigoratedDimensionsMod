@@ -16,7 +16,7 @@ apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 apply plugin: 'org.spongepowered.mixin'
 
-version = '1.16.5-0.2.0'
+version = '1.16.5-0.1.4'
 group = 'com.bladecoldsteel.invigorateddimensions' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'invigorateddimensions'
 
@@ -24,6 +24,11 @@ java.toolchain.languageVersion = JavaLanguageVersion.of(8) // Mojang ships Java 
 
 mixin {
     add sourceSets.main, "invigorated_dimensions.refmap.json"
+}
+
+configurations {
+    embed
+    implementation.extendsFrom(embed)
 }
 
 println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version') + '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
@@ -126,6 +131,7 @@ minecraft {
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
+    maven { url = 'https://maven.minecraftforge.net' }
     maven {
         url "https://cursemaven.com"
         content {
@@ -146,7 +152,7 @@ dependencies {
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
     minecraft 'net.minecraftforge:forge:1.16.5-36.2.34'
 
-    implementation 'org.yaml:snakeyaml:1.33' //YAML
+    embed 'org.yaml:snakeyaml:1.33' //YAML
 
     implementation fg.deobf("curse.maven:pixelmon-389487:5209074") //Pixelmon
 
@@ -179,6 +185,8 @@ dependencies {
 
 // Example for how to get properties into the manifest for reading by the runtime..
 jar {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+
     manifest {
         attributes([
             "Specification-Title": "invigorated_dimensions",
@@ -190,6 +198,11 @@ jar {
             "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }
+    from {
+        configurations.embed.collect { it.isDirectory() ? it : zipTree(it)}
+    }
+
+    exclude 'META-INF/*.SF', 'META-INF/*.DSA', 'META-INF/*.RSA'
 }
 
 // Example configuration to allow publishing using the maven-publish task
