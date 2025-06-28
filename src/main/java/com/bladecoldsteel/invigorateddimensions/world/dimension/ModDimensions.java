@@ -23,6 +23,9 @@ public class ModDimensions {
     public static final RegistryKey<DimensionType> VALLEY_OF_DEATH_TYPE = RegistryKey.create(Registry.DIMENSION_TYPE_REGISTRY, new ResourceLocation(InvigoratedDimensions.MOD_ID, "valley_of_death"));
     public static final RegistryKey<World> VALLEY_OF_DEATH = RegistryKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation(InvigoratedDimensions.MOD_ID, "valley_of_death"));
 
+    public static final RegistryKey<DimensionType> FEYWILD_EXPANSE_TYPE = RegistryKey.create(Registry.DIMENSION_TYPE_REGISTRY, new ResourceLocation(InvigoratedDimensions.MOD_ID, "feywild_expanse"));
+    public static final RegistryKey<World> FEYWILD_EXPANSE = RegistryKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation(InvigoratedDimensions.MOD_ID, "feywild_expanse"));
+
     public static void register() {
 
         System.out.println("Registering Chunk Generator and Biome Provider...");
