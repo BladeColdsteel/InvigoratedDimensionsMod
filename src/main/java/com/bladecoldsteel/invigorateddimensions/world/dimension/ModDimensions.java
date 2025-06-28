@@ -17,6 +17,9 @@ public class ModDimensions {
     public static final RegistryKey<DimensionType> GRASSY_KNOLL_TYPE = RegistryKey.create(Registry.DIMENSION_TYPE_REGISTRY, new ResourceLocation(InvigoratedDimensions.MOD_ID, "grassy_knoll"));
     public static final RegistryKey<World> GRASSY_KNOLL = RegistryKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation(InvigoratedDimensions.MOD_ID, "grassy_knoll"));
 
+    public static final RegistryKey<DimensionType> INSECTIOD_PARADISIO_TYPE = RegistryKey.create(Registry.DIMENSION_TYPE_REGISTRY, new ResourceLocation(InvigoratedDimensions.MOD_ID, "insectoid_paradisio"));
+    public static final RegistryKey<World> INSECTIOD_PARADISIO = RegistryKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation(InvigoratedDimensions.MOD_ID, "insectoid_paradisio"));
+
     public static void register() {
 
         System.out.println("Registering Chunk Generator and Biome Provider...");

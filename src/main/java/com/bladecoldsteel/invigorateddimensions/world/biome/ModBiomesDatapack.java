@@ -39,6 +39,8 @@ public class ModBiomesDatapack {
     public static RegistryKey<Biome> WATERY_DEPTHS_FOREST = registerBiome("watery_depths_forest");
     public static RegistryKey<Biome> GRASSY_KNOLL = registerBiome("grassy_knoll");
     public static RegistryKey<Biome> GRASSY_KNOLL_FOREST = registerBiome("grassy_knoll_forest");
+    public static RegistryKey<Biome> INSECTIOD_PARADISIO = registerBiome("insectoid_paradisio");
+    public static RegistryKey<Biome> INSECTIOD_PARADISIO_FOREST = registerBiome("insectoid_paradisio_forest");
 
     private static RegistryKey<Biome> registerBiome(String name) {
         BIOMES.register(name, BiomeMaker::theVoidBiome);
@@ -69,6 +71,8 @@ public class ModBiomesDatapack {
         BiomeDictionary.addTypes(WATERY_DEPTHS_FOREST, BiomeDictionary.Type.COLD, BiomeDictionary.Type.FOREST, BiomeDictionary.Type.WET, BiomeDictionary.Type.MAGICAL);
         BiomeDictionary.addTypes(GRASSY_KNOLL, BiomeDictionary.Type.LUSH, BiomeDictionary.Type.DENSE, BiomeDictionary.Type.MAGICAL);
         BiomeDictionary.addTypes(GRASSY_KNOLL_FOREST, BiomeDictionary.Type.LUSH, BiomeDictionary.Type.FOREST, BiomeDictionary.Type.MAGICAL);
+        BiomeDictionary.addTypes(INSECTIOD_PARADISIO, BiomeDictionary.Type.HOT, BiomeDictionary.Type.MAGICAL);
+        BiomeDictionary.addTypes(INSECTIOD_PARADISIO_FOREST, BiomeDictionary.Type.HOT, BiomeDictionary.Type.DENSE, BiomeDictionary.Type.FOREST, BiomeDictionary.Type.MAGICAL);
     }
 
     public static void register(IEventBus eventBus) {
@@ -97,5 +101,7 @@ public class ModBiomesDatapack {
         BiomeManager.addBiome(BiomeManager.BiomeType.COOL, new BiomeManager.BiomeEntry(WATERY_DEPTHS_FOREST, 0));
         BiomeManager.addBiome(BiomeManager.BiomeType.COOL, new BiomeManager.BiomeEntry(GRASSY_KNOLL, 0));
         BiomeManager.addBiome(BiomeManager.BiomeType.COOL, new BiomeManager.BiomeEntry(GRASSY_KNOLL_FOREST, 0));
+        BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(INSECTIOD_PARADISIO, 0));
+        BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(INSECTIOD_PARADISIO_FOREST, 0));
     }
 }
