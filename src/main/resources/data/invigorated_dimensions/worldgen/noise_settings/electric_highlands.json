@@ -22,7 +22,7 @@
       "xz_scale": 2,
       "y_scale": 1,
       "xz_factor": 8,
-      "y_factor": 10
+      "y_factor": 80
     },
     "bottom_slide": {
       "target": -30,
@@ -30,7 +30,7 @@
       "offset": 0
     },
     "top_slide": {
-      "target": -100,
+      "target": -300,
       "size": 8,
       "offset": -4
     }
