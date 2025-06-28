@@ -49,7 +49,7 @@ import com.bladecoldsteel.invigorateddimensions.insectoidparadisio.item.Insectoi
 import com.bladecoldsteel.invigorateddimensions.metallicmountains.block.MetallicMountainsBlocks;
 import com.bladecoldsteel.invigorateddimensions.metallicmountains.block.MetallicMountainsWoodTypes;
 import com.bladecoldsteel.invigorateddimensions.metallicmountains.item.MetallicMountainsItems;
-import com.bladecoldsteel.invigorateddimensions.universal.network.EssenceDropHandler;
+import com.bladecoldsteel.invigorateddimensions.universal.entities.MobSpawnPlacements;
 import com.bladecoldsteel.invigorateddimensions.universal.network.InvigoratedDimensionsNetworkHandler;
 import com.bladecoldsteel.invigorateddimensions.terranata.block.TerraNataBlocks;
 import com.bladecoldsteel.invigorateddimensions.terranata.block.TerraNataWoodTypes;
@@ -74,13 +74,17 @@ import com.bladecoldsteel.invigorateddimensions.world.dimension.ModDimensions;
 import com.bladecoldsteel.invigorateddimensions.world.gen.features.*;
 import com.google.common.collect.ImmutableMap;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
 import net.minecraft.block.WoodType;
 import net.minecraft.client.gui.ScreenManager;
 import net.minecraft.client.renderer.Atlases;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.client.renderer.tileentity.SignTileEntityRenderer;
+import net.minecraft.entity.EntitySpawnPlacementRegistry;
 import net.minecraft.item.AxeItem;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.gen.Heightmap;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
@@ -260,6 +264,7 @@ public class InvigoratedDimensions
             ElectricFeatures.registerConfiguredFeatures();
             ElectricHighlandsStructures.registerStructures();
             ElectricHighlandsStructures.registerConfiguredStructures();
+            MobSpawnPlacements.registerOnGroundSolidSpawn(ElectricHighlandsEntityTypes.CHARGED_CRAWLER.get(), 7);
             //Water
             WaterFeatures.registerConfiguredFeatures();
             //Fire

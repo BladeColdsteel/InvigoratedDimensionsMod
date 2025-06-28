@@ -2,7 +2,7 @@
   "type": {
     "name": "invigorated_dimensions:electric_highlands",
     "ultrawarm": false,
-    "natural": false,
+    "natural": true,
     "piglin_safe": false,
     "respawn_anchor_works": false,
     "bed_works": false,

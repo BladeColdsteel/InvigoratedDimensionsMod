@@ -16,7 +16,7 @@ public class ElectricHighlandsEntityTypes {
     public static final RegistryObject<EntityType<ChargedCrawlerEntity>> CHARGED_CRAWLER =
             ENTITY_TYPES.register("charged_crawler",
                     () -> EntityType.Builder.of(ChargedCrawlerEntity::new,
-                                EntityClassification.CREATURE).sized(1f, 1f)
+                                EntityClassification.MONSTER).sized(1f, 1f)
                             .build(new ResourceLocation(InvigoratedDimensions.MOD_ID, "charged_crawler").toString()));
 
     public static void register(IEventBus eventBus){
