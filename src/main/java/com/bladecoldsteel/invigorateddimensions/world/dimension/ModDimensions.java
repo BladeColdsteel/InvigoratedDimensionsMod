@@ -11,6 +11,9 @@ public class ModDimensions {
     public static final RegistryKey<DimensionType> ELECTRIC_HIGHLANDS_TYPE = RegistryKey.create(Registry.DIMENSION_TYPE_REGISTRY, new ResourceLocation(InvigoratedDimensions.MOD_ID, "electric_highlands"));
     public static final RegistryKey<World> ELECTRIC_HIGHLANDS = RegistryKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation(InvigoratedDimensions.MOD_ID, "electric_highlands"));
 
+    public static final RegistryKey<DimensionType> WATERY_DEPTHS_TYPE = RegistryKey.create(Registry.DIMENSION_TYPE_REGISTRY, new ResourceLocation(InvigoratedDimensions.MOD_ID, "watery_depths"));
+    public static final RegistryKey<World> WATERY_DEPTHS = RegistryKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation(InvigoratedDimensions.MOD_ID, "watery_depths"));
+
     public static void register() {
 
         System.out.println("Registering Chunk Generator and Biome Provider...");

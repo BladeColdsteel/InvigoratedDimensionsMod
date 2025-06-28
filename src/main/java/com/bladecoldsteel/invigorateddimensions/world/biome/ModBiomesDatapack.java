@@ -35,6 +35,8 @@ public class ModBiomesDatapack {
     public static RegistryKey<Biome> FAIRY_RIFT = registerBiome("fairy_rift");
     public static RegistryKey<Biome> ELECTRIC_HIGHLANDS = registerBiome("electric_highlands");
     public static RegistryKey<Biome> ELECTRIC_HIGHLANDS_FOREST = registerBiome("electric_highlands_forest");
+    public static RegistryKey<Biome> WATERY_DEPTHS = registerBiome("watery_depths");
+    public static RegistryKey<Biome> WATERY_DEPTHS_FOREST = registerBiome("watery_depths_forest");
 
     private static RegistryKey<Biome> registerBiome(String name) {
         BIOMES.register(name, BiomeMaker::theVoidBiome);
@@ -59,8 +61,10 @@ public class ModBiomesDatapack {
         BiomeDictionary.addTypes(DARK_RIFT, BiomeDictionary.Type.COLD, BiomeDictionary.Type.FOREST, BiomeDictionary.Type.DENSE, BiomeDictionary.Type.SPOOKY, BiomeDictionary.Type.MAGICAL, BiomeDictionary.Type.OVERWORLD);
         BiomeDictionary.addTypes(STEEL_RIFT, BiomeDictionary.Type.HOT, BiomeDictionary.Type.FOREST, BiomeDictionary.Type.SPARSE, BiomeDictionary.Type.MOUNTAIN, BiomeDictionary.Type.MAGICAL, BiomeDictionary.Type.OVERWORLD);
         BiomeDictionary.addTypes(FAIRY_RIFT, BiomeDictionary.Type.FOREST, BiomeDictionary.Type.SPARSE, BiomeDictionary.Type.MAGICAL, BiomeDictionary.Type.OVERWORLD);
-        BiomeDictionary.addTypes(ELECTRIC_HIGHLANDS, BiomeDictionary.Type.HOT, BiomeDictionary.Type.FOREST, BiomeDictionary.Type.CONIFEROUS, BiomeDictionary.Type.MAGICAL, BiomeDictionary.Type.OVERWORLD);
-        BiomeDictionary.addTypes(ELECTRIC_HIGHLANDS_FOREST, BiomeDictionary.Type.HOT, BiomeDictionary.Type.FOREST, BiomeDictionary.Type.CONIFEROUS, BiomeDictionary.Type.MAGICAL, BiomeDictionary.Type.OVERWORLD);
+        BiomeDictionary.addTypes(ELECTRIC_HIGHLANDS, BiomeDictionary.Type.HOT, BiomeDictionary.Type.FOREST, BiomeDictionary.Type.CONIFEROUS, BiomeDictionary.Type.MAGICAL);
+        BiomeDictionary.addTypes(ELECTRIC_HIGHLANDS_FOREST, BiomeDictionary.Type.HOT, BiomeDictionary.Type.FOREST, BiomeDictionary.Type.CONIFEROUS, BiomeDictionary.Type.MAGICAL);
+        BiomeDictionary.addTypes(WATERY_DEPTHS, BiomeDictionary.Type.COLD, BiomeDictionary.Type.OCEAN, BiomeDictionary.Type.WATER, BiomeDictionary.Type.MAGICAL);
+        BiomeDictionary.addTypes(WATERY_DEPTHS_FOREST, BiomeDictionary.Type.COLD, BiomeDictionary.Type.FOREST, BiomeDictionary.Type.WET, BiomeDictionary.Type.MAGICAL);
     }
 
     public static void register(IEventBus eventBus) {
@@ -85,5 +89,7 @@ public class ModBiomesDatapack {
         BiomeManager.addBiome(BiomeManager.BiomeType.COOL, new BiomeManager.BiomeEntry(FAIRY_RIFT, 15));
         BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(ELECTRIC_HIGHLANDS, 0));
         BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(ELECTRIC_HIGHLANDS_FOREST, 0));
+        BiomeManager.addBiome(BiomeManager.BiomeType.COOL, new BiomeManager.BiomeEntry(WATERY_DEPTHS, 0));
+        BiomeManager.addBiome(BiomeManager.BiomeType.COOL, new BiomeManager.BiomeEntry(WATERY_DEPTHS_FOREST, 0));
     }
 }
