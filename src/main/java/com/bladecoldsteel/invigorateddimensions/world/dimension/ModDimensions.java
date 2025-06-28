@@ -20,6 +20,9 @@ public class ModDimensions {
     public static final RegistryKey<DimensionType> INSECTIOD_PARADISIO_TYPE = RegistryKey.create(Registry.DIMENSION_TYPE_REGISTRY, new ResourceLocation(InvigoratedDimensions.MOD_ID, "insectoid_paradisio"));
     public static final RegistryKey<World> INSECTIOD_PARADISIO = RegistryKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation(InvigoratedDimensions.MOD_ID, "insectoid_paradisio"));
 
+    public static final RegistryKey<DimensionType> VALLEY_OF_DEATH_TYPE = RegistryKey.create(Registry.DIMENSION_TYPE_REGISTRY, new ResourceLocation(InvigoratedDimensions.MOD_ID, "valley_of_death"));
+    public static final RegistryKey<World> VALLEY_OF_DEATH = RegistryKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation(InvigoratedDimensions.MOD_ID, "valley_of_death"));
+
     public static void register() {
 
         System.out.println("Registering Chunk Generator and Biome Provider...");

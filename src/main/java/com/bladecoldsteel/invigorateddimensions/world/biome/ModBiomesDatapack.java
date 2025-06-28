@@ -41,6 +41,8 @@ public class ModBiomesDatapack {
     public static RegistryKey<Biome> GRASSY_KNOLL_FOREST = registerBiome("grassy_knoll_forest");
     public static RegistryKey<Biome> INSECTIOD_PARADISIO = registerBiome("insectoid_paradisio");
     public static RegistryKey<Biome> INSECTIOD_PARADISIO_FOREST = registerBiome("insectoid_paradisio_forest");
+    public static RegistryKey<Biome> VALLEY_OF_DEATH = registerBiome("valley_of_death");
+    public static RegistryKey<Biome> VALLEY_OF_DEATH_FOREST = registerBiome("valley_of_death_forest");
 
     private static RegistryKey<Biome> registerBiome(String name) {
         BIOMES.register(name, BiomeMaker::theVoidBiome);
@@ -73,6 +75,8 @@ public class ModBiomesDatapack {
         BiomeDictionary.addTypes(GRASSY_KNOLL_FOREST, BiomeDictionary.Type.LUSH, BiomeDictionary.Type.FOREST, BiomeDictionary.Type.MAGICAL);
         BiomeDictionary.addTypes(INSECTIOD_PARADISIO, BiomeDictionary.Type.HOT, BiomeDictionary.Type.MAGICAL);
         BiomeDictionary.addTypes(INSECTIOD_PARADISIO_FOREST, BiomeDictionary.Type.HOT, BiomeDictionary.Type.DENSE, BiomeDictionary.Type.FOREST, BiomeDictionary.Type.MAGICAL);
+        BiomeDictionary.addTypes(VALLEY_OF_DEATH, BiomeDictionary.Type.COLD, BiomeDictionary.Type.SPOOKY, BiomeDictionary.Type.MAGICAL);
+        BiomeDictionary.addTypes(VALLEY_OF_DEATH_FOREST, BiomeDictionary.Type.COLD, BiomeDictionary.Type.SPOOKY, BiomeDictionary.Type.DENSE, BiomeDictionary.Type.FOREST, BiomeDictionary.Type.MAGICAL);
     }
 
     public static void register(IEventBus eventBus) {
@@ -103,5 +107,7 @@ public class ModBiomesDatapack {
         BiomeManager.addBiome(BiomeManager.BiomeType.COOL, new BiomeManager.BiomeEntry(GRASSY_KNOLL_FOREST, 0));
         BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(INSECTIOD_PARADISIO, 0));
         BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(INSECTIOD_PARADISIO_FOREST, 0));
+        BiomeManager.addBiome(BiomeManager.BiomeType.ICY, new BiomeManager.BiomeEntry(VALLEY_OF_DEATH, 0));
+        BiomeManager.addBiome(BiomeManager.BiomeType.ICY, new BiomeManager.BiomeEntry(VALLEY_OF_DEATH_FOREST, 0));
     }
 }
