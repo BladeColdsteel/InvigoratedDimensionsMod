@@ -37,6 +37,8 @@ public class ModBiomesDatapack {
     public static RegistryKey<Biome> ELECTRIC_HIGHLANDS_FOREST = registerBiome("electric_highlands_forest");
     public static RegistryKey<Biome> WATERY_DEPTHS = registerBiome("watery_depths");
     public static RegistryKey<Biome> WATERY_DEPTHS_FOREST = registerBiome("watery_depths_forest");
+    public static RegistryKey<Biome> GRASSY_KNOLL = registerBiome("grassy_knoll");
+    public static RegistryKey<Biome> GRASSY_KNOLL_FOREST = registerBiome("grassy_knoll_forest");
 
     private static RegistryKey<Biome> registerBiome(String name) {
         BIOMES.register(name, BiomeMaker::theVoidBiome);
@@ -65,6 +67,8 @@ public class ModBiomesDatapack {
         BiomeDictionary.addTypes(ELECTRIC_HIGHLANDS_FOREST, BiomeDictionary.Type.HOT, BiomeDictionary.Type.FOREST, BiomeDictionary.Type.CONIFEROUS, BiomeDictionary.Type.MAGICAL);
         BiomeDictionary.addTypes(WATERY_DEPTHS, BiomeDictionary.Type.COLD, BiomeDictionary.Type.OCEAN, BiomeDictionary.Type.WATER, BiomeDictionary.Type.MAGICAL);
         BiomeDictionary.addTypes(WATERY_DEPTHS_FOREST, BiomeDictionary.Type.COLD, BiomeDictionary.Type.FOREST, BiomeDictionary.Type.WET, BiomeDictionary.Type.MAGICAL);
+        BiomeDictionary.addTypes(GRASSY_KNOLL, BiomeDictionary.Type.LUSH, BiomeDictionary.Type.DENSE, BiomeDictionary.Type.MAGICAL);
+        BiomeDictionary.addTypes(GRASSY_KNOLL_FOREST, BiomeDictionary.Type.LUSH, BiomeDictionary.Type.FOREST, BiomeDictionary.Type.MAGICAL);
     }
 
     public static void register(IEventBus eventBus) {
@@ -91,5 +95,7 @@ public class ModBiomesDatapack {
         BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(ELECTRIC_HIGHLANDS_FOREST, 0));
         BiomeManager.addBiome(BiomeManager.BiomeType.COOL, new BiomeManager.BiomeEntry(WATERY_DEPTHS, 0));
         BiomeManager.addBiome(BiomeManager.BiomeType.COOL, new BiomeManager.BiomeEntry(WATERY_DEPTHS_FOREST, 0));
+        BiomeManager.addBiome(BiomeManager.BiomeType.COOL, new BiomeManager.BiomeEntry(GRASSY_KNOLL, 0));
+        BiomeManager.addBiome(BiomeManager.BiomeType.COOL, new BiomeManager.BiomeEntry(GRASSY_KNOLL_FOREST, 0));
     }
 }
