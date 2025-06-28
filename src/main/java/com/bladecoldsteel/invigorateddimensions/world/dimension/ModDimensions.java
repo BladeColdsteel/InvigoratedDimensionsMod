@@ -26,6 +26,9 @@ public class ModDimensions {
     public static final RegistryKey<DimensionType> FEYWILD_EXPANSE_TYPE = RegistryKey.create(Registry.DIMENSION_TYPE_REGISTRY, new ResourceLocation(InvigoratedDimensions.MOD_ID, "feywild_expanse"));
     public static final RegistryKey<World> FEYWILD_EXPANSE = RegistryKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation(InvigoratedDimensions.MOD_ID, "feywild_expanse"));
 
+    public static final RegistryKey<DimensionType> INFINITE_DUNGEON_TYPE = RegistryKey.create(Registry.DIMENSION_TYPE_REGISTRY, new ResourceLocation(InvigoratedDimensions.MOD_ID, "infinite_dungeon"));
+    public static final RegistryKey<World> INFINITE_DUNGEON = RegistryKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation(InvigoratedDimensions.MOD_ID, "infinite_dungeon"));
+
     public static void register() {
 
         System.out.println("Registering Chunk Generator and Biome Provider...");

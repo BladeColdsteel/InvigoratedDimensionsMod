@@ -45,6 +45,7 @@ public class ModBiomesDatapack {
     public static RegistryKey<Biome> VALLEY_OF_DEATH_FOREST = registerBiome("valley_of_death_forest");
     public static RegistryKey<Biome> FEYWILD_EXPANSE = registerBiome("feywild_expanse");
     public static RegistryKey<Biome> FEYWILD_EXPANSE_FOREST = registerBiome("feywild_expanse_forest");
+    public static RegistryKey<Biome> INFINITE_DUNGEON = registerBiome("infinite_dungeon");
 
     private static RegistryKey<Biome> registerBiome(String name) {
         BIOMES.register(name, BiomeMaker::theVoidBiome);
@@ -81,6 +82,7 @@ public class ModBiomesDatapack {
         BiomeDictionary.addTypes(VALLEY_OF_DEATH_FOREST, BiomeDictionary.Type.COLD, BiomeDictionary.Type.SPOOKY, BiomeDictionary.Type.DENSE, BiomeDictionary.Type.FOREST, BiomeDictionary.Type.MAGICAL);
         BiomeDictionary.addTypes(FEYWILD_EXPANSE, BiomeDictionary.Type.COLD, BiomeDictionary.Type.MAGICAL);
         BiomeDictionary.addTypes(FEYWILD_EXPANSE_FOREST, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DENSE, BiomeDictionary.Type.FOREST, BiomeDictionary.Type.MAGICAL);
+        BiomeDictionary.addTypes(INFINITE_DUNGEON, BiomeDictionary.Type.COLD, BiomeDictionary.Type.MAGICAL);
     }
 
     public static void register(IEventBus eventBus) {
@@ -115,5 +117,6 @@ public class ModBiomesDatapack {
         BiomeManager.addBiome(BiomeManager.BiomeType.ICY, new BiomeManager.BiomeEntry(VALLEY_OF_DEATH_FOREST, 0));
         BiomeManager.addBiome(BiomeManager.BiomeType.COOL, new BiomeManager.BiomeEntry(FEYWILD_EXPANSE, 0));
         BiomeManager.addBiome(BiomeManager.BiomeType.COOL, new BiomeManager.BiomeEntry(FEYWILD_EXPANSE_FOREST, 0));
+        BiomeManager.addBiome(BiomeManager.BiomeType.COOL, new BiomeManager.BiomeEntry(INFINITE_DUNGEON, 0));
     }
 }
