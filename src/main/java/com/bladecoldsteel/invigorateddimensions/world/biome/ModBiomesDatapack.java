@@ -56,6 +56,8 @@ public class ModBiomesDatapack {
     public static RegistryKey<Biome> CORROSIVE_FIELDS_FOREST = registerBiome("corrosive_fields_forest");
     public static RegistryKey<Biome> DREAMLAND = registerBiome("dreamland");
     public static RegistryKey<Biome> DREAMLAND_FOREST = registerBiome("dreamland_forest");
+    public static RegistryKey<Biome> CAVERNOUS_COVE = registerBiome("cavernous_cove");
+    public static RegistryKey<Biome> CAVERNOUS_COVE_FOREST = registerBiome("cavernous_cove_forest");
 
     private static RegistryKey<Biome> registerBiome(String name) {
         BIOMES.register(name, BiomeMaker::theVoidBiome);
@@ -103,6 +105,8 @@ public class ModBiomesDatapack {
         BiomeDictionary.addTypes(CORROSIVE_FIELDS_FOREST, BiomeDictionary.Type.HOT, BiomeDictionary.Type.SPOOKY, BiomeDictionary.Type.FOREST, BiomeDictionary.Type.MAGICAL);
         BiomeDictionary.addTypes(DREAMLAND, BiomeDictionary.Type.COLD, BiomeDictionary.Type.SPARSE, BiomeDictionary.Type.MAGICAL);
         BiomeDictionary.addTypes(DREAMLAND_FOREST, BiomeDictionary.Type.COLD, BiomeDictionary.Type.CONIFEROUS, BiomeDictionary.Type.FOREST, BiomeDictionary.Type.MAGICAL);
+        BiomeDictionary.addTypes(CAVERNOUS_COVE, BiomeDictionary.Type.HOT, BiomeDictionary.Type.SPARSE, BiomeDictionary.Type.PLAINS, BiomeDictionary.Type.MAGICAL);
+        BiomeDictionary.addTypes(CAVERNOUS_COVE_FOREST, BiomeDictionary.Type.HOT, BiomeDictionary.Type.CONIFEROUS, BiomeDictionary.Type.FOREST, BiomeDictionary.Type.MAGICAL);
     }
 
     public static void register(IEventBus eventBus) {
@@ -148,5 +152,7 @@ public class ModBiomesDatapack {
         BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(CORROSIVE_FIELDS_FOREST, 0));
         BiomeManager.addBiome(BiomeManager.BiomeType.COOL, new BiomeManager.BiomeEntry(DREAMLAND, 0));
         BiomeManager.addBiome(BiomeManager.BiomeType.COOL, new BiomeManager.BiomeEntry(DREAMLAND_FOREST, 0));
+        BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(CAVERNOUS_COVE, 0));
+        BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(CAVERNOUS_COVE_FOREST, 0));
     }
 }

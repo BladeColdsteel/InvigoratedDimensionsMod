@@ -32,6 +32,8 @@ public class ModDimensions {
     public static final RegistryKey<World> CORROSIVE_FIELDS = RegistryKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation(InvigoratedDimensions.MOD_ID, "corrosive_fields"));
     public static final RegistryKey<DimensionType> DREAMLAND_TYPE = RegistryKey.create(Registry.DIMENSION_TYPE_REGISTRY, new ResourceLocation(InvigoratedDimensions.MOD_ID, "dreamland"));
     public static final RegistryKey<World> DREAMLAND = RegistryKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation(InvigoratedDimensions.MOD_ID, "dreamland"));
+    public static final RegistryKey<DimensionType> CAVERNOUS_COVE_TYPE = RegistryKey.create(Registry.DIMENSION_TYPE_REGISTRY, new ResourceLocation(InvigoratedDimensions.MOD_ID, "cavernous_cove"));
+    public static final RegistryKey<World> CAVERNOUS_COVE = RegistryKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation(InvigoratedDimensions.MOD_ID, "cavernous_cove"));
 
     public static void register() {
 
