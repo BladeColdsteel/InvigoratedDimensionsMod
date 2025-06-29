@@ -8,12 +8,12 @@
   "category": "none",
   "player_spawn_friendly": false,
   "effects": {
-    "sky_color": 4210752,
-    "fog_color": 2829099,
-    "water_color": 2239551,
-    "water_fog_color": 921361,
-    "grass_color": 2039583,
-    "foliage_color": 526344
+    "sky_color": 6699049,
+    "fog_color": 6699049,
+    "water_color": 6699049,
+    "water_fog_color": 6699049,
+    "grass_color": 6699049,
+    "foliage_color": 6699049
   },
   "starts": [],
   "spawners": {
