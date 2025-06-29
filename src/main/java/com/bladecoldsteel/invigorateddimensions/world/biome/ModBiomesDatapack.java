@@ -50,6 +50,8 @@ public class ModBiomesDatapack {
     public static RegistryKey<Biome> TERRA_NATA_FOREST = registerBiome("terra_nata_forest");
     public static RegistryKey<Biome> CELESTIAL_REALM = registerBiome("celestial_realm");
     public static RegistryKey<Biome> CELESTIAL_REALM_FOREST = registerBiome("celestial_realm_forest");
+    public static RegistryKey<Biome> DEEP_TUNDRA = registerBiome("deep_tundra");
+    public static RegistryKey<Biome> DEEP_TUNDRA_FOREST = registerBiome("deep_tundra_forest");
 
     private static RegistryKey<Biome> registerBiome(String name) {
         BIOMES.register(name, BiomeMaker::theVoidBiome);
@@ -91,6 +93,8 @@ public class ModBiomesDatapack {
         BiomeDictionary.addTypes(TERRA_NATA_FOREST, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DENSE, BiomeDictionary.Type.FOREST, BiomeDictionary.Type.MAGICAL);
         BiomeDictionary.addTypes(CELESTIAL_REALM, BiomeDictionary.Type.COLD, BiomeDictionary.Type.SPARSE, BiomeDictionary.Type.MAGICAL);
         BiomeDictionary.addTypes(CELESTIAL_REALM_FOREST, BiomeDictionary.Type.COLD, BiomeDictionary.Type.SPARSE, BiomeDictionary.Type.FOREST, BiomeDictionary.Type.MAGICAL);
+        BiomeDictionary.addTypes(DEEP_TUNDRA, BiomeDictionary.Type.COLD, BiomeDictionary.Type.SPARSE, BiomeDictionary.Type.MAGICAL);
+        BiomeDictionary.addTypes(DEEP_TUNDRA_FOREST, BiomeDictionary.Type.COLD, BiomeDictionary.Type.SPARSE, BiomeDictionary.Type.FOREST, BiomeDictionary.Type.MAGICAL);
     }
 
     public static void register(IEventBus eventBus) {
@@ -130,5 +134,7 @@ public class ModBiomesDatapack {
         BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(TERRA_NATA_FOREST, 0));
         BiomeManager.addBiome(BiomeManager.BiomeType.COOL, new BiomeManager.BiomeEntry(CELESTIAL_REALM, 0));
         BiomeManager.addBiome(BiomeManager.BiomeType.COOL, new BiomeManager.BiomeEntry(CELESTIAL_REALM_FOREST, 0));
+        BiomeManager.addBiome(BiomeManager.BiomeType.ICY, new BiomeManager.BiomeEntry(DEEP_TUNDRA, 0));
+        BiomeManager.addBiome(BiomeManager.BiomeType.ICY, new BiomeManager.BiomeEntry(DEEP_TUNDRA_FOREST, 0));
     }
 }
