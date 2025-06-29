@@ -1,0 +1,53 @@
+{
+  "surface_builder": "invigorated_dimensions:grass_surface",
+  "depth": 0.3,
+  "scale": 0.15,
+  "temperature": 0.8,
+  "downfall": 0.1,
+  "precipitation": "rain",
+  "category": "none",
+  "player_spawn_friendly": false,
+  "effects": {
+    "sky_color": 15472869,
+    "fog_color": 12191924,
+    "water_color": 13314758,
+    "water_fog_color": 11023524,
+    "grass_color": 13766603,
+    "foliage_color": 12206262
+  },
+  "starts": [],
+  "spawners": {
+    "monster": [
+
+    ],
+    "creature": [
+
+    ]
+  },
+  "spawn_costs": {},
+  "carvers": {
+    "air": [
+      "minecraft:cave"
+    ]
+  },
+  "features": [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+      "invigorated_dimensions:charged_coal_ore",
+      "invigorated_dimensions:charged_iron_ore",
+      "invigorated_dimensions:charged_gold_ore",
+      "invigorated_dimensions:charged_diamond_ore",
+      "invigorated_dimensions:charged_glowstone_ore",
+      "invigorated_dimensions:charged_voltcryst_ore"
+    ],
+    [
+      "invigorated_dimensions:psychic_tree"
+    ]
+  ]
+}

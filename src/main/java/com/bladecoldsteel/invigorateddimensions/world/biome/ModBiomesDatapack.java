@@ -54,6 +54,8 @@ public class ModBiomesDatapack {
     public static RegistryKey<Biome> DEEP_TUNDRA_FOREST = registerBiome("deep_tundra_forest");
     public static RegistryKey<Biome> CORROSIVE_FIELDS = registerBiome("corrosive_fields");
     public static RegistryKey<Biome> CORROSIVE_FIELDS_FOREST = registerBiome("corrosive_fields_forest");
+    public static RegistryKey<Biome> DREAMLAND = registerBiome("dreamland");
+    public static RegistryKey<Biome> DREAMLAND_FOREST = registerBiome("dreamland_forest");
 
     private static RegistryKey<Biome> registerBiome(String name) {
         BIOMES.register(name, BiomeMaker::theVoidBiome);
@@ -99,6 +101,8 @@ public class ModBiomesDatapack {
         BiomeDictionary.addTypes(DEEP_TUNDRA_FOREST, BiomeDictionary.Type.COLD, BiomeDictionary.Type.SPARSE, BiomeDictionary.Type.FOREST, BiomeDictionary.Type.MAGICAL);
         BiomeDictionary.addTypes(CORROSIVE_FIELDS, BiomeDictionary.Type.HOT, BiomeDictionary.Type.SPARSE, BiomeDictionary.Type.MAGICAL);
         BiomeDictionary.addTypes(CORROSIVE_FIELDS_FOREST, BiomeDictionary.Type.HOT, BiomeDictionary.Type.SPOOKY, BiomeDictionary.Type.FOREST, BiomeDictionary.Type.MAGICAL);
+        BiomeDictionary.addTypes(DREAMLAND, BiomeDictionary.Type.COLD, BiomeDictionary.Type.SPARSE, BiomeDictionary.Type.MAGICAL);
+        BiomeDictionary.addTypes(DREAMLAND_FOREST, BiomeDictionary.Type.COLD, BiomeDictionary.Type.CONIFEROUS, BiomeDictionary.Type.FOREST, BiomeDictionary.Type.MAGICAL);
     }
 
     public static void register(IEventBus eventBus) {
@@ -142,5 +146,7 @@ public class ModBiomesDatapack {
         BiomeManager.addBiome(BiomeManager.BiomeType.ICY, new BiomeManager.BiomeEntry(DEEP_TUNDRA_FOREST, 0));
         BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(CORROSIVE_FIELDS, 0));
         BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(CORROSIVE_FIELDS_FOREST, 0));
+        BiomeManager.addBiome(BiomeManager.BiomeType.COOL, new BiomeManager.BiomeEntry(DREAMLAND, 0));
+        BiomeManager.addBiome(BiomeManager.BiomeType.COOL, new BiomeManager.BiomeEntry(DREAMLAND_FOREST, 0));
     }
 }
