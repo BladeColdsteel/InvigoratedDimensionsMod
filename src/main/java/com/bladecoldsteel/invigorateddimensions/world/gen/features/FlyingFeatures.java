@@ -34,6 +34,15 @@ public class FlyingFeatures {
                         new TwoLayerFeature(1, 0, 1))
                         .ignoreVines().build());
 
+        public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> FLYING_TREE_CR = Feature.TREE.configured(
+                new BaseTreeFeatureConfig.Builder(
+                        new SimpleBlockStateProvider(HeavenlyRealmBlocks.FLOATING_LOG.get().defaultBlockState()),
+                        new SimpleBlockStateProvider(UniversalBlocks.CRYSTALLIZED_LEAVES.get().defaultBlockState()),
+                        new BushFoliagePlacer(FeatureSpread.fixed(3), FeatureSpread.fixed(3), 3),
+                        new StraightTrunkPlacer(1, 0, 1),
+                        new TwoLayerFeature(1, 0, 1))
+                        .ignoreVines().build());
+
         public static final ConfiguredFeature<?, ?> FLOATING_STONE_PATCH = Feature.ORE.configured(
                 new OreFeatureConfig(OVERWORLD_FILLER, HeavenlyRealmBlocks.FLOATING_STONE.get().defaultBlockState(), 44)
         );
@@ -46,6 +55,9 @@ public class FlyingFeatures {
         System.out.println("Registering Flying Features...");
         //Trees
         register("flying_tree", FlyingFeatures.ConfiguredFeatures.FLYING_TREE
+                .decorated(Placement.COUNT_MULTILAYER.configured(new FeatureSpreadConfig(32)))
+                .decorated(Features.Placements.HEIGHTMAP_SQUARE));
+        register("flying_tree_cr", FlyingFeatures.ConfiguredFeatures.FLYING_TREE_CR
                 .decorated(Placement.COUNT_MULTILAYER.configured(new FeatureSpreadConfig(32)))
                 .decorated(Features.Placements.HEIGHTMAP_SQUARE));
         //Ores
