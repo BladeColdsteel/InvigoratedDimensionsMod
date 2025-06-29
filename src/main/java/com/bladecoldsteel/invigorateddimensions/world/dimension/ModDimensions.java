@@ -34,6 +34,8 @@ public class ModDimensions {
     public static final RegistryKey<World> DREAMLAND = RegistryKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation(InvigoratedDimensions.MOD_ID, "dreamland"));
     public static final RegistryKey<DimensionType> CAVERNOUS_COVE_TYPE = RegistryKey.create(Registry.DIMENSION_TYPE_REGISTRY, new ResourceLocation(InvigoratedDimensions.MOD_ID, "cavernous_cove"));
     public static final RegistryKey<World> CAVERNOUS_COVE = RegistryKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation(InvigoratedDimensions.MOD_ID, "cavernous_cove"));
+    public static final RegistryKey<DimensionType> GHASTLY_MARSH_TYPE = RegistryKey.create(Registry.DIMENSION_TYPE_REGISTRY, new ResourceLocation(InvigoratedDimensions.MOD_ID, "ghastly_marsh"));
+    public static final RegistryKey<World> GHASTLY_MARSH = RegistryKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation(InvigoratedDimensions.MOD_ID, "ghastly_marsh"));
 
     public static void register() {
 
