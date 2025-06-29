@@ -32,6 +32,9 @@ public class ModDimensions {
     public static final RegistryKey<DimensionType> TERRA_NATA_TYPE = RegistryKey.create(Registry.DIMENSION_TYPE_REGISTRY, new ResourceLocation(InvigoratedDimensions.MOD_ID, "terra_nata"));
     public static final RegistryKey<World> TERRA_NATA = RegistryKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation(InvigoratedDimensions.MOD_ID, "terra_nata"));
 
+    public static final RegistryKey<DimensionType> CELESTIAL_REALM_TYPE = RegistryKey.create(Registry.DIMENSION_TYPE_REGISTRY, new ResourceLocation(InvigoratedDimensions.MOD_ID, "celestial_realm"));
+    public static final RegistryKey<World> CELESTIAL_REALM = RegistryKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation(InvigoratedDimensions.MOD_ID, "celestial_realm"));
+
     public static void register() {
 
         System.out.println("Registering Chunk Generator and Biome Provider...");

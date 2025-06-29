@@ -48,6 +48,8 @@ public class ModBiomesDatapack {
     public static RegistryKey<Biome> INFINITE_DUNGEON = registerBiome("infinite_dungeon");
     public static RegistryKey<Biome> TERRA_NATA = registerBiome("terra_nata");
     public static RegistryKey<Biome> TERRA_NATA_FOREST = registerBiome("terra_nata_forest");
+    public static RegistryKey<Biome> CELESTIAL_REALM = registerBiome("celestial_realm");
+    public static RegistryKey<Biome> CELESTIAL_REALM_FOREST = registerBiome("celestial_realm_forest");
 
     private static RegistryKey<Biome> registerBiome(String name) {
         BIOMES.register(name, BiomeMaker::theVoidBiome);
@@ -87,6 +89,8 @@ public class ModBiomesDatapack {
         BiomeDictionary.addTypes(INFINITE_DUNGEON, BiomeDictionary.Type.COLD, BiomeDictionary.Type.MAGICAL);
         BiomeDictionary.addTypes(TERRA_NATA, BiomeDictionary.Type.COLD, BiomeDictionary.Type.MAGICAL);
         BiomeDictionary.addTypes(TERRA_NATA_FOREST, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DENSE, BiomeDictionary.Type.FOREST, BiomeDictionary.Type.MAGICAL);
+        BiomeDictionary.addTypes(CELESTIAL_REALM, BiomeDictionary.Type.COLD, BiomeDictionary.Type.SPARSE, BiomeDictionary.Type.MAGICAL);
+        BiomeDictionary.addTypes(CELESTIAL_REALM_FOREST, BiomeDictionary.Type.COLD, BiomeDictionary.Type.SPARSE, BiomeDictionary.Type.FOREST, BiomeDictionary.Type.MAGICAL);
     }
 
     public static void register(IEventBus eventBus) {
@@ -124,5 +128,7 @@ public class ModBiomesDatapack {
         BiomeManager.addBiome(BiomeManager.BiomeType.COOL, new BiomeManager.BiomeEntry(INFINITE_DUNGEON, 0));
         BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(TERRA_NATA, 0));
         BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(TERRA_NATA_FOREST, 0));
+        BiomeManager.addBiome(BiomeManager.BiomeType.COOL, new BiomeManager.BiomeEntry(CELESTIAL_REALM, 0));
+        BiomeManager.addBiome(BiomeManager.BiomeType.COOL, new BiomeManager.BiomeEntry(CELESTIAL_REALM_FOREST, 0));
     }
 }
