@@ -59,6 +59,8 @@ public class ModBiomesDatapack {
     public static RegistryKey<Biome> CAVERNOUS_COVE = registerBiome("cavernous_cove");
     public static RegistryKey<Biome> CAVERNOUS_COVE_FOREST = registerBiome("cavernous_cove_forest");
     public static RegistryKey<Biome> GHASTLY_MARSH = registerBiome("ghastly_marsh");
+    public static RegistryKey<Biome> METALLIC_MOUNTAINS = registerBiome("metallic_mountains");
+    public static RegistryKey<Biome> METALLIC_MOUNTAINS_FOREST = registerBiome("metallic_mountains_forest");
 
     private static RegistryKey<Biome> registerBiome(String name) {
         BIOMES.register(name, BiomeMaker::theVoidBiome);
@@ -109,6 +111,8 @@ public class ModBiomesDatapack {
         BiomeDictionary.addTypes(CAVERNOUS_COVE, BiomeDictionary.Type.HOT, BiomeDictionary.Type.SPARSE, BiomeDictionary.Type.PLAINS, BiomeDictionary.Type.MAGICAL);
         BiomeDictionary.addTypes(CAVERNOUS_COVE_FOREST, BiomeDictionary.Type.HOT, BiomeDictionary.Type.CONIFEROUS, BiomeDictionary.Type.FOREST, BiomeDictionary.Type.MAGICAL);
         BiomeDictionary.addTypes(GHASTLY_MARSH, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DENSE, BiomeDictionary.Type.FOREST, BiomeDictionary.Type.SPOOKY, BiomeDictionary.Type.MAGICAL);
+        BiomeDictionary.addTypes(METALLIC_MOUNTAINS, BiomeDictionary.Type.HOT, BiomeDictionary.Type.SPARSE, BiomeDictionary.Type.MOUNTAIN, BiomeDictionary.Type.MAGICAL);
+        BiomeDictionary.addTypes(METALLIC_MOUNTAINS_FOREST, BiomeDictionary.Type.HOT, BiomeDictionary.Type.CONIFEROUS, BiomeDictionary.Type.FOREST, BiomeDictionary.Type.MAGICAL);
     }
 
     public static void register(IEventBus eventBus) {
@@ -157,5 +161,7 @@ public class ModBiomesDatapack {
         BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(CAVERNOUS_COVE, 0));
         BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(CAVERNOUS_COVE_FOREST, 0));
         BiomeManager.addBiome(BiomeManager.BiomeType.ICY, new BiomeManager.BiomeEntry(GHASTLY_MARSH, 0));
+        BiomeManager.addBiome(BiomeManager.BiomeType.COOL, new BiomeManager.BiomeEntry(METALLIC_MOUNTAINS, 0));
+        BiomeManager.addBiome(BiomeManager.BiomeType.COOL, new BiomeManager.BiomeEntry(METALLIC_MOUNTAINS_FOREST, 0));
     }
 }
