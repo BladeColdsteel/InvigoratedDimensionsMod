@@ -56,6 +56,7 @@ import com.bladecoldsteel.invigorateddimensions.terranata.block.TerraNataWoodTyp
 import com.bladecoldsteel.invigorateddimensions.terranata.item.TerraNataItems;
 import com.bladecoldsteel.invigorateddimensions.universal.block.UniversalBlocks;
 import com.bladecoldsteel.invigorateddimensions.universal.item.UniversalItems;
+import com.bladecoldsteel.invigorateddimensions.universal.renderer.ElementalShrineRenderer;
 import com.bladecoldsteel.invigorateddimensions.universal.screens.UniversalContainers;
 import com.bladecoldsteel.invigorateddimensions.universal.screens.custom.screens.EnergySinkScreen;
 import com.bladecoldsteel.invigorateddimensions.universal.tileentity.UniversalTileEntities;
@@ -338,6 +339,8 @@ public class InvigoratedDimensions
 
         //Universal
         RenderTypeLookup.setRenderLayer(UniversalBlocks.CRYSTALLIZED_LEAVES.get(), RenderType.cutout());
+        ClientRegistry.bindTileEntityRenderer(UniversalTileEntities.ELEMENTAL_SHRINE_TILE.get(),
+                ElementalShrineRenderer::new);
 
         //Electric
         RenderTypeLookup.setRenderLayer(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_SAPLING.get(), RenderType.cutout());

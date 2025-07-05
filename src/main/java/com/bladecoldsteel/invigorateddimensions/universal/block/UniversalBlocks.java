@@ -2,6 +2,7 @@ package com.bladecoldsteel.invigorateddimensions.universal.block;
 
 import com.bladecoldsteel.invigorateddimensions.InvigoratedDimensions;
 import com.bladecoldsteel.invigorateddimensions.universal.block.custom.CrystallizedLeavesBlock;
+import com.bladecoldsteel.invigorateddimensions.universal.block.custom.ElementalShrineBlock;
 import com.bladecoldsteel.invigorateddimensions.universal.block.custom.EnergySinkBlock;
 import com.bladecoldsteel.invigorateddimensions.universal.item.UniversalItemGroup;
 import com.bladecoldsteel.invigorateddimensions.universal.item.UniversalItems;
@@ -9,7 +10,6 @@ import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraftforge.common.ToolType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -26,6 +26,10 @@ public class UniversalBlocks {
 
     public static final RegistryObject<Block> ENERGY_SINK = registerBlock("energy_sink",
             () -> new EnergySinkBlock(AbstractBlock.Properties.of(Material.METAL)
+                    .noOcclusion()));
+
+    public static final RegistryObject<Block> ELEMENTAL_SHRINE = registerBlock("elemental_shrine",
+            () -> new ElementalShrineBlock(AbstractBlock.Properties.of(Material.STONE)
                     .noOcclusion()));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
