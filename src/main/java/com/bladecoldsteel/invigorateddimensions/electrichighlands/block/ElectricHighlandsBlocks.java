@@ -23,8 +23,6 @@ public class ElectricHighlandsBlocks {
 
     public static final RegistryObject<Block> ELECTRIC_HIGHLANDS_PORTAL = registerBlock("electric_highlands_portal",
             ElectricHighlandsPortalBlock::new);
-    public static final RegistryObject<Block> ELECTRIC_HIGHLANDS_RIFT = registerBlock("electric_highlands_rift",
-            ElectricHighlandsRiftBlock::new);
 
     public static final RegistryObject<Block> ELECTRICALLY_CHARGED_SAPLING = registerBlock("electrically_charged_sapling",
             () -> new SaplingBlock(new ElectricTree(), AbstractBlock.Properties.copy(Blocks.OAK_SAPLING)));

@@ -10,11 +10,11 @@ import net.minecraftforge.common.util.ITeleporter;
 
 import java.util.function.Function;
 
-public class ElectricHighlandsRiftTeleporter implements ITeleporter {
+public class RiftTeleporter implements ITeleporter {
 
     private BlockPos pos;
 
-    public ElectricHighlandsRiftTeleporter(BlockPos pos) {
+    public RiftTeleporter(BlockPos pos) {
         this.pos = pos;
     }
 

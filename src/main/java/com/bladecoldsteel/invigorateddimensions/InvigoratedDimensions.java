@@ -58,6 +58,7 @@ import com.bladecoldsteel.invigorateddimensions.universal.block.UniversalBlocks;
 import com.bladecoldsteel.invigorateddimensions.universal.item.UniversalItems;
 import com.bladecoldsteel.invigorateddimensions.universal.renderer.ElementalShrineRenderer;
 import com.bladecoldsteel.invigorateddimensions.universal.screens.UniversalContainers;
+import com.bladecoldsteel.invigorateddimensions.universal.screens.custom.screens.ElementalShrineScreen;
 import com.bladecoldsteel.invigorateddimensions.universal.screens.custom.screens.EnergySinkScreen;
 import com.bladecoldsteel.invigorateddimensions.universal.tileentity.UniversalTileEntities;
 import com.bladecoldsteel.invigorateddimensions.valleydeath.block.ValleyDeathBlocks;
@@ -75,17 +76,13 @@ import com.bladecoldsteel.invigorateddimensions.world.dimension.ModDimensions;
 import com.bladecoldsteel.invigorateddimensions.world.gen.features.*;
 import com.google.common.collect.ImmutableMap;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
 import net.minecraft.block.WoodType;
 import net.minecraft.client.gui.ScreenManager;
 import net.minecraft.client.renderer.Atlases;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.client.renderer.tileentity.SignTileEntityRenderer;
-import net.minecraft.entity.EntitySpawnPlacementRegistry;
 import net.minecraft.item.AxeItem;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.gen.Heightmap;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
@@ -336,6 +333,10 @@ public class InvigoratedDimensions
                 UniversalContainers.ENERGY_SINK_MENU.get(),
                 EnergySinkScreen::new
         );
+        ScreenManager.register(
+                UniversalContainers.ELEMENTAL_SHRINE_MENU.get(),
+                ElementalShrineScreen::new
+        );
 
         //Universal
         RenderTypeLookup.setRenderLayer(UniversalBlocks.CRYSTALLIZED_LEAVES.get(), RenderType.cutout());
@@ -417,10 +418,6 @@ public class InvigoratedDimensions
         Atlases.addWoodType(CavernousCoveWoodTypes.ROCKY);
         Atlases.addWoodType(GhastlyMarshWoodTypes.SPOOKY);
         Atlases.addWoodType(MetallicMountainsWoodTypes.METALLIC);
-    }
-
-    public void gatherData(GatherDataEvent event) {
-
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event)

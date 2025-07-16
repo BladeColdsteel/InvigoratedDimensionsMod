@@ -1,9 +1,9 @@
 package com.bladecoldsteel.invigorateddimensions.universal.screens;
 
 import com.bladecoldsteel.invigorateddimensions.InvigoratedDimensions;
+import com.bladecoldsteel.invigorateddimensions.universal.screens.custom.containers.ElementalShrineContainer;
 import com.bladecoldsteel.invigorateddimensions.universal.screens.custom.containers.EnergySinkContainer;
 import net.minecraft.inventory.container.ContainerType;
-import net.minecraft.util.IWorldPosCallable;
 import net.minecraft.util.math.BlockPos;
 import net.minecraftforge.common.extensions.IForgeContainerType;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -20,6 +20,12 @@ public class UniversalContainers {
                     () -> IForgeContainerType.create((windowId, inv, data) -> {
                         BlockPos pos = data.readBlockPos();
                         return new EnergySinkContainer(windowId, inv, pos);
+                    }));
+    public static final RegistryObject<ContainerType<ElementalShrineContainer>> ELEMENTAL_SHRINE_MENU =
+            CONTAINERS.register("elemental_shrine",
+                    () -> IForgeContainerType.create((windowId, inv, data) -> {
+                        BlockPos pos = data.readBlockPos();
+                        return new ElementalShrineContainer(windowId, inv, pos);
                     }));
 
     public static void register(IEventBus eventBus) {

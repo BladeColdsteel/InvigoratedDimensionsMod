@@ -4,6 +4,7 @@ import com.bladecoldsteel.invigorateddimensions.InvigoratedDimensions;
 import com.bladecoldsteel.invigorateddimensions.universal.block.custom.CrystallizedLeavesBlock;
 import com.bladecoldsteel.invigorateddimensions.universal.block.custom.ElementalShrineBlock;
 import com.bladecoldsteel.invigorateddimensions.universal.block.custom.EnergySinkBlock;
+import com.bladecoldsteel.invigorateddimensions.universal.block.custom.RiftBlock;
 import com.bladecoldsteel.invigorateddimensions.universal.item.UniversalItemGroup;
 import com.bladecoldsteel.invigorateddimensions.universal.item.UniversalItems;
 import net.minecraft.block.*;
@@ -31,6 +32,9 @@ public class UniversalBlocks {
     public static final RegistryObject<Block> ELEMENTAL_SHRINE = registerBlock("elemental_shrine",
             () -> new ElementalShrineBlock(AbstractBlock.Properties.of(Material.STONE)
                     .noOcclusion()));
+
+    public static final RegistryObject<Block> RIFT_BLOCK = registerBlock("rift_block",
+            () -> new RiftBlock(AbstractBlock.Properties.of(Material.STONE)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
