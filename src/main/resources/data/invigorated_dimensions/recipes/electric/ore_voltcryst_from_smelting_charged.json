@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "invigorated_dimensions:charged_voltcryst_ore"
-  },
-  "result": "invigorated_dimensions:voltcryst",
-  "experience": 0.2,
-  "cookingtime": 400
-}

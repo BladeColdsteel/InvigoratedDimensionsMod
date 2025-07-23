@@ -1,7 +1,0 @@
-{
-  "parent": "block/template_wall_side_tall",
-  "textures": {
-    "wall": "invigorated_dimensions:block/electrically_charged_cobblestone",
-    "particle": "invigorated_dimensions:block/electrically_charged_cobblestone"
-  }
-}

@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "invigorated_dimensions:block/electrically_charged_logs_top",
-    "side": "invigorated_dimensions:block/electrically_charged_logs"
-  }
-}

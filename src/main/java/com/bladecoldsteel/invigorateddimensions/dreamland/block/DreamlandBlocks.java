@@ -21,7 +21,7 @@ public class DreamlandBlocks {
 
     public static final RegistryObject<Block> PSYCHEDELIC_SAPLING = registerBlock("psychedelic_sapling",
             () -> new SaplingBlock(new PsychicTree(), AbstractBlock.Properties.copy(Blocks.OAK_SAPLING)));
-    public static final RegistryObject<Block> PSYCHEDELIC_LOG = registerBlock("psychedelic_logs",
+    public static final RegistryObject<RotatedPillarBlock> PSYCHEDELIC_LOG = registerBlock("psychedelic_logs",
             () -> new RotatedPillarBlock(AbstractBlock.Properties.copy(Blocks.JUNGLE_LOG)
                     .harvestTool(ToolType.AXE)));
 

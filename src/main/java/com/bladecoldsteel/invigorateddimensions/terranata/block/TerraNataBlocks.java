@@ -21,7 +21,7 @@ public class TerraNataBlocks {
 
     public static final RegistryObject<Block> GROUNDED_SAPLING = registerBlock("grounded_sapling",
             () -> new SaplingBlock(new GroundTree(), AbstractBlock.Properties.copy(Blocks.OAK_SAPLING)));
-    public static final RegistryObject<Block> GROUNDED_LOG = registerBlock("grounded_logs",
+    public static final RegistryObject<RotatedPillarBlock> GROUNDED_LOG = registerBlock("grounded_logs",
             () -> new RotatedPillarBlock(AbstractBlock.Properties.copy(Blocks.OAK_LOG)
                     .harvestTool(ToolType.AXE)));
 

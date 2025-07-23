@@ -49,6 +49,10 @@ import com.bladecoldsteel.invigorateddimensions.insectoidparadisio.item.Insectoi
 import com.bladecoldsteel.invigorateddimensions.metallicmountains.block.MetallicMountainsBlocks;
 import com.bladecoldsteel.invigorateddimensions.metallicmountains.block.MetallicMountainsWoodTypes;
 import com.bladecoldsteel.invigorateddimensions.metallicmountains.item.MetallicMountainsItems;
+import com.bladecoldsteel.invigorateddimensions.universal.datageneration.IDBlockStatesAndModels;
+import com.bladecoldsteel.invigorateddimensions.universal.datageneration.IDItemModels;
+import com.bladecoldsteel.invigorateddimensions.universal.datageneration.IDLootTables;
+import com.bladecoldsteel.invigorateddimensions.universal.datageneration.IDRecipes;
 import com.bladecoldsteel.invigorateddimensions.universal.entities.MobSpawnPlacements;
 import com.bladecoldsteel.invigorateddimensions.universal.network.InvigoratedDimensionsNetworkHandler;
 import com.bladecoldsteel.invigorateddimensions.terranata.block.TerraNataBlocks;
@@ -82,8 +86,10 @@ import net.minecraft.client.renderer.Atlases;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.client.renderer.tileentity.SignTileEntityRenderer;
+import net.minecraft.data.DataGenerator;
 import net.minecraft.item.AxeItem;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -122,6 +128,8 @@ public class InvigoratedDimensions
         );
 
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        eventBus.addListener(this::gatherData);
 
         IEventBus forgeBus = MinecraftForge.EVENT_BUS;
         forgeBus.addListener(EventPriority.NORMAL, ElectricHighlandsStructures::addDimensionalSpacing);
@@ -420,6 +428,20 @@ public class InvigoratedDimensions
         Atlases.addWoodType(MetallicMountainsWoodTypes.METALLIC);
     }
 
+    public void gatherData(GatherDataEvent event) {
+        DataGenerator generator = event.getGenerator();
+        ExistingFileHelper helper = event.getExistingFileHelper();
+
+        if (event.includeClient()) {
+            generator.addProvider(new IDBlockStatesAndModels(generator, helper));
+            generator.addProvider(new IDItemModels(generator, helper));
+        }
+        if (event.includeServer()) {
+            generator.addProvider(new IDRecipes(generator));
+            generator.addProvider(new IDLootTables(generator));
+        }
+    }
+
     private void enqueueIMC(final InterModEnqueueEvent event)
     {
         // some example code to dispatch IMC to another mod
@@ -435,16 +457,5 @@ public class InvigoratedDimensions
     public void onServerStarting(FMLServerStartingEvent event) {
         // do something when the server starts
         LOGGER.info("HELLO from server starting");
-    }
-
-    // You can use EventBusSubscriber to automatically subscribe events on the contained class (this is subscribing to the MOD
-    // Event bus for receiving Registry Events)
-    @Mod.EventBusSubscriber(bus=Mod.EventBusSubscriber.Bus.MOD)
-    public static class RegistryEvents {
-        @SubscribeEvent
-        public static void onBlocksRegistry(final RegistryEvent.Register<Block> blockRegistryEvent) {
-            // register a new block here
-            LOGGER.info("HELLO from Register Block");
-        }
     }
 }

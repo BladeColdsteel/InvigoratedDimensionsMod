@@ -21,7 +21,7 @@ public class DeepTundraBlocks {
 
     public static final RegistryObject<Block> ICEY_SAPLING = registerBlock("icey_sapling",
             () -> new SaplingBlock(new IceTree(), AbstractBlock.Properties.copy(Blocks.OAK_SAPLING)));
-    public static final RegistryObject<Block> ICEY_LOG = registerBlock("icey_logs",
+    public static final RegistryObject<RotatedPillarBlock> ICEY_LOG = registerBlock("icey_logs",
             () -> new RotatedPillarBlock(AbstractBlock.Properties.copy(Blocks.JUNGLE_LOG)
                     .harvestTool(ToolType.AXE)));
 

@@ -21,7 +21,7 @@ public class GhastlyMarshBlocks {
 
     public static final RegistryObject<Block> SPOOKY_SAPLING = registerBlock("spooky_sapling",
             () -> new SaplingBlock(new GhostTree(), AbstractBlock.Properties.copy(Blocks.OAK_SAPLING)));
-    public static final RegistryObject<Block> SPOOKY_LOG = registerBlock("spooky_logs",
+    public static final RegistryObject<RotatedPillarBlock> SPOOKY_LOG = registerBlock("spooky_logs",
             () -> new RotatedPillarBlock(AbstractBlock.Properties.copy(Blocks.JUNGLE_LOG)
                     .harvestTool(ToolType.AXE)));
 

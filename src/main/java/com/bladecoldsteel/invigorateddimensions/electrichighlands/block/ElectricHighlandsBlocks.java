@@ -26,47 +26,47 @@ public class ElectricHighlandsBlocks {
 
     public static final RegistryObject<Block> ELECTRICALLY_CHARGED_SAPLING = registerBlock("electrically_charged_sapling",
             () -> new SaplingBlock(new ElectricTree(), AbstractBlock.Properties.copy(Blocks.OAK_SAPLING)));
-    public static final RegistryObject<Block> ELECTRICALLY_CHARGED_LOG = registerBlock("electrically_charged_logs",
+    public static final RegistryObject<RotatedPillarBlock> ELECTRICALLY_CHARGED_LOG = registerBlock("electrically_charged_logs",
             () -> new RotatedPillarBlock(AbstractBlock.Properties.copy(Blocks.OAK_LOG)
                     .harvestTool(ToolType.AXE)));
-    public static final RegistryObject<Block> ELECTRICALLY_CHARGED_WOOD = registerBlock("electrically_charged_wood",
+    public static final RegistryObject<RotatedPillarBlock> ELECTRICALLY_CHARGED_WOOD = registerBlock("electrically_charged_wood",
             () -> new RotatedPillarBlock(AbstractBlock.Properties.copy(Blocks.OAK_WOOD)
                     .harvestTool(ToolType.AXE)));
-    public static final RegistryObject<Block> STRIPPED_ELECTRICALLY_CHARGED_LOG = registerBlock("stripped_electrically_charged_logs",
+    public static final RegistryObject<RotatedPillarBlock> STRIPPED_ELECTRICALLY_CHARGED_LOG = registerBlock("stripped_electrically_charged_logs",
             () -> new RotatedPillarBlock(AbstractBlock.Properties.copy(Blocks.STRIPPED_OAK_LOG)
                     .harvestTool(ToolType.AXE)));
-    public static final RegistryObject<Block> STRIPPED_ELECTRICALLY_CHARGED_WOOD = registerBlock("stripped_electrically_charged_wood",
+    public static final RegistryObject<RotatedPillarBlock> STRIPPED_ELECTRICALLY_CHARGED_WOOD = registerBlock("stripped_electrically_charged_wood",
             () -> new RotatedPillarBlock(AbstractBlock.Properties.copy(Blocks.STRIPPED_OAK_WOOD)
                     .harvestTool(ToolType.AXE)));
 
     public static final RegistryObject<Block> ELECTRICALLY_CHARGED_PLANKS = registerBlock("electrically_charged_planks",
             () -> new Block(AbstractBlock.Properties.copy(Blocks.OAK_PLANKS)
                     .harvestTool(ToolType.AXE)));
-    public static final RegistryObject<Block> ELECTRICALLY_CHARGED_WOODEN_STAIRS = registerBlock("electrically_charged_wooden_stairs",
+    public static final RegistryObject<StairsBlock> ELECTRICALLY_CHARGED_WOODEN_STAIRS = registerBlock("electrically_charged_wooden_stairs",
             () -> new StairsBlock(() -> ELECTRICALLY_CHARGED_PLANKS.get().defaultBlockState(),
                     AbstractBlock.Properties.copy(Blocks.OAK_STAIRS)
                             .harvestTool(ToolType.AXE)));
-    public static final RegistryObject<Block> ELECTRICALLY_CHARGED_FENCE = registerBlock("electrically_charged_fence",
+    public static final RegistryObject<FenceBlock> ELECTRICALLY_CHARGED_FENCE = registerBlock("electrically_charged_fence",
             () -> new FenceBlock(AbstractBlock.Properties.copy(Blocks.OAK_FENCE)));
-    public static final RegistryObject<Block> ELECTRICALLY_CHARGED_FENCE_GATE = registerBlock("electrically_charged_fence_gate",
+    public static final RegistryObject<FenceGateBlock> ELECTRICALLY_CHARGED_FENCE_GATE = registerBlock("electrically_charged_fence_gate",
             () -> new FenceGateBlock(AbstractBlock.Properties.copy(Blocks.OAK_FENCE_GATE)
                     .harvestTool(ToolType.AXE)));
-    public static final RegistryObject<Block> ELECTRICALLY_CHARGED_DOOR = registerBlock("electrically_charged_door",
+    public static final RegistryObject<DoorBlock> ELECTRICALLY_CHARGED_DOOR = registerBlock("electrically_charged_door",
             () -> new DoorBlock(AbstractBlock.Properties.copy(Blocks.OAK_DOOR)
                     .harvestTool(ToolType.AXE)));
-    public static final RegistryObject<Block> ELECTRICALLY_CHARGED_WOODEN_SLAB = registerBlock("electrically_charged_wooden_slab",
+    public static final RegistryObject<SlabBlock> ELECTRICALLY_CHARGED_WOODEN_SLAB = registerBlock("electrically_charged_wooden_slab",
             () -> new SlabBlock(AbstractBlock.Properties.copy(Blocks.OAK_SLAB)
                     .harvestTool(ToolType.AXE)));
-    public static final RegistryObject<Block> ELECTRICALLY_CHARGED_WOODEN_BUTTON = registerBlock("electrically_charged_wooden_button",
+    public static final RegistryObject<AbstractButtonBlock> ELECTRICALLY_CHARGED_WOODEN_BUTTON = registerBlock("electrically_charged_wooden_button",
             () -> new WoodButtonBlock(AbstractBlock.Properties.copy(Blocks.OAK_BUTTON)
                     .harvestTool(ToolType.AXE)));
-    public static final RegistryObject<Block> ELECTRICALLY_CHARGED_WOODEN_PRESSURE_PLATE = registerBlock("electrically_charged_wooden_pressure_plate",
+    public static final RegistryObject<PressurePlateBlock> ELECTRICALLY_CHARGED_WOODEN_PRESSURE_PLATE = registerBlock("electrically_charged_wooden_pressure_plate",
             () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, AbstractBlock.Properties.copy(Blocks.OAK_PRESSURE_PLATE)
                     .harvestTool(ToolType.AXE)));
-    public static final RegistryObject<Block> ELECTRICALLY_CHARGED_WOODEN_TRAPDOOR = registerBlock("electrically_charged_wooden_trapdoor",
+    public static final RegistryObject<TrapDoorBlock> ELECTRICALLY_CHARGED_WOODEN_TRAPDOOR = registerBlock("electrically_charged_wooden_trapdoor",
             () -> new TrapDoorBlock(AbstractBlock.Properties.copy(Blocks.OAK_TRAPDOOR)
                     .harvestTool(ToolType.AXE)));
-    public static final RegistryObject<Block> ELECTRICALLY_CHARGED_SIGN = BLOCKS.register("electrically_charged_sign",
+    public static final RegistryObject<ElectricHighlandsStandingSignBlock> ELECTRICALLY_CHARGED_SIGN = BLOCKS.register("electrically_charged_sign",
             () -> new ElectricHighlandsStandingSignBlock(AbstractBlock.Properties.copy(Blocks.OAK_SIGN)
                     .harvestTool(ToolType.AXE), ElectricHighlandsWoodTypes.ELECTRICALLY_CHARGED));
     public static final RegistryObject<Block> ELECTRICALLY_CHARGED_WALL_SIGN = BLOCKS.register("electrically_charged_wall_sign",
@@ -79,21 +79,21 @@ public class ElectricHighlandsBlocks {
                     .requiresCorrectToolForDrops()
                     .harvestTool(ToolType.PICKAXE)
                     .strength(3f)));
-    public static final RegistryObject<Block> ELECTRICALLY_CHARGED_STONE_PRESSURE_PLATE = registerBlock("electrically_charged_stone_pressure_plate",
+    public static final RegistryObject<PressurePlateBlock> ELECTRICALLY_CHARGED_STONE_PRESSURE_PLATE = registerBlock("electrically_charged_stone_pressure_plate",
             () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, AbstractBlock.Properties.copy(Blocks.STONE_PRESSURE_PLATE)
                     .requiresCorrectToolForDrops()
                     .harvestTool(ToolType.PICKAXE)));
-    public static final RegistryObject<Block> ELECTRICALLY_CHARGED_STONE_BUTTON = registerBlock("electrically_charged_stone_button",
+    public static final RegistryObject<AbstractButtonBlock> ELECTRICALLY_CHARGED_STONE_BUTTON = registerBlock("electrically_charged_stone_button",
             () -> new StoneButtonBlock(AbstractBlock.Properties.copy(Blocks.STONE_BUTTON)
                     .requiresCorrectToolForDrops()
                     .harvestTool(ToolType.PICKAXE)));
-    public static final RegistryObject<Block> ELECTRICALLY_CHARGED_STONE_SLABS = registerBlock("electrically_charged_stone_slab",
+    public static final RegistryObject<SlabBlock> ELECTRICALLY_CHARGED_STONE_SLABS = registerBlock("electrically_charged_stone_slab",
             () -> new SlabBlock(AbstractBlock.Properties.copy(Blocks.STONE_SLAB)
                     .harvestLevel(1)
                     .requiresCorrectToolForDrops()
                     .harvestTool(ToolType.PICKAXE)
                     .strength(3f)));
-    public static final RegistryObject<Block> ELECTRICALLY_CHARGED_STONE_STAIRS = registerBlock("electrically_charged_stone_stairs",
+    public static final RegistryObject<StairsBlock> ELECTRICALLY_CHARGED_STONE_STAIRS = registerBlock("electrically_charged_stone_stairs",
             () -> new StairsBlock(() -> ELECTRICALLY_CHARGED_STONE.get().defaultBlockState(),
                     AbstractBlock.Properties.copy(Blocks.STONE_STAIRS)
                             .harvestTool(ToolType.PICKAXE)
@@ -106,20 +106,20 @@ public class ElectricHighlandsBlocks {
                     .requiresCorrectToolForDrops()
                     .harvestTool(ToolType.PICKAXE)
                     .strength(3.5f)));
-    public static final RegistryObject<Block> ELECTRICALLY_CHARGED_STONE_BRICK_SLABS = registerBlock("electrically_charged_stone_brick_slab",
+    public static final RegistryObject<SlabBlock> ELECTRICALLY_CHARGED_STONE_BRICK_SLABS = registerBlock("electrically_charged_stone_brick_slab",
             () -> new SlabBlock(AbstractBlock.Properties.copy(Blocks.STONE_BRICK_SLAB)
                             .harvestTool(ToolType.PICKAXE)
                             .requiresCorrectToolForDrops()
                             .strength(3.5f)
                             .harvestLevel(1)));
-    public static final RegistryObject<Block> ELECTRICALLY_CHARGED_STONE_BRICK_STAIRS = registerBlock("electrically_charged_stone_brick_stairs",
+    public static final RegistryObject<StairsBlock> ELECTRICALLY_CHARGED_STONE_BRICK_STAIRS = registerBlock("electrically_charged_stone_brick_stairs",
             () -> new StairsBlock(() -> ELECTRICALLY_CHARGED_STONE_BRICKS.get().defaultBlockState(),
                     AbstractBlock.Properties.copy(Blocks.STONE_BRICK_STAIRS)
                             .harvestTool(ToolType.PICKAXE)
                             .requiresCorrectToolForDrops()
                             .strength(3.5f)
                             .harvestLevel(1)));
-    public static final RegistryObject<Block> ELECTRICALLY_CHARGED_STONE_BRICK_WALL = registerBlock("electrically_charged_stone_brick_wall",
+    public static final RegistryObject<WallBlock> ELECTRICALLY_CHARGED_STONE_BRICK_WALL = registerBlock("electrically_charged_stone_brick_wall",
             () -> new WallBlock(AbstractBlock.Properties
                     .of(Material.STONE)
                     .sound(SoundType.STONE)
@@ -140,20 +140,20 @@ public class ElectricHighlandsBlocks {
                     .requiresCorrectToolForDrops()
                     .harvestTool(ToolType.PICKAXE)
                     .strength(2f)));
-    public static final RegistryObject<Block> ELECTRICALLY_CHARGED_COBBLESTONE_STAIRS = registerBlock("electrically_charged_cobblestone_stairs",
+    public static final RegistryObject<StairsBlock> ELECTRICALLY_CHARGED_COBBLESTONE_STAIRS = registerBlock("electrically_charged_cobblestone_stairs",
             () -> new StairsBlock(() -> ELECTRICALLY_CHARGED_COBBLESTONE.get().defaultBlockState(),
                     AbstractBlock.Properties.copy(Blocks.COBBLESTONE_STAIRS)
                             .harvestTool(ToolType.PICKAXE)
                             .requiresCorrectToolForDrops()
                             .strength(2f)
                             .harvestLevel(1)));
-    public static final RegistryObject<Block> ELECTRICALLY_CHARGED_COBBLESTONE_SLABS = registerBlock("electrically_charged_cobblestone_slab",
+    public static final RegistryObject<SlabBlock> ELECTRICALLY_CHARGED_COBBLESTONE_SLABS = registerBlock("electrically_charged_cobblestone_slab",
             () -> new SlabBlock(AbstractBlock.Properties.copy(Blocks.COBBLESTONE_SLAB)
                     .harvestLevel(1)
                     .requiresCorrectToolForDrops()
                     .harvestTool(ToolType.PICKAXE)
                     .strength(2f)));
-    public static final RegistryObject<Block> ELECTRICALLY_CHARGED_COBBLESTONE_WALL = registerBlock("electrically_charged_cobblestone_wall",
+    public static final RegistryObject<WallBlock> ELECTRICALLY_CHARGED_COBBLESTONE_WALL = registerBlock("electrically_charged_cobblestone_wall",
             () -> new WallBlock(AbstractBlock.Properties.of(Material.STONE)
                     .sound(SoundType.STONE)
                     .harvestLevel(1)

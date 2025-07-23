@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "invigorated_dimensions:block/darkened_sapling"
-  }
-}

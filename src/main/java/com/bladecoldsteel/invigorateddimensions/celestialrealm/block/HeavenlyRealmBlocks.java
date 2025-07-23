@@ -22,7 +22,7 @@ public class HeavenlyRealmBlocks {
 
     public static final RegistryObject<Block> FLOATING_SAPLING = registerBlock("floating_sapling",
             () -> new FloatingSaplingBlock(new FlyingTree(), AbstractBlock.Properties.copy(Blocks.OAK_SAPLING)));
-    public static final RegistryObject<Block> FLOATING_LOG = registerBlock("floating_logs",
+    public static final RegistryObject<RotatedPillarBlock> FLOATING_LOG = registerBlock("floating_logs",
             () -> new RotatedPillarBlock(AbstractBlock.Properties.copy(Blocks.JUNGLE_LOG)
                     .harvestTool(ToolType.AXE)));
 

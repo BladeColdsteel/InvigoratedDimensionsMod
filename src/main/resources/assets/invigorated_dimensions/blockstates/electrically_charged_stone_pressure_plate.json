@@ -1,6 +1,0 @@
-{
-  "variants": {
-    "powered=false": { "model": "invigorated_dimensions:block/electrically_charged_stone_pressure_plate" },
-    "powered=true": { "model": "invigorated_dimensions:block/electrically_charged_stone_pressure_plate_down" }
-  }
-}

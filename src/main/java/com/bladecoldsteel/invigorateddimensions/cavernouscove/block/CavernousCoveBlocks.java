@@ -21,7 +21,7 @@ public class CavernousCoveBlocks {
     public static final DeferredRegister<Block> BLOCKS
             = DeferredRegister.create(ForgeRegistries.BLOCKS, InvigoratedDimensions.MOD_ID);
 
-    public static final RegistryObject<Block> ROCKY_LOG = registerBlock("rocky_logs",
+    public static final RegistryObject<RotatedPillarBlock> ROCKY_LOG = registerBlock("rocky_logs",
             () -> new RotatedPillarBlock(AbstractBlock.Properties.copy(Blocks.JUNGLE_LOG)
                     .harvestTool(ToolType.AXE)));
 

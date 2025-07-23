@@ -21,7 +21,7 @@ public class WateryDepthsBlocks {
 
     public static final RegistryObject<Block> WATERY_SAPLING = registerBlock("watery_sapling",
             () -> new SaplingBlock(new WaterTree(), AbstractBlock.Properties.copy(Blocks.OAK_SAPLING)));
-    public static final RegistryObject<Block> WATERY_LOG = registerBlock("watery_logs",
+    public static final RegistryObject<RotatedPillarBlock> WATERY_LOG = registerBlock("watery_logs",
             () -> new RotatedPillarBlock(AbstractBlock.Properties.copy(Blocks.OAK_LOG)
                     .harvestTool(ToolType.AXE)));
 

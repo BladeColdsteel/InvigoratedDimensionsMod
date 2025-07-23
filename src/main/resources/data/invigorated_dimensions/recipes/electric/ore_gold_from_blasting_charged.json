@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:blasting",
-  "ingredient": {
-    "item": "invigorated_dimensions:charged_gold_ore"
-  },
-  "result": "minecraft:gold_ore",
-  "experience": 0.1,
-  "cookingtime": 100
-}

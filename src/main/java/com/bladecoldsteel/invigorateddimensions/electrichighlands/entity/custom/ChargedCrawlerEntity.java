@@ -41,34 +41,6 @@ public class ChargedCrawlerEntity extends CreatureEntity {
     }
 
     @Override
-    protected void dropCustomDeathLoot(DamageSource source, int looting, boolean recentlyHitIn) {
-        super.dropCustomDeathLoot(source, looting, recentlyHitIn);
-
-        int amount = 1 + this.random.nextInt(2) + this.random.nextInt(looting + 1);
-        for (int i = 0; i < amount; i++) {
-            this.spawnAtLocation(Items.BEEF);
-        }
-
-        if (this.random.nextFloat() < 0.5F + (0.05F * looting)) {
-            this.spawnAtLocation(ElectricHighlandsItems.VOLTCRYST.get());
-        }
-
-        if (this.random.nextFloat() < 0.25F + (0.05F * looting)) {
-            this.spawnAtLocation(ElectricHighlandsItems.VOLTCRYST.get());
-        }
-
-        if (this.random.nextFloat() < 0.001F + (0.002F * looting)) {
-            this.spawnAtLocation(ElectricHighlandsItems.ELECTRIC_HIGHLANDS_ACTIVATOR.get());
-        }
-
-        //if (ModList.get().isLoaded("")) {
-            //this.spawnAtLocation(ForgeRegistries.ITEMS.getValue(new ResourceLocation("", "")));
-        //} else {
-            //this.spawnAtLocation();
-        //}
-    }
-
-    @Override
     protected int getExperienceReward(PlayerEntity player) {
         return this.random.nextInt(4) + 3;
     }

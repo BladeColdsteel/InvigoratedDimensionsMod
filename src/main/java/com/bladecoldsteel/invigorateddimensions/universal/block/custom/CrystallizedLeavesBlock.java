@@ -113,52 +113,78 @@ public class CrystallizedLeavesBlock extends LeavesBlock {
                biomeKey.equals(new ResourceLocation("invigorated_dimensions", "electric_highlands_forest"));
     }
     private boolean isWaterBiome(ResourceLocation biomeKey) {
-        return biomeKey.equals(new ResourceLocation("invigorated_dimensions", "watery_rift"));
+        return biomeKey.equals(new ResourceLocation("invigorated_dimensions", "watery_rift")) ||
+                biomeKey.equals(new ResourceLocation("invigorated_dimensions", "watery_depths")) ||
+                biomeKey.equals(new ResourceLocation("invigorated_dimensions", "watery_depths_forest"));
     }
     private boolean isFireBiome(ResourceLocation biomeKey) {
         return biomeKey.equals(new ResourceLocation("invigorated_dimensions", "firey_rift"));
     }
     private boolean isGrassBiome(ResourceLocation biomeKey) {
-        return biomeKey.equals(new ResourceLocation("invigorated_dimensions", "grassy_rift"));
+        return biomeKey.equals(new ResourceLocation("invigorated_dimensions", "grassy_rift")) ||
+                biomeKey.equals(new ResourceLocation("invigorated_dimensions", "grassy_knoll")) ||
+                biomeKey.equals(new ResourceLocation("invigorated_dimensions", "grassy_knoll_forest"));
     }
     private boolean isIceBiome(ResourceLocation biomeKey) {
-        return biomeKey.equals(new ResourceLocation("invigorated_dimensions", "icey_rift"));
+        return biomeKey.equals(new ResourceLocation("invigorated_dimensions", "icey_rift")) ||
+                biomeKey.equals(new ResourceLocation("invigorated_dimensions", "deep_tundra")) ||
+                biomeKey.equals(new ResourceLocation("invigorated_dimensions", "deep_tundra_forest"));
     }
     private boolean isFightingBiome(ResourceLocation biomeKey) {
-        return biomeKey.equals(new ResourceLocation("invigorated_dimensions", "fighting_rift"));
+        return biomeKey.equals(new ResourceLocation("invigorated_dimensions", "fighting_rift")) ||
+                biomeKey.equals(new ResourceLocation("invigorated_dimensions", "infinite_dungeon"));
     }
     private boolean isPoisonBiome(ResourceLocation biomeKey) {
-        return biomeKey.equals(new ResourceLocation("invigorated_dimensions", "poison_rift"));
+        return biomeKey.equals(new ResourceLocation("invigorated_dimensions", "poison_rift")) ||
+                biomeKey.equals(new ResourceLocation("invigorated_dimensions", "corrosive_fields")) ||
+                biomeKey.equals(new ResourceLocation("invigorated_dimensions", "corrosive_fields_forest"));
     }
     private boolean isGroundBiome(ResourceLocation biomeKey) {
-        return biomeKey.equals(new ResourceLocation("invigorated_dimensions", "grounded_rift"));
+        return biomeKey.equals(new ResourceLocation("invigorated_dimensions", "grounded_rift")) ||
+                biomeKey.equals(new ResourceLocation("invigorated_dimensions", "terra_nata")) ||
+                biomeKey.equals(new ResourceLocation("invigorated_dimensions", "terra_nata_forest"));
     }
     private boolean isFlyingBiome(ResourceLocation biomeKey) {
-        return biomeKey.equals(new ResourceLocation("invigorated_dimensions", "flying_rift"));
+        return biomeKey.equals(new ResourceLocation("invigorated_dimensions", "flying_rift")) ||
+                biomeKey.equals(new ResourceLocation("invigorated_dimensions", "celestial_realm")) ||
+                biomeKey.equals(new ResourceLocation("invigorated_dimensions", "celestial_realm_forest"));
     }
     private boolean isPsychicBiome(ResourceLocation biomeKey) {
-        return biomeKey.equals(new ResourceLocation("invigorated_dimensions", "psychic_rift"));
+        return biomeKey.equals(new ResourceLocation("invigorated_dimensions", "psychic_rift")) ||
+                biomeKey.equals(new ResourceLocation("invigorated_dimensions", "dreamland")) ||
+                biomeKey.equals(new ResourceLocation("invigorated_dimensions", "dreamland_forest"));
     }
     private boolean isBugBiome(ResourceLocation biomeKey) {
-        return biomeKey.equals(new ResourceLocation("invigorated_dimensions", "buggy_rift"));
+        return biomeKey.equals(new ResourceLocation("invigorated_dimensions", "buggy_rift")) ||
+                biomeKey.equals(new ResourceLocation("invigorated_dimensions", "insectoid_paradisio")) ||
+                biomeKey.equals(new ResourceLocation("invigorated_dimensions", "insectoid_paradisio_forest"));
     }
     private boolean isRockBiome(ResourceLocation biomeKey) {
-        return biomeKey.equals(new ResourceLocation("invigorated_dimensions", "rocky_rift"));
+        return biomeKey.equals(new ResourceLocation("invigorated_dimensions", "rocky_rift")) ||
+                biomeKey.equals(new ResourceLocation("invigorated_dimensions", "cavernous_cove")) ||
+                biomeKey.equals(new ResourceLocation("invigorated_dimensions", "cavernous_cove_forest"));
     }
     private boolean isGhostBiome(ResourceLocation biomeKey) {
-        return biomeKey.equals(new ResourceLocation("invigorated_dimensions", "spooky_rift"));
+        return biomeKey.equals(new ResourceLocation("invigorated_dimensions", "spooky_rift")) ||
+                biomeKey.equals(new ResourceLocation("invigorated_dimensions", "ghastly_marsh"));
     }
     private boolean isDragonBiome(ResourceLocation biomeKey) {
         return biomeKey.equals(new ResourceLocation("invigorated_dimensions", "dragon_rift"));
     }
     private boolean isDarkBiome(ResourceLocation biomeKey) {
-        return biomeKey.equals(new ResourceLocation("invigorated_dimensions", "darkened_rift"));
+        return biomeKey.equals(new ResourceLocation("invigorated_dimensions", "darkened_rift")) ||
+                biomeKey.equals(new ResourceLocation("invigorated_dimensions", "valley_of_death")) ||
+                biomeKey.equals(new ResourceLocation("invigorated_dimensions", "valley_of_death_forest"));
     }
     private boolean isSteelBiome(ResourceLocation biomeKey) {
-        return biomeKey.equals(new ResourceLocation("invigorated_dimensions", "steely_rift"));
+        return biomeKey.equals(new ResourceLocation("invigorated_dimensions", "steely_rift")) ||
+                biomeKey.equals(new ResourceLocation("invigorated_dimensions", "metallic_mountains")) ||
+                biomeKey.equals(new ResourceLocation("invigorated_dimensions", "metallic_mountains_forest"));
     }
     private boolean isFairyBiome(ResourceLocation biomeKey) {
-        return biomeKey.equals(new ResourceLocation("invigorated_dimensions", "fairy_rift"));
+        return biomeKey.equals(new ResourceLocation("invigorated_dimensions", "fairy_rift")) ||
+                biomeKey.equals(new ResourceLocation("invigorated_dimensions", "feywild_expanse")) ||
+                biomeKey.equals(new ResourceLocation("invigorated_dimensions", "feywild_expanse_forest"));
     }
 
     private ItemStack saplingPerBiome(ResourceLocation biomeKey) {

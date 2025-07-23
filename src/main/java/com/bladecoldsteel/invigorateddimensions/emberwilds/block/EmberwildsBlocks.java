@@ -23,7 +23,7 @@ public class EmberwildsBlocks {
 
     public static final RegistryObject<Block> EMBERED_SAPLING = registerBlock("embered_sapling",
             () -> new SaplingBlock(new FireTreeStraight(), AbstractBlock.Properties.copy(Blocks.OAK_SAPLING)));
-    public static final RegistryObject<Block> EMBERED_LOG = registerBlock("embered_logs",
+    public static final RegistryObject<RotatedPillarBlock> EMBERED_LOG = registerBlock("embered_logs",
             () -> new RotatedPillarBlock(AbstractBlock.Properties.copy(Blocks.OAK_LOG)
                     .harvestTool(ToolType.AXE)));
 

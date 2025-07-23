@@ -21,7 +21,7 @@ public class MetallicMountainsBlocks {
 
     public static final RegistryObject<Block> METALLIC_SAPLING = registerBlock("metallic_sapling",
             () -> new SaplingBlock(new SteelTree(), AbstractBlock.Properties.copy(Blocks.OAK_SAPLING)));
-    public static final RegistryObject<Block> METALLIC_LOG = registerBlock("metallic_logs",
+    public static final RegistryObject<RotatedPillarBlock> METALLIC_LOG = registerBlock("metallic_logs",
             () -> new RotatedPillarBlock(AbstractBlock.Properties.copy(Blocks.JUNGLE_LOG)
                     .harvestTool(ToolType.AXE)));
 

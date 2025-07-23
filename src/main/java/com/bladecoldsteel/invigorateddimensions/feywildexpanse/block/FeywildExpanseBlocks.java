@@ -21,7 +21,7 @@ public class FeywildExpanseBlocks {
 
     public static final RegistryObject<Block> FEYAN_SAPLING = registerBlock("feyan_sapling",
             () -> new SaplingBlock(new FairyTree(), AbstractBlock.Properties.copy(Blocks.OAK_SAPLING)));
-    public static final RegistryObject<Block> FEYAN_LOG = registerBlock("feyan_logs",
+    public static final RegistryObject<RotatedPillarBlock> FEYAN_LOG = registerBlock("feyan_logs",
             () -> new RotatedPillarBlock(AbstractBlock.Properties.copy(Blocks.JUNGLE_LOG)
                     .harvestTool(ToolType.AXE)));
 

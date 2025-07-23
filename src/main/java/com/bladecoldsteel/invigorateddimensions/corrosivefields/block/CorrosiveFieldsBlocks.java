@@ -21,7 +21,7 @@ public class CorrosiveFieldsBlocks {
 
     public static final RegistryObject<Block> CORROSIVE_SAPLING = registerBlock("corrosive_sapling",
             () -> new SaplingBlock(new PoisonTree(), AbstractBlock.Properties.copy(Blocks.OAK_SAPLING)));
-    public static final RegistryObject<Block> CORROSIVE_LOG = registerBlock("corrosive_logs",
+    public static final RegistryObject<RotatedPillarBlock> CORROSIVE_LOG = registerBlock("corrosive_logs",
             () -> new RotatedPillarBlock(AbstractBlock.Properties.copy(Blocks.JUNGLE_LOG)
                     .harvestTool(ToolType.AXE)));
 

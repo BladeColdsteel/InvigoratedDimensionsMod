@@ -18,7 +18,7 @@ public class InfiniteDungeonBlocks {
     public static final DeferredRegister<Block> BLOCKS
             = DeferredRegister.create(ForgeRegistries.BLOCKS, InvigoratedDimensions.MOD_ID);
 
-    public static final RegistryObject<Block> TOUGH_LOG = registerBlock("tough_logs",
+    public static final RegistryObject<RotatedPillarBlock> TOUGH_LOG = registerBlock("tough_logs",
             () -> new RotatedPillarBlock(AbstractBlock.Properties.copy(Blocks.JUNGLE_LOG)
                     .harvestTool(ToolType.AXE)));
 

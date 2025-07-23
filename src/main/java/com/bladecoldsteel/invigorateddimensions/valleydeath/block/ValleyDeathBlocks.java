@@ -21,7 +21,7 @@ public class ValleyDeathBlocks {
 
     public static final RegistryObject<Block> DARKENED_SAPLING = registerBlock("darkened_sapling",
             () -> new SaplingBlock(new DarkTree(), AbstractBlock.Properties.copy(Blocks.DARK_OAK_SAPLING)));
-    public static final RegistryObject<Block> DARKENED_LOG = registerBlock("darkened_logs",
+    public static final RegistryObject<RotatedPillarBlock> DARKENED_LOG = registerBlock("darkened_logs",
             () -> new RotatedPillarBlock(AbstractBlock.Properties.copy(Blocks.JUNGLE_LOG)
                     .harvestTool(ToolType.AXE)));
 

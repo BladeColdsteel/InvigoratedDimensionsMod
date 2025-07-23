@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cross",
-  "textures": {
-    "cross": "invigorated_dimensions:block/icey_sapling"
-  }
-}

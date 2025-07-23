@@ -21,7 +21,7 @@ public class InsectoidParadisioBlocks {
 
     public static final RegistryObject<Block> BUGGED_SAPLING = registerBlock("bugged_sapling",
             () -> new SaplingBlock(new BugTree(), AbstractBlock.Properties.copy(Blocks.OAK_SAPLING)));
-    public static final RegistryObject<Block> BUGGED_LOG = registerBlock("bugged_logs",
+    public static final RegistryObject<RotatedPillarBlock> BUGGED_LOG = registerBlock("bugged_logs",
             () -> new RotatedPillarBlock(AbstractBlock.Properties.copy(Blocks.JUNGLE_LOG)
                     .harvestTool(ToolType.AXE)));
 

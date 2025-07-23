@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/template_trapdoor_open",
-  "textures": {
-    "texture": "invigorated_dimensions:block/electrically_charged_wooden_trapdoor"
-  }
-}

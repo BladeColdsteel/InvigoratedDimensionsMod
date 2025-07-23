@@ -22,7 +22,7 @@ public class GrassyKnollBlocks {
 
     public static final RegistryObject<Block> GRASSY_SAPLING = registerBlock("grassy_sapling",
             () -> new SaplingBlock(new GrassTree(), AbstractBlock.Properties.copy(Blocks.OAK_SAPLING)));
-    public static final RegistryObject<Block> GRASSY_LOG = registerBlock("grassy_logs",
+    public static final RegistryObject<RotatedPillarBlock> GRASSY_LOG = registerBlock("grassy_logs",
             () -> new RotatedPillarBlock(AbstractBlock.Properties.copy(Blocks.OAK_LOG)
                     .harvestTool(ToolType.AXE)));
 

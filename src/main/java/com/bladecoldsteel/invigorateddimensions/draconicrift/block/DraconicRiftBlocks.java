@@ -21,7 +21,7 @@ public class DraconicRiftBlocks {
 
     public static final RegistryObject<Block> DRACONIC_SAPLING = registerBlock("draconic_sapling",
             () -> new SaplingBlock(new DragonTree(), AbstractBlock.Properties.copy(Blocks.OAK_SAPLING)));
-    public static final RegistryObject<Block> DRACONIC_LOG = registerBlock("draconic_logs",
+    public static final RegistryObject<RotatedPillarBlock> DRACONIC_LOG = registerBlock("draconic_logs",
             () -> new RotatedPillarBlock(AbstractBlock.Properties.copy(Blocks.JUNGLE_LOG)
                     .harvestTool(ToolType.AXE)));
 
