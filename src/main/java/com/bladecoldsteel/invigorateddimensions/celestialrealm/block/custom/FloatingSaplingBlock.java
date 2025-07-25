@@ -14,6 +14,6 @@ public class FloatingSaplingBlock extends SaplingBlock {
 
     @Override
     protected boolean mayPlaceOn(BlockState state, IBlockReader worldIn, BlockPos pos) {
-        return state.is(HeavenlyRealmBlocks.FLOATING_STONE.get()) || super.mayPlaceOn(state, worldIn, pos);
+        return state.is(HeavenlyRealmBlocks.STONE.get()) || super.mayPlaceOn(state, worldIn, pos);
     }
 }

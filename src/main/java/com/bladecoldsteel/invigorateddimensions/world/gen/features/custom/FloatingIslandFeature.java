@@ -27,7 +27,7 @@ public class FloatingIslandFeature extends Feature<NoFeatureConfig> {
                 for(int xRadius = MathHelper.floor(-intRadius); xRadius <= MathHelper.ceil(intRadius); ++xRadius) {
                     for(int zRadius = MathHelper.floor(-intRadius); zRadius <= MathHelper.ceil(intRadius); ++zRadius) {
                         if ((float)(xRadius * xRadius + zRadius * zRadius) <= (intRadius + 1.0F) * (intRadius + 1.0F)) {
-                            this.setBlock(iSeedReader, pos.offset(xRadius, verticalLayer, zRadius), HeavenlyRealmBlocks.FLOATING_STONE.get().defaultBlockState());
+                            this.setBlock(iSeedReader, pos.offset(xRadius, verticalLayer, zRadius), HeavenlyRealmBlocks.STONE.get().defaultBlockState());
                         }
                     }
                 }

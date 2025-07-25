@@ -27,7 +27,7 @@ public class FlyingFeatures {
 
         public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> FLYING_TREE = CustomFeatures.STONE_TREE.get()
                 .configured(new BaseTreeFeatureConfig.Builder(
-                        new SimpleBlockStateProvider(HeavenlyRealmBlocks.FLOATING_LOG.get().defaultBlockState()),
+                        new SimpleBlockStateProvider(HeavenlyRealmBlocks.LOG.get().defaultBlockState()),
                         new SimpleBlockStateProvider(UniversalBlocks.CRYSTALLIZED_LEAVES.get().defaultBlockState()),
                         new BushFoliagePlacer(FeatureSpread.fixed(3), FeatureSpread.fixed(3), 3),
                         new StraightTrunkPlacer(1, 0, 1),
@@ -36,7 +36,7 @@ public class FlyingFeatures {
 
         public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> FLYING_TREE_CR = Feature.TREE.configured(
                 new BaseTreeFeatureConfig.Builder(
-                        new SimpleBlockStateProvider(HeavenlyRealmBlocks.FLOATING_LOG.get().defaultBlockState()),
+                        new SimpleBlockStateProvider(HeavenlyRealmBlocks.LOG.get().defaultBlockState()),
                         new SimpleBlockStateProvider(UniversalBlocks.CRYSTALLIZED_LEAVES.get().defaultBlockState()),
                         new BushFoliagePlacer(FeatureSpread.fixed(3), FeatureSpread.fixed(3), 3),
                         new StraightTrunkPlacer(1, 0, 1),
@@ -44,7 +44,7 @@ public class FlyingFeatures {
                         .ignoreVines().build());
 
         public static final ConfiguredFeature<?, ?> FLOATING_STONE_PATCH = Feature.ORE.configured(
-                new OreFeatureConfig(OVERWORLD_FILLER, HeavenlyRealmBlocks.FLOATING_STONE.get().defaultBlockState(), 44)
+                new OreFeatureConfig(OVERWORLD_FILLER, HeavenlyRealmBlocks.STONE.get().defaultBlockState(), 44)
         );
 
         public static final ConfiguredFeature<NoFeatureConfig, ?> FLOATING_STONE_ISLAND = CustomFeatures.FLOATING_STONE_ISLAND.get()

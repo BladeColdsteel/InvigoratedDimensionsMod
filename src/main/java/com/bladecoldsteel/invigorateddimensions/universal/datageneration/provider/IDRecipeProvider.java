@@ -15,15 +15,12 @@ import com.bladecoldsteel.invigorateddimensions.metallicmountains.block.Metallic
 import com.bladecoldsteel.invigorateddimensions.terranata.block.TerraNataBlocks;
 import com.bladecoldsteel.invigorateddimensions.valleydeath.block.ValleyDeathBlocks;
 import com.bladecoldsteel.invigorateddimensions.waterydepths.block.WateryDepthsBlocks;
-import net.minecraft.block.AbstractSignBlock;
 import net.minecraft.block.Block;
-import net.minecraft.block.StandingSignBlock;
 import net.minecraft.data.*;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.tags.ITag;
 import net.minecraft.util.IItemProvider;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.Tags;
@@ -433,115 +430,5 @@ public class IDRecipeProvider extends RecipeProvider {
     public SingleItemRecipeBuilder stonecuttingMultipleRecipe(Supplier<Block> input, IItemProvider result, int resultAmount) {
         return SingleItemRecipeBuilder.stonecutting(Ingredient.of(input.get()), result, resultAmount)
                 .unlocks("has_" + input.get().getRegistryName(), has(input.get()));
-    }
-
-    //Fire
-
-    //Water
-    public SingleItemRecipeBuilder waterStonecuttingRecipe(IItemProvider result) {
-        return stonecuttingSingleRecipe(WateryDepthsBlocks.WATERY_STONE, result);
-    }
-    public SingleItemRecipeBuilder waterStonecuttingRecipe(IItemProvider result, int resultAmount) {
-        return stonecuttingMultipleRecipe(WateryDepthsBlocks.WATERY_STONE, result, resultAmount);
-    }
-    //Grass
-    public SingleItemRecipeBuilder grassStonecuttingRecipe(IItemProvider result) {
-        return stonecuttingSingleRecipe(GrassyKnollBlocks.GRASSY_STONE, result);
-    }
-    public SingleItemRecipeBuilder grassStonecuttingRecipe(IItemProvider result, int resultAmount) {
-        return stonecuttingMultipleRecipe(GrassyKnollBlocks.GRASSY_STONE, result, resultAmount);
-    }
-    //Electric
-    public SingleItemRecipeBuilder electricStonecuttingRecipe(IItemProvider result) {
-        return stonecuttingSingleRecipe(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_STONE, result);
-    }
-    public SingleItemRecipeBuilder electricStonecuttingRecipe(IItemProvider result, int resultAmount) {
-        return stonecuttingMultipleRecipe(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_STONE, result, resultAmount);
-    }
-    //Psychic
-    public SingleItemRecipeBuilder psychicStonecuttingRecipe(IItemProvider result) {
-        return stonecuttingSingleRecipe(DreamlandBlocks.PSYCHEDELIC_STONE, result);
-    }
-    public SingleItemRecipeBuilder psychicStonecuttingRecipe(IItemProvider result, int resultAmount) {
-        return stonecuttingMultipleRecipe(DreamlandBlocks.PSYCHEDELIC_STONE, result, resultAmount);
-    }
-    //Fighting
-    public SingleItemRecipeBuilder fightingStonecuttingRecipe(IItemProvider result) {
-        return stonecuttingSingleRecipe(InfiniteDungeonBlocks.TOUGH_STONE, result);
-    }
-    public SingleItemRecipeBuilder fightingStonecuttingRecipe(IItemProvider result, int resultAmount) {
-        return stonecuttingMultipleRecipe(InfiniteDungeonBlocks.TOUGH_STONE, result, resultAmount);
-    }
-    //Ghost
-    public SingleItemRecipeBuilder ghostStonecuttingRecipe(IItemProvider result) {
-        return stonecuttingSingleRecipe(GhastlyMarshBlocks.SPOOKY_STONE, result);
-    }
-    public SingleItemRecipeBuilder ghostStonecuttingRecipe(IItemProvider result, int resultAmount) {
-        return stonecuttingMultipleRecipe(GhastlyMarshBlocks.SPOOKY_STONE, result, resultAmount);
-    }
-    //Steel
-    public SingleItemRecipeBuilder steelStonecuttingRecipe(IItemProvider result) {
-        return stonecuttingSingleRecipe(MetallicMountainsBlocks.METALLIC_STONE, result);
-    }
-    public SingleItemRecipeBuilder steelStonecuttingRecipe(IItemProvider result, int resultAmount) {
-        return stonecuttingMultipleRecipe(MetallicMountainsBlocks.METALLIC_STONE, result, resultAmount);
-    }
-    //Ice
-    public SingleItemRecipeBuilder iceStonecuttingRecipe(IItemProvider result) {
-        return stonecuttingSingleRecipe(DeepTundraBlocks.ICEY_STONE, result);
-    }
-    public SingleItemRecipeBuilder iceStonecuttingRecipe(IItemProvider result, int resultAmount) {
-        return stonecuttingMultipleRecipe(DeepTundraBlocks.ICEY_STONE, result, resultAmount);
-    }
-    //Dark
-    public SingleItemRecipeBuilder darkStonecuttingRecipe(IItemProvider result) {
-        return stonecuttingSingleRecipe(ValleyDeathBlocks.DARKENED_STONE, result);
-    }
-    public SingleItemRecipeBuilder darkStonecuttingRecipe(IItemProvider result, int resultAmount) {
-        return stonecuttingMultipleRecipe(ValleyDeathBlocks.DARKENED_STONE, result, resultAmount);
-    }
-    //Bug
-    public SingleItemRecipeBuilder bugStonecuttingRecipe(IItemProvider result) {
-        return stonecuttingSingleRecipe(InsectoidParadisioBlocks.BUGGED_STONE, result);
-    }
-    public SingleItemRecipeBuilder bugStonecuttingRecipe(IItemProvider result, int resultAmount) {
-        return stonecuttingMultipleRecipe(InsectoidParadisioBlocks.BUGGED_STONE, result, resultAmount);
-    }
-    //Fairy
-    public SingleItemRecipeBuilder fairyStonecuttingRecipe(IItemProvider result) {
-        return stonecuttingSingleRecipe(FeywildExpanseBlocks.FEYAN_STONE, result);
-    }
-    public SingleItemRecipeBuilder fairyStonecuttingRecipe(IItemProvider result, int resultAmount) {
-        return stonecuttingMultipleRecipe(FeywildExpanseBlocks.FEYAN_STONE, result, resultAmount);
-    }
-    //Poison
-    public SingleItemRecipeBuilder poisonStonecuttingRecipe(IItemProvider result) {
-        return stonecuttingSingleRecipe(CorrosiveFieldsBlocks.CORROSIVE_STONE, result);
-    }
-    public SingleItemRecipeBuilder poisonStonecuttingRecipe(IItemProvider result, int resultAmount) {
-        return stonecuttingMultipleRecipe(CorrosiveFieldsBlocks.CORROSIVE_STONE, result, resultAmount);
-    }
-    //Ground
-    public SingleItemRecipeBuilder groundStonecuttingRecipe(IItemProvider result) {
-        return stonecuttingSingleRecipe(TerraNataBlocks.GROUNDED_STONE, result);
-    }
-    public SingleItemRecipeBuilder groundStonecuttingRecipe(IItemProvider result, int resultAmount) {
-        return stonecuttingMultipleRecipe(TerraNataBlocks.GROUNDED_STONE, result, resultAmount);
-    }
-    //Rock
-    public SingleItemRecipeBuilder rockStonecuttingRecipe(IItemProvider result) {
-        return stonecuttingSingleRecipe(CavernousCoveBlocks.ROCKY_STONE, result);
-    }
-    public SingleItemRecipeBuilder rockStonecuttingRecipe(IItemProvider result, int resultAmount) {
-        return stonecuttingMultipleRecipe(CavernousCoveBlocks.ROCKY_STONE, result, resultAmount);
-    }
-    //Dragon
-
-    //Flying
-    public SingleItemRecipeBuilder flyingStonecuttingRecipe(IItemProvider result) {
-        return stonecuttingSingleRecipe(HeavenlyRealmBlocks.FLOATING_STONE, result);
-    }
-    public SingleItemRecipeBuilder flyingStonecuttingRecipe(IItemProvider result, int resultAmount) {
-        return stonecuttingMultipleRecipe(HeavenlyRealmBlocks.FLOATING_STONE, result, resultAmount);
     }
 }

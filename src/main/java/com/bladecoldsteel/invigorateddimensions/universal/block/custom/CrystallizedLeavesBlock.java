@@ -205,7 +205,7 @@ public class CrystallizedLeavesBlock extends LeavesBlock {
         } else if (isGroundBiome(biomeKey)) {
             return new ItemStack(TerraNataBlocks.GROUNDED_SAPLING.get());
         } else if (isFlyingBiome(biomeKey)) {
-            return new ItemStack(HeavenlyRealmBlocks.FLOATING_SAPLING.get());
+            return new ItemStack(HeavenlyRealmBlocks.SAPLING.get());
         } else if (isPsychicBiome(biomeKey)) {
             return new ItemStack(DreamlandBlocks.PSYCHEDELIC_SAPLING.get());
         } else if (isBugBiome(biomeKey)) {
@@ -238,7 +238,7 @@ public class CrystallizedLeavesBlock extends LeavesBlock {
                 new ItemStack(ValleyDeathBlocks.DARKENED_SAPLING.get()),
                 new ItemStack(FeywildExpanseBlocks.FEYAN_SAPLING.get()),
                 new ItemStack(TerraNataBlocks.GROUNDED_SAPLING.get()),
-                new ItemStack(HeavenlyRealmBlocks.FLOATING_SAPLING.get()),
+                new ItemStack(HeavenlyRealmBlocks.SAPLING.get()),
                 new ItemStack(DeepTundraBlocks.ICEY_SAPLING.get()),
                 new ItemStack(CorrosiveFieldsBlocks.CORROSIVE_SAPLING.get()),
                 new ItemStack(DreamlandBlocks.PSYCHEDELIC_SAPLING.get()),

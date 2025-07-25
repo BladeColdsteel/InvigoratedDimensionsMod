@@ -4,11 +4,13 @@ import com.bladecoldsteel.invigorateddimensions.InvigoratedDimensions;
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.block.custom.*;
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.item.ElectricHighlandsItemGroup;
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.item.ElectricHighlandsItems;
+import com.bladecoldsteel.invigorateddimensions.util.BlockHelper;
 import com.bladecoldsteel.invigorateddimensions.world.gen.features.trees.ElectricTree;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
@@ -18,6 +20,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import java.util.function.Supplier;
 
 public class ElectricHighlandsBlocks {
+    private static final ItemGroup TAB = ElectricHighlandsItemGroup.ELECTRIC_HIGHLANDS_GROUP;
     public static final DeferredRegister<Block> BLOCKS
             = DeferredRegister.create(ForgeRegistries.BLOCKS, InvigoratedDimensions.MOD_ID);
 
@@ -26,18 +29,26 @@ public class ElectricHighlandsBlocks {
 
     public static final RegistryObject<Block> ELECTRICALLY_CHARGED_SAPLING = registerBlock("electrically_charged_sapling",
             () -> new SaplingBlock(new ElectricTree(), AbstractBlock.Properties.copy(Blocks.OAK_SAPLING)));
-    public static final RegistryObject<RotatedPillarBlock> ELECTRICALLY_CHARGED_LOG = registerBlock("electrically_charged_logs",
-            () -> new RotatedPillarBlock(AbstractBlock.Properties.copy(Blocks.OAK_LOG)
-                    .harvestTool(ToolType.AXE)));
-    public static final RegistryObject<RotatedPillarBlock> ELECTRICALLY_CHARGED_WOOD = registerBlock("electrically_charged_wood",
-            () -> new RotatedPillarBlock(AbstractBlock.Properties.copy(Blocks.OAK_WOOD)
-                    .harvestTool(ToolType.AXE)));
-    public static final RegistryObject<RotatedPillarBlock> STRIPPED_ELECTRICALLY_CHARGED_LOG = registerBlock("stripped_electrically_charged_logs",
-            () -> new RotatedPillarBlock(AbstractBlock.Properties.copy(Blocks.STRIPPED_OAK_LOG)
-                    .harvestTool(ToolType.AXE)));
-    public static final RegistryObject<RotatedPillarBlock> STRIPPED_ELECTRICALLY_CHARGED_WOOD = registerBlock("stripped_electrically_charged_wood",
-            () -> new RotatedPillarBlock(AbstractBlock.Properties.copy(Blocks.STRIPPED_OAK_WOOD)
-                    .harvestTool(ToolType.AXE)));
+    public static final RegistryObject<RotatedPillarBlock> ELECTRICALLY_CHARGED_LOG = BlockHelper.register(
+            "electrically_charged_logs", BLOCKS, ElectricHighlandsItems.ITEMS,
+            BlockHelper.logBlock(2.0F),
+            TAB
+    );
+    public static final RegistryObject<RotatedPillarBlock> ELECTRICALLY_CHARGED_WOOD = BlockHelper.register(
+            "electrically_charged_wood", BLOCKS, ElectricHighlandsItems.ITEMS,
+            BlockHelper.logBlock(2.0F),
+            TAB
+    );
+    public static final RegistryObject<RotatedPillarBlock> STRIPPED_ELECTRICALLY_CHARGED_LOG = BlockHelper.register(
+            "stripped_electrically_charged_logs", BLOCKS, ElectricHighlandsItems.ITEMS,
+            BlockHelper.logBlock(2.0F),
+            TAB
+    );
+    public static final RegistryObject<RotatedPillarBlock> STRIPPED_ELECTRICALLY_CHARGED_WOOD = BlockHelper.register(
+            "stripped_electrically_charged_wood", BLOCKS, ElectricHighlandsItems.ITEMS,
+            BlockHelper.logBlock(2.0F),
+            TAB
+    );
 
     public static final RegistryObject<Block> ELECTRICALLY_CHARGED_PLANKS = registerBlock("electrically_charged_planks",
             () -> new Block(AbstractBlock.Properties.copy(Blocks.OAK_PLANKS)

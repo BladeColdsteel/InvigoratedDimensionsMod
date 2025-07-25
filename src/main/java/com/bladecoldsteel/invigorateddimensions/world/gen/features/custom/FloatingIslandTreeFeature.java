@@ -39,7 +39,7 @@ public class FloatingIslandTreeFeature extends Feature<BaseTreeFeatureConfig> {
     private static boolean isFloatingStone(IWorldGenerationBaseReader p_236418_0_, BlockPos p_236418_1_) {
         return p_236418_0_.isStateAtPosition(p_236418_1_, (p_236409_0_) -> {
             Block lvt_1_1_ = p_236409_0_.getBlock();
-            return lvt_1_1_ == HeavenlyRealmBlocks.FLOATING_STONE.get();
+            return lvt_1_1_ == HeavenlyRealmBlocks.STONE.get();
         });
     }
 

@@ -17,7 +17,6 @@ import com.bladecoldsteel.invigorateddimensions.infinitedungeon.block.InfiniteDu
 import com.bladecoldsteel.invigorateddimensions.insectoidparadisio.block.InsectoidParadisioBlocks;
 import com.bladecoldsteel.invigorateddimensions.metallicmountains.block.MetallicMountainsBlocks;
 import com.bladecoldsteel.invigorateddimensions.terranata.block.TerraNataBlocks;
-import com.bladecoldsteel.invigorateddimensions.universal.block.UniversalBlocks;
 import com.bladecoldsteel.invigorateddimensions.universal.datageneration.provider.IDBlockLootTableProvider;
 import com.bladecoldsteel.invigorateddimensions.valleydeath.block.ValleyDeathBlocks;
 import com.bladecoldsteel.invigorateddimensions.waterydepths.block.WateryDepthsBlocks;
@@ -40,7 +39,6 @@ import net.minecraft.loot.*;
 import net.minecraft.loot.conditions.ILootCondition;
 import net.minecraft.loot.conditions.KilledByPlayer;
 import net.minecraft.loot.conditions.MatchTool;
-import net.minecraft.loot.conditions.RandomChanceWithLooting;
 import net.minecraft.loot.functions.ExplosionDecay;
 import net.minecraft.loot.functions.LootingEnchantBonus;
 import net.minecraft.loot.functions.SetCount;
@@ -85,24 +83,78 @@ public class IDLootTables extends LootTableProvider {
         protected void addTables() {
             //Rock
                 //Wood
-            dropSelf(CavernousCoveBlocks.ROCKY_LOG);
+            dropSelf(CavernousCoveBlocks.LOG);
+            dropSelf(CavernousCoveBlocks.PLANKS);
+            //dropSelf(CavernousCoveBlocks.STRIPPED_ELECTRICALLY_CHARGED_LOG);
+            dropSelf(CavernousCoveBlocks.WOODEN_BUTTON);
+            dropSelf(CavernousCoveBlocks.WOODEN_STAIRS);
+            slab(CavernousCoveBlocks.WOODEN_SLAB);
+            dropSelf(CavernousCoveBlocks.WOODEN_PRESSURE_PLATE);
+            //dropSelf(CavernousCoveBlocks.ELECTRICALLY_CHARGED_WOODEN_TRAPDOOR);
+            //this.add(CavernousCoveBlocks.ELECTRICALLY_CHARGED_DOOR.get(), (block) -> createSinglePropConditionTable(block, DoorBlock.HALF, DoubleBlockHalf.LOWER));
+            dropSelf(CavernousCoveBlocks.WOOD);
+            //dropSelf(CavernousCoveBlocks.STRIPPED_ELECTRICALLY_CHARGED_WOOD);
+            dropSelf(CavernousCoveBlocks.FENCE);
+            dropSelf(CavernousCoveBlocks.FENCE_GATE);
+            //dropSelf(CavernousCoveBlocks.ELECTRICALLY_CHARGED_WOODEN_TRAPDOOR);
+            //dropSelf(CavernousCoveBlocks.ELECTRICALLY_CHARGED_SIGN);
+            //dropOther(CavernousCoveBlocks.ELECTRICALLY_CHARGED_WALL_SIGN, CavernousCoveBlocks.ELECTRICALLY_CHARGED_SIGN.get());
                 //Stone
-            dropSelf(CavernousCoveBlocks.ROCKY_COBBLESTONE);
-            dropOther(CavernousCoveBlocks.ROCKY_STONE, CavernousCoveBlocks.ROCKY_COBBLESTONE.get());
+            dropSelf(CavernousCoveBlocks.COBBLESTONE);
+            dropSelf(CavernousCoveBlocks.COBBLESTONE_WALL);
+            dropSelf(CavernousCoveBlocks.COBBLESTONE_STAIRS);
+            slab(CavernousCoveBlocks.COBBLESTONE_SLAB);
+            dropSelf(CavernousCoveBlocks.STONE_BRICKS);
+            slab(CavernousCoveBlocks.STONE_BRICKS_SLAB);
+            dropSelf(CavernousCoveBlocks.STONE_BRICKS_STAIRS);
+            dropSelf(CavernousCoveBlocks.STONE_BRICKS_WALL);
+            //dropSelf(CavernousCoveBlocks.ELECTRICALLY_CHARGED_CHISELED_STONE_BRICKS);
+            slab(CavernousCoveBlocks.STONE_SLAB);
+            dropSelf(CavernousCoveBlocks.STONE_STAIRS);
+            dropSelf(CavernousCoveBlocks.STONE_BUTTON);
+            dropSelf(CavernousCoveBlocks.STONE_PRESSURE_PLATE);
+            dropOther(CavernousCoveBlocks.STONE, CavernousCoveBlocks.COBBLESTONE.get());
                 //Ore
 
                 //Other
 
             //Flying
                 //Wood
-            dropSelf(HeavenlyRealmBlocks.FLOATING_LOG);
-                //Stone
-            dropSelf(HeavenlyRealmBlocks.FLOATING_COBBLESTONE);
-            dropOther(HeavenlyRealmBlocks.FLOATING_STONE, HeavenlyRealmBlocks.FLOATING_COBBLESTONE.get());
+            dropSelf(HeavenlyRealmBlocks.LOG);
+            dropSelf(HeavenlyRealmBlocks.PLANKS);
+            //dropSelf(HeavenlyRealmBlocks.STRIPPED_ELECTRICALLY_CHARGED_LOG);
+            dropSelf(HeavenlyRealmBlocks.WOODEN_BUTTON);
+            dropSelf(HeavenlyRealmBlocks.WOODEN_STAIRS);
+            slab(HeavenlyRealmBlocks.WOODEN_SLAB);
+            dropSelf(HeavenlyRealmBlocks.WOODEN_PRESSURE_PLATE);
+            //dropSelf(HeavenlyRealmBlocks.ELECTRICALLY_CHARGED_WOODEN_TRAPDOOR);
+            //this.add(HeavenlyRealmBlocks.ELECTRICALLY_CHARGED_DOOR.get(), (block) -> createSinglePropConditionTable(block, DoorBlock.HALF, DoubleBlockHalf.LOWER));
+            dropSelf(HeavenlyRealmBlocks.WOOD);
+            //dropSelf(HeavenlyRealmBlocks.STRIPPED_ELECTRICALLY_CHARGED_WOOD);
+            dropSelf(HeavenlyRealmBlocks.FENCE);
+            dropSelf(HeavenlyRealmBlocks.FENCE_GATE);
+            //dropSelf(HeavenlyRealmBlocks.ELECTRICALLY_CHARGED_WOODEN_TRAPDOOR);
+            //dropSelf(HeavenlyRealmBlocks.ELECTRICALLY_CHARGED_SIGN);
+            //dropOther(HeavenlyRealmBlocks.ELECTRICALLY_CHARGED_WALL_SIGN, HeavenlyRealmBlocks.ELECTRICALLY_CHARGED_SIGN.get());
+            //Stone
+            dropSelf(HeavenlyRealmBlocks.COBBLESTONE);
+            dropSelf(HeavenlyRealmBlocks.COBBLESTONE_WALL);
+            dropSelf(HeavenlyRealmBlocks.COBBLESTONE_STAIRS);
+            slab(HeavenlyRealmBlocks.COBBLESTONE_SLAB);
+            dropSelf(HeavenlyRealmBlocks.STONE_BRICKS);
+            slab(HeavenlyRealmBlocks.STONE_BRICKS_SLAB);
+            dropSelf(HeavenlyRealmBlocks.STONE_BRICKS_STAIRS);
+            dropSelf(HeavenlyRealmBlocks.STONE_BRICKS_WALL);
+            //dropSelf(HeavenlyRealmBlocks.ELECTRICALLY_CHARGED_CHISELED_STONE_BRICKS);
+            slab(HeavenlyRealmBlocks.STONE_SLAB);
+            dropSelf(HeavenlyRealmBlocks.STONE_STAIRS);
+            dropSelf(HeavenlyRealmBlocks.STONE_BUTTON);
+            dropSelf(HeavenlyRealmBlocks.STONE_PRESSURE_PLATE);
+            dropOther(HeavenlyRealmBlocks.STONE, HeavenlyRealmBlocks.COBBLESTONE.get());
                 //Ore
 
                 //Other
-            dropSelf(HeavenlyRealmBlocks.FLOATING_SAPLING);
+            dropSelf(HeavenlyRealmBlocks.SAPLING);
             //Poison
                 //Wood
             dropSelf(CorrosiveFieldsBlocks.CORROSIVE_LOG);

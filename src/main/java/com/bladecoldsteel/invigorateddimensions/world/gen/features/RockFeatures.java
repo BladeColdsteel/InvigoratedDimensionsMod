@@ -19,10 +19,10 @@ public class RockFeatures {
         static final RuleTest OVERWORLD_FILLER = new TagMatchRuleTest(Tags.Blocks.STONE);
 
         public static final ConfiguredFeature<?, ?> ROCKY_LOG_PATCH = Feature.ORE.configured(
-                new OreFeatureConfig(OVERWORLD_FILLER, CavernousCoveBlocks.ROCKY_LOG.get().defaultBlockState(), 33)
+                new OreFeatureConfig(OVERWORLD_FILLER, CavernousCoveBlocks.LOG.get().defaultBlockState(), 33)
         );
         public static final ConfiguredFeature<?, ?> ROCKY_STONE_PATCH = Feature.ORE.configured(
-                new OreFeatureConfig(OVERWORLD_FILLER, CavernousCoveBlocks.ROCKY_STONE.get().defaultBlockState(), 33)
+                new OreFeatureConfig(OVERWORLD_FILLER, CavernousCoveBlocks.STONE.get().defaultBlockState(), 33)
         );
     }
 
