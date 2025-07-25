@@ -218,7 +218,7 @@ public class ElementalShrineScreen extends ContainerScreen<ElementalShrineContai
 
             this.addButton(button);
             dimensionButtonMap.put(button, id);
-            buttonY += 22;
+            buttonY += 20;
         }
     }
 

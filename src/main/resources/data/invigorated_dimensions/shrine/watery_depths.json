@@ -1,0 +1,15 @@
+{
+  "dimension": "invigorated_dimensions:watery_depths",
+  "display_item": "invigorated_dimensions:watery_stone",
+  "name": "Watery Depths",
+  "color": 2906554,
+  "recipe": [
+    {"item":  "invigorated_dimensions:watery_stone", "count": 4},
+    {"item":  "invigorated_dimensions:watery_cobblestone", "count": 2},
+    {"item":  "minecraft:diamond", "count": 3},
+    {"item":  "invigorated_dimensions:water_essence", "count": 10}
+  ],
+  "portal_unlock_conditions": {
+    "mob_kill": "minecraft:zombie"
+  }
+}
