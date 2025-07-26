@@ -27,7 +27,7 @@ public class PoisonFeatures {
 
         public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CORROSIVE_TREE = Feature.TREE.configured(
                 new BaseTreeFeatureConfig.Builder(
-                        new SimpleBlockStateProvider(CorrosiveFieldsBlocks.CORROSIVE_LOG.get().defaultBlockState()),
+                        new SimpleBlockStateProvider(CorrosiveFieldsBlocks.LOG.get().defaultBlockState()),
                         new SimpleBlockStateProvider(UniversalBlocks.CRYSTALLIZED_LEAVES.get().defaultBlockState()),
                         new BushFoliagePlacer(FeatureSpread.fixed(2), FeatureSpread.fixed(0), 2),
                         new StraightTrunkPlacer(4, 2, 1),
@@ -35,7 +35,7 @@ public class PoisonFeatures {
                         .decorators(ImmutableList.of(LeaveVineTreeDecorator.INSTANCE)).build());
 
         public static final ConfiguredFeature<?, ?> CORROSIVE_STONE_PATCH = Feature.ORE.configured(
-                new OreFeatureConfig(OVERWORLD_FILLER, CorrosiveFieldsBlocks.CORROSIVE_STONE.get().defaultBlockState(), 33)
+                new OreFeatureConfig(OVERWORLD_FILLER, CorrosiveFieldsBlocks.STONE.get().defaultBlockState(), 33)
         );
     }
 

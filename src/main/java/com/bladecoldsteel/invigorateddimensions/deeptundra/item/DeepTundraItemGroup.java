@@ -8,7 +8,7 @@ public class DeepTundraItemGroup {
     public static final ItemGroup ICEY_RIFT_GROUP = new ItemGroup("invigorated_dimensions_icy_mod_tab") {
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(DeepTundraBlocks.ICEY_LOG.get());
+            return new ItemStack(DeepTundraBlocks.LOG.get());
         }
     };
 }

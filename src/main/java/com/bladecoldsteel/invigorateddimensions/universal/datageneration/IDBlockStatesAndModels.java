@@ -42,6 +42,8 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
         block(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_PLANKS);
         block(CavernousCoveBlocks.PLANKS);
         block(HeavenlyRealmBlocks.PLANKS);
+        block(CorrosiveFieldsBlocks.PLANKS);
+        block(DeepTundraBlocks.PLANKS);
         //Logs
         log(InsectoidParadisioBlocks.BUGGED_LOG, "bugged_logs");
         log(ValleyDeathBlocks.DARKENED_LOG, "darkened_logs");
@@ -54,8 +56,8 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
         log(GhastlyMarshBlocks.SPOOKY_LOG, "spooky_logs");
         log(GrassyKnollBlocks.GRASSY_LOG, "grassy_logs");
         log(TerraNataBlocks.GROUNDED_LOG, "grounded_logs");
-        log(DeepTundraBlocks.ICEY_LOG, "icey_logs");
-        log(CorrosiveFieldsBlocks.CORROSIVE_LOG, "corrosive_logs");
+        log(DeepTundraBlocks.LOG, "icey_logs");
+        log(CorrosiveFieldsBlocks.LOG, "corrosive_logs");
         log(DreamlandBlocks.PSYCHEDELIC_LOG, "psychedelic_logs");
         log(CavernousCoveBlocks.LOG, "rocky_logs");
         log(MetallicMountainsBlocks.METALLIC_LOG, "metallic_logs");
@@ -66,6 +68,8 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
         uniformLog(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_WOOD, "electrically_charged_logs_side");
         uniformLog(CavernousCoveBlocks.WOOD, "rocky_logs_side");
         uniformLog(HeavenlyRealmBlocks.WOOD, "floating_logs_side");
+        uniformLog(CorrosiveFieldsBlocks.WOOD, "corrosive_logs_side");
+        uniformLog(DeepTundraBlocks.WOOD, "icey_logs_side");
         //Stripped Wood
         uniformLog(ElectricHighlandsBlocks.STRIPPED_ELECTRICALLY_CHARGED_WOOD, "stripped_electrically_charged_logs_side");
         //Stone
@@ -78,8 +82,8 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
         block(GhastlyMarshBlocks.SPOOKY_STONE);
         block(GrassyKnollBlocks.GRASSY_STONE);
         block(TerraNataBlocks.GROUNDED_STONE);
-        block(DeepTundraBlocks.ICEY_STONE);
-        block(CorrosiveFieldsBlocks.CORROSIVE_STONE);
+        block(DeepTundraBlocks.STONE);
+        block(CorrosiveFieldsBlocks.STONE);
         block(DreamlandBlocks.PSYCHEDELIC_STONE);
         block(CavernousCoveBlocks.STONE);
         block(MetallicMountainsBlocks.METALLIC_STONE);
@@ -94,8 +98,8 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
         block(GhastlyMarshBlocks.SPOOKY_COBBLESTONE);
         block(GrassyKnollBlocks.GRASSY_COBBLESTONE);
         block(TerraNataBlocks.GROUNDED_COBBLESTONE);
-        block(DeepTundraBlocks.ICEY_COBBLESTONE);
-        block(CorrosiveFieldsBlocks.CORROSIVE_COBBLESTONE);
+        block(DeepTundraBlocks.COBBLESTONE);
+        block(CorrosiveFieldsBlocks.COBBLESTONE);
         block(DreamlandBlocks.PSYCHEDELIC_COBBLESTONE);
         block(CavernousCoveBlocks.COBBLESTONE);
         block(MetallicMountainsBlocks.METALLIC_COBBLESTONE);
@@ -104,6 +108,8 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
         block(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_STONE_BRICKS);
         block(CavernousCoveBlocks.STONE_BRICKS);
         block(HeavenlyRealmBlocks.STONE_BRICKS);
+        block(CorrosiveFieldsBlocks.STONE_BRICKS);
+        block(DeepTundraBlocks.STONE_BRICKS);
         //Chiseled Stone Bricks
         block(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_CHISELED_STONE_BRICKS);
         //Walls
@@ -113,14 +119,22 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
         wallBlock(CavernousCoveBlocks.STONE_BRICKS_WALL.get(), modLoc("block/rocky_stone_bricks"));
         wallBlock(HeavenlyRealmBlocks.COBBLESTONE_WALL.get(), modLoc("block/floating_cobblestone"));
         wallBlock(HeavenlyRealmBlocks.STONE_BRICKS_WALL.get(), modLoc("block/floating_stone_bricks"));
+        wallBlock(CorrosiveFieldsBlocks.COBBLESTONE_WALL.get(), modLoc("block/corrosive_cobblestone"));
+        wallBlock(CorrosiveFieldsBlocks.STONE_BRICKS_WALL.get(), modLoc("block/corrosive_stone_bricks"));
+        wallBlock(DeepTundraBlocks.COBBLESTONE_WALL.get(), modLoc("block/icey_cobblestone"));
+        wallBlock(DeepTundraBlocks.STONE_BRICKS_WALL.get(), modLoc("block/icey_stone_bricks"));
         //Fences
         fence(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_FENCE, ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_PLANKS);
         fence(CavernousCoveBlocks.FENCE, CavernousCoveBlocks.PLANKS);
         fence(HeavenlyRealmBlocks.FENCE, HeavenlyRealmBlocks.PLANKS);
+        fence(CorrosiveFieldsBlocks.FENCE, CorrosiveFieldsBlocks.PLANKS);
+        fence(DeepTundraBlocks.FENCE, DeepTundraBlocks.PLANKS);
         //Fence Gates
         fenceGateBlock(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_FENCE_GATE.get(), modLoc("block/electrically_charged_planks"));
         fenceGateBlock(CavernousCoveBlocks.FENCE_GATE.get(), modLoc("block/rocky_planks"));
         fenceGateBlock(HeavenlyRealmBlocks.FENCE_GATE.get(), modLoc("block/floating_planks"));
+        fenceGateBlock(CorrosiveFieldsBlocks.FENCE_GATE.get(), modLoc("block/corrosive_planks"));
+        fenceGateBlock(DeepTundraBlocks.FENCE_GATE.get(), modLoc("block/icey_planks"));
         //Ores
         block(ElectricHighlandsBlocks.CHARGED_COAL_ORE);
         block(ElectricHighlandsBlocks.CHARGED_IRON_ORE);
@@ -141,6 +155,14 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
         stairs(HeavenlyRealmBlocks.COBBLESTONE_STAIRS, HeavenlyRealmBlocks.COBBLESTONE);
         stairs(HeavenlyRealmBlocks.STONE_STAIRS, HeavenlyRealmBlocks.STONE);
         stairs(HeavenlyRealmBlocks.STONE_BRICKS_STAIRS, HeavenlyRealmBlocks.STONE_BRICKS);
+        stairs(CorrosiveFieldsBlocks.WOODEN_STAIRS, CorrosiveFieldsBlocks.PLANKS);
+        stairs(CorrosiveFieldsBlocks.COBBLESTONE_STAIRS, CorrosiveFieldsBlocks.COBBLESTONE);
+        stairs(CorrosiveFieldsBlocks.STONE_STAIRS, CorrosiveFieldsBlocks.STONE);
+        stairs(CorrosiveFieldsBlocks.STONE_BRICKS_STAIRS, CorrosiveFieldsBlocks.STONE_BRICKS);
+        stairs(DeepTundraBlocks.WOODEN_STAIRS, DeepTundraBlocks.PLANKS);
+        stairs(DeepTundraBlocks.COBBLESTONE_STAIRS, DeepTundraBlocks.COBBLESTONE);
+        stairs(DeepTundraBlocks.STONE_STAIRS, DeepTundraBlocks.STONE);
+        stairs(DeepTundraBlocks.STONE_BRICKS_STAIRS, DeepTundraBlocks.STONE_BRICKS);
         //Slabs
         slab(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_WOODEN_SLAB, ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_PLANKS);
         slab(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_COBBLESTONE_SLABS, ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_COBBLESTONE);
@@ -154,6 +176,14 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
         slab(HeavenlyRealmBlocks.COBBLESTONE_SLAB, HeavenlyRealmBlocks.COBBLESTONE);
         slab(HeavenlyRealmBlocks.STONE_SLAB, HeavenlyRealmBlocks.STONE);
         slab(HeavenlyRealmBlocks.STONE_BRICKS_SLAB, HeavenlyRealmBlocks.STONE_BRICKS);
+        slab(CorrosiveFieldsBlocks.WOODEN_SLAB, CorrosiveFieldsBlocks.PLANKS);
+        slab(CorrosiveFieldsBlocks.COBBLESTONE_SLAB, CorrosiveFieldsBlocks.COBBLESTONE);
+        slab(CorrosiveFieldsBlocks.STONE_SLAB, CorrosiveFieldsBlocks.STONE);
+        slab(CorrosiveFieldsBlocks.STONE_BRICKS_SLAB, CorrosiveFieldsBlocks.STONE_BRICKS);
+        slab(DeepTundraBlocks.WOODEN_SLAB, DeepTundraBlocks.PLANKS);
+        slab(DeepTundraBlocks.COBBLESTONE_SLAB, DeepTundraBlocks.COBBLESTONE);
+        slab(DeepTundraBlocks.STONE_SLAB, DeepTundraBlocks.STONE);
+        slab(DeepTundraBlocks.STONE_BRICKS_SLAB, DeepTundraBlocks.STONE_BRICKS);
         //Doors
         door(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_DOOR, "electrically_charged");
         //Trapdoors
@@ -169,8 +199,8 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
         crossBlock(GhastlyMarshBlocks.SPOOKY_SAPLING);
         crossBlock(GrassyKnollBlocks.GRASSY_SAPLING);
         crossBlock(TerraNataBlocks.GROUNDED_SAPLING);
-        crossBlock(DeepTundraBlocks.ICEY_SAPLING);
-        crossBlock(CorrosiveFieldsBlocks.CORROSIVE_SAPLING);
+        crossBlock(DeepTundraBlocks.SAPLING);
+        crossBlock(CorrosiveFieldsBlocks.SAPLING);
         crossBlock(DreamlandBlocks.PSYCHEDELIC_SAPLING);
         crossBlock(MetallicMountainsBlocks.METALLIC_SAPLING);
         crossBlock(WateryDepthsBlocks.WATERY_SAPLING);
@@ -181,6 +211,10 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
         button(CavernousCoveBlocks.STONE_BUTTON, CavernousCoveBlocks.STONE);
         button(HeavenlyRealmBlocks.WOODEN_BUTTON, HeavenlyRealmBlocks.PLANKS);
         button(HeavenlyRealmBlocks.STONE_BUTTON, HeavenlyRealmBlocks.STONE);
+        button(CorrosiveFieldsBlocks.WOODEN_BUTTON, CorrosiveFieldsBlocks.PLANKS);
+        button(CorrosiveFieldsBlocks.STONE_BUTTON, CorrosiveFieldsBlocks.STONE);
+        button(DeepTundraBlocks.WOODEN_BUTTON, DeepTundraBlocks.PLANKS);
+        button(DeepTundraBlocks.STONE_BUTTON, DeepTundraBlocks.STONE);
         //Pressure Plate
         pressurePlate(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_WOODEN_PRESSURE_PLATE, ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_PLANKS);
         pressurePlate(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_STONE_PRESSURE_PLATE, ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_STONE);
@@ -188,6 +222,10 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
         pressurePlate(CavernousCoveBlocks.STONE_PRESSURE_PLATE, CavernousCoveBlocks.STONE);
         pressurePlate(HeavenlyRealmBlocks.WOODEN_PRESSURE_PLATE, HeavenlyRealmBlocks.PLANKS);
         pressurePlate(HeavenlyRealmBlocks.STONE_PRESSURE_PLATE, HeavenlyRealmBlocks.STONE);
+        pressurePlate(CorrosiveFieldsBlocks.WOODEN_PRESSURE_PLATE, CorrosiveFieldsBlocks.PLANKS);
+        pressurePlate(CorrosiveFieldsBlocks.STONE_PRESSURE_PLATE, CorrosiveFieldsBlocks.STONE);
+        pressurePlate(DeepTundraBlocks.WOODEN_PRESSURE_PLATE, DeepTundraBlocks.PLANKS);
+        pressurePlate(DeepTundraBlocks.STONE_PRESSURE_PLATE, DeepTundraBlocks.STONE);
         //Portal Frame
         block(ElectricHighlandsBlocks.HIGHLANDS_PORTAL_FRAME);
     }

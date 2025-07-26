@@ -197,11 +197,11 @@ public class CrystallizedLeavesBlock extends LeavesBlock {
         } else if (isGrassBiome(biomeKey)) {
             return new ItemStack(GrassyKnollBlocks.GRASSY_SAPLING.get());
         } else if (isIceBiome(biomeKey)) {
-            return new ItemStack(DeepTundraBlocks.ICEY_SAPLING.get());
+            return new ItemStack(DeepTundraBlocks.SAPLING.get());
         } else if (isFightingBiome(biomeKey)) {
             return randomSapling();
         } else if (isPoisonBiome(biomeKey)) {
-            return new ItemStack(CorrosiveFieldsBlocks.CORROSIVE_SAPLING.get());
+            return new ItemStack(CorrosiveFieldsBlocks.SAPLING.get());
         } else if (isGroundBiome(biomeKey)) {
             return new ItemStack(TerraNataBlocks.GROUNDED_SAPLING.get());
         } else if (isFlyingBiome(biomeKey)) {
@@ -239,8 +239,8 @@ public class CrystallizedLeavesBlock extends LeavesBlock {
                 new ItemStack(FeywildExpanseBlocks.FEYAN_SAPLING.get()),
                 new ItemStack(TerraNataBlocks.GROUNDED_SAPLING.get()),
                 new ItemStack(HeavenlyRealmBlocks.SAPLING.get()),
-                new ItemStack(DeepTundraBlocks.ICEY_SAPLING.get()),
-                new ItemStack(CorrosiveFieldsBlocks.CORROSIVE_SAPLING.get()),
+                new ItemStack(DeepTundraBlocks.SAPLING.get()),
+                new ItemStack(CorrosiveFieldsBlocks.SAPLING.get()),
                 new ItemStack(DreamlandBlocks.PSYCHEDELIC_SAPLING.get()),
                 new ItemStack(GhastlyMarshBlocks.SPOOKY_SAPLING.get()),
                 new ItemStack(MetallicMountainsBlocks.METALLIC_SAPLING.get())

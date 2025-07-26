@@ -157,24 +157,78 @@ public class IDLootTables extends LootTableProvider {
             dropSelf(HeavenlyRealmBlocks.SAPLING);
             //Poison
                 //Wood
-            dropSelf(CorrosiveFieldsBlocks.CORROSIVE_LOG);
+            dropSelf(CorrosiveFieldsBlocks.LOG);
+            dropSelf(CorrosiveFieldsBlocks.PLANKS);
+            //dropSelf(CorrosiveFieldsBlocks.STRIPPED_ELECTRICALLY_CHARGED_LOG);
+            dropSelf(CorrosiveFieldsBlocks.WOODEN_BUTTON);
+            dropSelf(CorrosiveFieldsBlocks.WOODEN_STAIRS);
+            slab(CorrosiveFieldsBlocks.WOODEN_SLAB);
+            dropSelf(CorrosiveFieldsBlocks.WOODEN_PRESSURE_PLATE);
+            //dropSelf(CorrosiveFieldsBlocks.ELECTRICALLY_CHARGED_WOODEN_TRAPDOOR);
+            //this.add(CorrosiveFieldsBlocks.ELECTRICALLY_CHARGED_DOOR.get(), (block) -> createSinglePropConditionTable(block, DoorBlock.HALF, DoubleBlockHalf.LOWER));
+            dropSelf(CorrosiveFieldsBlocks.WOOD);
+            //dropSelf(CorrosiveFieldsBlocks.STRIPPED_ELECTRICALLY_CHARGED_WOOD);
+            dropSelf(CorrosiveFieldsBlocks.FENCE);
+            dropSelf(CorrosiveFieldsBlocks.FENCE_GATE);
+            //dropSelf(CorrosiveFieldsBlocks.ELECTRICALLY_CHARGED_WOODEN_TRAPDOOR);
+            //dropSelf(CorrosiveFieldsBlocks.ELECTRICALLY_CHARGED_SIGN);
+            //dropOther(CorrosiveFieldsBlocks.ELECTRICALLY_CHARGED_WALL_SIGN, CorrosiveFieldsBlocks.ELECTRICALLY_CHARGED_SIGN.get());
                 //Stone
-            dropSelf(CorrosiveFieldsBlocks.CORROSIVE_COBBLESTONE);
-            dropOther(CorrosiveFieldsBlocks.CORROSIVE_STONE, CorrosiveFieldsBlocks.CORROSIVE_COBBLESTONE.get());
+            dropSelf(CorrosiveFieldsBlocks.COBBLESTONE);
+            dropSelf(CorrosiveFieldsBlocks.COBBLESTONE_WALL);
+            dropSelf(CorrosiveFieldsBlocks.COBBLESTONE_STAIRS);
+            slab(CorrosiveFieldsBlocks.COBBLESTONE_SLAB);
+            dropSelf(CorrosiveFieldsBlocks.STONE_BRICKS);
+            slab(CorrosiveFieldsBlocks.STONE_BRICKS_SLAB);
+            dropSelf(CorrosiveFieldsBlocks.STONE_BRICKS_STAIRS);
+            dropSelf(CorrosiveFieldsBlocks.STONE_BRICKS_WALL);
+            //dropSelf(CorrosiveFieldsBlocks.ELECTRICALLY_CHARGED_CHISELED_STONE_BRICKS);
+            slab(CorrosiveFieldsBlocks.STONE_SLAB);
+            dropSelf(CorrosiveFieldsBlocks.STONE_STAIRS);
+            dropSelf(CorrosiveFieldsBlocks.STONE_BUTTON);
+            dropSelf(CorrosiveFieldsBlocks.STONE_PRESSURE_PLATE);
+            dropOther(CorrosiveFieldsBlocks.STONE, CorrosiveFieldsBlocks.COBBLESTONE.get());
                 //Ore
 
                 //Other
-            dropSelf(CorrosiveFieldsBlocks.CORROSIVE_SAPLING);
+            dropSelf(CorrosiveFieldsBlocks.SAPLING);
             //Ice
                 //Wood
-            dropSelf(DeepTundraBlocks.ICEY_LOG);
+            dropSelf(DeepTundraBlocks.LOG);
+            dropSelf(DeepTundraBlocks.PLANKS);
+            //dropSelf(DeepTundraBlocks.STRIPPED_ELECTRICALLY_CHARGED_LOG);
+            dropSelf(DeepTundraBlocks.WOODEN_BUTTON);
+            dropSelf(DeepTundraBlocks.WOODEN_STAIRS);
+            slab(DeepTundraBlocks.WOODEN_SLAB);
+            dropSelf(DeepTundraBlocks.WOODEN_PRESSURE_PLATE);
+            //dropSelf(DeepTundraBlocks.ELECTRICALLY_CHARGED_WOODEN_TRAPDOOR);
+            //this.add(DeepTundraBlocks.ELECTRICALLY_CHARGED_DOOR.get(), (block) -> createSinglePropConditionTable(block, DoorBlock.HALF, DoubleBlockHalf.LOWER));
+            dropSelf(DeepTundraBlocks.WOOD);
+            //dropSelf(DeepTundraBlocks.STRIPPED_ELECTRICALLY_CHARGED_WOOD);
+            dropSelf(DeepTundraBlocks.FENCE);
+            dropSelf(DeepTundraBlocks.FENCE_GATE);
+            //dropSelf(DeepTundraBlocks.ELECTRICALLY_CHARGED_WOODEN_TRAPDOOR);
+            //dropSelf(DeepTundraBlocks.ELECTRICALLY_CHARGED_SIGN);
+            //dropOther(DeepTundraBlocks.ELECTRICALLY_CHARGED_WALL_SIGN, DeepTundraBlocks.ELECTRICALLY_CHARGED_SIGN.get());
                 //Stone
-            dropSelf(DeepTundraBlocks.ICEY_COBBLESTONE);
-            dropOther(DeepTundraBlocks.ICEY_STONE, DeepTundraBlocks.ICEY_COBBLESTONE.get());
+            dropSelf(DeepTundraBlocks.COBBLESTONE);
+            dropSelf(DeepTundraBlocks.COBBLESTONE_WALL);
+            dropSelf(DeepTundraBlocks.COBBLESTONE_STAIRS);
+            slab(DeepTundraBlocks.COBBLESTONE_SLAB);
+            dropSelf(DeepTundraBlocks.STONE_BRICKS);
+            slab(DeepTundraBlocks.STONE_BRICKS_SLAB);
+            dropSelf(DeepTundraBlocks.STONE_BRICKS_STAIRS);
+            dropSelf(DeepTundraBlocks.STONE_BRICKS_WALL);
+            //dropSelf(DeepTundraBlocks.ELECTRICALLY_CHARGED_CHISELED_STONE_BRICKS);
+            slab(DeepTundraBlocks.STONE_SLAB);
+            dropSelf(DeepTundraBlocks.STONE_STAIRS);
+            dropSelf(DeepTundraBlocks.STONE_BUTTON);
+            dropSelf(DeepTundraBlocks.STONE_PRESSURE_PLATE);
+            dropOther(DeepTundraBlocks.STONE, DeepTundraBlocks.COBBLESTONE.get());
                 //Ore
 
                 //Other
-            dropSelf(DeepTundraBlocks.ICEY_SAPLING);
+            dropSelf(DeepTundraBlocks.SAPLING);
             //Dragon
                 //Wood
             dropSelf(DraconicRiftBlocks.DRACONIC_LOG);

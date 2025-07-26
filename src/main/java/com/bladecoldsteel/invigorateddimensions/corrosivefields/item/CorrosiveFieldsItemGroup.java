@@ -8,7 +8,7 @@ public class CorrosiveFieldsItemGroup {
     public static final ItemGroup CORROSIVE_RIFT_GROUP = new ItemGroup("invigorated_dimensions_corrosive_mod_tab") {
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(CorrosiveFieldsBlocks.CORROSIVE_LOG.get());
+            return new ItemStack(CorrosiveFieldsBlocks.LOG.get());
         }
     };
 }

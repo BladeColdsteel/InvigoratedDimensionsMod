@@ -391,10 +391,10 @@ public class InvigoratedDimensions
         RenderTypeLookup.setRenderLayer(HeavenlyRealmBlocks.SAPLING.get(), RenderType.cutout());
 
         //Ice
-        RenderTypeLookup.setRenderLayer(DeepTundraBlocks.ICEY_SAPLING.get(), RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(DeepTundraBlocks.SAPLING.get(), RenderType.cutout());
 
         //Poison
-        RenderTypeLookup.setRenderLayer(CorrosiveFieldsBlocks.CORROSIVE_SAPLING.get(), RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(CorrosiveFieldsBlocks.SAPLING.get(), RenderType.cutout());
 
         //Psychic
         RenderTypeLookup.setRenderLayer(DreamlandBlocks.PSYCHEDELIC_SAPLING.get(), RenderType.cutout());

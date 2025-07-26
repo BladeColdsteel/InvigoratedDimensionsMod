@@ -100,18 +100,68 @@ public class IDRecipes extends IDRecipeProvider {
         smeltingRecipe(HeavenlyRealmBlocks.STONE.get(), HeavenlyRealmBlocks.COBBLESTONE.get(), 0.7F).save(consumer, name("smelt_floating_cobblestone"));
         //Poison
             //Wooden
-
+        makePlanks(CorrosiveFieldsBlocks.PLANKS, CorrosiveFieldsBlocks.LOG).save(consumer);
+        makeWood(CorrosiveFieldsBlocks.WOOD, CorrosiveFieldsBlocks.LOG).save(consumer);
+        makeStairs(CorrosiveFieldsBlocks.WOODEN_STAIRS, CorrosiveFieldsBlocks.PLANKS).save(consumer);
+        makeSlab(CorrosiveFieldsBlocks.WOODEN_SLAB, CorrosiveFieldsBlocks.PLANKS).save(consumer);
+        makeFence(CorrosiveFieldsBlocks.FENCE, CorrosiveFieldsBlocks.PLANKS).save(consumer);
+        makeFenceGate(CorrosiveFieldsBlocks.FENCE_GATE, CorrosiveFieldsBlocks.PLANKS).save(consumer);
+        makeButton(CorrosiveFieldsBlocks.WOODEN_BUTTON, CorrosiveFieldsBlocks.PLANKS).save(consumer);
+        makePressurePlate(CorrosiveFieldsBlocks.WOODEN_PRESSURE_PLATE, CorrosiveFieldsBlocks.PLANKS).save(consumer);
             //Stone
-
+        makeBricks(CorrosiveFieldsBlocks.STONE_BRICKS, CorrosiveFieldsBlocks.STONE).save(consumer);
+        makeStairs(CorrosiveFieldsBlocks.STONE_STAIRS, CorrosiveFieldsBlocks.STONE).save(consumer);
+        makeStairs(CorrosiveFieldsBlocks.COBBLESTONE_STAIRS, CorrosiveFieldsBlocks.COBBLESTONE).save(consumer);
+        makeStairs(CorrosiveFieldsBlocks.STONE_BRICKS_STAIRS, CorrosiveFieldsBlocks.STONE_BRICKS).save(consumer);
+        makeSlab(CorrosiveFieldsBlocks.COBBLESTONE_SLAB, CorrosiveFieldsBlocks.COBBLESTONE).save(consumer);
+        makeSlab(CorrosiveFieldsBlocks.STONE_SLAB, CorrosiveFieldsBlocks.STONE).save(consumer);
+        makeSlab(CorrosiveFieldsBlocks.STONE_BRICKS_SLAB, CorrosiveFieldsBlocks.STONE_BRICKS).save(consumer);
+        makeWall(CorrosiveFieldsBlocks.COBBLESTONE_WALL, CorrosiveFieldsBlocks.COBBLESTONE).save(consumer);
+        makeWall(CorrosiveFieldsBlocks.STONE_BRICKS_WALL, CorrosiveFieldsBlocks.STONE_BRICKS).save(consumer);
+        makeButton(CorrosiveFieldsBlocks.STONE_BUTTON, CorrosiveFieldsBlocks.STONE).save(consumer);
+        makePressurePlate(CorrosiveFieldsBlocks.STONE_PRESSURE_PLATE, CorrosiveFieldsBlocks.STONE).save(consumer);
+        stonecuttingSingleRecipe(CorrosiveFieldsBlocks.STONE, CorrosiveFieldsBlocks.STONE_BRICKS.get()).save(consumer, name("corrosive_stone_brick_stonecutting"));
+        stonecuttingSingleRecipe(CorrosiveFieldsBlocks.STONE, CorrosiveFieldsBlocks.STONE_STAIRS.get()).save(consumer, name("corrosive_stone_stairs_stonecutting"));
+        stonecuttingSingleRecipe(CorrosiveFieldsBlocks.STONE, CorrosiveFieldsBlocks.STONE_BRICKS_STAIRS.get()).save(consumer, name("corrosive_stone_brick_stairs_stonecutting"));
+        stonecuttingMultipleRecipe(CorrosiveFieldsBlocks.STONE, CorrosiveFieldsBlocks.STONE_SLAB.get(), 2).save(consumer, name("corrosive_stone_slabs_stonecutting"));
+        stonecuttingMultipleRecipe(CorrosiveFieldsBlocks.STONE, CorrosiveFieldsBlocks.STONE_BRICKS_SLAB.get(), 2).save(consumer, name("corrosive_stone_brick_slabs_stonecutting_stone"));
+        stonecuttingMultipleRecipe(CorrosiveFieldsBlocks.STONE_BRICKS, CorrosiveFieldsBlocks.STONE_BRICKS_SLAB.get(), 2).save(consumer, name("corrosive_stone_brick_slabs_stonecutting_stone_brick"));
+        stonecuttingMultipleRecipe(CorrosiveFieldsBlocks.COBBLESTONE, CorrosiveFieldsBlocks.COBBLESTONE_SLAB.get(), 2).save(consumer, name("corrosive_cobblestone_slabs_stonecutting"));
+        stonecuttingSingleRecipe(CorrosiveFieldsBlocks.COBBLESTONE, CorrosiveFieldsBlocks.COBBLESTONE_STAIRS.get()).save(consumer, name("corrosive_cobblestone_stairs_stonecutting"));
             //Smelting
-        smeltingRecipe(CorrosiveFieldsBlocks.CORROSIVE_STONE.get(), CorrosiveFieldsBlocks.CORROSIVE_COBBLESTONE.get(), 0.7F).save(consumer, name("smelt_corrosive_cobblestone"));
+        smeltingRecipe(CorrosiveFieldsBlocks.STONE.get(), CorrosiveFieldsBlocks.COBBLESTONE.get(), 0.7F).save(consumer, name("smelt_corrosive_cobblestone"));
         //Ice
             //Wooden
-
+        makePlanks(DeepTundraBlocks.PLANKS, DeepTundraBlocks.LOG).save(consumer);
+        makeWood(DeepTundraBlocks.WOOD, DeepTundraBlocks.LOG).save(consumer);
+        makeStairs(DeepTundraBlocks.WOODEN_STAIRS, DeepTundraBlocks.PLANKS).save(consumer);
+        makeSlab(DeepTundraBlocks.WOODEN_SLAB, DeepTundraBlocks.PLANKS).save(consumer);
+        makeFence(DeepTundraBlocks.FENCE, DeepTundraBlocks.PLANKS).save(consumer);
+        makeFenceGate(DeepTundraBlocks.FENCE_GATE, DeepTundraBlocks.PLANKS).save(consumer);
+        makeButton(DeepTundraBlocks.WOODEN_BUTTON, DeepTundraBlocks.PLANKS).save(consumer);
+        makePressurePlate(DeepTundraBlocks.WOODEN_PRESSURE_PLATE, DeepTundraBlocks.PLANKS).save(consumer);
             //Stone
-
+        makeBricks(DeepTundraBlocks.STONE_BRICKS, DeepTundraBlocks.STONE).save(consumer);
+        makeStairs(DeepTundraBlocks.STONE_STAIRS, DeepTundraBlocks.STONE).save(consumer);
+        makeStairs(DeepTundraBlocks.COBBLESTONE_STAIRS, DeepTundraBlocks.COBBLESTONE).save(consumer);
+        makeStairs(DeepTundraBlocks.STONE_BRICKS_STAIRS, DeepTundraBlocks.STONE_BRICKS).save(consumer);
+        makeSlab(DeepTundraBlocks.COBBLESTONE_SLAB, DeepTundraBlocks.COBBLESTONE).save(consumer);
+        makeSlab(DeepTundraBlocks.STONE_SLAB, DeepTundraBlocks.STONE).save(consumer);
+        makeSlab(DeepTundraBlocks.STONE_BRICKS_SLAB, DeepTundraBlocks.STONE_BRICKS).save(consumer);
+        makeWall(DeepTundraBlocks.COBBLESTONE_WALL, DeepTundraBlocks.COBBLESTONE).save(consumer);
+        makeWall(DeepTundraBlocks.STONE_BRICKS_WALL, DeepTundraBlocks.STONE_BRICKS).save(consumer);
+        makeButton(DeepTundraBlocks.STONE_BUTTON, DeepTundraBlocks.STONE).save(consumer);
+        makePressurePlate(DeepTundraBlocks.STONE_PRESSURE_PLATE, DeepTundraBlocks.STONE).save(consumer);
+        stonecuttingSingleRecipe(DeepTundraBlocks.STONE, DeepTundraBlocks.STONE_BRICKS.get()).save(consumer, name("icey_stone_brick_stonecutting"));
+        stonecuttingSingleRecipe(DeepTundraBlocks.STONE, DeepTundraBlocks.STONE_STAIRS.get()).save(consumer, name("icey_stone_stairs_stonecutting"));
+        stonecuttingSingleRecipe(DeepTundraBlocks.STONE, DeepTundraBlocks.STONE_BRICKS_STAIRS.get()).save(consumer, name("icey_stone_brick_stairs_stonecutting"));
+        stonecuttingMultipleRecipe(DeepTundraBlocks.STONE, DeepTundraBlocks.STONE_SLAB.get(), 2).save(consumer, name("icey_stone_slabs_stonecutting"));
+        stonecuttingMultipleRecipe(DeepTundraBlocks.STONE, DeepTundraBlocks.STONE_BRICKS_SLAB.get(), 2).save(consumer, name("icey_stone_brick_slabs_stonecutting_stone"));
+        stonecuttingMultipleRecipe(DeepTundraBlocks.STONE_BRICKS, DeepTundraBlocks.STONE_BRICKS_SLAB.get(), 2).save(consumer, name("icey_stone_brick_slabs_stonecutting_stone_brick"));
+        stonecuttingMultipleRecipe(DeepTundraBlocks.COBBLESTONE, DeepTundraBlocks.COBBLESTONE_SLAB.get(), 2).save(consumer, name("icey_cobblestone_slabs_stonecutting"));
+        stonecuttingSingleRecipe(DeepTundraBlocks.COBBLESTONE, DeepTundraBlocks.COBBLESTONE_STAIRS.get()).save(consumer, name("icey_cobblestone_stairs_stonecutting"));
             //Smelting
-        smeltingRecipe(DeepTundraBlocks.ICEY_STONE.get(), DeepTundraBlocks.ICEY_COBBLESTONE.get(), 0.7F).save(consumer, name("smelt_icey_cobblestone"));
+        smeltingRecipe(DeepTundraBlocks.STONE.get(), DeepTundraBlocks.COBBLESTONE.get(), 0.7F).save(consumer, name("smelt_icey_cobblestone"));
         //Dragon
             //Wooden
 

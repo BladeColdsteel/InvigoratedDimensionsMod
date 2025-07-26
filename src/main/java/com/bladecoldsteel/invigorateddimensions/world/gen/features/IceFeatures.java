@@ -11,7 +11,6 @@ import net.minecraft.world.gen.blockstateprovider.SimpleBlockStateProvider;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.template.RuleTest;
 import net.minecraft.world.gen.feature.template.TagMatchRuleTest;
-import net.minecraft.world.gen.foliageplacer.AcaciaFoliagePlacer;
 import net.minecraft.world.gen.foliageplacer.BushFoliagePlacer;
 import net.minecraft.world.gen.placement.AtSurfaceWithExtraConfig;
 import net.minecraft.world.gen.placement.Placement;
@@ -28,7 +27,7 @@ public class IceFeatures {
 
         public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ICEY_TREE = Feature.TREE.configured(
                 new BaseTreeFeatureConfig.Builder(
-                        new SimpleBlockStateProvider(DeepTundraBlocks.ICEY_LOG.get().defaultBlockState()),
+                        new SimpleBlockStateProvider(DeepTundraBlocks.LOG.get().defaultBlockState()),
                         new SimpleBlockStateProvider(UniversalBlocks.CRYSTALLIZED_LEAVES.get().defaultBlockState()),
                         new BushFoliagePlacer(FeatureSpread.fixed(2), FeatureSpread.fixed(2), 2),
                         new ForkyTrunkPlacer(2, 1, 3),
@@ -36,7 +35,7 @@ public class IceFeatures {
                         .ignoreVines().build());
 
         public static final ConfiguredFeature<?, ?> ICEY_STONE_PATCH = Feature.ORE.configured(
-                new OreFeatureConfig(OVERWORLD_FILLER, DeepTundraBlocks.ICEY_STONE.get().defaultBlockState(), 33)
+                new OreFeatureConfig(OVERWORLD_FILLER, DeepTundraBlocks.STONE.get().defaultBlockState(), 33)
         );
         public static final ConfiguredFeature<?, ?> ICE_PATCH = Feature.ORE.configured(
                 new OreFeatureConfig(OVERWORLD_FILLER, Blocks.ICE.defaultBlockState(), 33)
