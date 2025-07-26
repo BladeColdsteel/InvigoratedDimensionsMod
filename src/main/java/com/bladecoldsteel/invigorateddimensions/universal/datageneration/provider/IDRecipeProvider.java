@@ -84,6 +84,25 @@ public class IDRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_" + reg.getPath(), has(obj));
     }
 
+    public ShapelessRecipeBuilder makeMinecraftButton(Supplier<? extends Block> buttonOut, Block blockIn) {
+        Block obj = blockIn;
+        ResourceLocation reg = ForgeRegistries.BLOCKS.getKey(obj);
+        if (reg == null) throw new IllegalStateException("Block not registered: " + obj);
+        return ShapelessRecipeBuilder.shapeless(buttonOut.get())
+                .requires(obj)
+                .unlockedBy("has_" + reg.getPath(), has(obj));
+    }
+
+    public ShapedRecipeBuilder makeMinecraftPressurePlate(Supplier<? extends Block> pressurePlatOut, Block blockIn) {
+        Block obj = blockIn;
+        ResourceLocation reg = ForgeRegistries.BLOCKS.getKey(obj);
+        if (reg == null) throw new IllegalStateException("Block not registered: " + obj);
+        return ShapedRecipeBuilder.shaped(pressurePlatOut.get())
+                .pattern("BB")
+                .define('B', obj)
+                .unlockedBy("has_" + reg.getPath(), has(obj));
+    }
+
     public ShapedRecipeBuilder makeStairs(Supplier<? extends Block> stairsOut, Supplier<? extends Block> blockIn) {
         Block obj = blockIn.get();
         ResourceLocation reg = ForgeRegistries.BLOCKS.getKey(obj);
