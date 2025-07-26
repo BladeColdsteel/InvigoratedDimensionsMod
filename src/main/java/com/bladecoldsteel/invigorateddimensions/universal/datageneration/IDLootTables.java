@@ -268,14 +268,41 @@ public class IDLootTables extends LootTableProvider {
             dropSelf(DraconicRiftBlocks.SAPLING);
             //Psychic
                 //Wood
-            dropSelf(DreamlandBlocks.PSYCHEDELIC_LOG);
-                //Stone
-            dropSelf(DreamlandBlocks.PSYCHEDELIC_COBBLESTONE);
-            dropOther(DreamlandBlocks.PSYCHEDELIC_STONE, DreamlandBlocks.PSYCHEDELIC_COBBLESTONE.get());
+            dropSelf(DreamlandBlocks.LOG);
+            dropSelf(DreamlandBlocks.PLANKS);
+            //dropSelf(DreamlandBlocks.STRIPPED_ELECTRICALLY_CHARGED_LOG);
+            dropSelf(DreamlandBlocks.WOODEN_BUTTON);
+            dropSelf(DreamlandBlocks.WOODEN_STAIRS);
+            slab(DreamlandBlocks.WOODEN_SLAB);
+            dropSelf(DreamlandBlocks.WOODEN_PRESSURE_PLATE);
+            //dropSelf(DreamlandBlocks.ELECTRICALLY_CHARGED_WOODEN_TRAPDOOR);
+            //this.add(DreamlandBlocks.ELECTRICALLY_CHARGED_DOOR.get(), (block) -> createSinglePropConditionTable(block, DoorBlock.HALF, DoubleBlockHalf.LOWER));
+            dropSelf(DreamlandBlocks.WOOD);
+            //dropSelf(DreamlandBlocks.STRIPPED_ELECTRICALLY_CHARGED_WOOD);
+            dropSelf(DreamlandBlocks.FENCE);
+            dropSelf(DreamlandBlocks.FENCE_GATE);
+            //dropSelf(DreamlandBlocks.ELECTRICALLY_CHARGED_WOODEN_TRAPDOOR);
+            //dropSelf(DreamlandBlocks.ELECTRICALLY_CHARGED_SIGN);
+            //dropOther(DreamlandBlocks.ELECTRICALLY_CHARGED_WALL_SIGN, DreamlandBlocks.ELECTRICALLY_CHARGED_SIGN.get());
+            //Stone
+            dropSelf(DreamlandBlocks.COBBLESTONE);
+            dropSelf(DreamlandBlocks.COBBLESTONE_WALL);
+            dropSelf(DreamlandBlocks.COBBLESTONE_STAIRS);
+            slab(DreamlandBlocks.COBBLESTONE_SLAB);
+            dropSelf(DreamlandBlocks.STONE_BRICKS);
+            slab(DreamlandBlocks.STONE_BRICKS_SLAB);
+            dropSelf(DreamlandBlocks.STONE_BRICKS_STAIRS);
+            dropSelf(DreamlandBlocks.STONE_BRICKS_WALL);
+            //dropSelf(DreamlandBlocks.ELECTRICALLY_CHARGED_CHISELED_STONE_BRICKS);
+            slab(DreamlandBlocks.STONE_SLAB);
+            dropSelf(DreamlandBlocks.STONE_STAIRS);
+            dropSelf(DreamlandBlocks.STONE_BUTTON);
+            dropSelf(DreamlandBlocks.STONE_PRESSURE_PLATE);
+            dropOther(DreamlandBlocks.STONE, DreamlandBlocks.COBBLESTONE.get());
                 //Ore
 
                 //Other
-            dropSelf(DreamlandBlocks.PSYCHEDELIC_SAPLING);
+            dropSelf(DreamlandBlocks.SAPLING);
             //Electric
                 //Wood
             dropSelf(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_LOG);

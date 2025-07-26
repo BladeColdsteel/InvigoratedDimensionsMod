@@ -397,7 +397,7 @@ public class InvigoratedDimensions
         RenderTypeLookup.setRenderLayer(CorrosiveFieldsBlocks.SAPLING.get(), RenderType.cutout());
 
         //Psychic
-        RenderTypeLookup.setRenderLayer(DreamlandBlocks.PSYCHEDELIC_SAPLING.get(), RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(DreamlandBlocks.SAPLING.get(), RenderType.cutout());
 
         //Rock
 

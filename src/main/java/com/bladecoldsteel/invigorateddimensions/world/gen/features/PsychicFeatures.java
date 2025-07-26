@@ -26,7 +26,7 @@ public class PsychicFeatures {
 
         public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PSYCHIC_TREE = Feature.TREE.configured(
                 new BaseTreeFeatureConfig.Builder(
-                        new SimpleBlockStateProvider(DreamlandBlocks.PSYCHEDELIC_LOG.get().defaultBlockState()),
+                        new SimpleBlockStateProvider(DreamlandBlocks.LOG.get().defaultBlockState()),
                         new SimpleBlockStateProvider(UniversalBlocks.CRYSTALLIZED_LEAVES.get().defaultBlockState()),
                         new BushFoliagePlacer(FeatureSpread.fixed(1), FeatureSpread.fixed(0), 1),
                         new FancyTrunkPlacer(6, 4, 7),
@@ -34,7 +34,7 @@ public class PsychicFeatures {
                         .ignoreVines().build());
 
         public static final ConfiguredFeature<?, ?> PSYCHIC_STONE_PATCH = Feature.ORE.configured(
-                new OreFeatureConfig(OVERWORLD_FILLER, DreamlandBlocks.PSYCHEDELIC_STONE.get().defaultBlockState(), 33)
+                new OreFeatureConfig(OVERWORLD_FILLER, DreamlandBlocks.STONE.get().defaultBlockState(), 33)
         );
     }
 

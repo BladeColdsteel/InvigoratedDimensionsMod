@@ -180,11 +180,36 @@ public class IDRecipes extends IDRecipeProvider {
 
         //Psychic
             //Wooden
-
+        makePlanks(DreamlandBlocks.PLANKS, DreamlandBlocks.LOG).save(consumer);
+        makeWood(DreamlandBlocks.WOOD, DreamlandBlocks.LOG).save(consumer);
+        makeStairs(DreamlandBlocks.WOODEN_STAIRS, DreamlandBlocks.PLANKS).save(consumer);
+        makeSlab(DreamlandBlocks.WOODEN_SLAB, DreamlandBlocks.PLANKS).save(consumer);
+        makeFence(DreamlandBlocks.FENCE, DreamlandBlocks.PLANKS).save(consumer);
+        makeFenceGate(DreamlandBlocks.FENCE_GATE, DreamlandBlocks.PLANKS).save(consumer);
+        makeButton(DreamlandBlocks.WOODEN_BUTTON, DreamlandBlocks.PLANKS).save(consumer);
+        makePressurePlate(DreamlandBlocks.WOODEN_PRESSURE_PLATE, DreamlandBlocks.PLANKS).save(consumer);
             //Stone
-
+        makeBricks(DreamlandBlocks.STONE_BRICKS, DreamlandBlocks.STONE).save(consumer);
+        makeStairs(DreamlandBlocks.STONE_STAIRS, DreamlandBlocks.STONE).save(consumer);
+        makeStairs(DreamlandBlocks.COBBLESTONE_STAIRS, DreamlandBlocks.COBBLESTONE).save(consumer);
+        makeStairs(DreamlandBlocks.STONE_BRICKS_STAIRS, DreamlandBlocks.STONE_BRICKS).save(consumer);
+        makeSlab(DreamlandBlocks.COBBLESTONE_SLAB, DreamlandBlocks.COBBLESTONE).save(consumer);
+        makeSlab(DreamlandBlocks.STONE_SLAB, DreamlandBlocks.STONE).save(consumer);
+        makeSlab(DreamlandBlocks.STONE_BRICKS_SLAB, DreamlandBlocks.STONE_BRICKS).save(consumer);
+        makeWall(DreamlandBlocks.COBBLESTONE_WALL, DreamlandBlocks.COBBLESTONE).save(consumer);
+        makeWall(DreamlandBlocks.STONE_BRICKS_WALL, DreamlandBlocks.STONE_BRICKS).save(consumer);
+        makeButton(DreamlandBlocks.STONE_BUTTON, DreamlandBlocks.STONE).save(consumer);
+        makePressurePlate(DreamlandBlocks.STONE_PRESSURE_PLATE, DreamlandBlocks.STONE).save(consumer);
+        stonecuttingSingleRecipe(DreamlandBlocks.STONE, DreamlandBlocks.STONE_BRICKS.get()).save(consumer, name("psychedelic_stone_brick_stonecutting"));
+        stonecuttingSingleRecipe(DreamlandBlocks.STONE, DreamlandBlocks.STONE_STAIRS.get()).save(consumer, name("psychedelic_stone_stairs_stonecutting"));
+        stonecuttingSingleRecipe(DreamlandBlocks.STONE, DreamlandBlocks.STONE_BRICKS_STAIRS.get()).save(consumer, name("psychedelic_stone_brick_stairs_stonecutting"));
+        stonecuttingMultipleRecipe(DreamlandBlocks.STONE, DreamlandBlocks.STONE_SLAB.get(), 2).save(consumer, name("psychedelic_stone_slabs_stonecutting"));
+        stonecuttingMultipleRecipe(DreamlandBlocks.STONE, DreamlandBlocks.STONE_BRICKS_SLAB.get(), 2).save(consumer, name("psychedelic_stone_brick_slabs_stonecutting_stone"));
+        stonecuttingMultipleRecipe(DreamlandBlocks.STONE_BRICKS, DreamlandBlocks.STONE_BRICKS_SLAB.get(), 2).save(consumer, name("psychedelic_stone_brick_slabs_stonecutting_stone_brick"));
+        stonecuttingMultipleRecipe(DreamlandBlocks.COBBLESTONE, DreamlandBlocks.COBBLESTONE_SLAB.get(), 2).save(consumer, name("psychedelic_cobblestone_slabs_stonecutting"));
+        stonecuttingSingleRecipe(DreamlandBlocks.COBBLESTONE, DreamlandBlocks.COBBLESTONE_STAIRS.get()).save(consumer, name("psychedelic_cobblestone_stairs_stonecutting"));
             //Smelting
-        smeltingRecipe(DreamlandBlocks.PSYCHEDELIC_STONE.get(), DreamlandBlocks.PSYCHEDELIC_COBBLESTONE.get(), 0.7F).save(consumer, name("smelt_psychedelic_cobblestone"));
+        smeltingRecipe(DreamlandBlocks.STONE.get(), DreamlandBlocks.COBBLESTONE.get(), 0.7F).save(consumer, name("smelt_psychedelic_cobblestone"));
         //Electric
             //Wooden
         makePlanks(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_PLANKS, ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_LOG).save(consumer);
