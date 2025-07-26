@@ -28,7 +28,7 @@ public class DragonFeatures {
 
         public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> DRACONIC_TREE = Feature.TREE.configured(
                 new BaseTreeFeatureConfig.Builder(
-                    new SimpleBlockStateProvider(DraconicRiftBlocks.DRACONIC_LOG.get().defaultBlockState()),
+                    new SimpleBlockStateProvider(DraconicRiftBlocks.LOG.get().defaultBlockState()),
                     new SimpleBlockStateProvider(UniversalBlocks.CRYSTALLIZED_LEAVES.get().defaultBlockState()),
                     new JungleFoliagePlacer(FeatureSpread.fixed(1), FeatureSpread.fixed(0), 2),
                     new MegaJungleTrunkPlacer(13, 5, 12),

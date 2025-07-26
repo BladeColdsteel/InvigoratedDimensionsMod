@@ -18,10 +18,13 @@ import com.bladecoldsteel.invigorateddimensions.terranata.block.TerraNataBlocks;
 import com.bladecoldsteel.invigorateddimensions.universal.datageneration.provider.IDBlockstateProvider;
 import com.bladecoldsteel.invigorateddimensions.valleydeath.block.ValleyDeathBlocks;
 import com.bladecoldsteel.invigorateddimensions.waterydepths.block.WateryDepthsBlocks;
+import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
 import javax.annotation.Nonnull;
+import java.util.function.Supplier;
 
 public class IDBlockStatesAndModels extends IDBlockstateProvider {
     public IDBlockStatesAndModels(DataGenerator generator, ExistingFileHelper fileHelper) {
@@ -44,10 +47,11 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
         block(HeavenlyRealmBlocks.PLANKS);
         block(CorrosiveFieldsBlocks.PLANKS);
         block(DeepTundraBlocks.PLANKS);
+        block(DraconicRiftBlocks.PLANKS);
         //Logs
         log(InsectoidParadisioBlocks.BUGGED_LOG, "bugged_logs");
         log(ValleyDeathBlocks.DARKENED_LOG, "darkened_logs");
-        log(DraconicRiftBlocks.DRACONIC_LOG, "draconic_logs");
+        log(DraconicRiftBlocks.LOG, "draconic_logs");
         log(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_LOG, "electrically_charged_logs");
         log(FeywildExpanseBlocks.FEYAN_LOG, "feyan_logs");
         log(InfiniteDungeonBlocks.TOUGH_LOG, "tough_logs");
@@ -70,6 +74,7 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
         uniformLog(HeavenlyRealmBlocks.WOOD, "floating_logs_side");
         uniformLog(CorrosiveFieldsBlocks.WOOD, "corrosive_logs_side");
         uniformLog(DeepTundraBlocks.WOOD, "icey_logs_side");
+        uniformLog(DraconicRiftBlocks.WOOD, "draconic_logs_side");
         //Stripped Wood
         uniformLog(ElectricHighlandsBlocks.STRIPPED_ELECTRICALLY_CHARGED_WOOD, "stripped_electrically_charged_logs_side");
         //Stone
@@ -129,12 +134,14 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
         fence(HeavenlyRealmBlocks.FENCE, HeavenlyRealmBlocks.PLANKS);
         fence(CorrosiveFieldsBlocks.FENCE, CorrosiveFieldsBlocks.PLANKS);
         fence(DeepTundraBlocks.FENCE, DeepTundraBlocks.PLANKS);
+        fence(DraconicRiftBlocks.FENCE, DraconicRiftBlocks.PLANKS);
         //Fence Gates
         fenceGateBlock(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_FENCE_GATE.get(), modLoc("block/electrically_charged_planks"));
         fenceGateBlock(CavernousCoveBlocks.FENCE_GATE.get(), modLoc("block/rocky_planks"));
         fenceGateBlock(HeavenlyRealmBlocks.FENCE_GATE.get(), modLoc("block/floating_planks"));
         fenceGateBlock(CorrosiveFieldsBlocks.FENCE_GATE.get(), modLoc("block/corrosive_planks"));
         fenceGateBlock(DeepTundraBlocks.FENCE_GATE.get(), modLoc("block/icey_planks"));
+        fenceGateBlock(DraconicRiftBlocks.FENCE_GATE.get(), modLoc("block/draconic_planks"));
         //Ores
         block(ElectricHighlandsBlocks.CHARGED_COAL_ORE);
         block(ElectricHighlandsBlocks.CHARGED_IRON_ORE);
@@ -163,6 +170,7 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
         stairs(DeepTundraBlocks.COBBLESTONE_STAIRS, DeepTundraBlocks.COBBLESTONE);
         stairs(DeepTundraBlocks.STONE_STAIRS, DeepTundraBlocks.STONE);
         stairs(DeepTundraBlocks.STONE_BRICKS_STAIRS, DeepTundraBlocks.STONE_BRICKS);
+        stairs(DraconicRiftBlocks.WOODEN_STAIRS, DraconicRiftBlocks.PLANKS);
         //Slabs
         slab(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_WOODEN_SLAB, ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_PLANKS);
         slab(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_COBBLESTONE_SLABS, ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_COBBLESTONE);
@@ -184,6 +192,7 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
         slab(DeepTundraBlocks.COBBLESTONE_SLAB, DeepTundraBlocks.COBBLESTONE);
         slab(DeepTundraBlocks.STONE_SLAB, DeepTundraBlocks.STONE);
         slab(DeepTundraBlocks.STONE_BRICKS_SLAB, DeepTundraBlocks.STONE_BRICKS);
+        slab(DraconicRiftBlocks.WOODEN_SLAB, DraconicRiftBlocks.PLANKS);
         //Doors
         door(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_DOOR, "electrically_charged");
         //Trapdoors
@@ -191,7 +200,7 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
         //Saplings
         crossBlock(InsectoidParadisioBlocks.BUGGED_SAPLING);
         crossBlock(ValleyDeathBlocks.DARKENED_SAPLING);
-        crossBlock(DraconicRiftBlocks.DRACONIC_SAPLING);
+        crossBlock(DraconicRiftBlocks.SAPLING);
         crossBlock(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_SAPLING);
         crossBlock(FeywildExpanseBlocks.FEYAN_SAPLING);
         crossBlock(EmberwildsBlocks.EMBERED_SAPLING);
@@ -215,6 +224,8 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
         button(CorrosiveFieldsBlocks.STONE_BUTTON, CorrosiveFieldsBlocks.STONE);
         button(DeepTundraBlocks.WOODEN_BUTTON, DeepTundraBlocks.PLANKS);
         button(DeepTundraBlocks.STONE_BUTTON, DeepTundraBlocks.STONE);
+        button(DraconicRiftBlocks.WOODEN_BUTTON, DraconicRiftBlocks.PLANKS);
+        minecraftButton(DraconicRiftBlocks.STONE_BUTTON, Blocks.END_STONE);
         //Pressure Plate
         pressurePlate(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_WOODEN_PRESSURE_PLATE, ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_PLANKS);
         pressurePlate(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_STONE_PRESSURE_PLATE, ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_STONE);
@@ -226,6 +237,8 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
         pressurePlate(CorrosiveFieldsBlocks.STONE_PRESSURE_PLATE, CorrosiveFieldsBlocks.STONE);
         pressurePlate(DeepTundraBlocks.WOODEN_PRESSURE_PLATE, DeepTundraBlocks.PLANKS);
         pressurePlate(DeepTundraBlocks.STONE_PRESSURE_PLATE, DeepTundraBlocks.STONE);
+        pressurePlate(DraconicRiftBlocks.WOODEN_PRESSURE_PLATE, DraconicRiftBlocks.PLANKS);
+        minecraftPressurePlate(DraconicRiftBlocks.STONE_PRESSURE_PLATE, Blocks.END_STONE);
         //Portal Frame
         block(ElectricHighlandsBlocks.HIGHLANDS_PORTAL_FRAME);
     }

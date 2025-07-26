@@ -231,13 +231,41 @@ public class IDLootTables extends LootTableProvider {
             dropSelf(DeepTundraBlocks.SAPLING);
             //Dragon
                 //Wood
-            dropSelf(DraconicRiftBlocks.DRACONIC_LOG);
+            dropSelf(DraconicRiftBlocks.LOG);
+            dropSelf(DraconicRiftBlocks.PLANKS);
+            //dropSelf(DraconicRiftBlocks.STRIPPED_ELECTRICALLY_CHARGED_LOG);
+            dropSelf(DraconicRiftBlocks.WOODEN_BUTTON);
+            dropSelf(DraconicRiftBlocks.WOODEN_STAIRS);
+            slab(DraconicRiftBlocks.WOODEN_SLAB);
+            dropSelf(DraconicRiftBlocks.WOODEN_PRESSURE_PLATE);
+            //dropSelf(DraconicRiftBlocks.ELECTRICALLY_CHARGED_WOODEN_TRAPDOOR);
+            //this.add(DraconicRiftBlocks.ELECTRICALLY_CHARGED_DOOR.get(), (block) -> createSinglePropConditionTable(block, DoorBlock.HALF, DoubleBlockHalf.LOWER));
+            dropSelf(DraconicRiftBlocks.WOOD);
+            //dropSelf(DraconicRiftBlocks.STRIPPED_ELECTRICALLY_CHARGED_WOOD);
+            dropSelf(DraconicRiftBlocks.FENCE);
+            dropSelf(DraconicRiftBlocks.FENCE_GATE);
+            //dropSelf(DraconicRiftBlocks.ELECTRICALLY_CHARGED_WOODEN_TRAPDOOR);
+            //dropSelf(DraconicRiftBlocks.ELECTRICALLY_CHARGED_SIGN);
+            //dropOther(DraconicRiftBlocks.ELECTRICALLY_CHARGED_WALL_SIGN, DraconicRiftBlocks.ELECTRICALLY_CHARGED_SIGN.get());
                 //Stone
-
+            //dropSelf(DraconicRiftBlocks.COBBLESTONE);
+            //dropSelf(DraconicRiftBlocks.COBBLESTONE_WALL);
+            //dropSelf(DraconicRiftBlocks.COBBLESTONE_STAIRS);
+            //slab(DraconicRiftBlocks.COBBLESTONE_SLAB);
+            //dropSelf(DraconicRiftBlocks.STONE_BRICKS);
+            //slab(DraconicRiftBlocks.STONE_BRICKS_SLAB);
+            //dropSelf(DraconicRiftBlocks.STONE_BRICKS_STAIRS);
+            //dropSelf(DraconicRiftBlocks.STONE_BRICKS_WALL);
+            //dropSelf(DraconicRiftBlocks.ELECTRICALLY_CHARGED_CHISELED_STONE_BRICKS);
+            //slab(DraconicRiftBlocks.STONE_SLAB);
+            //dropSelf(DraconicRiftBlocks.STONE_STAIRS);
+            dropSelf(DraconicRiftBlocks.STONE_BUTTON);
+            dropSelf(DraconicRiftBlocks.STONE_PRESSURE_PLATE);
+            //dropOther(DraconicRiftBlocks.STONE, DraconicRiftBlocks.COBBLESTONE.get());
                 //Ore
 
                 //Other
-            dropSelf(DraconicRiftBlocks.DRACONIC_SAPLING);
+            dropSelf(DraconicRiftBlocks.SAPLING);
             //Psychic
                 //Wood
             dropSelf(DreamlandBlocks.PSYCHEDELIC_LOG);

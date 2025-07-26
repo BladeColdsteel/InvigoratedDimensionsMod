@@ -5,6 +5,7 @@ import com.bladecoldsteel.invigorateddimensions.cavernouscove.block.CavernousCov
 import com.bladecoldsteel.invigorateddimensions.celestialrealm.block.HeavenlyRealmBlocks;
 import com.bladecoldsteel.invigorateddimensions.corrosivefields.block.CorrosiveFieldsBlocks;
 import com.bladecoldsteel.invigorateddimensions.deeptundra.block.DeepTundraBlocks;
+import com.bladecoldsteel.invigorateddimensions.draconicrift.block.DraconicRiftBlocks;
 import com.bladecoldsteel.invigorateddimensions.dreamland.block.DreamlandBlocks;
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.block.ElectricHighlandsBlocks;
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.item.ElectricHighlandsItems;
@@ -19,6 +20,7 @@ import com.bladecoldsteel.invigorateddimensions.universal.block.UniversalBlocks;
 import com.bladecoldsteel.invigorateddimensions.universal.datageneration.provider.IDRecipeProvider;
 import com.bladecoldsteel.invigorateddimensions.valleydeath.block.ValleyDeathBlocks;
 import com.bladecoldsteel.invigorateddimensions.waterydepths.block.WateryDepthsBlocks;
+import net.minecraft.block.Blocks;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.IFinishedRecipe;
 import net.minecraft.data.ShapedRecipeBuilder;
@@ -163,10 +165,17 @@ public class IDRecipes extends IDRecipeProvider {
             //Smelting
         smeltingRecipe(DeepTundraBlocks.STONE.get(), DeepTundraBlocks.COBBLESTONE.get(), 0.7F).save(consumer, name("smelt_icey_cobblestone"));
         //Dragon
-            //Wooden
-
+        makePlanks(DraconicRiftBlocks.PLANKS, DraconicRiftBlocks.LOG).save(consumer);
+        makeWood(DraconicRiftBlocks.WOOD, DraconicRiftBlocks.LOG).save(consumer);
+        makeStairs(DraconicRiftBlocks.WOODEN_STAIRS, DraconicRiftBlocks.PLANKS).save(consumer);
+        makeSlab(DraconicRiftBlocks.WOODEN_SLAB, DraconicRiftBlocks.PLANKS).save(consumer);
+        makeFence(DraconicRiftBlocks.FENCE, DraconicRiftBlocks.PLANKS).save(consumer);
+        makeFenceGate(DraconicRiftBlocks.FENCE_GATE, DraconicRiftBlocks.PLANKS).save(consumer);
+        makeButton(DraconicRiftBlocks.WOODEN_BUTTON, DraconicRiftBlocks.PLANKS).save(consumer);
+        makePressurePlate(DraconicRiftBlocks.WOODEN_PRESSURE_PLATE, DraconicRiftBlocks.PLANKS).save(consumer);
             //Stone
-
+        makeMinecraftButton(DraconicRiftBlocks.STONE_BUTTON, Blocks.END_STONE).save(consumer);
+        makeMinecraftPressurePlate(DraconicRiftBlocks.STONE_PRESSURE_PLATE, Blocks.END_STONE).save(consumer);
             //Smelting
 
         //Psychic

@@ -48,10 +48,11 @@ public class IDItemModels extends IDItemModelProvider {
         itemBlock(HeavenlyRealmBlocks.PLANKS);
         itemBlock(CorrosiveFieldsBlocks.PLANKS);
         itemBlock(DeepTundraBlocks.PLANKS);
+        itemBlock(DraconicRiftBlocks.PLANKS);
         //Logs
         itemBlock(InsectoidParadisioBlocks.BUGGED_LOG);
         itemBlock(ValleyDeathBlocks.DARKENED_LOG);
-        itemBlock(DraconicRiftBlocks.DRACONIC_LOG);
+        itemBlock(DraconicRiftBlocks.LOG);
         itemBlock(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_LOG);
         itemBlock(FeywildExpanseBlocks.FEYAN_LOG);
         itemBlock(InfiniteDungeonBlocks.TOUGH_LOG);
@@ -72,6 +73,7 @@ public class IDItemModels extends IDItemModelProvider {
         itemBlock(HeavenlyRealmBlocks.WOOD);
         itemBlock(CorrosiveFieldsBlocks.WOOD);
         itemBlock(DeepTundraBlocks.WOOD);
+        itemBlock(DraconicRiftBlocks.WOOD);
         //Stripped Logs
         itemBlock(ElectricHighlandsBlocks.STRIPPED_ELECTRICALLY_CHARGED_LOG);
         //Stripped Wood
@@ -133,12 +135,14 @@ public class IDItemModels extends IDItemModelProvider {
         itemFence(HeavenlyRealmBlocks.FENCE, "floating_planks");
         itemFence(CorrosiveFieldsBlocks.FENCE, "corrosive_planks");
         itemFence(DeepTundraBlocks.FENCE, "icey_planks");
+        itemFence(DraconicRiftBlocks.FENCE, "draconic_planks");
         //Fence Gates
         itemBlock(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_FENCE_GATE);
         itemBlock(CavernousCoveBlocks.FENCE_GATE);
         itemBlock(HeavenlyRealmBlocks.FENCE_GATE);
         itemBlock(CorrosiveFieldsBlocks.FENCE_GATE);
         itemBlock(DeepTundraBlocks.FENCE_GATE);
+        itemBlock(DraconicRiftBlocks.FENCE_GATE);
         //Ores
         itemBlock(ElectricHighlandsBlocks.CHARGED_COAL_ORE);
         itemBlock(ElectricHighlandsBlocks.CHARGED_IRON_ORE);
@@ -167,6 +171,7 @@ public class IDItemModels extends IDItemModelProvider {
         itemBlock(DeepTundraBlocks.COBBLESTONE_STAIRS);
         itemBlock(DeepTundraBlocks.STONE_STAIRS);
         itemBlock(DeepTundraBlocks.STONE_BRICKS_STAIRS);
+        itemBlock(DraconicRiftBlocks.WOODEN_STAIRS);
         //Slabs
         itemBlock(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_WOODEN_SLAB);
         itemBlock(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_COBBLESTONE_SLABS);
@@ -188,10 +193,11 @@ public class IDItemModels extends IDItemModelProvider {
         itemBlock(DeepTundraBlocks.COBBLESTONE_SLAB);
         itemBlock(DeepTundraBlocks.STONE_SLAB);
         itemBlock(DeepTundraBlocks.STONE_BRICKS_SLAB);
+        itemBlock(DraconicRiftBlocks.WOODEN_SLAB);
         //Saplings
         itemBlockFlat(InsectoidParadisioBlocks.BUGGED_SAPLING);
         itemBlockFlat(ValleyDeathBlocks.DARKENED_SAPLING);
-        itemBlockFlat(DraconicRiftBlocks.DRACONIC_SAPLING);
+        itemBlockFlat(DraconicRiftBlocks.SAPLING);
         itemBlockFlat(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_SAPLING);
         itemBlockFlat(FeywildExpanseBlocks.FEYAN_SAPLING);
         itemBlockFlat(EmberwildsBlocks.EMBERED_SAPLING);

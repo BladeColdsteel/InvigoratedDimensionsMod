@@ -368,7 +368,7 @@ public class InvigoratedDimensions
         RenderTypeLookup.setRenderLayer(EmberwildsBlocks.EMBERED_SAPLING.get(), RenderType.cutout());
 
         //Dragon
-        RenderTypeLookup.setRenderLayer(DraconicRiftBlocks.DRACONIC_SAPLING.get(), RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(DraconicRiftBlocks.SAPLING.get(), RenderType.cutout());
 
         //Grass
         RenderTypeLookup.setRenderLayer(GrassyKnollBlocks.GRASSY_SAPLING.get(), RenderType.cutout());

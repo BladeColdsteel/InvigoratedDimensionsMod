@@ -80,11 +80,11 @@ public abstract class IDBlockstateProvider extends BlockStateProvider {
     }
 
     public void minecraftButton(Supplier<? extends AbstractButtonBlock> block, Block baseBlock) {
-        buttonBlock(block, new ResourceLocation(baseBlock.getDescriptionId()));
+        buttonBlock(block, mcLoc("block/" + baseBlock.getRegistryName().getPath()));
     }
 
     public void minecraftPressurePlate(Supplier<? extends PressurePlateBlock> block, Block baseBlock) {
-        pressurePlateBlock(block, new ResourceLocation(baseBlock.getDescriptionId()));
+        pressurePlateBlock(block, mcLoc("block/" + baseBlock.getRegistryName().getPath()));
     }
 
     protected ResourceLocation texture(String name) {
