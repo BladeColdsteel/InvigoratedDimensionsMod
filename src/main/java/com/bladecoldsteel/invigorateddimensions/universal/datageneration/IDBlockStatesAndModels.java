@@ -47,6 +47,7 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
         block(DeepTundraBlocks.PLANKS);
         block(DraconicRiftBlocks.PLANKS);
         block(DreamlandBlocks.PLANKS);
+        block(EmberwildsBlocks.PLANKS);
         //Logs
         log(InsectoidParadisioBlocks.BUGGED_LOG, "bugged_logs");
         log(ValleyDeathBlocks.DARKENED_LOG, "darkened_logs");
@@ -54,7 +55,7 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
         log(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_LOG, "electrically_charged_logs");
         log(FeywildExpanseBlocks.FEYAN_LOG, "feyan_logs");
         log(InfiniteDungeonBlocks.TOUGH_LOG, "tough_logs");
-        log(EmberwildsBlocks.EMBERED_LOG, "embered_logs");
+        log(EmberwildsBlocks.LOG, "embered_logs");
         log(HeavenlyRealmBlocks.LOG, "floating_logs");
         log(GhastlyMarshBlocks.SPOOKY_LOG, "spooky_logs");
         log(GrassyKnollBlocks.GRASSY_LOG, "grassy_logs");
@@ -75,6 +76,7 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
         uniformLog(DeepTundraBlocks.WOOD, "icey_logs_side");
         uniformLog(DraconicRiftBlocks.WOOD, "draconic_logs_side");
         uniformLog(DreamlandBlocks.WOOD, "psychedelic_logs_side");
+        uniformLog(EmberwildsBlocks.WOOD, "embered_logs_side");
         //Stripped Wood
         uniformLog(ElectricHighlandsBlocks.STRIPPED_ELECTRICALLY_CHARGED_WOOD, "stripped_electrically_charged_logs_side");
         //Stone
@@ -139,6 +141,7 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
         fence(DeepTundraBlocks.FENCE, DeepTundraBlocks.PLANKS);
         fence(DraconicRiftBlocks.FENCE, DraconicRiftBlocks.PLANKS);
         fence(DreamlandBlocks.FENCE, DreamlandBlocks.PLANKS);
+        fence(EmberwildsBlocks.FENCE, EmberwildsBlocks.PLANKS);
         //Fence Gates
         fenceGateBlock(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_FENCE_GATE.get(), modLoc("block/electrically_charged_planks"));
         fenceGateBlock(CavernousCoveBlocks.FENCE_GATE.get(), modLoc("block/rocky_planks"));
@@ -147,6 +150,7 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
         fenceGateBlock(DeepTundraBlocks.FENCE_GATE.get(), modLoc("block/icey_planks"));
         fenceGateBlock(DraconicRiftBlocks.FENCE_GATE.get(), modLoc("block/draconic_planks"));
         fenceGateBlock(DreamlandBlocks.FENCE_GATE.get(), modLoc("block/psychedelic_planks"));
+        fenceGateBlock(EmberwildsBlocks.FENCE_GATE.get(), modLoc("block/embered_planks"));
         //Ores
         block(ElectricHighlandsBlocks.CHARGED_COAL_ORE);
         block(ElectricHighlandsBlocks.CHARGED_IRON_ORE);
@@ -180,6 +184,7 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
         stairs(DreamlandBlocks.COBBLESTONE_STAIRS, DreamlandBlocks.COBBLESTONE);
         stairs(DreamlandBlocks.STONE_STAIRS, DreamlandBlocks.STONE);
         stairs(DreamlandBlocks.STONE_BRICKS_STAIRS, DreamlandBlocks.STONE_BRICKS);
+        stairs(EmberwildsBlocks.WOODEN_STAIRS, EmberwildsBlocks.PLANKS);
         //Slabs
         slab(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_WOODEN_SLAB, ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_PLANKS);
         slab(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_COBBLESTONE_SLABS, ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_COBBLESTONE);
@@ -206,6 +211,7 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
         slab(DreamlandBlocks.COBBLESTONE_SLAB, DreamlandBlocks.COBBLESTONE);
         slab(DreamlandBlocks.STONE_SLAB, DreamlandBlocks.STONE);
         slab(DreamlandBlocks.STONE_BRICKS_SLAB, DreamlandBlocks.STONE_BRICKS);
+        slab(EmberwildsBlocks.WOODEN_SLAB, EmberwildsBlocks.PLANKS);
         //Doors
         door(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_DOOR, "electrically_charged");
         //Trapdoors
@@ -216,7 +222,7 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
         crossBlock(DraconicRiftBlocks.SAPLING);
         crossBlock(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_SAPLING);
         crossBlock(FeywildExpanseBlocks.FEYAN_SAPLING);
-        crossBlock(EmberwildsBlocks.EMBERED_SAPLING);
+        crossBlock(EmberwildsBlocks.SAPLING);
         crossBlock(HeavenlyRealmBlocks.SAPLING);
         crossBlock(GhastlyMarshBlocks.SPOOKY_SAPLING);
         crossBlock(GrassyKnollBlocks.GRASSY_SAPLING);
@@ -241,6 +247,8 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
         minecraftButton(DraconicRiftBlocks.STONE_BUTTON, Blocks.END_STONE);
         button(DreamlandBlocks.WOODEN_BUTTON, DreamlandBlocks.PLANKS);
         button(DreamlandBlocks.STONE_BUTTON, DreamlandBlocks.STONE);
+        button(EmberwildsBlocks.WOODEN_BUTTON, EmberwildsBlocks.PLANKS);
+        minecraftButton(EmberwildsBlocks.STONE_BUTTON, Blocks.NETHERRACK);
         //Pressure Plate
         pressurePlate(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_WOODEN_PRESSURE_PLATE, ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_PLANKS);
         pressurePlate(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_STONE_PRESSURE_PLATE, ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_STONE);
@@ -256,6 +264,8 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
         minecraftPressurePlate(DraconicRiftBlocks.STONE_PRESSURE_PLATE, Blocks.END_STONE);
         pressurePlate(DreamlandBlocks.WOODEN_PRESSURE_PLATE, DreamlandBlocks.PLANKS);
         pressurePlate(DreamlandBlocks.STONE_PRESSURE_PLATE, DreamlandBlocks.STONE);
+        pressurePlate(EmberwildsBlocks.WOODEN_PRESSURE_PLATE, EmberwildsBlocks.PLANKS);
+        minecraftPressurePlate(EmberwildsBlocks.STONE_PRESSURE_PLATE, Blocks.NETHERRACK);
         //Portal Frame
         block(ElectricHighlandsBlocks.HIGHLANDS_PORTAL_FRAME);
     }

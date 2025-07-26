@@ -12,7 +12,6 @@ import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.template.RuleTest;
 import net.minecraft.world.gen.feature.template.TagMatchRuleTest;
 import net.minecraft.world.gen.foliageplacer.BlobFoliagePlacer;
-import net.minecraft.world.gen.placement.AtSurfaceWithExtraConfig;
 import net.minecraft.world.gen.placement.Placement;
 import net.minecraft.world.gen.trunkplacer.ForkyTrunkPlacer;
 import net.minecraft.world.gen.trunkplacer.StraightTrunkPlacer;
@@ -29,7 +28,7 @@ public class FireFeatures {
 
         public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> FIRE_TREE_STRAIGHT = Feature.TREE.configured(
                 new BaseTreeFeatureConfig.Builder(
-                   new SimpleBlockStateProvider(EmberwildsBlocks.EMBERED_LOG.get().defaultBlockState()),
+                   new SimpleBlockStateProvider(EmberwildsBlocks.LOG.get().defaultBlockState()),
                    new SimpleBlockStateProvider(UniversalBlocks.CRYSTALLIZED_LEAVES.get().defaultBlockState()),
                    new BlobFoliagePlacer(FeatureSpread.fixed(3), FeatureSpread.fixed(1), 2),
                    new StraightTrunkPlacer(5, 3, 1),
@@ -37,7 +36,7 @@ public class FireFeatures {
                    .ignoreVines().build());
         public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> FIRE_TREE_FUNKY = Feature.TREE.configured(
                 new BaseTreeFeatureConfig.Builder(
-                   new SimpleBlockStateProvider(EmberwildsBlocks.EMBERED_LOG.get().defaultBlockState()),
+                   new SimpleBlockStateProvider(EmberwildsBlocks.LOG.get().defaultBlockState()),
                    new SimpleBlockStateProvider(UniversalBlocks.CRYSTALLIZED_LEAVES.get().defaultBlockState()),
                    new BlobFoliagePlacer(FeatureSpread.fixed(2), FeatureSpread.fixed(1), 1),
                    new ForkyTrunkPlacer(4, 2, 3),

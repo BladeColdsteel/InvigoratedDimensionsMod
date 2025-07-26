@@ -9,6 +9,7 @@ import com.bladecoldsteel.invigorateddimensions.draconicrift.block.DraconicRiftB
 import com.bladecoldsteel.invigorateddimensions.dreamland.block.DreamlandBlocks;
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.block.ElectricHighlandsBlocks;
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.item.ElectricHighlandsItems;
+import com.bladecoldsteel.invigorateddimensions.emberwilds.block.EmberwildsBlocks;
 import com.bladecoldsteel.invigorateddimensions.feywildexpanse.block.FeywildExpanseBlocks;
 import com.bladecoldsteel.invigorateddimensions.ghastlymarsh.block.GhastlyMarshBlocks;
 import com.bladecoldsteel.invigorateddimensions.grassyknoll.block.GrassyKnollBlocks;
@@ -263,9 +264,17 @@ public class IDRecipes extends IDRecipeProvider {
         blastingRecipe(ElectricHighlandsItems.VOLTCRYST.get(), ElectricHighlandsBlocks.CHARGED_VOLTCRYST_ORE.get(), 0.7F).save(consumer, name("blast_charged_voltcryst"));
         //Fire
             //Wooden
-
+        makePlanks(EmberwildsBlocks.PLANKS, EmberwildsBlocks.LOG).save(consumer);
+        makeWood(EmberwildsBlocks.WOOD, EmberwildsBlocks.LOG).save(consumer);
+        makeStairs(EmberwildsBlocks.WOODEN_STAIRS, EmberwildsBlocks.PLANKS).save(consumer);
+        makeSlab(EmberwildsBlocks.WOODEN_SLAB, EmberwildsBlocks.PLANKS).save(consumer);
+        makeFence(EmberwildsBlocks.FENCE, EmberwildsBlocks.PLANKS).save(consumer);
+        makeFenceGate(EmberwildsBlocks.FENCE_GATE, EmberwildsBlocks.PLANKS).save(consumer);
+        makeButton(EmberwildsBlocks.WOODEN_BUTTON, EmberwildsBlocks.PLANKS).save(consumer);
+        makePressurePlate(EmberwildsBlocks.WOODEN_PRESSURE_PLATE, EmberwildsBlocks.PLANKS).save(consumer);
             //Stone
-
+        makeMinecraftButton(EmberwildsBlocks.STONE_BUTTON, Blocks.END_STONE).save(consumer);
+        makeMinecraftPressurePlate(EmberwildsBlocks.STONE_PRESSURE_PLATE, Blocks.END_STONE).save(consumer);
             //Smelting
 
         //Fairy

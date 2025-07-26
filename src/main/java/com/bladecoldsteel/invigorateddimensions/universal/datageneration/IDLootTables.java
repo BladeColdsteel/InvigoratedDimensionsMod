@@ -284,7 +284,7 @@ public class IDLootTables extends LootTableProvider {
             //dropSelf(DreamlandBlocks.ELECTRICALLY_CHARGED_WOODEN_TRAPDOOR);
             //dropSelf(DreamlandBlocks.ELECTRICALLY_CHARGED_SIGN);
             //dropOther(DreamlandBlocks.ELECTRICALLY_CHARGED_WALL_SIGN, DreamlandBlocks.ELECTRICALLY_CHARGED_SIGN.get());
-            //Stone
+                //Stone
             dropSelf(DreamlandBlocks.COBBLESTONE);
             dropSelf(DreamlandBlocks.COBBLESTONE_WALL);
             dropSelf(DreamlandBlocks.COBBLESTONE_STAIRS);
@@ -348,13 +348,41 @@ public class IDLootTables extends LootTableProvider {
             dropSelf(ElectricHighlandsBlocks.HIGHLANDS_PORTAL_FRAME);
             //Fire
                 //Wood
-            dropSelf(EmberwildsBlocks.EMBERED_LOG);
+            dropSelf(EmberwildsBlocks.LOG);
+            dropSelf(EmberwildsBlocks.PLANKS);
+            //dropSelf(EmberwildsBlocks.STRIPPED_ELECTRICALLY_CHARGED_LOG);
+            dropSelf(EmberwildsBlocks.WOODEN_BUTTON);
+            dropSelf(EmberwildsBlocks.WOODEN_STAIRS);
+            slab(EmberwildsBlocks.WOODEN_SLAB);
+            dropSelf(EmberwildsBlocks.WOODEN_PRESSURE_PLATE);
+            //dropSelf(EmberwildsBlocks.ELECTRICALLY_CHARGED_WOODEN_TRAPDOOR);
+            //this.add(EmberwildsBlocks.ELECTRICALLY_CHARGED_DOOR.get(), (block) -> createSinglePropConditionTable(block, DoorBlock.HALF, DoubleBlockHalf.LOWER));
+            dropSelf(EmberwildsBlocks.WOOD);
+            //dropSelf(EmberwildsBlocks.STRIPPED_ELECTRICALLY_CHARGED_WOOD);
+            dropSelf(EmberwildsBlocks.FENCE);
+            dropSelf(EmberwildsBlocks.FENCE_GATE);
+            //dropSelf(EmberwildsBlocks.ELECTRICALLY_CHARGED_WOODEN_TRAPDOOR);
+            //dropSelf(EmberwildsBlocks.ELECTRICALLY_CHARGED_SIGN);
+            //dropOther(EmberwildsBlocks.ELECTRICALLY_CHARGED_WALL_SIGN, EmberwildsBlocks.ELECTRICALLY_CHARGED_SIGN.get());
                 //Stone
-
+            //dropSelf(EmberwildsBlocks.COBBLESTONE);
+            //dropSelf(EmberwildsBlocks.COBBLESTONE_WALL);
+            //dropSelf(EmberwildsBlocks.COBBLESTONE_STAIRS);
+            //slab(EmberwildsBlocks.COBBLESTONE_SLAB);
+            //dropSelf(EmberwildsBlocks.STONE_BRICKS);
+            //slab(EmberwildsBlocks.STONE_BRICKS_SLAB);
+            //dropSelf(EmberwildsBlocks.STONE_BRICKS_STAIRS);
+            //dropSelf(EmberwildsBlocks.STONE_BRICKS_WALL);
+            //dropSelf(EmberwildsBlocks.ELECTRICALLY_CHARGED_CHISELED_STONE_BRICKS);
+            //slab(EmberwildsBlocks.STONE_SLAB);
+            //dropSelf(EmberwildsBlocks.STONE_STAIRS);
+            dropSelf(EmberwildsBlocks.STONE_BUTTON);
+            dropSelf(EmberwildsBlocks.STONE_PRESSURE_PLATE);
+            //dropOther(EmberwildsBlocks.STONE, EmberwildsBlocks.COBBLESTONE.get());
                 //Ore
 
                 //Other
-            dropSelf(EmberwildsBlocks.EMBERED_SAPLING);
+            dropSelf(EmberwildsBlocks.SAPLING);
             //Fairy
                 //Wood
             dropSelf(FeywildExpanseBlocks.FEYAN_LOG);

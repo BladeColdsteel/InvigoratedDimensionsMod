@@ -73,6 +73,16 @@
 
   "block.invigorated_dimensions.embered_logs": "Embered Log",
   "block.invigorated_dimensions.embered_sapling": "Embered Sapling",
+  "block.invigorated_dimensions.embered_planks": "Embered Planks",
+  "block.invigorated_dimensions.embered_wooden_slab": "Embered Wooden Slab",
+  "block.invigorated_dimensions.embered_wooden_stairs": "Embered Wooden Stairs",
+  "block.invigorated_dimensions.embered_wood": "Embered Wood",
+  "block.invigorated_dimensions.embered_fence": "Embered Fence",
+  "block.invigorated_dimensions.embered_fence_gate": "Embered Fence Gate",
+  "block.invigorated_dimensions.embered_wooden_button": "Embered Wooden Button",
+  "block.invigorated_dimensions.embered_stone_button": "Netherrack Button",
+  "block.invigorated_dimensions.embered_wooden_pressure_plate": "Embered Wooden Pressure Plate",
+  "block.invigorated_dimensions.embered_stone_pressure_plate": "Netherrack Pressure Plate",
 
   "block.invigorated_dimensions.draconic_logs": "Draconic Log",
   "block.invigorated_dimensions.draconic_sapling": "Draconic Sapling",
@@ -83,9 +93,9 @@
   "block.invigorated_dimensions.draconic_fence": "Draconic Fence",
   "block.invigorated_dimensions.draconic_fence_gate": "Draconic Fence Gate",
   "block.invigorated_dimensions.draconic_wooden_button": "Draconic Wooden Button",
-  "block.invigorated_dimensions.draconic_stone_button": "Draconic Stone Button",
+  "block.invigorated_dimensions.draconic_stone_button": "Endstone Button",
   "block.invigorated_dimensions.draconic_wooden_pressure_plate": "Draconic Wooden Pressure Plate",
-  "block.invigorated_dimensions.draconic_stone_pressure_plate": "Draconic Stone Pressure Plate",
+  "block.invigorated_dimensions.draconic_stone_pressure_plate": "Endstone Pressure Plate",
 
   "block.invigorated_dimensions.grassy_logs": "Grassy Log",
   "block.invigorated_dimensions.grassy_sapling": "Grassy Sapling",

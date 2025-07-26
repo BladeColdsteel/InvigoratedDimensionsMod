@@ -50,6 +50,7 @@ public class IDItemModels extends IDItemModelProvider {
         itemBlock(DeepTundraBlocks.PLANKS);
         itemBlock(DraconicRiftBlocks.PLANKS);
         itemBlock(DreamlandBlocks.PLANKS);
+        itemBlock(EmberwildsBlocks.PLANKS);
         //Logs
         itemBlock(InsectoidParadisioBlocks.BUGGED_LOG);
         itemBlock(ValleyDeathBlocks.DARKENED_LOG);
@@ -57,7 +58,7 @@ public class IDItemModels extends IDItemModelProvider {
         itemBlock(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_LOG);
         itemBlock(FeywildExpanseBlocks.FEYAN_LOG);
         itemBlock(InfiniteDungeonBlocks.TOUGH_LOG);
-        itemBlock(EmberwildsBlocks.EMBERED_LOG);
+        itemBlock(EmberwildsBlocks.LOG);
         itemBlock(HeavenlyRealmBlocks.LOG);
         itemBlock(GhastlyMarshBlocks.SPOOKY_LOG);
         itemBlock(GrassyKnollBlocks.GRASSY_LOG);
@@ -76,6 +77,7 @@ public class IDItemModels extends IDItemModelProvider {
         itemBlock(DeepTundraBlocks.WOOD);
         itemBlock(DraconicRiftBlocks.WOOD);
         itemBlock(DreamlandBlocks.WOOD);
+        itemBlock(EmberwildsBlocks.WOOD);
         //Stripped Logs
         itemBlock(ElectricHighlandsBlocks.STRIPPED_ELECTRICALLY_CHARGED_LOG);
         //Stripped Wood
@@ -142,6 +144,7 @@ public class IDItemModels extends IDItemModelProvider {
         itemFence(DeepTundraBlocks.FENCE, "icey_planks");
         itemFence(DraconicRiftBlocks.FENCE, "draconic_planks");
         itemFence(DreamlandBlocks.FENCE, "psychedelic_planks");
+        itemFence(EmberwildsBlocks.FENCE, "embered_planks");
         //Fence Gates
         itemBlock(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_FENCE_GATE);
         itemBlock(CavernousCoveBlocks.FENCE_GATE);
@@ -150,6 +153,7 @@ public class IDItemModels extends IDItemModelProvider {
         itemBlock(DeepTundraBlocks.FENCE_GATE);
         itemBlock(DraconicRiftBlocks.FENCE_GATE);
         itemBlock(DreamlandBlocks.FENCE_GATE);
+        itemBlock(EmberwildsBlocks.FENCE_GATE);
         //Ores
         itemBlock(ElectricHighlandsBlocks.CHARGED_COAL_ORE);
         itemBlock(ElectricHighlandsBlocks.CHARGED_IRON_ORE);
@@ -183,6 +187,7 @@ public class IDItemModels extends IDItemModelProvider {
         itemBlock(DreamlandBlocks.COBBLESTONE_STAIRS);
         itemBlock(DreamlandBlocks.STONE_STAIRS);
         itemBlock(DreamlandBlocks.STONE_BRICKS_STAIRS);
+        itemBlock(EmberwildsBlocks.WOODEN_STAIRS);
         //Slabs
         itemBlock(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_WOODEN_SLAB);
         itemBlock(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_COBBLESTONE_SLABS);
@@ -209,13 +214,14 @@ public class IDItemModels extends IDItemModelProvider {
         itemBlock(DreamlandBlocks.COBBLESTONE_SLAB);
         itemBlock(DreamlandBlocks.STONE_SLAB);
         itemBlock(DreamlandBlocks.STONE_BRICKS_SLAB);
+        itemBlock(EmberwildsBlocks.WOODEN_SLAB);
         //Saplings
         itemBlockFlat(InsectoidParadisioBlocks.BUGGED_SAPLING);
         itemBlockFlat(ValleyDeathBlocks.DARKENED_SAPLING);
         itemBlockFlat(DraconicRiftBlocks.SAPLING);
         itemBlockFlat(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_SAPLING);
         itemBlockFlat(FeywildExpanseBlocks.FEYAN_SAPLING);
-        itemBlockFlat(EmberwildsBlocks.EMBERED_SAPLING);
+        itemBlockFlat(EmberwildsBlocks.SAPLING);
         itemBlockFlat(HeavenlyRealmBlocks.SAPLING);
         itemBlockFlat(GhastlyMarshBlocks.SPOOKY_SAPLING);
         itemBlockFlat(GrassyKnollBlocks.GRASSY_SAPLING);

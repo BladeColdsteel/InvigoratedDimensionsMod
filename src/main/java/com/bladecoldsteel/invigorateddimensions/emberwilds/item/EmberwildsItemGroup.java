@@ -8,7 +8,7 @@ public class EmberwildsItemGroup {
     public static final ItemGroup EMBERWILDS_GROUP = new ItemGroup("invigorated_dimensions_emberwilds_mod_tab") {
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(EmberwildsBlocks.EMBERED_LOG.get());
+            return new ItemStack(EmberwildsBlocks.LOG.get());
         }
     };
 }
