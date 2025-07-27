@@ -279,11 +279,36 @@ public class IDRecipes extends IDRecipeProvider {
 
         //Fairy
             //Wooden
-
+        makePlanks(FeywildExpanseBlocks.PLANKS, FeywildExpanseBlocks.LOG).save(consumer);
+        makeWood(FeywildExpanseBlocks.WOOD, FeywildExpanseBlocks.LOG).save(consumer);
+        makeStairs(FeywildExpanseBlocks.WOODEN_STAIRS, FeywildExpanseBlocks.PLANKS).save(consumer);
+        makeSlab(FeywildExpanseBlocks.WOODEN_SLAB, FeywildExpanseBlocks.PLANKS).save(consumer);
+        makeFence(FeywildExpanseBlocks.FENCE, FeywildExpanseBlocks.PLANKS).save(consumer);
+        makeFenceGate(FeywildExpanseBlocks.FENCE_GATE, FeywildExpanseBlocks.PLANKS).save(consumer);
+        makeButton(FeywildExpanseBlocks.WOODEN_BUTTON, FeywildExpanseBlocks.PLANKS).save(consumer);
+        makePressurePlate(FeywildExpanseBlocks.WOODEN_PRESSURE_PLATE, FeywildExpanseBlocks.PLANKS).save(consumer);
             //Stone
-
+        makeBricks(FeywildExpanseBlocks.STONE_BRICKS, FeywildExpanseBlocks.STONE).save(consumer);
+        makeStairs(FeywildExpanseBlocks.STONE_STAIRS, FeywildExpanseBlocks.STONE).save(consumer);
+        makeStairs(FeywildExpanseBlocks.COBBLESTONE_STAIRS, FeywildExpanseBlocks.COBBLESTONE).save(consumer);
+        makeStairs(FeywildExpanseBlocks.STONE_BRICKS_STAIRS, FeywildExpanseBlocks.STONE_BRICKS).save(consumer);
+        makeSlab(FeywildExpanseBlocks.COBBLESTONE_SLAB, FeywildExpanseBlocks.COBBLESTONE).save(consumer);
+        makeSlab(FeywildExpanseBlocks.STONE_SLAB, FeywildExpanseBlocks.STONE).save(consumer);
+        makeSlab(FeywildExpanseBlocks.STONE_BRICKS_SLAB, FeywildExpanseBlocks.STONE_BRICKS).save(consumer);
+        makeWall(FeywildExpanseBlocks.COBBLESTONE_WALL, FeywildExpanseBlocks.COBBLESTONE).save(consumer);
+        makeWall(FeywildExpanseBlocks.STONE_BRICKS_WALL, FeywildExpanseBlocks.STONE_BRICKS).save(consumer);
+        makeButton(FeywildExpanseBlocks.STONE_BUTTON, FeywildExpanseBlocks.STONE).save(consumer);
+        makePressurePlate(FeywildExpanseBlocks.STONE_PRESSURE_PLATE, FeywildExpanseBlocks.STONE).save(consumer);
+        stonecuttingSingleRecipe(FeywildExpanseBlocks.STONE, FeywildExpanseBlocks.STONE_BRICKS.get()).save(consumer, name("feyan_stone_brick_stonecutting"));
+        stonecuttingSingleRecipe(FeywildExpanseBlocks.STONE, FeywildExpanseBlocks.STONE_STAIRS.get()).save(consumer, name("feyan_stone_stairs_stonecutting"));
+        stonecuttingSingleRecipe(FeywildExpanseBlocks.STONE, FeywildExpanseBlocks.STONE_BRICKS_STAIRS.get()).save(consumer, name("feyan_stone_brick_stairs_stonecutting"));
+        stonecuttingMultipleRecipe(FeywildExpanseBlocks.STONE, FeywildExpanseBlocks.STONE_SLAB.get(), 2).save(consumer, name("feyan_stone_slabs_stonecutting"));
+        stonecuttingMultipleRecipe(FeywildExpanseBlocks.STONE, FeywildExpanseBlocks.STONE_BRICKS_SLAB.get(), 2).save(consumer, name("feyan_stone_brick_slabs_stonecutting_stone"));
+        stonecuttingMultipleRecipe(FeywildExpanseBlocks.STONE_BRICKS, FeywildExpanseBlocks.STONE_BRICKS_SLAB.get(), 2).save(consumer, name("feyan_stone_brick_slabs_stonecutting_stone_brick"));
+        stonecuttingMultipleRecipe(FeywildExpanseBlocks.COBBLESTONE, FeywildExpanseBlocks.COBBLESTONE_SLAB.get(), 2).save(consumer, name("feyan_cobblestone_slabs_stonecutting"));
+        stonecuttingSingleRecipe(FeywildExpanseBlocks.COBBLESTONE, FeywildExpanseBlocks.COBBLESTONE_STAIRS.get()).save(consumer, name("feyan_cobblestone_stairs_stonecutting"));
             //Smelting
-        smeltingRecipe(FeywildExpanseBlocks.FEYAN_STONE.get(), FeywildExpanseBlocks.FEYAN_COBBLESTONE.get(), 0.7F).save(consumer, name("smelt_feyan_cobblestone"));
+        smeltingRecipe(FeywildExpanseBlocks.STONE.get(), FeywildExpanseBlocks.COBBLESTONE.get(), 0.7F).save(consumer, name("smelt_feyan_cobblestone"));
         //Ghost
             //Wooden
 

@@ -385,14 +385,41 @@ public class IDLootTables extends LootTableProvider {
             dropSelf(EmberwildsBlocks.SAPLING);
             //Fairy
                 //Wood
-            dropSelf(FeywildExpanseBlocks.FEYAN_LOG);
-                //Stone
-            dropSelf(FeywildExpanseBlocks.FEYAN_COBBLESTONE);
-            dropOther(FeywildExpanseBlocks.FEYAN_STONE, FeywildExpanseBlocks.FEYAN_COBBLESTONE.get());
+            dropSelf(FeywildExpanseBlocks.LOG);
+            dropSelf(FeywildExpanseBlocks.PLANKS);
+            //dropSelf(FeywildExpanseBlocks.STRIPPED_ELECTRICALLY_CHARGED_LOG);
+            dropSelf(FeywildExpanseBlocks.WOODEN_BUTTON);
+            dropSelf(FeywildExpanseBlocks.WOODEN_STAIRS);
+            slab(FeywildExpanseBlocks.WOODEN_SLAB);
+            dropSelf(FeywildExpanseBlocks.WOODEN_PRESSURE_PLATE);
+            //dropSelf(FeywildExpanseBlocks.ELECTRICALLY_CHARGED_WOODEN_TRAPDOOR);
+            //this.add(FeywildExpanseBlocks.ELECTRICALLY_CHARGED_DOOR.get(), (block) -> createSinglePropConditionTable(block, DoorBlock.HALF, DoubleBlockHalf.LOWER));
+            dropSelf(FeywildExpanseBlocks.WOOD);
+            //dropSelf(FeywildExpanseBlocks.STRIPPED_ELECTRICALLY_CHARGED_WOOD);
+            dropSelf(FeywildExpanseBlocks.FENCE);
+            dropSelf(FeywildExpanseBlocks.FENCE_GATE);
+            //dropSelf(FeywildExpanseBlocks.ELECTRICALLY_CHARGED_WOODEN_TRAPDOOR);
+            //dropSelf(FeywildExpanseBlocks.ELECTRICALLY_CHARGED_SIGN);
+            //dropOther(FeywildExpanseBlocks.ELECTRICALLY_CHARGED_WALL_SIGN, FeywildExpanseBlocks.ELECTRICALLY_CHARGED_SIGN.get());
+            //Stone
+            dropSelf(FeywildExpanseBlocks.COBBLESTONE);
+            dropSelf(FeywildExpanseBlocks.COBBLESTONE_WALL);
+            dropSelf(FeywildExpanseBlocks.COBBLESTONE_STAIRS);
+            slab(FeywildExpanseBlocks.COBBLESTONE_SLAB);
+            dropSelf(FeywildExpanseBlocks.STONE_BRICKS);
+            slab(FeywildExpanseBlocks.STONE_BRICKS_SLAB);
+            dropSelf(FeywildExpanseBlocks.STONE_BRICKS_STAIRS);
+            dropSelf(FeywildExpanseBlocks.STONE_BRICKS_WALL);
+            //dropSelf(FeywildExpanseBlocks.ELECTRICALLY_CHARGED_CHISELED_STONE_BRICKS);
+            slab(FeywildExpanseBlocks.STONE_SLAB);
+            dropSelf(FeywildExpanseBlocks.STONE_STAIRS);
+            dropSelf(FeywildExpanseBlocks.STONE_BUTTON);
+            dropSelf(FeywildExpanseBlocks.STONE_PRESSURE_PLATE);
+            dropOther(FeywildExpanseBlocks.STONE, FeywildExpanseBlocks.COBBLESTONE.get());
                 //Ore
 
                 //Other
-            dropSelf(FeywildExpanseBlocks.FEYAN_SAPLING);
+            dropSelf(FeywildExpanseBlocks.SAPLING);
             //Ghost
                 //Wood
             dropSelf(GhastlyMarshBlocks.SPOOKY_LOG);

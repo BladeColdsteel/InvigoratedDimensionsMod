@@ -26,7 +26,7 @@ public class FairyFeatures {
 
         public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> FEYAN_TREE = Feature.TREE.configured(
                 new BaseTreeFeatureConfig.Builder(
-                        new SimpleBlockStateProvider(FeywildExpanseBlocks.FEYAN_LOG.get().defaultBlockState()),
+                        new SimpleBlockStateProvider(FeywildExpanseBlocks.LOG.get().defaultBlockState()),
                         new SimpleBlockStateProvider(UniversalBlocks.CRYSTALLIZED_LEAVES.get().defaultBlockState()),
                         new BushFoliagePlacer(FeatureSpread.fixed(3), FeatureSpread.fixed(4), 4),
                         new FancyTrunkPlacer(6, 6, 8),
@@ -34,7 +34,7 @@ public class FairyFeatures {
                         .ignoreVines().build());
 
         public static final ConfiguredFeature<?, ?> FEYAN_STONE_PATCH = Feature.ORE.configured(
-                new OreFeatureConfig(OVERWORLD_FILLER, FeywildExpanseBlocks.FEYAN_STONE.get().defaultBlockState(), 33)
+                new OreFeatureConfig(OVERWORLD_FILLER, FeywildExpanseBlocks.STONE.get().defaultBlockState(), 33)
         );
     }
 

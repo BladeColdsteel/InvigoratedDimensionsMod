@@ -380,7 +380,7 @@ public class InvigoratedDimensions
         RenderTypeLookup.setRenderLayer(ValleyDeathBlocks.DARKENED_SAPLING.get(), RenderType.cutout());
 
         //Fairy
-        RenderTypeLookup.setRenderLayer(FeywildExpanseBlocks.FEYAN_SAPLING.get(), RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(FeywildExpanseBlocks.SAPLING.get(), RenderType.cutout());
 
         //Fighting
 
