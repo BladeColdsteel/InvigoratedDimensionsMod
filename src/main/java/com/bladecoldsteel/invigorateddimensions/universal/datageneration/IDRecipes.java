@@ -311,11 +311,36 @@ public class IDRecipes extends IDRecipeProvider {
         smeltingRecipe(FeywildExpanseBlocks.STONE.get(), FeywildExpanseBlocks.COBBLESTONE.get(), 0.7F).save(consumer, name("smelt_feyan_cobblestone"));
         //Ghost
             //Wooden
-
+        makePlanks(GhastlyMarshBlocks.PLANKS, GhastlyMarshBlocks.LOG).save(consumer);
+        makeWood(GhastlyMarshBlocks.WOOD, GhastlyMarshBlocks.LOG).save(consumer);
+        makeStairs(GhastlyMarshBlocks.WOODEN_STAIRS, GhastlyMarshBlocks.PLANKS).save(consumer);
+        makeSlab(GhastlyMarshBlocks.WOODEN_SLAB, GhastlyMarshBlocks.PLANKS).save(consumer);
+        makeFence(GhastlyMarshBlocks.FENCE, GhastlyMarshBlocks.PLANKS).save(consumer);
+        makeFenceGate(GhastlyMarshBlocks.FENCE_GATE, GhastlyMarshBlocks.PLANKS).save(consumer);
+        makeButton(GhastlyMarshBlocks.WOODEN_BUTTON, GhastlyMarshBlocks.PLANKS).save(consumer);
+        makePressurePlate(GhastlyMarshBlocks.WOODEN_PRESSURE_PLATE, GhastlyMarshBlocks.PLANKS).save(consumer);
             //Stone
-
+        makeBricks(GhastlyMarshBlocks.STONE_BRICKS, GhastlyMarshBlocks.STONE).save(consumer);
+        makeStairs(GhastlyMarshBlocks.STONE_STAIRS, GhastlyMarshBlocks.STONE).save(consumer);
+        makeStairs(GhastlyMarshBlocks.COBBLESTONE_STAIRS, GhastlyMarshBlocks.COBBLESTONE).save(consumer);
+        makeStairs(GhastlyMarshBlocks.STONE_BRICKS_STAIRS, GhastlyMarshBlocks.STONE_BRICKS).save(consumer);
+        makeSlab(GhastlyMarshBlocks.COBBLESTONE_SLAB, GhastlyMarshBlocks.COBBLESTONE).save(consumer);
+        makeSlab(GhastlyMarshBlocks.STONE_SLAB, GhastlyMarshBlocks.STONE).save(consumer);
+        makeSlab(GhastlyMarshBlocks.STONE_BRICKS_SLAB, GhastlyMarshBlocks.STONE_BRICKS).save(consumer);
+        makeWall(GhastlyMarshBlocks.COBBLESTONE_WALL, GhastlyMarshBlocks.COBBLESTONE).save(consumer);
+        makeWall(GhastlyMarshBlocks.STONE_BRICKS_WALL, GhastlyMarshBlocks.STONE_BRICKS).save(consumer);
+        makeButton(GhastlyMarshBlocks.STONE_BUTTON, GhastlyMarshBlocks.STONE).save(consumer);
+        makePressurePlate(GhastlyMarshBlocks.STONE_PRESSURE_PLATE, GhastlyMarshBlocks.STONE).save(consumer);
+        stonecuttingSingleRecipe(GhastlyMarshBlocks.STONE, GhastlyMarshBlocks.STONE_BRICKS.get()).save(consumer, name("spooky_stone_brick_stonecutting"));
+        stonecuttingSingleRecipe(GhastlyMarshBlocks.STONE, GhastlyMarshBlocks.STONE_STAIRS.get()).save(consumer, name("spooky_stone_stairs_stonecutting"));
+        stonecuttingSingleRecipe(GhastlyMarshBlocks.STONE, GhastlyMarshBlocks.STONE_BRICKS_STAIRS.get()).save(consumer, name("spooky_stone_brick_stairs_stonecutting"));
+        stonecuttingMultipleRecipe(GhastlyMarshBlocks.STONE, GhastlyMarshBlocks.STONE_SLAB.get(), 2).save(consumer, name("spooky_stone_slabs_stonecutting"));
+        stonecuttingMultipleRecipe(GhastlyMarshBlocks.STONE, GhastlyMarshBlocks.STONE_BRICKS_SLAB.get(), 2).save(consumer, name("spooky_stone_brick_slabs_stonecutting_stone"));
+        stonecuttingMultipleRecipe(GhastlyMarshBlocks.STONE_BRICKS, GhastlyMarshBlocks.STONE_BRICKS_SLAB.get(), 2).save(consumer, name("spooky_stone_brick_slabs_stonecutting_stone_brick"));
+        stonecuttingMultipleRecipe(GhastlyMarshBlocks.COBBLESTONE, GhastlyMarshBlocks.COBBLESTONE_SLAB.get(), 2).save(consumer, name("spooky_cobblestone_slabs_stonecutting"));
+        stonecuttingSingleRecipe(GhastlyMarshBlocks.COBBLESTONE, GhastlyMarshBlocks.COBBLESTONE_STAIRS.get()).save(consumer, name("spooky_cobblestone_stairs_stonecutting"));
             //Smelting
-        smeltingRecipe(GhastlyMarshBlocks.SPOOKY_STONE.get(), GhastlyMarshBlocks.SPOOKY_COBBLESTONE.get(), 0.7F).save(consumer, name("smelt_spooky_cobblestone"));
+        smeltingRecipe(GhastlyMarshBlocks.STONE.get(), GhastlyMarshBlocks.COBBLESTONE.get(), 0.7F).save(consumer, name("smelt_spooky_cobblestone"));
         //Grass
             //Wooden
 

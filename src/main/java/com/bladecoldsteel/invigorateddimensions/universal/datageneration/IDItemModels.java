@@ -52,6 +52,7 @@ public class IDItemModels extends IDItemModelProvider {
         itemBlock(DreamlandBlocks.PLANKS);
         itemBlock(EmberwildsBlocks.PLANKS);
         itemBlock(FeywildExpanseBlocks.PLANKS);
+        itemBlock(GhastlyMarshBlocks.PLANKS);
         //Logs
         itemBlock(InsectoidParadisioBlocks.BUGGED_LOG);
         itemBlock(ValleyDeathBlocks.DARKENED_LOG);
@@ -61,7 +62,7 @@ public class IDItemModels extends IDItemModelProvider {
         itemBlock(InfiniteDungeonBlocks.TOUGH_LOG);
         itemBlock(EmberwildsBlocks.LOG);
         itemBlock(HeavenlyRealmBlocks.LOG);
-        itemBlock(GhastlyMarshBlocks.SPOOKY_LOG);
+        itemBlock(GhastlyMarshBlocks.LOG);
         itemBlock(GrassyKnollBlocks.GRASSY_LOG);
         itemBlock(TerraNataBlocks.GROUNDED_LOG);
         itemBlock(DeepTundraBlocks.LOG);
@@ -80,6 +81,7 @@ public class IDItemModels extends IDItemModelProvider {
         itemBlock(DreamlandBlocks.WOOD);
         itemBlock(EmberwildsBlocks.WOOD);
         itemBlock(FeywildExpanseBlocks.WOOD);
+        itemBlock(GhastlyMarshBlocks.WOOD);
         //Stripped Logs
         itemBlock(ElectricHighlandsBlocks.STRIPPED_ELECTRICALLY_CHARGED_LOG);
         //Stripped Wood
@@ -91,7 +93,7 @@ public class IDItemModels extends IDItemModelProvider {
         itemBlock(FeywildExpanseBlocks.STONE);
         itemBlock(InfiniteDungeonBlocks.TOUGH_STONE);
         itemBlock(HeavenlyRealmBlocks.STONE);
-        itemBlock(GhastlyMarshBlocks.SPOOKY_STONE);
+        itemBlock(GhastlyMarshBlocks.STONE);
         itemBlock(GrassyKnollBlocks.GRASSY_STONE);
         itemBlock(TerraNataBlocks.GROUNDED_STONE);
         itemBlock(DeepTundraBlocks.STONE);
@@ -107,7 +109,7 @@ public class IDItemModels extends IDItemModelProvider {
         itemBlock(FeywildExpanseBlocks.COBBLESTONE);
         itemBlock(InfiniteDungeonBlocks.TOUGH_COBBLESTONE);
         itemBlock(HeavenlyRealmBlocks.COBBLESTONE);
-        itemBlock(GhastlyMarshBlocks.SPOOKY_COBBLESTONE);
+        itemBlock(GhastlyMarshBlocks.COBBLESTONE);
         itemBlock(GrassyKnollBlocks.GRASSY_COBBLESTONE);
         itemBlock(TerraNataBlocks.GROUNDED_COBBLESTONE);
         itemBlock(DeepTundraBlocks.COBBLESTONE);
@@ -124,6 +126,7 @@ public class IDItemModels extends IDItemModelProvider {
         itemBlock(DeepTundraBlocks.STONE_BRICKS);
         itemBlock(DreamlandBlocks.STONE_BRICKS);
         itemBlock(FeywildExpanseBlocks.STONE_BRICKS);
+        itemBlock(GhastlyMarshBlocks.STONE_BRICKS);
         //Chiseled Stone Bricks
         itemBlock(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_CHISELED_STONE_BRICKS);
         //Walls
@@ -141,6 +144,8 @@ public class IDItemModels extends IDItemModelProvider {
         wallInventory("psychedelic_stone_bricks_wall", new ResourceLocation(InvigoratedDimensions.MOD_ID, "block/psychedelic_stone_bricks"));
         wallInventory("feyan_cobblestone_wall", new ResourceLocation(InvigoratedDimensions.MOD_ID, "block/feyan_cobblestone"));
         wallInventory("feyan_stone_bricks_wall", new ResourceLocation(InvigoratedDimensions.MOD_ID, "block/feyan_stone_bricks"));
+        wallInventory("spooky_cobblestone_wall", new ResourceLocation(InvigoratedDimensions.MOD_ID, "block/spooky_cobblestone"));
+        wallInventory("spooky_stone_bricks_wall", new ResourceLocation(InvigoratedDimensions.MOD_ID, "block/spooky_stone_bricks"));
         //Fences
         itemFence(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_FENCE, "electrically_charged_planks");
         itemFence(CavernousCoveBlocks.FENCE, "rocky_planks");
@@ -151,6 +156,7 @@ public class IDItemModels extends IDItemModelProvider {
         itemFence(DreamlandBlocks.FENCE, "psychedelic_planks");
         itemFence(EmberwildsBlocks.FENCE, "embered_planks");
         itemFence(FeywildExpanseBlocks.FENCE, "feyan_planks");
+        itemFence(GhastlyMarshBlocks.FENCE, "spooky_planks");
         //Fence Gates
         itemBlock(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_FENCE_GATE);
         itemBlock(CavernousCoveBlocks.FENCE_GATE);
@@ -161,6 +167,7 @@ public class IDItemModels extends IDItemModelProvider {
         itemBlock(DreamlandBlocks.FENCE_GATE);
         itemBlock(EmberwildsBlocks.FENCE_GATE);
         itemBlock(FeywildExpanseBlocks.FENCE_GATE);
+        itemBlock(GhastlyMarshBlocks.FENCE_GATE);
         //Ores
         itemBlock(ElectricHighlandsBlocks.CHARGED_COAL_ORE);
         itemBlock(ElectricHighlandsBlocks.CHARGED_IRON_ORE);
@@ -199,6 +206,10 @@ public class IDItemModels extends IDItemModelProvider {
         itemBlock(FeywildExpanseBlocks.COBBLESTONE_STAIRS);
         itemBlock(FeywildExpanseBlocks.STONE_STAIRS);
         itemBlock(FeywildExpanseBlocks.STONE_BRICKS_STAIRS);
+        itemBlock(GhastlyMarshBlocks.WOODEN_STAIRS);
+        itemBlock(GhastlyMarshBlocks.COBBLESTONE_STAIRS);
+        itemBlock(GhastlyMarshBlocks.STONE_STAIRS);
+        itemBlock(GhastlyMarshBlocks.STONE_BRICKS_STAIRS);
         //Slabs
         itemBlock(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_WOODEN_SLAB);
         itemBlock(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_COBBLESTONE_SLABS);
@@ -230,6 +241,10 @@ public class IDItemModels extends IDItemModelProvider {
         itemBlock(FeywildExpanseBlocks.COBBLESTONE_SLAB);
         itemBlock(FeywildExpanseBlocks.STONE_SLAB);
         itemBlock(FeywildExpanseBlocks.STONE_BRICKS_SLAB);
+        itemBlock(GhastlyMarshBlocks.WOODEN_SLAB);
+        itemBlock(GhastlyMarshBlocks.COBBLESTONE_SLAB);
+        itemBlock(GhastlyMarshBlocks.STONE_SLAB);
+        itemBlock(GhastlyMarshBlocks.STONE_BRICKS_SLAB);
         //Saplings
         itemBlockFlat(InsectoidParadisioBlocks.BUGGED_SAPLING);
         itemBlockFlat(ValleyDeathBlocks.DARKENED_SAPLING);
@@ -238,7 +253,7 @@ public class IDItemModels extends IDItemModelProvider {
         itemBlockFlat(FeywildExpanseBlocks.SAPLING);
         itemBlockFlat(EmberwildsBlocks.SAPLING);
         itemBlockFlat(HeavenlyRealmBlocks.SAPLING);
-        itemBlockFlat(GhastlyMarshBlocks.SPOOKY_SAPLING);
+        itemBlockFlat(GhastlyMarshBlocks.SAPLING);
         itemBlockFlat(GrassyKnollBlocks.GRASSY_SAPLING);
         itemBlockFlat(TerraNataBlocks.GROUNDED_SAPLING);
         itemBlockFlat(DeepTundraBlocks.SAPLING);

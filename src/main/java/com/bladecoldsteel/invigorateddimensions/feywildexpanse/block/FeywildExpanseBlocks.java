@@ -7,8 +7,6 @@ import com.bladecoldsteel.invigorateddimensions.util.BlockHelper;
 import com.bladecoldsteel.invigorateddimensions.world.gen.features.trees.FairyTree;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.eventbus.api.IEventBus;

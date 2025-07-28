@@ -8,7 +8,7 @@ public class GhastlyMarshItemGroup {
     public static final ItemGroup SPOOKY_RIFT_GROUP = new ItemGroup("invigorated_dimensions_spooky_mod_tab") {
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(GhastlyMarshBlocks.SPOOKY_LOG.get());
+            return new ItemStack(GhastlyMarshBlocks.LOG.get());
         }
     };
 }

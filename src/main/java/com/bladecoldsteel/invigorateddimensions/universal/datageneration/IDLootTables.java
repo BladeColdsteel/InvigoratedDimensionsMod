@@ -422,14 +422,41 @@ public class IDLootTables extends LootTableProvider {
             dropSelf(FeywildExpanseBlocks.SAPLING);
             //Ghost
                 //Wood
-            dropSelf(GhastlyMarshBlocks.SPOOKY_LOG);
-                //Stone
-            dropSelf(GhastlyMarshBlocks.SPOOKY_COBBLESTONE);
-            dropOther(GhastlyMarshBlocks.SPOOKY_STONE, GhastlyMarshBlocks.SPOOKY_COBBLESTONE.get());
+            dropSelf(GhastlyMarshBlocks.LOG);
+            dropSelf(GhastlyMarshBlocks.PLANKS);
+            //dropSelf(GhastlyMarshBlocks.STRIPPED_ELECTRICALLY_CHARGED_LOG);
+            dropSelf(GhastlyMarshBlocks.WOODEN_BUTTON);
+            dropSelf(GhastlyMarshBlocks.WOODEN_STAIRS);
+            slab(GhastlyMarshBlocks.WOODEN_SLAB);
+            dropSelf(GhastlyMarshBlocks.WOODEN_PRESSURE_PLATE);
+            //dropSelf(GhastlyMarshBlocks.ELECTRICALLY_CHARGED_WOODEN_TRAPDOOR);
+            //this.add(GhastlyMarshBlocks.ELECTRICALLY_CHARGED_DOOR.get(), (block) -> createSinglePropConditionTable(block, DoorBlock.HALF, DoubleBlockHalf.LOWER));
+            dropSelf(GhastlyMarshBlocks.WOOD);
+            //dropSelf(GhastlyMarshBlocks.STRIPPED_ELECTRICALLY_CHARGED_WOOD);
+            dropSelf(GhastlyMarshBlocks.FENCE);
+            dropSelf(GhastlyMarshBlocks.FENCE_GATE);
+            //dropSelf(GhastlyMarshBlocks.ELECTRICALLY_CHARGED_WOODEN_TRAPDOOR);
+            //dropSelf(GhastlyMarshBlocks.ELECTRICALLY_CHARGED_SIGN);
+            //dropOther(GhastlyMarshBlocks.ELECTRICALLY_CHARGED_WALL_SIGN, GhastlyMarshBlocks.ELECTRICALLY_CHARGED_SIGN.get());
+            //Stone
+            dropSelf(GhastlyMarshBlocks.COBBLESTONE);
+            dropSelf(GhastlyMarshBlocks.COBBLESTONE_WALL);
+            dropSelf(GhastlyMarshBlocks.COBBLESTONE_STAIRS);
+            slab(GhastlyMarshBlocks.COBBLESTONE_SLAB);
+            dropSelf(GhastlyMarshBlocks.STONE_BRICKS);
+            slab(GhastlyMarshBlocks.STONE_BRICKS_SLAB);
+            dropSelf(GhastlyMarshBlocks.STONE_BRICKS_STAIRS);
+            dropSelf(GhastlyMarshBlocks.STONE_BRICKS_WALL);
+            //dropSelf(GhastlyMarshBlocks.ELECTRICALLY_CHARGED_CHISELED_STONE_BRICKS);
+            slab(GhastlyMarshBlocks.STONE_SLAB);
+            dropSelf(GhastlyMarshBlocks.STONE_STAIRS);
+            dropSelf(GhastlyMarshBlocks.STONE_BUTTON);
+            dropSelf(GhastlyMarshBlocks.STONE_PRESSURE_PLATE);
+            dropOther(GhastlyMarshBlocks.STONE, GhastlyMarshBlocks.COBBLESTONE.get());
                 //Ore
 
                 //Other
-            dropSelf(GhastlyMarshBlocks.SPOOKY_SAPLING);
+            dropSelf(GhastlyMarshBlocks.SAPLING);
             //Grass
                 //Wood
             dropSelf(GrassyKnollBlocks.GRASSY_LOG);

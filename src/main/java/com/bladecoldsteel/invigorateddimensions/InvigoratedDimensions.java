@@ -402,7 +402,7 @@ public class InvigoratedDimensions
         //Rock
 
         //Ghost
-        RenderTypeLookup.setRenderLayer(GhastlyMarshBlocks.SPOOKY_SAPLING.get(), RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(GhastlyMarshBlocks.SAPLING.get(), RenderType.cutout());
 
         //Steel
         RenderTypeLookup.setRenderLayer(MetallicMountainsBlocks.METALLIC_SAPLING.get(), RenderType.cutout());
