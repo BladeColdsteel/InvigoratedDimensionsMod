@@ -8,7 +8,7 @@ public class InsectoidParadisioItemGroup {
     public static final ItemGroup INSECTOID_PARADISIO_GROUP = new ItemGroup("invigorated_dimensions_buggy_mod_tab") {
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(InsectoidParadisioBlocks.BUGGED_LOG.get());
+            return new ItemStack(InsectoidParadisioBlocks.LOG.get());
         }
     };
 }

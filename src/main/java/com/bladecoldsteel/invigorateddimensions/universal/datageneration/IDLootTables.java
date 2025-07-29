@@ -534,8 +534,35 @@ public class IDLootTables extends LootTableProvider {
             //Bug
                 //Wood
             dropSelf(InsectoidParadisioBlocks.LOG);
-                //Stone
+            dropSelf(InsectoidParadisioBlocks.PLANKS);
+            //dropSelf(InsectoidParadisioBlocks.STRIPPED_ELECTRICALLY_CHARGED_LOG);
+            dropSelf(InsectoidParadisioBlocks.WOODEN_BUTTON);
+            dropSelf(InsectoidParadisioBlocks.WOODEN_STAIRS);
+            slab(InsectoidParadisioBlocks.WOODEN_SLAB);
+            dropSelf(InsectoidParadisioBlocks.WOODEN_PRESSURE_PLATE);
+            //dropSelf(InsectoidParadisioBlocks.ELECTRICALLY_CHARGED_WOODEN_TRAPDOOR);
+            //this.add(InsectoidParadisioBlocks.ELECTRICALLY_CHARGED_DOOR.get(), (block) -> createSinglePropConditionTable(block, DoorBlock.HALF, DoubleBlockHalf.LOWER));
+            dropSelf(InsectoidParadisioBlocks.WOOD);
+            //dropSelf(InsectoidParadisioBlocks.STRIPPED_ELECTRICALLY_CHARGED_WOOD);
+            dropSelf(InsectoidParadisioBlocks.FENCE);
+            dropSelf(InsectoidParadisioBlocks.FENCE_GATE);
+            //dropSelf(InsectoidParadisioBlocks.ELECTRICALLY_CHARGED_WOODEN_TRAPDOOR);
+            //dropSelf(InsectoidParadisioBlocks.ELECTRICALLY_CHARGED_SIGN);
+            //dropOther(InsectoidParadisioBlocks.ELECTRICALLY_CHARGED_WALL_SIGN, InsectoidParadisioBlocks.ELECTRICALLY_CHARGED_SIGN.get());
+            //Stone
             dropSelf(InsectoidParadisioBlocks.COBBLESTONE);
+            dropSelf(InsectoidParadisioBlocks.COBBLESTONE_WALL);
+            dropSelf(InsectoidParadisioBlocks.COBBLESTONE_STAIRS);
+            slab(InsectoidParadisioBlocks.COBBLESTONE_SLAB);
+            dropSelf(InsectoidParadisioBlocks.STONE_BRICKS);
+            slab(InsectoidParadisioBlocks.STONE_BRICKS_SLAB);
+            dropSelf(InsectoidParadisioBlocks.STONE_BRICKS_STAIRS);
+            dropSelf(InsectoidParadisioBlocks.STONE_BRICKS_WALL);
+            //dropSelf(InsectoidParadisioBlocks.ELECTRICALLY_CHARGED_CHISELED_STONE_BRICKS);
+            slab(InsectoidParadisioBlocks.STONE_SLAB);
+            dropSelf(InsectoidParadisioBlocks.STONE_STAIRS);
+            dropSelf(InsectoidParadisioBlocks.STONE_BUTTON);
+            dropSelf(InsectoidParadisioBlocks.STONE_PRESSURE_PLATE);
             dropOther(InsectoidParadisioBlocks.STONE, InsectoidParadisioBlocks.COBBLESTONE.get());
                 //Ore
 

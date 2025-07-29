@@ -25,7 +25,7 @@ public class BugFeatures {
 
         public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BUGGED_TREE = Feature.TREE.configured(
                 new BaseTreeFeatureConfig.Builder(
-                        new SimpleBlockStateProvider(InsectoidParadisioBlocks.BUGGED_LOG.get().defaultBlockState()),
+                        new SimpleBlockStateProvider(InsectoidParadisioBlocks.LOG.get().defaultBlockState()),
                         new SimpleBlockStateProvider(UniversalBlocks.CRYSTALLIZED_LEAVES.get().defaultBlockState()),
                         new DarkOakFoliagePlacer(FeatureSpread.fixed(1), FeatureSpread.fixed(1)),
                         new DarkOakTrunkPlacer(8, 4, 5),
@@ -33,7 +33,7 @@ public class BugFeatures {
                         .ignoreVines().build());
 
         public static final ConfiguredFeature<?, ?> BUGGED_STONE_PATCH = Feature.ORE.configured(
-                new OreFeatureConfig(OVERWORLD_FILLER, InsectoidParadisioBlocks.BUGGED_STONE.get().defaultBlockState(), 33)
+                new OreFeatureConfig(OVERWORLD_FILLER, InsectoidParadisioBlocks.STONE.get().defaultBlockState(), 33)
         );
     }
 

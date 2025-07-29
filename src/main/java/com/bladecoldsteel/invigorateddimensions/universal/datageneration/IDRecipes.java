@@ -407,9 +407,34 @@ public class IDRecipes extends IDRecipeProvider {
         smeltingRecipe(InfiniteDungeonBlocks.STONE.get(), InfiniteDungeonBlocks.COBBLESTONE.get(), 0.7F).save(consumer, name("smelt_tough_cobblestone"));
         //Bug
             //Wooden
-
+        makePlanks(InsectoidParadisioBlocks.PLANKS, InsectoidParadisioBlocks.LOG).save(consumer);
+        makeWood(InsectoidParadisioBlocks.WOOD, InsectoidParadisioBlocks.LOG).save(consumer);
+        makeStairs(InsectoidParadisioBlocks.WOODEN_STAIRS, InsectoidParadisioBlocks.PLANKS).save(consumer);
+        makeSlab(InsectoidParadisioBlocks.WOODEN_SLAB, InsectoidParadisioBlocks.PLANKS).save(consumer);
+        makeFence(InsectoidParadisioBlocks.FENCE, InsectoidParadisioBlocks.PLANKS).save(consumer);
+        makeFenceGate(InsectoidParadisioBlocks.FENCE_GATE, InsectoidParadisioBlocks.PLANKS).save(consumer);
+        makeButton(InsectoidParadisioBlocks.WOODEN_BUTTON, InsectoidParadisioBlocks.PLANKS).save(consumer);
+        makePressurePlate(InsectoidParadisioBlocks.WOODEN_PRESSURE_PLATE, InsectoidParadisioBlocks.PLANKS).save(consumer);
             //Stone
-
+        makeBricks(InsectoidParadisioBlocks.STONE_BRICKS, InsectoidParadisioBlocks.STONE).save(consumer);
+        makeStairs(InsectoidParadisioBlocks.STONE_STAIRS, InsectoidParadisioBlocks.STONE).save(consumer);
+        makeStairs(InsectoidParadisioBlocks.COBBLESTONE_STAIRS, InsectoidParadisioBlocks.COBBLESTONE).save(consumer);
+        makeStairs(InsectoidParadisioBlocks.STONE_BRICKS_STAIRS, InsectoidParadisioBlocks.STONE_BRICKS).save(consumer);
+        makeSlab(InsectoidParadisioBlocks.COBBLESTONE_SLAB, InsectoidParadisioBlocks.COBBLESTONE).save(consumer);
+        makeSlab(InsectoidParadisioBlocks.STONE_SLAB, InsectoidParadisioBlocks.STONE).save(consumer);
+        makeSlab(InsectoidParadisioBlocks.STONE_BRICKS_SLAB, InsectoidParadisioBlocks.STONE_BRICKS).save(consumer);
+        makeWall(InsectoidParadisioBlocks.COBBLESTONE_WALL, InsectoidParadisioBlocks.COBBLESTONE).save(consumer);
+        makeWall(InsectoidParadisioBlocks.STONE_BRICKS_WALL, InsectoidParadisioBlocks.STONE_BRICKS).save(consumer);
+        makeButton(InsectoidParadisioBlocks.STONE_BUTTON, InsectoidParadisioBlocks.STONE).save(consumer);
+        makePressurePlate(InsectoidParadisioBlocks.STONE_PRESSURE_PLATE, InsectoidParadisioBlocks.STONE).save(consumer);
+        stonecuttingSingleRecipe(InsectoidParadisioBlocks.STONE, InsectoidParadisioBlocks.STONE_BRICKS.get()).save(consumer, name("bugged_stone_brick_stonecutting"));
+        stonecuttingSingleRecipe(InsectoidParadisioBlocks.STONE, InsectoidParadisioBlocks.STONE_STAIRS.get()).save(consumer, name("bugged_stone_stairs_stonecutting"));
+        stonecuttingSingleRecipe(InsectoidParadisioBlocks.STONE, InsectoidParadisioBlocks.STONE_BRICKS_STAIRS.get()).save(consumer, name("bugged_stone_brick_stairs_stonecutting"));
+        stonecuttingMultipleRecipe(InsectoidParadisioBlocks.STONE, InsectoidParadisioBlocks.STONE_SLAB.get(), 2).save(consumer, name("bugged_stone_slabs_stonecutting"));
+        stonecuttingMultipleRecipe(InsectoidParadisioBlocks.STONE, InsectoidParadisioBlocks.STONE_BRICKS_SLAB.get(), 2).save(consumer, name("bugged_stone_brick_slabs_stonecutting_stone"));
+        stonecuttingMultipleRecipe(InsectoidParadisioBlocks.STONE_BRICKS, InsectoidParadisioBlocks.STONE_BRICKS_SLAB.get(), 2).save(consumer, name("bugged_stone_brick_slabs_stonecutting_stone_brick"));
+        stonecuttingMultipleRecipe(InsectoidParadisioBlocks.COBBLESTONE, InsectoidParadisioBlocks.COBBLESTONE_SLAB.get(), 2).save(consumer, name("bugged_cobblestone_slabs_stonecutting"));
+        stonecuttingSingleRecipe(InsectoidParadisioBlocks.COBBLESTONE, InsectoidParadisioBlocks.COBBLESTONE_STAIRS.get()).save(consumer, name("bugged_cobblestone_stairs_stonecutting"));
             //Smelting
         smeltingRecipe(InsectoidParadisioBlocks.STONE.get(), InsectoidParadisioBlocks.COBBLESTONE.get(), 0.7F).save(consumer, name("smelt_bugged_cobblestone"));
         //Steel
