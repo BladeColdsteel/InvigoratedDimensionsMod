@@ -439,11 +439,36 @@ public class IDRecipes extends IDRecipeProvider {
         smeltingRecipe(InsectoidParadisioBlocks.STONE.get(), InsectoidParadisioBlocks.COBBLESTONE.get(), 0.7F).save(consumer, name("smelt_bugged_cobblestone"));
         //Steel
             //Wooden
-
+        makePlanks(MetallicMountainsBlocks.PLANKS, MetallicMountainsBlocks.LOG).save(consumer);
+        makeWood(MetallicMountainsBlocks.WOOD, MetallicMountainsBlocks.LOG).save(consumer);
+        makeStairs(MetallicMountainsBlocks.WOODEN_STAIRS, MetallicMountainsBlocks.PLANKS).save(consumer);
+        makeSlab(MetallicMountainsBlocks.WOODEN_SLAB, MetallicMountainsBlocks.PLANKS).save(consumer);
+        makeFence(MetallicMountainsBlocks.FENCE, MetallicMountainsBlocks.PLANKS).save(consumer);
+        makeFenceGate(MetallicMountainsBlocks.FENCE_GATE, MetallicMountainsBlocks.PLANKS).save(consumer);
+        makeButton(MetallicMountainsBlocks.WOODEN_BUTTON, MetallicMountainsBlocks.PLANKS).save(consumer);
+        makePressurePlate(MetallicMountainsBlocks.WOODEN_PRESSURE_PLATE, MetallicMountainsBlocks.PLANKS).save(consumer);
             //Stone
-
+        makeBricks(MetallicMountainsBlocks.STONE_BRICKS, MetallicMountainsBlocks.STONE).save(consumer);
+        makeStairs(MetallicMountainsBlocks.STONE_STAIRS, MetallicMountainsBlocks.STONE).save(consumer);
+        makeStairs(MetallicMountainsBlocks.COBBLESTONE_STAIRS, MetallicMountainsBlocks.COBBLESTONE).save(consumer);
+        makeStairs(MetallicMountainsBlocks.STONE_BRICKS_STAIRS, MetallicMountainsBlocks.STONE_BRICKS).save(consumer);
+        makeSlab(MetallicMountainsBlocks.COBBLESTONE_SLAB, MetallicMountainsBlocks.COBBLESTONE).save(consumer);
+        makeSlab(MetallicMountainsBlocks.STONE_SLAB, MetallicMountainsBlocks.STONE).save(consumer);
+        makeSlab(MetallicMountainsBlocks.STONE_BRICKS_SLAB, MetallicMountainsBlocks.STONE_BRICKS).save(consumer);
+        makeWall(MetallicMountainsBlocks.COBBLESTONE_WALL, MetallicMountainsBlocks.COBBLESTONE).save(consumer);
+        makeWall(MetallicMountainsBlocks.STONE_BRICKS_WALL, MetallicMountainsBlocks.STONE_BRICKS).save(consumer);
+        makeButton(MetallicMountainsBlocks.STONE_BUTTON, MetallicMountainsBlocks.STONE).save(consumer);
+        makePressurePlate(MetallicMountainsBlocks.STONE_PRESSURE_PLATE, MetallicMountainsBlocks.STONE).save(consumer);
+        stonecuttingSingleRecipe(MetallicMountainsBlocks.STONE, MetallicMountainsBlocks.STONE_BRICKS.get()).save(consumer, name("metallic_stone_brick_stonecutting"));
+        stonecuttingSingleRecipe(MetallicMountainsBlocks.STONE, MetallicMountainsBlocks.STONE_STAIRS.get()).save(consumer, name("metallic_stone_stairs_stonecutting"));
+        stonecuttingSingleRecipe(MetallicMountainsBlocks.STONE, MetallicMountainsBlocks.STONE_BRICKS_STAIRS.get()).save(consumer, name("metallic_stone_brick_stairs_stonecutting"));
+        stonecuttingMultipleRecipe(MetallicMountainsBlocks.STONE, MetallicMountainsBlocks.STONE_SLAB.get(), 2).save(consumer, name("metallic_stone_slabs_stonecutting"));
+        stonecuttingMultipleRecipe(MetallicMountainsBlocks.STONE, MetallicMountainsBlocks.STONE_BRICKS_SLAB.get(), 2).save(consumer, name("metallic_stone_brick_slabs_stonecutting_stone"));
+        stonecuttingMultipleRecipe(MetallicMountainsBlocks.STONE_BRICKS, MetallicMountainsBlocks.STONE_BRICKS_SLAB.get(), 2).save(consumer, name("metallic_stone_brick_slabs_stonecutting_stone_brick"));
+        stonecuttingMultipleRecipe(MetallicMountainsBlocks.COBBLESTONE, MetallicMountainsBlocks.COBBLESTONE_SLAB.get(), 2).save(consumer, name("metallic_cobblestone_slabs_stonecutting"));
+        stonecuttingSingleRecipe(MetallicMountainsBlocks.COBBLESTONE, MetallicMountainsBlocks.COBBLESTONE_STAIRS.get()).save(consumer, name("metallic_cobblestone_stairs_stonecutting"));
             //Smelting
-        smeltingRecipe(MetallicMountainsBlocks.METALLIC_STONE.get(), MetallicMountainsBlocks.METALLIC_COBBLESTONE.get(), 0.7F).save(consumer, name("smelt_metallic_cobblestone"));
+        smeltingRecipe(MetallicMountainsBlocks.STONE.get(), MetallicMountainsBlocks.COBBLESTONE.get(), 0.7F).save(consumer, name("smelt_metallic_cobblestone"));
         //Ground
             //Wooden
 

@@ -405,7 +405,7 @@ public class InvigoratedDimensions
         RenderTypeLookup.setRenderLayer(GhastlyMarshBlocks.SAPLING.get(), RenderType.cutout());
 
         //Steel
-        RenderTypeLookup.setRenderLayer(MetallicMountainsBlocks.METALLIC_SAPLING.get(), RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(MetallicMountainsBlocks.SAPLING.get(), RenderType.cutout());
 
         //Wood Types
         Atlases.addWoodType(ElectricHighlandsWoodTypes.ELECTRICALLY_CHARGED);

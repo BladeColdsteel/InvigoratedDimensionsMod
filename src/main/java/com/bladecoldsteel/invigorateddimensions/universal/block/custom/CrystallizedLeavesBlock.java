@@ -219,7 +219,7 @@ public class CrystallizedLeavesBlock extends LeavesBlock {
         } else if (isDarkBiome(biomeKey)) {
             return new ItemStack(ValleyDeathBlocks.DARKENED_SAPLING.get());
         } else if (isSteelBiome(biomeKey)) {
-            return new ItemStack(MetallicMountainsBlocks.METALLIC_SAPLING.get());
+            return new ItemStack(MetallicMountainsBlocks.SAPLING.get());
         } else if (isFairyBiome(biomeKey)) {
             return new ItemStack(FeywildExpanseBlocks.SAPLING.get());
         } else {
@@ -243,7 +243,7 @@ public class CrystallizedLeavesBlock extends LeavesBlock {
                 new ItemStack(CorrosiveFieldsBlocks.SAPLING.get()),
                 new ItemStack(DreamlandBlocks.SAPLING.get()),
                 new ItemStack(GhastlyMarshBlocks.SAPLING.get()),
-                new ItemStack(MetallicMountainsBlocks.METALLIC_SAPLING.get())
+                new ItemStack(MetallicMountainsBlocks.SAPLING.get())
         };
 
         return saplings[new Random().nextInt(saplings.length)];

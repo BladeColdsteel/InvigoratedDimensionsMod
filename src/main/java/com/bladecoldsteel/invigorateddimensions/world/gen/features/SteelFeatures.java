@@ -26,7 +26,7 @@ public class SteelFeatures {
 
         public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> METALLIC_TREE = Feature.TREE.configured(
                 new BaseTreeFeatureConfig.Builder(
-                        new SimpleBlockStateProvider(MetallicMountainsBlocks.METALLIC_LOG.get().defaultBlockState()),
+                        new SimpleBlockStateProvider(MetallicMountainsBlocks.LOG.get().defaultBlockState()),
                         new SimpleBlockStateProvider(UniversalBlocks.CRYSTALLIZED_LEAVES.get().defaultBlockState()),
                         new PineFoliagePlacer(FeatureSpread.fixed(4), FeatureSpread.fixed(3), FeatureSpread.fixed(4)),
                         new StraightTrunkPlacer(10, 6, 4),
@@ -34,7 +34,7 @@ public class SteelFeatures {
                         .ignoreVines().build());
 
         public static final ConfiguredFeature<?, ?> METALLIC_STONE_PATCH = Feature.ORE.configured(
-                new OreFeatureConfig(OVERWORLD_FILLER, MetallicMountainsBlocks.METALLIC_STONE.get().defaultBlockState(), 33)
+                new OreFeatureConfig(OVERWORLD_FILLER, MetallicMountainsBlocks.STONE.get().defaultBlockState(), 33)
         );
     }
 

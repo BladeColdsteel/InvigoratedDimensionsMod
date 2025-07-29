@@ -570,14 +570,41 @@ public class IDLootTables extends LootTableProvider {
             dropSelf(InsectoidParadisioBlocks.SAPLING);
             //Steel
                 //Wood
-            dropSelf(MetallicMountainsBlocks.METALLIC_LOG);
-                //Stone
-            dropSelf(MetallicMountainsBlocks.METALLIC_COBBLESTONE);
-            dropOther(MetallicMountainsBlocks.METALLIC_STONE, MetallicMountainsBlocks.METALLIC_COBBLESTONE.get());
+            dropSelf(MetallicMountainsBlocks.LOG);
+            dropSelf(MetallicMountainsBlocks.PLANKS);
+            //dropSelf(MetallicMountainsBlocks.STRIPPED_ELECTRICALLY_CHARGED_LOG);
+            dropSelf(MetallicMountainsBlocks.WOODEN_BUTTON);
+            dropSelf(MetallicMountainsBlocks.WOODEN_STAIRS);
+            slab(MetallicMountainsBlocks.WOODEN_SLAB);
+            dropSelf(MetallicMountainsBlocks.WOODEN_PRESSURE_PLATE);
+            //dropSelf(MetallicMountainsBlocks.ELECTRICALLY_CHARGED_WOODEN_TRAPDOOR);
+            //this.add(MetallicMountainsBlocks.ELECTRICALLY_CHARGED_DOOR.get(), (block) -> createSinglePropConditionTable(block, DoorBlock.HALF, DoubleBlockHalf.LOWER));
+            dropSelf(MetallicMountainsBlocks.WOOD);
+            //dropSelf(MetallicMountainsBlocks.STRIPPED_ELECTRICALLY_CHARGED_WOOD);
+            dropSelf(MetallicMountainsBlocks.FENCE);
+            dropSelf(MetallicMountainsBlocks.FENCE_GATE);
+            //dropSelf(MetallicMountainsBlocks.ELECTRICALLY_CHARGED_WOODEN_TRAPDOOR);
+            //dropSelf(MetallicMountainsBlocks.ELECTRICALLY_CHARGED_SIGN);
+            //dropOther(MetallicMountainsBlocks.ELECTRICALLY_CHARGED_WALL_SIGN, MetallicMountainsBlocks.ELECTRICALLY_CHARGED_SIGN.get());
+            //Stone
+            dropSelf(MetallicMountainsBlocks.COBBLESTONE);
+            dropSelf(MetallicMountainsBlocks.COBBLESTONE_WALL);
+            dropSelf(MetallicMountainsBlocks.COBBLESTONE_STAIRS);
+            slab(MetallicMountainsBlocks.COBBLESTONE_SLAB);
+            dropSelf(MetallicMountainsBlocks.STONE_BRICKS);
+            slab(MetallicMountainsBlocks.STONE_BRICKS_SLAB);
+            dropSelf(MetallicMountainsBlocks.STONE_BRICKS_STAIRS);
+            dropSelf(MetallicMountainsBlocks.STONE_BRICKS_WALL);
+            //dropSelf(MetallicMountainsBlocks.ELECTRICALLY_CHARGED_CHISELED_STONE_BRICKS);
+            slab(MetallicMountainsBlocks.STONE_SLAB);
+            dropSelf(MetallicMountainsBlocks.STONE_STAIRS);
+            dropSelf(MetallicMountainsBlocks.STONE_BUTTON);
+            dropSelf(MetallicMountainsBlocks.STONE_PRESSURE_PLATE);
+            dropOther(MetallicMountainsBlocks.STONE, MetallicMountainsBlocks.COBBLESTONE.get());
                 //Ore
 
                 //Other
-            dropSelf(MetallicMountainsBlocks.METALLIC_SAPLING);
+            dropSelf(MetallicMountainsBlocks.SAPLING);
             //Ground
                 //Wood
             dropSelf(TerraNataBlocks.GROUNDED_LOG);

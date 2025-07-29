@@ -8,7 +8,7 @@ public class MetallicMountainsItemGroup {
     public static final ItemGroup STEEL_RIFT_GROUP = new ItemGroup("invigorated_dimensions_steel_mod_tab") {
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(MetallicMountainsBlocks.METALLIC_LOG.get());
+            return new ItemStack(MetallicMountainsBlocks.LOG.get());
         }
     };
 }
