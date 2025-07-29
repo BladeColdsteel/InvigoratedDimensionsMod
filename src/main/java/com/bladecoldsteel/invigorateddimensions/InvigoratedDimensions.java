@@ -362,7 +362,7 @@ public class InvigoratedDimensions
         RenderingRegistry.registerEntityRenderingHandler(ElectricHighlandsEntityTypes.CHARGED_CRAWLER.get(), ChargedCrawlerRender::new);
 
         //Water
-        RenderTypeLookup.setRenderLayer(WateryDepthsBlocks.WATERY_SAPLING.get(), RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(WateryDepthsBlocks.SAPLING.get(), RenderType.cutout());
 
         //Fire
         RenderTypeLookup.setRenderLayer(EmberwildsBlocks.SAPLING.get(), RenderType.cutout());

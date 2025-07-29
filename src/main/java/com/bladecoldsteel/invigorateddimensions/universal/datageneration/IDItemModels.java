@@ -59,6 +59,7 @@ public class IDItemModels extends IDItemModelProvider {
         itemBlock(MetallicMountainsBlocks.PLANKS);
         itemBlock(TerraNataBlocks.PLANKS);
         itemBlock(ValleyDeathBlocks.PLANKS);
+        itemBlock(WateryDepthsBlocks.PLANKS);
         //Logs
         itemBlock(InsectoidParadisioBlocks.LOG);
         itemBlock(ValleyDeathBlocks.LOG);
@@ -76,7 +77,7 @@ public class IDItemModels extends IDItemModelProvider {
         itemBlock(DreamlandBlocks.LOG);
         itemBlock(CavernousCoveBlocks.LOG);
         itemBlock(MetallicMountainsBlocks.LOG);
-        itemBlock(WateryDepthsBlocks.WATERY_LOG);
+        itemBlock(WateryDepthsBlocks.LOG);
         //Wood
         itemBlock(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_WOOD);
         itemBlock(CavernousCoveBlocks.WOOD);
@@ -94,6 +95,7 @@ public class IDItemModels extends IDItemModelProvider {
         itemBlock(MetallicMountainsBlocks.WOOD);
         itemBlock(TerraNataBlocks.WOOD);
         itemBlock(ValleyDeathBlocks.WOOD);
+        itemBlock(WateryDepthsBlocks.WOOD);
         //Stripped Logs
         itemBlock(ElectricHighlandsBlocks.STRIPPED_ELECTRICALLY_CHARGED_LOG);
         //Stripped Wood
@@ -113,7 +115,7 @@ public class IDItemModels extends IDItemModelProvider {
         itemBlock(DreamlandBlocks.STONE);
         itemBlock(CavernousCoveBlocks.STONE);
         itemBlock(MetallicMountainsBlocks.STONE);
-        itemBlock(WateryDepthsBlocks.WATERY_STONE);
+        itemBlock(WateryDepthsBlocks.STONE);
         //Cobblestone
         itemBlock(InsectoidParadisioBlocks.COBBLESTONE);
         itemBlock(ValleyDeathBlocks.COBBLESTONE);
@@ -129,7 +131,7 @@ public class IDItemModels extends IDItemModelProvider {
         itemBlock(DreamlandBlocks.COBBLESTONE);
         itemBlock(CavernousCoveBlocks.COBBLESTONE);
         itemBlock(MetallicMountainsBlocks.COBBLESTONE);
-        itemBlock(WateryDepthsBlocks.WATERY_COBBLESTONE);
+        itemBlock(WateryDepthsBlocks.COBBLESTONE);
         //Stone Bricks
         itemBlock(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_STONE_BRICKS);
         itemBlock(CavernousCoveBlocks.STONE_BRICKS);
@@ -145,6 +147,7 @@ public class IDItemModels extends IDItemModelProvider {
         itemBlock(MetallicMountainsBlocks.STONE_BRICKS);
         itemBlock(TerraNataBlocks.STONE_BRICKS);
         itemBlock(ValleyDeathBlocks.STONE_BRICKS);
+        itemBlock(WateryDepthsBlocks.STONE_BRICKS);
         //Chiseled Stone Bricks
         itemBlock(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_CHISELED_STONE_BRICKS);
         //Walls
@@ -176,6 +179,8 @@ public class IDItemModels extends IDItemModelProvider {
         wallInventory("grounded_stone_bricks_wall", new ResourceLocation(InvigoratedDimensions.MOD_ID, "block/grounded_stone_bricks"));
         wallInventory("darkened_cobblestone_wall", new ResourceLocation(InvigoratedDimensions.MOD_ID, "block/darkened_cobblestone"));
         wallInventory("darkened_stone_bricks_wall", new ResourceLocation(InvigoratedDimensions.MOD_ID, "block/darkened_stone_bricks"));
+        wallInventory("watery_cobblestone_wall", new ResourceLocation(InvigoratedDimensions.MOD_ID, "block/watery_cobblestone"));
+        wallInventory("watery_stone_bricks_wall", new ResourceLocation(InvigoratedDimensions.MOD_ID, "block/watery_stone_bricks"));
         //Fences
         itemFence(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_FENCE, "electrically_charged_planks");
         itemFence(CavernousCoveBlocks.FENCE, "rocky_planks");
@@ -193,6 +198,7 @@ public class IDItemModels extends IDItemModelProvider {
         itemFence(MetallicMountainsBlocks.FENCE, "metallic_planks");
         itemFence(TerraNataBlocks.FENCE, "grounded_planks");
         itemFence(ValleyDeathBlocks.FENCE, "darkened_planks");
+        itemFence(WateryDepthsBlocks.FENCE, "watery_planks");
         //Fence Gates
         itemBlock(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_FENCE_GATE);
         itemBlock(CavernousCoveBlocks.FENCE_GATE);
@@ -210,6 +216,7 @@ public class IDItemModels extends IDItemModelProvider {
         itemBlock(MetallicMountainsBlocks.FENCE_GATE);
         itemBlock(TerraNataBlocks.FENCE_GATE);
         itemBlock(ValleyDeathBlocks.FENCE_GATE);
+        itemBlock(WateryDepthsBlocks.FENCE_GATE);
         //Ores
         itemBlock(ElectricHighlandsBlocks.CHARGED_COAL_ORE);
         itemBlock(ElectricHighlandsBlocks.CHARGED_IRON_ORE);
@@ -276,6 +283,10 @@ public class IDItemModels extends IDItemModelProvider {
         itemBlock(ValleyDeathBlocks.COBBLESTONE_STAIRS);
         itemBlock(ValleyDeathBlocks.STONE_STAIRS);
         itemBlock(ValleyDeathBlocks.STONE_BRICKS_STAIRS);
+        itemBlock(WateryDepthsBlocks.WOODEN_STAIRS);
+        itemBlock(WateryDepthsBlocks.COBBLESTONE_STAIRS);
+        itemBlock(WateryDepthsBlocks.STONE_STAIRS);
+        itemBlock(WateryDepthsBlocks.STONE_BRICKS_STAIRS);
         //Slabs
         itemBlock(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_WOODEN_SLAB);
         itemBlock(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_COBBLESTONE_SLABS);
@@ -335,6 +346,10 @@ public class IDItemModels extends IDItemModelProvider {
         itemBlock(ValleyDeathBlocks.COBBLESTONE_SLAB);
         itemBlock(ValleyDeathBlocks.STONE_SLAB);
         itemBlock(ValleyDeathBlocks.STONE_BRICKS_SLAB);
+        itemBlock(WateryDepthsBlocks.WOODEN_SLAB);
+        itemBlock(WateryDepthsBlocks.COBBLESTONE_SLAB);
+        itemBlock(WateryDepthsBlocks.STONE_SLAB);
+        itemBlock(WateryDepthsBlocks.STONE_BRICKS_SLAB);
         //Saplings
         itemBlockFlat(InsectoidParadisioBlocks.SAPLING);
         itemBlockFlat(ValleyDeathBlocks.SAPLING);
@@ -350,7 +365,7 @@ public class IDItemModels extends IDItemModelProvider {
         itemBlockFlat(CorrosiveFieldsBlocks.SAPLING);
         itemBlockFlat(DreamlandBlocks.SAPLING);
         itemBlockFlat(MetallicMountainsBlocks.SAPLING);
-        itemBlockFlat(WateryDepthsBlocks.WATERY_SAPLING);
+        itemBlockFlat(WateryDepthsBlocks.SAPLING);
         //Door
         itemBlockFlat(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_DOOR, "electrically_charged_door");
         //Trapdoor

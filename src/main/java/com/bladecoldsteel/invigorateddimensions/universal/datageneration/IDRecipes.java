@@ -535,11 +535,36 @@ public class IDRecipes extends IDRecipeProvider {
         smeltingRecipe(ValleyDeathBlocks.STONE.get(), ValleyDeathBlocks.COBBLESTONE.get(), 0.7F).save(consumer, name("smelt_darkened_cobblestone"));
         //Water
             //Wooden
-
+        makePlanks(WateryDepthsBlocks.PLANKS, WateryDepthsBlocks.LOG).save(consumer);
+        makeWood(WateryDepthsBlocks.WOOD, WateryDepthsBlocks.LOG).save(consumer);
+        makeStairs(WateryDepthsBlocks.WOODEN_STAIRS, WateryDepthsBlocks.PLANKS).save(consumer);
+        makeSlab(WateryDepthsBlocks.WOODEN_SLAB, WateryDepthsBlocks.PLANKS).save(consumer);
+        makeFence(WateryDepthsBlocks.FENCE, WateryDepthsBlocks.PLANKS).save(consumer);
+        makeFenceGate(WateryDepthsBlocks.FENCE_GATE, WateryDepthsBlocks.PLANKS).save(consumer);
+        makeButton(WateryDepthsBlocks.WOODEN_BUTTON, WateryDepthsBlocks.PLANKS).save(consumer);
+        makePressurePlate(WateryDepthsBlocks.WOODEN_PRESSURE_PLATE, WateryDepthsBlocks.PLANKS).save(consumer);
             //Stone
-
+        makeBricks(WateryDepthsBlocks.STONE_BRICKS, WateryDepthsBlocks.STONE).save(consumer);
+        makeStairs(WateryDepthsBlocks.STONE_STAIRS, WateryDepthsBlocks.STONE).save(consumer);
+        makeStairs(WateryDepthsBlocks.COBBLESTONE_STAIRS, WateryDepthsBlocks.COBBLESTONE).save(consumer);
+        makeStairs(WateryDepthsBlocks.STONE_BRICKS_STAIRS, WateryDepthsBlocks.STONE_BRICKS).save(consumer);
+        makeSlab(WateryDepthsBlocks.COBBLESTONE_SLAB, WateryDepthsBlocks.COBBLESTONE).save(consumer);
+        makeSlab(WateryDepthsBlocks.STONE_SLAB, WateryDepthsBlocks.STONE).save(consumer);
+        makeSlab(WateryDepthsBlocks.STONE_BRICKS_SLAB, WateryDepthsBlocks.STONE_BRICKS).save(consumer);
+        makeWall(WateryDepthsBlocks.COBBLESTONE_WALL, WateryDepthsBlocks.COBBLESTONE).save(consumer);
+        makeWall(WateryDepthsBlocks.STONE_BRICKS_WALL, WateryDepthsBlocks.STONE_BRICKS).save(consumer);
+        makeButton(WateryDepthsBlocks.STONE_BUTTON, WateryDepthsBlocks.STONE).save(consumer);
+        makePressurePlate(WateryDepthsBlocks.STONE_PRESSURE_PLATE, WateryDepthsBlocks.STONE).save(consumer);
+        stonecuttingSingleRecipe(WateryDepthsBlocks.STONE, WateryDepthsBlocks.STONE_BRICKS.get()).save(consumer, name("watery_stone_brick_stonecutting"));
+        stonecuttingSingleRecipe(WateryDepthsBlocks.STONE, WateryDepthsBlocks.STONE_STAIRS.get()).save(consumer, name("watery_stone_stairs_stonecutting"));
+        stonecuttingSingleRecipe(WateryDepthsBlocks.STONE, WateryDepthsBlocks.STONE_BRICKS_STAIRS.get()).save(consumer, name("watery_stone_brick_stairs_stonecutting"));
+        stonecuttingMultipleRecipe(WateryDepthsBlocks.STONE, WateryDepthsBlocks.STONE_SLAB.get(), 2).save(consumer, name("watery_stone_slabs_stonecutting"));
+        stonecuttingMultipleRecipe(WateryDepthsBlocks.STONE, WateryDepthsBlocks.STONE_BRICKS_SLAB.get(), 2).save(consumer, name("watery_stone_brick_slabs_stonecutting_stone"));
+        stonecuttingMultipleRecipe(WateryDepthsBlocks.STONE_BRICKS, WateryDepthsBlocks.STONE_BRICKS_SLAB.get(), 2).save(consumer, name("watery_stone_brick_slabs_stonecutting_stone_brick"));
+        stonecuttingMultipleRecipe(WateryDepthsBlocks.COBBLESTONE, WateryDepthsBlocks.COBBLESTONE_SLAB.get(), 2).save(consumer, name("watery_cobblestone_slabs_stonecutting"));
+        stonecuttingSingleRecipe(WateryDepthsBlocks.COBBLESTONE, WateryDepthsBlocks.COBBLESTONE_STAIRS.get()).save(consumer, name("watery_cobblestone_stairs_stonecutting"));
             //Smelting
-        smeltingRecipe(WateryDepthsBlocks.WATERY_STONE.get(), WateryDepthsBlocks.WATERY_COBBLESTONE.get(), 0.7F).save(consumer, name("smelt_watery_cobblestone"));
+        smeltingRecipe(WateryDepthsBlocks.STONE.get(), WateryDepthsBlocks.COBBLESTONE.get(), 0.7F).save(consumer, name("smelt_watery_cobblestone"));
         //Universal
         ShapedRecipeBuilder.shaped(UniversalBlocks.ENERGY_SINK.get())
                 .pattern("I I")

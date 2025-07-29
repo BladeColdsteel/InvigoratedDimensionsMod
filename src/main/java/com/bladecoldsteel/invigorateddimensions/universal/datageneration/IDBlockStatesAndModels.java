@@ -56,6 +56,7 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
         block(MetallicMountainsBlocks.PLANKS);
         block(TerraNataBlocks.PLANKS);
         block(ValleyDeathBlocks.PLANKS);
+        block(WateryDepthsBlocks.PLANKS);
         //Logs
         log(InsectoidParadisioBlocks.LOG, "bugged_logs");
         log(ValleyDeathBlocks.LOG, "darkened_logs");
@@ -73,7 +74,7 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
         log(DreamlandBlocks.LOG, "psychedelic_logs");
         log(CavernousCoveBlocks.LOG, "rocky_logs");
         log(MetallicMountainsBlocks.LOG, "metallic_logs");
-        log(WateryDepthsBlocks.WATERY_LOG, "watery_logs");
+        log(WateryDepthsBlocks.LOG, "watery_logs");
         //Stripped Logs
         log(ElectricHighlandsBlocks.STRIPPED_ELECTRICALLY_CHARGED_LOG, "stripped_electrically_charged_logs");
         //Wood
@@ -93,6 +94,7 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
         uniformLog(MetallicMountainsBlocks.WOOD, "metallic_logs_side");
         uniformLog(TerraNataBlocks.WOOD, "grounded_logs_side");
         uniformLog(ValleyDeathBlocks.WOOD, "darkened_logs_side");
+        uniformLog(WateryDepthsBlocks.WOOD, "watery_logs_side");
         //Stripped Wood
         uniformLog(ElectricHighlandsBlocks.STRIPPED_ELECTRICALLY_CHARGED_WOOD, "stripped_electrically_charged_logs_side");
         //Stone
@@ -110,7 +112,7 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
         block(DreamlandBlocks.STONE);
         block(CavernousCoveBlocks.STONE);
         block(MetallicMountainsBlocks.STONE);
-        block(WateryDepthsBlocks.WATERY_STONE);
+        block(WateryDepthsBlocks.STONE);
         //Cobblestone
         block(InsectoidParadisioBlocks.COBBLESTONE);
         block(ValleyDeathBlocks.COBBLESTONE);
@@ -126,7 +128,7 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
         block(DreamlandBlocks.COBBLESTONE);
         block(CavernousCoveBlocks.COBBLESTONE);
         block(MetallicMountainsBlocks.COBBLESTONE);
-        block(WateryDepthsBlocks.WATERY_COBBLESTONE);
+        block(WateryDepthsBlocks.COBBLESTONE);
         //Stone Bricks
         block(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_STONE_BRICKS);
         block(CavernousCoveBlocks.STONE_BRICKS);
@@ -142,6 +144,7 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
         block(MetallicMountainsBlocks.STONE_BRICKS);
         block(TerraNataBlocks.STONE_BRICKS);
         block(ValleyDeathBlocks.STONE_BRICKS);
+        block(WateryDepthsBlocks.STONE_BRICKS);
         //Chiseled Stone Bricks
         block(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_CHISELED_STONE_BRICKS);
         //Walls
@@ -173,6 +176,8 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
         wallBlock(TerraNataBlocks.COBBLESTONE_WALL.get(), modLoc("block/grounded_cobblestone"));
         wallBlock(ValleyDeathBlocks.STONE_BRICKS_WALL.get(), modLoc("block/darkened_stone_bricks"));
         wallBlock(ValleyDeathBlocks.COBBLESTONE_WALL.get(), modLoc("block/darkened_cobblestone"));
+        wallBlock(WateryDepthsBlocks.STONE_BRICKS_WALL.get(), modLoc("block/watery_stone_bricks"));
+        wallBlock(WateryDepthsBlocks.COBBLESTONE_WALL.get(), modLoc("block/watery_cobblestone"));
         //Fences
         fence(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_FENCE, ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_PLANKS);
         fence(CavernousCoveBlocks.FENCE, CavernousCoveBlocks.PLANKS);
@@ -190,6 +195,7 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
         fence(MetallicMountainsBlocks.FENCE, MetallicMountainsBlocks.PLANKS);
         fence(TerraNataBlocks.FENCE, TerraNataBlocks.PLANKS);
         fence(ValleyDeathBlocks.FENCE, ValleyDeathBlocks.PLANKS);
+        fence(WateryDepthsBlocks.FENCE, WateryDepthsBlocks.PLANKS);
         //Fence Gates
         fenceGateBlock(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_FENCE_GATE.get(), modLoc("block/electrically_charged_planks"));
         fenceGateBlock(CavernousCoveBlocks.FENCE_GATE.get(), modLoc("block/rocky_planks"));
@@ -207,6 +213,7 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
         fenceGateBlock(MetallicMountainsBlocks.FENCE_GATE.get(), modLoc("block/metallic_planks"));
         fenceGateBlock(TerraNataBlocks.FENCE_GATE.get(), modLoc("block/grounded_planks"));
         fenceGateBlock(ValleyDeathBlocks.FENCE_GATE.get(), modLoc("block/darkened_planks"));
+        fenceGateBlock(WateryDepthsBlocks.FENCE_GATE.get(), modLoc("block/watery_planks"));
         //Ores
         block(ElectricHighlandsBlocks.CHARGED_COAL_ORE);
         block(ElectricHighlandsBlocks.CHARGED_IRON_ORE);
@@ -273,6 +280,10 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
         stairs(ValleyDeathBlocks.COBBLESTONE_STAIRS, ValleyDeathBlocks.COBBLESTONE);
         stairs(ValleyDeathBlocks.STONE_STAIRS, ValleyDeathBlocks.STONE);
         stairs(ValleyDeathBlocks.STONE_BRICKS_STAIRS, ValleyDeathBlocks.STONE_BRICKS);
+        stairs(WateryDepthsBlocks.WOODEN_STAIRS, WateryDepthsBlocks.PLANKS);
+        stairs(WateryDepthsBlocks.COBBLESTONE_STAIRS, WateryDepthsBlocks.COBBLESTONE);
+        stairs(WateryDepthsBlocks.STONE_STAIRS, WateryDepthsBlocks.STONE);
+        stairs(WateryDepthsBlocks.STONE_BRICKS_STAIRS, WateryDepthsBlocks.STONE_BRICKS);
         //Slabs
         slab(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_WOODEN_SLAB, ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_PLANKS);
         slab(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_COBBLESTONE_SLABS, ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_COBBLESTONE);
@@ -332,6 +343,10 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
         slab(ValleyDeathBlocks.COBBLESTONE_SLAB, ValleyDeathBlocks.COBBLESTONE);
         slab(ValleyDeathBlocks.STONE_SLAB, ValleyDeathBlocks.STONE);
         slab(ValleyDeathBlocks.STONE_BRICKS_SLAB, ValleyDeathBlocks.STONE_BRICKS);
+        slab(WateryDepthsBlocks.WOODEN_SLAB, WateryDepthsBlocks.PLANKS);
+        slab(WateryDepthsBlocks.COBBLESTONE_SLAB, WateryDepthsBlocks.COBBLESTONE);
+        slab(WateryDepthsBlocks.STONE_SLAB, WateryDepthsBlocks.STONE);
+        slab(WateryDepthsBlocks.STONE_BRICKS_SLAB, WateryDepthsBlocks.STONE_BRICKS);
         //Doors
         door(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_DOOR, "electrically_charged");
         //Trapdoors
@@ -351,7 +366,7 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
         crossBlock(CorrosiveFieldsBlocks.SAPLING);
         crossBlock(DreamlandBlocks.SAPLING);
         crossBlock(MetallicMountainsBlocks.SAPLING);
-        crossBlock(WateryDepthsBlocks.WATERY_SAPLING);
+        crossBlock(WateryDepthsBlocks.SAPLING);
         //Button
         button(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_WOODEN_BUTTON, ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_PLANKS);
         button(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_STONE_BUTTON, ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_STONE);
@@ -385,6 +400,8 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
         button(TerraNataBlocks.STONE_BUTTON, TerraNataBlocks.STONE);
         button(ValleyDeathBlocks.WOODEN_BUTTON, ValleyDeathBlocks.PLANKS);
         button(ValleyDeathBlocks.STONE_BUTTON, ValleyDeathBlocks.STONE);
+        button(WateryDepthsBlocks.WOODEN_BUTTON, WateryDepthsBlocks.PLANKS);
+        button(WateryDepthsBlocks.STONE_BUTTON, WateryDepthsBlocks.STONE);
         //Pressure Plate
         pressurePlate(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_WOODEN_PRESSURE_PLATE, ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_PLANKS);
         pressurePlate(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_STONE_PRESSURE_PLATE, ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_STONE);
@@ -418,6 +435,8 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
         pressurePlate(TerraNataBlocks.STONE_PRESSURE_PLATE, TerraNataBlocks.STONE);
         pressurePlate(ValleyDeathBlocks.WOODEN_PRESSURE_PLATE, ValleyDeathBlocks.PLANKS);
         pressurePlate(ValleyDeathBlocks.STONE_PRESSURE_PLATE, ValleyDeathBlocks.STONE);
+        pressurePlate(WateryDepthsBlocks.WOODEN_PRESSURE_PLATE, WateryDepthsBlocks.PLANKS);
+        pressurePlate(WateryDepthsBlocks.STONE_PRESSURE_PLATE, WateryDepthsBlocks.STONE);
         //Portal Frame
         block(ElectricHighlandsBlocks.HIGHLANDS_PORTAL_FRAME);
     }

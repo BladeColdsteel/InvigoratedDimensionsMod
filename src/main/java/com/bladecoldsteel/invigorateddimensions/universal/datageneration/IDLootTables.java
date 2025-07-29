@@ -660,7 +660,7 @@ public class IDLootTables extends LootTableProvider {
             //dropSelf(ValleyDeathBlocks.ELECTRICALLY_CHARGED_WOODEN_TRAPDOOR);
             //dropSelf(ValleyDeathBlocks.ELECTRICALLY_CHARGED_SIGN);
             //dropOther(ValleyDeathBlocks.ELECTRICALLY_CHARGED_WALL_SIGN, ValleyDeathBlocks.ELECTRICALLY_CHARGED_SIGN.get());
-            //Stone
+                //Stone
             dropSelf(ValleyDeathBlocks.COBBLESTONE);
             dropSelf(ValleyDeathBlocks.COBBLESTONE_WALL);
             dropSelf(ValleyDeathBlocks.COBBLESTONE_STAIRS);
@@ -681,14 +681,41 @@ public class IDLootTables extends LootTableProvider {
             dropSelf(ValleyDeathBlocks.SAPLING);
             //Water
                 //Wood
-            dropSelf(WateryDepthsBlocks.WATERY_LOG);
+            dropSelf(WateryDepthsBlocks.LOG);
+            dropSelf(WateryDepthsBlocks.PLANKS);
+            //dropSelf(WateryDepthsBlocks.STRIPPED_ELECTRICALLY_CHARGED_LOG);
+            dropSelf(WateryDepthsBlocks.WOODEN_BUTTON);
+            dropSelf(WateryDepthsBlocks.WOODEN_STAIRS);
+            slab(WateryDepthsBlocks.WOODEN_SLAB);
+            dropSelf(WateryDepthsBlocks.WOODEN_PRESSURE_PLATE);
+            //dropSelf(WateryDepthsBlocks.ELECTRICALLY_CHARGED_WOODEN_TRAPDOOR);
+            //this.add(WateryDepthsBlocks.ELECTRICALLY_CHARGED_DOOR.get(), (block) -> createSinglePropConditionTable(block, DoorBlock.HALF, DoubleBlockHalf.LOWER));
+            dropSelf(WateryDepthsBlocks.WOOD);
+            //dropSelf(WateryDepthsBlocks.STRIPPED_ELECTRICALLY_CHARGED_WOOD);
+            dropSelf(WateryDepthsBlocks.FENCE);
+            dropSelf(WateryDepthsBlocks.FENCE_GATE);
+            //dropSelf(WateryDepthsBlocks.ELECTRICALLY_CHARGED_WOODEN_TRAPDOOR);
+            //dropSelf(WateryDepthsBlocks.ELECTRICALLY_CHARGED_SIGN);
+            //dropOther(WateryDepthsBlocks.ELECTRICALLY_CHARGED_WALL_SIGN, WateryDepthsBlocks.ELECTRICALLY_CHARGED_SIGN.get());
                 //Stone
-            dropSelf(WateryDepthsBlocks.WATERY_COBBLESTONE);
-            dropOther(WateryDepthsBlocks.WATERY_STONE, WateryDepthsBlocks.WATERY_COBBLESTONE.get());
+            dropSelf(WateryDepthsBlocks.COBBLESTONE);
+            dropSelf(WateryDepthsBlocks.COBBLESTONE_WALL);
+            dropSelf(WateryDepthsBlocks.COBBLESTONE_STAIRS);
+            slab(WateryDepthsBlocks.COBBLESTONE_SLAB);
+            dropSelf(WateryDepthsBlocks.STONE_BRICKS);
+            slab(WateryDepthsBlocks.STONE_BRICKS_SLAB);
+            dropSelf(WateryDepthsBlocks.STONE_BRICKS_STAIRS);
+            dropSelf(WateryDepthsBlocks.STONE_BRICKS_WALL);
+            //dropSelf(WateryDepthsBlocks.ELECTRICALLY_CHARGED_CHISELED_STONE_BRICKS);
+            slab(WateryDepthsBlocks.STONE_SLAB);
+            dropSelf(WateryDepthsBlocks.STONE_STAIRS);
+            dropSelf(WateryDepthsBlocks.STONE_BUTTON);
+            dropSelf(WateryDepthsBlocks.STONE_PRESSURE_PLATE);
+            dropOther(WateryDepthsBlocks.STONE, WateryDepthsBlocks.COBBLESTONE.get());
                 //Ore
 
                 //Other
-            dropSelf(WateryDepthsBlocks.WATERY_SAPLING);
+            dropSelf(WateryDepthsBlocks.SAPLING);
         }
 
         @Override

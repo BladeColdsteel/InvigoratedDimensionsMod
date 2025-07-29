@@ -27,7 +27,7 @@ public class WaterFeatures {
 
         public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> WATERY_TREE = Feature.TREE.configured(
                 new BaseTreeFeatureConfig.Builder(
-                        new SimpleBlockStateProvider(WateryDepthsBlocks.WATERY_LOG.get().defaultBlockState()),
+                        new SimpleBlockStateProvider(WateryDepthsBlocks.LOG.get().defaultBlockState()),
                         new SimpleBlockStateProvider(UniversalBlocks.CRYSTALLIZED_LEAVES.get().defaultBlockState()),
                         new AcaciaFoliagePlacer(FeatureSpread.fixed(2), FeatureSpread.fixed(1)),
                         new ForkyTrunkPlacer(4, 1, 3),
@@ -35,7 +35,7 @@ public class WaterFeatures {
                         .ignoreVines().build());
 
         public static final ConfiguredFeature<?, ?> WATERY_STONE_PATCH = Feature.ORE.configured(
-                new OreFeatureConfig(OVERWORLD_FILLER, WateryDepthsBlocks.WATERY_STONE.get().defaultBlockState(), 33)
+                new OreFeatureConfig(OVERWORLD_FILLER, WateryDepthsBlocks.STONE.get().defaultBlockState(), 33)
         );
     }
 

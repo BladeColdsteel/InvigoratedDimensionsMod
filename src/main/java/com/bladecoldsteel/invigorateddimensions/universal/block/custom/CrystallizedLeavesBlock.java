@@ -191,7 +191,7 @@ public class CrystallizedLeavesBlock extends LeavesBlock {
         if (isElectricBiome(biomeKey)) {
             return new ItemStack(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_SAPLING.get());
         } else if (isWaterBiome(biomeKey)) {
-            return new ItemStack(WateryDepthsBlocks.WATERY_SAPLING.get());
+            return new ItemStack(WateryDepthsBlocks.SAPLING.get());
         } else if (isFireBiome(biomeKey)) {
             return new ItemStack(EmberwildsBlocks.SAPLING.get());
         } else if (isGrassBiome(biomeKey)) {
@@ -230,7 +230,7 @@ public class CrystallizedLeavesBlock extends LeavesBlock {
     private ItemStack randomSapling() {
         ItemStack[] saplings = {
                 new ItemStack(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_SAPLING.get()),
-                new ItemStack(WateryDepthsBlocks.WATERY_SAPLING.get()),
+                new ItemStack(WateryDepthsBlocks.SAPLING.get()),
                 new ItemStack(EmberwildsBlocks.SAPLING.get()),
                 new ItemStack(DraconicRiftBlocks.SAPLING.get()),
                 new ItemStack(GrassyKnollBlocks.SAPLING.get()),
