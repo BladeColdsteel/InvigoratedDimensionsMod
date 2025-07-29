@@ -8,7 +8,7 @@ public class ValleyDeathItemGroup {
     public static final ItemGroup DARKENED_RIFT_GROUP = new ItemGroup("invigorated_dimensions_darkened_mod_tab") {
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(ValleyDeathBlocks.DARKENED_LOG.get());
+            return new ItemStack(ValleyDeathBlocks.LOG.get());
         }
     };
 }

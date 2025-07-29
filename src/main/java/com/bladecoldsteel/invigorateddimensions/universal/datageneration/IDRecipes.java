@@ -503,11 +503,36 @@ public class IDRecipes extends IDRecipeProvider {
         smeltingRecipe(TerraNataBlocks.STONE.get(), TerraNataBlocks.COBBLESTONE.get(), 0.7F).save(consumer, name("smelt_grounded_cobblestone"));
         //Dark
             //Wooden
-
+        makePlanks(ValleyDeathBlocks.PLANKS, ValleyDeathBlocks.LOG).save(consumer);
+        makeWood(ValleyDeathBlocks.WOOD, ValleyDeathBlocks.LOG).save(consumer);
+        makeStairs(ValleyDeathBlocks.WOODEN_STAIRS, ValleyDeathBlocks.PLANKS).save(consumer);
+        makeSlab(ValleyDeathBlocks.WOODEN_SLAB, ValleyDeathBlocks.PLANKS).save(consumer);
+        makeFence(ValleyDeathBlocks.FENCE, ValleyDeathBlocks.PLANKS).save(consumer);
+        makeFenceGate(ValleyDeathBlocks.FENCE_GATE, ValleyDeathBlocks.PLANKS).save(consumer);
+        makeButton(ValleyDeathBlocks.WOODEN_BUTTON, ValleyDeathBlocks.PLANKS).save(consumer);
+        makePressurePlate(ValleyDeathBlocks.WOODEN_PRESSURE_PLATE, ValleyDeathBlocks.PLANKS).save(consumer);
             //Stone
-
+        makeBricks(ValleyDeathBlocks.STONE_BRICKS, ValleyDeathBlocks.STONE).save(consumer);
+        makeStairs(ValleyDeathBlocks.STONE_STAIRS, ValleyDeathBlocks.STONE).save(consumer);
+        makeStairs(ValleyDeathBlocks.COBBLESTONE_STAIRS, ValleyDeathBlocks.COBBLESTONE).save(consumer);
+        makeStairs(ValleyDeathBlocks.STONE_BRICKS_STAIRS, ValleyDeathBlocks.STONE_BRICKS).save(consumer);
+        makeSlab(ValleyDeathBlocks.COBBLESTONE_SLAB, ValleyDeathBlocks.COBBLESTONE).save(consumer);
+        makeSlab(ValleyDeathBlocks.STONE_SLAB, ValleyDeathBlocks.STONE).save(consumer);
+        makeSlab(ValleyDeathBlocks.STONE_BRICKS_SLAB, ValleyDeathBlocks.STONE_BRICKS).save(consumer);
+        makeWall(ValleyDeathBlocks.COBBLESTONE_WALL, ValleyDeathBlocks.COBBLESTONE).save(consumer);
+        makeWall(ValleyDeathBlocks.STONE_BRICKS_WALL, ValleyDeathBlocks.STONE_BRICKS).save(consumer);
+        makeButton(ValleyDeathBlocks.STONE_BUTTON, ValleyDeathBlocks.STONE).save(consumer);
+        makePressurePlate(ValleyDeathBlocks.STONE_PRESSURE_PLATE, ValleyDeathBlocks.STONE).save(consumer);
+        stonecuttingSingleRecipe(ValleyDeathBlocks.STONE, ValleyDeathBlocks.STONE_BRICKS.get()).save(consumer, name("darkened_stone_brick_stonecutting"));
+        stonecuttingSingleRecipe(ValleyDeathBlocks.STONE, ValleyDeathBlocks.STONE_STAIRS.get()).save(consumer, name("darkened_stone_stairs_stonecutting"));
+        stonecuttingSingleRecipe(ValleyDeathBlocks.STONE, ValleyDeathBlocks.STONE_BRICKS_STAIRS.get()).save(consumer, name("darkened_stone_brick_stairs_stonecutting"));
+        stonecuttingMultipleRecipe(ValleyDeathBlocks.STONE, ValleyDeathBlocks.STONE_SLAB.get(), 2).save(consumer, name("darkened_stone_slabs_stonecutting"));
+        stonecuttingMultipleRecipe(ValleyDeathBlocks.STONE, ValleyDeathBlocks.STONE_BRICKS_SLAB.get(), 2).save(consumer, name("darkened_stone_brick_slabs_stonecutting_stone"));
+        stonecuttingMultipleRecipe(ValleyDeathBlocks.STONE_BRICKS, ValleyDeathBlocks.STONE_BRICKS_SLAB.get(), 2).save(consumer, name("darkened_stone_brick_slabs_stonecutting_stone_brick"));
+        stonecuttingMultipleRecipe(ValleyDeathBlocks.COBBLESTONE, ValleyDeathBlocks.COBBLESTONE_SLAB.get(), 2).save(consumer, name("darkened_cobblestone_slabs_stonecutting"));
+        stonecuttingSingleRecipe(ValleyDeathBlocks.COBBLESTONE, ValleyDeathBlocks.COBBLESTONE_STAIRS.get()).save(consumer, name("darkened_cobblestone_stairs_stonecutting"));
             //Smelting
-        smeltingRecipe(ValleyDeathBlocks.DARKENED_STONE.get(), ValleyDeathBlocks.DARKENED_COBBLESTONE.get(), 0.7F).save(consumer, name("smelt_darkened_cobblestone"));
+        smeltingRecipe(ValleyDeathBlocks.STONE.get(), ValleyDeathBlocks.COBBLESTONE.get(), 0.7F).save(consumer, name("smelt_darkened_cobblestone"));
         //Water
             //Wooden
 

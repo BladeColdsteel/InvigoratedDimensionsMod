@@ -26,7 +26,7 @@ public class DarkFeatures {
 
         public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> DARKENED_TREE = Feature.TREE.configured(
                 new BaseTreeFeatureConfig.Builder(
-                        new SimpleBlockStateProvider(ValleyDeathBlocks.DARKENED_LOG.get().defaultBlockState()),
+                        new SimpleBlockStateProvider(ValleyDeathBlocks.LOG.get().defaultBlockState()),
                         new SimpleBlockStateProvider(UniversalBlocks.CRYSTALLIZED_LEAVES.get().defaultBlockState()),
                         new DarkOakFoliagePlacer(FeatureSpread.fixed(1), FeatureSpread.fixed(1)),
                         new DarkOakTrunkPlacer(4, 4, 5),
@@ -38,7 +38,7 @@ public class DarkFeatures {
         );
 
         public static final ConfiguredFeature<?, ?> DARKENED_STONE_PATCH = Feature.ORE.configured(
-                new OreFeatureConfig(OVERWORLD_FILLER, ValleyDeathBlocks.DARKENED_STONE.get().defaultBlockState(), 44)
+                new OreFeatureConfig(OVERWORLD_FILLER, ValleyDeathBlocks.STONE.get().defaultBlockState(), 44)
         );
     }
 

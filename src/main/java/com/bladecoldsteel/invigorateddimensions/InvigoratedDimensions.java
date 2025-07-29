@@ -377,7 +377,7 @@ public class InvigoratedDimensions
         RenderTypeLookup.setRenderLayer(InsectoidParadisioBlocks.SAPLING.get(), RenderType.cutout());
 
         //Dark
-        RenderTypeLookup.setRenderLayer(ValleyDeathBlocks.DARKENED_SAPLING.get(), RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(ValleyDeathBlocks.SAPLING.get(), RenderType.cutout());
 
         //Fairy
         RenderTypeLookup.setRenderLayer(FeywildExpanseBlocks.SAPLING.get(), RenderType.cutout());

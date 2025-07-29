@@ -217,7 +217,7 @@ public class CrystallizedLeavesBlock extends LeavesBlock {
         } else if (isDragonBiome(biomeKey)) {
             return new ItemStack(DraconicRiftBlocks.SAPLING.get());
         } else if (isDarkBiome(biomeKey)) {
-            return new ItemStack(ValleyDeathBlocks.DARKENED_SAPLING.get());
+            return new ItemStack(ValleyDeathBlocks.SAPLING.get());
         } else if (isSteelBiome(biomeKey)) {
             return new ItemStack(MetallicMountainsBlocks.SAPLING.get());
         } else if (isFairyBiome(biomeKey)) {
@@ -235,7 +235,7 @@ public class CrystallizedLeavesBlock extends LeavesBlock {
                 new ItemStack(DraconicRiftBlocks.SAPLING.get()),
                 new ItemStack(GrassyKnollBlocks.SAPLING.get()),
                 new ItemStack(InsectoidParadisioBlocks.SAPLING.get()),
-                new ItemStack(ValleyDeathBlocks.DARKENED_SAPLING.get()),
+                new ItemStack(ValleyDeathBlocks.SAPLING.get()),
                 new ItemStack(FeywildExpanseBlocks.SAPLING.get()),
                 new ItemStack(TerraNataBlocks.SAPLING.get()),
                 new ItemStack(HeavenlyRealmBlocks.SAPLING.get()),

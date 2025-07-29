@@ -644,14 +644,41 @@ public class IDLootTables extends LootTableProvider {
             dropSelf(TerraNataBlocks.SAPLING);
             //Dark
                 //Wood
-            dropSelf(ValleyDeathBlocks.DARKENED_LOG);
-                //Stone
-            dropSelf(ValleyDeathBlocks.DARKENED_COBBLESTONE);
-            dropOther(ValleyDeathBlocks.DARKENED_STONE, ValleyDeathBlocks.DARKENED_COBBLESTONE.get());
+            dropSelf(ValleyDeathBlocks.LOG);
+            dropSelf(ValleyDeathBlocks.PLANKS);
+            //dropSelf(ValleyDeathBlocks.STRIPPED_ELECTRICALLY_CHARGED_LOG);
+            dropSelf(ValleyDeathBlocks.WOODEN_BUTTON);
+            dropSelf(ValleyDeathBlocks.WOODEN_STAIRS);
+            slab(ValleyDeathBlocks.WOODEN_SLAB);
+            dropSelf(ValleyDeathBlocks.WOODEN_PRESSURE_PLATE);
+            //dropSelf(ValleyDeathBlocks.ELECTRICALLY_CHARGED_WOODEN_TRAPDOOR);
+            //this.add(ValleyDeathBlocks.ELECTRICALLY_CHARGED_DOOR.get(), (block) -> createSinglePropConditionTable(block, DoorBlock.HALF, DoubleBlockHalf.LOWER));
+            dropSelf(ValleyDeathBlocks.WOOD);
+            //dropSelf(ValleyDeathBlocks.STRIPPED_ELECTRICALLY_CHARGED_WOOD);
+            dropSelf(ValleyDeathBlocks.FENCE);
+            dropSelf(ValleyDeathBlocks.FENCE_GATE);
+            //dropSelf(ValleyDeathBlocks.ELECTRICALLY_CHARGED_WOODEN_TRAPDOOR);
+            //dropSelf(ValleyDeathBlocks.ELECTRICALLY_CHARGED_SIGN);
+            //dropOther(ValleyDeathBlocks.ELECTRICALLY_CHARGED_WALL_SIGN, ValleyDeathBlocks.ELECTRICALLY_CHARGED_SIGN.get());
+            //Stone
+            dropSelf(ValleyDeathBlocks.COBBLESTONE);
+            dropSelf(ValleyDeathBlocks.COBBLESTONE_WALL);
+            dropSelf(ValleyDeathBlocks.COBBLESTONE_STAIRS);
+            slab(ValleyDeathBlocks.COBBLESTONE_SLAB);
+            dropSelf(ValleyDeathBlocks.STONE_BRICKS);
+            slab(ValleyDeathBlocks.STONE_BRICKS_SLAB);
+            dropSelf(ValleyDeathBlocks.STONE_BRICKS_STAIRS);
+            dropSelf(ValleyDeathBlocks.STONE_BRICKS_WALL);
+            //dropSelf(ValleyDeathBlocks.ELECTRICALLY_CHARGED_CHISELED_STONE_BRICKS);
+            slab(ValleyDeathBlocks.STONE_SLAB);
+            dropSelf(ValleyDeathBlocks.STONE_STAIRS);
+            dropSelf(ValleyDeathBlocks.STONE_BUTTON);
+            dropSelf(ValleyDeathBlocks.STONE_PRESSURE_PLATE);
+            dropOther(ValleyDeathBlocks.STONE, ValleyDeathBlocks.COBBLESTONE.get());
                 //Ore
 
                 //Other
-            dropSelf(ValleyDeathBlocks.DARKENED_SAPLING);
+            dropSelf(ValleyDeathBlocks.SAPLING);
             //Water
                 //Wood
             dropSelf(WateryDepthsBlocks.WATERY_LOG);
