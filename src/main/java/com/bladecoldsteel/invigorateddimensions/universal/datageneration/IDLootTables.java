@@ -607,14 +607,41 @@ public class IDLootTables extends LootTableProvider {
             dropSelf(MetallicMountainsBlocks.SAPLING);
             //Ground
                 //Wood
-            dropSelf(TerraNataBlocks.GROUNDED_LOG);
-                //Stone
-            dropSelf(TerraNataBlocks.GROUNDED_COBBLESTONE);
-            dropOther(TerraNataBlocks.GROUNDED_STONE, TerraNataBlocks.GROUNDED_COBBLESTONE.get());
+            dropSelf(TerraNataBlocks.LOG);
+            dropSelf(TerraNataBlocks.PLANKS);
+            //dropSelf(TerraNataBlocks.STRIPPED_ELECTRICALLY_CHARGED_LOG);
+            dropSelf(TerraNataBlocks.WOODEN_BUTTON);
+            dropSelf(TerraNataBlocks.WOODEN_STAIRS);
+            slab(TerraNataBlocks.WOODEN_SLAB);
+            dropSelf(TerraNataBlocks.WOODEN_PRESSURE_PLATE);
+            //dropSelf(TerraNataBlocks.ELECTRICALLY_CHARGED_WOODEN_TRAPDOOR);
+            //this.add(TerraNataBlocks.ELECTRICALLY_CHARGED_DOOR.get(), (block) -> createSinglePropConditionTable(block, DoorBlock.HALF, DoubleBlockHalf.LOWER));
+            dropSelf(TerraNataBlocks.WOOD);
+            //dropSelf(TerraNataBlocks.STRIPPED_ELECTRICALLY_CHARGED_WOOD);
+            dropSelf(TerraNataBlocks.FENCE);
+            dropSelf(TerraNataBlocks.FENCE_GATE);
+            //dropSelf(TerraNataBlocks.ELECTRICALLY_CHARGED_WOODEN_TRAPDOOR);
+            //dropSelf(TerraNataBlocks.ELECTRICALLY_CHARGED_SIGN);
+            //dropOther(TerraNataBlocks.ELECTRICALLY_CHARGED_WALL_SIGN, TerraNataBlocks.ELECTRICALLY_CHARGED_SIGN.get());
+            //Stone
+            dropSelf(TerraNataBlocks.COBBLESTONE);
+            dropSelf(TerraNataBlocks.COBBLESTONE_WALL);
+            dropSelf(TerraNataBlocks.COBBLESTONE_STAIRS);
+            slab(TerraNataBlocks.COBBLESTONE_SLAB);
+            dropSelf(TerraNataBlocks.STONE_BRICKS);
+            slab(TerraNataBlocks.STONE_BRICKS_SLAB);
+            dropSelf(TerraNataBlocks.STONE_BRICKS_STAIRS);
+            dropSelf(TerraNataBlocks.STONE_BRICKS_WALL);
+            //dropSelf(TerraNataBlocks.ELECTRICALLY_CHARGED_CHISELED_STONE_BRICKS);
+            slab(TerraNataBlocks.STONE_SLAB);
+            dropSelf(TerraNataBlocks.STONE_STAIRS);
+            dropSelf(TerraNataBlocks.STONE_BUTTON);
+            dropSelf(TerraNataBlocks.STONE_PRESSURE_PLATE);
+            dropOther(TerraNataBlocks.STONE, TerraNataBlocks.COBBLESTONE.get());
                 //Ore
 
                 //Other
-            dropSelf(TerraNataBlocks.GROUNDED_SAPLING);
+            dropSelf(TerraNataBlocks.SAPLING);
             //Dark
                 //Wood
             dropSelf(ValleyDeathBlocks.DARKENED_LOG);

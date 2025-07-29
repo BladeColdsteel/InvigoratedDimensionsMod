@@ -26,7 +26,7 @@ public class GroundFeatures {
 
         public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> GROUNDED_TREE = Feature.TREE.configured(
                 new BaseTreeFeatureConfig.Builder(
-                        new SimpleBlockStateProvider(TerraNataBlocks.GROUNDED_LOG.get().defaultBlockState()),
+                        new SimpleBlockStateProvider(TerraNataBlocks.LOG.get().defaultBlockState()),
                         new SimpleBlockStateProvider(UniversalBlocks.CRYSTALLIZED_LEAVES.get().defaultBlockState()),
                         new AcaciaFoliagePlacer(FeatureSpread.fixed(3), FeatureSpread.fixed(0)),
                         new StraightTrunkPlacer(5, 4, 3),
@@ -44,7 +44,7 @@ public class GroundFeatures {
         );
 
         public static final ConfiguredFeature<?, ?> GROUNDED_STONE_PATCH = Feature.ORE.configured(
-                new OreFeatureConfig(OVERWORLD_FILLER, TerraNataBlocks.GROUNDED_STONE.get().defaultBlockState(), 33)
+                new OreFeatureConfig(OVERWORLD_FILLER, TerraNataBlocks.STONE.get().defaultBlockState(), 33)
         );
     }
 

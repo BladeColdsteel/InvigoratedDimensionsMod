@@ -471,11 +471,36 @@ public class IDRecipes extends IDRecipeProvider {
         smeltingRecipe(MetallicMountainsBlocks.STONE.get(), MetallicMountainsBlocks.COBBLESTONE.get(), 0.7F).save(consumer, name("smelt_metallic_cobblestone"));
         //Ground
             //Wooden
-
+        makePlanks(TerraNataBlocks.PLANKS, TerraNataBlocks.LOG).save(consumer);
+        makeWood(TerraNataBlocks.WOOD, TerraNataBlocks.LOG).save(consumer);
+        makeStairs(TerraNataBlocks.WOODEN_STAIRS, TerraNataBlocks.PLANKS).save(consumer);
+        makeSlab(TerraNataBlocks.WOODEN_SLAB, TerraNataBlocks.PLANKS).save(consumer);
+        makeFence(TerraNataBlocks.FENCE, TerraNataBlocks.PLANKS).save(consumer);
+        makeFenceGate(TerraNataBlocks.FENCE_GATE, TerraNataBlocks.PLANKS).save(consumer);
+        makeButton(TerraNataBlocks.WOODEN_BUTTON, TerraNataBlocks.PLANKS).save(consumer);
+        makePressurePlate(TerraNataBlocks.WOODEN_PRESSURE_PLATE, TerraNataBlocks.PLANKS).save(consumer);
             //Stone
-
+        makeBricks(TerraNataBlocks.STONE_BRICKS, TerraNataBlocks.STONE).save(consumer);
+        makeStairs(TerraNataBlocks.STONE_STAIRS, TerraNataBlocks.STONE).save(consumer);
+        makeStairs(TerraNataBlocks.COBBLESTONE_STAIRS, TerraNataBlocks.COBBLESTONE).save(consumer);
+        makeStairs(TerraNataBlocks.STONE_BRICKS_STAIRS, TerraNataBlocks.STONE_BRICKS).save(consumer);
+        makeSlab(TerraNataBlocks.COBBLESTONE_SLAB, TerraNataBlocks.COBBLESTONE).save(consumer);
+        makeSlab(TerraNataBlocks.STONE_SLAB, TerraNataBlocks.STONE).save(consumer);
+        makeSlab(TerraNataBlocks.STONE_BRICKS_SLAB, TerraNataBlocks.STONE_BRICKS).save(consumer);
+        makeWall(TerraNataBlocks.COBBLESTONE_WALL, TerraNataBlocks.COBBLESTONE).save(consumer);
+        makeWall(TerraNataBlocks.STONE_BRICKS_WALL, TerraNataBlocks.STONE_BRICKS).save(consumer);
+        makeButton(TerraNataBlocks.STONE_BUTTON, TerraNataBlocks.STONE).save(consumer);
+        makePressurePlate(TerraNataBlocks.STONE_PRESSURE_PLATE, TerraNataBlocks.STONE).save(consumer);
+        stonecuttingSingleRecipe(TerraNataBlocks.STONE, TerraNataBlocks.STONE_BRICKS.get()).save(consumer, name("grounded_stone_brick_stonecutting"));
+        stonecuttingSingleRecipe(TerraNataBlocks.STONE, TerraNataBlocks.STONE_STAIRS.get()).save(consumer, name("grounded_stone_stairs_stonecutting"));
+        stonecuttingSingleRecipe(TerraNataBlocks.STONE, TerraNataBlocks.STONE_BRICKS_STAIRS.get()).save(consumer, name("grounded_stone_brick_stairs_stonecutting"));
+        stonecuttingMultipleRecipe(TerraNataBlocks.STONE, TerraNataBlocks.STONE_SLAB.get(), 2).save(consumer, name("grounded_stone_slabs_stonecutting"));
+        stonecuttingMultipleRecipe(TerraNataBlocks.STONE, TerraNataBlocks.STONE_BRICKS_SLAB.get(), 2).save(consumer, name("grounded_stone_brick_slabs_stonecutting_stone"));
+        stonecuttingMultipleRecipe(TerraNataBlocks.STONE_BRICKS, TerraNataBlocks.STONE_BRICKS_SLAB.get(), 2).save(consumer, name("grounded_stone_brick_slabs_stonecutting_stone_brick"));
+        stonecuttingMultipleRecipe(TerraNataBlocks.COBBLESTONE, TerraNataBlocks.COBBLESTONE_SLAB.get(), 2).save(consumer, name("grounded_cobblestone_slabs_stonecutting"));
+        stonecuttingSingleRecipe(TerraNataBlocks.COBBLESTONE, TerraNataBlocks.COBBLESTONE_STAIRS.get()).save(consumer, name("grounded_cobblestone_stairs_stonecutting"));
             //Smelting
-        smeltingRecipe(TerraNataBlocks.GROUNDED_STONE.get(), TerraNataBlocks.GROUNDED_COBBLESTONE.get(), 0.7F).save(consumer, name("smelt_grounded_cobblestone"));
+        smeltingRecipe(TerraNataBlocks.STONE.get(), TerraNataBlocks.COBBLESTONE.get(), 0.7F).save(consumer, name("smelt_grounded_cobblestone"));
         //Dark
             //Wooden
 

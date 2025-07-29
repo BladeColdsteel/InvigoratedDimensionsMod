@@ -385,7 +385,7 @@ public class InvigoratedDimensions
         //Fighting
 
         //Ground
-        RenderTypeLookup.setRenderLayer(TerraNataBlocks.GROUNDED_SAPLING.get(), RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(TerraNataBlocks.SAPLING.get(), RenderType.cutout());
 
         //Flying
         RenderTypeLookup.setRenderLayer(HeavenlyRealmBlocks.SAPLING.get(), RenderType.cutout());
