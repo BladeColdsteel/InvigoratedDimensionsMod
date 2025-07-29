@@ -343,11 +343,36 @@ public class IDRecipes extends IDRecipeProvider {
         smeltingRecipe(GhastlyMarshBlocks.STONE.get(), GhastlyMarshBlocks.COBBLESTONE.get(), 0.7F).save(consumer, name("smelt_spooky_cobblestone"));
         //Grass
             //Wooden
-
+        makePlanks(GrassyKnollBlocks.PLANKS, GrassyKnollBlocks.LOG).save(consumer);
+        makeWood(GrassyKnollBlocks.WOOD, GrassyKnollBlocks.LOG).save(consumer);
+        makeStairs(GrassyKnollBlocks.WOODEN_STAIRS, GrassyKnollBlocks.PLANKS).save(consumer);
+        makeSlab(GrassyKnollBlocks.WOODEN_SLAB, GrassyKnollBlocks.PLANKS).save(consumer);
+        makeFence(GrassyKnollBlocks.FENCE, GrassyKnollBlocks.PLANKS).save(consumer);
+        makeFenceGate(GrassyKnollBlocks.FENCE_GATE, GrassyKnollBlocks.PLANKS).save(consumer);
+        makeButton(GrassyKnollBlocks.WOODEN_BUTTON, GrassyKnollBlocks.PLANKS).save(consumer);
+        makePressurePlate(GrassyKnollBlocks.WOODEN_PRESSURE_PLATE, GrassyKnollBlocks.PLANKS).save(consumer);
             //Stone
-
+        makeBricks(GrassyKnollBlocks.STONE_BRICKS, GrassyKnollBlocks.STONE).save(consumer);
+        makeStairs(GrassyKnollBlocks.STONE_STAIRS, GrassyKnollBlocks.STONE).save(consumer);
+        makeStairs(GrassyKnollBlocks.COBBLESTONE_STAIRS, GrassyKnollBlocks.COBBLESTONE).save(consumer);
+        makeStairs(GrassyKnollBlocks.STONE_BRICKS_STAIRS, GrassyKnollBlocks.STONE_BRICKS).save(consumer);
+        makeSlab(GrassyKnollBlocks.COBBLESTONE_SLAB, GrassyKnollBlocks.COBBLESTONE).save(consumer);
+        makeSlab(GrassyKnollBlocks.STONE_SLAB, GrassyKnollBlocks.STONE).save(consumer);
+        makeSlab(GrassyKnollBlocks.STONE_BRICKS_SLAB, GrassyKnollBlocks.STONE_BRICKS).save(consumer);
+        makeWall(GrassyKnollBlocks.COBBLESTONE_WALL, GrassyKnollBlocks.COBBLESTONE).save(consumer);
+        makeWall(GrassyKnollBlocks.STONE_BRICKS_WALL, GrassyKnollBlocks.STONE_BRICKS).save(consumer);
+        makeButton(GrassyKnollBlocks.STONE_BUTTON, GrassyKnollBlocks.STONE).save(consumer);
+        makePressurePlate(GrassyKnollBlocks.STONE_PRESSURE_PLATE, GrassyKnollBlocks.STONE).save(consumer);
+        stonecuttingSingleRecipe(GrassyKnollBlocks.STONE, GrassyKnollBlocks.STONE_BRICKS.get()).save(consumer, name("grassy_stone_brick_stonecutting"));
+        stonecuttingSingleRecipe(GrassyKnollBlocks.STONE, GrassyKnollBlocks.STONE_STAIRS.get()).save(consumer, name("grassy_stone_stairs_stonecutting"));
+        stonecuttingSingleRecipe(GrassyKnollBlocks.STONE, GrassyKnollBlocks.STONE_BRICKS_STAIRS.get()).save(consumer, name("grassy_stone_brick_stairs_stonecutting"));
+        stonecuttingMultipleRecipe(GrassyKnollBlocks.STONE, GrassyKnollBlocks.STONE_SLAB.get(), 2).save(consumer, name("grassy_stone_slabs_stonecutting"));
+        stonecuttingMultipleRecipe(GrassyKnollBlocks.STONE, GrassyKnollBlocks.STONE_BRICKS_SLAB.get(), 2).save(consumer, name("grassy_stone_brick_slabs_stonecutting_stone"));
+        stonecuttingMultipleRecipe(GrassyKnollBlocks.STONE_BRICKS, GrassyKnollBlocks.STONE_BRICKS_SLAB.get(), 2).save(consumer, name("grassy_stone_brick_slabs_stonecutting_stone_brick"));
+        stonecuttingMultipleRecipe(GrassyKnollBlocks.COBBLESTONE, GrassyKnollBlocks.COBBLESTONE_SLAB.get(), 2).save(consumer, name("grassy_cobblestone_slabs_stonecutting"));
+        stonecuttingSingleRecipe(GrassyKnollBlocks.COBBLESTONE, GrassyKnollBlocks.COBBLESTONE_STAIRS.get()).save(consumer, name("grassy_cobblestone_stairs_stonecutting"));
             //Smelting
-        smeltingRecipe(GrassyKnollBlocks.GRASSY_STONE.get(), GrassyKnollBlocks.GRASSY_COBBLESTONE.get(), 0.7F).save(consumer, name("smelt_grassy_cobblestone"));
+        smeltingRecipe(GrassyKnollBlocks.STONE.get(), GrassyKnollBlocks.COBBLESTONE.get(), 0.7F).save(consumer, name("smelt_grassy_cobblestone"));
         //Fighting
             //Wooden
 

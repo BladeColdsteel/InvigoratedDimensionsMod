@@ -371,7 +371,7 @@ public class InvigoratedDimensions
         RenderTypeLookup.setRenderLayer(DraconicRiftBlocks.SAPLING.get(), RenderType.cutout());
 
         //Grass
-        RenderTypeLookup.setRenderLayer(GrassyKnollBlocks.GRASSY_SAPLING.get(), RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(GrassyKnollBlocks.SAPLING.get(), RenderType.cutout());
 
         //Bug
         RenderTypeLookup.setRenderLayer(InsectoidParadisioBlocks.BUGGED_SAPLING.get(), RenderType.cutout());

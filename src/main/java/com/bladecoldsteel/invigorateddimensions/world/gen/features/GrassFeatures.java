@@ -3,7 +3,6 @@ package com.bladecoldsteel.invigorateddimensions.world.gen.features;
 import com.bladecoldsteel.invigorateddimensions.InvigoratedDimensions;
 import com.bladecoldsteel.invigorateddimensions.grassyknoll.block.GrassyKnollBlocks;
 import com.bladecoldsteel.invigorateddimensions.universal.block.UniversalBlocks;
-import com.bladecoldsteel.invigorateddimensions.valleydeath.block.ValleyDeathBlocks;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.WorldGenRegistries;
@@ -26,7 +25,7 @@ public class GrassFeatures {
 
         public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> GRASSY_TREE = Feature.TREE.configured(
                 new BaseTreeFeatureConfig.Builder(
-                        new SimpleBlockStateProvider(GrassyKnollBlocks.GRASSY_LOG.get().defaultBlockState()),
+                        new SimpleBlockStateProvider(GrassyKnollBlocks.LOG.get().defaultBlockState()),
                         new SimpleBlockStateProvider(UniversalBlocks.CRYSTALLIZED_LEAVES.get().defaultBlockState()),
                         new BushFoliagePlacer(FeatureSpread.fixed(3), FeatureSpread.fixed(3), 3),
                         new StraightTrunkPlacer(1, 0, 1),
@@ -34,7 +33,7 @@ public class GrassFeatures {
                         .ignoreVines().build());
 
         public static final ConfiguredFeature<?, ?> GRASSY_STONE_PATCH = Feature.ORE.configured(
-                new OreFeatureConfig(OVERWORLD_FILLER, GrassyKnollBlocks.GRASSY_STONE.get().defaultBlockState(), 44)
+                new OreFeatureConfig(OVERWORLD_FILLER, GrassyKnollBlocks.STONE.get().defaultBlockState(), 44)
         );
     }
 

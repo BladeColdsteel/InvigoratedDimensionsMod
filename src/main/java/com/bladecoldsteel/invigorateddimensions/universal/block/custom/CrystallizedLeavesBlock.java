@@ -195,7 +195,7 @@ public class CrystallizedLeavesBlock extends LeavesBlock {
         } else if (isFireBiome(biomeKey)) {
             return new ItemStack(EmberwildsBlocks.SAPLING.get());
         } else if (isGrassBiome(biomeKey)) {
-            return new ItemStack(GrassyKnollBlocks.GRASSY_SAPLING.get());
+            return new ItemStack(GrassyKnollBlocks.SAPLING.get());
         } else if (isIceBiome(biomeKey)) {
             return new ItemStack(DeepTundraBlocks.SAPLING.get());
         } else if (isFightingBiome(biomeKey)) {
@@ -233,7 +233,7 @@ public class CrystallizedLeavesBlock extends LeavesBlock {
                 new ItemStack(WateryDepthsBlocks.WATERY_SAPLING.get()),
                 new ItemStack(EmberwildsBlocks.SAPLING.get()),
                 new ItemStack(DraconicRiftBlocks.SAPLING.get()),
-                new ItemStack(GrassyKnollBlocks.GRASSY_SAPLING.get()),
+                new ItemStack(GrassyKnollBlocks.SAPLING.get()),
                 new ItemStack(InsectoidParadisioBlocks.BUGGED_SAPLING.get()),
                 new ItemStack(ValleyDeathBlocks.DARKENED_SAPLING.get()),
                 new ItemStack(FeywildExpanseBlocks.SAPLING.get()),
