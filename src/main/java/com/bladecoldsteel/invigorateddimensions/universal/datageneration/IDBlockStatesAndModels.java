@@ -51,13 +51,14 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
         block(FeywildExpanseBlocks.PLANKS);
         block(GhastlyMarshBlocks.PLANKS);
         block(GrassyKnollBlocks.PLANKS);
+        block(InfiniteDungeonBlocks.PLANKS);
         //Logs
-        log(InsectoidParadisioBlocks.BUGGED_LOG, "bugged_logs");
+        log(InsectoidParadisioBlocks.LOG, "bugged_logs");
         log(ValleyDeathBlocks.DARKENED_LOG, "darkened_logs");
         log(DraconicRiftBlocks.LOG, "draconic_logs");
         log(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_LOG, "electrically_charged_logs");
         log(FeywildExpanseBlocks.LOG, "feyan_logs");
-        log(InfiniteDungeonBlocks.TOUGH_LOG, "tough_logs");
+        log(InfiniteDungeonBlocks.LOG, "tough_logs");
         log(EmberwildsBlocks.LOG, "embered_logs");
         log(HeavenlyRealmBlocks.LOG, "floating_logs");
         log(GhastlyMarshBlocks.LOG, "spooky_logs");
@@ -83,14 +84,15 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
         uniformLog(FeywildExpanseBlocks.WOOD, "feyan_logs_side");
         uniformLog(GhastlyMarshBlocks.WOOD, "spooky_logs_side");
         uniformLog(GrassyKnollBlocks.WOOD, "grassy_logs_side");
+        uniformLog(InfiniteDungeonBlocks.WOOD, "tough_logs_side");
         //Stripped Wood
         uniformLog(ElectricHighlandsBlocks.STRIPPED_ELECTRICALLY_CHARGED_WOOD, "stripped_electrically_charged_logs_side");
         //Stone
-        block(InsectoidParadisioBlocks.BUGGED_STONE);
+        block(InsectoidParadisioBlocks.STONE);
         block(ValleyDeathBlocks.DARKENED_STONE);
         block(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_STONE);
         block(FeywildExpanseBlocks.STONE);
-        block(InfiniteDungeonBlocks.TOUGH_STONE);
+        block(InfiniteDungeonBlocks.STONE);
         block(HeavenlyRealmBlocks.STONE);
         block(GhastlyMarshBlocks.STONE);
         block(GrassyKnollBlocks.STONE);
@@ -102,11 +104,11 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
         block(MetallicMountainsBlocks.METALLIC_STONE);
         block(WateryDepthsBlocks.WATERY_STONE);
         //Cobblestone
-        block(InsectoidParadisioBlocks.BUGGED_COBBLESTONE);
+        block(InsectoidParadisioBlocks.COBBLESTONE);
         block(ValleyDeathBlocks.DARKENED_COBBLESTONE);
         block(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_COBBLESTONE);
         block(FeywildExpanseBlocks.COBBLESTONE);
-        block(InfiniteDungeonBlocks.TOUGH_COBBLESTONE);
+        block(InfiniteDungeonBlocks.COBBLESTONE);
         block(HeavenlyRealmBlocks.COBBLESTONE);
         block(GhastlyMarshBlocks.COBBLESTONE);
         block(GrassyKnollBlocks.COBBLESTONE);
@@ -127,6 +129,7 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
         block(FeywildExpanseBlocks.STONE_BRICKS);
         block(GhastlyMarshBlocks.STONE_BRICKS);
         block(GrassyKnollBlocks.STONE_BRICKS);
+        block(InfiniteDungeonBlocks.STONE_BRICKS);
         //Chiseled Stone Bricks
         block(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_CHISELED_STONE_BRICKS);
         //Walls
@@ -148,6 +151,8 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
         wallBlock(GhastlyMarshBlocks.STONE_BRICKS_WALL.get(), modLoc("block/spooky_stone_bricks"));
         wallBlock(GrassyKnollBlocks.COBBLESTONE_WALL.get(), modLoc("block/grassy_cobblestone"));
         wallBlock(GrassyKnollBlocks.STONE_BRICKS_WALL.get(), modLoc("block/grassy_stone_bricks"));
+        wallBlock(InfiniteDungeonBlocks.COBBLESTONE_WALL.get(), modLoc("block/tough_cobblestone"));
+        wallBlock(InfiniteDungeonBlocks.STONE_BRICKS_WALL.get(), modLoc("block/tough_stone_bricks"));
         //Fences
         fence(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_FENCE, ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_PLANKS);
         fence(CavernousCoveBlocks.FENCE, CavernousCoveBlocks.PLANKS);
@@ -160,6 +165,7 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
         fence(FeywildExpanseBlocks.FENCE, FeywildExpanseBlocks.PLANKS);
         fence(GhastlyMarshBlocks.FENCE, GhastlyMarshBlocks.PLANKS);
         fence(GrassyKnollBlocks.FENCE, GrassyKnollBlocks.PLANKS);
+        fence(InfiniteDungeonBlocks.FENCE, InfiniteDungeonBlocks.PLANKS);
         //Fence Gates
         fenceGateBlock(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_FENCE_GATE.get(), modLoc("block/electrically_charged_planks"));
         fenceGateBlock(CavernousCoveBlocks.FENCE_GATE.get(), modLoc("block/rocky_planks"));
@@ -172,6 +178,7 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
         fenceGateBlock(FeywildExpanseBlocks.FENCE_GATE.get(), modLoc("block/feyan_planks"));
         fenceGateBlock(GhastlyMarshBlocks.FENCE_GATE.get(), modLoc("block/spooky_planks"));
         fenceGateBlock(GrassyKnollBlocks.FENCE_GATE.get(), modLoc("block/grassy_planks"));
+        fenceGateBlock(InfiniteDungeonBlocks.FENCE_GATE.get(), modLoc("block/tough_planks"));
         //Ores
         block(ElectricHighlandsBlocks.CHARGED_COAL_ORE);
         block(ElectricHighlandsBlocks.CHARGED_IRON_ORE);
@@ -218,6 +225,10 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
         stairs(GrassyKnollBlocks.COBBLESTONE_STAIRS, GrassyKnollBlocks.COBBLESTONE);
         stairs(GrassyKnollBlocks.STONE_STAIRS, GrassyKnollBlocks.STONE);
         stairs(GrassyKnollBlocks.STONE_BRICKS_STAIRS, GrassyKnollBlocks.STONE_BRICKS);
+        stairs(InfiniteDungeonBlocks.WOODEN_STAIRS, InfiniteDungeonBlocks.PLANKS);
+        stairs(InfiniteDungeonBlocks.COBBLESTONE_STAIRS, InfiniteDungeonBlocks.COBBLESTONE);
+        stairs(InfiniteDungeonBlocks.STONE_STAIRS, InfiniteDungeonBlocks.STONE);
+        stairs(InfiniteDungeonBlocks.STONE_BRICKS_STAIRS, InfiniteDungeonBlocks.STONE_BRICKS);
         //Slabs
         slab(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_WOODEN_SLAB, ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_PLANKS);
         slab(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_COBBLESTONE_SLABS, ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_COBBLESTONE);
@@ -257,12 +268,16 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
         slab(GrassyKnollBlocks.COBBLESTONE_SLAB, GrassyKnollBlocks.COBBLESTONE);
         slab(GrassyKnollBlocks.STONE_SLAB, GrassyKnollBlocks.STONE);
         slab(GrassyKnollBlocks.STONE_BRICKS_SLAB, GrassyKnollBlocks.STONE_BRICKS);
+        slab(InfiniteDungeonBlocks.WOODEN_SLAB, InfiniteDungeonBlocks.PLANKS);
+        slab(InfiniteDungeonBlocks.COBBLESTONE_SLAB, InfiniteDungeonBlocks.COBBLESTONE);
+        slab(InfiniteDungeonBlocks.STONE_SLAB, InfiniteDungeonBlocks.STONE);
+        slab(InfiniteDungeonBlocks.STONE_BRICKS_SLAB, InfiniteDungeonBlocks.STONE_BRICKS);
         //Doors
         door(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_DOOR, "electrically_charged");
         //Trapdoors
         trapDoor(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_WOODEN_TRAPDOOR, "electrically_charged");
         //Saplings
-        crossBlock(InsectoidParadisioBlocks.BUGGED_SAPLING);
+        crossBlock(InsectoidParadisioBlocks.SAPLING);
         crossBlock(ValleyDeathBlocks.DARKENED_SAPLING);
         crossBlock(DraconicRiftBlocks.SAPLING);
         crossBlock(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_SAPLING);
@@ -300,6 +315,8 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
         button(GhastlyMarshBlocks.STONE_BUTTON, GhastlyMarshBlocks.STONE);
         button(GrassyKnollBlocks.WOODEN_BUTTON, GrassyKnollBlocks.PLANKS);
         button(GrassyKnollBlocks.STONE_BUTTON, GrassyKnollBlocks.STONE);
+        button(InfiniteDungeonBlocks.WOODEN_BUTTON, InfiniteDungeonBlocks.PLANKS);
+        button(InfiniteDungeonBlocks.STONE_BUTTON, InfiniteDungeonBlocks.STONE);
         //Pressure Plate
         pressurePlate(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_WOODEN_PRESSURE_PLATE, ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_PLANKS);
         pressurePlate(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_STONE_PRESSURE_PLATE, ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_STONE);
@@ -323,6 +340,8 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
         pressurePlate(GhastlyMarshBlocks.STONE_PRESSURE_PLATE, GhastlyMarshBlocks.STONE);
         pressurePlate(GrassyKnollBlocks.WOODEN_PRESSURE_PLATE, GrassyKnollBlocks.PLANKS);
         pressurePlate(GrassyKnollBlocks.STONE_PRESSURE_PLATE, GrassyKnollBlocks.STONE);
+        pressurePlate(InfiniteDungeonBlocks.WOODEN_PRESSURE_PLATE, InfiniteDungeonBlocks.PLANKS);
+        pressurePlate(InfiniteDungeonBlocks.STONE_PRESSURE_PLATE, InfiniteDungeonBlocks.STONE);
         //Portal Frame
         block(ElectricHighlandsBlocks.HIGHLANDS_PORTAL_FRAME);
     }

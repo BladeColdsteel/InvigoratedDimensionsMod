@@ -19,11 +19,11 @@ public class FightingFeatures {
         static final RuleTest OVERWORLD_FILLER = new TagMatchRuleTest(Tags.Blocks.STONE);
 
         public static final ConfiguredFeature<?, ?> TOUGH_LOGS_BOULDER = Feature.FOREST_ROCK.configured(
-                new BlockStateFeatureConfig(InfiniteDungeonBlocks.TOUGH_LOG.get().defaultBlockState())
+                new BlockStateFeatureConfig(InfiniteDungeonBlocks.LOG.get().defaultBlockState())
         );
 
         public static final ConfiguredFeature<?, ?> TOUGH_STONE_BOULDER = Feature.ORE.configured(
-                new OreFeatureConfig(OVERWORLD_FILLER, InfiniteDungeonBlocks.TOUGH_STONE.get().defaultBlockState(), 33)
+                new OreFeatureConfig(OVERWORLD_FILLER, InfiniteDungeonBlocks.STONE.get().defaultBlockState(), 33)
         );
     }
 

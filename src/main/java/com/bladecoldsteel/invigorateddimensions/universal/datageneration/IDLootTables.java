@@ -496,24 +496,51 @@ public class IDLootTables extends LootTableProvider {
             dropSelf(GrassyKnollBlocks.SAPLING);
             //Fighting
                 //Wood
-            dropSelf(InfiniteDungeonBlocks.TOUGH_LOG);
+            dropSelf(InfiniteDungeonBlocks.LOG);
+            dropSelf(InfiniteDungeonBlocks.PLANKS);
+            //dropSelf(InfiniteDungeonBlocks.STRIPPED_ELECTRICALLY_CHARGED_LOG);
+            dropSelf(InfiniteDungeonBlocks.WOODEN_BUTTON);
+            dropSelf(InfiniteDungeonBlocks.WOODEN_STAIRS);
+            slab(InfiniteDungeonBlocks.WOODEN_SLAB);
+            dropSelf(InfiniteDungeonBlocks.WOODEN_PRESSURE_PLATE);
+            //dropSelf(InfiniteDungeonBlocks.ELECTRICALLY_CHARGED_WOODEN_TRAPDOOR);
+            //this.add(InfiniteDungeonBlocks.ELECTRICALLY_CHARGED_DOOR.get(), (block) -> createSinglePropConditionTable(block, DoorBlock.HALF, DoubleBlockHalf.LOWER));
+            dropSelf(InfiniteDungeonBlocks.WOOD);
+            //dropSelf(InfiniteDungeonBlocks.STRIPPED_ELECTRICALLY_CHARGED_WOOD);
+            dropSelf(InfiniteDungeonBlocks.FENCE);
+            dropSelf(InfiniteDungeonBlocks.FENCE_GATE);
+            //dropSelf(InfiniteDungeonBlocks.ELECTRICALLY_CHARGED_WOODEN_TRAPDOOR);
+            //dropSelf(InfiniteDungeonBlocks.ELECTRICALLY_CHARGED_SIGN);
+            //dropOther(InfiniteDungeonBlocks.ELECTRICALLY_CHARGED_WALL_SIGN, InfiniteDungeonBlocks.ELECTRICALLY_CHARGED_SIGN.get());
                 //Stone
-            dropSelf(InfiniteDungeonBlocks.TOUGH_COBBLESTONE);
-            dropOther(InfiniteDungeonBlocks.TOUGH_STONE, InfiniteDungeonBlocks.TOUGH_COBBLESTONE.get());
+            dropSelf(InfiniteDungeonBlocks.COBBLESTONE);
+            dropSelf(InfiniteDungeonBlocks.COBBLESTONE_WALL);
+            dropSelf(InfiniteDungeonBlocks.COBBLESTONE_STAIRS);
+            slab(InfiniteDungeonBlocks.COBBLESTONE_SLAB);
+            dropSelf(InfiniteDungeonBlocks.STONE_BRICKS);
+            slab(InfiniteDungeonBlocks.STONE_BRICKS_SLAB);
+            dropSelf(InfiniteDungeonBlocks.STONE_BRICKS_STAIRS);
+            dropSelf(InfiniteDungeonBlocks.STONE_BRICKS_WALL);
+            //dropSelf(InfiniteDungeonBlocks.ELECTRICALLY_CHARGED_CHISELED_STONE_BRICKS);
+            slab(InfiniteDungeonBlocks.STONE_SLAB);
+            dropSelf(InfiniteDungeonBlocks.STONE_STAIRS);
+            dropSelf(InfiniteDungeonBlocks.STONE_BUTTON);
+            dropSelf(InfiniteDungeonBlocks.STONE_PRESSURE_PLATE);
+            dropOther(InfiniteDungeonBlocks.STONE, InfiniteDungeonBlocks.COBBLESTONE.get());
                 //Ore
 
                 //Other
 
             //Bug
                 //Wood
-            dropSelf(InsectoidParadisioBlocks.BUGGED_LOG);
+            dropSelf(InsectoidParadisioBlocks.LOG);
                 //Stone
-            dropSelf(InsectoidParadisioBlocks.BUGGED_COBBLESTONE);
-            dropOther(InsectoidParadisioBlocks.BUGGED_STONE, InsectoidParadisioBlocks.BUGGED_COBBLESTONE.get());
+            dropSelf(InsectoidParadisioBlocks.COBBLESTONE);
+            dropOther(InsectoidParadisioBlocks.STONE, InsectoidParadisioBlocks.COBBLESTONE.get());
                 //Ore
 
                 //Other
-            dropSelf(InsectoidParadisioBlocks.BUGGED_SAPLING);
+            dropSelf(InsectoidParadisioBlocks.SAPLING);
             //Steel
                 //Wood
             dropSelf(MetallicMountainsBlocks.METALLIC_LOG);

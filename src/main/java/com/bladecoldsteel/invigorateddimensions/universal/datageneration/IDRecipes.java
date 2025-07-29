@@ -375,18 +375,43 @@ public class IDRecipes extends IDRecipeProvider {
         smeltingRecipe(GrassyKnollBlocks.STONE.get(), GrassyKnollBlocks.COBBLESTONE.get(), 0.7F).save(consumer, name("smelt_grassy_cobblestone"));
         //Fighting
             //Wooden
-
+        makePlanks(InfiniteDungeonBlocks.PLANKS, InfiniteDungeonBlocks.LOG).save(consumer);
+        makeWood(InfiniteDungeonBlocks.WOOD, InfiniteDungeonBlocks.LOG).save(consumer);
+        makeStairs(InfiniteDungeonBlocks.WOODEN_STAIRS, InfiniteDungeonBlocks.PLANKS).save(consumer);
+        makeSlab(InfiniteDungeonBlocks.WOODEN_SLAB, InfiniteDungeonBlocks.PLANKS).save(consumer);
+        makeFence(InfiniteDungeonBlocks.FENCE, InfiniteDungeonBlocks.PLANKS).save(consumer);
+        makeFenceGate(InfiniteDungeonBlocks.FENCE_GATE, InfiniteDungeonBlocks.PLANKS).save(consumer);
+        makeButton(InfiniteDungeonBlocks.WOODEN_BUTTON, InfiniteDungeonBlocks.PLANKS).save(consumer);
+        makePressurePlate(InfiniteDungeonBlocks.WOODEN_PRESSURE_PLATE, InfiniteDungeonBlocks.PLANKS).save(consumer);
             //Stone
-
+        makeBricks(InfiniteDungeonBlocks.STONE_BRICKS, InfiniteDungeonBlocks.STONE).save(consumer);
+        makeStairs(InfiniteDungeonBlocks.STONE_STAIRS, InfiniteDungeonBlocks.STONE).save(consumer);
+        makeStairs(InfiniteDungeonBlocks.COBBLESTONE_STAIRS, InfiniteDungeonBlocks.COBBLESTONE).save(consumer);
+        makeStairs(InfiniteDungeonBlocks.STONE_BRICKS_STAIRS, InfiniteDungeonBlocks.STONE_BRICKS).save(consumer);
+        makeSlab(InfiniteDungeonBlocks.COBBLESTONE_SLAB, InfiniteDungeonBlocks.COBBLESTONE).save(consumer);
+        makeSlab(InfiniteDungeonBlocks.STONE_SLAB, InfiniteDungeonBlocks.STONE).save(consumer);
+        makeSlab(InfiniteDungeonBlocks.STONE_BRICKS_SLAB, InfiniteDungeonBlocks.STONE_BRICKS).save(consumer);
+        makeWall(InfiniteDungeonBlocks.COBBLESTONE_WALL, InfiniteDungeonBlocks.COBBLESTONE).save(consumer);
+        makeWall(InfiniteDungeonBlocks.STONE_BRICKS_WALL, InfiniteDungeonBlocks.STONE_BRICKS).save(consumer);
+        makeButton(InfiniteDungeonBlocks.STONE_BUTTON, InfiniteDungeonBlocks.STONE).save(consumer);
+        makePressurePlate(InfiniteDungeonBlocks.STONE_PRESSURE_PLATE, InfiniteDungeonBlocks.STONE).save(consumer);
+        stonecuttingSingleRecipe(InfiniteDungeonBlocks.STONE, InfiniteDungeonBlocks.STONE_BRICKS.get()).save(consumer, name("tough_stone_brick_stonecutting"));
+        stonecuttingSingleRecipe(InfiniteDungeonBlocks.STONE, InfiniteDungeonBlocks.STONE_STAIRS.get()).save(consumer, name("tough_stone_stairs_stonecutting"));
+        stonecuttingSingleRecipe(InfiniteDungeonBlocks.STONE, InfiniteDungeonBlocks.STONE_BRICKS_STAIRS.get()).save(consumer, name("tough_stone_brick_stairs_stonecutting"));
+        stonecuttingMultipleRecipe(InfiniteDungeonBlocks.STONE, InfiniteDungeonBlocks.STONE_SLAB.get(), 2).save(consumer, name("tough_stone_slabs_stonecutting"));
+        stonecuttingMultipleRecipe(InfiniteDungeonBlocks.STONE, InfiniteDungeonBlocks.STONE_BRICKS_SLAB.get(), 2).save(consumer, name("tough_stone_brick_slabs_stonecutting_stone"));
+        stonecuttingMultipleRecipe(InfiniteDungeonBlocks.STONE_BRICKS, InfiniteDungeonBlocks.STONE_BRICKS_SLAB.get(), 2).save(consumer, name("tough_stone_brick_slabs_stonecutting_stone_brick"));
+        stonecuttingMultipleRecipe(InfiniteDungeonBlocks.COBBLESTONE, InfiniteDungeonBlocks.COBBLESTONE_SLAB.get(), 2).save(consumer, name("tough_cobblestone_slabs_stonecutting"));
+        stonecuttingSingleRecipe(InfiniteDungeonBlocks.COBBLESTONE, InfiniteDungeonBlocks.COBBLESTONE_STAIRS.get()).save(consumer, name("tough_cobblestone_stairs_stonecutting"));
             //Smelting
-        smeltingRecipe(InfiniteDungeonBlocks.TOUGH_STONE.get(), InfiniteDungeonBlocks.TOUGH_COBBLESTONE.get(), 0.7F).save(consumer, name("smelt_tough_cobblestone"));
+        smeltingRecipe(InfiniteDungeonBlocks.STONE.get(), InfiniteDungeonBlocks.COBBLESTONE.get(), 0.7F).save(consumer, name("smelt_tough_cobblestone"));
         //Bug
             //Wooden
 
             //Stone
 
             //Smelting
-        smeltingRecipe(InsectoidParadisioBlocks.BUGGED_STONE.get(), InsectoidParadisioBlocks.BUGGED_COBBLESTONE.get(), 0.7F).save(consumer, name("smelt_bugged_cobblestone"));
+        smeltingRecipe(InsectoidParadisioBlocks.STONE.get(), InsectoidParadisioBlocks.COBBLESTONE.get(), 0.7F).save(consumer, name("smelt_bugged_cobblestone"));
         //Steel
             //Wooden
 

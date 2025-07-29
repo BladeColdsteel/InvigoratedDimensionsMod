@@ -209,7 +209,7 @@ public class CrystallizedLeavesBlock extends LeavesBlock {
         } else if (isPsychicBiome(biomeKey)) {
             return new ItemStack(DreamlandBlocks.SAPLING.get());
         } else if (isBugBiome(biomeKey)) {
-            return new ItemStack(InsectoidParadisioBlocks.BUGGED_SAPLING.get());
+            return new ItemStack(InsectoidParadisioBlocks.SAPLING.get());
         } else if (isRockBiome(biomeKey)) {
             return randomSapling();
         } else if (isGhostBiome(biomeKey)) {
@@ -234,7 +234,7 @@ public class CrystallizedLeavesBlock extends LeavesBlock {
                 new ItemStack(EmberwildsBlocks.SAPLING.get()),
                 new ItemStack(DraconicRiftBlocks.SAPLING.get()),
                 new ItemStack(GrassyKnollBlocks.SAPLING.get()),
-                new ItemStack(InsectoidParadisioBlocks.BUGGED_SAPLING.get()),
+                new ItemStack(InsectoidParadisioBlocks.SAPLING.get()),
                 new ItemStack(ValleyDeathBlocks.DARKENED_SAPLING.get()),
                 new ItemStack(FeywildExpanseBlocks.SAPLING.get()),
                 new ItemStack(TerraNataBlocks.GROUNDED_SAPLING.get()),
