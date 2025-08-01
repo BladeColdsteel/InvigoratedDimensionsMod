@@ -1,6 +1,20 @@
 {
   "replace": false,
   "values": [
-    "invigorated_dimensions:electrically_charged_stone_bricks"
+    "invigorated_dimensions:electrically_charged_stone_bricks",
+    "invigorated_dimensions:watery_stone_bricks",
+    "invigorated_dimensions:grassy_stone_bricks",
+    "invigorated_dimensions:bugged_stone_bricks",
+    "invigorated_dimensions:darkened_stone_bricks",
+    "invigorated_dimensions:feyan_stone_bricks",
+    "invigorated_dimensions:tough_stone_bricks",
+    "invigorated_dimensions:grounded_stone_bricks",
+    "invigorated_dimensions:floating_stone_bricks",
+    "invigorated_dimensions:icey_stone_bricks",
+    "invigorated_dimensions:corrosive_stone_bricks",
+    "invigorated_dimensions:psychedelic_stone_bricks",
+    "invigorated_dimensions:rocky_stone_bricks",
+    "invigorated_dimensions:spooky_stone_bricks",
+    "invigorated_dimensions:metallic_stone_bricks"
   ]
 }

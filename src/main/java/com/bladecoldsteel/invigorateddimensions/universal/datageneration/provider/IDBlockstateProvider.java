@@ -103,7 +103,7 @@ public abstract class IDBlockstateProvider extends BlockStateProvider {
     }
 
     private void fenceColumn(Supplier<? extends FenceBlock> block, String side) {
-        String baseName = block.get().getRegistryName().toString();
+        String baseName = block.get().getRegistryName().getPath();
         fourWayBlock(block.get(),
                 models().fencePost(baseName + "_post", texture(side)),
                 models().fenceSide(baseName + "_side", texture(side)));
@@ -128,7 +128,7 @@ public abstract class IDBlockstateProvider extends BlockStateProvider {
             switch (face) {
                 case FLOOR: xRot = 0; break;
                 case CEILING: xRot = 180; break;
-                case WALL: xRot = 90; break;
+                case WALL: xRot = -90; break;
             }
 
             int yRot = facing.get2DDataValue() * 90;

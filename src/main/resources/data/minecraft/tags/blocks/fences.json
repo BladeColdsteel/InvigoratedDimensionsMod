@@ -1,6 +1,22 @@
 {
   "replace": false,
   "values": [
-    "invigorated_dimensions:electrically_charged_fence"
+    "invigorated_dimensions:electrically_charged_fence",
+    "invigorated_dimensions:watery_fence",
+    "invigorated_dimensions:embered_fence",
+    "invigorated_dimensions:draconic_fence",
+    "invigorated_dimensions:grassy_fence",
+    "invigorated_dimensions:bugged_fence",
+    "invigorated_dimensions:darkened_fence",
+    "invigorated_dimensions:feyan_fence",
+    "invigorated_dimensions:tough_fence",
+    "invigorated_dimensions:grounded_fence",
+    "invigorated_dimensions:floating_fence",
+    "invigorated_dimensions:icey_fence",
+    "invigorated_dimensions:corrosive_fence",
+    "invigorated_dimensions:psychedelic_fence",
+    "invigorated_dimensions:rocky_fence",
+    "invigorated_dimensions:spooky_fence",
+    "invigorated_dimensions:metallic_fence"
   ]
 }

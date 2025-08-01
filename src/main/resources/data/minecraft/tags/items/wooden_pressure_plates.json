@@ -1,6 +1,22 @@
 {
   "replace": false,
   "values": [
-    "invigorated_dimensions:electrically_charged_wooden_pressure_plate"
+    "invigorated_dimensions:electrically_charged_wooden_pressure_plate",
+    "invigorated_dimensions:watery_wooden_pressure_plate",
+    "invigorated_dimensions:embered_wooden_pressure_plate",
+    "invigorated_dimensions:draconic_wooden_pressure_plate",
+    "invigorated_dimensions:grassy_wooden_pressure_plate",
+    "invigorated_dimensions:bugged_wooden_pressure_plate",
+    "invigorated_dimensions:darkened_wooden_pressure_plate",
+    "invigorated_dimensions:feyan_wooden_pressure_plate",
+    "invigorated_dimensions:tough_wooden_pressure_plate",
+    "invigorated_dimensions:grounded_wooden_pressure_plate",
+    "invigorated_dimensions:floating_wooden_pressure_plate",
+    "invigorated_dimensions:icey_wooden_pressure_plate",
+    "invigorated_dimensions:corrosive_wooden_pressure_plate",
+    "invigorated_dimensions:psychedelic_wooden_pressure_plate",
+    "invigorated_dimensions:rocky_wooden_pressure_plate",
+    "invigorated_dimensions:spooky_wooden_pressure_plate",
+    "invigorated_dimensions:metallic_wooden_pressure_plate"
   ]
 }

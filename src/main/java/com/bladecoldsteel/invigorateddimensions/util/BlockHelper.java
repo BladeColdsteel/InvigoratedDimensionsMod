@@ -46,7 +46,7 @@ public class BlockHelper {
     }
 
     public static Supplier<FenceBlock> fenceBlock(float strength) {
-        return () -> new FenceBlock(buildProperties(Material.WOOD, strength, strength, ToolType.AXE, 0, SoundType.WOOD, false));
+        return () -> new FenceBlock(AbstractBlock.Properties.copy(Blocks.OAK_FENCE).strength(strength));
     }
 
     public static Supplier<FenceGateBlock> fenceGateBlock(float strength) {

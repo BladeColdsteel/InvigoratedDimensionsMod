@@ -2,6 +2,21 @@
   "replace": false,
   "values": [
     "minecraft:cobblestone",
-    "minecraft:blackstone"
+    "minecraft:blackstone",
+    "invigorated_dimensions:electrically_charged_cobblestone",
+    "invigorated_dimensions:watery_cobblestone",
+    "invigorated_dimensions:grassy_cobblestone",
+    "invigorated_dimensions:bugged_cobblestone",
+    "invigorated_dimensions:darkened_cobblestone",
+    "invigorated_dimensions:feyan_cobblestone",
+    "invigorated_dimensions:tough_cobblestone",
+    "invigorated_dimensions:grounded_cobblestone",
+    "invigorated_dimensions:floating_cobblestone",
+    "invigorated_dimensions:icey_cobblestone",
+    "invigorated_dimensions:corrosive_cobblestone",
+    "invigorated_dimensions:psychedelic_cobblestone",
+    "invigorated_dimensions:rocky_cobblestone",
+    "invigorated_dimensions:spooky_cobblestone",
+    "invigorated_dimensions:metallic_cobblestone"
   ]
 }
