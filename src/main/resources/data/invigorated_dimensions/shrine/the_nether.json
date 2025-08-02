@@ -1,0 +1,15 @@
+{
+  "dimension": "minecraft:the_nether",
+  "display_item": "minecraft:netherrack",
+  "name": "The Nether",
+  "color": 3343107,
+  "recipe": [
+    {"item":  "minecraft:netherrack", "count": 4},
+    {"item":  "invigorated_dimensions:embered_wood", "count": 8},
+    {"item":  "minecraft:diamond", "count": 3},
+    {"item":  "invigorated_dimensions:fire_essence", "count": 10}
+  ],
+  "portal_unlock_conditions": {
+    "mob_kill": "minecraft:zombie"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "dimension": "invigorated_dimensions:valley_of_death",
+  "display_item": "invigorated_dimensions:darkened_stone",
+  "name": "Valley of Death",
+  "color": 4210752,
+  "recipe": [
+    {"item":  "invigorated_dimensions:darkened_stone", "count": 4},
+    {"item":  "invigorated_dimensions:darkened_cobblestone", "count": 2},
+    {"item":  "minecraft:diamond", "count": 3},
+    {"item":  "invigorated_dimensions:dark_essence", "count": 10}
+  ],
+  "portal_unlock_conditions": {
+    "mob_kill": "minecraft:zombie"
+  }
+}

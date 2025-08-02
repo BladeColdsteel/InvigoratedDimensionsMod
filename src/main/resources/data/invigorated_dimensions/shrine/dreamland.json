@@ -1,0 +1,15 @@
+{
+  "dimension": "invigorated_dimensions:dreamland",
+  "display_item": "invigorated_dimensions:psychedelic_stone",
+  "name": "Dreamland",
+  "color": 15472869,
+  "recipe": [
+    {"item":  "invigorated_dimensions:psychedelic_stone", "count": 4},
+    {"item":  "invigorated_dimensions:psychedelic_cobblestone", "count": 2},
+    {"item":  "minecraft:diamond", "count": 3},
+    {"item":  "invigorated_dimensions:psychic_essence", "count": 10}
+  ],
+  "portal_unlock_conditions": {
+    "mob_kill": "minecraft:zombie"
+  }
+}

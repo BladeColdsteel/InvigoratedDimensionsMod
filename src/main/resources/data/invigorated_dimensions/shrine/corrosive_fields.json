@@ -1,0 +1,15 @@
+{
+  "dimension": "invigorated_dimensions:corrosive_fields",
+  "display_item": "invigorated_dimensions:corrosive_stone",
+  "name": "Corrosive Fields",
+  "color": 10426778,
+  "recipe": [
+    {"item":  "invigorated_dimensions:corrosive_stone", "count": 4},
+    {"item":  "invigorated_dimensions:corrosive_cobblestone", "count": 2},
+    {"item":  "minecraft:diamond", "count": 3},
+    {"item":  "invigorated_dimensions:poison_essence", "count": 10}
+  ],
+  "portal_unlock_conditions": {
+    "mob_kill": "minecraft:zombie"
+  }
+}

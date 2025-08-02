@@ -1,0 +1,15 @@
+{
+  "dimension": "invigorated_dimensions:metallic_mountains",
+  "display_item": "invigorated_dimensions:metallic_stone",
+  "name": "Metallic Mountains",
+  "color": 9737364,
+  "recipe": [
+    {"item":  "invigorated_dimensions:metallic_stone", "count": 4},
+    {"item":  "invigorated_dimensions:metallic_cobblestone", "count": 2},
+    {"item":  "minecraft:diamond", "count": 3},
+    {"item":  "invigorated_dimensions:steel_essence", "count": 10}
+  ],
+  "portal_unlock_conditions": {
+    "mob_kill": "minecraft:zombie"
+  }
+}
