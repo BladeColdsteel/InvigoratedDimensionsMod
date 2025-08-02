@@ -3,6 +3,7 @@ package com.bladecoldsteel.invigorateddimensions.universal.tileentity.custom;
 import com.bladecoldsteel.invigorateddimensions.universal.screens.custom.containers.ElementalShrineContainer;
 import com.bladecoldsteel.invigorateddimensions.universal.tileentity.UniversalTileEntities;
 import com.bladecoldsteel.invigorateddimensions.util.DimensionInfo;
+import com.bladecoldsteel.invigorateddimensions.util.DimensionInfoDataLoader;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
@@ -72,6 +73,19 @@ public class ElementalShrineTileEntity extends TileEntity implements ITickableTi
     public void submitItem(Item item, int count) {
         submittedCounts.put(item, getSubmittedCount(item) + count);
         setChanged();
+    }
+
+    public boolean hasSubmissionFor(ResourceLocation dimensionId) {
+        DimensionInfo info = DimensionInfoDataLoader.INSTANCE.dimensionData.get(dimensionId);
+        if (info != null) {
+            for (DimensionInfo.TeleportationIngredient ing : info.recipe.getIngredients()) {
+                Item item = ForgeRegistries.ITEMS.getValue(ing.item);
+                if (getSubmittedCount(item) > 0) {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
     public boolean hasSubmittedAll(DimensionInfo info) {

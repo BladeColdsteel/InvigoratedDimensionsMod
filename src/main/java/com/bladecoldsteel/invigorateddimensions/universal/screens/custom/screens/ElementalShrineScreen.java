@@ -26,6 +26,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class ElementalShrineScreen extends ContainerScreen<ElementalShrineContainer> {
     private static final ResourceLocation TEXTURE = new ResourceLocation("invigorated_dimensions", "textures/gui/elemental_shrine.png");
@@ -55,6 +56,7 @@ public class ElementalShrineScreen extends ContainerScreen<ElementalShrineContai
             if (selectedDimension != null) {
                 BlockPos pos = menu.getTile().getBlockPos();
                 InvigoratedDimensionsNetworkHandler.INSTANCE.sendToServer(new SubmitShrineItemPacket(selectedDimension, pos));
+                updateDimensionButtons();
             }
         }));
     }
@@ -178,15 +180,15 @@ public class ElementalShrineScreen extends ContainerScreen<ElementalShrineContai
     private void renderScrollbar(MatrixStack matrixStack) {
         int total = DimensionInfoDataLoader.INSTANCE.dimensionData.size();
         int maxScroll = Math.max(0, total - MAX_VISIBLE);
-        int scrollBarX = this.leftPos + 87;
-        int scrollBarY = this.topPos + 19;
+        int scrollBarX = this.leftPos + 94;
+        int scrollBarY = this.topPos + 18;
 
         if (canScroll()) {
             float percent = (float) scrollOffset / maxScroll;
             int handleY = scrollBarY + (int)(percent * (139 - 27));
-            blit(matrixStack, scrollBarX, handleY, 6, 27, 0, 199, 6, 27, 256, 512);
+            blit(matrixStack, scrollBarX, handleY, this.getBlitOffset(),0, 199, 6, 27, 256, 512);
         } else {
-            blit(matrixStack, scrollBarX, scrollBarY, 6, 27, 6, 199, 6, 27, 256, 512);
+            blit(matrixStack, scrollBarX, scrollBarY, this.getBlitOffset(),6, 199, 6, 27, 256, 512);
         }
     }
 
@@ -195,10 +197,21 @@ public class ElementalShrineScreen extends ContainerScreen<ElementalShrineContai
     }
 
     private void updateDimensionButtons() {
-        this.buttons.clear();
-        this.children.clear();
+        this.children.removeIf(widget -> widget instanceof ScaledTextButton);
+        this.buttons.removeIf(widget -> widget instanceof ScaledTextButton);
 
-        List<Map.Entry<ResourceLocation, DimensionInfo>> entries = new ArrayList<>(DimensionInfoDataLoader.INSTANCE.dimensionData.entrySet());
+        ResourceLocation lockedDim = menu.getTile().getLockedDimension();
+
+        List<Map.Entry<ResourceLocation, DimensionInfo>> entries;
+
+        if (lockedDim != null) {
+            entries = DimensionInfoDataLoader.INSTANCE.dimensionData.entrySet()
+                    .stream()
+                    .filter(entry -> entry.getKey().equals(lockedDim))
+                    .collect(Collectors.toList());
+        } else {
+            entries = new ArrayList<>(DimensionInfoDataLoader.INSTANCE.dimensionData.entrySet());
+        }
 
         int guiLeft = this.leftPos;
         int guiTop = this.topPos;
