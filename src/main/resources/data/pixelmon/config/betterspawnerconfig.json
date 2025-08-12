@@ -8,7 +8,21 @@
           "minecraft:the_nether",
           "pixelmon:ultra_space",
           "pixelmon:drowned_world",
-          "invigorated_dimensions:electric_highlands"
+          "invigorated_dimensions:cavernous_cove",
+          "invigorated_dimensions:celestial_realm",
+          "invigorated_dimensions:corrosive_fields",
+          "invigorated_dimensions:deep_tundra",
+          "invigorated_dimensions:dreamland",
+          "invigorated_dimensions:electric_highlands",
+          "invigorated_dimensions:feywild_expanse",
+          "invigorated_dimensions:ghastly_marsh",
+          "invigorated_dimensions:grassy_knoll",
+          "invigorated_dimensions:infinite_dungeon",
+          "invigorated_dimensions:insectoid_paradisio",
+          "invigorated_dimensions:metallic_mountains",
+          "invigorated_dimensions:terra_nata",
+          "invigorated_dimensions:valley_of_death",
+          "invigorated_dimensions:watery_depths"
         ]
       },
       {
@@ -2463,49 +2477,77 @@
     ],
     "highlands electric": [
       "invigorated_dimensions:electric_rift",
-      "invigorated_dimensions:electric_highlands"
+      "invigorated_dimensions:electric_highlands",
+      "invigorated_dimensions:electric_highlands_forest"
     ],
     "na dark": [
-      "invigorated_dimensions:darkened_rift"
+      "invigorated_dimensions:darkened_rift",
+      "invigorated_dimensions:valley_of_death",
+      "invigorated_dimensions:valley_of_death_forest"
     ],
     "na water": [
-      "invigorated_dimensions:watery_rift"
+      "invigorated_dimensions:watery_rift",
+      "invigorated_dimensions:watery_depths",
+      "invigorated_dimensions:watery_depths_forest"
     ],
     "na grass": [
-      "invigorated_dimensions:grassy_rift"
+      "invigorated_dimensions:grassy_rift",
+      "invigorated_dimensions:grassy_knoll",
+      "invigorated_dimensions:grassy_knoll_forest"
     ],
     "na psychic": [
-      "invigorated_dimensions:psychic_rift"
+      "invigorated_dimensions:psychic_rift",
+      "invigorated_dimensions:dreamland",
+      "invigorated_dimensions:dreamland_forest"
     ],
     "na rock": [
-      "invigorated_dimensions:rocky_rift"
+      "invigorated_dimensions:rocky_rift",
+      "invigorated_dimensions:cavernous_cove",
+      "invigorated_dimensions:cavernous_cove_forest"
     ],
     "na ghost": [
-      "invigorated_dimensions:spooky_rift"
+      "invigorated_dimensions:spooky_rift",
+      "invigorated_dimensions:ghastly_marsh",
+      "invigorated_dimensions:ghastly_marsh_forest"
     ],
     "na steel": [
-      "invigorated_dimensions:steely_rift"
+      "invigorated_dimensions:steely_rift",
+      "invigorated_dimensions:metallic_mountains",
+      "invigorated_dimensions:metallic_mountains_forest"
     ],
     "na ice": [
-      "invigorated_dimensions:icey_rift"
+      "invigorated_dimensions:icey_rift",
+      "invigorated_dimensions:deep_tundra",
+      "invigorated_dimensions:deep_tundra_forest"
     ],
     "na fairy": [
-      "invigorated_dimensions:fairy_rift"
+      "invigorated_dimensions:fairy_rift",
+      "invigorated_dimensions:feywild_expanse",
+      "invigorated_dimensions:feywild_expanse_forest"
     ],
     "na bug": [
-      "invigorated_dimensions:buggy_rift"
+      "invigorated_dimensions:buggy_rift",
+      "invigorated_dimensions:insectoid_paradisio",
+      "invigorated_dimensions:insectoid_paradisio_forest"
     ],
     "na ground": [
-      "invigorated_dimensions:grounded_rift"
+      "invigorated_dimensions:grounded_rift",
+      "invigorated_dimensions:terra_nata",
+      "invigorated_dimensions:terra_nata_forest"
     ],
     "na flying": [
-      "invigorated_dimensions:flying_rift"
+      "invigorated_dimensions:flying_rift",
+      "invigorated_dimensions:celestial_realm",
+      "invigorated_dimensions:celestial_realm_forest"
     ],
     "na poison": [
-      "invigorated_dimensions:poison_rift"
+      "invigorated_dimensions:poison_rift",
+      "invigorated_dimensions:corrosive_fields",
+      "invigorated_dimensions:corrosive_fields_forest"
     ],
     "na fighting": [
-      "invigorated_dimensions:fighting_rift"
+      "invigorated_dimensions:fighting_rift",
+      "invigorated_dimensions:infinite_dungeon"
     ]
   }
 }
