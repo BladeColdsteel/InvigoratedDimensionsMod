@@ -1,6 +1,7 @@
 package com.bladecoldsteel.invigorateddimensions.util;
 
 import com.bladecoldsteel.invigorateddimensions.celestialrealm.block.custom.FloatingSaplingBlock;
+import com.bladecoldsteel.invigorateddimensions.universal.block.custom.GeneralizedPortalBlock;
 import com.bladecoldsteel.invigorateddimensions.world.gen.features.trees.FlyingTree;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
@@ -8,6 +9,9 @@ import net.minecraft.block.trees.Tree;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.util.RegistryKey;
+import net.minecraft.village.PointOfInterestType;
+import net.minecraft.world.World;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -27,6 +31,14 @@ public class BlockHelper {
 
     public static Supplier<Block> stoneBlock(float strength, int harvestLevel, boolean needsTool) {
         return () -> new Block(buildProperties(Material.STONE, strength, strength, ToolType.PICKAXE, harvestLevel, SoundType.STONE, needsTool));
+    }
+
+    public static Supplier<Block> portalFrameBlock(int harvestLevel) {
+        return () -> new Block(buildProperties(Material.STONE, 50.0f, 50.0f, ToolType.PICKAXE, harvestLevel, SoundType.STONE, true));
+    }
+
+    public static Supplier<GeneralizedPortalBlock> portalBlock(Supplier<? extends Block> frameBlock, Supplier<? extends Block> portalBlock, RegistryKey<World> dimensionID, RegistryObject<PointOfInterestType> poi) {
+        return () -> new GeneralizedPortalBlock(buildProperties(Material.STONE, 10000.0F, 10000.0F, ToolType.PICKAXE, 4, SoundType.STONE, true).noCollission(), frameBlock, portalBlock, dimensionID, poi);
     }
 
     public static Supplier<SlabBlock> slabBlock(Material material, float strength, ToolType tool, int harvestLevel, SoundType sound, boolean needsTool) {

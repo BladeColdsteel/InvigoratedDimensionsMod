@@ -28,6 +28,10 @@ public class IDBlockLootTableProvider extends BlockLootTables {
         super.add(block.get(), factory);
     }
 
+    public void dropNothing(Supplier<? extends Block> block) {
+        this.add(block.get(), LootTable.lootTable());
+    }
+
     public void dropSelf(Supplier<? extends Block> block) {
         super.dropSelf(block.get());
     }
