@@ -3,7 +3,10 @@ package com.bladecoldsteel.invigorateddimensions.deeptundra.block;
 import com.bladecoldsteel.invigorateddimensions.InvigoratedDimensions;
 import com.bladecoldsteel.invigorateddimensions.deeptundra.item.DeepTundraItemGroup;
 import com.bladecoldsteel.invigorateddimensions.deeptundra.item.DeepTundraItems;
+import com.bladecoldsteel.invigorateddimensions.universal.block.custom.GeneralizedPortalBlock;
 import com.bladecoldsteel.invigorateddimensions.util.BlockHelper;
+import com.bladecoldsteel.invigorateddimensions.world.ModPointsOfInterest;
+import com.bladecoldsteel.invigorateddimensions.world.dimension.ModDimensions;
 import com.bladecoldsteel.invigorateddimensions.world.gen.features.trees.IceTree;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
@@ -144,6 +147,17 @@ public class DeepTundraBlocks {
             "icey_sapling", BLOCKS, DeepTundraItems.ITEMS,
             BlockHelper.sapling(new IceTree(), Blocks.OAK_SAPLING),
             TAB);
+    //Portal Blocks
+    public static final RegistryObject<GeneralizedPortalBlock> PORTAL = BlockHelper.register(
+            "deep_tundra_portal", BLOCKS, DeepTundraItems.ITEMS,
+            BlockHelper.portalBlock(() -> DeepTundraBlocks.PORTAL_FRAME.get(), () -> DeepTundraBlocks.PORTAL.get(), ModDimensions.DEEP_TUNDRA, ModPointsOfInterest.DEEP_TUNDRA_PORTAL),
+            TAB
+    );
+    public static final RegistryObject<Block> PORTAL_FRAME = BlockHelper.register(
+            "icey_portal_frame", BLOCKS, DeepTundraItems.ITEMS,
+            BlockHelper.portalFrameBlock(4),
+            TAB
+    );
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

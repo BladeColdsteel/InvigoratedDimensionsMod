@@ -3,7 +3,10 @@ package com.bladecoldsteel.invigorateddimensions.metallicmountains.block;
 import com.bladecoldsteel.invigorateddimensions.InvigoratedDimensions;
 import com.bladecoldsteel.invigorateddimensions.metallicmountains.item.MetallicMountainsItemGroup;
 import com.bladecoldsteel.invigorateddimensions.metallicmountains.item.MetallicMountainsItems;
+import com.bladecoldsteel.invigorateddimensions.universal.block.custom.GeneralizedPortalBlock;
 import com.bladecoldsteel.invigorateddimensions.util.BlockHelper;
+import com.bladecoldsteel.invigorateddimensions.world.ModPointsOfInterest;
+import com.bladecoldsteel.invigorateddimensions.world.dimension.ModDimensions;
 import com.bladecoldsteel.invigorateddimensions.world.gen.features.trees.SteelTree;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
@@ -144,6 +147,17 @@ public class MetallicMountainsBlocks {
             "metallic_sapling", BLOCKS, MetallicMountainsItems.ITEMS,
             BlockHelper.sapling(new SteelTree(), Blocks.OAK_SAPLING),
             TAB);
+    //Portal Blocks
+    public static final RegistryObject<GeneralizedPortalBlock> PORTAL = BlockHelper.register(
+            "metallic_mountains_portal", BLOCKS, MetallicMountainsItems.ITEMS,
+            BlockHelper.portalBlock(() -> MetallicMountainsBlocks.PORTAL_FRAME.get(), () -> MetallicMountainsBlocks.PORTAL.get(), ModDimensions.METALLIC_MOUNTAINS, ModPointsOfInterest.METALLIC_MOUNTAINS_PORTAL),
+            TAB
+    );
+    public static final RegistryObject<Block> PORTAL_FRAME = BlockHelper.register(
+            "metallic_portal_frame", BLOCKS, MetallicMountainsItems.ITEMS,
+            BlockHelper.portalFrameBlock(4),
+            TAB
+    );
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

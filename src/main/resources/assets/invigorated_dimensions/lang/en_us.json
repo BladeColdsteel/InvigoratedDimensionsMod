@@ -89,6 +89,9 @@
   "block.invigorated_dimensions.watery_stone_button": "Watery Stone Button",
   "block.invigorated_dimensions.watery_wooden_pressure_plate": "Watery Wooden Pressure Plate",
   "block.invigorated_dimensions.watery_stone_pressure_plate": "Watery Stone Pressure Plate",
+  "block.invigorated_dimensions.watery_portal_frame": "Watery Portal Frame",
+  "block.invigorated_dimensions.watery_depths_portal": "Watery Depths Portal",
+  "item.invigorated_dimensions.watery_activator": "Watery Portal Activator",
 
   "block.invigorated_dimensions.embered_logs": "Embered Log",
   "block.invigorated_dimensions.embered_sapling": "Embered Sapling",
@@ -139,6 +142,9 @@
   "block.invigorated_dimensions.grassy_stone_button": "Grassy Stone Button",
   "block.invigorated_dimensions.grassy_wooden_pressure_plate": "Grassy Wooden Pressure Plate",
   "block.invigorated_dimensions.grassy_stone_pressure_plate": "Grassy Stone Pressure Plate",
+  "block.invigorated_dimensions.grassy_portal_frame": "Grassy Portal Frame",
+  "block.invigorated_dimensions.grassy_knoll_portal": "Grassy Knoll Portal",
+  "item.invigorated_dimensions.grassy_activator": "Grassy Portal Activator",
 
   "block.invigorated_dimensions.bugged_logs": "Bugged Log",
   "block.invigorated_dimensions.bugged_sapling": "Bugged Sapling",
@@ -163,6 +169,9 @@
   "block.invigorated_dimensions.bugged_stone_button": "Bugged Stone Button",
   "block.invigorated_dimensions.bugged_wooden_pressure_plate": "Bugged Wooden Pressure Plate",
   "block.invigorated_dimensions.bugged_stone_pressure_plate": "Bugged Stone Pressure Plate",
+  "block.invigorated_dimensions.bugged_portal_frame": "Bugged Portal Frame",
+  "block.invigorated_dimensions.insectoid_paradisio_portal": "Insectoid Paradisio Portal",
+  "item.invigorated_dimensions.bugged_activator": "Bugged Portal Activator",
 
   "block.invigorated_dimensions.darkened_logs": "Darkened Log",
   "block.invigorated_dimensions.darkened_sapling": "Darkened Sapling",
@@ -187,6 +196,9 @@
   "block.invigorated_dimensions.darkened_stone_button": "Darkened Stone Button",
   "block.invigorated_dimensions.darkened_wooden_pressure_plate": "Darkened Wooden Pressure Plate",
   "block.invigorated_dimensions.darkened_stone_pressure_plate": "Darkened Stone Pressure Plate",
+  "block.invigorated_dimensions.darkened_portal_frame": "Darkened Portal Frame",
+  "block.invigorated_dimensions.valley_of_death_portal": "Valley of Death Portal",
+  "item.invigorated_dimensions.darkened_activator": "Darkened Portal Activator",
 
   "block.invigorated_dimensions.feyan_logs": "Feyan Log",
   "block.invigorated_dimensions.feyan_sapling": "Feyan Sapling",
@@ -211,6 +223,9 @@
   "block.invigorated_dimensions.feyan_stone_button": "Feyan Stone Button",
   "block.invigorated_dimensions.feyan_wooden_pressure_plate": "Feyan Wooden Pressure Plate",
   "block.invigorated_dimensions.feyan_stone_pressure_plate": "Feyan Stone Pressure Plate",
+  "block.invigorated_dimensions.feyan_portal_frame": "Feyan Portal Frame",
+  "block.invigorated_dimensions.feywild_expanse_portal": "Feywild Expanse Portal",
+  "item.invigorated_dimensions.feyan_activator": "Feyan Portal Activator",
 
   "block.invigorated_dimensions.tough_logs": "Tough Log",
   "block.invigorated_dimensions.tough_stone": "Tough Stone",
@@ -234,6 +249,9 @@
   "block.invigorated_dimensions.tough_stone_button": "Tough Stone Button",
   "block.invigorated_dimensions.tough_wooden_pressure_plate": "Tough Wooden Pressure Plate",
   "block.invigorated_dimensions.tough_stone_pressure_plate": "Tough Stone Pressure Plate",
+  "block.invigorated_dimensions.tough_portal_frame": "Tough Portal Frame",
+  "block.invigorated_dimensions.infinite_dungeon_portal": "Infinite Dungeon Portal",
+  "item.invigorated_dimensions.tough_activator": "Tough Portal Activator",
 
   "block.invigorated_dimensions.grounded_logs": "Grounded Log",
   "block.invigorated_dimensions.grounded_sapling": "Grounded Sapling",
@@ -258,6 +276,9 @@
   "block.invigorated_dimensions.grounded_stone_button": "Grounded Stone Button",
   "block.invigorated_dimensions.grounded_wooden_pressure_plate": "Grounded Wooden Pressure Plate",
   "block.invigorated_dimensions.grounded_stone_pressure_plate": "Grounded Stone Pressure Plate",
+  "block.invigorated_dimensions.grounded_portal_frame": "Grounded Portal Frame",
+  "block.invigorated_dimensions.terra_nata_portal": "Terra Nata Portal",
+  "item.invigorated_dimensions.grounded_activator": "Grounded Portal Activator",
 
   "block.invigorated_dimensions.floating_logs": "Floating Log",
   "block.invigorated_dimensions.floating_sapling": "Floating Sapling",
@@ -282,6 +303,9 @@
   "block.invigorated_dimensions.floating_stone_button": "Floating Stone Button",
   "block.invigorated_dimensions.floating_wooden_pressure_plate": "Floating Wooden Pressure Plate",
   "block.invigorated_dimensions.floating_stone_pressure_plate": "Floating Stone Pressure Plate",
+  "block.invigorated_dimensions.floating_portal_frame": "Floating Portal Frame",
+  "block.invigorated_dimensions.celestial_realm_portal": "Celestial Realm Portal",
+  "item.invigorated_dimensions.floating_activator": "Floating Portal Activator",
 
   "block.invigorated_dimensions.icey_logs": "Icey Log",
   "block.invigorated_dimensions.icey_sapling": "Icey Sapling",
@@ -306,6 +330,9 @@
   "block.invigorated_dimensions.icey_stone_button": "Icey Stone Button",
   "block.invigorated_dimensions.icey_wooden_pressure_plate": "Icey Wooden Pressure Plate",
   "block.invigorated_dimensions.icey_stone_pressure_plate": "Icey Stone Pressure Plate",
+  "block.invigorated_dimensions.icey_portal_frame": "Icey Portal Frame",
+  "block.invigorated_dimensions.deep_tundra_portal": "Deep Tundra Portal",
+  "item.invigorated_dimensions.icey_activator": "Icey Portal Activator",
 
   "block.invigorated_dimensions.corrosive_logs": "Corrosive Log",
   "block.invigorated_dimensions.corrosive_sapling": "Corrosive Sapling",
@@ -330,6 +357,9 @@
   "block.invigorated_dimensions.corrosive_stone_button": "Corrosive Stone Button",
   "block.invigorated_dimensions.corrosive_wooden_pressure_plate": "Corrosive Wooden Pressure Plate",
   "block.invigorated_dimensions.corrosive_stone_pressure_plate": "Corrosive Stone Pressure Plate",
+  "block.invigorated_dimensions.corrosive_portal_frame": "Corrosive Portal Frame",
+  "block.invigorated_dimensions.corrosive_fields_portal": "Corrosive Fields Portal",
+  "item.invigorated_dimensions.corrosive_activator": "Corrosive Portal Activator",
 
   "block.invigorated_dimensions.psychedelic_logs": "Psychedelic Log",
   "block.invigorated_dimensions.psychedelic_sapling": "Psychedelic Sapling",
@@ -354,6 +384,9 @@
   "block.invigorated_dimensions.psychedelic_stone_button": "Psychedelic Stone Button",
   "block.invigorated_dimensions.psychedelic_wooden_pressure_plate": "Psychedelic Wooden Pressure Plate",
   "block.invigorated_dimensions.psychedelic_stone_pressure_plate": "Psychedelic Stone Pressure Plate",
+  "block.invigorated_dimensions.psychedelic_portal_frame": "Psychedelic Portal Frame",
+  "block.invigorated_dimensions.dreamland_portal": "Dreamland Portal",
+  "item.invigorated_dimensions.psychedelic_activator": "Psychedelic Portal Activator",
 
   "block.invigorated_dimensions.rocky_logs": "Rocky Log",
   "block.invigorated_dimensions.rocky_stone": "Rocky Stone",
@@ -377,6 +410,9 @@
   "block.invigorated_dimensions.rocky_stone_button": "Rocky Stone Button",
   "block.invigorated_dimensions.rocky_wooden_pressure_plate": "Rocky Wooden Pressure Plate",
   "block.invigorated_dimensions.rocky_stone_pressure_plate": "Rocky Stone Pressure Plate",
+  "block.invigorated_dimensions.rocky_portal_frame": "Rocky Portal Frame",
+  "block.invigorated_dimensions.cavernous_cove_portal": "Cavernous Cove Portal",
+  "item.invigorated_dimensions.rocky_activator": "Rocky Portal Activator",
 
   "block.invigorated_dimensions.spooky_logs": "Spooky Log",
   "block.invigorated_dimensions.spooky_sapling": "Spooky Sapling",
@@ -401,6 +437,9 @@
   "block.invigorated_dimensions.spooky_stone_button": "Spooky Stone Button",
   "block.invigorated_dimensions.spooky_wooden_pressure_plate": "Spooky Wooden Pressure Plate",
   "block.invigorated_dimensions.spooky_stone_pressure_plate": "Spooky Stone Pressure Plate",
+  "block.invigorated_dimensions.spooky_portal_frame": "Spooky Portal Frame",
+  "block.invigorated_dimensions.ghastly_marsh_portal": "Ghastly Marsh Portal",
+  "item.invigorated_dimensions.spooky_activator": "Spooky Portal Activator",
 
   "block.invigorated_dimensions.metallic_logs": "Metallic Log",
   "block.invigorated_dimensions.metallic_sapling": "Metallic Sapling",
@@ -425,6 +464,9 @@
   "block.invigorated_dimensions.metallic_stone_button": "Metallic Stone Button",
   "block.invigorated_dimensions.metallic_wooden_pressure_plate": "Metallic Wooden Pressure Plate",
   "block.invigorated_dimensions.metallic_stone_pressure_plate": "Metallic Stone Pressure Plate",
+  "block.invigorated_dimensions.metallic_portal_frame": "Metallic Portal Frame",
+  "block.invigorated_dimensions.metallic_mountains_portal": "Metallic Mountains Portal",
+  "item.invigorated_dimensions.metallic_activator": "Metallic Portal Activator",
 
   "itemGroup.invigorated_dimensions": "Invigorated Dimensions",
   "itemGroup.invigorated_dimensions_electric_highlands_mod_tab": "ID: Electric Highlands",

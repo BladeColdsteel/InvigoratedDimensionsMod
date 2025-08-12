@@ -1,9 +1,12 @@
 package com.bladecoldsteel.invigorateddimensions.waterydepths.block;
 
 import com.bladecoldsteel.invigorateddimensions.InvigoratedDimensions;
+import com.bladecoldsteel.invigorateddimensions.universal.block.custom.GeneralizedPortalBlock;
 import com.bladecoldsteel.invigorateddimensions.util.BlockHelper;
 import com.bladecoldsteel.invigorateddimensions.waterydepths.item.WateryDepthsItemGroup;
 import com.bladecoldsteel.invigorateddimensions.waterydepths.item.WateryDepthsItems;
+import com.bladecoldsteel.invigorateddimensions.world.ModPointsOfInterest;
+import com.bladecoldsteel.invigorateddimensions.world.dimension.ModDimensions;
 import com.bladecoldsteel.invigorateddimensions.world.gen.features.trees.WaterTree;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
@@ -144,6 +147,17 @@ public class WateryDepthsBlocks {
             "watery_sapling", BLOCKS, WateryDepthsItems.ITEMS,
             BlockHelper.sapling(new WaterTree(), Blocks.OAK_SAPLING),
             TAB);
+    //Portal Blocks
+    public static final RegistryObject<GeneralizedPortalBlock> PORTAL = BlockHelper.register(
+            "watery_depths_portal", BLOCKS, WateryDepthsItems.ITEMS,
+            BlockHelper.portalBlock(() -> WateryDepthsBlocks.PORTAL_FRAME.get(), () -> WateryDepthsBlocks.PORTAL.get(), ModDimensions.WATERY_DEPTHS, ModPointsOfInterest.WATERY_DEPTHS_PORTAL),
+            TAB
+    );
+    public static final RegistryObject<Block> PORTAL_FRAME = BlockHelper.register(
+            "watery_portal_frame", BLOCKS, WateryDepthsItems.ITEMS,
+            BlockHelper.portalFrameBlock(4),
+            TAB
+    );
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

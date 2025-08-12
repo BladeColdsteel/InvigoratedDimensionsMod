@@ -3,20 +3,19 @@ package com.bladecoldsteel.invigorateddimensions.dreamland.block;
 import com.bladecoldsteel.invigorateddimensions.InvigoratedDimensions;
 import com.bladecoldsteel.invigorateddimensions.dreamland.item.DreamlandItemGroup;
 import com.bladecoldsteel.invigorateddimensions.dreamland.item.DreamlandItems;
+import com.bladecoldsteel.invigorateddimensions.universal.block.custom.GeneralizedPortalBlock;
 import com.bladecoldsteel.invigorateddimensions.util.BlockHelper;
+import com.bladecoldsteel.invigorateddimensions.world.ModPointsOfInterest;
+import com.bladecoldsteel.invigorateddimensions.world.dimension.ModDimensions;
 import com.bladecoldsteel.invigorateddimensions.world.gen.features.trees.PsychicTree;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
-
-import java.util.function.Supplier;
 
 public class DreamlandBlocks {
     private static final ItemGroup TAB = DreamlandItemGroup.PSYCHEDLIC_RIFT_GROUP;
@@ -148,6 +147,17 @@ public class DreamlandBlocks {
             "psychedelic_sapling", BLOCKS, DreamlandItems.ITEMS,
             BlockHelper.sapling(new PsychicTree(), Blocks.OAK_SAPLING),
             TAB);
+    //Portal Blocks
+    public static final RegistryObject<GeneralizedPortalBlock> PORTAL = BlockHelper.register(
+            "dreamland_portal", BLOCKS, DreamlandItems.ITEMS,
+            BlockHelper.portalBlock(() -> DreamlandBlocks.PORTAL_FRAME.get(), () -> DreamlandBlocks.PORTAL.get(), ModDimensions.DREAMLAND, ModPointsOfInterest.DREAMLAND_PORTAL),
+            TAB
+    );
+    public static final RegistryObject<Block> PORTAL_FRAME = BlockHelper.register(
+            "psychedelic_portal_frame", BLOCKS, DreamlandItems.ITEMS,
+            BlockHelper.portalFrameBlock(4),
+            TAB
+    );
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

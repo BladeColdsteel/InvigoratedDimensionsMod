@@ -1,9 +1,14 @@
 package com.bladecoldsteel.invigorateddimensions.feywildexpanse.block;
 
 import com.bladecoldsteel.invigorateddimensions.InvigoratedDimensions;
+import com.bladecoldsteel.invigorateddimensions.dreamland.block.DreamlandBlocks;
+import com.bladecoldsteel.invigorateddimensions.dreamland.item.DreamlandItems;
 import com.bladecoldsteel.invigorateddimensions.feywildexpanse.item.FeywildExpanseItemGroup;
 import com.bladecoldsteel.invigorateddimensions.feywildexpanse.item.FeywildExpanseItems;
+import com.bladecoldsteel.invigorateddimensions.universal.block.custom.GeneralizedPortalBlock;
 import com.bladecoldsteel.invigorateddimensions.util.BlockHelper;
+import com.bladecoldsteel.invigorateddimensions.world.ModPointsOfInterest;
+import com.bladecoldsteel.invigorateddimensions.world.dimension.ModDimensions;
 import com.bladecoldsteel.invigorateddimensions.world.gen.features.trees.FairyTree;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
@@ -146,6 +151,17 @@ public class FeywildExpanseBlocks {
             "feyan_sapling", BLOCKS, FeywildExpanseItems.ITEMS,
             BlockHelper.sapling(new FairyTree(), Blocks.OAK_SAPLING),
             TAB);
+    //Portal Blocks
+    public static final RegistryObject<GeneralizedPortalBlock> PORTAL = BlockHelper.register(
+            "feywild_expanse_portal", BLOCKS, FeywildExpanseItems.ITEMS,
+            BlockHelper.portalBlock(() -> FeywildExpanseBlocks.PORTAL_FRAME.get(), () -> FeywildExpanseBlocks.PORTAL.get(), ModDimensions.FEYWILD_EXPANSE, ModPointsOfInterest.FEYWILD_EXPANSE_PORTAL),
+            TAB
+    );
+    public static final RegistryObject<Block> PORTAL_FRAME = BlockHelper.register(
+            "feyan_portal_frame", BLOCKS, FeywildExpanseItems.ITEMS,
+            BlockHelper.portalFrameBlock(4),
+            TAB
+    );
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

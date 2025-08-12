@@ -117,7 +117,8 @@ public class IDLootTables extends LootTableProvider {
                 //Ore
 
                 //Other
-
+            dropSelf(CavernousCoveBlocks.PORTAL_FRAME);
+            dropNothing(CavernousCoveBlocks.PORTAL);
             //Flying
                 //Wood
             dropSelf(HeavenlyRealmBlocks.LOG);
@@ -155,6 +156,8 @@ public class IDLootTables extends LootTableProvider {
 
                 //Other
             dropSelf(HeavenlyRealmBlocks.SAPLING);
+            dropSelf(HeavenlyRealmBlocks.PORTAL_FRAME);
+            dropNothing(HeavenlyRealmBlocks.PORTAL);
             //Poison
                 //Wood
             dropSelf(CorrosiveFieldsBlocks.LOG);
@@ -192,6 +195,8 @@ public class IDLootTables extends LootTableProvider {
 
                 //Other
             dropSelf(CorrosiveFieldsBlocks.SAPLING);
+            dropSelf(CorrosiveFieldsBlocks.PORTAL_FRAME);
+            dropNothing(CorrosiveFieldsBlocks.PORTAL);
             //Ice
                 //Wood
             dropSelf(DeepTundraBlocks.LOG);
@@ -229,6 +234,8 @@ public class IDLootTables extends LootTableProvider {
 
                 //Other
             dropSelf(DeepTundraBlocks.SAPLING);
+            dropSelf(DeepTundraBlocks.PORTAL_FRAME);
+            dropNothing(DeepTundraBlocks.PORTAL);
             //Dragon
                 //Wood
             dropSelf(DraconicRiftBlocks.LOG);
@@ -303,6 +310,8 @@ public class IDLootTables extends LootTableProvider {
 
                 //Other
             dropSelf(DreamlandBlocks.SAPLING);
+            dropSelf(DreamlandBlocks.PORTAL_FRAME);
+            dropNothing(DreamlandBlocks.PORTAL);
             //Electric
                 //Wood
             dropSelf(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_LOG);
@@ -420,6 +429,8 @@ public class IDLootTables extends LootTableProvider {
 
                 //Other
             dropSelf(FeywildExpanseBlocks.SAPLING);
+            dropSelf(FeywildExpanseBlocks.PORTAL_FRAME);
+            dropNothing(FeywildExpanseBlocks.PORTAL);
             //Ghost
                 //Wood
             dropSelf(GhastlyMarshBlocks.LOG);
@@ -457,6 +468,8 @@ public class IDLootTables extends LootTableProvider {
 
                 //Other
             dropSelf(GhastlyMarshBlocks.SAPLING);
+            dropSelf(GhastlyMarshBlocks.PORTAL_FRAME);
+            dropNothing(GhastlyMarshBlocks.PORTAL);
             //Grass
                 //Wood
             dropSelf(GrassyKnollBlocks.LOG);
@@ -494,6 +507,8 @@ public class IDLootTables extends LootTableProvider {
 
                 //Other
             dropSelf(GrassyKnollBlocks.SAPLING);
+            dropSelf(GrassyKnollBlocks.PORTAL_FRAME);
+            dropNothing(GrassyKnollBlocks.PORTAL);
             //Fighting
                 //Wood
             dropSelf(InfiniteDungeonBlocks.LOG);
@@ -530,7 +545,8 @@ public class IDLootTables extends LootTableProvider {
                 //Ore
 
                 //Other
-
+            dropSelf(InfiniteDungeonBlocks.PORTAL_FRAME);
+            dropNothing(InfiniteDungeonBlocks.PORTAL);
             //Bug
                 //Wood
             dropSelf(InsectoidParadisioBlocks.LOG);
@@ -568,6 +584,8 @@ public class IDLootTables extends LootTableProvider {
 
                 //Other
             dropSelf(InsectoidParadisioBlocks.SAPLING);
+            dropSelf(InsectoidParadisioBlocks.PORTAL_FRAME);
+            dropNothing(InsectoidParadisioBlocks.PORTAL);
             //Steel
                 //Wood
             dropSelf(MetallicMountainsBlocks.LOG);
@@ -605,6 +623,8 @@ public class IDLootTables extends LootTableProvider {
 
                 //Other
             dropSelf(MetallicMountainsBlocks.SAPLING);
+            dropSelf(MetallicMountainsBlocks.PORTAL_FRAME);
+            dropNothing(MetallicMountainsBlocks.PORTAL);
             //Ground
                 //Wood
             dropSelf(TerraNataBlocks.LOG);
@@ -642,6 +662,8 @@ public class IDLootTables extends LootTableProvider {
 
                 //Other
             dropSelf(TerraNataBlocks.SAPLING);
+            dropSelf(TerraNataBlocks.PORTAL_FRAME);
+            dropNothing(TerraNataBlocks.PORTAL);
             //Dark
                 //Wood
             dropSelf(ValleyDeathBlocks.LOG);
@@ -679,6 +701,8 @@ public class IDLootTables extends LootTableProvider {
 
                 //Other
             dropSelf(ValleyDeathBlocks.SAPLING);
+            dropSelf(ValleyDeathBlocks.PORTAL_FRAME);
+            dropNothing(ValleyDeathBlocks.PORTAL);
             //Water
                 //Wood
             dropSelf(WateryDepthsBlocks.LOG);
@@ -716,6 +740,8 @@ public class IDLootTables extends LootTableProvider {
 
                 //Other
             dropSelf(WateryDepthsBlocks.SAPLING);
+            dropSelf(WateryDepthsBlocks.PORTAL_FRAME);
+            dropNothing(WateryDepthsBlocks.PORTAL);
         }
 
         @Override

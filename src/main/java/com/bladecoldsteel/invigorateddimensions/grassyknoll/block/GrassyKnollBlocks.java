@@ -3,7 +3,10 @@ package com.bladecoldsteel.invigorateddimensions.grassyknoll.block;
 import com.bladecoldsteel.invigorateddimensions.InvigoratedDimensions;
 import com.bladecoldsteel.invigorateddimensions.grassyknoll.item.GrassyKnollItemGroup;
 import com.bladecoldsteel.invigorateddimensions.grassyknoll.item.GrassyKnollItems;
+import com.bladecoldsteel.invigorateddimensions.universal.block.custom.GeneralizedPortalBlock;
 import com.bladecoldsteel.invigorateddimensions.util.BlockHelper;
+import com.bladecoldsteel.invigorateddimensions.world.ModPointsOfInterest;
+import com.bladecoldsteel.invigorateddimensions.world.dimension.ModDimensions;
 import com.bladecoldsteel.invigorateddimensions.world.gen.features.trees.GrassTree;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
@@ -146,6 +149,17 @@ public class GrassyKnollBlocks {
             "grassy_sapling", BLOCKS, GrassyKnollItems.ITEMS,
             BlockHelper.sapling(new GrassTree(), Blocks.OAK_SAPLING),
             TAB);
+    //Portal Blocks
+    public static final RegistryObject<GeneralizedPortalBlock> PORTAL = BlockHelper.register(
+            "grassy_knoll_portal", BLOCKS, GrassyKnollItems.ITEMS,
+            BlockHelper.portalBlock(() -> GrassyKnollBlocks.PORTAL_FRAME.get(), () -> GrassyKnollBlocks.PORTAL.get(), ModDimensions.GRASSY_KNOLL, ModPointsOfInterest.GRASSY_KNOLL_PORTAL),
+            TAB
+    );
+    public static final RegistryObject<Block> PORTAL_FRAME = BlockHelper.register(
+            "grassy_portal_frame", BLOCKS, GrassyKnollItems.ITEMS,
+            BlockHelper.portalFrameBlock(4),
+            TAB
+    );
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

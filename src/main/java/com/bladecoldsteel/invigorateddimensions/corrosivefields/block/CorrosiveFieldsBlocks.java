@@ -3,7 +3,10 @@ package com.bladecoldsteel.invigorateddimensions.corrosivefields.block;
 import com.bladecoldsteel.invigorateddimensions.InvigoratedDimensions;
 import com.bladecoldsteel.invigorateddimensions.corrosivefields.item.CorrosiveFieldsItemGroup;
 import com.bladecoldsteel.invigorateddimensions.corrosivefields.item.CorrosiveFieldsItems;
+import com.bladecoldsteel.invigorateddimensions.universal.block.custom.GeneralizedPortalBlock;
 import com.bladecoldsteel.invigorateddimensions.util.BlockHelper;
+import com.bladecoldsteel.invigorateddimensions.world.ModPointsOfInterest;
+import com.bladecoldsteel.invigorateddimensions.world.dimension.ModDimensions;
 import com.bladecoldsteel.invigorateddimensions.world.gen.features.trees.PoisonTree;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
@@ -144,6 +147,17 @@ public class CorrosiveFieldsBlocks {
             "corrosive_sapling", BLOCKS, CorrosiveFieldsItems.ITEMS,
             BlockHelper.sapling(new PoisonTree(), Blocks.OAK_SAPLING),
             TAB);
+    //Portal Blocks
+    public static final RegistryObject<GeneralizedPortalBlock> PORTAL = BlockHelper.register(
+            "corrosive_fields_portal", BLOCKS, CorrosiveFieldsItems.ITEMS,
+            BlockHelper.portalBlock(() -> CorrosiveFieldsBlocks.PORTAL_FRAME.get(), () -> CorrosiveFieldsBlocks.PORTAL.get(), ModDimensions.CORROSIVE_FIELDS, ModPointsOfInterest.CORROSIVE_FIELDS_PORTAL),
+            TAB
+    );
+    public static final RegistryObject<Block> PORTAL_FRAME = BlockHelper.register(
+            "corrosive_portal_frame", BLOCKS, CorrosiveFieldsItems.ITEMS,
+            BlockHelper.portalFrameBlock(4),
+            TAB
+    );
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "axis=z": { "model": "invigorated_dimensions:block/grassy_knoll_portal_ew" },
+    "axis=x": { "model": "invigorated_dimensions:block/grassy_knoll_portal_ns" }
+  }
+}

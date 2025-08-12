@@ -1,9 +1,12 @@
 package com.bladecoldsteel.invigorateddimensions.valleydeath.block;
 
 import com.bladecoldsteel.invigorateddimensions.InvigoratedDimensions;
+import com.bladecoldsteel.invigorateddimensions.universal.block.custom.GeneralizedPortalBlock;
 import com.bladecoldsteel.invigorateddimensions.util.BlockHelper;
 import com.bladecoldsteel.invigorateddimensions.valleydeath.item.ValleyDeathItemGroup;
 import com.bladecoldsteel.invigorateddimensions.valleydeath.item.ValleyDeathItems;
+import com.bladecoldsteel.invigorateddimensions.world.ModPointsOfInterest;
+import com.bladecoldsteel.invigorateddimensions.world.dimension.ModDimensions;
 import com.bladecoldsteel.invigorateddimensions.world.gen.features.trees.DarkTree;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
@@ -144,6 +147,17 @@ public class ValleyDeathBlocks {
             "darkened_sapling", BLOCKS, ValleyDeathItems.ITEMS,
             BlockHelper.sapling(new DarkTree(), Blocks.OAK_SAPLING),
             TAB);
+    //Portal Blocks
+    public static final RegistryObject<GeneralizedPortalBlock> PORTAL = BlockHelper.register(
+            "valley_of_death_portal", BLOCKS, ValleyDeathItems.ITEMS,
+            BlockHelper.portalBlock(() -> ValleyDeathBlocks.PORTAL_FRAME.get(), () -> ValleyDeathBlocks.PORTAL.get(), ModDimensions.VALLEY_OF_DEATH, ModPointsOfInterest.VALLEY_DEATH_PORTAL),
+            TAB
+    );
+    public static final RegistryObject<Block> PORTAL_FRAME = BlockHelper.register(
+            "darkened_portal_frame", BLOCKS, ValleyDeathItems.ITEMS,
+            BlockHelper.portalFrameBlock(4),
+            TAB
+    );
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

@@ -3,7 +3,10 @@ package com.bladecoldsteel.invigorateddimensions.terranata.block;
 import com.bladecoldsteel.invigorateddimensions.InvigoratedDimensions;
 import com.bladecoldsteel.invigorateddimensions.terranata.item.TerraNataItemGroup;
 import com.bladecoldsteel.invigorateddimensions.terranata.item.TerraNataItems;
+import com.bladecoldsteel.invigorateddimensions.universal.block.custom.GeneralizedPortalBlock;
 import com.bladecoldsteel.invigorateddimensions.util.BlockHelper;
+import com.bladecoldsteel.invigorateddimensions.world.ModPointsOfInterest;
+import com.bladecoldsteel.invigorateddimensions.world.dimension.ModDimensions;
 import com.bladecoldsteel.invigorateddimensions.world.gen.features.trees.GroundTree;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
@@ -144,6 +147,17 @@ public class TerraNataBlocks {
             "grounded_sapling", BLOCKS, TerraNataItems.ITEMS,
             BlockHelper.sapling(new GroundTree(), Blocks.OAK_SAPLING),
             TAB);
+    //Portal Blocks
+    public static final RegistryObject<GeneralizedPortalBlock> PORTAL = BlockHelper.register(
+            "terra_nata_portal", BLOCKS, TerraNataItems.ITEMS,
+            BlockHelper.portalBlock(() -> TerraNataBlocks.PORTAL_FRAME.get(), () -> TerraNataBlocks.PORTAL.get(), ModDimensions.TERRA_NATA, ModPointsOfInterest.TERRA_NATA_PORTAL),
+            TAB
+    );
+    public static final RegistryObject<Block> PORTAL_FRAME = BlockHelper.register(
+            "grounded_portal_frame", BLOCKS, TerraNataItems.ITEMS,
+            BlockHelper.portalFrameBlock(4),
+            TAB
+    );
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

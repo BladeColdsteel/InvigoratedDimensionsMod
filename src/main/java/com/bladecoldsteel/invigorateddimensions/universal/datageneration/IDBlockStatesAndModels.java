@@ -439,5 +439,19 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
         pressurePlate(WateryDepthsBlocks.STONE_PRESSURE_PLATE, WateryDepthsBlocks.STONE);
         //Portal Frame
         block(ElectricHighlandsBlocks.HIGHLANDS_PORTAL_FRAME);
+        block(CavernousCoveBlocks.PORTAL_FRAME);
+        block(HeavenlyRealmBlocks.PORTAL_FRAME);
+        block(CorrosiveFieldsBlocks.PORTAL_FRAME);
+        block(DeepTundraBlocks.PORTAL_FRAME);
+        block(DreamlandBlocks.PORTAL_FRAME);
+        block(FeywildExpanseBlocks.PORTAL_FRAME);
+        block(GhastlyMarshBlocks.PORTAL_FRAME);
+        block(GrassyKnollBlocks.PORTAL_FRAME);
+        block(InfiniteDungeonBlocks.PORTAL_FRAME);
+        block(InsectoidParadisioBlocks.PORTAL_FRAME);
+        block(MetallicMountainsBlocks.PORTAL_FRAME);
+        block(TerraNataBlocks.PORTAL_FRAME);
+        block(ValleyDeathBlocks.PORTAL_FRAME);
+        block(WateryDepthsBlocks.PORTAL_FRAME);
     }
 }

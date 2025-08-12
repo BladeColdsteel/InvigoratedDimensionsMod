@@ -1,10 +1,15 @@
 package com.bladecoldsteel.invigorateddimensions.celestialrealm.block;
 
 import com.bladecoldsteel.invigorateddimensions.InvigoratedDimensions;
+import com.bladecoldsteel.invigorateddimensions.cavernouscove.block.CavernousCoveBlocks;
+import com.bladecoldsteel.invigorateddimensions.cavernouscove.item.CavernousCoveItems;
 import com.bladecoldsteel.invigorateddimensions.celestialrealm.block.custom.FloatingSaplingBlock;
 import com.bladecoldsteel.invigorateddimensions.celestialrealm.item.HeavenlyRealmItemGroup;
 import com.bladecoldsteel.invigorateddimensions.celestialrealm.item.HeavenlyRealmItems;
+import com.bladecoldsteel.invigorateddimensions.universal.block.custom.GeneralizedPortalBlock;
 import com.bladecoldsteel.invigorateddimensions.util.BlockHelper;
+import com.bladecoldsteel.invigorateddimensions.world.ModPointsOfInterest;
+import com.bladecoldsteel.invigorateddimensions.world.dimension.ModDimensions;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemGroup;
@@ -145,6 +150,17 @@ public class HeavenlyRealmBlocks {
             "floating_sapling", BLOCKS, HeavenlyRealmItems.ITEMS,
             BlockHelper.floatingSapling(Blocks.OAK_SAPLING),
             TAB);
+    //Portal Blocks
+    public static final RegistryObject<GeneralizedPortalBlock> PORTAL = BlockHelper.register(
+            "celestial_realm_portal", BLOCKS, HeavenlyRealmItems.ITEMS,
+            BlockHelper.portalBlock(() -> HeavenlyRealmBlocks.PORTAL_FRAME.get(), () -> HeavenlyRealmBlocks.PORTAL.get(), ModDimensions.CELESTIAL_REALM, ModPointsOfInterest.CELESTIAL_REALM_PORTAL),
+            TAB
+    );
+    public static final RegistryObject<Block> PORTAL_FRAME = BlockHelper.register(
+            "floating_portal_frame", BLOCKS, HeavenlyRealmItems.ITEMS,
+            BlockHelper.portalFrameBlock(4),
+            TAB
+    );
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

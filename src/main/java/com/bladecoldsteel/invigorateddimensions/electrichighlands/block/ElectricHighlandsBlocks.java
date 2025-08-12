@@ -208,7 +208,7 @@ public class ElectricHighlandsBlocks {
                     .harvestLevel(2)
                     .requiresCorrectToolForDrops()
                     .harvestTool(ToolType.PICKAXE)
-                    .strength(10f)));
+                    .strength(50f)));
 
 
 

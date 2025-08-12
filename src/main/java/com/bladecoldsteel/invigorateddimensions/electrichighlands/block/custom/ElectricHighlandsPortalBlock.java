@@ -3,7 +3,7 @@ package com.bladecoldsteel.invigorateddimensions.electrichighlands.block.custom;
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.block.ElectricHighlandsBlocks;
 import com.bladecoldsteel.invigorateddimensions.world.ModParticleTypes;
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.util.ElectricHighlandsSoundEvents;
-import com.bladecoldsteel.invigorateddimensions.world.dimension.ElectricHighlandsTeleporter;
+import com.bladecoldsteel.invigorateddimensions.world.dimension.UniversalTeleporter;
 import com.bladecoldsteel.invigorateddimensions.world.dimension.ModDimensions;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -128,7 +128,7 @@ public class ElectricHighlandsPortalBlock extends Block {
                         if(destinationWorld != null && minecraftserver.isNetherEnabled() && !entity.isPassenger()) {
                             entity.level.getProfiler().push("electric_highlands_portal");
                             entity.setPortalCooldown();
-                            entity.changeDimension(destinationWorld, new ElectricHighlandsTeleporter(destinationWorld));
+                            entity.changeDimension(destinationWorld, new UniversalTeleporter(destinationWorld, null, null, null, null));
                             entity.level.getProfiler().pop();
                         }
                     }

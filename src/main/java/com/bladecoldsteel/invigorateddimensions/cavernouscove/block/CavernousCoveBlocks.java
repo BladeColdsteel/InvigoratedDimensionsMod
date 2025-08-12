@@ -3,7 +3,10 @@ package com.bladecoldsteel.invigorateddimensions.cavernouscove.block;
 import com.bladecoldsteel.invigorateddimensions.InvigoratedDimensions;
 import com.bladecoldsteel.invigorateddimensions.cavernouscove.item.CavernousCoveItemGroup;
 import com.bladecoldsteel.invigorateddimensions.cavernouscove.item.CavernousCoveItems;
+import com.bladecoldsteel.invigorateddimensions.universal.block.custom.GeneralizedPortalBlock;
 import com.bladecoldsteel.invigorateddimensions.util.BlockHelper;
+import com.bladecoldsteel.invigorateddimensions.world.ModPointsOfInterest;
+import com.bladecoldsteel.invigorateddimensions.world.dimension.ModDimensions;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemGroup;
@@ -136,6 +139,17 @@ public class CavernousCoveBlocks {
     public static final RegistryObject<PressurePlateBlock> STONE_PRESSURE_PLATE = BlockHelper.register(
             "rocky_stone_pressure_plate", BLOCKS, CavernousCoveItems.ITEMS,
             BlockHelper.stonePressurePlate(2.0F),
+            TAB
+    );
+    //Portal Blocks
+    public static final RegistryObject<GeneralizedPortalBlock> PORTAL = BlockHelper.register(
+            "cavernous_cove_portal", BLOCKS, CavernousCoveItems.ITEMS,
+            BlockHelper.portalBlock(() -> CavernousCoveBlocks.PORTAL_FRAME.get(), () -> CavernousCoveBlocks.PORTAL.get(), ModDimensions.CAVERNOUS_COVE, ModPointsOfInterest.CAVERNOUS_COVE_PORTAL),
+            TAB
+    );
+    public static final RegistryObject<Block> PORTAL_FRAME = BlockHelper.register(
+            "rocky_portal_frame", BLOCKS, CavernousCoveItems.ITEMS,
+            BlockHelper.portalFrameBlock(4),
             TAB
     );
 

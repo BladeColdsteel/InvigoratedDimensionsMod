@@ -2,25 +2,39 @@ package com.bladecoldsteel.invigorateddimensions.universal.datageneration;
 
 import com.bladecoldsteel.invigorateddimensions.InvigoratedDimensions;
 import com.bladecoldsteel.invigorateddimensions.cavernouscove.block.CavernousCoveBlocks;
+import com.bladecoldsteel.invigorateddimensions.cavernouscove.item.CavernousCoveItems;
 import com.bladecoldsteel.invigorateddimensions.celestialrealm.block.HeavenlyRealmBlocks;
+import com.bladecoldsteel.invigorateddimensions.celestialrealm.item.HeavenlyRealmItems;
 import com.bladecoldsteel.invigorateddimensions.corrosivefields.block.CorrosiveFieldsBlocks;
+import com.bladecoldsteel.invigorateddimensions.corrosivefields.item.CorrosiveFieldsItems;
 import com.bladecoldsteel.invigorateddimensions.deeptundra.block.DeepTundraBlocks;
+import com.bladecoldsteel.invigorateddimensions.deeptundra.item.DeepTundraItems;
 import com.bladecoldsteel.invigorateddimensions.draconicrift.block.DraconicRiftBlocks;
 import com.bladecoldsteel.invigorateddimensions.dreamland.block.DreamlandBlocks;
+import com.bladecoldsteel.invigorateddimensions.dreamland.item.DreamlandItems;
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.block.ElectricHighlandsBlocks;
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.item.ElectricHighlandsItems;
 import com.bladecoldsteel.invigorateddimensions.emberwilds.block.EmberwildsBlocks;
 import com.bladecoldsteel.invigorateddimensions.feywildexpanse.block.FeywildExpanseBlocks;
+import com.bladecoldsteel.invigorateddimensions.feywildexpanse.item.FeywildExpanseItems;
 import com.bladecoldsteel.invigorateddimensions.ghastlymarsh.block.GhastlyMarshBlocks;
+import com.bladecoldsteel.invigorateddimensions.ghastlymarsh.item.GhastlyMarshItems;
 import com.bladecoldsteel.invigorateddimensions.grassyknoll.block.GrassyKnollBlocks;
+import com.bladecoldsteel.invigorateddimensions.grassyknoll.item.GrassyKnollItems;
 import com.bladecoldsteel.invigorateddimensions.infinitedungeon.block.InfiniteDungeonBlocks;
+import com.bladecoldsteel.invigorateddimensions.infinitedungeon.item.InfiniteDungeonItems;
 import com.bladecoldsteel.invigorateddimensions.insectoidparadisio.block.InsectoidParadisioBlocks;
+import com.bladecoldsteel.invigorateddimensions.insectoidparadisio.item.InsectoidParadisioItems;
 import com.bladecoldsteel.invigorateddimensions.metallicmountains.block.MetallicMountainsBlocks;
+import com.bladecoldsteel.invigorateddimensions.metallicmountains.item.MetallicMountainsItems;
 import com.bladecoldsteel.invigorateddimensions.terranata.block.TerraNataBlocks;
+import com.bladecoldsteel.invigorateddimensions.terranata.item.TerraNataItems;
 import com.bladecoldsteel.invigorateddimensions.universal.datageneration.provider.IDItemModelProvider;
 import com.bladecoldsteel.invigorateddimensions.universal.item.UniversalItems;
 import com.bladecoldsteel.invigorateddimensions.valleydeath.block.ValleyDeathBlocks;
+import com.bladecoldsteel.invigorateddimensions.valleydeath.item.ValleyDeathItems;
 import com.bladecoldsteel.invigorateddimensions.waterydepths.block.WateryDepthsBlocks;
+import com.bladecoldsteel.invigorateddimensions.waterydepths.item.WateryDepthsItems;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -372,12 +386,40 @@ public class IDItemModels extends IDItemModelProvider {
         itemBlockFlat(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_WOODEN_TRAPDOOR, "electrically_charged_trapdoor");
         //Portal Frame
         itemBlock(ElectricHighlandsBlocks.HIGHLANDS_PORTAL_FRAME);
+        itemBlock(CavernousCoveBlocks.PORTAL_FRAME);
+        itemBlock(HeavenlyRealmBlocks.PORTAL_FRAME);
+        itemBlock(CorrosiveFieldsBlocks.PORTAL_FRAME);
+        itemBlock(DeepTundraBlocks.PORTAL_FRAME);
+        itemBlock(DreamlandBlocks.PORTAL_FRAME);
+        itemBlock(FeywildExpanseBlocks.PORTAL_FRAME);
+        itemBlock(GhastlyMarshBlocks.PORTAL_FRAME);
+        itemBlock(GrassyKnollBlocks.PORTAL_FRAME);
+        itemBlock(InfiniteDungeonBlocks.PORTAL_FRAME);
+        itemBlock(InsectoidParadisioBlocks.PORTAL_FRAME);
+        itemBlock(MetallicMountainsBlocks.PORTAL_FRAME);
+        itemBlock(TerraNataBlocks.PORTAL_FRAME);
+        itemBlock(ValleyDeathBlocks.PORTAL_FRAME);
+        itemBlock(WateryDepthsBlocks.PORTAL_FRAME);
         //Gems
         normalItem(ElectricHighlandsItems.VOLTCRYST);
         //Ingots
 
         //Portal Activators
         normalItem(ElectricHighlandsItems.ELECTRIC_HIGHLANDS_ACTIVATOR);
+        normalItem(CavernousCoveItems.ACTIVATOR);
+        normalItem(HeavenlyRealmItems.ACTIVATOR);
+        normalItem(CorrosiveFieldsItems.ACTIVATOR);
+        normalItem(DeepTundraItems.ACTIVATOR);
+        normalItem(DreamlandItems.ACTIVATOR);
+        normalItem(FeywildExpanseItems.ACTIVATOR);
+        normalItem(GhastlyMarshItems.ACTIVATOR);
+        normalItem(GrassyKnollItems.ACTIVATOR);
+        normalItem(InfiniteDungeonItems.ACTIVATOR);
+        normalItem(InsectoidParadisioItems.ACTIVATOR);
+        normalItem(MetallicMountainsItems.ACTIVATOR);
+        normalItem(TerraNataItems.ACTIVATOR);
+        normalItem(ValleyDeathItems.ACTIVATOR);
+        normalItem(WateryDepthsItems.ACTIVATOR);
         //Essences
         normalItem(UniversalItems.BASE_ESSENCE);
         normalItem(UniversalItems.BUG_ESSENCE);

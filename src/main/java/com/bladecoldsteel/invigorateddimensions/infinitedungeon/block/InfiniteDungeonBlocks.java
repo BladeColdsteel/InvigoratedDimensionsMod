@@ -3,7 +3,10 @@ package com.bladecoldsteel.invigorateddimensions.infinitedungeon.block;
 import com.bladecoldsteel.invigorateddimensions.InvigoratedDimensions;
 import com.bladecoldsteel.invigorateddimensions.infinitedungeon.item.InfiniteDungeonItemGroup;
 import com.bladecoldsteel.invigorateddimensions.infinitedungeon.item.InfiniteDungeonItems;
+import com.bladecoldsteel.invigorateddimensions.universal.block.custom.GeneralizedPortalBlock;
 import com.bladecoldsteel.invigorateddimensions.util.BlockHelper;
+import com.bladecoldsteel.invigorateddimensions.world.ModPointsOfInterest;
+import com.bladecoldsteel.invigorateddimensions.world.dimension.ModDimensions;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemGroup;
@@ -136,6 +139,17 @@ public class InfiniteDungeonBlocks {
     public static final RegistryObject<PressurePlateBlock> STONE_PRESSURE_PLATE = BlockHelper.register(
             "tough_stone_pressure_plate", BLOCKS, InfiniteDungeonItems.ITEMS,
             BlockHelper.stonePressurePlate(2.0F),
+            TAB
+    );
+    //Portal Blocks
+    public static final RegistryObject<GeneralizedPortalBlock> PORTAL = BlockHelper.register(
+            "infinite_dungeon_portal", BLOCKS, InfiniteDungeonItems.ITEMS,
+            BlockHelper.portalBlock(() -> InfiniteDungeonBlocks.PORTAL_FRAME.get(), () -> InfiniteDungeonBlocks.PORTAL.get(), ModDimensions.INFINITE_DUNGEON, ModPointsOfInterest.INFINITE_DUNGEON_PORTAL),
+            TAB
+    );
+    public static final RegistryObject<Block> PORTAL_FRAME = BlockHelper.register(
+            "tough_portal_frame", BLOCKS, InfiniteDungeonItems.ITEMS,
+            BlockHelper.portalFrameBlock(4),
             TAB
     );
 

@@ -3,7 +3,10 @@ package com.bladecoldsteel.invigorateddimensions.ghastlymarsh.block;
 import com.bladecoldsteel.invigorateddimensions.InvigoratedDimensions;
 import com.bladecoldsteel.invigorateddimensions.ghastlymarsh.item.GhastlyMarshItemGroup;
 import com.bladecoldsteel.invigorateddimensions.ghastlymarsh.item.GhastlyMarshItems;
+import com.bladecoldsteel.invigorateddimensions.universal.block.custom.GeneralizedPortalBlock;
 import com.bladecoldsteel.invigorateddimensions.util.BlockHelper;
+import com.bladecoldsteel.invigorateddimensions.world.ModPointsOfInterest;
+import com.bladecoldsteel.invigorateddimensions.world.dimension.ModDimensions;
 import com.bladecoldsteel.invigorateddimensions.world.gen.features.trees.GhostTree;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
@@ -144,6 +147,17 @@ public class GhastlyMarshBlocks {
             "spooky_sapling", BLOCKS, GhastlyMarshItems.ITEMS,
             BlockHelper.sapling(new GhostTree(), Blocks.OAK_SAPLING),
             TAB);
+    //Portal Blocks
+    public static final RegistryObject<GeneralizedPortalBlock> PORTAL = BlockHelper.register(
+            "ghastly_marsh_portal", BLOCKS, GhastlyMarshItems.ITEMS,
+            BlockHelper.portalBlock(() -> GhastlyMarshBlocks.PORTAL_FRAME.get(), () -> GhastlyMarshBlocks.PORTAL.get(), ModDimensions.GHASTLY_MARSH, ModPointsOfInterest.GHASTLY_MARSH_PORTAL),
+            TAB
+    );
+    public static final RegistryObject<Block> PORTAL_FRAME = BlockHelper.register(
+            "spooky_portal_frame", BLOCKS, GhastlyMarshItems.ITEMS,
+            BlockHelper.portalFrameBlock(4),
+            TAB
+    );
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

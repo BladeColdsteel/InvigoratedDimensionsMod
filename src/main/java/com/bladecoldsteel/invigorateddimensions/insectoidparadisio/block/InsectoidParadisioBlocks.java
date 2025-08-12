@@ -1,9 +1,14 @@
 package com.bladecoldsteel.invigorateddimensions.insectoidparadisio.block;
 
 import com.bladecoldsteel.invigorateddimensions.InvigoratedDimensions;
+import com.bladecoldsteel.invigorateddimensions.infinitedungeon.block.InfiniteDungeonBlocks;
+import com.bladecoldsteel.invigorateddimensions.infinitedungeon.item.InfiniteDungeonItems;
 import com.bladecoldsteel.invigorateddimensions.insectoidparadisio.item.InsectoidParadisioItemGroup;
 import com.bladecoldsteel.invigorateddimensions.insectoidparadisio.item.InsectoidParadisioItems;
+import com.bladecoldsteel.invigorateddimensions.universal.block.custom.GeneralizedPortalBlock;
 import com.bladecoldsteel.invigorateddimensions.util.BlockHelper;
+import com.bladecoldsteel.invigorateddimensions.world.ModPointsOfInterest;
+import com.bladecoldsteel.invigorateddimensions.world.dimension.ModDimensions;
 import com.bladecoldsteel.invigorateddimensions.world.gen.features.trees.BugTree;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
@@ -144,6 +149,17 @@ public class InsectoidParadisioBlocks {
             "bugged_sapling", BLOCKS, InsectoidParadisioItems.ITEMS,
             BlockHelper.sapling(new BugTree(), Blocks.OAK_SAPLING),
             TAB);
+    //Portal Blocks
+    public static final RegistryObject<GeneralizedPortalBlock> PORTAL = BlockHelper.register(
+            "insectoid_paradisio_portal", BLOCKS, InsectoidParadisioItems.ITEMS,
+            BlockHelper.portalBlock(() -> InsectoidParadisioBlocks.PORTAL_FRAME.get(), () -> InsectoidParadisioBlocks.PORTAL.get(), ModDimensions.INSECTIOD_PARADISIO, ModPointsOfInterest.INSECTOID_PARADISIO_PORTAL),
+            TAB
+    );
+    public static final RegistryObject<Block> PORTAL_FRAME = BlockHelper.register(
+            "bugged_portal_frame", BLOCKS, InsectoidParadisioItems.ITEMS,
+            BlockHelper.portalFrameBlock(4),
+            TAB
+    );
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

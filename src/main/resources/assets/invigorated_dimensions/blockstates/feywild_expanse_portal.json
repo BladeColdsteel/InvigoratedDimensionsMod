@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "axis=z": { "model": "invigorated_dimensions:block/feywild_expanse_portal_ew" },
+    "axis=x": { "model": "invigorated_dimensions:block/feywild_expanse_portal_ns" }
+  }
+}
