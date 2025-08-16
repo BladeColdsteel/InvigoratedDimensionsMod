@@ -1,0 +1,18 @@
+{
+  "display": {
+    "icon": {
+      "item": "invigorated_dimensions:electric_highlands_activator"
+    },
+    "title": "Invigorated Dimensions",
+    "description": "Dimensional Pokemon",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "background": "invigorated_dimensions:textures/block/electrically_charged_stone.png"
+  },
+  "criteria": {
+    "tick": {
+      "trigger": "minecraft:tick"
+    }
+  }
+}
