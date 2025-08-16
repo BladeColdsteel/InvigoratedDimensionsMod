@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "invigorated_dimensions:base_essence"
+    },
+    "title": "The Essence of a Mon",
+    "description": "Get base Pokemon essence from killing your first Pokemon.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "invigorated_dimensions:root",
+  "criteria": {
+    "has_bugged": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "invigorated_dimensions:base_essence"
+          }
+        ]
+      }
+    }
+  }
+}

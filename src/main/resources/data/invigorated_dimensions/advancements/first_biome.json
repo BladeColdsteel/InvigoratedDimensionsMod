@@ -1,0 +1,139 @@
+{
+  "display": {
+    "icon": {
+      "item": "invigorated_dimensions:bugged_sapling"
+    },
+    "title": "Biomes O' Plenty?",
+    "description": "Find a Pokemon based type biome.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "invigorated_dimensions:root",
+  "criteria": {
+    "bug_rift": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "biome": "invigorated_dimensions:buggy_rift"
+      }
+    },
+    "dark_rift": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "biome": "invigorated_dimensions:darkened_rift"
+      }
+    },
+    "dragon_rift": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "biome": "invigorated_dimensions:dragon_rift"
+      }
+    },
+    "electric_rift": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "biome": "invigorated_dimensions:electric_rift"
+      }
+    },
+    "fairy_rift": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "biome": "invigorated_dimensions:fairy_rift"
+      }
+    },
+    "fighting_rift": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "biome": "invigorated_dimensions:fighting_rift"
+      }
+    },
+    "fire_rift": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "biome": "invigorated_dimensions:firey_rift"
+      }
+    },
+    "flying_rift": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "biome": "invigorated_dimensions:flying_rift"
+      }
+    },
+    "grass_rift": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "biome": "invigorated_dimensions:grassy_rift"
+      }
+    },
+    "ground_rift": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "biome": "invigorated_dimensions:grounded_rift"
+      }
+    },
+    "ice_rift": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "biome": "invigorated_dimensions:icey_rift"
+      }
+    },
+    "poison_rift": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "biome": "invigorated_dimensions:poison_rift"
+      }
+    },
+    "psychic_rift": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "biome": "invigorated_dimensions:psychic_rift"
+      }
+    },
+    "rock_rift": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "biome": "invigorated_dimensions:rocky_rift"
+      }
+    },
+    "ghost_rift": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "biome": "invigorated_dimensions:spooky_rift"
+      }
+    },
+    "steel_rift": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "biome": "invigorated_dimensions:steely_rift"
+      }
+    },
+    "water_rift": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "biome": "invigorated_dimensions:watery_rift"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "bug_rift",
+      "dark_rift",
+      "dragon_rift",
+      "electric_rift",
+      "fairy_rift",
+      "fighting_rift",
+      "fire_rift",
+      "flying_rift",
+      "grass_rift",
+      "ground_rift",
+      "ice_rift",
+      "poison_rift",
+      "psychic_rift",
+      "rock_rift",
+      "ghost_rift",
+      "steel_rift",
+      "water_rift"
+    ]
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "display": {
+    "icon": {
+      "item": "invigorated_dimensions:electric_highlands_activator"
+    },
+    "title": "It's not just flint and steel?",
+    "description": "Find an Activator to light a portal and go back home",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "invigorated_dimensions:first_dim",
+  "criteria": {
+    "has_bugged": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "invigorated_dimensions:bugged_activator"
+          }
+        ]
+      }
+    },
+    "has_corrosive": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "invigorated_dimensions:corrosive_activator"
+          }
+        ]
+      }
+    },
+    "has_darkened": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "invigorated_dimensions:darkened_activator"
+          }
+        ]
+      }
+    },
+    "has_electric": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "invigorated_dimensions:electric_highlands_activator"
+          }
+        ]
+      }
+    },
+    "has_feyan": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "invigorated_dimensions:feyan_activator"
+          }
+        ]
+      }
+    },
+    "has_floating": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "invigorated_dimensions:floating_activator"
+          }
+        ]
+      }
+    },
+    "has_grassy": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "invigorated_dimensions:grassy_activator"
+          }
+        ]
+      }
+    },
+    "has_grounded": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "invigorated_dimensions:grounded_activator"
+          }
+        ]
+      }
+    },
+    "has_icey": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "invigorated_dimensions:icey_activator"
+          }
+        ]
+      }
+    },
+    "has_metallic": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "invigorated_dimensions:metallic_activator"
+          }
+        ]
+      }
+    },
+    "has_psychedelic": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "invigorated_dimensions:psychedelic_activator"
+          }
+        ]
+      }
+    },
+    "has_rocky": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "invigorated_dimensions:rocky_activator"
+          }
+        ]
+      }
+    },
+    "has_spooky": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "invigorated_dimensions:spooky_activator"
+          }
+        ]
+      }
+    },
+    "has_tough": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "invigorated_dimensions:tough_activator"
+          }
+        ]
+      }
+    },
+    "has_watery": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "invigorated_dimensions:watery_activator"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_bugged",
+      "has_corrosive",
+      "has_darkened",
+      "has_electric",
+      "has_feyan",
+      "has_floating",
+      "has_grassy",
+      "has_grounded",
+      "has_icey",
+      "has_metallic",
+      "has_psychedelic",
+      "has_rocky",
+      "has_spooky",
+      "has_tough",
+      "has_watery"
+    ]
+  ]
+}

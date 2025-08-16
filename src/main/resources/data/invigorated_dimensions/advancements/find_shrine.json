@@ -1,0 +1,24 @@
+{
+  "display": {
+    "icon": {
+      "item": "invigorated_dimensions:elemental_shrine"
+    },
+    "title": "Shriningly Bright",
+    "description": "Find an Elemental Shrine structure to go to other dimensions.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "invigorated_dimensions:root",
+  "criteria": {
+    "enter_castle": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "location": {
+          "feature": "invigorated_dimensions:elemental_shrine_structure"
+        }
+      }
+    }
+  }
+}

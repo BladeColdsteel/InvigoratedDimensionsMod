@@ -1,0 +1,138 @@
+{
+  "display": {
+    "icon": {
+      "item": "invigorated_dimensions:highlandian_portal_frame"
+    },
+    "title": "Where the Wild Pokemon are",
+    "description": "Go to one of the type specific dimensions.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "invigorated_dimensions:find_shrine",
+  "criteria": {
+    "bug_dimension": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "invigorated_dimensions:insectoid_paradisio"
+      }
+    },
+    "dark_dimension": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "invigorated_dimensions:valley_of_death"
+      }
+    },
+    "dragon_dimension": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "minecraft:the_end"
+      }
+    },
+    "electric_dimension": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "invigorated_dimensions:electric_highlands"
+      }
+    },
+    "fairy_dimension": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "invigorated_dimensions:feywild_expanse"
+      }
+    },
+    "fighting_dimension": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "invigorated_dimensions:infinite_dungeon"
+      }
+    },
+    "fire_dimension": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "minecraft:the_nether"
+      }
+    },
+    "flying_dimension": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "invigorated_dimensions:celestial_realm"
+      }
+    },
+    "grass_dimension": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "invigorated_dimensions:grassy_knoll"
+      }
+    },
+    "ground_dimension": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "invigorated_dimensions:terra_nata"
+      }
+    },
+    "ice_dimension": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "invigorated_dimensions:deep_tundra"
+      }
+    },
+    "poison_dimension": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "invigorated_dimensions:corrosive_fields"
+      }
+    },
+    "psychic_dimension": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "invigorated_dimensions:dreamland"
+      }
+    },
+    "rock_dimension": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "invigorated_dimensions:cavernous_cove"
+      }
+    },
+    "ghost_dimension": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "invigorated_dimensions:ghastly_marsh"
+      }
+    },
+    "steel_dimension": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "invigorated_dimensions:metallic_mountains"
+      }
+    },
+    "water_dimension": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "invigorated_dimensions:watery_depths"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "bug_dimension",
+      "dark_dimension",
+      "dragon_dimension",
+      "electric_dimension",
+      "fairy_dimension",
+      "fighting_dimension",
+      "fire_dimension",
+      "flying_dimension",
+      "grass_dimension",
+      "ground_dimension",
+      "ice_dimension",
+      "poison_dimension",
+      "psychic_dimension",
+      "rock_dimension",
+      "ghost_dimension",
+      "steel_dimension",
+      "water_dimension"
+    ]
+  ]
+}

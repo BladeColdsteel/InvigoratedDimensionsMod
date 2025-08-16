@@ -1,0 +1,195 @@
+{
+  "display": {
+    "icon": {
+      "item": "invigorated_dimensions:fire_essence"
+    },
+    "title": "Gathering the Types",
+    "description": "Gather one of each essence of Pokemon!",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "invigorated_dimensions:pokemon_essence",
+  "criteria": {
+    "has_bug": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "invigorated_dimensions:bug_essence"
+          }
+        ]
+      }
+    },
+    "has_poison": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "invigorated_dimensions:poison_essence"
+          }
+        ]
+      }
+    },
+    "has_dark": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "invigorated_dimensions:dark_essence"
+          }
+        ]
+      }
+    },
+    "has_electric": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "invigorated_dimensions:electric_essence"
+          }
+        ]
+      }
+    },
+    "has_fairy": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "invigorated_dimensions:fairy_essence"
+          }
+        ]
+      }
+    },
+    "has_flying": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "invigorated_dimensions:flying_essence"
+          }
+        ]
+      }
+    },
+    "has_grass": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "invigorated_dimensions:grass_essence"
+          }
+        ]
+      }
+    },
+    "has_ground": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "invigorated_dimensions:ground_essence"
+          }
+        ]
+      }
+    },
+    "has_ice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "invigorated_dimensions:ice_essence"
+          }
+        ]
+      }
+    },
+    "has_steel": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "invigorated_dimensions:steel_essence"
+          }
+        ]
+      }
+    },
+    "has_psychic": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "invigorated_dimensions:psychic_essence"
+          }
+        ]
+      }
+    },
+    "has_rock": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "invigorated_dimensions:rock_essence"
+          }
+        ]
+      }
+    },
+    "has_ghost": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "invigorated_dimensions:ghost_essence"
+          }
+        ]
+      }
+    },
+    "has_fighting": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "invigorated_dimensions:fighting_essence"
+          }
+        ]
+      }
+    },
+    "has_water": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "invigorated_dimensions:water_essence"
+          }
+        ]
+      }
+    },
+    "has_fire": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "invigorated_dimensions:fire_essence"
+          }
+        ]
+      }
+    },
+    "has_dragon": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "invigorated_dimensions:dragon_essence"
+          }
+        ]
+      }
+    },
+    "has_normal": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "invigorated_dimensions:normal_essence"
+          }
+        ]
+      }
+    }
+  }
+}
