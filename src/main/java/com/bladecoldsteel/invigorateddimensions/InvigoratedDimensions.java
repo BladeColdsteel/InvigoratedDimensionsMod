@@ -71,9 +71,10 @@ import com.bladecoldsteel.invigorateddimensions.valleydeath.item.ValleyDeathItem
 import com.bladecoldsteel.invigorateddimensions.waterydepths.block.WateryDepthsBlocks;
 import com.bladecoldsteel.invigorateddimensions.waterydepths.block.WateryDepthsWoodTypes;
 import com.bladecoldsteel.invigorateddimensions.waterydepths.item.WateryDepthsItems;
-import com.bladecoldsteel.invigorateddimensions.world.ElectricHighlandsStructures;
+import com.bladecoldsteel.invigorateddimensions.world.DimensionPortalStructures;
 import com.bladecoldsteel.invigorateddimensions.world.ModParticleTypes;
 import com.bladecoldsteel.invigorateddimensions.world.ModPointsOfInterest;
+import com.bladecoldsteel.invigorateddimensions.world.UniversalStructures;
 import com.bladecoldsteel.invigorateddimensions.world.biome.ModBiomesDatapack;
 import com.bladecoldsteel.invigorateddimensions.world.dimension.CustomSurfaceBuilders;
 import com.bladecoldsteel.invigorateddimensions.world.dimension.ModDimensions;
@@ -131,7 +132,9 @@ public class InvigoratedDimensions
         eventBus.addListener(this::gatherData);
 
         IEventBus forgeBus = MinecraftForge.EVENT_BUS;
-        forgeBus.addListener(EventPriority.NORMAL, ElectricHighlandsStructures::addDimensionalSpacing);
+        forgeBus.addListener(EventPriority.NORMAL, DimensionPortalStructures::addDimensionalSpacing);
+        forgeBus.addListener(EventPriority.NORMAL, UniversalStructures::addDimensionalSpacing);
+        forgeBus.addListener(EventPriority.NORMAL, UniversalStructures::onBiomeLoad);
         //Base
         ModBiomesDatapack.register(eventBus);
         CustomSurfaceBuilders.register(eventBus);
@@ -203,9 +206,11 @@ public class InvigoratedDimensions
         MetallicMountainsItems.register(eventBus);
 
         DeferredRegister<?>[] registers = {
+                //Universal
+          UniversalStructures.STRUCTURES,
+          DimensionPortalStructures.STRUCTURES,
                 //Electric
           ElectricFeatures.ELECTRIC_FEATURES,
-          ElectricHighlandsStructures.STRUCTURES,
                 //Water
           WaterFeatures.WATER_FEATURES,
                 //Fire
@@ -265,10 +270,12 @@ public class InvigoratedDimensions
             //Base
             ModDimensions.register();
             ModBiomesDatapack.toDictionary();
+            UniversalStructures.registerStructures();
+            UniversalStructures.registerConfiguredStructures();
+            DimensionPortalStructures.registerStructures();
+            DimensionPortalStructures.registerConfiguredStructures();
             //Electric
             ElectricFeatures.registerConfiguredFeatures();
-            ElectricHighlandsStructures.registerStructures();
-            ElectricHighlandsStructures.registerConfiguredStructures();
             MobSpawnPlacements.registerOnGroundSolidSpawn(ElectricHighlandsEntityTypes.CHARGED_CRAWLER.get(), 7);
             //Water
             WaterFeatures.registerConfiguredFeatures();

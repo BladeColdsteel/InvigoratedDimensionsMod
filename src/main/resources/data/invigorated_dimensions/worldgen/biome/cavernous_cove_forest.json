@@ -15,7 +15,9 @@
     "grass_color": 6832899,
     "foliage_color": 7096846
   },
-  "starts": [],
+  "starts": [
+    "invigorated_dimensions:rock_portal"
+  ],
   "spawners": {
     "monster": [
 

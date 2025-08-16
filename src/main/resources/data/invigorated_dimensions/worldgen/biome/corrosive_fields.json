@@ -15,7 +15,9 @@
     "grass_color": 8260730,
     "foliage_color": 10621341
   },
-  "starts": [],
+  "starts": [
+    "invigorated_dimensions:poison_portal"
+  ],
   "spawners": {
     "monster": [
 

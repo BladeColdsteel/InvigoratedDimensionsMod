@@ -1,6 +1,5 @@
 package com.bladecoldsteel.invigorateddimensions.universal.block.custom;
 
-import com.bladecoldsteel.invigorateddimensions.electrichighlands.block.custom.ElectricHighlandsPortalBlock;
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.util.ElectricHighlandsSoundEvents;
 import com.bladecoldsteel.invigorateddimensions.world.ModParticleTypes;
 import com.bladecoldsteel.invigorateddimensions.world.dimension.UniversalTeleporter;

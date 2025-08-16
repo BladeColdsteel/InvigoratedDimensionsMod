@@ -15,7 +15,9 @@
     "grass_color": 15006699,
     "foliage_color": 16121847
   },
-  "starts": [],
+  "starts": [
+    "invigorated_dimensions:flying_portal"
+  ],
   "spawners": {
     "monster": [
 

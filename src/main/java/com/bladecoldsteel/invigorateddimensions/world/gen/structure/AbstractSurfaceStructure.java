@@ -5,9 +5,9 @@ import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.feature.NoFeatureConfig;
 import net.minecraft.world.gen.feature.structure.Structure;
 
-public abstract class AbstractInvigoratedStructure extends Structure<NoFeatureConfig> {
+public abstract class AbstractSurfaceStructure extends Structure<NoFeatureConfig> {
 
-    public AbstractInvigoratedStructure(Codec<NoFeatureConfig> codec) {
+    public AbstractSurfaceStructure(Codec<NoFeatureConfig> codec) {
         super(codec);
     }
 

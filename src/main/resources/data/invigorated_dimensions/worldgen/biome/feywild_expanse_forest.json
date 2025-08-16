@@ -15,7 +15,9 @@
     "grass_color": 15442594,
     "foliage_color": 16367294
   },
-  "starts": [],
+  "starts": [
+    "invigorated_dimensions:fairy_portal"
+  ],
   "spawners": {
     "monster": [
 

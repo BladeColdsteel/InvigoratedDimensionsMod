@@ -27,7 +27,7 @@ public class ModPointsOfInterest {
     public static final DeferredRegister<PointOfInterestType> POI = DeferredRegister.create(ForgeRegistries.POI_TYPES, InvigoratedDimensions.MOD_ID);
 
     public static final RegistryObject<PointOfInterestType> ELECTRIC_HIGHLANDS_PORTAL = POI.register("electric_highlands_portal",
-            () -> new PointOfInterestType("electric_highlands_portal", PointOfInterestType.getBlockStates(ElectricHighlandsBlocks.ELECTRIC_HIGHLANDS_PORTAL.get()), 0, 1));
+            () -> new PointOfInterestType("electric_highlands_portal", PointOfInterestType.getBlockStates(ElectricHighlandsBlocks.PORTAL.get()), 0, 1));
 
     public static final RegistryObject<PointOfInterestType> CAVERNOUS_COVE_PORTAL = POI.register("cavernous_cove_portal",
             () -> new PointOfInterestType("cavernous_cove_portal", PointOfInterestType.getBlockStates(CavernousCoveBlocks.PORTAL.get()), 0, 1));

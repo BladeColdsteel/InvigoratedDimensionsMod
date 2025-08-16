@@ -17,7 +17,7 @@
     "particle": {}
   },
   "starts": [
-
+    "invigorated_dimensions:grass_portal"
   ],
   "spawners": {
     "monster": [
