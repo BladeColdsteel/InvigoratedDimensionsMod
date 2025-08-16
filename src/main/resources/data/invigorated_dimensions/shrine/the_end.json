@@ -7,7 +7,8 @@
     {"item":  "minecraft:end_stone", "count": 4},
     {"item":  "invigorated_dimensions:draconic_wood", "count": 8},
     {"item":  "minecraft:diamond", "count": 3},
-    {"item":  "invigorated_dimensions:dragon_essence", "count": 10}
+    {"item":  "invigorated_dimensions:dragon_essence", "count": 10},
+    {"item":  "minecraft:bedrock", "count": 1}
   ],
   "portal_unlock_conditions": {
     "mob_kill": "minecraft:zombie"
