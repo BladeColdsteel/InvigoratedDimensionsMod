@@ -4,7 +4,10 @@ import com.bladecoldsteel.invigorateddimensions.InvigoratedDimensions;
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.block.custom.*;
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.item.ElectricHighlandsItemGroup;
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.item.ElectricHighlandsItems;
+import com.bladecoldsteel.invigorateddimensions.universal.block.custom.GeneralizedPortalBlock;
 import com.bladecoldsteel.invigorateddimensions.util.BlockHelper;
+import com.bladecoldsteel.invigorateddimensions.world.ModPointsOfInterest;
+import com.bladecoldsteel.invigorateddimensions.world.dimension.ModDimensions;
 import com.bladecoldsteel.invigorateddimensions.world.gen.features.trees.ElectricTree;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
@@ -23,9 +26,6 @@ public class ElectricHighlandsBlocks {
     private static final ItemGroup TAB = ElectricHighlandsItemGroup.ELECTRIC_HIGHLANDS_GROUP;
     public static final DeferredRegister<Block> BLOCKS
             = DeferredRegister.create(ForgeRegistries.BLOCKS, InvigoratedDimensions.MOD_ID);
-
-    public static final RegistryObject<Block> ELECTRIC_HIGHLANDS_PORTAL = registerBlock("electric_highlands_portal",
-            ElectricHighlandsPortalBlock::new);
 
     public static final RegistryObject<Block> ELECTRICALLY_CHARGED_SAPLING = registerBlock("electrically_charged_sapling",
             () -> new SaplingBlock(new ElectricTree(), AbstractBlock.Properties.copy(Blocks.OAK_SAPLING)));
@@ -202,13 +202,17 @@ public class ElectricHighlandsBlocks {
                     .harvestLevel(4)
                     .harvestTool(ToolType.PICKAXE)
                     .requiresCorrectToolForDrops()));
-
-    public static final RegistryObject<Block> HIGHLANDS_PORTAL_FRAME = registerBlock("highlandian_portal_frame",
-            () -> new Block(AbstractBlock.Properties.copy(Blocks.STONE)
-                    .harvestLevel(2)
-                    .requiresCorrectToolForDrops()
-                    .harvestTool(ToolType.PICKAXE)
-                    .strength(50f)));
+    //Portal Blocks
+    public static final RegistryObject<GeneralizedPortalBlock> PORTAL = BlockHelper.register(
+            "electric_highlands_portal", BLOCKS, ElectricHighlandsItems.ITEMS,
+            BlockHelper.portalBlock(() -> ElectricHighlandsBlocks.PORTAL_FRAME.get(), () -> ElectricHighlandsBlocks.PORTAL.get(), ModDimensions.ELECTRIC_HIGHLANDS, ModPointsOfInterest.ELECTRIC_HIGHLANDS_PORTAL),
+            TAB
+    );
+    public static final RegistryObject<Block> PORTAL_FRAME = BlockHelper.register(
+            "highlandian_portal_frame", BLOCKS, ElectricHighlandsItems.ITEMS,
+            BlockHelper.portalFrameBlock(4),
+            TAB
+    );
 
 
 

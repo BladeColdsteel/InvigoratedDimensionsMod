@@ -385,7 +385,7 @@ public class IDItemModels extends IDItemModelProvider {
         //Trapdoor
         itemBlockFlat(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_WOODEN_TRAPDOOR, "electrically_charged_trapdoor");
         //Portal Frame
-        itemBlock(ElectricHighlandsBlocks.HIGHLANDS_PORTAL_FRAME);
+        itemBlock(ElectricHighlandsBlocks.PORTAL_FRAME);
         itemBlock(CavernousCoveBlocks.PORTAL_FRAME);
         itemBlock(HeavenlyRealmBlocks.PORTAL_FRAME);
         itemBlock(CorrosiveFieldsBlocks.PORTAL_FRAME);
@@ -405,7 +405,7 @@ public class IDItemModels extends IDItemModelProvider {
         //Ingots
 
         //Portal Activators
-        normalItem(ElectricHighlandsItems.ELECTRIC_HIGHLANDS_ACTIVATOR);
+        normalItem(ElectricHighlandsItems.ACTIVATOR);
         normalItem(CavernousCoveItems.ACTIVATOR);
         normalItem(HeavenlyRealmItems.ACTIVATOR);
         normalItem(CorrosiveFieldsItems.ACTIVATOR);

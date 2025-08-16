@@ -354,7 +354,7 @@ public class IDLootTables extends LootTableProvider {
             dropWithFortune(ElectricHighlandsBlocks.CHARGED_VOLTCRYST_ORE, ElectricHighlandsItems.VOLTCRYST);
                 //Other
             dropSelf(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_SAPLING);
-            dropSelf(ElectricHighlandsBlocks.HIGHLANDS_PORTAL_FRAME);
+            dropSelf(ElectricHighlandsBlocks.PORTAL_FRAME);
             //Fire
                 //Wood
             dropSelf(EmberwildsBlocks.LOG);
@@ -782,7 +782,7 @@ public class IDLootTables extends LootTableProvider {
                                     .apply(SetCount.setCount(RandomValueRange.between(0.0F, 2.0F)))
                                     .apply(LootingEnchantBonus.lootingMultiplier(RandomValueRange.between(0.0F, 1.0F)))
                                     .when(KilledByPlayer.killedByPlayer()))
-                            .add(ItemLootEntry.lootTableItem(ElectricHighlandsItems.ELECTRIC_HIGHLANDS_ACTIVATOR.get())
+                            .add(ItemLootEntry.lootTableItem(ElectricHighlandsItems.ACTIVATOR.get())
                                     .when(KilledByPlayer.killedByPlayer())
                                     .when(MatchTool.toolMatches(
                                             ItemPredicate.Builder.item().hasEnchantment(
