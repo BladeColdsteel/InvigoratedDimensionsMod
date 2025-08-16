@@ -29,7 +29,7 @@ displayName="Invigorated Dimensions" #mandatory
 # A file name (in the root of the mod JAR) containing a logo for display
 logoFile="invigorated_dimensions_logo.png" #optional
 # A text field displayed in the mod UI
-credits="Thanks to several older mods not working for the idea to make this mod!" #optional
+credits="Thanks to several older mods for not working for the idea to make this mod!" #optional
 # A text field displayed in the mod UI
 authors="BladeColdsteel" #optional
 # The description text for the mod (multi line!) (#mandatory)
