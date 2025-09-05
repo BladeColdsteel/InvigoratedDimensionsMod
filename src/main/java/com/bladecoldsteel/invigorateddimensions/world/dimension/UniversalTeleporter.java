@@ -45,23 +45,25 @@ public class UniversalTeleporter implements ITeleporter {
     }
 
     public Optional<TeleportationRepositioner.Result> getExistingPortal(BlockPos pos) {
+        this.world.getChunkSource().addRegionTicket(TicketType.PORTAL, new ChunkPos(pos), 1, pos);
+
         PointOfInterestManager poiManager = this.world.getPoiManager();
-        poiManager.ensureLoadedAndValid(this.world, pos, 64);
+        poiManager.ensureLoadedAndValid(this.world, pos, 32);
         Optional<PointOfInterest> optional = poiManager.getInSquare((poiType) ->
-                poiType == poi.get(), pos, 64, PointOfInterestManager.Status.ANY).sorted(Comparator.<PointOfInterest>comparingDouble((poi) ->
+                poiType == poi.get(), pos, 32, PointOfInterestManager.Status.ANY).min(Comparator.<PointOfInterest>comparingDouble((poi) ->
                 poi.getPos().distSqr(pos)).thenComparingInt((poi) ->
                 poi.getPos().getY())).filter((poi) ->
-                this.world.getBlockState(poi.getPos()).hasProperty(BlockStateProperties.HORIZONTAL_AXIS)).findFirst();
+                this.world.getBlockState(poi.getPos()).hasProperty(BlockStateProperties.HORIZONTAL_AXIS));
 
-        if (optional.isPresent()) {
-            System.out.println("Existing portal found at: " + optional.get().getPos());
-        } else {
-            System.out.println("No existing portal found.");
-        }
+        //if (optional.isPresent()) {
+            //System.out.println("Existing portal found at: " + optional.get().getPos());
+        //} else {
+            //System.out.println("No existing portal found.");
+        //}
 
         return optional.map((poi) -> {
             BlockPos blockPos = poi.getPos();
-            this.world.getChunkSource().addRegionTicket(TicketType.PORTAL, new ChunkPos(blockPos), 3, blockPos);
+            this.world.getChunkSource().addRegionTicket(TicketType.PORTAL, new ChunkPos(blockPos), 1, blockPos);
             BlockState blockState = this.world.getBlockState(blockPos);
             return TeleportationRepositioner.getLargestRectangleAround(blockPos, blockState.getValue(BlockStateProperties.HORIZONTAL_AXIS), 21, Direction.Axis.Y, 21, (posIn) ->
                     this.world.getBlockState(posIn) == blockState);
@@ -69,7 +71,7 @@ public class UniversalTeleporter implements ITeleporter {
     }
 
     public Optional<TeleportationRepositioner.Result> makePortal(BlockPos pos, Direction.Axis axis, Entity entity) {
-        System.out.println("Creating new portal at position: " + pos + " with axis: " + axis);
+        //System.out.println("Creating new portal at position: " + pos + " with axis: " + axis);
 
         Direction direction = Direction.get(Direction.AxisDirection.POSITIVE, axis);
         double d0 = -1.0D;
@@ -127,12 +129,14 @@ public class UniversalTeleporter implements ITeleporter {
                 return Optional.empty();
             }
 
+            this.world.getChunkSource().addRegionTicket(TicketType.PORTAL, new ChunkPos(blockpos), 1, blockpos);
+
             for (int l1 = -1; l1 < 2; ++l1) {
                 for (int k2 = 0; k2 < 2; ++k2) {
                     for (int i3 = -1; i3 < 3; ++i3) {
                         BlockState blockState = i3 < 0 ? frameBlock.defaultBlockState() : Blocks.AIR.defaultBlockState();
                         mutablePos.setWithOffset(blockpos, k2 * direction.getStepX() + l1 * direction1.getStepX(), i3, k2 * direction.getStepZ() + l1 * direction1.getStepZ());
-                        this.world.setBlockAndUpdate(mutablePos, blockState);
+                        this.world.setBlock(mutablePos, blockState, 3);
                     }
                 }
             }
@@ -182,7 +186,7 @@ public class UniversalTeleporter implements ITeleporter {
     @Nullable
     @Override
     public PortalInfo getPortalInfo(Entity entity, ServerWorld destWorld, Function<ServerWorld, PortalInfo> defaultPortalInfo) {
-        boolean destinationIsOtherDimension = destWorld.dimension() == destinationDimension;
+        boolean destinationIsOtherDimension = destWorld.dimension().equals(destinationDimension);
         if (entity.level.dimension() != destinationDimension && !destinationIsOtherDimension) {
             return null;
         } else {

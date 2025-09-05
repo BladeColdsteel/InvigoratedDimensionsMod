@@ -1,11 +1,15 @@
 package com.bladecoldsteel.invigorateddimensions.world.dimension;
 
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.block.ElectricHighlandsBlocks;
+import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.ChunkPos;
+import net.minecraft.world.server.ServerChunkProvider;
 import net.minecraft.world.server.ServerWorld;
+import net.minecraft.world.server.TicketType;
 import net.minecraftforge.common.util.ITeleporter;
 
 import java.util.function.Function;
@@ -26,225 +30,36 @@ public class RiftTeleporter implements ITeleporter {
         }
         ServerPlayerEntity player = (ServerPlayerEntity) entity1;
 
-        BlockPos targetBlockMid = new BlockPos(
-                pos.getX(),
-                pos.getY(),
-                pos.getZ()
-        );
-        BlockPos targetBlockMid1 = new BlockPos(
-                pos.getX(),
-                pos.getY() + 1,
-                pos.getZ()
-        );
-        BlockPos targetBlockMid2 = new BlockPos(
-                pos.getX(),
-                pos.getY() + 2,
-                pos.getZ()
-        );
-        BlockPos targetBlockMid3 = new BlockPos(
-                pos.getX(),
-                pos.getY() + 3,
-                pos.getZ()
-        );
-        BlockPos targetBlockSide1 = new BlockPos(
-                pos.getX() + 1,
-                pos.getY(),
-                pos.getZ()
-        );
-        BlockPos targetBlockSide1A = new BlockPos(
-                pos.getX() + 1,
-                pos.getY() + 1,
-                pos.getZ()
-        );
-        BlockPos targetBlockSide1B = new BlockPos(
-                pos.getX() + 1,
-                pos.getY() + 2,
-                pos.getZ()
-        );
-        BlockPos targetBlockSide1C = new BlockPos(
-                pos.getX() + 1,
-                pos.getY() + 3,
-                pos.getZ()
-        );
-        BlockPos targetBlockSide2 = new BlockPos(
-                pos.getX() - 1,
-                pos.getY(),
-                pos.getZ()
-        );
-        BlockPos targetBlockSide2A = new BlockPos(
-                pos.getX() - 1,
-                pos.getY() + 1,
-                pos.getZ()
-        );
-        BlockPos targetBlockSide2B = new BlockPos(
-                pos.getX() - 1,
-                pos.getY() + 2,
-                pos.getZ()
-        );
-        BlockPos targetBlockSide2C = new BlockPos(
-                pos.getX() - 1,
-                pos.getY() + 3,
-                pos.getZ()
-        );
-        BlockPos targetBlockSide3 = new BlockPos(
-                pos.getX(),
-                pos.getY(),
-                pos.getZ() + 1
-        );
-        BlockPos targetBlockSide3A = new BlockPos(
-                pos.getX(),
-                pos.getY() + 1,
-                pos.getZ() + 1
-        );
-        BlockPos targetBlockSide3B = new BlockPos(
-                pos.getX(),
-                pos.getY() + 2,
-                pos.getZ() + 1
-        );
-        BlockPos targetBlockSide3C = new BlockPos(
-                pos.getX(),
-                pos.getY() + 3,
-                pos.getZ() + 1
-        );
-        BlockPos targetBlockSide4 = new BlockPos(
-                pos.getX(),
-                pos.getY(),
-                pos.getZ() - 1
-        );
-        BlockPos targetBlockSide4A = new BlockPos(
-                pos.getX(),
-                pos.getY() + 1,
-                pos.getZ() - 1
-        );
-        BlockPos targetBlockSide4B = new BlockPos(
-                pos.getX(),
-                pos.getY() + 2,
-                pos.getZ() - 1
-        );
-        BlockPos targetBlockSide4C = new BlockPos(
-                pos.getX(),
-                pos.getY() + 3,
-                pos.getZ() - 1
-        );
-        BlockPos targetBlockCorner1 = new BlockPos(
-                pos.getX() + 1,
-                pos.getY(),
-                pos.getZ() + 1
-        );
-        BlockPos targetBlockCorner1A = new BlockPos(
-                pos.getX() + 1,
-                pos.getY() + 1,
-                pos.getZ() + 1
-        );
-        BlockPos targetBlockCorner1B = new BlockPos(
-                pos.getX() + 1,
-                pos.getY() + 2,
-                pos.getZ() + 1
-        );
-        BlockPos targetBlockCorner1C = new BlockPos(
-                pos.getX() + 1,
-                pos.getY() + 3,
-                pos.getZ() + 1
-        );
-        BlockPos targetBlockCorner2 = new BlockPos(
-                pos.getX() - 1,
-                pos.getY(),
-                pos.getZ() + 1
-        );
-        BlockPos targetBlockCorner2A = new BlockPos(
-                pos.getX() - 1,
-                pos.getY() + 1,
-                pos.getZ() + 1
-        );
-        BlockPos targetBlockCorner2B = new BlockPos(
-                pos.getX() - 1,
-                pos.getY() + 2,
-                pos.getZ() + 1
-        );
-        BlockPos targetBlockCorner2C = new BlockPos(
-                pos.getX() - 1,
-                pos.getY() + 3,
-                pos.getZ() + 1
-        );
-        BlockPos targetBlockCorner3 = new BlockPos(
-                pos.getX() + 1,
-                pos.getY(),
-                pos.getZ() - 1
-        );
-        BlockPos targetBlockCorner3A = new BlockPos(
-                pos.getX() + 1,
-                pos.getY() + 1,
-                pos.getZ() - 1
-        );
-        BlockPos targetBlockCorner3B = new BlockPos(
-                pos.getX() + 1,
-                pos.getY() + 2,
-                pos.getZ() - 1
-        );
-        BlockPos targetBlockCorner3C = new BlockPos(
-                pos.getX() + 1,
-                pos.getY() + 3,
-                pos.getZ() - 1
-        );
-        BlockPos targetBlockCorner4 = new BlockPos(
-                pos.getX() - 1,
-                pos.getY(),
-                pos.getZ() - 1
-        );
-        BlockPos targetBlockCorner4A = new BlockPos(
-                pos.getX() - 1,
-                pos.getY() + 1,
-                pos.getZ() - 1
-        );
-        BlockPos targetBlockCorner4B = new BlockPos(
-                pos.getX() - 1,
-                pos.getY() + 2,
-                pos.getZ() - 1
-        );
-        BlockPos targetBlockCorner4C = new BlockPos(
-                pos.getX() - 1,
-                pos.getY() + 3,
-                pos.getZ() - 1
-        );
-        player.teleportTo(pos.getX() + 0.5D, targetBlockMid.getY() + 1.0D, pos.getZ() + 0.5D);
+        BlockPos base = (this.pos != null) ? this.pos : destWorld.getSharedSpawnPos();
+        int safeY = net.minecraft.util.math.MathHelper.clamp(base.getY(), 6, destWorld.getMaxBuildHeight() - 6);
+        base = new BlockPos(base.getX(), safeY, base.getZ());
 
-        destWorld.setBlock(targetBlockMid, ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_CHISELED_STONE_BRICKS.get().defaultBlockState(), 4);
-        destWorld.setBlock(targetBlockMid1, Blocks.AIR.defaultBlockState(), 4);
-        destWorld.setBlock(targetBlockMid2, Blocks.AIR.defaultBlockState(), 4);
-        destWorld.setBlock(targetBlockMid3, Blocks.AIR.defaultBlockState(), 4);
-        destWorld.setBlock(targetBlockSide1, ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_STONE_BRICKS.get().defaultBlockState(), 4);
-        destWorld.setBlock(targetBlockSide1A, Blocks.AIR.defaultBlockState(), 4);
-        destWorld.setBlock(targetBlockSide1B, Blocks.AIR.defaultBlockState(), 4);
-        destWorld.setBlock(targetBlockSide1C, Blocks.AIR.defaultBlockState(), 4);
-        destWorld.setBlock(targetBlockSide2, ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_STONE_BRICKS.get().defaultBlockState(), 4);
-        destWorld.setBlock(targetBlockSide2A, Blocks.AIR.defaultBlockState(), 4);
-        destWorld.setBlock(targetBlockSide2B, Blocks.AIR.defaultBlockState(), 4);
-        destWorld.setBlock(targetBlockSide2C, Blocks.AIR.defaultBlockState(), 4);
-        destWorld.setBlock(targetBlockSide3, ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_STONE_BRICKS.get().defaultBlockState(), 4);
-        destWorld.setBlock(targetBlockSide3A, Blocks.AIR.defaultBlockState(), 4);
-        destWorld.setBlock(targetBlockSide3B, Blocks.AIR.defaultBlockState(), 4);
-        destWorld.setBlock(targetBlockSide3C, Blocks.AIR.defaultBlockState(), 4);
-        destWorld.setBlock(targetBlockSide4, ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_STONE_BRICKS.get().defaultBlockState(), 4);
-        destWorld.setBlock(targetBlockSide4A, Blocks.AIR.defaultBlockState(), 4);
-        destWorld.setBlock(targetBlockSide4B, Blocks.AIR.defaultBlockState(), 4);
-        destWorld.setBlock(targetBlockSide4C, Blocks.AIR.defaultBlockState(), 4);
-        destWorld.setBlock(targetBlockCorner1, ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_STONE_BRICKS.get().defaultBlockState(), 4);
-        destWorld.setBlock(targetBlockCorner1A, Blocks.AIR.defaultBlockState(), 4);
-        destWorld.setBlock(targetBlockCorner1B, Blocks.AIR.defaultBlockState(), 4);
-        destWorld.setBlock(targetBlockCorner1C, Blocks.AIR.defaultBlockState(), 4);
-        destWorld.setBlock(targetBlockCorner2, ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_STONE_BRICKS.get().defaultBlockState(), 4);
-        destWorld.setBlock(targetBlockCorner2A, Blocks.AIR.defaultBlockState(), 4);
-        destWorld.setBlock(targetBlockCorner2B, Blocks.AIR.defaultBlockState(), 4);
-        destWorld.setBlock(targetBlockCorner2C, Blocks.AIR.defaultBlockState(), 4);
-        destWorld.setBlock(targetBlockCorner3, ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_STONE_BRICKS.get().defaultBlockState(), 4);
-        destWorld.setBlock(targetBlockCorner3A, Blocks.AIR.defaultBlockState(), 4);
-        destWorld.setBlock(targetBlockCorner3B, Blocks.AIR.defaultBlockState(), 4);
-        destWorld.setBlock(targetBlockCorner3C, Blocks.AIR.defaultBlockState(), 4);
-        destWorld.setBlock(targetBlockCorner4, ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_STONE_BRICKS.get().defaultBlockState(), 4);
-        destWorld.setBlock(targetBlockCorner4A, Blocks.AIR.defaultBlockState(), 4);
-        destWorld.setBlock(targetBlockCorner4B, Blocks.AIR.defaultBlockState(), 4);
-        destWorld.setBlock(targetBlockCorner4C, Blocks.AIR.defaultBlockState(), 4);
+        ServerChunkProvider cm = destWorld.getChunkSource();
+        ChunkPos cpos = new ChunkPos(base);
+        cm.addRegionTicket(TicketType.POST_TELEPORT, cpos, 1, 0);
 
-        return entity1;
+        BlockState floor = ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_STONE_BRICKS.get().defaultBlockState();
+        BlockState center = ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_CHISELED_STONE_BRICKS.get().defaultBlockState();
+
+        for (int dx = -1; dx <= 1; dx++) {
+            for (int dz = -1; dz <= 1; dz++) {
+                BlockPos pad = base.offset(dx, 0, dz);
+
+                BlockState desired = (dx == 0 && dz == 0) ? center : floor;
+                if (destWorld.getBlockState(pad) != desired) {
+                    destWorld.setBlock(pad, desired, 3);
+                }
+
+                for (int dy = 1; dy <= 3; dy++) {
+                    BlockPos air = pad.above(dy);
+                    if (!destWorld.isEmptyBlock(air)) {
+                        destWorld.setBlock(air, Blocks.AIR.defaultBlockState(), 3);
+                    }
+                }
+            }
+        }
+
+        player.teleportTo(base.getX() + 0.5D, base.getY() + 1.0D, base.getZ() + 0.5D);
+        return player;
     }
 }
