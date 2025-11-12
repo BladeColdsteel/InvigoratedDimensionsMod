@@ -22,6 +22,8 @@
   "item.invigorated_dimensions.ghost_essence": "Ghost-Type Essence",
   "item.invigorated_dimensions.psychic_essence": "Psychic-Type Essence",
   "item.invigorated_dimensions.flying_essence": "Flying-Type Essence",
+  "entity.invigorated_dimensions.fossilized_trader": "Fossilized Trader",
+  "entity.invigorated_dimensions.emerald_projectile": "Emerald Projectile",
 
   "block.invigorated_dimensions.electrically_charged_logs": "Electrically Charged Log",
   "block.invigorated_dimensions.stripped_electrically_charged_logs": "Stripped Electrically Charged Log",

@@ -49,6 +49,8 @@ import com.bladecoldsteel.invigorateddimensions.insectoidparadisio.item.Insectoi
 import com.bladecoldsteel.invigorateddimensions.metallicmountains.block.MetallicMountainsBlocks;
 import com.bladecoldsteel.invigorateddimensions.metallicmountains.block.MetallicMountainsWoodTypes;
 import com.bladecoldsteel.invigorateddimensions.metallicmountains.item.MetallicMountainsItems;
+import com.bladecoldsteel.invigorateddimensions.overworld.entity.OverworldEntityTypes;
+import com.bladecoldsteel.invigorateddimensions.overworld.entity.render.boss.FossilizedTraderRender;
 import com.bladecoldsteel.invigorateddimensions.universal.datageneration.IDBlockStatesAndModels;
 import com.bladecoldsteel.invigorateddimensions.universal.datageneration.IDItemModels;
 import com.bladecoldsteel.invigorateddimensions.universal.datageneration.IDLootTables;
@@ -82,10 +84,13 @@ import com.bladecoldsteel.invigorateddimensions.world.gen.features.*;
 import com.google.common.collect.ImmutableMap;
 import net.minecraft.block.Block;
 import net.minecraft.block.WoodType;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.ScreenManager;
 import net.minecraft.client.renderer.Atlases;
+import net.minecraft.client.renderer.ItemRenderer;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
+import net.minecraft.client.renderer.entity.SpriteRenderer;
 import net.minecraft.client.renderer.tileentity.SignTileEntityRenderer;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.item.AxeItem;
@@ -113,7 +118,7 @@ import org.apache.logging.log4j.Logger;
 
 import java.io.File;
 
-// The value here should match an entry in the META-INF/mods.toml file
+// com.bladecoldsteel.invigorateddimensions.overworld.entity.model.boss.The value here should match an entry in the META-INF/mods.toml file
 @Mod(InvigoratedDimensions.MOD_ID)
 public class InvigoratedDimensions
 {
@@ -149,6 +154,8 @@ public class InvigoratedDimensions
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, InvigoratedDimensionsConfig.SPEC, "invigorated-dimensions-common.toml");
         File configDir = FMLPaths.CONFIGDIR.get().toFile();
         PixelmonConfigModifier.updatePixelmonConfig(configDir);
+        //Overworld
+        OverworldEntityTypes.register(eventBus);
         //Electric
         ElectricHighlandsItems.register(eventBus);
         ElectricHighlandsBlocks.register(eventBus);
@@ -341,6 +348,7 @@ public class InvigoratedDimensions
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {
+        ItemRenderer itemRenderer = Minecraft.getInstance().getItemRenderer();
 
         //Screen Stuff-
         ScreenManager.register(
@@ -356,6 +364,10 @@ public class InvigoratedDimensions
         RenderTypeLookup.setRenderLayer(UniversalBlocks.CRYSTALLIZED_LEAVES.get(), RenderType.cutout());
         ClientRegistry.bindTileEntityRenderer(UniversalTileEntities.ELEMENTAL_SHRINE_TILE.get(),
                 ElementalShrineRenderer::new);
+
+        //Normal
+        RenderingRegistry.registerEntityRenderingHandler(OverworldEntityTypes.FOSSIL_TRADER.get(), FossilizedTraderRender::new);
+        RenderingRegistry.registerEntityRenderingHandler(OverworldEntityTypes.EMERALD_PROJECTILE.get(), entity -> new SpriteRenderer<>(entity, itemRenderer));
 
         //Electric
         RenderTypeLookup.setRenderLayer(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_SAPLING.get(), RenderType.cutout());
