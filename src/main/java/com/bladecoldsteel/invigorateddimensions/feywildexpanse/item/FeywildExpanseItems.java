@@ -17,7 +17,7 @@ public class FeywildExpanseItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, InvigoratedDimensions.MOD_ID);
 
-    public static final RegistryObject<UniversalActivatorItem> ACTIVATOR = ItemHelper.register(
+    public static final RegistryObject<UniversalActivatorItem> ACTIVATOR = ItemHelper.registerActivator(
             "feyan_activator", ITEMS, ItemHelper.activatorItem(ModDimensions.FEYWILD_EXPANSE, () -> FeywildExpanseBlocks.PORTAL.get()),
             TAB
     );

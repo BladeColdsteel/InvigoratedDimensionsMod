@@ -17,7 +17,7 @@ public class InsectoidParadisioItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, InvigoratedDimensions.MOD_ID);
 
-    public static final RegistryObject<UniversalActivatorItem> ACTIVATOR = ItemHelper.register(
+    public static final RegistryObject<UniversalActivatorItem> ACTIVATOR = ItemHelper.registerActivator(
             "bugged_activator", ITEMS, ItemHelper.activatorItem(ModDimensions.INSECTIOD_PARADISIO, () -> InsectoidParadisioBlocks.PORTAL.get()),
             TAB
     );

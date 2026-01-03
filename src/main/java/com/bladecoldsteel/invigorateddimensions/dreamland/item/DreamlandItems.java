@@ -17,7 +17,7 @@ public class DreamlandItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, InvigoratedDimensions.MOD_ID);
 
-    public static final RegistryObject<UniversalActivatorItem> ACTIVATOR = ItemHelper.register(
+    public static final RegistryObject<UniversalActivatorItem> ACTIVATOR = ItemHelper.registerActivator(
             "psychedelic_activator", ITEMS, ItemHelper.activatorItem(ModDimensions.DREAMLAND, () -> DreamlandBlocks.PORTAL.get()),
             TAB
     );

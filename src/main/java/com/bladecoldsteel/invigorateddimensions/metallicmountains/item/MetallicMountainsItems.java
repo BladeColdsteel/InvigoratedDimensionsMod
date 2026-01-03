@@ -17,7 +17,7 @@ public class MetallicMountainsItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, InvigoratedDimensions.MOD_ID);
 
-    public static final RegistryObject<UniversalActivatorItem> ACTIVATOR = ItemHelper.register(
+    public static final RegistryObject<UniversalActivatorItem> ACTIVATOR = ItemHelper.registerActivator(
             "metallic_activator", ITEMS, ItemHelper.activatorItem(ModDimensions.METALLIC_MOUNTAINS, () -> MetallicMountainsBlocks.PORTAL.get()),
             TAB
     );

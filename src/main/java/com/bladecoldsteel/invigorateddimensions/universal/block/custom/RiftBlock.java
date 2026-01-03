@@ -1,6 +1,6 @@
 package com.bladecoldsteel.invigorateddimensions.universal.block.custom;
 
-import com.bladecoldsteel.invigorateddimensions.universal.tileentity.custom.RiftBlockTileEntity;
+import com.bladecoldsteel.invigorateddimensions.universal.entity.tileentity.custom.RiftBlockTileEntity;
 import com.bladecoldsteel.invigorateddimensions.world.dimension.RiftTeleporter;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;

@@ -17,7 +17,7 @@ public class InfiniteDungeonItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, InvigoratedDimensions.MOD_ID);
 
-    public static final RegistryObject<UniversalActivatorItem> ACTIVATOR = ItemHelper.register(
+    public static final RegistryObject<UniversalActivatorItem> ACTIVATOR = ItemHelper.registerActivator(
             "tough_activator", ITEMS, ItemHelper.activatorItem(ModDimensions.INFINITE_DUNGEON, () -> InfiniteDungeonBlocks.PORTAL.get()),
             TAB
     );

@@ -17,7 +17,7 @@ public class WateryDepthsItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, InvigoratedDimensions.MOD_ID);
 
-    public static final RegistryObject<UniversalActivatorItem> ACTIVATOR = ItemHelper.register(
+    public static final RegistryObject<UniversalActivatorItem> ACTIVATOR = ItemHelper.registerActivator(
             "watery_activator", ITEMS, ItemHelper.activatorItem(ModDimensions.WATERY_DEPTHS, () -> WateryDepthsBlocks.PORTAL.get()),
             TAB
     );

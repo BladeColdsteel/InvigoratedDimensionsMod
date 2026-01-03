@@ -1,9 +1,8 @@
 package com.bladecoldsteel.invigorateddimensions.universal.network.packets;
 
-import com.bladecoldsteel.invigorateddimensions.electrichighlands.block.ElectricHighlandsBlocks;
 import com.bladecoldsteel.invigorateddimensions.universal.block.UniversalBlocks;
-import com.bladecoldsteel.invigorateddimensions.universal.tileentity.custom.ElementalShrineTileEntity;
-import com.bladecoldsteel.invigorateddimensions.universal.tileentity.custom.RiftBlockTileEntity;
+import com.bladecoldsteel.invigorateddimensions.universal.entity.tileentity.custom.ElementalShrineTileEntity;
+import com.bladecoldsteel.invigorateddimensions.universal.entity.tileentity.custom.RiftBlockTileEntity;
 import com.bladecoldsteel.invigorateddimensions.util.DimensionInfo;
 import com.bladecoldsteel.invigorateddimensions.util.DimensionInfoDataLoader;
 import net.minecraft.block.BlockState;

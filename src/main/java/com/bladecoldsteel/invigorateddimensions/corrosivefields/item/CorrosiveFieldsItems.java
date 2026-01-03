@@ -18,7 +18,7 @@ public class CorrosiveFieldsItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, InvigoratedDimensions.MOD_ID);
 
-    public static final RegistryObject<UniversalActivatorItem> ACTIVATOR = ItemHelper.register(
+    public static final RegistryObject<UniversalActivatorItem> ACTIVATOR = ItemHelper.registerActivator(
             "corrosive_activator", ITEMS, ItemHelper.activatorItem(ModDimensions.CORROSIVE_FIELDS, () -> CorrosiveFieldsBlocks.PORTAL.get()),
             TAB
     );

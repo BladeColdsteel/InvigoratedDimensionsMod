@@ -18,7 +18,7 @@ public class ElectricHighlandsItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, InvigoratedDimensions.MOD_ID);
 
-    public static final RegistryObject<UniversalActivatorItem> ACTIVATOR = ItemHelper.register(
+    public static final RegistryObject<UniversalActivatorItem> ACTIVATOR = ItemHelper.registerActivator(
             "electric_highlands_activator", ITEMS, ItemHelper.activatorItem(ModDimensions.ELECTRIC_HIGHLANDS, () -> ElectricHighlandsBlocks.PORTAL.get()),
             TAB
     );

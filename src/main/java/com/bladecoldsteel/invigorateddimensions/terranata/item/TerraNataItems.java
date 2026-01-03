@@ -17,7 +17,7 @@ public class TerraNataItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, InvigoratedDimensions.MOD_ID);
 
-    public static final RegistryObject<UniversalActivatorItem> ACTIVATOR = ItemHelper.register(
+    public static final RegistryObject<UniversalActivatorItem> ACTIVATOR = ItemHelper.registerActivator(
             "grounded_activator", ITEMS, ItemHelper.activatorItem(ModDimensions.TERRA_NATA, () -> TerraNataBlocks.PORTAL.get()),
             TAB
     );
