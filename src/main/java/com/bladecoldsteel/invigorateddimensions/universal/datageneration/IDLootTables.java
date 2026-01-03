@@ -355,6 +355,7 @@ public class IDLootTables extends LootTableProvider {
                 //Other
             dropSelf(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_SAPLING);
             dropSelf(ElectricHighlandsBlocks.PORTAL_FRAME);
+            dropNothing(ElectricHighlandsBlocks.PORTAL);
             //Fire
                 //Wood
             dropSelf(EmberwildsBlocks.LOG);

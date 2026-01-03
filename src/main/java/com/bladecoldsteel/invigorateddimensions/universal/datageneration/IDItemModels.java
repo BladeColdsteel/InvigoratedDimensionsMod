@@ -461,5 +461,8 @@ public class IDItemModels extends IDItemModelProvider {
         //Signs
         sign(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_SIGN);
         //Spawn Eggs
+
+        //Food
+        normalItem(GrassyKnollItems.APPLESAUCE);
     }
 }

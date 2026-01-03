@@ -18,7 +18,7 @@ public class HeavenlyRealmItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, InvigoratedDimensions.MOD_ID);
 
-    public static final RegistryObject<UniversalActivatorItem> ACTIVATOR = ItemHelper.register(
+    public static final RegistryObject<UniversalActivatorItem> ACTIVATOR = ItemHelper.registerActivator(
             "floating_activator", ITEMS, ItemHelper.activatorItem(ModDimensions.CELESTIAL_REALM, () -> HeavenlyRealmBlocks.PORTAL.get()),
             TAB
     );

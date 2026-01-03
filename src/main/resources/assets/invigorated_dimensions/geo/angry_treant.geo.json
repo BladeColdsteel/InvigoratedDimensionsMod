@@ -1,0 +1,47 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.unknown",
+				"texture_width": 512,
+				"texture_height": 512,
+				"visible_bounds_width": 6,
+				"visible_bounds_height": 8.5,
+				"visible_bounds_offset": [0, 3.75, 0]
+			},
+			"bones": [
+				{
+					"name": "trunk",
+					"pivot": [7, 0, -7],
+					"cubes": [
+						{"origin": [-8, 0, -8], "size": [16, 96, 16], "uv": [192, 176]}
+					]
+				},
+				{
+					"name": "leaves",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-40, 64, -40], "size": [80, 16, 80], "uv": [0, 0]},
+						{"origin": [-32, 80, -32], "size": [64, 16, 64], "uv": [0, 96]},
+						{"origin": [-24, 96, -24], "size": [48, 16, 48], "uv": [0, 176]}
+					]
+				},
+				{
+					"name": "armR",
+					"pivot": [0, 24, 0],
+					"cubes": [
+						{"origin": [-12, 26, -4], "size": [8, 48, 8], "pivot": [-8, 33, -3], "rotation": [0, 0, -35], "uv": [0, 240]}
+					]
+				},
+				{
+					"name": "armL",
+					"pivot": [0, 24, 0],
+					"cubes": [
+						{"origin": [4, 26, -4], "size": [8, 48, 8], "pivot": [8, 33, -3], "rotation": [0, 0, 35], "uv": [32, 240]}
+					]
+				}
+			]
+		}
+	]
+}

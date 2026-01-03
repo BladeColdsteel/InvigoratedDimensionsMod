@@ -147,6 +147,8 @@
   "block.invigorated_dimensions.grassy_portal_frame": "Grassy Portal Frame",
   "block.invigorated_dimensions.grassy_knoll_portal": "Grassy Knoll Portal",
   "item.invigorated_dimensions.grassy_activator": "Grassy Portal Activator",
+  "item.invigorated_dimensions.splattered_applesauce": "Splattered Applesauce",
+  "entity.invigorated_dimensions.angry_treant": "Angry Treant",
 
   "block.invigorated_dimensions.bugged_logs": "Bugged Log",
   "block.invigorated_dimensions.bugged_sapling": "Bugged Sapling",

@@ -1,0 +1,89 @@
+{
+	"animations": {
+		"animation.model.walk": {
+			"loop": true,
+			"animation_length": 3,
+			"bones": {
+				"trunk": {
+					"rotation": {
+						"vector": ["-math.sin(query.anim_time * 60) * 3", 0, "math.sin(query.anim_time * 120) * 5"]
+					},
+					"position": {
+						"vector": [0, "math.sin(query.anim_time * 60) * 3", 0]
+					}
+				},
+				"leaves": {
+					"rotation": {
+						"vector": ["-math.sin(query.anim_time * 60) * 3", 0, "math.sin(query.anim_time * 120) * 5"]
+					},
+					"position": {
+						"vector": [0, "math.sin(query.anim_time * 60) * 3", 0]
+					}
+				},
+				"armR": {
+					"rotation": {
+						"vector": ["-math.sin(query.anim_time * 60) * 3", 0, "math.sin(query.anim_time * 120) * 5"]
+					},
+					"position": {
+						"vector": [0, "math.sin(query.anim_time * 60) * 3", 0]
+					}
+				},
+				"armL": {
+					"rotation": {
+						"vector": ["-math.sin(query.anim_time * 60) * 3", 0, "math.sin(query.anim_time * 120) * 5"]
+					},
+					"position": {
+						"vector": [0, "math.sin(query.anim_time * 60) * 3", 0]
+					}
+				}
+			}
+		},
+		"animation.model.apple_attack": {
+			"animation_length": 0.5,
+			"bones": {
+				"armL": {
+					"rotation": {
+						"0.0": {
+							"post": {
+								"vector": [0, 0, 0]
+							},
+							"lerp_mode": "catmullrom"
+						},
+						"0.125": {
+							"post": {
+								"vector": [-10, 0, 0]
+							},
+							"lerp_mode": "catmullrom"
+						},
+						"0.25": {
+							"post": {
+								"vector": [0, 0, 0]
+							},
+							"lerp_mode": "catmullrom"
+						},
+						"0.3333": {
+							"post": {
+								"vector": [15, 0, 0]
+							},
+							"lerp_mode": "catmullrom"
+						},
+						"0.4167": {
+							"post": {
+								"vector": [30, 0, 0]
+							},
+							"lerp_mode": "catmullrom"
+						},
+						"0.5": {
+							"post": {
+								"vector": [45, 0, 0]
+							},
+							"lerp_mode": "catmullrom"
+						}
+					}
+				}
+			}
+		}
+	},
+	"format_version": "1.8.0",
+	"geckolib_format_version": 2
+}

@@ -52,7 +52,7 @@ public class FossilizedTraderEntity extends MonsterEntity implements IRangedAtta
                     .add(Attributes.ARMOR, 3.0D)
                     .add(Attributes.ARMOR_TOUGHNESS, 1.0D)
                     .add(Attributes.KNOCKBACK_RESISTANCE, 0.75D)
-                    .add(Attributes.MOVEMENT_SPEED, 0.34D)
+                    .add(Attributes.MOVEMENT_SPEED, 0.3D)
                     .add(Attributes.FOLLOW_RANGE, 50.0D)
                     .add(Attributes.ATTACK_DAMAGE, 3.0D);
         } else if (InvigoratedDimensionsConfig.DIFFICULTY_MODE.get().equalsIgnoreCase("linear")) {

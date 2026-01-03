@@ -39,6 +39,8 @@ import com.bladecoldsteel.invigorateddimensions.ghastlymarsh.block.GhastlyMarshW
 import com.bladecoldsteel.invigorateddimensions.ghastlymarsh.item.GhastlyMarshItems;
 import com.bladecoldsteel.invigorateddimensions.grassyknoll.block.GrassyKnollBlocks;
 import com.bladecoldsteel.invigorateddimensions.grassyknoll.block.GrassyKnollWoodTypes;
+import com.bladecoldsteel.invigorateddimensions.grassyknoll.entity.GrassyKnollEntityTypes;
+import com.bladecoldsteel.invigorateddimensions.grassyknoll.entity.render.boss.AngryTreantRenderer;
 import com.bladecoldsteel.invigorateddimensions.grassyknoll.item.GrassyKnollItems;
 import com.bladecoldsteel.invigorateddimensions.infinitedungeon.block.InfiniteDungeonBlocks;
 import com.bladecoldsteel.invigorateddimensions.infinitedungeon.block.InfiniteDungeonWoodTypes;
@@ -55,18 +57,18 @@ import com.bladecoldsteel.invigorateddimensions.universal.datageneration.IDBlock
 import com.bladecoldsteel.invigorateddimensions.universal.datageneration.IDItemModels;
 import com.bladecoldsteel.invigorateddimensions.universal.datageneration.IDLootTables;
 import com.bladecoldsteel.invigorateddimensions.universal.datageneration.IDRecipes;
-import com.bladecoldsteel.invigorateddimensions.universal.entities.MobSpawnPlacements;
+import com.bladecoldsteel.invigorateddimensions.universal.entity.MobSpawnPlacements;
 import com.bladecoldsteel.invigorateddimensions.universal.network.InvigoratedDimensionsNetworkHandler;
 import com.bladecoldsteel.invigorateddimensions.terranata.block.TerraNataBlocks;
 import com.bladecoldsteel.invigorateddimensions.terranata.block.TerraNataWoodTypes;
 import com.bladecoldsteel.invigorateddimensions.terranata.item.TerraNataItems;
 import com.bladecoldsteel.invigorateddimensions.universal.block.UniversalBlocks;
 import com.bladecoldsteel.invigorateddimensions.universal.item.UniversalItems;
-import com.bladecoldsteel.invigorateddimensions.universal.renderer.ElementalShrineRenderer;
+import com.bladecoldsteel.invigorateddimensions.universal.entity.tileentity.renderer.ElementalShrineRenderer;
 import com.bladecoldsteel.invigorateddimensions.universal.screens.UniversalContainers;
 import com.bladecoldsteel.invigorateddimensions.universal.screens.custom.screens.ElementalShrineScreen;
 import com.bladecoldsteel.invigorateddimensions.universal.screens.custom.screens.EnergySinkScreen;
-import com.bladecoldsteel.invigorateddimensions.universal.tileentity.UniversalTileEntities;
+import com.bladecoldsteel.invigorateddimensions.universal.entity.tileentity.UniversalTileEntities;
 import com.bladecoldsteel.invigorateddimensions.valleydeath.block.ValleyDeathBlocks;
 import com.bladecoldsteel.invigorateddimensions.valleydeath.block.ValleyDeathWoodTypes;
 import com.bladecoldsteel.invigorateddimensions.valleydeath.item.ValleyDeathItems;
@@ -175,6 +177,7 @@ public class InvigoratedDimensions
         //Grass
         GrassyKnollBlocks.register(eventBus);
         GrassyKnollItems.register(eventBus);
+        GrassyKnollEntityTypes.register(eventBus);
         //Bug
         InsectoidParadisioBlocks.register(eventBus);
         InsectoidParadisioItems.register(eventBus);
@@ -391,6 +394,8 @@ public class InvigoratedDimensions
 
         //Grass
         RenderTypeLookup.setRenderLayer(GrassyKnollBlocks.SAPLING.get(), RenderType.cutout());
+        RenderingRegistry.registerEntityRenderingHandler(GrassyKnollEntityTypes.ANGRY_TREANT.get(), AngryTreantRenderer::new);
+        RenderingRegistry.registerEntityRenderingHandler(GrassyKnollEntityTypes.APPLE_PROJECTILE.get(), entity -> new SpriteRenderer<>(entity, itemRenderer));
 
         //Bug
         RenderTypeLookup.setRenderLayer(InsectoidParadisioBlocks.SAPLING.get(), RenderType.cutout());
