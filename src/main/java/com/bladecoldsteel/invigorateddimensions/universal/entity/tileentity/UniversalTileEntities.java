@@ -1,10 +1,10 @@
-package com.bladecoldsteel.invigorateddimensions.universal.tileentity;
+package com.bladecoldsteel.invigorateddimensions.universal.entity.tileentity;
 
 import com.bladecoldsteel.invigorateddimensions.InvigoratedDimensions;
 import com.bladecoldsteel.invigorateddimensions.universal.block.UniversalBlocks;
-import com.bladecoldsteel.invigorateddimensions.universal.tileentity.custom.ElementalShrineTileEntity;
-import com.bladecoldsteel.invigorateddimensions.universal.tileentity.custom.EnergySinkTileEntity;
-import com.bladecoldsteel.invigorateddimensions.universal.tileentity.custom.RiftBlockTileEntity;
+import com.bladecoldsteel.invigorateddimensions.universal.entity.tileentity.custom.ElementalShrineTileEntity;
+import com.bladecoldsteel.invigorateddimensions.universal.entity.tileentity.custom.EnergySinkTileEntity;
+import com.bladecoldsteel.invigorateddimensions.universal.entity.tileentity.custom.RiftBlockTileEntity;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;

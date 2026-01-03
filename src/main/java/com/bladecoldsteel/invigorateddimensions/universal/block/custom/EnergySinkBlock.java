@@ -1,7 +1,6 @@
 package com.bladecoldsteel.invigorateddimensions.universal.block.custom;
 
-import com.bladecoldsteel.invigorateddimensions.universal.block.UniversalBlocks;
-import com.bladecoldsteel.invigorateddimensions.universal.tileentity.custom.EnergySinkTileEntity;
+import com.bladecoldsteel.invigorateddimensions.universal.entity.tileentity.custom.EnergySinkTileEntity;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.LivingEntity;

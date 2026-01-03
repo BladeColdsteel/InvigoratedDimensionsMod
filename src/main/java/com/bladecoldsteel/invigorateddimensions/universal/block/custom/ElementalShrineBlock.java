@@ -1,7 +1,6 @@
 package com.bladecoldsteel.invigorateddimensions.universal.block.custom;
 
-import com.bladecoldsteel.invigorateddimensions.universal.block.UniversalBlocks;
-import com.bladecoldsteel.invigorateddimensions.universal.tileentity.custom.ElementalShrineTileEntity;
+import com.bladecoldsteel.invigorateddimensions.universal.entity.tileentity.custom.ElementalShrineTileEntity;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;

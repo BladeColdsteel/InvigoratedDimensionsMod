@@ -1,6 +1,6 @@
-package com.bladecoldsteel.invigorateddimensions.universal.tileentity.custom;
+package com.bladecoldsteel.invigorateddimensions.universal.entity.tileentity.custom;
 
-import com.bladecoldsteel.invigorateddimensions.universal.tileentity.UniversalTileEntities;
+import com.bladecoldsteel.invigorateddimensions.universal.entity.tileentity.UniversalTileEntities;
 import com.bladecoldsteel.invigorateddimensions.util.DimensionInfo;
 import com.bladecoldsteel.invigorateddimensions.util.DimensionInfoDataLoader;
 import net.minecraft.block.BlockState;

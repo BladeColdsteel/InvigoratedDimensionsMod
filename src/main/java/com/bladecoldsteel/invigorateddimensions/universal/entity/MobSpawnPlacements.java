@@ -1,15 +1,11 @@
-package com.bladecoldsteel.invigorateddimensions.universal.entities;
+package com.bladecoldsteel.invigorateddimensions.universal.entity;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.EntitySpawnPlacementRegistry;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.MobEntity;
-import net.minecraft.entity.SpawnReason;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.IWorldReader;
 import net.minecraft.world.gen.Heightmap;
-
-import java.util.Random;
 
 public class MobSpawnPlacements {
     public static <T extends MobEntity> void registerOnGroundSolidSpawn(EntityType<T> entityType, int lightLevel) {

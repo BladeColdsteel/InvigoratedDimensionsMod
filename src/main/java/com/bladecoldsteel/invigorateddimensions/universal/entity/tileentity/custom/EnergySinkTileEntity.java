@@ -1,9 +1,9 @@
-package com.bladecoldsteel.invigorateddimensions.universal.tileentity.custom;
+package com.bladecoldsteel.invigorateddimensions.universal.entity.tileentity.custom;
 
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.effects.ElectricHighlandsEffects;
 import com.bladecoldsteel.invigorateddimensions.universal.block.custom.EnergySinkBlock;
 import com.bladecoldsteel.invigorateddimensions.universal.screens.custom.containers.EnergySinkContainer;
-import com.bladecoldsteel.invigorateddimensions.universal.tileentity.UniversalTileEntities;
+import com.bladecoldsteel.invigorateddimensions.universal.entity.tileentity.UniversalTileEntities;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;

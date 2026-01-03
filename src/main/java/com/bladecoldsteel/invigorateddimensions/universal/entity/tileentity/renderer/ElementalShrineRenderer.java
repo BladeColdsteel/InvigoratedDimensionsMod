@@ -1,8 +1,8 @@
-package com.bladecoldsteel.invigorateddimensions.universal.renderer;
+package com.bladecoldsteel.invigorateddimensions.universal.entity.tileentity.renderer;
 
 import com.bladecoldsteel.invigorateddimensions.InvigoratedDimensions;
-import com.bladecoldsteel.invigorateddimensions.universal.models.ElementalShrineModel;
-import com.bladecoldsteel.invigorateddimensions.universal.tileentity.custom.ElementalShrineTileEntity;
+import com.bladecoldsteel.invigorateddimensions.universal.entity.tileentity.models.ElementalShrineModel;
+import com.bladecoldsteel.invigorateddimensions.universal.entity.tileentity.custom.ElementalShrineTileEntity;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
 import net.minecraft.client.Minecraft;

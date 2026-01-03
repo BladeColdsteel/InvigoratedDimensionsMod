@@ -1,4 +1,4 @@
-package com.bladecoldsteel.invigorateddimensions.universal.models;
+package com.bladecoldsteel.invigorateddimensions.universal.entity.tileentity.models;
 
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;

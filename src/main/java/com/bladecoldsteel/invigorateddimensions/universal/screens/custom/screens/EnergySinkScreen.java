@@ -3,7 +3,7 @@ package com.bladecoldsteel.invigorateddimensions.universal.screens.custom.screen
 import com.bladecoldsteel.invigorateddimensions.universal.network.InvigoratedDimensionsNetworkHandler;
 import com.bladecoldsteel.invigorateddimensions.universal.network.packets.RotateBlockPacket;
 import com.bladecoldsteel.invigorateddimensions.universal.screens.custom.containers.EnergySinkContainer;
-import com.bladecoldsteel.invigorateddimensions.universal.tileentity.custom.EnergySinkTileEntity;
+import com.bladecoldsteel.invigorateddimensions.universal.entity.tileentity.custom.EnergySinkTileEntity;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import net.minecraft.client.gui.screen.inventory.ContainerScreen;
 import net.minecraft.client.gui.widget.button.Button;

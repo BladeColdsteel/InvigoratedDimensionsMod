@@ -1,7 +1,7 @@
 package com.bladecoldsteel.invigorateddimensions.universal.screens.custom.containers;
 
 import com.bladecoldsteel.invigorateddimensions.universal.screens.UniversalContainers;
-import com.bladecoldsteel.invigorateddimensions.universal.tileentity.custom.EnergySinkTileEntity;
+import com.bladecoldsteel.invigorateddimensions.universal.entity.tileentity.custom.EnergySinkTileEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.container.Container;
