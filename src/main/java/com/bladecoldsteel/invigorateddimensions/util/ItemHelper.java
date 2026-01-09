@@ -18,7 +18,7 @@ public class ItemHelper {
     public static <T extends Item>RegistryObject<T> registerActivator(String name, DeferredRegister<Item> itemRegistry, Function<Item.Properties, T> itemFactory, ItemGroup tab) {
         return itemRegistry.register(name, () -> itemFactory.apply(new Item.Properties().tab(tab)));
     }
-    public static <T extends Item> RegistryObject<Item> registerFood(String name, DeferredRegister<Item> itemRegistry, Item.Properties itemFactory, ItemGroup tab) {
+    public static <T extends Item> RegistryObject<Item> registerItem(String name, DeferredRegister<Item> itemRegistry, Item.Properties itemFactory, ItemGroup tab) {
         return itemRegistry.register(name, () -> new Item(itemFactory.tab(tab)));
     }
     public static <T extends Item> RegistryObject<ArmorItem> registerArmor(String name, DeferredRegister<Item> itemRegistry, ItemGroup tab, IArmorMaterial armorMaterial, EquipmentSlotType armorSlot) {

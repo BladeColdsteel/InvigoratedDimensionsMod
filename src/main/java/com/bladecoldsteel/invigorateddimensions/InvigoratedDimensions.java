@@ -55,6 +55,7 @@ import com.bladecoldsteel.invigorateddimensions.metallicmountains.block.Metallic
 import com.bladecoldsteel.invigorateddimensions.metallicmountains.item.MetallicMountainsItems;
 import com.bladecoldsteel.invigorateddimensions.overworld.entity.OverworldEntityTypes;
 import com.bladecoldsteel.invigorateddimensions.overworld.entity.render.boss.FossilizedTraderRender;
+import com.bladecoldsteel.invigorateddimensions.overworld.item.OverworldItems;
 import com.bladecoldsteel.invigorateddimensions.universal.datageneration.IDBlockStatesAndModels;
 import com.bladecoldsteel.invigorateddimensions.universal.datageneration.IDItemModels;
 import com.bladecoldsteel.invigorateddimensions.universal.datageneration.IDLootTables;
@@ -159,6 +160,7 @@ public class InvigoratedDimensions
         File configDir = FMLPaths.CONFIGDIR.get().toFile();
         PixelmonConfigModifier.updatePixelmonConfig(configDir);
         //Overworld
+        OverworldItems.register(eventBus);
         OverworldEntityTypes.register(eventBus);
         //Electric
         ElectricHighlandsItems.register(eventBus);

@@ -7,6 +7,7 @@ import com.bladecoldsteel.invigorateddimensions.util.ItemHelper;
 import com.bladecoldsteel.invigorateddimensions.world.dimension.ModDimensions;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.potion.Effects;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -23,7 +24,7 @@ public class GrassyKnollItems {
             "grassy_activator", ITEMS, ItemHelper.activatorItem(ModDimensions.GRASSY_KNOLL, () -> GrassyKnollBlocks.PORTAL.get()),
             TAB
     );
-    public static final RegistryObject<Item> APPLESAUCE = ItemHelper.registerFood(
+    public static final RegistryObject<Item> APPLESAUCE = ItemHelper.registerItem(
             "splattered_applesauce", ITEMS, new Item.Properties().food(foodItem(
                     5,
                     0.3F,
@@ -34,6 +35,19 @@ public class GrassyKnollItems {
                     0.0F,
                     0,
                     0)),
+            TAB
+    );
+    public static final RegistryObject<Item> ANGRY_APPLE = ItemHelper.registerItem(
+            "angry_apples", ITEMS, new Item.Properties().food(foodItem(
+                    8,
+                    0.4F,
+                    false,
+                    true,
+                    false,
+                    Effects.WEAKNESS,
+                    1.0F,
+                    30,
+                    1)),
             TAB
     );
 

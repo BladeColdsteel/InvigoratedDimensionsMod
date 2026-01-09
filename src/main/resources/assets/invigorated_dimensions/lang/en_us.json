@@ -22,6 +22,7 @@
   "item.invigorated_dimensions.ghost_essence": "Ghost-Type Essence",
   "item.invigorated_dimensions.psychic_essence": "Psychic-Type Essence",
   "item.invigorated_dimensions.flying_essence": "Flying-Type Essence",
+  "item.invigorated_dimensions.fossil_bones": "Fossilized Bones",
   "entity.invigorated_dimensions.fossilized_trader": "Fossilized Trader",
   "entity.invigorated_dimensions.emerald_projectile": "Emerald Projectile",
 
@@ -150,6 +151,7 @@
   "block.invigorated_dimensions.grassy_knoll_portal": "Grassy Knoll Portal",
   "item.invigorated_dimensions.grassy_activator": "Grassy Portal Activator",
   "item.invigorated_dimensions.splattered_applesauce": "Splattered Applesauce",
+  "item.invigorated_dimensions.angry_apples": "Angry Apples",
   "entity.invigorated_dimensions.angry_treant": "Angry Treant",
 
   "block.invigorated_dimensions.bugged_logs": "Bugged Log",

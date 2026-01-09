@@ -10,13 +10,20 @@ import com.bladecoldsteel.invigorateddimensions.electrichighlands.block.Electric
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.entity.ElectricHighlandsEntityTypes;
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.item.ElectricHighlandsItems;
 import com.bladecoldsteel.invigorateddimensions.emberwilds.block.EmberwildsBlocks;
+import com.bladecoldsteel.invigorateddimensions.emberwilds.entity.EmberwildsEntityTypes;
+import com.bladecoldsteel.invigorateddimensions.emberwilds.item.EmberwildsItems;
 import com.bladecoldsteel.invigorateddimensions.feywildexpanse.block.FeywildExpanseBlocks;
 import com.bladecoldsteel.invigorateddimensions.ghastlymarsh.block.GhastlyMarshBlocks;
 import com.bladecoldsteel.invigorateddimensions.grassyknoll.block.GrassyKnollBlocks;
+import com.bladecoldsteel.invigorateddimensions.grassyknoll.entity.GrassyKnollEntityTypes;
+import com.bladecoldsteel.invigorateddimensions.grassyknoll.item.GrassyKnollItems;
 import com.bladecoldsteel.invigorateddimensions.infinitedungeon.block.InfiniteDungeonBlocks;
 import com.bladecoldsteel.invigorateddimensions.insectoidparadisio.block.InsectoidParadisioBlocks;
 import com.bladecoldsteel.invigorateddimensions.metallicmountains.block.MetallicMountainsBlocks;
+import com.bladecoldsteel.invigorateddimensions.overworld.entity.OverworldEntityTypes;
+import com.bladecoldsteel.invigorateddimensions.overworld.item.OverworldItems;
 import com.bladecoldsteel.invigorateddimensions.terranata.block.TerraNataBlocks;
+import com.bladecoldsteel.invigorateddimensions.universal.block.UniversalBlocks;
 import com.bladecoldsteel.invigorateddimensions.universal.datageneration.provider.IDBlockLootTableProvider;
 import com.bladecoldsteel.invigorateddimensions.valleydeath.block.ValleyDeathBlocks;
 import com.bladecoldsteel.invigorateddimensions.waterydepths.block.WateryDepthsBlocks;
@@ -46,6 +53,7 @@ import net.minecraft.state.properties.DoubleBlockHalf;
 import net.minecraft.util.IItemProvider;
 import net.minecraft.util.ResourceLocation;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -776,6 +784,19 @@ public class IDLootTables extends LootTableProvider {
     public static class Entities extends EntityLootTables {
         @Override
         protected void addTables() {
+            //Rock
+
+            //Flying
+
+            //Poison
+
+            //Ice
+
+            //Dragon
+
+            //Psychic
+
+            //Electric
             this.add(ElectricHighlandsEntityTypes.CHARGED_CRAWLER.get(), LootTable.lootTable()
                     .withPool(LootPool.lootPool()
                             .setRolls(ConstantRange.exactly(1))
@@ -790,11 +811,83 @@ public class IDLootTables extends LootTableProvider {
                                                     new EnchantmentPredicate(Enchantments.MOB_LOOTING, MinMaxBounds.IntBound.exactly(3))
                                             )
                                     )))));
+
+            //Fire
+            this.add(EmberwildsEntityTypes.FIRE_LORD.get(), LootTable.lootTable()
+                    .withPool(LootPool.lootPool()
+                            .setRolls(ConstantRange.exactly(1))
+                            .add(ItemLootEntry.lootTableItem(Items.LAVA_BUCKET)
+                                    .apply(SetCount.setCount(RandomValueRange.between(0.0F, 1.0F)))
+                                    .apply(LootingEnchantBonus.lootingMultiplier(RandomValueRange.between(0.0F, 1.0F)))
+                                    .when(KilledByPlayer.killedByPlayer()))
+                            .add(ItemLootEntry.lootTableItem(Items.BLAZE_POWDER)
+                                    .apply(SetCount.setCount(RandomValueRange.between(0.0F, 2.0F)))
+                                    .apply(LootingEnchantBonus.lootingMultiplier(RandomValueRange.between(0.0F, 6.0F)))
+                                    .when(KilledByPlayer.killedByPlayer()))));
+
+            //Fairy
+
+            //Ghost
+
+            //Grass
+            this.add(GrassyKnollEntityTypes.ANGRY_TREANT.get(), LootTable.lootTable()
+                    .withPool(LootPool.lootPool()
+                            .setRolls(ConstantRange.exactly(1))
+                            .add(ItemLootEntry.lootTableItem(GrassyKnollItems.ANGRY_APPLE.get())
+                                    .apply(SetCount.setCount(RandomValueRange.between(0.0F, 4.0F)))
+                                    .apply(LootingEnchantBonus.lootingMultiplier(RandomValueRange.between(0.0F, 4.0F)))
+                                    .when(KilledByPlayer.killedByPlayer()))
+                            .add(ItemLootEntry.lootTableItem(GrassyKnollBlocks.LOG.get())
+                                    .apply(SetCount.setCount(RandomValueRange.between(0.0F, 16.0F)))
+                                    .apply(LootingEnchantBonus.lootingMultiplier(RandomValueRange.between(0.0F, 48.0F)))
+                                    .when(KilledByPlayer.killedByPlayer()))
+                            .add(ItemLootEntry.lootTableItem(UniversalBlocks.CRYSTALLIZED_LEAVES.get())
+                                    .apply(SetCount.setCount(RandomValueRange.between(0.0F, 16.0F)))
+                                    .apply(LootingEnchantBonus.lootingMultiplier(RandomValueRange.between(0.0F, 48.0F)))
+                                    .when(KilledByPlayer.killedByPlayer()))
+                            .add(ItemLootEntry.lootTableItem(Items.STICK)
+                                    .apply(SetCount.setCount(RandomValueRange.between(0.0F, 16.0F)))
+                                    .apply(LootingEnchantBonus.lootingMultiplier(RandomValueRange.between(0.0F, 48.0F)))
+                                    .when(KilledByPlayer.killedByPlayer()))));
+
+            //Fighting
+
+            //Bug
+
+            //Steel
+
+            //Overworld
+            this.add(OverworldEntityTypes.FOSSIL_TRADER.get(), LootTable.lootTable()
+                    .withPool(LootPool.lootPool()
+                            .setRolls(ConstantRange.exactly(1))
+                            .add(ItemLootEntry.lootTableItem(Items.EMERALD)
+                                    .apply(SetCount.setCount(RandomValueRange.between(0.0F, 8.0F)))
+                                    .apply(LootingEnchantBonus.lootingMultiplier(RandomValueRange.between(0.0F, 8.0F)))
+                                    .when(KilledByPlayer.killedByPlayer()))
+                            .add(ItemLootEntry.lootTableItem(OverworldItems.FOSSILIZED_BONES.get())
+                                    .apply(SetCount.setCount(RandomValueRange.between(0.0F, 2.0F)))
+                                    .apply(LootingEnchantBonus.lootingMultiplier(RandomValueRange.between(0.0F, 4.0F)))
+                                    .when(KilledByPlayer.killedByPlayer()))
+                            .add(ItemLootEntry.lootTableItem(Items.LEATHER)
+                                    .apply(SetCount.setCount(RandomValueRange.between(0.0F, 2.0F)))
+                                    .apply(LootingEnchantBonus.lootingMultiplier(RandomValueRange.between(0.0F, 4.0F)))
+                                    .when(KilledByPlayer.killedByPlayer()))));
+
+            //Ground
+
+            //Dark
+
+            //Water
         }
 
         @Override
         protected Iterable<EntityType<?>> getKnownEntities() {
-            return ElectricHighlandsEntityTypes.ENTITY_TYPES.getEntries().stream().map(Supplier::get).collect(Collectors.toList());
+            List<EntityType<?>> entities = new ArrayList<>();
+
+            ElectricHighlandsEntityTypes.ENTITY_TYPES.getEntries().forEach(e -> entities.add(e.get()));
+            GrassyKnollEntityTypes.ENTITY_TYPES.getEntries().forEach(e -> entities.add(e.get()));
+
+            return entities;
         }
     }
 }
