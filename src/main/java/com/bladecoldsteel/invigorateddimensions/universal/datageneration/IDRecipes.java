@@ -10,6 +10,7 @@ import com.bladecoldsteel.invigorateddimensions.dreamland.block.DreamlandBlocks;
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.block.ElectricHighlandsBlocks;
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.item.ElectricHighlandsItems;
 import com.bladecoldsteel.invigorateddimensions.emberwilds.block.EmberwildsBlocks;
+import com.bladecoldsteel.invigorateddimensions.emberwilds.item.EmberwildsItems;
 import com.bladecoldsteel.invigorateddimensions.feywildexpanse.block.FeywildExpanseBlocks;
 import com.bladecoldsteel.invigorateddimensions.ghastlymarsh.block.GhastlyMarshBlocks;
 import com.bladecoldsteel.invigorateddimensions.grassyknoll.block.GrassyKnollBlocks;
@@ -276,6 +277,9 @@ public class IDRecipes extends IDRecipeProvider {
         makeMinecraftButton(EmberwildsBlocks.STONE_BUTTON, Blocks.END_STONE).save(consumer);
         makeMinecraftPressurePlate(EmberwildsBlocks.STONE_PRESSURE_PLATE, Blocks.END_STONE).save(consumer);
             //Smelting
+
+            //Items
+
 
         //Fairy
             //Wooden

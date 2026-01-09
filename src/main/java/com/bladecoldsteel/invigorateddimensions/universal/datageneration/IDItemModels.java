@@ -15,6 +15,7 @@ import com.bladecoldsteel.invigorateddimensions.dreamland.item.DreamlandItems;
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.block.ElectricHighlandsBlocks;
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.item.ElectricHighlandsItems;
 import com.bladecoldsteel.invigorateddimensions.emberwilds.block.EmberwildsBlocks;
+import com.bladecoldsteel.invigorateddimensions.emberwilds.item.EmberwildsItems;
 import com.bladecoldsteel.invigorateddimensions.feywildexpanse.block.FeywildExpanseBlocks;
 import com.bladecoldsteel.invigorateddimensions.feywildexpanse.item.FeywildExpanseItems;
 import com.bladecoldsteel.invigorateddimensions.ghastlymarsh.block.GhastlyMarshBlocks;
@@ -451,7 +452,7 @@ public class IDItemModels extends IDItemModelProvider {
         //Hoe
 
         //Helmet
-
+        normalItem(EmberwildsItems.FIRE_LORD_CROWN);
         //Chestplate
 
         //Leggings

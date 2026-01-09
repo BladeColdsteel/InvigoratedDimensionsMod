@@ -30,6 +30,8 @@ import com.bladecoldsteel.invigorateddimensions.electrichighlands.tileentity.Ele
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.util.ElectricHighlandsSoundEvents;
 import com.bladecoldsteel.invigorateddimensions.emberwilds.block.EmberwildsBlocks;
 import com.bladecoldsteel.invigorateddimensions.emberwilds.block.EmberwildsWoodTypes;
+import com.bladecoldsteel.invigorateddimensions.emberwilds.entity.EmberwildsEntityTypes;
+import com.bladecoldsteel.invigorateddimensions.emberwilds.entity.render.FireLordRenderer;
 import com.bladecoldsteel.invigorateddimensions.emberwilds.item.EmberwildsItems;
 import com.bladecoldsteel.invigorateddimensions.feywildexpanse.block.FeywildExpanseBlocks;
 import com.bladecoldsteel.invigorateddimensions.feywildexpanse.block.FeywildExpanseWoodTypes;
@@ -171,6 +173,7 @@ public class InvigoratedDimensions
         //Fire
         EmberwildsBlocks.register(eventBus);
         EmberwildsItems.register(eventBus);
+        EmberwildsEntityTypes.register(eventBus);
         //Dragon
         DraconicRiftBlocks.register(eventBus);
         DraconicRiftItems.register(eventBus);
@@ -388,6 +391,7 @@ public class InvigoratedDimensions
 
         //Fire
         RenderTypeLookup.setRenderLayer(EmberwildsBlocks.SAPLING.get(), RenderType.cutout());
+        RenderingRegistry.registerEntityRenderingHandler(EmberwildsEntityTypes.FIRE_LORD.get(), FireLordRenderer::new);
 
         //Dragon
         RenderTypeLookup.setRenderLayer(DraconicRiftBlocks.SAPLING.get(), RenderType.cutout());
