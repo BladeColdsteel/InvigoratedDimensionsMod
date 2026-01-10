@@ -1,6 +1,6 @@
 package com.bladecoldsteel.invigorateddimensions.emberwilds.entity.model;
 
-import com.bladecoldsteel.invigorateddimensions.emberwilds.entity.custom.FireLordEntity;
+import com.bladecoldsteel.invigorateddimensions.emberwilds.entity.custom.boss.FireLordEntity;
 import net.minecraft.client.renderer.entity.model.AbstractZombieModel;
 
 public class FireLordModel<T extends FireLordEntity> extends AbstractZombieModel<T> {

@@ -1,7 +1,7 @@
 package com.bladecoldsteel.invigorateddimensions.emberwilds.entity.render;
 
 import com.bladecoldsteel.invigorateddimensions.InvigoratedDimensions;
-import com.bladecoldsteel.invigorateddimensions.emberwilds.entity.custom.FireLordEntity;
+import com.bladecoldsteel.invigorateddimensions.emberwilds.entity.custom.boss.FireLordEntity;
 import com.bladecoldsteel.invigorateddimensions.emberwilds.entity.model.FireLordModel;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import net.minecraft.client.renderer.IRenderTypeBuffer;

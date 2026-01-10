@@ -1,4 +1,4 @@
-package com.bladecoldsteel.invigorateddimensions.emberwilds.entity.custom;
+package com.bladecoldsteel.invigorateddimensions.emberwilds.entity.custom.boss;
 
 import com.bladecoldsteel.invigorateddimensions.config.InvigoratedDimensionsConfig;
 import com.bladecoldsteel.invigorateddimensions.emberwilds.item.EmberwildsItems;
@@ -38,30 +38,30 @@ public class FireLordEntity extends MonsterEntity{
     public static AttributeModifierMap.MutableAttribute setCustomAttributes() {
         if (InvigoratedDimensionsConfig.DIFFICULTY_MODE.get().equalsIgnoreCase("progressive")) {
             return MonsterEntity.createMobAttributes()
-                    .add(Attributes.MAX_HEALTH, 400.0D)
-                    .add(Attributes.ARMOR, 1.0D)
-                    .add(Attributes.ARMOR_TOUGHNESS, 0.0D)
-                    .add(Attributes.KNOCKBACK_RESISTANCE, 0.5D)
-                    .add(Attributes.MOVEMENT_SPEED, 0.4D)
-                    .add(Attributes.FOLLOW_RANGE, 55.0D)
-                    .add(Attributes.ATTACK_DAMAGE, 9.0D);
-        } else if (InvigoratedDimensionsConfig.DIFFICULTY_MODE.get().equalsIgnoreCase("linear")) {
-            return MonsterEntity.createMobAttributes()
-                    .add(Attributes.MAX_HEALTH, 350.0D)
-                    .add(Attributes.ARMOR, 1.0D)
-                    .add(Attributes.ARMOR_TOUGHNESS, 0.0D)
+                    .add(Attributes.MAX_HEALTH, 325.0D)
+                    .add(Attributes.ARMOR, 3.0D)
+                    .add(Attributes.ARMOR_TOUGHNESS, 1.0D)
                     .add(Attributes.KNOCKBACK_RESISTANCE, 0.5D)
                     .add(Attributes.MOVEMENT_SPEED, 0.4D)
                     .add(Attributes.FOLLOW_RANGE, 50.0D)
+                    .add(Attributes.ATTACK_DAMAGE, 8.0D);
+        } else if (InvigoratedDimensionsConfig.DIFFICULTY_MODE.get().equalsIgnoreCase("linear")) {
+            return MonsterEntity.createMobAttributes()
+                    .add(Attributes.MAX_HEALTH, 275.0D)
+                    .add(Attributes.ARMOR, 4.0D)
+                    .add(Attributes.ARMOR_TOUGHNESS, 1.5D)
+                    .add(Attributes.KNOCKBACK_RESISTANCE, 0.5D)
+                    .add(Attributes.MOVEMENT_SPEED, 0.4D)
+                    .add(Attributes.FOLLOW_RANGE, 45.0D)
                     .add(Attributes.ATTACK_DAMAGE, 7.0D);
         } else {
             return MonsterEntity.createMobAttributes()
-                    .add(Attributes.MAX_HEALTH, 350.0D)
-                    .add(Attributes.ARMOR, 1.0D)
-                    .add(Attributes.ARMOR_TOUGHNESS, 0.0D)
+                    .add(Attributes.MAX_HEALTH, 275.0D)
+                    .add(Attributes.ARMOR, 4.0D)
+                    .add(Attributes.ARMOR_TOUGHNESS, 1.5D)
                     .add(Attributes.KNOCKBACK_RESISTANCE, 0.5D)
                     .add(Attributes.MOVEMENT_SPEED, 0.4D)
-                    .add(Attributes.FOLLOW_RANGE, 50.0D)
+                    .add(Attributes.FOLLOW_RANGE, 45.0D)
                     .add(Attributes.ATTACK_DAMAGE, 7.0D);
         }
     }

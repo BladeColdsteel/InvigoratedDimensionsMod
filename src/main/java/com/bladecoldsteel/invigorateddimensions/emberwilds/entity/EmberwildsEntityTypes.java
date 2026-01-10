@@ -1,7 +1,7 @@
 package com.bladecoldsteel.invigorateddimensions.emberwilds.entity;
 
 import com.bladecoldsteel.invigorateddimensions.InvigoratedDimensions;
-import com.bladecoldsteel.invigorateddimensions.emberwilds.entity.custom.FireLordEntity;
+import com.bladecoldsteel.invigorateddimensions.emberwilds.entity.custom.boss.FireLordEntity;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
 import net.minecraft.util.ResourceLocation;

@@ -78,31 +78,31 @@ public class AngryTreantEntity extends MonsterEntity implements IAnimatable, IRa
     public static AttributeModifierMap.MutableAttribute setCustomAttributes() {
         if (InvigoratedDimensionsConfig.DIFFICULTY_MODE.get().equalsIgnoreCase("progressive")) {
             return MonsterEntity.createMobAttributes()
-                    .add(Attributes.MAX_HEALTH, 200.0D)
-                    .add(Attributes.ARMOR, 3.0D)
-                    .add(Attributes.ARMOR_TOUGHNESS, 1.0D)
+                    .add(Attributes.MAX_HEALTH, 250.0D)
+                    .add(Attributes.ARMOR, 4.5D)
+                    .add(Attributes.ARMOR_TOUGHNESS, 1.5D)
                     .add(Attributes.KNOCKBACK_RESISTANCE, 0.75D)
-                    .add(Attributes.MOVEMENT_SPEED, 0.34D)
+                    .add(Attributes.MOVEMENT_SPEED, 0.2D)
                     .add(Attributes.FOLLOW_RANGE, 50.0D)
                     .add(Attributes.ATTACK_DAMAGE, 3.0D);
         } else if (InvigoratedDimensionsConfig.DIFFICULTY_MODE.get().equalsIgnoreCase("linear")) {
             return MonsterEntity.createMobAttributes()
                     .add(Attributes.MAX_HEALTH, 250.0D)
-                    .add(Attributes.ARMOR, 3.0D)
-                    .add(Attributes.ARMOR_TOUGHNESS, 1.0D)
+                    .add(Attributes.ARMOR, 5.0D)
+                    .add(Attributes.ARMOR_TOUGHNESS, 2.0D)
                     .add(Attributes.KNOCKBACK_RESISTANCE, 0.75D)
-                    .add(Attributes.MOVEMENT_SPEED, 0.3D)
+                    .add(Attributes.MOVEMENT_SPEED, 0.2D)
                     .add(Attributes.FOLLOW_RANGE, 45.0D)
                     .add(Attributes.ATTACK_DAMAGE, 5.0D);
         } else {
             return MonsterEntity.createMobAttributes()
-                    .add(Attributes.MAX_HEALTH, 200.0D)
-                    .add(Attributes.ARMOR, 3.0D)
-                    .add(Attributes.ARMOR_TOUGHNESS, 1.0D)
+                    .add(Attributes.MAX_HEALTH, 250.0D)
+                    .add(Attributes.ARMOR, 5.0D)
+                    .add(Attributes.ARMOR_TOUGHNESS, 2.0D)
                     .add(Attributes.KNOCKBACK_RESISTANCE, 0.75D)
-                    .add(Attributes.MOVEMENT_SPEED, 0.34D)
-                    .add(Attributes.FOLLOW_RANGE, 50.0D)
-                    .add(Attributes.ATTACK_DAMAGE, 3.0D);
+                    .add(Attributes.MOVEMENT_SPEED, 0.2D)
+                    .add(Attributes.FOLLOW_RANGE, 45.0D)
+                    .add(Attributes.ATTACK_DAMAGE, 5.0D);
         }
     }
 
