@@ -74,6 +74,12 @@ There's a new biome and Dimension for each type to make Pokemon feel more reward
     ordering = "AFTER"
     side = "BOTH"
 [[dependencies.invigorated_dimensions]]
+    modId = "geckolib3"
+    mandatory = true
+    versionRange = "[3.0.106,)"
+    ordering = "AFTER"
+    side = "BOTH"
+[[dependencies.invigorated_dimensions]]
     modId = "jei"
     mandatory = false
     versionRange = "[7.7.1.153,)"
