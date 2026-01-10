@@ -16,7 +16,7 @@ apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 apply plugin: 'org.spongepowered.mixin'
 
-version = '1.16.5-0.2.0'
+version = '1.16.5-0.2.1-Beta'
 group = 'com.bladecoldsteel.invigorateddimensions' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'invigorateddimensions'
 
