@@ -36,6 +36,12 @@ public class UniversalBlocks {
     public static final RegistryObject<Block> RIFT_BLOCK = registerBlock("rift_block",
             () -> new RiftBlock(AbstractBlock.Properties.of(Material.STONE)));
 
+    public static final RegistryObject<Block> PORTAL_CHARGING_BLOCK = registerBlock("portal_charging_block",
+            () -> new Block(AbstractBlock.Properties.of(Material.STONE)));
+
+    public static final RegistryObject<Block> PORTAL_CHARGING_BLOCK_REDSTONE = registerBlock("redstone_portal_charging_block",
+            () -> new Block(AbstractBlock.Properties.of(Material.STONE)));
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);

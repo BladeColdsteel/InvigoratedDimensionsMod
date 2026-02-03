@@ -35,7 +35,8 @@ public class GrassyKnollItems {
                     0.0F,
                     0,
                     0)),
-            TAB
+            TAB,
+            64
     );
     public static final RegistryObject<Item> ANGRY_APPLE = ItemHelper.registerItem(
             "angry_apples", ITEMS, new Item.Properties().food(foodItem(
@@ -48,7 +49,8 @@ public class GrassyKnollItems {
                     1.0F,
                     30,
                     1)),
-            TAB
+            TAB,
+            64
     );
 
     public static void register(IEventBus eventBus) {

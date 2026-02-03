@@ -68,7 +68,5 @@ public class ShrineStructure extends AbstractSurfaceStructure {
             this.calculateBoundingBox();
 
         }
-
-
     }
 }

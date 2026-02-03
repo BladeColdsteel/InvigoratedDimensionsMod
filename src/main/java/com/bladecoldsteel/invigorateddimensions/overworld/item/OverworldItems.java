@@ -19,7 +19,8 @@ public class OverworldItems {
             "fossil_bones", ITEMS, new Item.Properties()
                     .stacksTo(16)
                     .rarity(Rarity.UNCOMMON),
-            TAB
+            TAB,
+            64
     );
 
 
