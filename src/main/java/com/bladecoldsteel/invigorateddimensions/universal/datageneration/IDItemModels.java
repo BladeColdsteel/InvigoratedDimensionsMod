@@ -28,6 +28,7 @@ import com.bladecoldsteel.invigorateddimensions.insectoidparadisio.block.Insecto
 import com.bladecoldsteel.invigorateddimensions.insectoidparadisio.item.InsectoidParadisioItems;
 import com.bladecoldsteel.invigorateddimensions.metallicmountains.block.MetallicMountainsBlocks;
 import com.bladecoldsteel.invigorateddimensions.metallicmountains.item.MetallicMountainsItems;
+import com.bladecoldsteel.invigorateddimensions.overworld.item.OverworldItems;
 import com.bladecoldsteel.invigorateddimensions.terranata.block.TerraNataBlocks;
 import com.bladecoldsteel.invigorateddimensions.terranata.item.TerraNataItems;
 import com.bladecoldsteel.invigorateddimensions.universal.datageneration.provider.IDItemModelProvider;
@@ -442,15 +443,15 @@ public class IDItemModels extends IDItemModelProvider {
         normalItem(UniversalItems.WATER_ESSENCE);
         normalItem(UniversalItems.NORMAL_ESSENCE);
         //Sword
-
+        normalItem(ElectricHighlandsItems.VOLTCRYST_SWORD);
         //Pickaxe
-
+        normalItem(ElectricHighlandsItems.VOLTCRYST_PICKAXE);
         //Axe
-
+        normalItem(ElectricHighlandsItems.VOLTCRYST_AXE);
         //Shovel
-
+        normalItem(ElectricHighlandsItems.VOLTCRYST_SHOVEL);
         //Hoe
-
+        normalItem(ElectricHighlandsItems.VOLTCRYST_HOE);
         //Helmet
         normalItem(EmberwildsItems.FIRE_LORD_CROWN);
         //Chestplate
@@ -463,7 +464,11 @@ public class IDItemModels extends IDItemModelProvider {
         sign(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_SIGN);
         //Spawn Eggs
 
+        //Other Items
+        normalItem(OverworldItems.FOSSILIZED_BONES);
+        normalItem(ElectricHighlandsItems.LIGHTNING_BOLT);
         //Food
         normalItem(GrassyKnollItems.APPLESAUCE);
+        normalItem(GrassyKnollItems.ANGRY_APPLE);
     }
 }

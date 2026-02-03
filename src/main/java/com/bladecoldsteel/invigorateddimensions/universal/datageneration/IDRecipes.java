@@ -263,6 +263,12 @@ public class IDRecipes extends IDRecipeProvider {
         blastingRecipe(Items.GLOWSTONE, ElectricHighlandsBlocks.CHARGED_GLOWSTONE_ORE.get(), 0.7F).save(consumer, name("blast_charged_glowstone"));
         smeltingRecipe(ElectricHighlandsItems.VOLTCRYST.get(), ElectricHighlandsBlocks.CHARGED_VOLTCRYST_ORE.get(), 0.7F).save(consumer, name("smelt_charged_voltcryst"));
         blastingRecipe(ElectricHighlandsItems.VOLTCRYST.get(), ElectricHighlandsBlocks.CHARGED_VOLTCRYST_ORE.get(), 0.7F).save(consumer, name("blast_charged_voltcryst"));
+            //Tools
+        makeSword(ElectricHighlandsItems.VOLTCRYST_SWORD, ElectricHighlandsItems.VOLTCRYST);
+        makePickaxe(ElectricHighlandsItems.VOLTCRYST_PICKAXE, ElectricHighlandsItems.VOLTCRYST);
+        makeAxe(ElectricHighlandsItems.VOLTCRYST_AXE, ElectricHighlandsItems.VOLTCRYST);
+        makeShovel(ElectricHighlandsItems.VOLTCRYST_SHOVEL, ElectricHighlandsItems.VOLTCRYST);
+        makeHoe(ElectricHighlandsItems.VOLTCRYST_HOE, ElectricHighlandsItems.VOLTCRYST);
         //Fire
             //Wooden
         makePlanks(EmberwildsBlocks.PLANKS, EmberwildsBlocks.LOG).save(consumer);

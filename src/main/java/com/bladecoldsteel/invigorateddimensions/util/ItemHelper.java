@@ -18,11 +18,26 @@ public class ItemHelper {
     public static <T extends Item>RegistryObject<T> registerActivator(String name, DeferredRegister<Item> itemRegistry, Function<Item.Properties, T> itemFactory, ItemGroup tab) {
         return itemRegistry.register(name, () -> itemFactory.apply(new Item.Properties().tab(tab)));
     }
-    public static <T extends Item> RegistryObject<Item> registerItem(String name, DeferredRegister<Item> itemRegistry, Item.Properties itemFactory, ItemGroup tab) {
-        return itemRegistry.register(name, () -> new Item(itemFactory.tab(tab)));
+    public static <T extends Item> RegistryObject<Item> registerItem(String name, DeferredRegister<Item> itemRegistry, Item.Properties itemFactory, ItemGroup tab, int stackSize) {
+        return itemRegistry.register(name, () -> new Item(itemFactory.tab(tab).stacksTo(stackSize)));
     }
     public static <T extends Item> RegistryObject<ArmorItem> registerArmor(String name, DeferredRegister<Item> itemRegistry, ItemGroup tab, IArmorMaterial armorMaterial, EquipmentSlotType armorSlot) {
         return itemRegistry.register(name, () -> new ArmorItem(armorMaterial, armorSlot, new Item.Properties().tab(tab)));
+    }
+    public static <T extends Item> RegistryObject<SwordItem> registerSword(String name, DeferredRegister<Item> itemRegistry, ItemGroup tab, IItemTier toolMaterial, int attackDamage, float attackSpeed) {
+        return itemRegistry.register(name, () -> new SwordItem(toolMaterial, attackDamage, attackSpeed, new Item.Properties().tab(tab)));
+    }
+    public static <T extends Item> RegistryObject<PickaxeItem> registerPickaxe(String name, DeferredRegister<Item> itemRegistry, ItemGroup tab, IItemTier toolMaterial, int attackDamage, float attackSpeed) {
+        return itemRegistry.register(name, () -> new PickaxeItem(toolMaterial, attackDamage, attackSpeed, new Item.Properties().tab(tab)));
+    }
+    public static <T extends Item> RegistryObject<AxeItem> registerAxe(String name, DeferredRegister<Item> itemRegistry, ItemGroup tab, IItemTier toolMaterial, int attackDamage, float attackSpeed) {
+        return itemRegistry.register(name, () -> new AxeItem(toolMaterial, attackDamage, attackSpeed, new Item.Properties().tab(tab)));
+    }
+    public static <T extends Item> RegistryObject<ShovelItem> registerShovel(String name, DeferredRegister<Item> itemRegistry, ItemGroup tab, IItemTier toolMaterial, int attackDamage, float attackSpeed) {
+        return itemRegistry.register(name, () -> new ShovelItem(toolMaterial, attackDamage, attackSpeed, new Item.Properties().tab(tab)));
+    }
+    public static <T extends Item> RegistryObject<HoeItem> registerHoe(String name, DeferredRegister<Item> itemRegistry, ItemGroup tab, IItemTier toolMaterial, int attackDamage, float attackSpeed) {
+        return itemRegistry.register(name, () -> new HoeItem(toolMaterial, attackDamage, attackSpeed, new Item.Properties().tab(tab)));
     }
 
     public static Function<Item.Properties, UniversalActivatorItem> activatorItem(RegistryKey<World> destinationDimension, Supplier<? extends Block> portalBlock) {
@@ -32,12 +47,6 @@ public class ItemHelper {
                     .stacksTo(1)
                     .durability(1),
                 destinationDimension, portalBlock);
-    }
-
-    public static Supplier<SwordItem> swordItem(ItemTier itemTier, int baseDamage, float attackSpeed, int durability) {
-        return () -> new SwordItem(itemTier, baseDamage, attackSpeed, new Item.Properties()
-                .durability(durability)
-                .stacksTo(1));
     }
 
     public static Food foodItem(int nutrition, float saturation, boolean isMeat, boolean canAlwaysEat, boolean fastFood, Effect effects, float effectChance, int effectTimer, int effectLevel) {
