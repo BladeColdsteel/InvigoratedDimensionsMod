@@ -24,7 +24,9 @@ import com.bladecoldsteel.invigorateddimensions.electrichighlands.block.Electric
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.block.ElectricHighlandsWoodTypes;
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.effects.ElectricHighlandsEffects;
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.entity.ElectricHighlandsEntityTypes;
+import com.bladecoldsteel.invigorateddimensions.electrichighlands.entity.custom.projectiles.LightningItemProjectileEntity;
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.entity.render.ChargedCrawlerRender;
+import com.bladecoldsteel.invigorateddimensions.electrichighlands.entity.render.boss.RagingTempestRenderer;
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.item.ElectricHighlandsItems;
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.tileentity.ElectricHighlandsTileEntities;
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.util.ElectricHighlandsSoundEvents;
@@ -386,7 +388,11 @@ public class InvigoratedDimensions
         ClientRegistry.bindTileEntityRenderer(ElectricHighlandsTileEntities.SIGN_TILE_ENTITIES.get(),
                 SignTileEntityRenderer::new);
 
+        RenderingRegistry.registerEntityRenderingHandler(ElectricHighlandsEntityTypes.RAGING_TEMPEST.get(), RagingTempestRenderer::new);
+
         RenderingRegistry.registerEntityRenderingHandler(ElectricHighlandsEntityTypes.CHARGED_CRAWLER.get(), ChargedCrawlerRender::new);
+
+        RenderingRegistry.registerEntityRenderingHandler(ElectricHighlandsEntityTypes.LIGHTNING_BOLT_PROJECTILE.get(), entity -> new SpriteRenderer<>(entity, itemRenderer));
 
         //Water
         RenderTypeLookup.setRenderLayer(WateryDepthsBlocks.SAPLING.get(), RenderType.cutout());
