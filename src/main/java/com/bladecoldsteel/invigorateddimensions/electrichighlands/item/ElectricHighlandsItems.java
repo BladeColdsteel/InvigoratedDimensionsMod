@@ -30,15 +30,15 @@ public class ElectricHighlandsItems {
             () -> new Item(new Item.Properties().tab(ElectricHighlandsItemGroup.ELECTRIC_HIGHLANDS_GROUP)));
     //Tools
     public static final RegistryObject<SwordItem> VOLTCRYST_SWORD = ItemHelper.registerSword(
-            "voltcryst_sword", ITEMS, TAB, IDToolMaterials.VOLTCRYST, 2, 1.25F);
+            "voltcryst_sword", ITEMS, TAB, IDToolMaterials.VOLTCRYST, 2, 1.6F);
     public static final RegistryObject<PickaxeItem> VOLTCRYST_PICKAXE = ItemHelper.registerPickaxe(
-            "voltcryst_pickaxe", ITEMS, TAB, IDToolMaterials.VOLTCRYST, 0, 1.25F);
+            "voltcryst_pickaxe", ITEMS, TAB, IDToolMaterials.VOLTCRYST, 0, 1.2F);
     public static final RegistryObject<AxeItem> VOLTCRYST_AXE = ItemHelper.registerAxe(
-            "voltcryst_axe", ITEMS, TAB, IDToolMaterials.VOLTCRYST, 1, 1.25F);
+            "voltcryst_axe", ITEMS, TAB, IDToolMaterials.VOLTCRYST, 1, 0.8F);
     public static final RegistryObject<ShovelItem> VOLTCRYST_SHOVEL = ItemHelper.registerShovel(
-            "voltcryst_shovel", ITEMS, TAB, IDToolMaterials.VOLTCRYST, -2, 1.25F);
+            "voltcryst_shovel", ITEMS, TAB, IDToolMaterials.VOLTCRYST, -2, 1F);
     public static final RegistryObject<HoeItem> VOLTCRYST_HOE = ItemHelper.registerHoe(
-            "voltcryst_hoe", ITEMS, TAB, IDToolMaterials.VOLTCRYST, -2, 1.25F);
+            "voltcryst_hoe", ITEMS, TAB, IDToolMaterials.VOLTCRYST, -2, 1F);
     //Ingot
 
     //Sign

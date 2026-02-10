@@ -10,6 +10,7 @@ import com.bladecoldsteel.invigorateddimensions.world.dimension.ModDimensions;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
@@ -144,7 +145,7 @@ public class InfiniteDungeonBlocks {
     //Portal Blocks
     public static final RegistryObject<GeneralizedPortalBlock> PORTAL = BlockHelper.register(
             "infinite_dungeon_portal", BLOCKS, InfiniteDungeonItems.ITEMS,
-            BlockHelper.portalBlock(() -> InfiniteDungeonBlocks.PORTAL_FRAME.get(), () -> InfiniteDungeonBlocks.PORTAL.get(), ModDimensions.INFINITE_DUNGEON, ModPointsOfInterest.INFINITE_DUNGEON_PORTAL),
+            BlockHelper.portalBlock(() -> InfiniteDungeonBlocks.PORTAL_FRAME.get(), () -> InfiniteDungeonBlocks.PORTAL.get(), ModDimensions.INFINITE_DUNGEON,new ResourceLocation("infinite_dungeon_portal")),
             TAB
     );
     public static final RegistryObject<Block> PORTAL_FRAME = BlockHelper.register(

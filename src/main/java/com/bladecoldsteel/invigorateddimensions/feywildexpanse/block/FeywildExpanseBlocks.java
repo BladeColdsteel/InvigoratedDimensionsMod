@@ -13,6 +13,7 @@ import com.bladecoldsteel.invigorateddimensions.world.gen.features.trees.FairyTr
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
@@ -154,7 +155,7 @@ public class FeywildExpanseBlocks {
     //Portal Blocks
     public static final RegistryObject<GeneralizedPortalBlock> PORTAL = BlockHelper.register(
             "feywild_expanse_portal", BLOCKS, FeywildExpanseItems.ITEMS,
-            BlockHelper.portalBlock(() -> FeywildExpanseBlocks.PORTAL_FRAME.get(), () -> FeywildExpanseBlocks.PORTAL.get(), ModDimensions.FEYWILD_EXPANSE, ModPointsOfInterest.FEYWILD_EXPANSE_PORTAL),
+            BlockHelper.portalBlock(() -> FeywildExpanseBlocks.PORTAL_FRAME.get(), () -> FeywildExpanseBlocks.PORTAL.get(), ModDimensions.FEYWILD_EXPANSE, new ResourceLocation("feywild_expanse_portal")),
             TAB
     );
     public static final RegistryObject<Block> PORTAL_FRAME = BlockHelper.register(

@@ -11,6 +11,7 @@ import com.bladecoldsteel.invigorateddimensions.world.gen.features.trees.GroundT
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
@@ -150,7 +151,7 @@ public class TerraNataBlocks {
     //Portal Blocks
     public static final RegistryObject<GeneralizedPortalBlock> PORTAL = BlockHelper.register(
             "terra_nata_portal", BLOCKS, TerraNataItems.ITEMS,
-            BlockHelper.portalBlock(() -> TerraNataBlocks.PORTAL_FRAME.get(), () -> TerraNataBlocks.PORTAL.get(), ModDimensions.TERRA_NATA, ModPointsOfInterest.TERRA_NATA_PORTAL),
+            BlockHelper.portalBlock(() -> TerraNataBlocks.PORTAL_FRAME.get(), () -> TerraNataBlocks.PORTAL.get(), ModDimensions.TERRA_NATA, new ResourceLocation("terra_nata_portal")),
             TAB
     );
     public static final RegistryObject<Block> PORTAL_FRAME = BlockHelper.register(

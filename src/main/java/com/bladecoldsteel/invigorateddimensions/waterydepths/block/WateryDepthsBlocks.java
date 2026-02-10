@@ -11,6 +11,7 @@ import com.bladecoldsteel.invigorateddimensions.world.gen.features.trees.WaterTr
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
@@ -150,7 +151,7 @@ public class WateryDepthsBlocks {
     //Portal Blocks
     public static final RegistryObject<GeneralizedPortalBlock> PORTAL = BlockHelper.register(
             "watery_depths_portal", BLOCKS, WateryDepthsItems.ITEMS,
-            BlockHelper.portalBlock(() -> WateryDepthsBlocks.PORTAL_FRAME.get(), () -> WateryDepthsBlocks.PORTAL.get(), ModDimensions.WATERY_DEPTHS, ModPointsOfInterest.WATERY_DEPTHS_PORTAL),
+            BlockHelper.portalBlock(() -> WateryDepthsBlocks.PORTAL_FRAME.get(), () -> WateryDepthsBlocks.PORTAL.get(), ModDimensions.WATERY_DEPTHS, new ResourceLocation("watery_depths_portal")),
             TAB
     );
     public static final RegistryObject<Block> PORTAL_FRAME = BlockHelper.register(

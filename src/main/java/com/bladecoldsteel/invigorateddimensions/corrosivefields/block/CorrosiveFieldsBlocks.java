@@ -11,6 +11,7 @@ import com.bladecoldsteel.invigorateddimensions.world.gen.features.trees.PoisonT
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
@@ -150,7 +151,7 @@ public class CorrosiveFieldsBlocks {
     //Portal Blocks
     public static final RegistryObject<GeneralizedPortalBlock> PORTAL = BlockHelper.register(
             "corrosive_fields_portal", BLOCKS, CorrosiveFieldsItems.ITEMS,
-            BlockHelper.portalBlock(() -> CorrosiveFieldsBlocks.PORTAL_FRAME.get(), () -> CorrosiveFieldsBlocks.PORTAL.get(), ModDimensions.CORROSIVE_FIELDS, ModPointsOfInterest.CORROSIVE_FIELDS_PORTAL),
+            BlockHelper.portalBlock(() -> CorrosiveFieldsBlocks.PORTAL_FRAME.get(), () -> CorrosiveFieldsBlocks.PORTAL.get(), ModDimensions.CORROSIVE_FIELDS, new ResourceLocation("corrosive_fields_portal")),
             TAB
     );
     public static final RegistryObject<Block> PORTAL_FRAME = BlockHelper.register(

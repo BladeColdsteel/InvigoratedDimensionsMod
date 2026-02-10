@@ -7,6 +7,7 @@ import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.util.Direction;
 import net.minecraft.util.RegistryKey;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.TeleportationRepositioner;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.ChunkPos;
@@ -22,7 +23,7 @@ import net.minecraft.world.gen.Heightmap;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.server.TicketType;
 import net.minecraftforge.common.util.ITeleporter;
-import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.registries.ForgeRegistries;
 
 import javax.annotation.Nullable;
 import java.util.Comparator;
@@ -33,10 +34,10 @@ public class UniversalTeleporter implements ITeleporter {
     private final Block frameBlock;
     private final Block portalBlock;
     private final RegistryKey<World> destinationDimension;
-    private final RegistryObject<PointOfInterestType> poi;
+    private final ResourceLocation poi;
     protected final ServerWorld world;
 
-    public UniversalTeleporter(ServerWorld worldIn, Block frameBlock, Block portalBlock, RegistryKey<World> destinationDimension, RegistryObject<PointOfInterestType> poi) {
+    public UniversalTeleporter(ServerWorld worldIn, Block frameBlock, Block portalBlock, RegistryKey<World> destinationDimension, ResourceLocation poi) {
         this.frameBlock = frameBlock;
         this.portalBlock = portalBlock;
         this.destinationDimension = destinationDimension;
@@ -49,8 +50,12 @@ public class UniversalTeleporter implements ITeleporter {
 
         PointOfInterestManager poiManager = this.world.getPoiManager();
         poiManager.ensureLoadedAndValid(this.world, pos, 32);
-        Optional<PointOfInterest> optional = poiManager.getInSquare((poiType) ->
-                poiType == poi.get(), pos, 32, PointOfInterestManager.Status.ANY).min(Comparator.<PointOfInterest>comparingDouble((poi) ->
+        PointOfInterestType poiType = ForgeRegistries.POI_TYPES.getValue(this.poi);
+        if (poiType == null) {
+            return Optional.empty();
+        }
+        Optional<PointOfInterest> optional = poiManager.getInSquare((type) ->
+                type == poiType, pos, 32, PointOfInterestManager.Status.ANY).min(Comparator.<PointOfInterest>comparingDouble((poi) ->
                 poi.getPos().distSqr(pos)).thenComparingInt((poi) ->
                 poi.getPos().getY())).filter((poi) ->
                 this.world.getBlockState(poi.getPos()).hasProperty(BlockStateProperties.HORIZONTAL_AXIS));

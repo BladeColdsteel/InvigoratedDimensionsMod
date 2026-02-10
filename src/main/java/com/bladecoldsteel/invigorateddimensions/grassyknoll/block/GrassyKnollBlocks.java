@@ -11,6 +11,7 @@ import com.bladecoldsteel.invigorateddimensions.world.gen.features.trees.GrassTr
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
@@ -152,7 +153,7 @@ public class GrassyKnollBlocks {
     //Portal Blocks
     public static final RegistryObject<GeneralizedPortalBlock> PORTAL = BlockHelper.register(
             "grassy_knoll_portal", BLOCKS, GrassyKnollItems.ITEMS,
-            BlockHelper.portalBlock(() -> GrassyKnollBlocks.PORTAL_FRAME.get(), () -> GrassyKnollBlocks.PORTAL.get(), ModDimensions.GRASSY_KNOLL, ModPointsOfInterest.GRASSY_KNOLL_PORTAL),
+            BlockHelper.portalBlock(() -> GrassyKnollBlocks.PORTAL_FRAME.get(), () -> GrassyKnollBlocks.PORTAL.get(), ModDimensions.GRASSY_KNOLL, new ResourceLocation("grassy_knoll_portal")),
             TAB
     );
     public static final RegistryObject<Block> PORTAL_FRAME = BlockHelper.register(

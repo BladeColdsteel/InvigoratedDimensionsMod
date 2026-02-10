@@ -13,6 +13,7 @@ import com.bladecoldsteel.invigorateddimensions.world.dimension.ModDimensions;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
@@ -153,7 +154,7 @@ public class HeavenlyRealmBlocks {
     //Portal Blocks
     public static final RegistryObject<GeneralizedPortalBlock> PORTAL = BlockHelper.register(
             "celestial_realm_portal", BLOCKS, HeavenlyRealmItems.ITEMS,
-            BlockHelper.portalBlock(() -> HeavenlyRealmBlocks.PORTAL_FRAME.get(), () -> HeavenlyRealmBlocks.PORTAL.get(), ModDimensions.CELESTIAL_REALM, ModPointsOfInterest.CELESTIAL_REALM_PORTAL),
+            BlockHelper.portalBlock(() -> HeavenlyRealmBlocks.PORTAL_FRAME.get(), () -> HeavenlyRealmBlocks.PORTAL.get(), ModDimensions.CELESTIAL_REALM, new ResourceLocation("celestial_realm_portal")),
             TAB
     );
     public static final RegistryObject<Block> PORTAL_FRAME = BlockHelper.register(

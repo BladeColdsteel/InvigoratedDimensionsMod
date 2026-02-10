@@ -14,6 +14,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
@@ -205,7 +206,7 @@ public class ElectricHighlandsBlocks {
     //Portal Blocks
     public static final RegistryObject<GeneralizedPortalBlock> PORTAL = BlockHelper.register(
             "electric_highlands_portal", BLOCKS, ElectricHighlandsItems.ITEMS,
-            BlockHelper.portalBlock(() -> ElectricHighlandsBlocks.PORTAL_FRAME.get(), () -> ElectricHighlandsBlocks.PORTAL.get(), ModDimensions.ELECTRIC_HIGHLANDS, ModPointsOfInterest.ELECTRIC_HIGHLANDS_PORTAL),
+            BlockHelper.portalBlock(() -> ElectricHighlandsBlocks.PORTAL_FRAME.get(), () -> ElectricHighlandsBlocks.PORTAL.get(), ModDimensions.ELECTRIC_HIGHLANDS, new ResourceLocation("electric_highlands_portal")),
             TAB
     );
     public static final RegistryObject<Block> PORTAL_FRAME = BlockHelper.register(

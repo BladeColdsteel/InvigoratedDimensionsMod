@@ -11,6 +11,7 @@ import com.bladecoldsteel.invigorateddimensions.world.gen.features.trees.GhostTr
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
@@ -150,7 +151,7 @@ public class GhastlyMarshBlocks {
     //Portal Blocks
     public static final RegistryObject<GeneralizedPortalBlock> PORTAL = BlockHelper.register(
             "ghastly_marsh_portal", BLOCKS, GhastlyMarshItems.ITEMS,
-            BlockHelper.portalBlock(() -> GhastlyMarshBlocks.PORTAL_FRAME.get(), () -> GhastlyMarshBlocks.PORTAL.get(), ModDimensions.GHASTLY_MARSH, ModPointsOfInterest.GHASTLY_MARSH_PORTAL),
+            BlockHelper.portalBlock(() -> GhastlyMarshBlocks.PORTAL_FRAME.get(), () -> GhastlyMarshBlocks.PORTAL.get(), ModDimensions.GHASTLY_MARSH, new ResourceLocation("ghastly_marsh_portal")),
             TAB
     );
     public static final RegistryObject<Block> PORTAL_FRAME = BlockHelper.register(

@@ -13,6 +13,7 @@ import com.bladecoldsteel.invigorateddimensions.world.gen.features.trees.BugTree
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
@@ -152,7 +153,7 @@ public class InsectoidParadisioBlocks {
     //Portal Blocks
     public static final RegistryObject<GeneralizedPortalBlock> PORTAL = BlockHelper.register(
             "insectoid_paradisio_portal", BLOCKS, InsectoidParadisioItems.ITEMS,
-            BlockHelper.portalBlock(() -> InsectoidParadisioBlocks.PORTAL_FRAME.get(), () -> InsectoidParadisioBlocks.PORTAL.get(), ModDimensions.INSECTIOD_PARADISIO, ModPointsOfInterest.INSECTOID_PARADISIO_PORTAL),
+            BlockHelper.portalBlock(() -> InsectoidParadisioBlocks.PORTAL_FRAME.get(), () -> InsectoidParadisioBlocks.PORTAL.get(), ModDimensions.INSECTIOD_PARADISIO, new ResourceLocation("insectoid_paradisio_portal")),
             TAB
     );
     public static final RegistryObject<Block> PORTAL_FRAME = BlockHelper.register(

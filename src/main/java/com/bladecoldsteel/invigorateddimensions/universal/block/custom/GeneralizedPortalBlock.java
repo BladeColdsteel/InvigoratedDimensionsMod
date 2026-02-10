@@ -12,10 +12,7 @@ import net.minecraft.server.MinecraftServer;
 import net.minecraft.state.EnumProperty;
 import net.minecraft.state.StateContainer;
 import net.minecraft.state.properties.BlockStateProperties;
-import net.minecraft.util.Direction;
-import net.minecraft.util.RegistryKey;
-import net.minecraft.util.Rotation;
-import net.minecraft.util.SoundCategory;
+import net.minecraft.util.*;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.shapes.VoxelShape;
@@ -30,6 +27,7 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.eventbus.api.Cancelable;
 import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.registries.ForgeRegistries;
 
 import javax.annotation.Nullable;
 import java.util.Random;
@@ -42,9 +40,9 @@ public class GeneralizedPortalBlock extends Block {
     private final Supplier<? extends Block> frameBlock;
     private final Supplier<? extends Block> portalBlock;
     private final RegistryKey<World> destinationDimension;
-    private final RegistryObject<PointOfInterestType> poi;
+    private final ResourceLocation poi;
 
-    public GeneralizedPortalBlock(Properties properties, Supplier<? extends Block> frameBlock, Supplier<? extends Block> portalBlock, RegistryKey<World> destinationDimension, RegistryObject<PointOfInterestType> poi) {
+    public GeneralizedPortalBlock(Properties properties, Supplier<? extends Block> frameBlock, Supplier<? extends Block> portalBlock, RegistryKey<World> destinationDimension, ResourceLocation poi) {
         super(properties);
         this.frameBlock = frameBlock;
         this.portalBlock = portalBlock;

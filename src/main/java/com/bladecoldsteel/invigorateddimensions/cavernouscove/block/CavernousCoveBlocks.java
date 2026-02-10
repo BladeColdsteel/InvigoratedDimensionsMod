@@ -10,6 +10,7 @@ import com.bladecoldsteel.invigorateddimensions.world.dimension.ModDimensions;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
@@ -144,7 +145,7 @@ public class CavernousCoveBlocks {
     //Portal Blocks
     public static final RegistryObject<GeneralizedPortalBlock> PORTAL = BlockHelper.register(
             "cavernous_cove_portal", BLOCKS, CavernousCoveItems.ITEMS,
-            BlockHelper.portalBlock(() -> CavernousCoveBlocks.PORTAL_FRAME.get(), () -> CavernousCoveBlocks.PORTAL.get(), ModDimensions.CAVERNOUS_COVE, ModPointsOfInterest.CAVERNOUS_COVE_PORTAL),
+            BlockHelper.portalBlock(() -> CavernousCoveBlocks.PORTAL_FRAME.get(), () -> CavernousCoveBlocks.PORTAL.get(), ModDimensions.CAVERNOUS_COVE, new ResourceLocation("cavernous_cove_portal")),
             TAB
     );
     public static final RegistryObject<Block> PORTAL_FRAME = BlockHelper.register(

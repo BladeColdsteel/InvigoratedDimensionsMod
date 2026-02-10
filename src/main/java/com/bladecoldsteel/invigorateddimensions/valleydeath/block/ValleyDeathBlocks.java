@@ -11,6 +11,7 @@ import com.bladecoldsteel.invigorateddimensions.world.gen.features.trees.DarkTre
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
@@ -150,7 +151,7 @@ public class ValleyDeathBlocks {
     //Portal Blocks
     public static final RegistryObject<GeneralizedPortalBlock> PORTAL = BlockHelper.register(
             "valley_of_death_portal", BLOCKS, ValleyDeathItems.ITEMS,
-            BlockHelper.portalBlock(() -> ValleyDeathBlocks.PORTAL_FRAME.get(), () -> ValleyDeathBlocks.PORTAL.get(), ModDimensions.VALLEY_OF_DEATH, ModPointsOfInterest.VALLEY_DEATH_PORTAL),
+            BlockHelper.portalBlock(() -> ValleyDeathBlocks.PORTAL_FRAME.get(), () -> ValleyDeathBlocks.PORTAL.get(), ModDimensions.VALLEY_OF_DEATH, new ResourceLocation("valley_of_death_portal")),
             TAB
     );
     public static final RegistryObject<Block> PORTAL_FRAME = BlockHelper.register(

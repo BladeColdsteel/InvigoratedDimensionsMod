@@ -11,6 +11,7 @@ import com.bladecoldsteel.invigorateddimensions.world.gen.features.trees.IceTree
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
@@ -150,7 +151,7 @@ public class DeepTundraBlocks {
     //Portal Blocks
     public static final RegistryObject<GeneralizedPortalBlock> PORTAL = BlockHelper.register(
             "deep_tundra_portal", BLOCKS, DeepTundraItems.ITEMS,
-            BlockHelper.portalBlock(() -> DeepTundraBlocks.PORTAL_FRAME.get(), () -> DeepTundraBlocks.PORTAL.get(), ModDimensions.DEEP_TUNDRA, ModPointsOfInterest.DEEP_TUNDRA_PORTAL),
+            BlockHelper.portalBlock(() -> DeepTundraBlocks.PORTAL_FRAME.get(), () -> DeepTundraBlocks.PORTAL.get(), ModDimensions.DEEP_TUNDRA, new ResourceLocation("deep_tundra_portal")),
             TAB
     );
     public static final RegistryObject<Block> PORTAL_FRAME = BlockHelper.register(

@@ -11,6 +11,7 @@ import com.bladecoldsteel.invigorateddimensions.world.gen.features.trees.Psychic
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
@@ -150,7 +151,7 @@ public class DreamlandBlocks {
     //Portal Blocks
     public static final RegistryObject<GeneralizedPortalBlock> PORTAL = BlockHelper.register(
             "dreamland_portal", BLOCKS, DreamlandItems.ITEMS,
-            BlockHelper.portalBlock(() -> DreamlandBlocks.PORTAL_FRAME.get(), () -> DreamlandBlocks.PORTAL.get(), ModDimensions.DREAMLAND, ModPointsOfInterest.DREAMLAND_PORTAL),
+            BlockHelper.portalBlock(() -> DreamlandBlocks.PORTAL_FRAME.get(), () -> DreamlandBlocks.PORTAL.get(), ModDimensions.DREAMLAND, new ResourceLocation("dreamland_portal")),
             TAB
     );
     public static final RegistryObject<Block> PORTAL_FRAME = BlockHelper.register(

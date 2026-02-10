@@ -11,6 +11,7 @@ import com.bladecoldsteel.invigorateddimensions.world.gen.features.trees.SteelTr
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
@@ -150,7 +151,7 @@ public class MetallicMountainsBlocks {
     //Portal Blocks
     public static final RegistryObject<GeneralizedPortalBlock> PORTAL = BlockHelper.register(
             "metallic_mountains_portal", BLOCKS, MetallicMountainsItems.ITEMS,
-            BlockHelper.portalBlock(() -> MetallicMountainsBlocks.PORTAL_FRAME.get(), () -> MetallicMountainsBlocks.PORTAL.get(), ModDimensions.METALLIC_MOUNTAINS, ModPointsOfInterest.METALLIC_MOUNTAINS_PORTAL),
+            BlockHelper.portalBlock(() -> MetallicMountainsBlocks.PORTAL_FRAME.get(), () -> MetallicMountainsBlocks.PORTAL.get(), ModDimensions.METALLIC_MOUNTAINS, new ResourceLocation("metallic_mountains_portal")),
             TAB
     );
     public static final RegistryObject<Block> PORTAL_FRAME = BlockHelper.register(
