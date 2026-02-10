@@ -9,7 +9,7 @@ import java.util.function.Supplier;
 
 public enum IDToolMaterials implements IItemTier {
 
-    VOLTCRYST(3, 150, 4F, 12F, 10, () -> Ingredient.of(ElectricHighlandsItems.VOLTCRYST.get()));
+    VOLTCRYST(3, 150, 0F, 12F, 10, () -> Ingredient.of(ElectricHighlandsItems.VOLTCRYST.get()));
 
     private final int harvestLevel;
     private final int maxUses;
