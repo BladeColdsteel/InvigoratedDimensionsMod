@@ -1,10 +1,7 @@
 package com.bladecoldsteel.invigorateddimensions.universal.block;
 
 import com.bladecoldsteel.invigorateddimensions.InvigoratedDimensions;
-import com.bladecoldsteel.invigorateddimensions.universal.block.custom.CrystallizedLeavesBlock;
-import com.bladecoldsteel.invigorateddimensions.universal.block.custom.ElementalShrineBlock;
-import com.bladecoldsteel.invigorateddimensions.universal.block.custom.EnergySinkBlock;
-import com.bladecoldsteel.invigorateddimensions.universal.block.custom.RiftBlock;
+import com.bladecoldsteel.invigorateddimensions.universal.block.custom.*;
 import com.bladecoldsteel.invigorateddimensions.universal.item.UniversalItemGroup;
 import com.bladecoldsteel.invigorateddimensions.universal.item.UniversalItems;
 import net.minecraft.block.*;
@@ -36,11 +33,11 @@ public class UniversalBlocks {
     public static final RegistryObject<Block> RIFT_BLOCK = registerBlock("rift_block",
             () -> new RiftBlock(AbstractBlock.Properties.of(Material.STONE)));
 
-    public static final RegistryObject<Block> PORTAL_CHARGING_BLOCK = registerBlock("portal_charging_block",
-            () -> new Block(AbstractBlock.Properties.of(Material.STONE)));
+    public static final RegistryObject<RiftChargingBlock> PORTAL_CHARGING_BLOCK = registerBlock("rift_charging_block",
+            RiftChargingBlock::new);
 
-    public static final RegistryObject<Block> PORTAL_CHARGING_BLOCK_REDSTONE = registerBlock("redstone_portal_charging_block",
-            () -> new Block(AbstractBlock.Properties.of(Material.STONE)));
+    public static final RegistryObject<RiftRedstoneChargingBlock> PORTAL_CHARGING_BLOCK_REDSTONE = registerBlock("redstone_rift_charging_block",
+            RiftRedstoneChargingBlock::new);
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

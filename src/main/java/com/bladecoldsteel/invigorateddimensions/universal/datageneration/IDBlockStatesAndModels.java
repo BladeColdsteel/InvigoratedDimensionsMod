@@ -15,6 +15,7 @@ import com.bladecoldsteel.invigorateddimensions.infinitedungeon.block.InfiniteDu
 import com.bladecoldsteel.invigorateddimensions.insectoidparadisio.block.InsectoidParadisioBlocks;
 import com.bladecoldsteel.invigorateddimensions.metallicmountains.block.MetallicMountainsBlocks;
 import com.bladecoldsteel.invigorateddimensions.terranata.block.TerraNataBlocks;
+import com.bladecoldsteel.invigorateddimensions.universal.block.UniversalBlocks;
 import com.bladecoldsteel.invigorateddimensions.universal.datageneration.provider.IDBlockstateProvider;
 import com.bladecoldsteel.invigorateddimensions.valleydeath.block.ValleyDeathBlocks;
 import com.bladecoldsteel.invigorateddimensions.waterydepths.block.WateryDepthsBlocks;
@@ -453,5 +454,10 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
         block(TerraNataBlocks.PORTAL_FRAME);
         block(ValleyDeathBlocks.PORTAL_FRAME);
         block(WateryDepthsBlocks.PORTAL_FRAME);
+        //Multistate Blocks
+        poweredBlock(UniversalBlocks.PORTAL_CHARGING_BLOCK, "portal_charging_block", "portal_charging_block_side_off", "portal_charging_block_side_on",
+                "portal_charging_block_end_off", "portal_charging_block_end_on");
+        poweredAxisBlock(UniversalBlocks.PORTAL_CHARGING_BLOCK_REDSTONE, "redstone_portal_charging_block", "redstone_portal_charging_block_side_off", "redstone_portal_charging_block_side_on",
+                "redstone_portal_charging_block_end_off", "redstone_portal_charging_block_end_on");
     }
 }

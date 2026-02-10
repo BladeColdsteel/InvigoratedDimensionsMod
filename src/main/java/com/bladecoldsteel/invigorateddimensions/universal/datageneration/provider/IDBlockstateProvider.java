@@ -1,6 +1,7 @@
 package com.bladecoldsteel.invigorateddimensions.universal.datageneration.provider;
 
 import com.bladecoldsteel.invigorateddimensions.InvigoratedDimensions;
+import com.bladecoldsteel.invigorateddimensions.universal.block.custom.RiftChargingBlock;
 import net.minecraft.block.*;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.state.properties.AttachFace;
@@ -21,6 +22,72 @@ public abstract class IDBlockstateProvider extends BlockStateProvider {
 
     public void block(Supplier<? extends Block> block) {
         simpleBlock(block.get());
+    }
+
+    public void poweredAxisBlock(Supplier<? extends RotatedPillarBlock> block, String name, String offSide, String onSide, String offEnd, String onEnd) {
+        String baseName = name(block);
+
+        ModelFile off = models().cubeColumn(baseName + "_off", texture(offSide), texture(offEnd));
+        ModelFile on = models().cubeColumn(baseName + "_on", texture(onSide), texture(onEnd));
+
+        getVariantBuilder(block.get()).forAllStates(state -> {
+                    Direction.Axis axis = state.getValue(BlockStateProperties.AXIS);
+                    boolean powered = state.getValue(BlockStateProperties.POWERED);
+
+                    ModelFile model = powered ? on :off;
+
+                    int xRot = 0;
+                    int yRot = 0;
+
+                    if (axis == Direction.Axis.X) {
+                        xRot = 90;
+                        yRot = 90;
+                    } else if (axis == Direction.Axis.Z) {
+                        xRot = 90;
+                    }
+
+                    return ConfiguredModel.builder()
+                            .modelFile(model)
+                            .rotationX(xRot)
+                            .rotationY(yRot)
+                            .build();
+                });
+
+
+        itemModels().withExistingParent(baseName, off.getLocation());
+    }
+
+    public void poweredBlock(Supplier<? extends Block> block, String name, String offSide, String onSide, String offEnd, String onEnd) {
+        String baseName = name(block);
+
+        ModelFile off = models().cubeColumn(baseName + "_off", texture(offSide), texture(offEnd));
+        ModelFile on = models().cubeColumn(baseName + "_on", texture(onSide), texture(onEnd));
+
+        getVariantBuilder(block.get()).forAllStates(state -> {
+            Direction.Axis axis = state.getValue(BlockStateProperties.AXIS);
+            boolean powered = state.getValue(RiftChargingBlock.ACTIVE);
+
+            ModelFile model = powered ? on :off;
+
+            int xRot = 0;
+            int yRot = 0;
+
+            if (axis == Direction.Axis.X) {
+                xRot = 90;
+                yRot = 90;
+            } else if (axis == Direction.Axis.Z) {
+                xRot = 90;
+            }
+
+            return ConfiguredModel.builder()
+                    .modelFile(model)
+                    .rotationX(xRot)
+                    .rotationY(yRot)
+                    .build();
+        });
+
+
+        itemModels().withExistingParent(baseName, off.getLocation());
     }
 
     public void log(Supplier<? extends RotatedPillarBlock> block, String name) {

@@ -3,6 +3,8 @@
   "block.invigorated_dimensions.energy_sink": "Energy Sink",
   "block.invigorated_dimensions.elemental_shrine": "Elemental Shrine",
   "block.invigorated_dimensions.rift_block": "Dimensional Rift",
+  "block.invigorated_dimensions.rift_charging_block": "Rift Charger",
+  "block.invigorated_dimensions.redstone_rift_charging_block": "Rift Charger",
   "item.invigorated_dimensions.base_essence": "Pokemon Essence",
   "item.invigorated_dimensions.normal_essence": "Normal-Type Essence",
   "item.invigorated_dimensions.electric_essence": "Electric-Type Essence",

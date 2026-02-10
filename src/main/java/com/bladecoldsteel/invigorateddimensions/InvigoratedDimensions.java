@@ -147,80 +147,71 @@ public class InvigoratedDimensions
         forgeBus.addListener(EventPriority.NORMAL, DimensionPortalStructures::addDimensionalSpacing);
         forgeBus.addListener(EventPriority.NORMAL, UniversalStructures::addDimensionalSpacing);
         forgeBus.addListener(EventPriority.NORMAL, UniversalStructures::onBiomeLoad);
-        //Base
-        ModBiomesDatapack.register(eventBus);
-        CustomSurfaceBuilders.register(eventBus);
-        ModParticleTypes.register(eventBus);
-        ModPointsOfInterest.register(eventBus);
-        UniversalBlocks.register(eventBus);
-        UniversalItems.register(eventBus);
-        UniversalTileEntities.register(eventBus);
-        UniversalContainers.register(eventBus);
-        CustomFeatures.register(eventBus);
 
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, InvigoratedDimensionsConfig.SPEC, "invigorated-dimensions-common.toml");
         File configDir = FMLPaths.CONFIGDIR.get().toFile();
         PixelmonConfigModifier.updatePixelmonConfig(configDir);
-        //Overworld
-        OverworldItems.register(eventBus);
-        OverworldEntityTypes.register(eventBus);
-        //Electric
-        ElectricHighlandsItems.register(eventBus);
+
+        //Blocks
+        UniversalBlocks.register(eventBus);
         ElectricHighlandsBlocks.register(eventBus);
-        ElectricHighlandsSoundEvents.register(eventBus);
-        ElectricHighlandsTileEntities.register(eventBus);
-        ElectricHighlandsEntityTypes.register(eventBus);
-        ElectricHighlandsEffects.register(eventBus);
-        //Water
-        WateryDepthsItems.register(eventBus);
         WateryDepthsBlocks.register(eventBus);
-        //Fire
         EmberwildsBlocks.register(eventBus);
-        EmberwildsItems.register(eventBus);
-        EmberwildsEntityTypes.register(eventBus);
-        //Dragon
         DraconicRiftBlocks.register(eventBus);
-        DraconicRiftItems.register(eventBus);
-        //Grass
         GrassyKnollBlocks.register(eventBus);
-        GrassyKnollItems.register(eventBus);
-        GrassyKnollEntityTypes.register(eventBus);
-        //Bug
         InsectoidParadisioBlocks.register(eventBus);
-        InsectoidParadisioItems.register(eventBus);
-        //Dark
         ValleyDeathBlocks.register(eventBus);
-        ValleyDeathItems.register(eventBus);
-        //Fairy
         FeywildExpanseBlocks.register(eventBus);
-        FeywildExpanseItems.register(eventBus);
-        //Fighting
         InfiniteDungeonBlocks.register(eventBus);
-        InfiniteDungeonItems.register(eventBus);
-        //Ground
         TerraNataBlocks.register(eventBus);
-        TerraNataItems.register(eventBus);
-        //Flying
         HeavenlyRealmBlocks.register(eventBus);
-        HeavenlyRealmItems.register(eventBus);
-        //Ice
         DeepTundraBlocks.register(eventBus);
-        DeepTundraItems.register(eventBus);
-        //Poison
         CorrosiveFieldsBlocks.register(eventBus);
-        CorrosiveFieldsItems.register(eventBus);
-        //Psychic
         DreamlandBlocks.register(eventBus);
-        DreamlandItems.register(eventBus);
-        //Rock
         CavernousCoveBlocks.register(eventBus);
-        CavernousCoveItems.register(eventBus);
-        //Ghost
         GhastlyMarshBlocks.register(eventBus);
-        GhastlyMarshItems.register(eventBus);
-        //Steel
         MetallicMountainsBlocks.register(eventBus);
+        //Items
+        UniversalItems.register(eventBus);
+        OverworldItems.register(eventBus);
+        ElectricHighlandsItems.register(eventBus);
+        WateryDepthsItems.register(eventBus);
+        EmberwildsItems.register(eventBus);
+        DraconicRiftItems.register(eventBus);
+        GrassyKnollItems.register(eventBus);
+        InsectoidParadisioItems.register(eventBus);
+        ValleyDeathItems.register(eventBus);
+        FeywildExpanseItems.register(eventBus);
+        InfiniteDungeonItems.register(eventBus);
+        TerraNataItems.register(eventBus);
+        HeavenlyRealmItems.register(eventBus);
+        DeepTundraItems.register(eventBus);
+        CorrosiveFieldsItems.register(eventBus);
+        DreamlandItems.register(eventBus);
+        CavernousCoveItems.register(eventBus);
+        GhastlyMarshItems.register(eventBus);
         MetallicMountainsItems.register(eventBus);
+        //Entities
+        OverworldEntityTypes.register(eventBus);
+        ElectricHighlandsEntityTypes.register(eventBus);
+        EmberwildsEntityTypes.register(eventBus);
+        GrassyKnollEntityTypes.register(eventBus);
+        //Particles
+        ModParticleTypes.register(eventBus);
+        //Tile Entities
+        UniversalTileEntities.register(eventBus);
+        ElectricHighlandsTileEntities.register(eventBus);
+        //POI's
+        ModPointsOfInterest.register(eventBus);
+        //Sounds
+        ElectricHighlandsSoundEvents.register(eventBus);
+        //Effects
+        ElectricHighlandsEffects.register(eventBus);
+        //Other
+        ModBiomesDatapack.register(eventBus);
+        CustomSurfaceBuilders.register(eventBus);
+        UniversalContainers.register(eventBus);
+        CustomFeatures.register(eventBus);
 
         DeferredRegister<?>[] registers = {
                 //Universal

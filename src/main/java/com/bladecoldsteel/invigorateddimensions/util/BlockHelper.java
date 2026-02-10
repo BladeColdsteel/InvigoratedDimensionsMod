@@ -10,6 +10,7 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.util.RegistryKey;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.village.PointOfInterestType;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ToolType;
@@ -37,7 +38,7 @@ public class BlockHelper {
         return () -> new Block(buildProperties(Material.STONE, 50.0f, 50.0f, ToolType.PICKAXE, harvestLevel, SoundType.STONE, true));
     }
 
-    public static Supplier<GeneralizedPortalBlock> portalBlock(Supplier<? extends Block> frameBlock, Supplier<? extends Block> portalBlock, RegistryKey<World> dimensionID, RegistryObject<PointOfInterestType> poi) {
+    public static Supplier<GeneralizedPortalBlock> portalBlock(Supplier<? extends Block> frameBlock, Supplier<? extends Block> portalBlock, RegistryKey<World> dimensionID, ResourceLocation poi) {
         return () -> new GeneralizedPortalBlock(buildProperties(Material.STONE, 10000.0F, 10000.0F, ToolType.PICKAXE, 4, SoundType.STONE, true).noCollission(), frameBlock, portalBlock, dimensionID, poi);
     }
 

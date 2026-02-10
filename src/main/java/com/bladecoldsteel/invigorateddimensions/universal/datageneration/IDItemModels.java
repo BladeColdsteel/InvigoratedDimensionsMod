@@ -31,6 +31,7 @@ import com.bladecoldsteel.invigorateddimensions.metallicmountains.item.MetallicM
 import com.bladecoldsteel.invigorateddimensions.overworld.item.OverworldItems;
 import com.bladecoldsteel.invigorateddimensions.terranata.block.TerraNataBlocks;
 import com.bladecoldsteel.invigorateddimensions.terranata.item.TerraNataItems;
+import com.bladecoldsteel.invigorateddimensions.universal.block.UniversalBlocks;
 import com.bladecoldsteel.invigorateddimensions.universal.datageneration.provider.IDItemModelProvider;
 import com.bladecoldsteel.invigorateddimensions.universal.item.UniversalItems;
 import com.bladecoldsteel.invigorateddimensions.valleydeath.block.ValleyDeathBlocks;
@@ -470,5 +471,8 @@ public class IDItemModels extends IDItemModelProvider {
         //Food
         normalItem(GrassyKnollItems.APPLESAUCE);
         normalItem(GrassyKnollItems.ANGRY_APPLE);
+        //Redstone Controllable Blocks
+        itemBlock(UniversalBlocks.PORTAL_CHARGING_BLOCK, "rift_charging_block_off");
+        itemBlock(UniversalBlocks.PORTAL_CHARGING_BLOCK_REDSTONE, "rift_charging_block_off");
     }
 }
