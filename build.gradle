@@ -156,7 +156,7 @@ dependencies {
 
     embed 'org.yaml:snakeyaml:1.33' //YAML
 
-    //Use pixelmonRuntime for the runData configuration, also remember to change mods.TOML Pixelmon reference to mandatory=false
+    //Use pixelmonRuntime for the runData configuration, implementation for normal use, also remember to change mods.TOML Pixelmon reference to mandatory=false
     implementation fg.deobf("curse.maven:pixelmon-389487:5209074") //Pixelmon
 
     if (project.hasProperty('mixin_version')) {
@@ -167,6 +167,8 @@ dependencies {
     runtimeOnly fg.deobf ("mezz.jei:jei-1.16.5:7.7.1.153") //JEI
 
     implementation fg.deobf('software.bernie.geckolib:geckolib-forge-1.16.5:3.0.106') //GeckoLib
+
+    implementation fg.deobf("curse.maven:construction-wand-399558:3562328") //Construction Wand
 
 }
 
