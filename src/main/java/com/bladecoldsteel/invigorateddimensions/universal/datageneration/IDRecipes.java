@@ -40,6 +40,14 @@ public class IDRecipes extends IDRecipeProvider {
     protected void buildShapelessRecipes(Consumer<IFinishedRecipe> consumer) {
         //Rock
             //Wooden
+
+            //Stone
+        makeStairs(UniversalBlocks.ELEMENTAL_SHRINE_WALLS_STAIRS, UniversalBlocks.ELEMENTAL_SHRINE_WALLS).save(consumer);
+        makeSlab(UniversalBlocks.ELEMENTAL_SHRINE_WALLS_SLABS, UniversalBlocks.ELEMENTAL_SHRINE_WALLS).save(consumer);
+            //Smelting
+
+        //Rock
+            //Wooden
         makePlanks(CavernousCoveBlocks.PLANKS, CavernousCoveBlocks.LOG).save(consumer);
         makeWood(CavernousCoveBlocks.WOOD, CavernousCoveBlocks.LOG).save(consumer);
         makeStairs(CavernousCoveBlocks.WOODEN_STAIRS, CavernousCoveBlocks.PLANKS).save(consumer);

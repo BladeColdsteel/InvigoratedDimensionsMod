@@ -165,6 +165,7 @@ public class IDItemModels extends IDItemModelProvider {
         itemBlock(TerraNataBlocks.STONE_BRICKS);
         itemBlock(ValleyDeathBlocks.STONE_BRICKS);
         itemBlock(WateryDepthsBlocks.STONE_BRICKS);
+        itemBlock(UniversalBlocks.ELEMENTAL_SHRINE_WALLS);
         //Chiseled Stone Bricks
         itemBlock(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_CHISELED_STONE_BRICKS);
         //Walls
@@ -304,6 +305,7 @@ public class IDItemModels extends IDItemModelProvider {
         itemBlock(WateryDepthsBlocks.COBBLESTONE_STAIRS);
         itemBlock(WateryDepthsBlocks.STONE_STAIRS);
         itemBlock(WateryDepthsBlocks.STONE_BRICKS_STAIRS);
+        itemBlock(UniversalBlocks.ELEMENTAL_SHRINE_WALLS_STAIRS);
         //Slabs
         itemBlock(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_WOODEN_SLAB);
         itemBlock(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_COBBLESTONE_SLABS);
@@ -367,6 +369,7 @@ public class IDItemModels extends IDItemModelProvider {
         itemBlock(WateryDepthsBlocks.COBBLESTONE_SLAB);
         itemBlock(WateryDepthsBlocks.STONE_SLAB);
         itemBlock(WateryDepthsBlocks.STONE_BRICKS_SLAB);
+        itemBlock(UniversalBlocks.ELEMENTAL_SHRINE_WALLS_SLABS);
         //Saplings
         itemBlockFlat(InsectoidParadisioBlocks.SAPLING);
         itemBlockFlat(ValleyDeathBlocks.SAPLING);
@@ -474,5 +477,6 @@ public class IDItemModels extends IDItemModelProvider {
         //Redstone Controllable Blocks
         itemBlock(UniversalBlocks.PORTAL_CHARGING_BLOCK, "rift_charging_block_off");
         itemBlock(UniversalBlocks.PORTAL_CHARGING_BLOCK_REDSTONE, "rift_charging_block_off");
+        itemBlock(UniversalBlocks.UNACTIVATED_RIFT_BLOCK);
     }
 }

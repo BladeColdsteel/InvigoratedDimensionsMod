@@ -93,6 +93,15 @@ public class IDLootTables extends LootTableProvider {
     public static class Blocks extends IDBlockLootTableProvider {
         @Override
         protected void addTables() {
+            //Universal
+                //Wood
+
+                //Stone
+
+                //Ore
+
+                //Other
+
             //Rock
                 //Wood
             dropSelf(CavernousCoveBlocks.LOG);

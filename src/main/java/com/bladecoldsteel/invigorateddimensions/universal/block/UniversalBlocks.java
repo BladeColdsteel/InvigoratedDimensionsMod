@@ -8,6 +8,7 @@ import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraftforge.common.ToolType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -31,13 +32,36 @@ public class UniversalBlocks {
                     .noOcclusion()));
 
     public static final RegistryObject<Block> RIFT_BLOCK = registerBlock("rift_block",
-            () -> new RiftBlock(AbstractBlock.Properties.of(Material.STONE)));
+            () -> new RiftBlock(AbstractBlock.Properties.of(Material.STONE)
+                    .lightLevel(state -> 15)));
 
     public static final RegistryObject<RiftChargingBlock> PORTAL_CHARGING_BLOCK = registerBlock("rift_charging_block",
             RiftChargingBlock::new);
 
     public static final RegistryObject<RiftRedstoneChargingBlock> PORTAL_CHARGING_BLOCK_REDSTONE = registerBlock("redstone_rift_charging_block",
             RiftRedstoneChargingBlock::new);
+
+    public static final RegistryObject<Block> UNACTIVATED_RIFT_BLOCK = registerBlock("unactivated_rift_block",
+            () -> new Block(AbstractBlock.Properties.of(Material.STONE)
+                    .harvestTool(ToolType.PICKAXE)
+                    .harvestLevel(3)
+                    .noDrops()));
+
+    public static final RegistryObject<Block> ELEMENTAL_SHRINE_WALLS = registerBlock("shrine_walls",
+            () -> new Block(AbstractBlock.Properties.of(Material.STONE)
+                    .harvestTool(ToolType.PICKAXE)
+                    .harvestLevel(1)));
+
+    public static final RegistryObject<StairsBlock> ELEMENTAL_SHRINE_WALLS_STAIRS = registerBlock("shrine_walls_stairs",
+            () -> new StairsBlock(() -> ELEMENTAL_SHRINE_WALLS.get().defaultBlockState(),
+                    AbstractBlock.Properties.copy(Blocks.STONE_STAIRS)
+                            .harvestTool(ToolType.PICKAXE)
+                            .harvestLevel(1)));
+
+    public static final RegistryObject<SlabBlock> ELEMENTAL_SHRINE_WALLS_SLABS = registerBlock("shrine_walls_slabs",
+            () -> new SlabBlock(AbstractBlock.Properties.copy(Blocks.STONE_SLAB)
+                    .harvestTool(ToolType.PICKAXE)
+                    .harvestLevel(1)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

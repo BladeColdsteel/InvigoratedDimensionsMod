@@ -4,8 +4,7 @@ import com.bladecoldsteel.invigorateddimensions.InvigoratedDimensions;
 import com.bladecoldsteel.invigorateddimensions.universal.block.custom.RiftChargingBlock;
 import net.minecraft.block.*;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.state.properties.AttachFace;
-import net.minecraft.state.properties.BlockStateProperties;
+import net.minecraft.state.properties.*;
 import net.minecraft.util.Direction;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
@@ -32,6 +31,7 @@ public abstract class IDBlockstateProvider extends BlockStateProvider {
 
         getVariantBuilder(block.get()).forAllStates(state -> {
                     Direction.Axis axis = state.getValue(BlockStateProperties.AXIS);
+                    Direction facing = state.getValue(HorizontalBlock.FACING);
                     boolean powered = state.getValue(BlockStateProperties.POWERED);
 
                     ModelFile model = powered ? on :off;
@@ -39,11 +39,14 @@ public abstract class IDBlockstateProvider extends BlockStateProvider {
                     int xRot = 0;
                     int yRot = 0;
 
-                    if (axis == Direction.Axis.X) {
-                        xRot = 90;
-                        yRot = 90;
+                    if (axis == Direction.Axis.Y) {
+                        yRot = ((int) facing.toYRot()) % 360;
                     } else if (axis == Direction.Axis.Z) {
                         xRot = 90;
+                        yRot = (facing == Direction.NORTH) ? 180 : 0;
+                    } else {
+                        xRot = 90;
+                        yRot = (facing == Direction.EAST) ? 270 : 90;
                     }
 
                     return ConfiguredModel.builder()
@@ -57,7 +60,7 @@ public abstract class IDBlockstateProvider extends BlockStateProvider {
         itemModels().withExistingParent(baseName, off.getLocation());
     }
 
-    public void poweredBlock(Supplier<? extends Block> block, String name, String offSide, String onSide, String offEnd, String onEnd) {
+    public void poweredBlock(Supplier<? extends RotatedPillarBlock> block, String name, String offSide, String onSide, String offEnd, String onEnd) {
         String baseName = name(block);
 
         ModelFile off = models().cubeColumn(baseName + "_off", texture(offSide), texture(offEnd));
@@ -65,6 +68,7 @@ public abstract class IDBlockstateProvider extends BlockStateProvider {
 
         getVariantBuilder(block.get()).forAllStates(state -> {
             Direction.Axis axis = state.getValue(BlockStateProperties.AXIS);
+            Direction facing = state.getValue(HorizontalBlock.FACING);
             boolean powered = state.getValue(RiftChargingBlock.ACTIVE);
 
             ModelFile model = powered ? on :off;
@@ -72,11 +76,14 @@ public abstract class IDBlockstateProvider extends BlockStateProvider {
             int xRot = 0;
             int yRot = 0;
 
-            if (axis == Direction.Axis.X) {
-                xRot = 90;
-                yRot = 90;
+            if (axis == Direction.Axis.Y) {
+                yRot = ((int) facing.toYRot()) % 360;
             } else if (axis == Direction.Axis.Z) {
                 xRot = 90;
+                yRot = (facing == Direction.NORTH) ? 180 : 0;
+            } else {
+                xRot = 90;
+                yRot = (facing == Direction.EAST) ? 270 : 90;
             }
 
             return ConfiguredModel.builder()
@@ -88,6 +95,226 @@ public abstract class IDBlockstateProvider extends BlockStateProvider {
 
 
         itemModels().withExistingParent(baseName, off.getLocation());
+    }
+
+    public void tintedBlock(Supplier<? extends Block> block, String textureName, int tintIndex) {
+        String baseName = name(block);
+
+        ModelFile model = models().withExistingParent(baseName, mcLoc("block/block"))
+                .texture("all", texture(textureName))
+                .element()
+                    .from(0, 0, 0).to(16, 16, 16)
+                    .allFaces((dir, face) -> face.texture("#all").tintindex(tintIndex))
+                .end();
+
+        simpleBlock(block.get(), model);
+
+        itemModels().withExistingParent(baseName, model.getLocation());
+    }
+
+    public void tintedSlab(Supplier<? extends SlabBlock> block, Supplier<? extends Block> fullBlock) {
+        String slabName = name(block);
+        String fullName = name(fullBlock);
+        String textureName = name(fullBlock);
+
+        ModelFile bottom = models().withExistingParent(slabName, mcLoc("block/block"))
+                .texture("all", texture(textureName))
+                .element()
+                    .from(0, 0, 0).to(16, 8, 16)
+                .allFaces((dir, face) -> face.texture("#all").tintindex(0))
+                .end();
+
+        ModelFile top = models().withExistingParent(slabName + "_top", mcLoc("block/block"))
+                .texture("all", texture(textureName))
+                .element()
+                .from(0, 8, 0).to(16, 16, 16)
+                .allFaces((dir, face) -> face.texture("#all").tintindex(0))
+                .end();
+
+        ModelFile full = new ModelFile.ExistingModelFile(modLoc("block/" + fullName), models().existingFileHelper);
+
+        getVariantBuilder(block.get()).forAllStates(state -> {
+            SlabType type = state.getValue(SlabBlock.TYPE);
+
+            if (type == SlabType.TOP) {
+                return ConfiguredModel.builder().modelFile(top).build();
+            } else if (type == SlabType.DOUBLE) {
+                return ConfiguredModel.builder().modelFile(full).build();
+            } else {
+                return ConfiguredModel.builder().modelFile(bottom).build();
+            }
+        });
+
+        itemModels().withExistingParent(slabName, bottom.getLocation());
+    }
+
+    public void tintedStairs(Supplier<? extends StairsBlock> block, Supplier<? extends Block> fullBlock) {
+        String stairsName = name(block);
+        String textureName = name(fullBlock);
+
+        //Straight
+        ModelFile straightBottom = models().withExistingParent(stairsName, mcLoc("block/block"))
+                .texture("all", texture(textureName))
+                .element()
+                    .from(0, 0, 0).to(16, 8, 16)
+                    .allFaces((dir, face) -> face.texture("#all").tintindex(0))
+                .end()
+                .element()
+                    .from(0, 8, 8).to(16, 16, 16)
+                    .allFaces((dir, face) -> face.texture("#all").tintindex(0))
+                .end();
+
+        ModelFile straightTop = models().withExistingParent(stairsName + "_top", mcLoc("block/block"))
+                .texture("all", texture(textureName))
+                .element()
+                    .from(0, 8, 0).to(16, 16, 16)
+                    .allFaces((dir, face) -> face.texture("#all").tintindex(0))
+                .end()
+                .element()
+                    .from(0, 0, 8).to(16, 8, 16)
+                    .allFaces((dir, face) -> face.texture("#all").tintindex(0))
+                .end();
+        //Outer
+        ModelFile outerLeftBottom = models().withExistingParent(stairsName + "_outer_left", mcLoc("block/block"))
+                .texture("all", texture(textureName))
+                .element()
+                    .from(0, 8, 0).to(16, 16, 16)
+                    .allFaces((dir, face) -> face.texture("#all").tintindex(0))
+                .end()
+                .element()
+                    .from(0, 8, 8).to(8, 16, 16)
+                    .allFaces((dir, face) -> face.texture("#all").tintindex(0))
+                .end();
+
+        ModelFile outerLeftTop = models().withExistingParent(stairsName + "_outer_left_top", mcLoc("block/block"))
+                .texture("all", texture(textureName))
+                .element()
+                .from(0, 8, 0).to(16, 16, 16)
+                    .allFaces((dir, face) -> face.texture("#all").tintindex(0))
+                    .end()
+                .element()
+                    .from(0, 0, 8).to(8, 8, 16)
+                    .allFaces((dir, face) -> face.texture("#all").tintindex(0))
+                .end();
+
+        ModelFile outerRightBottom = models().withExistingParent(stairsName + "_outer_right", mcLoc("block/block"))
+                .texture("all", texture(textureName))
+                .element()
+                    .from(0, 0, 0).to(16, 8, 16)
+                    .allFaces((dir, face) -> face.texture("#all").tintindex(0))
+                .end()
+                .element()
+                    .from(8, 8, 8).to(16, 16, 16)
+                    .allFaces((dir, face) -> face.texture("#all").tintindex(0))
+                .end();
+
+        ModelFile outerRightTop = models().withExistingParent(stairsName + "_outer_right_top", mcLoc("block/block"))
+                .texture("all", texture(textureName))
+                .element()
+                    .from(0, 8, 0).to(16, 16, 16)
+                    .allFaces((dir, face) -> face.texture("#all").tintindex(0))
+                .end()
+                .element()
+                    .from(8, 0, 8).to(16, 8, 16)
+                    .allFaces((dir, face) -> face.texture("#all").tintindex(0))
+                .end();
+
+        //Inner
+        ModelFile innerLeftBottom = models().withExistingParent(stairsName + "_inner_left", mcLoc("block/block"))
+                .texture("all", texture(textureName))
+                .element()
+                    .from(0, 0, 0).to(16, 8, 16)
+                    .allFaces((dir, face) -> face.texture("#all").tintindex(0))
+                .end()
+                .element()
+                    .from(0, 8, 8).to(16, 16, 16)
+                    .allFaces((dir, face) -> face.texture("#all").tintindex(0))
+                .end()
+                .element()
+                    .from(8, 8, 0).to(16, 16, 8)
+                    .allFaces((dir, face) -> face.texture("#all").tintindex(0))
+                .end();
+
+        ModelFile innerLeftTop = models().withExistingParent(stairsName + "_inner_left_top", mcLoc("block/block"))
+                .texture("all", texture(textureName))
+                .element()
+                    .from(0, 8, 0).to(16, 16, 16)
+                    .allFaces((dir, face) -> face.texture("#all").tintindex(0))
+                .end()
+                .element()
+                    .from(0, 0, 8).to(16, 8, 16)
+                    .allFaces((dir, face) -> face.texture("#all").tintindex(0))
+                .end()
+                .element()
+                    .from(8, 0, 0).to(16, 8, 8)
+                    .allFaces((dir, face) -> face.texture("#all").tintindex(0))
+                .end();
+
+        ModelFile innerRightBottom = models().withExistingParent(stairsName + "_inner_right", mcLoc("block/block"))
+                .texture("all", texture(textureName))
+                .element()
+                    .from(0, 0, 0).to(16, 8, 16)
+                    .allFaces((dir, face) -> face.texture("#all").tintindex(0))
+                .end()
+                .element()
+                    .from(0, 8, 8).to(16, 16, 16)
+                    .allFaces((dir, face) -> face.texture("#all").tintindex(0))
+                .end()
+                .element()
+                    .from(0, 8, 0).to(8, 16, 8)
+                    .allFaces((dir, face) -> face.texture("#all").tintindex(0))
+                .end();
+
+        ModelFile innerRightTop = models().withExistingParent(stairsName + "_inner_right_top", mcLoc("block/block"))
+                .texture("all", texture(textureName))
+                .element()
+                    .from(0, 8, 0).to(16, 16, 16)
+                    .allFaces((dir, face) -> face.texture("#all").tintindex(0))
+                .end()
+                .element()
+                    .from(0, 0, 8).to(16, 8, 16)
+                    .allFaces((dir, face) -> face.texture("#all").tintindex(0))
+                .end()
+                .element()
+                    .from(0, 0, 0).to(8, 8, 8)
+                    .allFaces((dir, face) -> face.texture("#all").tintindex(0))
+                .end();
+
+        getVariantBuilder(block.get()).forAllStates(state -> {
+            Direction facing = state.getValue(StairsBlock.FACING);
+            Half half = state.getValue(StairsBlock.HALF);
+            StairsShape shape = state.getValue(StairsBlock.SHAPE);
+
+            boolean isTop = half == Half.TOP;
+
+            ModelFile model;
+            switch (shape) {
+                case OUTER_LEFT:
+                    model = isTop ? outerLeftTop : outerLeftBottom;
+                    break;
+                case OUTER_RIGHT:
+                    model = isTop ? outerRightTop : outerRightBottom;
+                    break;
+                case INNER_LEFT:
+                    model = isTop ? innerLeftTop : innerLeftBottom;
+                    break;
+                case INNER_RIGHT:
+                    model = isTop ? innerRightTop : innerRightBottom;
+                    break;
+                default:
+                    model = isTop ? straightTop : straightBottom;
+                    break;
+            }
+
+            int yRot = ((int)facing.toYRot()) % 360;
+
+            return ConfiguredModel.builder()
+                    .modelFile(model)
+                    .rotationY(yRot)
+                    .build();
+        });
+
+        itemModels().withExistingParent(stairsName, straightBottom.getLocation());
     }
 
     public void log(Supplier<? extends RotatedPillarBlock> block, String name) {

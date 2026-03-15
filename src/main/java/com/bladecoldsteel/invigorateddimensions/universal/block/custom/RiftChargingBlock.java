@@ -1,21 +1,22 @@
 package com.bladecoldsteel.invigorateddimensions.universal.block.custom;
 
 import com.bladecoldsteel.invigorateddimensions.universal.block.UniversalBlocks;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.RotatedPillarBlock;
-import net.minecraft.block.SoundType;
+import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
+import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.loot.LootContext;
 import net.minecraft.state.BooleanProperty;
+import net.minecraft.state.DirectionProperty;
 import net.minecraft.state.StateContainer;
+import net.minecraft.util.Direction;
 import net.minecraftforge.common.ToolType;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class RiftChargingBlock extends RotatedPillarBlock {
+    public static final DirectionProperty FACING = HorizontalBlock.FACING;
     public static final BooleanProperty ACTIVE = BooleanProperty.create("active");
 
     public RiftChargingBlock() {
@@ -25,8 +26,10 @@ public class RiftChargingBlock extends RotatedPillarBlock {
                 .harvestTool(ToolType.PICKAXE)
                 .harvestLevel(3)
                 .requiresCorrectToolForDrops());
-        BlockState defaultBoolean = this.stateDefinition.any().setValue(ACTIVE, false);
-        this.registerDefaultState(defaultBoolean);
+        this.registerDefaultState(this.stateDefinition.any()
+                .setValue(ACTIVE, false)
+                .setValue(FACING, Direction.NORTH)
+                .setValue(AXIS, Direction.Axis.Y));
     }
 
     @Override
@@ -39,6 +42,23 @@ public class RiftChargingBlock extends RotatedPillarBlock {
     @Override
     protected void createBlockStateDefinition(StateContainer.Builder<Block, BlockState> builder) {
         super.createBlockStateDefinition(builder);
-        builder.add(ACTIVE);
+        builder.add(FACING, ACTIVE);
+    }
+
+    @Override
+    public BlockState getStateForPlacement(BlockItemUseContext context) {
+        Direction.Axis axis = context.getClickedFace().getAxis();
+        Direction facing = context.getHorizontalDirection().getOpposite();
+
+        if (axis == Direction.Axis.X) {
+            facing = (facing.getAxis() == Direction.Axis.X) ? facing : Direction.EAST;
+        } else if (axis == Direction.Axis.Z) {
+            facing = (facing.getAxis() == Direction.Axis.Z) ? facing : Direction.SOUTH;
+        }
+
+        return this.defaultBlockState()
+                .setValue(AXIS, axis)
+                .setValue(FACING, facing)
+                .setValue(ACTIVE, false);
     }
 }

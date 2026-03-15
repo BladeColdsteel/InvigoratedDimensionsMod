@@ -146,6 +146,7 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
         block(TerraNataBlocks.STONE_BRICKS);
         block(ValleyDeathBlocks.STONE_BRICKS);
         block(WateryDepthsBlocks.STONE_BRICKS);
+        tintedBlock(UniversalBlocks.ELEMENTAL_SHRINE_WALLS, "shrine_walls", 0XFFFFFF);
         //Chiseled Stone Bricks
         block(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_CHISELED_STONE_BRICKS);
         //Walls
@@ -285,6 +286,7 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
         stairs(WateryDepthsBlocks.COBBLESTONE_STAIRS, WateryDepthsBlocks.COBBLESTONE);
         stairs(WateryDepthsBlocks.STONE_STAIRS, WateryDepthsBlocks.STONE);
         stairs(WateryDepthsBlocks.STONE_BRICKS_STAIRS, WateryDepthsBlocks.STONE_BRICKS);
+        tintedStairs(UniversalBlocks.ELEMENTAL_SHRINE_WALLS_STAIRS, UniversalBlocks.ELEMENTAL_SHRINE_WALLS);
         //Slabs
         slab(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_WOODEN_SLAB, ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_PLANKS);
         slab(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_COBBLESTONE_SLABS, ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_COBBLESTONE);
@@ -348,6 +350,7 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
         slab(WateryDepthsBlocks.COBBLESTONE_SLAB, WateryDepthsBlocks.COBBLESTONE);
         slab(WateryDepthsBlocks.STONE_SLAB, WateryDepthsBlocks.STONE);
         slab(WateryDepthsBlocks.STONE_BRICKS_SLAB, WateryDepthsBlocks.STONE_BRICKS);
+        tintedSlab(UniversalBlocks.ELEMENTAL_SHRINE_WALLS_SLABS, UniversalBlocks.ELEMENTAL_SHRINE_WALLS);
         //Doors
         door(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_DOOR, "electrically_charged");
         //Trapdoors
@@ -459,5 +462,6 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
                 "portal_charging_block_end_off", "portal_charging_block_end_on");
         poweredAxisBlock(UniversalBlocks.PORTAL_CHARGING_BLOCK_REDSTONE, "redstone_portal_charging_block", "redstone_portal_charging_block_side_off", "redstone_portal_charging_block_side_on",
                 "redstone_portal_charging_block_end_off", "redstone_portal_charging_block_end_on");
+        block(UniversalBlocks.UNACTIVATED_RIFT_BLOCK);
     }
 }
