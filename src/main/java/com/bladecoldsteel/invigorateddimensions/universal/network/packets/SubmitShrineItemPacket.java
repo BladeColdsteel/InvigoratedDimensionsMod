@@ -1,12 +1,14 @@
 package com.bladecoldsteel.invigorateddimensions.universal.network.packets;
 
 import com.bladecoldsteel.invigorateddimensions.universal.block.UniversalBlocks;
+import com.bladecoldsteel.invigorateddimensions.universal.block.custom.RiftChargingBlock;
 import com.bladecoldsteel.invigorateddimensions.universal.entity.tileentity.custom.ElementalShrineTileEntity;
 import com.bladecoldsteel.invigorateddimensions.universal.entity.tileentity.custom.RiftBlockTileEntity;
 import com.bladecoldsteel.invigorateddimensions.util.DimensionInfo;
 import com.bladecoldsteel.invigorateddimensions.util.DimensionInfoDataLoader;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.RedstoneLampBlock;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.item.Item;
@@ -58,6 +60,11 @@ public class SubmitShrineItemPacket {
 
             if (data == null) return;
 
+            if (shrine.isDimensionUnlocked(data.dimension)) {
+                player.displayClientMessage(new StringTextComponent("This dimension is already unlocked at this Shrine."), false);
+                return;
+            }
+
             if (shrine.getLockedDimension() != null && !shrine.getLockedDimension().equals(msg.dimensionId)) {
                 return;
             }
@@ -81,60 +88,94 @@ public class SubmitShrineItemPacket {
                 }
             }
             if (anySubmitted && shrine.hasSubmittedAll(data)) {
-                player.displayClientMessage(new StringTextComponent("All items submitted for teleportation!"), false);
+                player.displayClientMessage(new StringTextComponent("Rift opened to " + data.name), true);
 
                 int delayedTick = 40;
                 BlockPos shrinePos = shrine.getBlockPos();
-                BlockPos riftPos = shrinePos.below();
                 World world = player.level;
                 ServerWorld serverWorld = (ServerWorld) shrine.getLevel();
 
-                world.setBlockAndUpdate(shrinePos, Blocks.AIR.defaultBlockState());
+                BlockPos riftPos = shrine.getRandomAvailableRiftPos();
+                if (riftPos == null) {
+                    player.displayClientMessage(new StringTextComponent("No available rift positions remain."), false);
+                    return;
+                }
+
                 player.closeContainer();
-                serverWorld.getServer().tell(new TickDelayedTask(delayedTick, () -> {
-                    world.setBlockAndUpdate(shrinePos.below(), UniversalBlocks.RIFT_BLOCK.get().defaultBlockState());
+                if (serverWorld != null) {
+                    int now = serverWorld.getServer().getTickCount();
+
+                    serverWorld.getServer().tell(new TickDelayedTask(now + delayedTick * 2, () -> {
+                        activateChargingBlock(world, riftPos.north());
+                        world.playSound(null, shrinePos, SoundEvents.LEVER_CLICK, SoundCategory.BLOCKS, 0.5F, 0.5F);
+                        ((ServerWorld) world).sendParticles(ParticleTypes.CRIT,
+                                riftPos.getX() + 0.5, riftPos.getY() + 1, riftPos.getZ() + 0.5,
+                                50, 0.5, 1, 0.5, 0.05);
+                    }));
+                    serverWorld.getServer().tell(new TickDelayedTask(now + delayedTick * 3, () -> {
+                        activateChargingBlock(world, riftPos.south());
+                        world.playSound(null, shrinePos, SoundEvents.LEVER_CLICK, SoundCategory.BLOCKS, 0.5F, 0.5F);
+                        ((ServerWorld) world).sendParticles(ParticleTypes.CRIT,
+                                riftPos.getX() + 0.5, riftPos.getY() + 1, riftPos.getZ() + 0.5,
+                                50, 0.5, 1, 0.5, 0.05);
+                    }));
+                    serverWorld.getServer().tell(new TickDelayedTask(now + delayedTick * 4, () -> {
+                        activateChargingBlock(world, riftPos.east());
+                        world.playSound(null, shrinePos, SoundEvents.LEVER_CLICK, SoundCategory.BLOCKS, 0.5F, 0.5F);
+                        ((ServerWorld) world).sendParticles(ParticleTypes.CRIT,
+                                riftPos.getX() + 0.5, riftPos.getY() + 1, riftPos.getZ() + 0.5,
+                                50, 0.5, 1, 0.5, 0.05);
+                    }));
+                    serverWorld.getServer().tell(new TickDelayedTask(now + delayedTick * 5, () -> {
+                        activateChargingBlock(world, riftPos.west());
+                        world.playSound(null, shrinePos, SoundEvents.LEVER_CLICK, SoundCategory.BLOCKS, 0.5F, 0.5F);
+                        ((ServerWorld) world).sendParticles(ParticleTypes.CRIT,
+                                riftPos.getX() + 0.5, riftPos.getY() + 1, riftPos.getZ() + 0.5,
+                                50, 0.5, 1, 0.5, 0.05);
+                    }));
+                    serverWorld.getServer().tell(new TickDelayedTask(now + delayedTick * 8, () -> {
+                        world.setBlockAndUpdate(riftPos, UniversalBlocks.RIFT_BLOCK.get().defaultBlockState());
 
 
-                    TileEntity riftTile = world.getBlockEntity(riftPos);
-                    if (riftTile instanceof RiftBlockTileEntity) {
-                        ((RiftBlockTileEntity) riftTile).setTargetDimension(data.dimension);
+                        TileEntity riftTile = world.getBlockEntity(riftPos);
+                        if (riftTile instanceof RiftBlockTileEntity) {
+                            ((RiftBlockTileEntity) riftTile).setTargetDimension(data.dimension);
+                            shrine.markDimensionUnlocked(data.dimension);
+                            shrine.clearSubmission();
+                        }
+
+                        world.playSound(null, shrinePos, SoundEvents.LIGHTNING_BOLT_IMPACT, SoundCategory.BLOCKS, 0.5F, 0.5F);
+                        ((ServerWorld) world).sendParticles(ParticleTypes.CRIT,
+                                shrinePos.getX() - 0.5, shrinePos.getY(), shrinePos.getZ() - 0.5,
+                                50, 0.5, 1, 0.5, 0.05);
+
+
+                    }));
+                    world.playSound(null, shrinePos, SoundEvents.BEACON_ACTIVATE, SoundCategory.BLOCKS, 2.0F, 2.0F);
+
+                    float riftsActivated = (float) shrine.getActivatedRifts() / 16;
+
+                    BlockPos lamp1 = shrinePos.offset(-7, 2, -7);
+                    BlockPos lamp2 = shrinePos.offset(-7, 2, 7);
+                    BlockPos lamp3 = shrinePos.offset(7, 2, -7);
+                    BlockPos lamp4 = shrinePos.offset(7, 2, 7);
+
+                    if (riftsActivated == 1.0F) {
+                        world.setBlock(lamp1, world.getBlockState(lamp1).setValue(RedstoneLampBlock.LIT, true), 2);
+                        world.setBlock(lamp2, world.getBlockState(lamp2).setValue(RedstoneLampBlock.LIT, true), 2);
+                        world.setBlock(lamp3, world.getBlockState(lamp3).setValue(RedstoneLampBlock.LIT, true), 2);
+                        world.setBlock(lamp4, world.getBlockState(lamp4).setValue(RedstoneLampBlock.LIT, true), 2);
+                    } else if (riftsActivated >= 0.75F) {
+                        world.setBlock(lamp1, world.getBlockState(lamp1).setValue(RedstoneLampBlock.LIT, true), 2);
+                        world.setBlock(lamp2, world.getBlockState(lamp2).setValue(RedstoneLampBlock.LIT, true), 2);
+                        world.setBlock(lamp3, world.getBlockState(lamp3).setValue(RedstoneLampBlock.LIT, true), 2);
+                    } else if (riftsActivated >= 0.5F) {
+                        world.setBlock(lamp1, world.getBlockState(lamp1).setValue(RedstoneLampBlock.LIT, true), 2);
+                        world.setBlock(lamp2, world.getBlockState(lamp2).setValue(RedstoneLampBlock.LIT, true), 2);
+                    } else if (riftsActivated >= 0.25F){
+                        world.setBlock(lamp1, world.getBlockState(lamp1).setValue(RedstoneLampBlock.LIT, true), 2);
                     }
-
-                    world.playSound(null, shrinePos, SoundEvents.LIGHTNING_BOLT_IMPACT, SoundCategory.BLOCKS, 0.5F, 0.5F);
-                    ((ServerWorld) world).sendParticles(ParticleTypes.CRIT,
-                            shrinePos.getX() - 0.5, shrinePos.getY(), shrinePos.getZ() - 0.5,
-                            50, 0.5, 1, 0.5, 0.05);
-                }));
-
-                serverWorld.getServer().tell(new TickDelayedTask(delayedTick * 2, () -> {
-                    world.setBlockAndUpdate(riftPos.north(), Blocks.STONE_BRICKS.defaultBlockState());
-                    world.playSound(null, shrinePos, SoundEvents.LIGHTNING_BOLT_IMPACT, SoundCategory.BLOCKS, 0.5F, 0.5F);
-                    ((ServerWorld) world).sendParticles(ParticleTypes.CRIT,
-                            riftPos.getX() + 0.5, riftPos.getY() + 1, riftPos.getZ() + 0.5,
-                            50, 0.5, 1, 0.5, 0.05);
-                }));
-                serverWorld.getServer().tell(new TickDelayedTask(delayedTick * 3, () -> {
-                    world.setBlockAndUpdate(riftPos.south(), Blocks.STONE_BRICKS.defaultBlockState());
-                    world.playSound(null, shrinePos, SoundEvents.LIGHTNING_BOLT_IMPACT, SoundCategory.BLOCKS, 0.5F, 0.5F);
-                    ((ServerWorld) world).sendParticles(ParticleTypes.CRIT,
-                            riftPos.getX() + 0.5, riftPos.getY() + 1, riftPos.getZ() + 0.5,
-                            50, 0.5, 1, 0.5, 0.05);
-                }));
-                serverWorld.getServer().tell(new TickDelayedTask(delayedTick * 4, () -> {
-                    world.setBlockAndUpdate(riftPos.east(), Blocks.STONE_BRICKS.defaultBlockState());
-                    world.playSound(null, shrinePos, SoundEvents.LIGHTNING_BOLT_IMPACT, SoundCategory.BLOCKS, 0.5F, 0.5F);
-                    ((ServerWorld) world).sendParticles(ParticleTypes.CRIT,
-                            riftPos.getX() + 0.5, riftPos.getY() + 1, riftPos.getZ() + 0.5,
-                            50, 0.5, 1, 0.5, 0.05);
-                }));
-                serverWorld.getServer().tell(new TickDelayedTask(delayedTick * 5, () -> {
-                    world.setBlockAndUpdate(riftPos.west(), Blocks.STONE_BRICKS.defaultBlockState());
-                    world.playSound(null, shrinePos, SoundEvents.LIGHTNING_BOLT_IMPACT, SoundCategory.BLOCKS, 0.5F, 0.5F);
-                    ((ServerWorld) world).sendParticles(ParticleTypes.CRIT,
-                            riftPos.getX() + 0.5, riftPos.getY() + 1, riftPos.getZ() + 0.5,
-                            50, 0.5, 1, 0.5, 0.05);
-                }));
-                world.playSound(null, shrinePos, SoundEvents.BEACON_ACTIVATE, SoundCategory.BLOCKS, 2.0F, 2.0F);
+                }
             }
 
             BlockState state = shrine.getLevel().getBlockState(msg.pos);
@@ -162,5 +203,12 @@ public class SubmitShrineItemPacket {
         player.inventory.setChanged();
 
         return removed;
+    }
+
+    private static void activateChargingBlock(World world, BlockPos pos) {
+        BlockState state = world.getBlockState(pos);
+        if (state.getBlock() instanceof RiftChargingBlock && state.hasProperty(RiftChargingBlock.ACTIVE)) {
+            world.setBlockAndUpdate(pos, state.setValue(RiftChargingBlock.ACTIVE, true));
+        }
     }
 }

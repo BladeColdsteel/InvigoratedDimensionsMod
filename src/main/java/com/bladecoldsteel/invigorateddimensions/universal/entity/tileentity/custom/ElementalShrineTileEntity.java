@@ -1,5 +1,6 @@
 package com.bladecoldsteel.invigorateddimensions.universal.entity.tileentity.custom;
 
+import com.bladecoldsteel.invigorateddimensions.universal.block.UniversalBlocks;
 import com.bladecoldsteel.invigorateddimensions.universal.screens.custom.containers.ElementalShrineContainer;
 import com.bladecoldsteel.invigorateddimensions.universal.entity.tileentity.UniversalTileEntities;
 import com.bladecoldsteel.invigorateddimensions.util.DimensionInfo;
@@ -19,18 +20,19 @@ import net.minecraft.tileentity.ITickableTileEntity;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraftforge.registries.ForgeRegistries;
 
 import javax.annotation.Nullable;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class ElementalShrineTileEntity extends TileEntity implements ITickableTileEntity, INamedContainerProvider {
     private ResourceLocation selectedDimension = null;
     private final Map<Item, Integer> submittedCounts = new HashMap<>();
     private ResourceLocation lockedDimension;
+    private final Set<ResourceLocation> unlockedDimensions = new HashSet<>();
 
     public ElementalShrineTileEntity(TileEntityType<?> tileEntityType) {
         super(tileEntityType);
@@ -59,6 +61,7 @@ public class ElementalShrineTileEntity extends TileEntity implements ITickableTi
     public void setSelectedDimension(ResourceLocation dimension) {
         if (this.selectedDimension == null) {
             this.selectedDimension = dimension;
+            setChanged();
         }
     }
 
@@ -104,6 +107,78 @@ public class ElementalShrineTileEntity extends TileEntity implements ITickableTi
 
     public void setLockedDimension(ResourceLocation dimension) {
         this.lockedDimension = dimension;
+        setChanged();
+    }
+
+    public BlockPos getRandomAvailableRiftPos() {
+        List<BlockPos> available = new ArrayList<>();
+
+        for (BlockPos pos : getRiftPos()) {
+            BlockState state = level.getBlockState(pos);
+            if (state.getBlock() == UniversalBlocks.UNACTIVATED_RIFT_BLOCK.get()) {
+                available.add(pos);
+            }
+        }
+
+        if (available.isEmpty()) {
+            return null;
+        }
+
+        return available.get(level.random.nextInt(available.size()));
+    }
+
+    private List<BlockPos> getRiftPos() {
+        BlockPos pos = getBlockPos();
+        List<BlockPos> list = new ArrayList<>();
+
+        list.add(pos.offset(-9, -10, 9));
+        list.add(pos.offset(-7, -10, -4));
+        list.add(pos.offset(-7, -10, 4));
+        list.add(pos.offset(-4, -10, -7));
+        list.add(pos.offset(-4, -10, 7));
+        list.add(pos.offset(0, -10, 0));
+        list.add(pos.offset(4, -10, -7));
+        list.add(pos.offset(4, -10, 7));
+        list.add(pos.offset(7, -10, -4));
+        list.add(pos.offset(7, -10, 4));
+        list.add(pos.offset(9, -10, -9));
+        list.add(pos.offset(9, -10, 9));
+
+        list.add(pos.offset(-5, -2, -5));
+        list.add(pos.offset(-5, -2, 5));
+        list.add(pos.offset(5, -2, -5));
+        list.add(pos.offset(5, -2, 5));
+
+        return list;
+    }
+
+    public boolean isDimensionUnlocked(ResourceLocation dim) {
+        return unlockedDimensions.contains(dim);
+    }
+
+    public void markDimensionUnlocked(ResourceLocation dim) {
+        unlockedDimensions.add(dim);
+        setChanged();
+    }
+
+    public void clearSubmission() {
+        submittedCounts.clear();
+        lockedDimension = null;
+        selectedDimension = null;
+        setChanged();
+    }
+
+    public int getActivatedRifts(){
+        List<BlockPos> available = new ArrayList<>();
+
+        for (BlockPos pos : getRiftPos()) {
+            BlockState state = level.getBlockState(pos);
+            if (state.getBlock() == UniversalBlocks.UNACTIVATED_RIFT_BLOCK.get()) {
+                available.add(pos);
+            }
+        }
+
+        return 16 - available.size();
     }
 
     @Override
@@ -115,20 +190,31 @@ public class ElementalShrineTileEntity extends TileEntity implements ITickableTi
         if (lockedDimension != null) {
             nbt.putString("LockedDimension", lockedDimension.toString());
         }
-        ListNBT list = new ListNBT();
+        ListNBT submittedList = new ListNBT();
         for (Map.Entry<Item, Integer> entry : submittedCounts.entrySet()) {
             CompoundNBT itemNbt = new CompoundNBT();
             itemNbt.putString("Item", entry.getKey().getRegistryName().toString());
             itemNbt.putInt("Count", entry.getValue());
-            list.add(itemNbt);
+            submittedList.add(itemNbt);
         }
-        nbt.put("SubmittedCounts", list);
+        ListNBT unlockedList = new ListNBT();
+        for (ResourceLocation dimension : unlockedDimensions) {
+            CompoundNBT dimNbt = new CompoundNBT();
+            dimNbt.putString("Dimension", dimension.toString());
+            unlockedList.add(dimNbt);
+        }
+        nbt.put("SubmittedCounts", submittedList);
+        nbt.put("UnlockedDimensions", unlockedList);
         return nbt;
     }
 
     @Override
     public void load(BlockState state, CompoundNBT nbt) {
         super.load(state, nbt);
+
+        this.selectedDimension = null;
+        this.lockedDimension = null;
+
         if (nbt.contains("SelectedDimension")) {
             this.selectedDimension = new ResourceLocation(nbt.getString("SelectedDimension"));
         }
@@ -137,14 +223,21 @@ public class ElementalShrineTileEntity extends TileEntity implements ITickableTi
         }
 
         submittedCounts.clear();
-        ListNBT list = nbt.getList("SubmittedCounts", 10);
-        for (INBT tag : list) {
+        ListNBT submittedList = nbt.getList("SubmittedCounts", 10);
+        for (INBT tag : submittedList) {
             CompoundNBT itemNBT = (CompoundNBT) tag;
             Item item = ForgeRegistries.ITEMS.getValue(new ResourceLocation(itemNBT.getString("Item")));
             int count = itemNBT.getInt("Count");
             if (item != null) {
                 submittedCounts.put(item, count);
             }
+        }
+
+        unlockedDimensions.clear();
+        ListNBT unlockedList = nbt.getList("UnlockedDimensions", 10);
+        for (INBT tag : unlockedList) {
+            CompoundNBT dimNbt = (CompoundNBT) tag;
+            unlockedDimensions.add(new ResourceLocation(dimNbt.getString("Dimension")));
         }
     }
 

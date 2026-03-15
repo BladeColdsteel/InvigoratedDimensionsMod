@@ -17,6 +17,8 @@ import net.minecraft.world.gen.feature.structure.Structure;
 import net.minecraft.world.gen.feature.structure.StructureStart;
 import net.minecraft.world.gen.feature.structure.VillageConfig;
 import net.minecraft.world.gen.feature.template.TemplateManager;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class ShrineStructure extends AbstractSurfaceStructure {
 
@@ -30,6 +32,8 @@ public class ShrineStructure extends AbstractSurfaceStructure {
     }
 
     public static class Start extends StructureStart<NoFeatureConfig> {
+        private static final Logger LOGGER = LogManager.getLogger();
+
         public Start(Structure<NoFeatureConfig> structureIn, int chunkX, int chunkZ, MutableBoundingBox mutableBoundingBox, int referenceIn, long seedIn) {
             super(structureIn, chunkX, chunkZ, mutableBoundingBox, referenceIn, seedIn);
 
@@ -40,13 +44,15 @@ public class ShrineStructure extends AbstractSurfaceStructure {
             int x = (chunkX << 4) + 7;
             int z = (chunkZ << 4) + 7;
 
+            int entranceDepth = 34;
             int terrainHeight = chunkGenerator.getBaseHeight(x, z, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES);
-            BlockPos blockPos = new BlockPos(x, terrainHeight, z);
+            int generationY = terrainHeight - entranceDepth;
+            BlockPos blockPos = new BlockPos(x, generationY, z);
 
             JigsawManager.addPieces(
                     dynamicRegistries,
-                    new VillageConfig(() -> dynamicRegistries.registryOrThrow(Registry.TEMPLATE_POOL_REGISTRY).get(new ResourceLocation(InvigoratedDimensions.MOD_ID, "elemental_shrine_structure/start_pool")), 10),
-                    AbstractVillagePiece::new,
+                    new VillageConfig(() -> dynamicRegistries.registryOrThrow(Registry.TEMPLATE_POOL_REGISTRY).get(new ResourceLocation(InvigoratedDimensions.MOD_ID, "elemental_shrine_structure/main_path_connector")), 10),
+                    (tm, piece, pos, ground, rot, box) -> new ShrinePiece(tm, piece, pos, ground, rot, box),
                     chunkGenerator,
                     templateManager,
                     blockPos,
@@ -55,18 +61,10 @@ public class ShrineStructure extends AbstractSurfaceStructure {
                     false,
                     false);
 
-            int minPieceY = this.pieces.stream()
-                    .mapToInt(p -> p.getBoundingBox().y0)
-                    .min()
-                    .orElse(terrainHeight);
-
-            final int GROUND_OFFSET = 1;
-
-            int dy = (terrainHeight + GROUND_OFFSET) - minPieceY;
-            if (dy != 0) this.pieces.forEach(p -> p.move(0, dy, 0));
+            LOGGER.info("[ShrineStart] pieces count after addPieces = {}", this.pieces.size());
+            this.pieces.forEach(p -> LOGGER.info("[ShrineStart] piece class={}", p.getClass().getName()));
 
             this.calculateBoundingBox();
-
         }
     }
 }

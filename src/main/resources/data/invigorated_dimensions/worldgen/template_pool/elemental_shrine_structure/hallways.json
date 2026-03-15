@@ -1,0 +1,56 @@
+{
+  "name": "invigorated_dimensions:elemental_shrine_structure/hallways",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 100,
+      "element": {
+        "location": "invigorated_dimensions:shrine/hallway_stairway",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element",
+        "liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 100,
+      "element": {
+        "location": "invigorated_dimensions:shrine/straight_hallway",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element",
+        "liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 75,
+      "element": {
+        "location": "invigorated_dimensions:shrine/hallway_twoway",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element",
+        "liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 50,
+      "element": {
+        "location": "invigorated_dimensions:shrine/hallway_corner",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element",
+        "liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 25,
+      "element": {
+        "location": "invigorated_dimensions:shrine/hallway_end",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element",
+        "liquid_settings": "ignore_waterlogging"
+      }
+    }
+  ]
+}

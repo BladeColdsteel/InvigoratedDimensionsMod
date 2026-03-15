@@ -1,0 +1,16 @@
+{
+  "name": "invigorated_dimensions:elemental_shrine_structure/shrine_mobs",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 100,
+      "element": {
+        "location": "invigorated_dimensions:shrine/mobs/iron_golems",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element",
+        "liquid_settings": "ignore_waterlogging"
+      }
+    }
+  ]
+}

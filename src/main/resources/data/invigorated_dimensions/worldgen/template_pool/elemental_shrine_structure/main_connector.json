@@ -1,0 +1,36 @@
+{
+  "name": "invigorated_dimensions:elemental_shrine_structure/main_connector",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 100,
+      "element": {
+        "location": "invigorated_dimensions:shrine/shrine_hallway_water",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element",
+        "liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 100,
+      "element": {
+        "location": "invigorated_dimensions:shrine/shrine_hallway_grass",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element",
+        "liquid_settings": "ignore_waterlogging"
+      }
+    },
+    {
+      "weight": 100,
+      "element": {
+        "location": "invigorated_dimensions:shrine/shrine_hallway_flying",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element",
+        "liquid_settings": "ignore_waterlogging"
+      }
+    }
+  ]
+}

@@ -24,7 +24,6 @@ import com.bladecoldsteel.invigorateddimensions.electrichighlands.block.Electric
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.block.ElectricHighlandsWoodTypes;
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.effects.ElectricHighlandsEffects;
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.entity.ElectricHighlandsEntityTypes;
-import com.bladecoldsteel.invigorateddimensions.electrichighlands.entity.custom.projectiles.LightningItemProjectileEntity;
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.entity.render.ChargedCrawlerRender;
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.entity.render.boss.RagingTempestRenderer;
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.item.ElectricHighlandsItems;
@@ -87,6 +86,7 @@ import com.bladecoldsteel.invigorateddimensions.world.UniversalStructures;
 import com.bladecoldsteel.invigorateddimensions.world.biome.ModBiomesDatapack;
 import com.bladecoldsteel.invigorateddimensions.world.dimension.CustomSurfaceBuilders;
 import com.bladecoldsteel.invigorateddimensions.world.dimension.ModDimensions;
+import com.bladecoldsteel.invigorateddimensions.world.gen.InvigoratedPieces;
 import com.bladecoldsteel.invigorateddimensions.world.gen.features.*;
 import com.google.common.collect.ImmutableMap;
 import net.minecraft.block.Block;
@@ -125,7 +125,6 @@ import org.apache.logging.log4j.Logger;
 
 import java.io.File;
 
-// com.bladecoldsteel.invigorateddimensions.overworld.entity.model.boss.The value here should match an entry in the META-INF/mods.toml file
 @Mod(InvigoratedDimensions.MOD_ID)
 public class InvigoratedDimensions
 {
@@ -282,6 +281,7 @@ public class InvigoratedDimensions
             UniversalStructures.registerConfiguredStructures();
             DimensionPortalStructures.registerStructures();
             DimensionPortalStructures.registerConfiguredStructures();
+            InvigoratedPieces.init();
             //Electric
             ElectricFeatures.registerConfiguredFeatures();
             MobSpawnPlacements.registerOnGroundSolidSpawn(ElectricHighlandsEntityTypes.CHARGED_CRAWLER.get(), 7);

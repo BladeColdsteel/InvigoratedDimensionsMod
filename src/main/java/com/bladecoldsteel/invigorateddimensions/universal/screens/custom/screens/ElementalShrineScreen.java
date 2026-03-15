@@ -1,5 +1,6 @@
 package com.bladecoldsteel.invigorateddimensions.universal.screens.custom.screens;
 
+import com.bladecoldsteel.invigorateddimensions.universal.entity.tileentity.custom.ElementalShrineTileEntity;
 import com.bladecoldsteel.invigorateddimensions.universal.network.InvigoratedDimensionsNetworkHandler;
 import com.bladecoldsteel.invigorateddimensions.universal.network.packets.SubmitShrineItemPacket;
 import com.bladecoldsteel.invigorateddimensions.universal.screens.custom.containers.ElementalShrineContainer;
@@ -15,6 +16,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
@@ -225,9 +227,14 @@ public class ElementalShrineScreen extends ContainerScreen<ElementalShrineContai
         for (int i = start; i < end; i++) {
             ResourceLocation id = entries.get(i).getKey();
             DimensionInfo info = entries.get(i).getValue();
+            Button button;
 
-            Button button = new ScaledTextButton(buttonX, buttonY, 88, 20, new StringTextComponent(info.name),
-                    btn -> this.selectedDimension = id, textScale);
+            boolean unlocked = menu.getTile().isDimensionUnlocked(id);
+
+            button = new ScaledTextButton(buttonX, buttonY, 88, 20, new StringTextComponent(info.name),
+                        btn -> this.selectedDimension = id, textScale, unlocked);
+
+            button.active = !unlocked;
 
             this.addButton(button);
             dimensionButtonMap.put(button, id);
@@ -237,10 +244,12 @@ public class ElementalShrineScreen extends ContainerScreen<ElementalShrineContai
 
     public class ScaledTextButton extends Button {
         private final float textScale;
+        private final boolean unlocked;
 
-        public ScaledTextButton(int x, int y, int width, int height, ITextComponent title, IPressable onPress, float textScale) {
+        public ScaledTextButton(int x, int y, int width, int height, ITextComponent title, IPressable onPress, float textScale, boolean unlocked) {
             super(x, y, width, height, title, onPress);
             this.textScale = textScale;
+            this.unlocked = unlocked;
         }
 
         @Override
@@ -258,6 +267,10 @@ public class ElementalShrineScreen extends ContainerScreen<ElementalShrineContai
             this.blit(matrixStack, this.x, this.y, 5, 46 + i * 20, this.width / 2, this.height);
             this.blit(matrixStack, this.x + this.width / 2, this.y, 200 - this.width / 2, 46 + i * 20, this.width / 2, this.height);
 
+            if (unlocked) {
+                fill(matrixStack, this.x + 1, this.y + 1, this.x + this.width - 1, this.y + this.height - 1, 0x44AA0000);
+            }
+
             matrixStack.pushPose();
 
             float centerX = this.x + this.width / 2.0F;
@@ -266,7 +279,16 @@ public class ElementalShrineScreen extends ContainerScreen<ElementalShrineContai
             matrixStack.scale(textScale, textScale, textScale);
             float scaledWidth = font.width(this.getMessage().getString()) / textScale;
             matrixStack.translate(-scaledWidth / 2.0F, 0, 0);
-            int color = this.isHovered() ? 0xFFFFA0 : 0xE0E0E0;
+            int color ;
+            if (unlocked) {
+                color = 0xFF6666;
+            } else if (!this.active) {
+                color = 0xA0A0A0;
+            } else if (this.isHovered()) {
+                color = 0xFFFFA0;
+            } else {
+                color = 0xE0E0E0;
+            }
             font.draw(matrixStack, this.getMessage().getString(), 0, 0, color);
 
             matrixStack.popPose();
