@@ -19,6 +19,9 @@ import com.bladecoldsteel.invigorateddimensions.draconicrift.block.DraconicRiftW
 import com.bladecoldsteel.invigorateddimensions.draconicrift.item.DraconicRiftItems;
 import com.bladecoldsteel.invigorateddimensions.dreamland.block.DreamlandBlocks;
 import com.bladecoldsteel.invigorateddimensions.dreamland.block.DreamlandWoodTypes;
+import com.bladecoldsteel.invigorateddimensions.dreamland.effects.DreamlandEffects;
+import com.bladecoldsteel.invigorateddimensions.dreamland.entity.DreamlandEntityTypes;
+import com.bladecoldsteel.invigorateddimensions.dreamland.entity.render.boss.PitulantPendulumRenderer;
 import com.bladecoldsteel.invigorateddimensions.dreamland.item.DreamlandItems;
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.block.ElectricHighlandsBlocks;
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.block.ElectricHighlandsWoodTypes;
@@ -195,6 +198,7 @@ public class InvigoratedDimensions
         ElectricHighlandsEntityTypes.register(eventBus);
         EmberwildsEntityTypes.register(eventBus);
         GrassyKnollEntityTypes.register(eventBus);
+        DreamlandEntityTypes.register(eventBus);
         //Particles
         ModParticleTypes.register(eventBus);
         //Tile Entities
@@ -206,6 +210,7 @@ public class InvigoratedDimensions
         ElectricHighlandsSoundEvents.register(eventBus);
         //Effects
         ElectricHighlandsEffects.register(eventBus);
+        DreamlandEffects.register(eventBus);
         //Other
         ModBiomesDatapack.register(eventBus);
         CustomSurfaceBuilders.register(eventBus);
@@ -425,6 +430,7 @@ public class InvigoratedDimensions
 
         //Psychic
         RenderTypeLookup.setRenderLayer(DreamlandBlocks.SAPLING.get(), RenderType.cutout());
+        RenderingRegistry.registerEntityRenderingHandler(DreamlandEntityTypes.PITULANT_PENDULUM.get(), PitulantPendulumRenderer::new);
 
         //Rock
 

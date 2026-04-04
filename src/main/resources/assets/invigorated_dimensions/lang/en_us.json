@@ -407,7 +407,10 @@
   "block.invigorated_dimensions.psychedelic_stone_pressure_plate": "Psychedelic Stone Pressure Plate",
   "block.invigorated_dimensions.psychedelic_portal_frame": "Psychedelic Portal Frame",
   "block.invigorated_dimensions.dreamland_portal": "Dreamland Portal",
+  "item.invigorated_dimensions.pocket_watch": "Pocket Watch",
   "item.invigorated_dimensions.psychedelic_activator": "Psychedelic Portal Activator",
+  "entity.invigorated_dimensions.pitulant_pendulum": "Pitulant Pendulum",
+  "effect.invigorated_dimensions.mental_prison": "Mental Prison",
 
   "block.invigorated_dimensions.rocky_logs": "Rocky Log",
   "block.invigorated_dimensions.rocky_stone": "Rocky Stone",

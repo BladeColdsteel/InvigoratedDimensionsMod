@@ -6,12 +6,13 @@ import com.bladecoldsteel.invigorateddimensions.corrosivefields.block.CorrosiveF
 import com.bladecoldsteel.invigorateddimensions.deeptundra.block.DeepTundraBlocks;
 import com.bladecoldsteel.invigorateddimensions.draconicrift.block.DraconicRiftBlocks;
 import com.bladecoldsteel.invigorateddimensions.dreamland.block.DreamlandBlocks;
+import com.bladecoldsteel.invigorateddimensions.dreamland.entity.DreamlandEntityTypes;
+import com.bladecoldsteel.invigorateddimensions.dreamland.item.DreamlandItems;
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.block.ElectricHighlandsBlocks;
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.entity.ElectricHighlandsEntityTypes;
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.item.ElectricHighlandsItems;
 import com.bladecoldsteel.invigorateddimensions.emberwilds.block.EmberwildsBlocks;
 import com.bladecoldsteel.invigorateddimensions.emberwilds.entity.EmberwildsEntityTypes;
-import com.bladecoldsteel.invigorateddimensions.emberwilds.item.EmberwildsItems;
 import com.bladecoldsteel.invigorateddimensions.feywildexpanse.block.FeywildExpanseBlocks;
 import com.bladecoldsteel.invigorateddimensions.ghastlymarsh.block.GhastlyMarshBlocks;
 import com.bladecoldsteel.invigorateddimensions.grassyknoll.block.GrassyKnollBlocks;
@@ -52,10 +53,8 @@ import net.minecraft.loot.functions.LootingEnchantBonus;
 import net.minecraft.loot.functions.SetCount;
 import net.minecraft.state.properties.DoubleBlockHalf;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.tags.Tag;
 import net.minecraft.util.IItemProvider;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.common.Tags;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -808,7 +807,25 @@ public class IDLootTables extends LootTableProvider {
             //Dragon
 
             //Psychic
-
+            this.add(DreamlandEntityTypes.PITULANT_PENDULUM.get(), LootTable.lootTable()
+                    .withPool(LootPool.lootPool()
+                            .setRolls(ConstantRange.exactly(1))
+                            .add(ItemLootEntry.lootTableItem(DreamlandItems.POCKET_WATCH.get())
+                                    .apply(SetCount.setCount(RandomValueRange.between(1.0F, 1.0F)))
+                                    .apply(LootingEnchantBonus.lootingMultiplier(RandomValueRange.between(0.0F, 8.0F)))
+                                    .when(KilledByPlayer.killedByPlayer()))
+                            .add(ItemLootEntry.lootTableItem(Items.CHAIN)
+                                    .apply(SetCount.setCount(RandomValueRange.between(1.0F, 16.0F)))
+                                    .apply(LootingEnchantBonus.lootingMultiplier(RandomValueRange.between(0.0F, 48.0F)))
+                                    .when(KilledByPlayer.killedByPlayer()))
+                            .add(ItemLootEntry.lootTableItem(UniversalItems.PSYCHIC_ESSENCE.get())
+                                    .apply(SetCount.setCount(RandomValueRange.between(4.0F, 16.0F)))
+                                    .apply(LootingEnchantBonus.lootingMultiplier(RandomValueRange.between(0.0F, 8.0F)))
+                                    .when(KilledByPlayer.killedByPlayer()))
+                            .add(ItemLootEntry.lootTableItem(Items.CLOCK)
+                                    .apply(SetCount.setCount(RandomValueRange.between(1.0F, 8.0F)))
+                                    .apply(LootingEnchantBonus.lootingMultiplier(RandomValueRange.between(0.0F, 8.0F)))
+                                    .when(KilledByPlayer.killedByPlayer()))));
             //Electric
             this.add(ElectricHighlandsEntityTypes.CHARGED_CRAWLER.get(), LootTable.lootTable()
                     .withPool(LootPool.lootPool()
@@ -837,7 +854,7 @@ public class IDLootTables extends LootTableProvider {
                                     .apply(LootingEnchantBonus.lootingMultiplier(RandomValueRange.between(0.0F, 8.0F)))
                                     .when(KilledByPlayer.killedByPlayer()))
                             .add(ItemLootEntry.lootTableItem(UniversalItems.ELECTRIC_ESSENCE.get())
-                                    .apply(SetCount.setCount(RandomValueRange.between(0.0F, 16.0F)))
+                                    .apply(SetCount.setCount(RandomValueRange.between(4.0F, 16.0F)))
                                     .apply(LootingEnchantBonus.lootingMultiplier(RandomValueRange.between(0.0F, 8.0F)))
                                     .when(KilledByPlayer.killedByPlayer()))
                             .add(ItemLootEntry.lootTableItem(UniversalBlocks.ENERGY_SINK.get())
@@ -863,7 +880,7 @@ public class IDLootTables extends LootTableProvider {
                                     .apply(LootingEnchantBonus.lootingMultiplier(RandomValueRange.between(0.0F, 6.0F)))
                                     .when(KilledByPlayer.killedByPlayer()))
                             .add(ItemLootEntry.lootTableItem(UniversalItems.FIRE_ESSENCE.get())
-                                    .apply(SetCount.setCount(RandomValueRange.between(0.0F, 16.0F)))
+                                    .apply(SetCount.setCount(RandomValueRange.between(4.0F, 16.0F)))
                                     .apply(LootingEnchantBonus.lootingMultiplier(RandomValueRange.between(0.0F, 8.0F)))
                                     .when(KilledByPlayer.killedByPlayer()))));
 
@@ -876,23 +893,23 @@ public class IDLootTables extends LootTableProvider {
                     .withPool(LootPool.lootPool()
                             .setRolls(ConstantRange.exactly(1))
                             .add(ItemLootEntry.lootTableItem(GrassyKnollItems.ANGRY_APPLE.get())
-                                    .apply(SetCount.setCount(RandomValueRange.between(0.0F, 4.0F)))
+                                    .apply(SetCount.setCount(RandomValueRange.between(1.0F, 4.0F)))
                                     .apply(LootingEnchantBonus.lootingMultiplier(RandomValueRange.between(0.0F, 8.0F)))
                                     .when(KilledByPlayer.killedByPlayer()))
                             .add(ItemLootEntry.lootTableItem(GrassyKnollBlocks.LOG.get())
-                                    .apply(SetCount.setCount(RandomValueRange.between(0.0F, 16.0F)))
+                                    .apply(SetCount.setCount(RandomValueRange.between(1.0F, 16.0F)))
                                     .apply(LootingEnchantBonus.lootingMultiplier(RandomValueRange.between(0.0F, 48.0F)))
                                     .when(KilledByPlayer.killedByPlayer()))
                             .add(ItemLootEntry.lootTableItem(UniversalBlocks.CRYSTALLIZED_LEAVES.get())
-                                    .apply(SetCount.setCount(RandomValueRange.between(0.0F, 16.0F)))
+                                    .apply(SetCount.setCount(RandomValueRange.between(1.0F, 16.0F)))
                                     .apply(LootingEnchantBonus.lootingMultiplier(RandomValueRange.between(0.0F, 48.0F)))
                                     .when(KilledByPlayer.killedByPlayer()))
                             .add(ItemLootEntry.lootTableItem(UniversalItems.GRASS_ESSENCE.get())
-                                    .apply(SetCount.setCount(RandomValueRange.between(0.0F, 16.0F)))
+                                    .apply(SetCount.setCount(RandomValueRange.between(4.0F, 16.0F)))
                                     .apply(LootingEnchantBonus.lootingMultiplier(RandomValueRange.between(0.0F, 8.0F)))
                                     .when(KilledByPlayer.killedByPlayer()))
                             .add(ItemLootEntry.lootTableItem(Items.STICK)
-                                    .apply(SetCount.setCount(RandomValueRange.between(0.0F, 16.0F)))
+                                    .apply(SetCount.setCount(RandomValueRange.between(8.0F, 16.0F)))
                                     .apply(LootingEnchantBonus.lootingMultiplier(RandomValueRange.between(0.0F, 48.0F)))
                                     .when(KilledByPlayer.killedByPlayer()))));
 
@@ -907,19 +924,19 @@ public class IDLootTables extends LootTableProvider {
                     .withPool(LootPool.lootPool()
                             .setRolls(ConstantRange.exactly(1))
                             .add(ItemLootEntry.lootTableItem(Items.EMERALD)
-                                    .apply(SetCount.setCount(RandomValueRange.between(0.0F, 8.0F)))
+                                    .apply(SetCount.setCount(RandomValueRange.between(1.0F, 16.0F)))
                                     .apply(LootingEnchantBonus.lootingMultiplier(RandomValueRange.between(0.0F, 8.0F)))
                                     .when(KilledByPlayer.killedByPlayer()))
                             .add(ItemLootEntry.lootTableItem(OverworldItems.FOSSILIZED_BONES.get())
-                                    .apply(SetCount.setCount(RandomValueRange.between(0.0F, 2.0F)))
+                                    .apply(SetCount.setCount(RandomValueRange.between(1.0F, 4.0F)))
                                     .apply(LootingEnchantBonus.lootingMultiplier(RandomValueRange.between(0.0F, 4.0F)))
                                     .when(KilledByPlayer.killedByPlayer()))
                             .add(ItemLootEntry.lootTableItem(UniversalItems.NORMAL_ESSENCE.get())
-                                    .apply(SetCount.setCount(RandomValueRange.between(0.0F, 16.0F)))
+                                    .apply(SetCount.setCount(RandomValueRange.between(4.0F, 16.0F)))
                                     .apply(LootingEnchantBonus.lootingMultiplier(RandomValueRange.between(0.0F, 8.0F)))
                                     .when(KilledByPlayer.killedByPlayer()))
                             .add(ItemLootEntry.lootTableItem(Items.LEATHER)
-                                    .apply(SetCount.setCount(RandomValueRange.between(0.0F, 2.0F)))
+                                    .apply(SetCount.setCount(RandomValueRange.between(1.0F, 4.0F)))
                                     .apply(LootingEnchantBonus.lootingMultiplier(RandomValueRange.between(0.0F, 4.0F)))
                                     .when(KilledByPlayer.killedByPlayer()))));
 
@@ -938,6 +955,7 @@ public class IDLootTables extends LootTableProvider {
             GrassyKnollEntityTypes.ENTITY_TYPES.getEntries().forEach(e -> entities.add(e.get()));
             OverworldEntityTypes.ENTITY_TYPES.getEntries().forEach(e -> entities.add(e.get()));
             EmberwildsEntityTypes.ENTITY_TYPES.getEntries().forEach(e -> entities.add(e.get()));
+            DreamlandEntityTypes.ENTITY_TYPES.getEntries().forEach(e -> entities.add(e.get()));
 
             return entities;
         }

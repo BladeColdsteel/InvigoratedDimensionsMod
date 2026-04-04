@@ -473,10 +473,12 @@ public class IDItemModels extends IDItemModelProvider {
         normalItem(ElectricHighlandsItems.LIGHTNING_BOLT);
         //Food
         normalItem(GrassyKnollItems.APPLESAUCE);
-        normalItem(GrassyKnollItems.ANGRY_APPLE);
         //Redstone Controllable Blocks
         itemBlock(UniversalBlocks.PORTAL_CHARGING_BLOCK, "rift_charging_block_off");
         itemBlock(UniversalBlocks.PORTAL_CHARGING_BLOCK_REDSTONE, "rift_charging_block_off");
         itemBlock(UniversalBlocks.UNACTIVATED_RIFT_BLOCK);
+        //Boss Relics
+        normalItem(GrassyKnollItems.ANGRY_APPLE);
+        normalItem(DreamlandItems.POCKET_WATCH);
     }
 }

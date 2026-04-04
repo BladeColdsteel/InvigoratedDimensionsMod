@@ -1,0 +1,142 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.idle": {
+			"loop": true,
+			"animation_length": 17,
+			"bones": {
+				"portalBottom": {
+					"rotation": {
+						"vector": [0, "-query.time_stamp * -180", 0]
+					}
+				},
+				"clock": {
+					"rotation": {
+						"vector": [0, 0, "query.time_stamp * -180"]
+					},
+					"position": {
+						"0.0": {
+							"vector": ["-math.sin(query.anim_time * -90) * 5", "math.cos(query.anim_time * -90) * 5", 0]
+						},
+						"6.0": {
+							"vector": [0, -4, 0],
+							"easing": "linear"
+						},
+						"8.0": {
+							"vector": [0, 5, 0]
+						},
+						"10.0": {
+							"vector": [0, -4, 0],
+							"easing": "linear"
+						},
+						"12.0": {
+							"vector": [0, 5, 0]
+						},
+						"14.0": {
+							"vector": [0, -4, 0],
+							"easing": "linear"
+						},
+						"16.0": {
+							"vector": [0, 5, 0]
+						}
+					}
+				},
+				"portalMiddle": {
+					"rotation": {
+						"vector": [0, "-query.time_stamp * 90", 0]
+					}
+				},
+				"portalTop": {
+					"rotation": {
+						"vector": [0, "-query.time_stamp * -90", 0]
+					}
+				}
+			}
+		},
+		"animation.hypnotize": {
+			"animation_length": 3,
+			"bones": {
+				"portalBottom": {
+					"rotation": {
+						"vector": [0, "-query.time_stamp * -180", 0]
+					}
+				},
+				"clock": {
+					"rotation": {
+						"vector": ["-query.time_stamp * 180", "-query.time_stamp * -180", "query.time_stamp * 180"]
+					},
+					"position": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"3.0": {
+							"vector": [0, 5, 0]
+						}
+					}
+				},
+				"portalMiddle": {
+					"rotation": {
+						"vector": [0, "-query.time_stamp * 90", 0]
+					}
+				},
+				"portalTop": {
+					"rotation": {
+						"vector": [0, "-query.time_stamp * -90", 0]
+					}
+				}
+			}
+		},
+		"animation.bash": {
+			"animation_length": 1,
+			"bones": {
+				"portalBottom": {
+					"rotation": {
+						"vector": [0, "-query.time_stamp * -180", 0]
+					}
+				},
+				"clock": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.1667": {
+							"vector": [120, 0, 0]
+						},
+						"0.2083": {
+							"vector": [115, 0, 0]
+						},
+						"0.25": {
+							"vector": [100, 0, 0]
+						},
+						"0.2917": {
+							"vector": [37, 0, 0]
+						},
+						"0.3333": {
+							"vector": [16, 0, 0]
+						},
+						"0.375": {
+							"vector": [8, 0, 0]
+						},
+						"0.5": {
+							"vector": [0, 0, 0]
+						}
+					},
+					"position": {
+						"vector": [0, 5, 0]
+					}
+				},
+				"portalMiddle": {
+					"rotation": {
+						"vector": [0, "-query.time_stamp * 90", 0]
+					}
+				},
+				"portalTop": {
+					"rotation": {
+						"vector": [0, "-query.time_stamp * -90", 0]
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}

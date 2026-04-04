@@ -1,0 +1,47 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.unknown",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 4.5,
+				"visible_bounds_offset": [0, 1.75, 0]
+			},
+			"bones": [
+				{
+					"name": "portalTop",
+					"pivot": [0, 49, 0],
+					"cubes": [
+						{"origin": [-16, 48, -16], "size": [32, 2, 32], "pivot": [0, 48, 0], "rotation": [0, 62.5, 0], "uv": [0, 34]}
+					]
+				},
+				{
+					"name": "portalMiddle",
+					"pivot": [0, 48, 0],
+					"cubes": [
+						{"origin": [-16, 47, -16], "size": [32, 2, 32], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "portalBottom",
+					"pivot": [0, 47, 0],
+					"cubes": [
+						{"origin": [-16, 46, -16], "size": [32, 2, 32], "pivot": [0, 46, 0], "rotation": [0, 27.5, 0], "uv": [0, 68]}
+					]
+				},
+				{
+					"name": "clock",
+					"pivot": [0, 19, 0],
+					"cubes": [
+						{"origin": [-8, 11, -4], "size": [16, 16, 8], "uv": [0, 102]},
+						{"origin": [-10, 13, -2], "size": [20, 12, 4], "uv": [48, 102]},
+						{"origin": [-6, 9, -2], "size": [12, 20, 4], "uv": [96, 102]}
+					]
+				}
+			]
+		}
+	]
+}
