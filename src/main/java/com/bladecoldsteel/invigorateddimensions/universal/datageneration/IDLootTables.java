@@ -893,7 +893,7 @@ public class IDLootTables extends LootTableProvider {
                     .withPool(LootPool.lootPool()
                             .setRolls(ConstantRange.exactly(1))
                             .add(ItemLootEntry.lootTableItem(GrassyKnollItems.ANGRY_APPLE.get())
-                                    .apply(SetCount.setCount(RandomValueRange.between(1.0F, 4.0F)))
+                                    .apply(SetCount.setCount(RandomValueRange.between(1.0F, 8.0F)))
                                     .apply(LootingEnchantBonus.lootingMultiplier(RandomValueRange.between(0.0F, 8.0F)))
                                     .when(KilledByPlayer.killedByPlayer()))
                             .add(ItemLootEntry.lootTableItem(GrassyKnollBlocks.LOG.get())
@@ -938,6 +938,9 @@ public class IDLootTables extends LootTableProvider {
                             .add(ItemLootEntry.lootTableItem(Items.LEATHER)
                                     .apply(SetCount.setCount(RandomValueRange.between(1.0F, 4.0F)))
                                     .apply(LootingEnchantBonus.lootingMultiplier(RandomValueRange.between(0.0F, 4.0F)))
+                                    .when(KilledByPlayer.killedByPlayer()))
+                            .add(ItemLootEntry.lootTableItem(OverworldItems.ANCIENT_EMERALD.get())
+                                    .apply(SetCount.setCount(RandomValueRange.between(1.0F, 1.0F)))
                                     .when(KilledByPlayer.killedByPlayer()))));
 
             //Ground

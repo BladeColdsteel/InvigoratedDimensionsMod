@@ -1,6 +1,7 @@
 package com.bladecoldsteel.invigorateddimensions.overworld.item;
 
 import com.bladecoldsteel.invigorateddimensions.InvigoratedDimensions;
+import com.bladecoldsteel.invigorateddimensions.overworld.item.custom.AncientEmeraldItem;
 import com.bladecoldsteel.invigorateddimensions.util.ItemHelper;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -23,6 +24,12 @@ public class OverworldItems {
             64
     );
 
+    public static final RegistryObject<AncientEmeraldItem> ANCIENT_EMERALD = ITEMS.register("ancient_emerald",
+            () -> new AncientEmeraldItem(new Item.Properties()
+                    .tab(TAB)
+                    .stacksTo(1)
+                    .rarity(Rarity.RARE)
+                    .durability(4)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
