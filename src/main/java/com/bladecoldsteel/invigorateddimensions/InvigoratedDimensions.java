@@ -45,6 +45,7 @@ import com.bladecoldsteel.invigorateddimensions.ghastlymarsh.block.GhastlyMarshW
 import com.bladecoldsteel.invigorateddimensions.ghastlymarsh.item.GhastlyMarshItems;
 import com.bladecoldsteel.invigorateddimensions.grassyknoll.block.GrassyKnollBlocks;
 import com.bladecoldsteel.invigorateddimensions.grassyknoll.block.GrassyKnollWoodTypes;
+import com.bladecoldsteel.invigorateddimensions.grassyknoll.effects.GrassyKnollEffects;
 import com.bladecoldsteel.invigorateddimensions.grassyknoll.entity.GrassyKnollEntityTypes;
 import com.bladecoldsteel.invigorateddimensions.grassyknoll.entity.render.boss.AngryTreantRenderer;
 import com.bladecoldsteel.invigorateddimensions.grassyknoll.item.GrassyKnollItems;
@@ -210,6 +211,7 @@ public class InvigoratedDimensions
         ElectricHighlandsSoundEvents.register(eventBus);
         //Effects
         ElectricHighlandsEffects.register(eventBus);
+        GrassyKnollEffects.register(eventBus);
         DreamlandEffects.register(eventBus);
         //Other
         ModBiomesDatapack.register(eventBus);

@@ -8,7 +8,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber(modid = InvigoratedDimensions.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
-public class GrassyKnollEventBusEvents {
+public class GrassyKnollModEventBusEvents {
     @SubscribeEvent
     public static void  addEntityAttributes(EntityAttributeCreationEvent event) {
         event.put(GrassyKnollEntityTypes.ANGRY_TREANT.get(), AngryTreantEntity.setCustomAttributes().build());

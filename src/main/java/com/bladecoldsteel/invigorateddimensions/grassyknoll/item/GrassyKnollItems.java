@@ -2,6 +2,7 @@ package com.bladecoldsteel.invigorateddimensions.grassyknoll.item;
 
 import com.bladecoldsteel.invigorateddimensions.InvigoratedDimensions;
 import com.bladecoldsteel.invigorateddimensions.grassyknoll.block.GrassyKnollBlocks;
+import com.bladecoldsteel.invigorateddimensions.grassyknoll.effects.GrassyKnollEffects;
 import com.bladecoldsteel.invigorateddimensions.universal.item.custom.UniversalActivatorItem;
 import com.bladecoldsteel.invigorateddimensions.util.ItemHelper;
 import com.bladecoldsteel.invigorateddimensions.world.dimension.ModDimensions;
@@ -13,7 +14,10 @@ import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
+import java.util.List;
+
 import static com.bladecoldsteel.invigorateddimensions.util.ItemHelper.foodItem;
+import static com.bladecoldsteel.invigorateddimensions.util.ItemHelper.threeEffectFoodItem;
 
 public class GrassyKnollItems {
     private static final ItemGroup TAB = GrassyKnollItemGroup.GRASSY_KNOLL_GROUP;
@@ -39,16 +43,24 @@ public class GrassyKnollItems {
             64
     );
     public static final RegistryObject<Item> ANGRY_APPLE = ItemHelper.registerItem(
-            "angry_apples", ITEMS, new Item.Properties().food(foodItem(
+            "angry_apples", ITEMS, new Item.Properties().food(threeEffectFoodItem(
                     8,
                     0.4F,
                     false,
                     true,
                     false,
-                    Effects.WEAKNESS,
+                    Effects.DAMAGE_BOOST,
                     1.0F,
-                    30,
-                    1)),
+                    30 * 20,
+                    1,
+                    Effects.MOVEMENT_SPEED,
+                    1.0F,
+                    30 * 20,
+                    0,
+                    GrassyKnollEffects.BRITTLE::get,
+                    1.0F,
+                    30 * 20,
+                    0)),
             TAB,
             64
     );
