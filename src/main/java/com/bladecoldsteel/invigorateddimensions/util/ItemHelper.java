@@ -60,4 +60,36 @@ public class ItemHelper {
 
         return foodBuilder.build();
     }
+
+    public static Food twoEffectFoodItem(int nutrition, float saturation, boolean isMeat, boolean canAlwaysEat, boolean fastFood,
+                                           Effect effect1, float effectChance1, int effectTimer1, int effectLevel1,
+                                           Supplier<Effect> effect2, float effectChance2, int effectTimer2, int effectLevel2) {
+        Food.Builder foodBuilder = new Food.Builder()
+                .nutrition(nutrition)
+                .saturationMod(saturation);
+        if (effect1 != null) foodBuilder.effect(() -> new EffectInstance(effect1, effectTimer1, effectLevel1), effectChance1);
+        if (effect2 != null) foodBuilder.effect(() -> new EffectInstance(effect2.get(), effectTimer2, effectLevel2), effectChance2);
+        if (isMeat) foodBuilder.meat();
+        if (canAlwaysEat) foodBuilder.alwaysEat();
+        if (fastFood) foodBuilder.fast();
+
+        return foodBuilder.build();
+    }
+
+    public static Food threeEffectFoodItem(int nutrition, float saturation, boolean isMeat, boolean canAlwaysEat, boolean fastFood,
+                                           Effect effect1, float effectChance1, int effectTimer1, int effectLevel1,
+                                           Effect effect2, float effectChance2, int effectTimer2, int effectLevel2,
+                                           Supplier<Effect> effect3, float effectChance3, int effectTimer3, int effectLevel3) {
+        Food.Builder foodBuilder = new Food.Builder()
+                .nutrition(nutrition)
+                .saturationMod(saturation);
+        if (effect1 != null) foodBuilder.effect(() -> new EffectInstance(effect1, effectTimer1, effectLevel1), effectChance1);
+        if (effect2 != null) foodBuilder.effect(() -> new EffectInstance(effect2, effectTimer2, effectLevel2), effectChance2);
+        if (effect3 != null) foodBuilder.effect(() -> new EffectInstance(effect3.get(), effectTimer3, effectLevel3), effectChance3);
+        if (isMeat) foodBuilder.meat();
+        if (canAlwaysEat) foodBuilder.alwaysEat();
+        if (fastFood) foodBuilder.fast();
+
+        return foodBuilder.build();
+    }
 }
