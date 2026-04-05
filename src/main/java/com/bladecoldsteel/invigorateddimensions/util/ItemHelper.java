@@ -1,6 +1,8 @@
 package com.bladecoldsteel.invigorateddimensions.util;
 
 import com.bladecoldsteel.invigorateddimensions.universal.item.custom.UniversalActivatorItem;
+import com.bladecoldsteel.invigorateddimensions.universal.item.custom.UniversalTooltipArmorItem;
+import com.bladecoldsteel.invigorateddimensions.universal.item.custom.UniversalTooltipItem;
 import net.minecraft.block.Block;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
@@ -21,8 +23,14 @@ public class ItemHelper {
     public static <T extends Item> RegistryObject<Item> registerItem(String name, DeferredRegister<Item> itemRegistry, Item.Properties itemFactory, ItemGroup tab, int stackSize) {
         return itemRegistry.register(name, () -> new Item(itemFactory.tab(tab).stacksTo(stackSize)));
     }
+    public static <T extends Item> RegistryObject<UniversalTooltipItem> registerTooltipItem(String name, DeferredRegister<Item> itemRegistry, Item.Properties itemFactory, ItemGroup tab, int stackSize, String tooltip) {
+        return itemRegistry.register(name, () -> new UniversalTooltipItem(itemFactory.tab(tab).stacksTo(stackSize), tooltip));
+    }
     public static <T extends Item> RegistryObject<ArmorItem> registerArmor(String name, DeferredRegister<Item> itemRegistry, ItemGroup tab, IArmorMaterial armorMaterial, EquipmentSlotType armorSlot) {
         return itemRegistry.register(name, () -> new ArmorItem(armorMaterial, armorSlot, new Item.Properties().tab(tab)));
+    }
+    public static <T extends Item> RegistryObject<UniversalTooltipArmorItem> registerTooltipArmor(String name, DeferredRegister<Item> itemRegistry, ItemGroup tab, IArmorMaterial armorMaterial, EquipmentSlotType armorSlot, String tooltip) {
+        return itemRegistry.register(name, () -> new UniversalTooltipArmorItem(new Item.Properties().tab(tab), armorMaterial, armorSlot, tooltip));
     }
     public static <T extends Item> RegistryObject<SwordItem> registerSword(String name, DeferredRegister<Item> itemRegistry, ItemGroup tab, IItemTier toolMaterial, int attackDamage, float attackSpeed) {
         return itemRegistry.register(name, () -> new SwordItem(toolMaterial, attackDamage, attackSpeed, new Item.Properties().tab(tab)));

@@ -1,6 +1,7 @@
 package com.bladecoldsteel.invigorateddimensions.dreamland.item.custom;
 
 import com.bladecoldsteel.invigorateddimensions.dreamland.effects.DreamlandEffects;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.LivingEntity;
@@ -13,8 +14,12 @@ import net.minecraft.potion.Effects;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.vector.Vector3d;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 
+import javax.annotation.Nullable;
 import java.util.List;
 
 public class PocketWatchItem extends Item {
@@ -23,6 +28,12 @@ public class PocketWatchItem extends Item {
     public PocketWatchItem(Properties properties, int itemLockOnPeriod) {
         super(properties.defaultDurability(128));
         this.itemLockOnPeriod = itemLockOnPeriod;
+    }
+
+    @Override
+    public void appendHoverText(ItemStack stack, @Nullable World world, List<ITextComponent> tooltip, ITooltipFlag flag) {
+        tooltip.add(new StringTextComponent("Relic").withStyle(TextFormatting.GOLD));
+        super.appendHoverText(stack, world, tooltip, flag);
     }
 
     @Override
