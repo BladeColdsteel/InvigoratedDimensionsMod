@@ -4,6 +4,7 @@ import com.bladecoldsteel.invigorateddimensions.InvigoratedDimensions;
 import com.bladecoldsteel.invigorateddimensions.grassyknoll.block.GrassyKnollBlocks;
 import com.bladecoldsteel.invigorateddimensions.grassyknoll.effects.GrassyKnollEffects;
 import com.bladecoldsteel.invigorateddimensions.universal.item.custom.UniversalActivatorItem;
+import com.bladecoldsteel.invigorateddimensions.universal.item.custom.UniversalTooltipItem;
 import com.bladecoldsteel.invigorateddimensions.util.ItemHelper;
 import com.bladecoldsteel.invigorateddimensions.world.dimension.ModDimensions;
 import net.minecraft.item.Item;
@@ -42,7 +43,7 @@ public class GrassyKnollItems {
             TAB,
             64
     );
-    public static final RegistryObject<Item> ANGRY_APPLE = ItemHelper.registerItem(
+    public static final RegistryObject<UniversalTooltipItem> ANGRY_APPLE = ItemHelper.registerTooltipItem(
             "angry_apples", ITEMS, new Item.Properties().food(threeEffectFoodItem(
                     8,
                     0.4F,
@@ -62,7 +63,8 @@ public class GrassyKnollItems {
                     30 * 20,
                     0)),
             TAB,
-            64
+            64,
+            "Relic"
     );
 
     public static void register(IEventBus eventBus) {

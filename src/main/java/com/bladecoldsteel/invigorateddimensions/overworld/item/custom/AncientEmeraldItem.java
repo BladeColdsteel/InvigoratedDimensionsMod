@@ -33,15 +33,16 @@ public class AncientEmeraldItem extends Item {
     @Override
     public ActionResult<ItemStack> use(World world, PlayerEntity player, Hand hand) {
         ItemStack item = player.getItemInHand(hand);
-        player.getCooldowns().addCooldown(this, 20);
+        player.getCooldowns().addCooldown(this, 60 * 20);
         world.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.PLAYER_LEVELUP, SoundCategory.PLAYERS, 0.5F, 0.4F / (random.nextFloat() * 0.4F + 0.8F));
         if (!world.isClientSide) {
-            player.addEffect(new EffectInstance(Effects.HERO_OF_THE_VILLAGE, 60 * 20, 3));
+            player.addEffect(new EffectInstance(Effects.HERO_OF_THE_VILLAGE, 60 * 20 * 2, 3));
         }
 
         player.awardStat(Stats.ITEM_USED.get(this));
         if (!player.abilities.instabuild) {
-            item.shrink(1);
+            item.hurtAndBreak(1, player, broken ->
+                    broken.broadcastBreakEvent(player.getUsedItemHand()));
         }
 
         return ActionResult.success(item);
