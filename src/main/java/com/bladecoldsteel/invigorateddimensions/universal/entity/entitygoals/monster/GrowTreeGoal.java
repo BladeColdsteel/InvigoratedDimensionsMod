@@ -1,5 +1,6 @@
-package com.bladecoldsteel.invigorateddimensions.universal.entity.entitygoals;
+package com.bladecoldsteel.invigorateddimensions.universal.entity.entitygoals.monster;
 
+import com.bladecoldsteel.invigorateddimensions.universal.entity.entitygoals.misc.SpawnOnPlayer;
 import net.minecraft.entity.CreatureEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.goal.Goal;

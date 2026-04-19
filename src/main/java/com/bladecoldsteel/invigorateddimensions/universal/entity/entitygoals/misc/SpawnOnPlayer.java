@@ -1,4 +1,4 @@
-package com.bladecoldsteel.invigorateddimensions.universal.entity.entitygoals;
+package com.bladecoldsteel.invigorateddimensions.universal.entity.entitygoals.misc;
 
 import net.minecraft.entity.LivingEntity;
 
