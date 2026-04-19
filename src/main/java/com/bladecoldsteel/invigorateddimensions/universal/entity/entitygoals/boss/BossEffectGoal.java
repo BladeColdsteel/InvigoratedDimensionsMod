@@ -1,4 +1,4 @@
-package com.bladecoldsteel.invigorateddimensions.universal.entity.entitygoals;
+package com.bladecoldsteel.invigorateddimensions.universal.entity.entitygoals.boss;
 
 import com.bladecoldsteel.invigorateddimensions.universal.entity.entitybases.BossMonsterEntity;
 import net.minecraft.entity.LivingEntity;
@@ -11,7 +11,7 @@ import java.util.EnumSet;
 
 public class BossEffectGoal extends Goal {
     private LivingEntity target;
-    private final BossMonsterEntity mob;
+    private final BossMonsterEntity boss;
     private int seeTime;
     private final int combatCooldown;
     private final double speedModifier;
@@ -22,7 +22,7 @@ public class BossEffectGoal extends Goal {
     private final boolean showIcon;
 
     public BossEffectGoal(BossMonsterEntity entity, double speedModifier, Effect effect, int effectLevel, int effectTime, boolean visibleEffect, boolean showIcon, int combatCooldown) {
-        this.mob = entity;
+        this.boss = entity;
         this.speedModifier = speedModifier;
         this.goalEffect = effect;
         this.effectLevel = effectLevel;
@@ -43,7 +43,7 @@ public class BossEffectGoal extends Goal {
     @Override
     public void tick() {
         if (this.target != null && this.target.isAlive()) {
-            boolean canSeeTarget = this.mob.getSensing().canSee(this.target);
+            boolean canSeeTarget = this.boss.getSensing().canSee(this.target);
 
             if (canSeeTarget) {
                 ++this.seeTime;
@@ -52,26 +52,26 @@ public class BossEffectGoal extends Goal {
             }
 
             if (this.seeTime == 60) {
-                this.mob.getNavigation().stop();
+                this.boss.getNavigation().stop();
 
                 this.target.addEffect(new EffectInstance(goalEffect, this.effectTime, this.effectLevel, true, visibleEffect, showIcon));
                 this.target.addEffect(new EffectInstance(Effects.WITHER, this.effectTime, 1, true, visibleEffect, showIcon));
 
-                mob.setCurrentAction(BossMonsterEntity.CombatAction.NONE);
-                mob.resetCombatCooldown(this.combatCooldown);
+                boss.setCurrentAction(BossMonsterEntity.CombatAction.NONE);
+                boss.resetCombatCooldown(this.combatCooldown);
 
             } else {
-                this.mob.getNavigation().moveTo(this.target, this.speedModifier);
+                this.boss.getNavigation().moveTo(this.target, this.speedModifier);
             }
 
-            this.mob.getLookControl().setLookAt(this.target, 30.0F, 30.0F);
+            this.boss.getLookControl().setLookAt(this.target, 30.0F, 30.0F);
         }
     }
 
     @Override
     public boolean canUse() {
-        LivingEntity target = this.mob.getTarget();
-        if (mob.isTargetValid() && mob.getCurrentAction() == BossMonsterEntity.CombatAction.EFFECT) {
+        LivingEntity target = this.boss.getTarget();
+        if (boss.isTargetValid() && boss.getCurrentAction() == BossMonsterEntity.CombatAction.EFFECT) {
             this.target = target;
             return true;
         } else {
@@ -81,7 +81,7 @@ public class BossEffectGoal extends Goal {
 
     @Override
     public boolean canContinueToUse() {
-        return this.target != null && this.target.isAlive() && mob.getCurrentAction() == BossMonsterEntity.CombatAction.EFFECT;
+        return this.target != null && this.target.isAlive() && boss.getCurrentAction() == BossMonsterEntity.CombatAction.EFFECT;
     }
 
     @Override

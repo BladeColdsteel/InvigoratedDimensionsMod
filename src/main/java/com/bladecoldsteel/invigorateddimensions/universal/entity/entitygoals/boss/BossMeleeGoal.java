@@ -1,4 +1,4 @@
-package com.bladecoldsteel.invigorateddimensions.universal.entity.entitygoals;
+package com.bladecoldsteel.invigorateddimensions.universal.entity.entitygoals.boss;
 
 import com.bladecoldsteel.invigorateddimensions.universal.entity.entitybases.BossMonsterEntity;
 import net.minecraft.entity.CreatureEntity;
@@ -7,18 +7,20 @@ import net.minecraft.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.util.Hand;
 
 public class BossMeleeGoal extends MeleeAttackGoal {
+    protected final BossMonsterEntity boss;
     private final int combatCooldown;
     private final double rangeControl;
 
-    public BossMeleeGoal(CreatureEntity entity, double speedModifier, boolean followTarget, int combatCooldown, double rangeControl) {
-        super(entity, speedModifier, followTarget);
+    public BossMeleeGoal(CreatureEntity entity, double speed, boolean followTarget, int combatCooldown, double rangeControl) {
+        super(entity, speed, followTarget);
         this.combatCooldown = combatCooldown;
         this.rangeControl = rangeControl;
+        this.boss = (BossMonsterEntity) mob;
     }
 
     @Override
     public boolean canUse() {
-        if (((BossMonsterEntity) mob).getCurrentAction() == BossMonsterEntity.CombatAction.MELEE) {
+        if (boss.getCurrentAction() == BossMonsterEntity.CombatAction.MELEE) {
             return super.canUse();
         } else {
             return false;
@@ -27,7 +29,7 @@ public class BossMeleeGoal extends MeleeAttackGoal {
 
     @Override
     public boolean canContinueToUse() {
-        if (((BossMonsterEntity) mob).getCurrentAction() == BossMonsterEntity.CombatAction.MELEE) {
+        if (boss.getCurrentAction() == BossMonsterEntity.CombatAction.MELEE) {
             return super.canContinueToUse();
         } else {
             return false;
@@ -41,8 +43,8 @@ public class BossMeleeGoal extends MeleeAttackGoal {
             this.resetAttackCooldown();
             this.mob.swing(Hand.MAIN_HAND);
             this.mob.doHurtTarget(p_190102_1_);
-            ((BossMonsterEntity) mob).resetCombatCooldown(this.combatCooldown);
-            ((BossMonsterEntity) mob).setCurrentAction(BossMonsterEntity.CombatAction.NONE);
+            boss.resetCombatCooldown(this.combatCooldown);
+            boss.setCurrentAction(BossMonsterEntity.CombatAction.NONE);
         }
     }
 
@@ -57,6 +59,6 @@ public class BossMeleeGoal extends MeleeAttackGoal {
     @Override
     public void stop() {
         super.stop();
-        ((BossMonsterEntity) mob).setCurrentAction(BossMonsterEntity.CombatAction.NONE);
+        boss.setCurrentAction(BossMonsterEntity.CombatAction.NONE);
     }
 }

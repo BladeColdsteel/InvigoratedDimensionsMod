@@ -61,6 +61,8 @@ import com.bladecoldsteel.invigorateddimensions.metallicmountains.item.MetallicM
 import com.bladecoldsteel.invigorateddimensions.overworld.entity.OverworldEntityTypes;
 import com.bladecoldsteel.invigorateddimensions.overworld.entity.render.boss.FossilizedTraderRender;
 import com.bladecoldsteel.invigorateddimensions.overworld.item.OverworldItems;
+import com.bladecoldsteel.invigorateddimensions.terranata.entity.TerraNataEntityTypes;
+import com.bladecoldsteel.invigorateddimensions.terranata.entity.render.GiantEarthmawRender;
 import com.bladecoldsteel.invigorateddimensions.universal.datageneration.IDBlockStatesAndModels;
 import com.bladecoldsteel.invigorateddimensions.universal.datageneration.IDItemModels;
 import com.bladecoldsteel.invigorateddimensions.universal.datageneration.IDLootTables;
@@ -200,6 +202,7 @@ public class InvigoratedDimensions
         EmberwildsEntityTypes.register(eventBus);
         GrassyKnollEntityTypes.register(eventBus);
         DreamlandEntityTypes.register(eventBus);
+        TerraNataEntityTypes.register(eventBus);
         //Particles
         ModParticleTypes.register(eventBus);
         //Tile Entities
@@ -420,6 +423,7 @@ public class InvigoratedDimensions
 
         //Ground
         RenderTypeLookup.setRenderLayer(TerraNataBlocks.SAPLING.get(), RenderType.cutout());
+        RenderingRegistry.registerEntityRenderingHandler(TerraNataEntityTypes.GIANT_EARTHMAW.get(), GiantEarthmawRender::new);
 
         //Flying
         RenderTypeLookup.setRenderLayer(HeavenlyRealmBlocks.SAPLING.get(), RenderType.cutout());

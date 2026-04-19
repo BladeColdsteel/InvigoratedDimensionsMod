@@ -1,4 +1,4 @@
-package com.bladecoldsteel.invigorateddimensions.universal.entity.entitygoals;
+package com.bladecoldsteel.invigorateddimensions.universal.entity.entitygoals.boss;
 
 import com.bladecoldsteel.invigorateddimensions.universal.entity.entitybases.BossMonsterEntity;
 import net.minecraft.entity.LivingEntity;
@@ -9,14 +9,14 @@ import net.minecraft.world.World;
 import java.util.EnumSet;
 
 public class BossTeleportGoal extends Goal {
-    private final BossMonsterEntity mob;
+    private final BossMonsterEntity boss;
     private LivingEntity target;
     private int teleportTime;
     private int teleportDistance;
     private final int combatCooldown;
 
     public BossTeleportGoal(BossMonsterEntity entity, int teleportDistance, int combatCooldown) {
-        this.mob = entity;
+        this.boss = entity;
         this.teleportDistance = teleportDistance;
         this.combatCooldown = combatCooldown;
 
@@ -25,19 +25,19 @@ public class BossTeleportGoal extends Goal {
 
     @Override
     public boolean canUse() {
-        this.target = this.mob.getTarget();
-        return target != null && target.isAlive() && mob.getCurrentAction() == BossMonsterEntity.CombatAction.TELEPORT;
+        this.target = this.boss.getTarget();
+        return target != null && target.isAlive() && boss.getCurrentAction() == BossMonsterEntity.CombatAction.TELEPORT;
     }
 
     @Override
     public boolean canContinueToUse() {
-        this.target = this.mob.getTarget();
-        return target != null && target.isAlive() && mob.getCurrentAction() == BossMonsterEntity.CombatAction.TELEPORT;
+        this.target = this.boss.getTarget();
+        return target != null && target.isAlive() && boss.getCurrentAction() == BossMonsterEntity.CombatAction.TELEPORT;
     }
 
     @Override
     public void start() {
-        this.target = this.mob.getTarget();
+        this.target = this.boss.getTarget();
         this.teleportTime = 20;
     }
 
@@ -49,14 +49,14 @@ public class BossTeleportGoal extends Goal {
 
     @Override
     public void tick() {
-        if (target != null && target.isAlive() && mob.getCurrentAction() == BossMonsterEntity.CombatAction.TELEPORT) {
-            World world = mob.level;
+        if (target != null && target.isAlive() && boss.getCurrentAction() == BossMonsterEntity.CombatAction.TELEPORT) {
+            World world = boss.level;
             if (this.teleportTime <= 0) {
-                float xOffset = mob.getRandom().nextInt(teleportDistance + 1) - ((float) teleportDistance / 2);
-                float yOffset = mob.getRandom().nextFloat();
-                float zOffset = mob.getRandom().nextInt(teleportDistance + 1) - ((float) teleportDistance / 2);
+                float xOffset = boss.getRandom().nextInt(teleportDistance + 1) - ((float) teleportDistance / 2);
+                float yOffset = boss.getRandom().nextFloat();
+                float zOffset = boss.getRandom().nextInt(teleportDistance + 1) - ((float) teleportDistance / 2);
 
-                BlockPos randomTP = new BlockPos(mob.getX() + xOffset, mob.getY() + yOffset, mob.getZ() + zOffset);
+                BlockPos randomTP = new BlockPos(boss.getX() + xOffset, boss.getY() + yOffset, boss.getZ() + zOffset);
 
                 boolean feetOpen = !world.getBlockState(randomTP).isCollisionShapeFullBlock(world, randomTP);
                 boolean headOpen = !world.getBlockState(randomTP.above()).isCollisionShapeFullBlock(world, randomTP.above());
@@ -64,9 +64,9 @@ public class BossTeleportGoal extends Goal {
                 boolean groundSolid = world.getBlockState(randomTP.below()).isCollisionShapeFullBlock(world, randomTP.below());
 
                 if (feetOpen && headOpen && topOpen && groundSolid) {
-                    if (this.mob.randomTeleport(randomTP.getX() + 0.5, randomTP.getY(), randomTP.getZ() + 0.5, false)) {
-                        mob.setCurrentAction(BossMonsterEntity.CombatAction.NONE);
-                        mob.resetCombatCooldown(this.combatCooldown);
+                    if (this.boss.randomTeleport(randomTP.getX() + 0.5, randomTP.getY(), randomTP.getZ() + 0.5, false)) {
+                        boss.setCurrentAction(BossMonsterEntity.CombatAction.NONE);
+                        boss.resetCombatCooldown(this.combatCooldown);
                     }
                 }
             } else {

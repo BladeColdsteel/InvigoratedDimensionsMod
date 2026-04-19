@@ -24,7 +24,9 @@ public class BossMonsterEntity extends MonsterEntity {
         NONE,
         MELEE,
         TELEPORT,
-        EFFECT
+        EFFECT,
+        UNDERGROUND_MOVE,
+        UNDERGROUND_ATTACK
     }
 
     public BossMonsterEntity(EntityType<? extends MonsterEntity> type, World world, BossInfo.Color color) {
