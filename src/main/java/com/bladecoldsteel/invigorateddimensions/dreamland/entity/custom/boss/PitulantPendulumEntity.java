@@ -2,9 +2,9 @@ package com.bladecoldsteel.invigorateddimensions.dreamland.entity.custom.boss;
 
 import com.bladecoldsteel.invigorateddimensions.config.InvigoratedDimensionsConfig;
 import com.bladecoldsteel.invigorateddimensions.universal.entity.entitybases.BossMonsterEntity;
-import com.bladecoldsteel.invigorateddimensions.universal.entity.entitygoals.BossMeleeGoal;
-import com.bladecoldsteel.invigorateddimensions.universal.entity.entitygoals.BossEffectGoal;
-import com.bladecoldsteel.invigorateddimensions.universal.entity.entitygoals.BossTeleportGoal;
+import com.bladecoldsteel.invigorateddimensions.universal.entity.entitygoals.boss.BossMeleeGoal;
+import com.bladecoldsteel.invigorateddimensions.universal.entity.entitygoals.boss.BossEffectGoal;
+import com.bladecoldsteel.invigorateddimensions.universal.entity.entitygoals.boss.BossTeleportGoal;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
