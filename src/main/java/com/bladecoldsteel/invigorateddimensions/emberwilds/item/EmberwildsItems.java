@@ -7,6 +7,7 @@ import com.bladecoldsteel.invigorateddimensions.util.ItemHelper;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.item.Rarity;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -18,7 +19,7 @@ public class EmberwildsItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, InvigoratedDimensions.MOD_ID);
 
     public static final RegistryObject<UniversalTooltipArmorItem> FIRE_LORD_CROWN = ItemHelper.registerTooltipArmor(
-            "fire_lord_crown", ITEMS, TAB, IDArmorMaterials.FIRE_LORD_CROWN, EquipmentSlotType.HEAD, "Relic");
+            "fire_lord_crown", ITEMS, TAB, IDArmorMaterials.FIRE_LORD_CROWN, EquipmentSlotType.HEAD, new Item.Properties().rarity(Rarity.EPIC), "Relic");
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

@@ -28,7 +28,7 @@ public class OverworldItems {
             () -> new AncientEmeraldItem(new Item.Properties()
                     .tab(TAB)
                     .stacksTo(1)
-                    .rarity(Rarity.RARE)
+                    .rarity(Rarity.EPIC)
                     .durability(4)));
 
     public static void register(IEventBus eventBus) {

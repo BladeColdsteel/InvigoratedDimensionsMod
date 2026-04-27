@@ -9,6 +9,7 @@ import com.bladecoldsteel.invigorateddimensions.util.ItemHelper;
 import com.bladecoldsteel.invigorateddimensions.world.dimension.ModDimensions;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.item.Rarity;
 import net.minecraft.potion.Effects;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
@@ -44,7 +45,7 @@ public class GrassyKnollItems {
             64
     );
     public static final RegistryObject<UniversalTooltipItem> ANGRY_APPLE = ItemHelper.registerTooltipItem(
-            "angry_apples", ITEMS, new Item.Properties().food(threeEffectFoodItem(
+            "angry_apples", ITEMS, new Item.Properties().rarity(Rarity.EPIC).food(threeEffectFoodItem(
                     8,
                     0.4F,
                     false,

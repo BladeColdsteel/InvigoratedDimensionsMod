@@ -28,7 +28,7 @@ public class DreamlandItems {
             () -> new PocketWatchItem(new Item.Properties()
                     .tab(TAB)
                     .stacksTo(1)
-                    .rarity(Rarity.RARE)
+                    .rarity(Rarity.EPIC)
                     .durability(32),
                     40));
 
