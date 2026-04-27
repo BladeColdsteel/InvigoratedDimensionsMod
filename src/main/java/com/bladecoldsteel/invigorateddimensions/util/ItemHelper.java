@@ -1,5 +1,6 @@
 package com.bladecoldsteel.invigorateddimensions.util;
 
+import com.bladecoldsteel.invigorateddimensions.terranata.item.custom.EarthmawArmorSetItem;
 import com.bladecoldsteel.invigorateddimensions.universal.item.custom.UniversalActivatorItem;
 import com.bladecoldsteel.invigorateddimensions.universal.item.custom.UniversalTooltipArmorItem;
 import com.bladecoldsteel.invigorateddimensions.universal.item.custom.UniversalTooltipItem;
@@ -29,8 +30,11 @@ public class ItemHelper {
     public static <T extends Item> RegistryObject<ArmorItem> registerArmor(String name, DeferredRegister<Item> itemRegistry, ItemGroup tab, IArmorMaterial armorMaterial, EquipmentSlotType armorSlot) {
         return itemRegistry.register(name, () -> new ArmorItem(armorMaterial, armorSlot, new Item.Properties().tab(tab)));
     }
-    public static <T extends Item> RegistryObject<UniversalTooltipArmorItem> registerTooltipArmor(String name, DeferredRegister<Item> itemRegistry, ItemGroup tab, IArmorMaterial armorMaterial, EquipmentSlotType armorSlot, String tooltip) {
-        return itemRegistry.register(name, () -> new UniversalTooltipArmorItem(new Item.Properties().tab(tab), armorMaterial, armorSlot, tooltip));
+    public static <T extends Item> RegistryObject<UniversalTooltipArmorItem> registerTooltipArmor(String name, DeferredRegister<Item> itemRegistry, ItemGroup tab, IArmorMaterial armorMaterial, EquipmentSlotType armorSlot, Item.Properties itemFactory, String tooltip) {
+        return itemRegistry.register(name, () -> new UniversalTooltipArmorItem(itemFactory.tab(tab), armorMaterial, armorSlot, tooltip));
+    }
+    public static <T extends Item> RegistryObject<EarthmawArmorSetItem> registerEarthmawArmor(String name, DeferredRegister<Item> itemRegistry, ItemGroup tab, IArmorMaterial armorMaterial, EquipmentSlotType armorSlot) {
+        return itemRegistry.register(name, () -> new EarthmawArmorSetItem(armorMaterial, armorSlot, new Item.Properties().tab(tab)));
     }
     public static <T extends Item> RegistryObject<SwordItem> registerSword(String name, DeferredRegister<Item> itemRegistry, ItemGroup tab, IItemTier toolMaterial, int attackDamage, float attackSpeed) {
         return itemRegistry.register(name, () -> new SwordItem(toolMaterial, attackDamage, attackSpeed, new Item.Properties().tab(tab)));

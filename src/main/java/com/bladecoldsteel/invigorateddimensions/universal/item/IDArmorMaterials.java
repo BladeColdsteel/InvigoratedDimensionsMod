@@ -1,6 +1,7 @@
 package com.bladecoldsteel.invigorateddimensions.universal.item;
 
 import com.bladecoldsteel.invigorateddimensions.InvigoratedDimensions;
+import com.bladecoldsteel.invigorateddimensions.terranata.item.TerraNataItems;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.IArmorMaterial;
 import net.minecraft.item.crafting.Ingredient;
@@ -15,6 +16,10 @@ public enum IDArmorMaterials implements IArmorMaterial {
     FIRE_LORD_CROWN("fire_crown", 20, new int[] {3, 3, 3, 3}, 15,
             SoundEvents.ARMOR_EQUIP_GOLD, 1.0F, 0.0F, () -> {
         return Ingredient.EMPTY;
+    }),
+    EARTHMAW_ARMOR("earthmaw", 25, new int[] {3, 6, 6, 3}, 5,
+    SoundEvents.ARMOR_EQUIP_LEATHER, 1.0F, 0.1F, () -> {
+        return Ingredient.of(TerraNataItems.GIANT_WORM_HIDE.get());
     });
 
     private static final int[] MAX_DAMAGE_ARRAY = new int[]{13, 15, 16, 11};

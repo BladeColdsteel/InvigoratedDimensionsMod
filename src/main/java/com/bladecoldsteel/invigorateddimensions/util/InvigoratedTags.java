@@ -48,6 +48,8 @@ public class InvigoratedTags {
                 createTag("elemental_stones");
         public static final Tags.IOptionalNamedTag<Block> ELEMENTAL_LOGS_BLOCK =
                 createTag("elemental_logs");
+        public static final Tags.IOptionalNamedTag<Block> EARTHMAW_ARMOR_BREAKABLE_BLOCKS =
+                createTag("earthmaw_breakables");
 
         private static Tags.IOptionalNamedTag<Block> createTag(String name) {
             return BlockTags.createOptional(new ResourceLocation(InvigoratedDimensions.MOD_ID, name));

@@ -79,6 +79,7 @@ import com.bladecoldsteel.invigorateddimensions.universal.screens.UniversalConta
 import com.bladecoldsteel.invigorateddimensions.universal.screens.custom.screens.ElementalShrineScreen;
 import com.bladecoldsteel.invigorateddimensions.universal.screens.custom.screens.EnergySinkScreen;
 import com.bladecoldsteel.invigorateddimensions.universal.entity.tileentity.UniversalTileEntities;
+import com.bladecoldsteel.invigorateddimensions.util.CustomKeybinds;
 import com.bladecoldsteel.invigorateddimensions.valleydeath.block.ValleyDeathBlocks;
 import com.bladecoldsteel.invigorateddimensions.valleydeath.block.ValleyDeathWoodTypes;
 import com.bladecoldsteel.invigorateddimensions.valleydeath.item.ValleyDeathItems;
@@ -373,8 +374,8 @@ public class InvigoratedDimensions
 
         //Universal
         RenderTypeLookup.setRenderLayer(UniversalBlocks.CRYSTALLIZED_LEAVES.get(), RenderType.cutout());
-        ClientRegistry.bindTileEntityRenderer(UniversalTileEntities.ELEMENTAL_SHRINE_TILE.get(),
-                ElementalShrineRenderer::new);
+        ClientRegistry.bindTileEntityRenderer(UniversalTileEntities.ELEMENTAL_SHRINE_TILE.get(), ElementalShrineRenderer::new);
+        CustomKeybinds.register();
 
         //Normal
         RenderingRegistry.registerEntityRenderingHandler(OverworldEntityTypes.FOSSIL_TRADER.get(), FossilizedTraderRender::new);
@@ -386,8 +387,7 @@ public class InvigoratedDimensions
         RenderTypeLookup.setRenderLayer(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_DOOR.get(), RenderType.cutout());
         RenderTypeLookup.setRenderLayer(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_WOODEN_TRAPDOOR.get(), RenderType.cutout());
 
-        ClientRegistry.bindTileEntityRenderer(ElectricHighlandsTileEntities.SIGN_TILE_ENTITIES.get(),
-                SignTileEntityRenderer::new);
+        ClientRegistry.bindTileEntityRenderer(ElectricHighlandsTileEntities.SIGN_TILE_ENTITIES.get(), SignTileEntityRenderer::new);
 
         RenderingRegistry.registerEntityRenderingHandler(ElectricHighlandsEntityTypes.RAGING_TEMPEST.get(), RagingTempestRenderer::new);
 

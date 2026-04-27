@@ -457,7 +457,7 @@ public class IDItemModels extends IDItemModelProvider {
         //Hoe
         normalItem(ElectricHighlandsItems.VOLTCRYST_HOE);
         //Helmet
-        normalItem(EmberwildsItems.FIRE_LORD_CROWN);
+
         //Chestplate
 
         //Leggings
@@ -471,6 +471,8 @@ public class IDItemModels extends IDItemModelProvider {
         //Other Items
         normalItem(OverworldItems.FOSSILIZED_BONES);
         normalItem(ElectricHighlandsItems.LIGHTNING_BOLT);
+        normalItem(TerraNataItems.GIANT_WORM_HIDE);
+        normalItem(TerraNataItems.GIANT_WORM_TEETH);
         //Food
         normalItem(GrassyKnollItems.APPLESAUCE);
         //Redstone Controllable Blocks
@@ -480,5 +482,10 @@ public class IDItemModels extends IDItemModelProvider {
         //Boss Relics
         normalItem(GrassyKnollItems.ANGRY_APPLE);
         normalItem(DreamlandItems.POCKET_WATCH);
+        normalItem(EmberwildsItems.FIRE_LORD_CROWN);
+        normalItem(TerraNataItems.EARTHMAW_HELMET);
+        normalItem(TerraNataItems.EARTHMAW_CHESTPLATE);
+        normalItem(TerraNataItems.EARTHMAW_LEGGINGS);
+        normalItem(TerraNataItems.EARTHMAW_BOOTS);
     }
 }

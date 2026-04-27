@@ -1,6 +1,7 @@
 package com.bladecoldsteel.invigorateddimensions.universal.network;
 
 import com.bladecoldsteel.invigorateddimensions.InvigoratedDimensions;
+import com.bladecoldsteel.invigorateddimensions.universal.network.packets.ClientInputPacket;
 import com.bladecoldsteel.invigorateddimensions.universal.network.packets.RotateBlockPacket;
 import com.bladecoldsteel.invigorateddimensions.universal.network.packets.SubmitShrineItemPacket;
 import net.minecraft.util.ResourceLocation;
@@ -32,6 +33,13 @@ public class InvigoratedDimensionsNetworkHandler {
                 SubmitShrineItemPacket::encode,
                 SubmitShrineItemPacket::decode,
                 SubmitShrineItemPacket::handle
+        );
+        INSTANCE.registerMessage(id++,
+                //Input Logic for Earthmaw Armor
+                ClientInputPacket.class,
+                ClientInputPacket::encode,
+                ClientInputPacket::decode,
+                ClientInputPacket::handle
         );
     }
 }

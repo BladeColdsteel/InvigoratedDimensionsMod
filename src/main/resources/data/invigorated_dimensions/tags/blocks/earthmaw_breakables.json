@@ -1,0 +1,26 @@
+{
+  "replace": false,
+  "values": [
+    "#minecraft:base_stone_overworld",
+
+    "#forge:stone",
+    "#forge:sand",
+    "#forge:gravel",
+
+    "#invigorated_dimensions:base_stone_electric_highlands",
+    "#invigorated_dimensions:base_stone_cavernous_cove",
+    "#invigorated_dimensions:base_stone_celestial_realm",
+    "#invigorated_dimensions:base_stone_corrosive_fields",
+    "#invigorated_dimensions:base_stone_deep_tundra",
+    "#invigorated_dimensions:base_stone_dreamland",
+    "#invigorated_dimensions:base_stone_feywild_expanse",
+    "#invigorated_dimensions:base_stone_ghastly_marsh",
+    "#invigorated_dimensions:base_stone_grassy_knoll",
+    "#invigorated_dimensions:base_stone_infinite_dungeon",
+    "#invigorated_dimensions:base_stone_insectoid_paradisio",
+    "#invigorated_dimensions:base_stone_metallic_mountains",
+    "#invigorated_dimensions:base_stone_terra_nata",
+    "#invigorated_dimensions:base_stone_valley_of_death",
+    "#invigorated_dimensions:base_stone_watery_depths"
+  ]
+}

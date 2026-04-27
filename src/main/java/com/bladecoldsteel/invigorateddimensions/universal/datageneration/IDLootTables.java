@@ -24,6 +24,8 @@ import com.bladecoldsteel.invigorateddimensions.metallicmountains.block.Metallic
 import com.bladecoldsteel.invigorateddimensions.overworld.entity.OverworldEntityTypes;
 import com.bladecoldsteel.invigorateddimensions.overworld.item.OverworldItems;
 import com.bladecoldsteel.invigorateddimensions.terranata.block.TerraNataBlocks;
+import com.bladecoldsteel.invigorateddimensions.terranata.entity.TerraNataEntityTypes;
+import com.bladecoldsteel.invigorateddimensions.terranata.item.TerraNataItems;
 import com.bladecoldsteel.invigorateddimensions.universal.block.UniversalBlocks;
 import com.bladecoldsteel.invigorateddimensions.universal.datageneration.provider.IDBlockLootTableProvider;
 import com.bladecoldsteel.invigorateddimensions.universal.item.UniversalItems;
@@ -944,7 +946,29 @@ public class IDLootTables extends LootTableProvider {
                                     .when(KilledByPlayer.killedByPlayer()))));
 
             //Ground
-
+            this.add(TerraNataEntityTypes.GIANT_EARTHMAW.get(), LootTable.lootTable()
+                    .withPool(LootPool.lootPool()
+                            .setRolls(ConstantRange.exactly(1))
+                            .add(ItemLootEntry.lootTableItem(Items.SAND)
+                                    .apply(SetCount.setCount(RandomValueRange.between(8.0F, 32.0F)))
+                                    .apply(LootingEnchantBonus.lootingMultiplier(RandomValueRange.between(0.0F, 8.0F)))
+                                    .when(KilledByPlayer.killedByPlayer()))
+                            .add(ItemLootEntry.lootTableItem(Items.SANDSTONE)
+                                    .apply(SetCount.setCount(RandomValueRange.between(8.0F, 32.0F)))
+                                    .apply(LootingEnchantBonus.lootingMultiplier(RandomValueRange.between(0.0F, 8.0F)))
+                                    .when(KilledByPlayer.killedByPlayer()))
+                            .add(ItemLootEntry.lootTableItem(UniversalItems.GROUND_ESSENCE.get())
+                                    .apply(SetCount.setCount(RandomValueRange.between(4.0F, 16.0F)))
+                                    .apply(LootingEnchantBonus.lootingMultiplier(RandomValueRange.between(0.0F, 8.0F)))
+                                    .when(KilledByPlayer.killedByPlayer()))
+                            .add(ItemLootEntry.lootTableItem(TerraNataItems.GIANT_WORM_TEETH.get())
+                                    .apply(SetCount.setCount(RandomValueRange.between(2.0F, 8.0F)))
+                                    .apply(LootingEnchantBonus.lootingMultiplier(RandomValueRange.between(0.0F, 6.0F)))
+                                    .when(KilledByPlayer.killedByPlayer()))
+                            .add(ItemLootEntry.lootTableItem(TerraNataItems.GIANT_WORM_HIDE.get())
+                                    .apply(SetCount.setCount(RandomValueRange.between(2.0F, 8.0F)))
+                                    .apply(LootingEnchantBonus.lootingMultiplier(RandomValueRange.between(0.0F, 6.0F)))
+                                    .when(KilledByPlayer.killedByPlayer()))));
             //Dark
 
             //Water
@@ -959,6 +983,7 @@ public class IDLootTables extends LootTableProvider {
             OverworldEntityTypes.ENTITY_TYPES.getEntries().forEach(e -> entities.add(e.get()));
             EmberwildsEntityTypes.ENTITY_TYPES.getEntries().forEach(e -> entities.add(e.get()));
             DreamlandEntityTypes.ENTITY_TYPES.getEntries().forEach(e -> entities.add(e.get()));
+            TerraNataEntityTypes.ENTITY_TYPES.getEntries().forEach(e -> entities.add(e.get()));
 
             return entities;
         }
