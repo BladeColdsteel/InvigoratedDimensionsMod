@@ -29,10 +29,24 @@ public class EarthmawArmorSetItem extends ArmorSetItem {
         if (world.isClientSide()) return;
 
         List<BlockPos> targets = getTargetPos(player);
+        ItemStack helmet = player.getItemBySlot(EquipmentSlotType.HEAD);
+        ItemStack chestplate = player.getItemBySlot(EquipmentSlotType.CHEST);
+        ItemStack leggings = player.getItemBySlot(EquipmentSlotType.LEGS);
+        ItemStack boots = player.getItemBySlot(EquipmentSlotType.FEET);
 
         for (BlockPos targetPos : targets) {
             if (isBreakable(world, targetPos)) {
                 world.destroyBlock(targetPos, true);
+                if (!player.isCreative()) {
+                    helmet.hurtAndBreak(1, player, broken ->
+                            broken.broadcastBreakEvent(EquipmentSlotType.HEAD));
+                    chestplate.hurtAndBreak(2, player, broken ->
+                            broken.broadcastBreakEvent(EquipmentSlotType.CHEST));
+                    leggings.hurtAndBreak(2, player, broken ->
+                            broken.broadcastBreakEvent(EquipmentSlotType.LEGS));
+                    boots.hurtAndBreak(1, player, broken ->
+                            broken.broadcastBreakEvent(EquipmentSlotType.FEET));
+                }
             }
         }
     }
