@@ -2,6 +2,7 @@ package com.bladecoldsteel.invigorateddimensions.electrichighlands.entity.custom
 
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.entity.ElectricHighlandsEntityTypes;
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.item.ElectricHighlandsItems;
+import com.sun.corba.se.spi.activation.Server;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
@@ -11,13 +12,19 @@ import net.minecraft.entity.projectile.ProjectileItemEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.network.IPacket;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.math.EntityRayTraceResult;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
+import net.minecraft.world.gen.Heightmap;
+import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.fml.network.NetworkHooks;
 
 public class LightningItemProjectileEntity extends ProjectileItemEntity {
+    private int strikeRadius = 1;
+    private int strikeCount = 1;
+
     public LightningItemProjectileEntity(EntityType<? extends ProjectileItemEntity> type, World world) {
         super(type, world);
     }
@@ -53,10 +60,15 @@ public class LightningItemProjectileEntity extends ProjectileItemEntity {
     @Override
     protected void onHit(RayTraceResult result) {
         super.onHit(result);
-        if (!this.level.isClientSide) {
-            this.level.broadcastEntityEvent(this, (byte) 3);
-            this.remove();
+        if (!this.level.isClientSide && this.level instanceof ServerWorld) {
+            ServerWorld serverWorld = (ServerWorld) this.level;
+            BlockPos center = this.blockPosition();
+
+            if (this.strikeCount > 0) {
+                strikeArea(serverWorld, center, this.strikeRadius, this.strikeCount);
+            }
         }
+        this.remove();
     }
 
     @Override
@@ -75,5 +87,30 @@ public class LightningItemProjectileEntity extends ProjectileItemEntity {
     @Override
     public IPacket<?> getAddEntityPacket() {
         return NetworkHooks.getEntitySpawningPacket(this);
+    }
+
+    private void strikeArea(ServerWorld world, BlockPos center, int radius, int count) {
+        for (int i = 0; i < count; i++) {
+            int xOffset = world.random.nextInt(radius * 2 + 1) - radius;
+            int zOffset = world.random.nextInt(radius * 2 + 1) - radius;
+
+            BlockPos strikePos = center.offset(xOffset, 0, zOffset);
+
+            strikePos = world.getHeightmapPos(Heightmap.Type.MOTION_BLOCKING, strikePos);
+
+            LightningBoltEntity lightning = EntityType.LIGHTNING_BOLT.create(world);
+            if (lightning != null) {
+                lightning.moveTo(strikePos.getX(), strikePos.getY(), strikePos.getZ());
+                world.addFreshEntity(lightning);
+            }
+        }
+    }
+
+    public void setStrikeRadius(int strikeRadius) {
+        this.strikeRadius = strikeRadius;
+    }
+
+    public void setStrikeCount(int strikeCount) {
+        this.strikeCount = strikeCount;
     }
 }

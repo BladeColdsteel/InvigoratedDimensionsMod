@@ -322,6 +322,20 @@ public class IDRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_" + reg.getPath(), has(obj));
     }
 
+    public ShapedRecipeBuilder makeHornedHelmet(Supplier<? extends Item> helmetOut, Supplier<? extends Item> materialIn1, Supplier<? extends Item> materialIn2) {
+        Item obj1 = materialIn1.get();
+        Item obj2 = materialIn2.get();
+        ResourceLocation reg1 = ForgeRegistries.ITEMS.getKey(obj1);
+        ResourceLocation reg2 = ForgeRegistries.ITEMS.getKey(obj2);
+        if (reg1 == null || reg2 == null) throw new IllegalStateException("Item not registered: " + obj1 + obj2);
+        return ShapedRecipeBuilder.shaped(helmetOut.get())
+                .pattern("HMH")
+                .pattern("M M")
+                .define('M', obj1)
+                .define('H', obj2)
+                .unlockedBy("has_" + reg1.getPath(), has(obj1));
+    }
+
     public ShapedRecipeBuilder makeChestplate(Supplier<? extends Item> chestplateOut, Supplier<? extends Item> materialIn) {
         Item obj = materialIn.get();
         ResourceLocation reg = ForgeRegistries.ITEMS.getKey(obj);

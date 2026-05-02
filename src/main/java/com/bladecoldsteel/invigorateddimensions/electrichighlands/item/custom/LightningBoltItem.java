@@ -28,17 +28,40 @@ public class LightningBoltItem extends Item {
         player.getCooldowns().addCooldown(this, 20);
         world.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.TRIDENT_THROW, SoundCategory.PLAYERS, 0.5F, 0.4F / (random.nextFloat() * 0.4F + 0.8F));
         if (!world.isClientSide) {
-            LightningItemProjectileEntity lightningBolt = new LightningItemProjectileEntity(world, player);
-            lightningBolt.setItem(item);
-            lightningBolt.shootFromRotation(player, player.xRot, player.yRot, 0.0F, 1.5F, 1.0F);
-            world.addFreshEntity(lightningBolt);
+            weatherLightning(world, player, hand);
         }
 
         player.awardStat(Stats.ITEM_USED.get(this));
+        consumeOnUse(item, player);
+
+        return ActionResult.success(item);
+    }
+
+    protected void consumeOnUse(ItemStack item, PlayerEntity player) {
         if (!player.abilities.instabuild) {
             item.shrink(1);
         }
+    }
 
-        return ActionResult.success(item);
+    protected void weatherLightning(World world, PlayerEntity player, Hand hand) {
+        ItemStack item = player.getItemInHand(hand);
+        if (!world.isClientSide) {
+            LightningItemProjectileEntity lightningBolt = new LightningItemProjectileEntity(world, player);
+            lightningBolt.setItem(item);
+
+            lightningBolt.setStrikeRadius(getStrikeRadius(world));
+            lightningBolt.setStrikeCount(getStrikeCount(world));
+
+            lightningBolt.shootFromRotation(player, player.xRot, player.yRot, 0.0F, 1.5F, 1.0F);
+            world.addFreshEntity(lightningBolt);
+        }
+    }
+
+    protected int getStrikeRadius(World world) {
+        return 0;
+    }
+
+    protected int getStrikeCount(World world) {
+        return 0;
     }
 }

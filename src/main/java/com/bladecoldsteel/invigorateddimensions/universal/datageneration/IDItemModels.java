@@ -483,6 +483,7 @@ public class IDItemModels extends IDItemModelProvider {
         normalItem(GrassyKnollItems.ANGRY_APPLE);
         normalItem(DreamlandItems.POCKET_WATCH);
         normalItem(EmberwildsItems.FIRE_LORD_CROWN);
+        normalItem(ElectricHighlandsItems.TEMPEST_BOLT);
         normalItem(TerraNataItems.EARTHMAW_HELMET);
         normalItem(TerraNataItems.EARTHMAW_CHESTPLATE);
         normalItem(TerraNataItems.EARTHMAW_LEGGINGS);

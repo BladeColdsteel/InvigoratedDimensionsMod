@@ -18,6 +18,7 @@ import com.bladecoldsteel.invigorateddimensions.infinitedungeon.block.InfiniteDu
 import com.bladecoldsteel.invigorateddimensions.insectoidparadisio.block.InsectoidParadisioBlocks;
 import com.bladecoldsteel.invigorateddimensions.metallicmountains.block.MetallicMountainsBlocks;
 import com.bladecoldsteel.invigorateddimensions.terranata.block.TerraNataBlocks;
+import com.bladecoldsteel.invigorateddimensions.terranata.item.TerraNataItems;
 import com.bladecoldsteel.invigorateddimensions.universal.block.UniversalBlocks;
 import com.bladecoldsteel.invigorateddimensions.universal.datageneration.provider.IDRecipeProvider;
 import com.bladecoldsteel.invigorateddimensions.valleydeath.block.ValleyDeathBlocks;
@@ -277,6 +278,14 @@ public class IDRecipes extends IDRecipeProvider {
         makeAxe(ElectricHighlandsItems.VOLTCRYST_AXE, ElectricHighlandsItems.VOLTCRYST);
         makeShovel(ElectricHighlandsItems.VOLTCRYST_SHOVEL, ElectricHighlandsItems.VOLTCRYST);
         makeHoe(ElectricHighlandsItems.VOLTCRYST_HOE, ElectricHighlandsItems.VOLTCRYST);
+            //Other
+        ShapedRecipeBuilder.shaped(ElectricHighlandsItems.LIGHTNING_BOLT.get())
+                .pattern("Z  ")
+                .pattern("ZZZ")
+                .pattern("  Z")
+                .define('Z', ElectricHighlandsItems.VOLTCRYST.get())
+                .unlockedBy("has_voltcryst", has(ElectricHighlandsItems.VOLTCRYST.get()))
+                .save(consumer);
         //Fire
             //Wooden
         makePlanks(EmberwildsBlocks.PLANKS, EmberwildsBlocks.LOG).save(consumer);
@@ -519,6 +528,37 @@ public class IDRecipes extends IDRecipeProvider {
         stonecuttingSingleRecipe(TerraNataBlocks.COBBLESTONE, TerraNataBlocks.COBBLESTONE_STAIRS.get()).save(consumer, name("grounded_cobblestone_stairs_stonecutting"));
             //Smelting
         smeltingRecipe(TerraNataBlocks.STONE.get(), TerraNataBlocks.COBBLESTONE.get(), 0.7F).save(consumer, name("smelt_grounded_cobblestone"));
+            //Other
+        ShapedRecipeBuilder.shaped(TerraNataItems.EARTHMAW_HELMET.get())
+                .pattern("HMH")
+                .pattern("M M")
+                .define('M', TerraNataItems.GIANT_WORM_HIDE.get())
+                .define('H', TerraNataItems.GIANT_WORM_TEETH.get())
+                .unlockedBy("has_worm_hide", has(TerraNataItems.GIANT_WORM_HIDE.get()))
+                .save(consumer);
+        ShapedRecipeBuilder.shaped(TerraNataItems.EARTHMAW_CHESTPLATE.get())
+                .pattern("H H")
+                .pattern("MMM")
+                .pattern("MMM")
+                .define('M', TerraNataItems.GIANT_WORM_HIDE.get())
+                .define('H', TerraNataItems.GIANT_WORM_TEETH.get())
+                .unlockedBy("has_worm_hide", has(TerraNataItems.GIANT_WORM_HIDE.get()))
+                .save(consumer);
+        ShapedRecipeBuilder.shaped(TerraNataItems.EARTHMAW_LEGGINGS.get())
+                .pattern("HMH")
+                .pattern("M M")
+                .pattern("M M")
+                .define('M', TerraNataItems.GIANT_WORM_HIDE.get())
+                .define('H', TerraNataItems.GIANT_WORM_TEETH.get())
+                .unlockedBy("has_worm_hide", has(TerraNataItems.GIANT_WORM_HIDE.get()))
+                .save(consumer);
+        ShapedRecipeBuilder.shaped(TerraNataItems.EARTHMAW_BOOTS.get())
+                .pattern("M M")
+                .pattern("H H")
+                .define('M', TerraNataItems.GIANT_WORM_HIDE.get())
+                .define('H', TerraNataItems.GIANT_WORM_TEETH.get())
+                .unlockedBy("has_worm_hide", has(TerraNataItems.GIANT_WORM_HIDE.get()))
+                .save(consumer);
         //Dark
             //Wooden
         makePlanks(ValleyDeathBlocks.PLANKS, ValleyDeathBlocks.LOG).save(consumer);

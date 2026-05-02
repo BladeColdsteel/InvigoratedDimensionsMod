@@ -3,6 +3,7 @@ package com.bladecoldsteel.invigorateddimensions.electrichighlands.item;
 import com.bladecoldsteel.invigorateddimensions.InvigoratedDimensions;
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.block.ElectricHighlandsBlocks;
 import com.bladecoldsteel.invigorateddimensions.electrichighlands.item.custom.LightningBoltItem;
+import com.bladecoldsteel.invigorateddimensions.electrichighlands.item.custom.TempestBoltItem;
 import com.bladecoldsteel.invigorateddimensions.universal.item.IDArmorMaterials;
 import com.bladecoldsteel.invigorateddimensions.universal.item.IDToolMaterials;
 import com.bladecoldsteel.invigorateddimensions.universal.item.custom.UniversalActivatorItem;
@@ -51,6 +52,12 @@ public class ElectricHighlandsItems {
                     .rarity(Rarity.UNCOMMON)
                     .tab(TAB)
                     .stacksTo(16)));
+    //Relic
+    public static final RegistryObject<TempestBoltItem> TEMPEST_BOLT = ITEMS.register("tempest_bolt",
+            () -> new TempestBoltItem(new Item.Properties()
+                    .rarity(Rarity.EPIC)
+                    .tab(TAB)
+                    .durability(128)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
