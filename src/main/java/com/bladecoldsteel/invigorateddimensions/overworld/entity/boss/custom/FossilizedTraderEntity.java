@@ -1,4 +1,4 @@
-package com.bladecoldsteel.invigorateddimensions.overworld.entity.custom.boss;
+package com.bladecoldsteel.invigorateddimensions.overworld.entity.boss.custom;
 
 import com.bladecoldsteel.invigorateddimensions.config.InvigoratedDimensionsConfig;
 import com.bladecoldsteel.invigorateddimensions.overworld.entity.OverworldEntityTypes;

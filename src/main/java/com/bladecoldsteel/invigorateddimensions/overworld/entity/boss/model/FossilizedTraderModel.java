@@ -1,6 +1,6 @@
-package com.bladecoldsteel.invigorateddimensions.overworld.entity.model.boss;
+package com.bladecoldsteel.invigorateddimensions.overworld.entity.boss.model;
 
-import com.bladecoldsteel.invigorateddimensions.overworld.entity.custom.boss.FossilizedTraderEntity;
+import com.bladecoldsteel.invigorateddimensions.overworld.entity.boss.custom.FossilizedTraderEntity;
 import com.google.common.collect.ImmutableList;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;

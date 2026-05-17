@@ -1,8 +1,8 @@
-package com.bladecoldsteel.invigorateddimensions.overworld.entity.render.boss;
+package com.bladecoldsteel.invigorateddimensions.overworld.entity.boss.render;
 
 import com.bladecoldsteel.invigorateddimensions.InvigoratedDimensions;
-import com.bladecoldsteel.invigorateddimensions.overworld.entity.custom.boss.FossilizedTraderEntity;
-import com.bladecoldsteel.invigorateddimensions.overworld.entity.model.boss.FossilizedTraderModel;
+import com.bladecoldsteel.invigorateddimensions.overworld.entity.boss.custom.FossilizedTraderEntity;
+import com.bladecoldsteel.invigorateddimensions.overworld.entity.boss.model.FossilizedTraderModel;
 import net.minecraft.client.renderer.entity.EntityRendererManager;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.util.ResourceLocation;

@@ -1,7 +1,7 @@
 package com.bladecoldsteel.invigorateddimensions.overworld.entity;
 
 import com.bladecoldsteel.invigorateddimensions.InvigoratedDimensions;
-import com.bladecoldsteel.invigorateddimensions.overworld.entity.custom.boss.FossilizedTraderEntity;
+import com.bladecoldsteel.invigorateddimensions.overworld.entity.boss.custom.FossilizedTraderEntity;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
 import net.minecraft.util.ResourceLocation;
