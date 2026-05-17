@@ -1,0 +1,14 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "invigorated_dimensions:item/rimebound_core"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "invigorated_dimensions:active": 1.0
+      },
+      "model": "invigorated_dimensions:item/rimebound_core_active"
+    }
+  ]
+}

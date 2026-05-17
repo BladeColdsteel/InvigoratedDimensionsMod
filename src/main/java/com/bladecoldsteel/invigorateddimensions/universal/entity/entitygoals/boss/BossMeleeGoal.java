@@ -15,7 +15,7 @@ public class BossMeleeGoal extends MeleeAttackGoal {
         super(entity, speed, followTarget);
         this.combatCooldown = combatCooldown;
         this.rangeControl = rangeControl;
-        this.boss = (BossMonsterEntity) mob;
+        this.boss = (BossMonsterEntity) entity;
     }
 
     @Override

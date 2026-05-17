@@ -13,6 +13,8 @@ import com.bladecoldsteel.invigorateddimensions.corrosivefields.block.CorrosiveF
 import com.bladecoldsteel.invigorateddimensions.corrosivefields.item.CorrosiveFieldsItems;
 import com.bladecoldsteel.invigorateddimensions.deeptundra.block.DeepTundraBlocks;
 import com.bladecoldsteel.invigorateddimensions.deeptundra.block.DeepTundraWoodTypes;
+import com.bladecoldsteel.invigorateddimensions.deeptundra.entity.DeepTundraEntityTypes;
+import com.bladecoldsteel.invigorateddimensions.deeptundra.entity.boss.render.RimeboundRender;
 import com.bladecoldsteel.invigorateddimensions.deeptundra.item.DeepTundraItems;
 import com.bladecoldsteel.invigorateddimensions.draconicrift.block.DraconicRiftBlocks;
 import com.bladecoldsteel.invigorateddimensions.draconicrift.block.DraconicRiftWoodTypes;
@@ -59,7 +61,7 @@ import com.bladecoldsteel.invigorateddimensions.metallicmountains.block.Metallic
 import com.bladecoldsteel.invigorateddimensions.metallicmountains.block.MetallicMountainsWoodTypes;
 import com.bladecoldsteel.invigorateddimensions.metallicmountains.item.MetallicMountainsItems;
 import com.bladecoldsteel.invigorateddimensions.overworld.entity.OverworldEntityTypes;
-import com.bladecoldsteel.invigorateddimensions.overworld.entity.render.boss.FossilizedTraderRender;
+import com.bladecoldsteel.invigorateddimensions.overworld.entity.boss.render.FossilizedTraderRender;
 import com.bladecoldsteel.invigorateddimensions.overworld.item.OverworldItems;
 import com.bladecoldsteel.invigorateddimensions.terranata.entity.TerraNataEntityTypes;
 import com.bladecoldsteel.invigorateddimensions.terranata.entity.render.GiantEarthmawRender;
@@ -108,6 +110,8 @@ import net.minecraft.client.renderer.entity.SpriteRenderer;
 import net.minecraft.client.renderer.tileentity.SignTileEntityRenderer;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.item.AxeItem;
+import net.minecraft.item.ItemModelsProperties;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.eventbus.api.EventPriority;
@@ -204,6 +208,7 @@ public class InvigoratedDimensions
         GrassyKnollEntityTypes.register(eventBus);
         DreamlandEntityTypes.register(eventBus);
         TerraNataEntityTypes.register(eventBus);
+        DeepTundraEntityTypes.register(eventBus);
         //Particles
         ModParticleTypes.register(eventBus);
         //Tile Entities
@@ -430,6 +435,8 @@ public class InvigoratedDimensions
 
         //Ice
         RenderTypeLookup.setRenderLayer(DeepTundraBlocks.SAPLING.get(), RenderType.cutout());
+        RenderingRegistry.registerEntityRenderingHandler(DeepTundraEntityTypes.RIMEBOUND.get(), RimeboundRender::new);
+        RenderingRegistry.registerEntityRenderingHandler(DeepTundraEntityTypes.HARMFUL_SNOWBALL.get(), entity -> new SpriteRenderer<>(entity, itemRenderer));
 
         //Poison
         RenderTypeLookup.setRenderLayer(CorrosiveFieldsBlocks.SAPLING.get(), RenderType.cutout());
@@ -464,6 +471,16 @@ public class InvigoratedDimensions
         Atlases.addWoodType(CavernousCoveWoodTypes.ROCKY);
         Atlases.addWoodType(GhastlyMarshWoodTypes.SPOOKY);
         Atlases.addWoodType(MetallicMountainsWoodTypes.METALLIC);
+
+        //Item Multi-Texture Thingamado
+        ItemModelsProperties.register(
+                DeepTundraItems.RIMEBOUND_CORE.get(), new ResourceLocation(InvigoratedDimensions.MOD_ID, "active"), (stack, world, entity) -> {
+                    if (entity != null && entity.isUsingItem() && entity.getUseItem().equals(stack)) {
+                        return 1.0F;
+                    }
+                    return 0.0F;
+                }
+        );
     }
 
     public void gatherData(GatherDataEvent event) {

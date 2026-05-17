@@ -366,6 +366,9 @@
   "block.invigorated_dimensions.icey_portal_frame": "Icey Portal Frame",
   "block.invigorated_dimensions.deep_tundra_portal": "Deep Tundra Portal",
   "item.invigorated_dimensions.icey_activator": "Icey Portal Activator",
+  "item.invigorated_dimensions.rimebound_core": "Rimebound Core",
+  "entity.invigorated_dimensions.rimebound": "Rimebound",
+  "entity.invigorated_dimensions.harmful_snowball": "Harmful Snowball",
 
   "block.invigorated_dimensions.corrosive_logs": "Corrosive Log",
   "block.invigorated_dimensions.corrosive_sapling": "Corrosive Sapling",

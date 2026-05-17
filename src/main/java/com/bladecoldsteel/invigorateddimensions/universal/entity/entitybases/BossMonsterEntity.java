@@ -1,5 +1,6 @@
 package com.bladecoldsteel.invigorateddimensions.universal.entity.entitybases;
 
+import com.bladecoldsteel.invigorateddimensions.universal.entity.entitygoals.misc.ICombatAnimatedBoss;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.goal.*;
@@ -23,8 +24,10 @@ public class BossMonsterEntity extends MonsterEntity {
     public enum CombatAction {
         NONE,
         MELEE,
+        RANGED,
         TELEPORT,
         EFFECT,
+        BREATH,
         UNDERGROUND_MOVE,
         UNDERGROUND_ATTACK
     }
@@ -51,7 +54,14 @@ public class BossMonsterEntity extends MonsterEntity {
     }
 
     public void setCurrentAction(BossMonsterEntity.CombatAction action) {
-        this.currentAction = action;
+        if (this.currentAction != action) {
+            this.currentAction = action;
+
+            if (this instanceof ICombatAnimatedBoss) {
+                ((ICombatAnimatedBoss) this).reloadCombatAnimations();
+            }
+        }
+
     }
 
     public boolean isActionReady() {
