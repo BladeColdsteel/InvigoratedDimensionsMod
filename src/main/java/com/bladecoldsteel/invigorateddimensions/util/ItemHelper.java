@@ -1,6 +1,7 @@
 package com.bladecoldsteel.invigorateddimensions.util;
 
 import com.bladecoldsteel.invigorateddimensions.terranata.item.custom.EarthmawArmorSetItem;
+import com.bladecoldsteel.invigorateddimensions.ultra.item.custom.BeastlyBoarTuskItem;
 import com.bladecoldsteel.invigorateddimensions.universal.item.custom.UniversalActivatorItem;
 import com.bladecoldsteel.invigorateddimensions.universal.item.custom.UniversalTooltipArmorItem;
 import com.bladecoldsteel.invigorateddimensions.universal.item.custom.UniversalTooltipItem;
@@ -103,5 +104,9 @@ public class ItemHelper {
         if (fastFood) foodBuilder.fast();
 
         return foodBuilder.build();
+    }
+
+    public static <T extends Item> RegistryObject<BeastlyBoarTuskItem> registerBoarTusk(String name, DeferredRegister<Item> itemRegistry, Item.Properties itemFactory, ItemGroup tab, int stackSize, int extraDamage, float extraDamageSpeed) {
+        return itemRegistry.register(name, () -> new BeastlyBoarTuskItem(extraDamage, extraDamageSpeed, itemFactory.tab(tab).stacksTo(stackSize)));
     }
 }

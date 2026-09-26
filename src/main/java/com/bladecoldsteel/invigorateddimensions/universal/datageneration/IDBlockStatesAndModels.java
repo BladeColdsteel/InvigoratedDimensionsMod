@@ -15,6 +15,7 @@ import com.bladecoldsteel.invigorateddimensions.infinitedungeon.block.InfiniteDu
 import com.bladecoldsteel.invigorateddimensions.insectoidparadisio.block.InsectoidParadisioBlocks;
 import com.bladecoldsteel.invigorateddimensions.metallicmountains.block.MetallicMountainsBlocks;
 import com.bladecoldsteel.invigorateddimensions.terranata.block.TerraNataBlocks;
+import com.bladecoldsteel.invigorateddimensions.ultra.block.UltraDimBlocks;
 import com.bladecoldsteel.invigorateddimensions.universal.block.UniversalBlocks;
 import com.bladecoldsteel.invigorateddimensions.universal.datageneration.provider.IDBlockstateProvider;
 import com.bladecoldsteel.invigorateddimensions.valleydeath.block.ValleyDeathBlocks;
@@ -457,6 +458,8 @@ public class IDBlockStatesAndModels extends IDBlockstateProvider {
         block(TerraNataBlocks.PORTAL_FRAME);
         block(ValleyDeathBlocks.PORTAL_FRAME);
         block(WateryDepthsBlocks.PORTAL_FRAME);
+        //Portal
+        noModel(UltraDimBlocks.BEASTLY_BOAR_PORTAL);
         //Multistate Blocks
         poweredBlock(UniversalBlocks.PORTAL_CHARGING_BLOCK, "portal_charging_block", "portal_charging_block_side_off", "portal_charging_block_side_on",
                 "portal_charging_block_end_off", "portal_charging_block_end_on");

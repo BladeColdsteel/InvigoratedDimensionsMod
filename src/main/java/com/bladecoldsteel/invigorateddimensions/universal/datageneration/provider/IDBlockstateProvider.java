@@ -19,6 +19,12 @@ public abstract class IDBlockstateProvider extends BlockStateProvider {
         super(generator, InvigoratedDimensions.MOD_ID, fileHelper);
     }
 
+    public void noModel(Supplier<? extends Block> block) {
+        String baseName = name(block);
+        ModelFile emptyModel = models().withExistingParent(baseName, mcLoc("block/block"));
+        simpleBlock(block.get(), emptyModel);
+    }
+
     public void block(Supplier<? extends Block> block) {
         simpleBlock(block.get());
     }

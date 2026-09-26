@@ -31,6 +31,7 @@ import com.bladecoldsteel.invigorateddimensions.metallicmountains.item.MetallicM
 import com.bladecoldsteel.invigorateddimensions.overworld.item.OverworldItems;
 import com.bladecoldsteel.invigorateddimensions.terranata.block.TerraNataBlocks;
 import com.bladecoldsteel.invigorateddimensions.terranata.item.TerraNataItems;
+import com.bladecoldsteel.invigorateddimensions.ultra.item.UltraDimItems;
 import com.bladecoldsteel.invigorateddimensions.universal.block.UniversalBlocks;
 import com.bladecoldsteel.invigorateddimensions.universal.datageneration.provider.IDItemModelProvider;
 import com.bladecoldsteel.invigorateddimensions.universal.item.UniversalItems;
@@ -473,6 +474,7 @@ public class IDItemModels extends IDItemModelProvider {
         normalItem(ElectricHighlandsItems.LIGHTNING_BOLT);
         normalItem(TerraNataItems.GIANT_WORM_HIDE);
         normalItem(TerraNataItems.GIANT_WORM_TEETH);
+        normalItem(UltraDimItems.BOAR_TUSK);
         //Food
         normalItem(GrassyKnollItems.APPLESAUCE);
         //Redstone Controllable Blocks
@@ -488,5 +490,6 @@ public class IDItemModels extends IDItemModelProvider {
         normalItem(TerraNataItems.EARTHMAW_CHESTPLATE);
         normalItem(TerraNataItems.EARTHMAW_LEGGINGS);
         normalItem(TerraNataItems.EARTHMAW_BOOTS);
+        normalItem(UltraDimItems.BEASTLY_BOAR_TUSK);
     }
 }

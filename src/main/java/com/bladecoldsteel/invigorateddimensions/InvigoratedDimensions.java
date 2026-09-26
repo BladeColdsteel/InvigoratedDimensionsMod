@@ -65,6 +65,12 @@ import com.bladecoldsteel.invigorateddimensions.overworld.entity.boss.render.Fos
 import com.bladecoldsteel.invigorateddimensions.overworld.item.OverworldItems;
 import com.bladecoldsteel.invigorateddimensions.terranata.entity.TerraNataEntityTypes;
 import com.bladecoldsteel.invigorateddimensions.terranata.entity.render.GiantEarthmawRender;
+import com.bladecoldsteel.invigorateddimensions.ultra.block.UltraDimBlocks;
+import com.bladecoldsteel.invigorateddimensions.ultra.entity.UltraDimEntityTypes;
+import com.bladecoldsteel.invigorateddimensions.ultra.entity.boss.render.BeastlyBoarRender;
+import com.bladecoldsteel.invigorateddimensions.ultra.entity.tileentity.UltraDimTileEntities;
+import com.bladecoldsteel.invigorateddimensions.ultra.entity.tileentity.renderer.BeastlyBoarTuskPortalRenderer;
+import com.bladecoldsteel.invigorateddimensions.ultra.item.UltraDimItems;
 import com.bladecoldsteel.invigorateddimensions.universal.datageneration.IDBlockStatesAndModels;
 import com.bladecoldsteel.invigorateddimensions.universal.datageneration.IDItemModels;
 import com.bladecoldsteel.invigorateddimensions.universal.datageneration.IDLootTables;
@@ -181,6 +187,7 @@ public class InvigoratedDimensions
         CavernousCoveBlocks.register(eventBus);
         GhastlyMarshBlocks.register(eventBus);
         MetallicMountainsBlocks.register(eventBus);
+        UltraDimBlocks.register(eventBus);
         //Items
         UniversalItems.register(eventBus);
         OverworldItems.register(eventBus);
@@ -201,6 +208,7 @@ public class InvigoratedDimensions
         CavernousCoveItems.register(eventBus);
         GhastlyMarshItems.register(eventBus);
         MetallicMountainsItems.register(eventBus);
+        UltraDimItems.register(eventBus);
         //Entities
         OverworldEntityTypes.register(eventBus);
         ElectricHighlandsEntityTypes.register(eventBus);
@@ -209,11 +217,13 @@ public class InvigoratedDimensions
         DreamlandEntityTypes.register(eventBus);
         TerraNataEntityTypes.register(eventBus);
         DeepTundraEntityTypes.register(eventBus);
+        UltraDimEntityTypes.register(eventBus);
         //Particles
         ModParticleTypes.register(eventBus);
         //Tile Entities
         UniversalTileEntities.register(eventBus);
         ElectricHighlandsTileEntities.register(eventBus);
+        UltraDimTileEntities.register(eventBus);
         //POI's
         ModPointsOfInterest.register(eventBus);
         //Sounds
@@ -452,6 +462,11 @@ public class InvigoratedDimensions
 
         //Steel
         RenderTypeLookup.setRenderLayer(MetallicMountainsBlocks.SAPLING.get(), RenderType.cutout());
+
+        //Ultra
+        RenderingRegistry.registerEntityRenderingHandler(UltraDimEntityTypes.BEASTLY_BOAR.get(), BeastlyBoarRender::new);
+        RenderingRegistry.registerEntityRenderingHandler(UltraDimEntityTypes.BOAR_TUSK_PROJECTILE.get(), entity -> new SpriteRenderer<>(entity, itemRenderer));
+        ClientRegistry.bindTileEntityRenderer(UltraDimTileEntities.BEASTLY_BOAR_PORTAL_TILE.get(), BeastlyBoarTuskPortalRenderer::new);
 
         //Wood Types
         Atlases.addWoodType(ElectricHighlandsWoodTypes.ELECTRICALLY_CHARGED);

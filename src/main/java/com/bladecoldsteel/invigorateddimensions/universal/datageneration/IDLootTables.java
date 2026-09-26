@@ -26,6 +26,9 @@ import com.bladecoldsteel.invigorateddimensions.overworld.item.OverworldItems;
 import com.bladecoldsteel.invigorateddimensions.terranata.block.TerraNataBlocks;
 import com.bladecoldsteel.invigorateddimensions.terranata.entity.TerraNataEntityTypes;
 import com.bladecoldsteel.invigorateddimensions.terranata.item.TerraNataItems;
+import com.bladecoldsteel.invigorateddimensions.ultra.block.UltraDimBlocks;
+import com.bladecoldsteel.invigorateddimensions.ultra.entity.UltraDimEntityTypes;
+import com.bladecoldsteel.invigorateddimensions.ultra.item.UltraDimItems;
 import com.bladecoldsteel.invigorateddimensions.universal.block.UniversalBlocks;
 import com.bladecoldsteel.invigorateddimensions.universal.datageneration.provider.IDBlockLootTableProvider;
 import com.bladecoldsteel.invigorateddimensions.universal.item.UniversalItems;
@@ -765,6 +768,9 @@ public class IDLootTables extends LootTableProvider {
             dropSelf(WateryDepthsBlocks.SAPLING);
             dropSelf(WateryDepthsBlocks.PORTAL_FRAME);
             dropNothing(WateryDepthsBlocks.PORTAL);
+            //Ultra
+                //Other
+            dropNothing(UltraDimBlocks.BEASTLY_BOAR_PORTAL);
         }
 
         @Override
@@ -785,6 +791,7 @@ public class IDLootTables extends LootTableProvider {
                     InsectoidParadisioBlocks.BLOCKS,
                     MetallicMountainsBlocks.BLOCKS,
                     TerraNataBlocks.BLOCKS,
+                    UltraDimBlocks.BLOCKS,
                     ValleyDeathBlocks.BLOCKS,
                     WateryDepthsBlocks.BLOCKS
             ).flatMap(reg -> reg.getEntries().stream().map(Supplier::get)).collect(Collectors.toList());
@@ -1007,6 +1014,159 @@ public class IDLootTables extends LootTableProvider {
             //Dark
 
             //Water
+
+            //Ultra
+            this.add(UltraDimEntityTypes.BEASTLY_BOAR.get(), LootTable.lootTable()
+                    .withPool(LootPool.lootPool()
+                            .setRolls(ConstantRange.exactly(1))
+                            .add(ItemLootEntry.lootTableItem(Items.PORKCHOP)
+                                    .apply(SetCount.setCount(RandomValueRange.between(8.0F, 32.0F)))
+                                    .apply(LootingEnchantBonus.lootingMultiplier(RandomValueRange.between(2.0F, 32.0F)))
+                                    .when(KilledByPlayer.killedByPlayer())))
+                    .withPool(LootPool.lootPool()
+                            .setRolls(ConstantRange.exactly(1))
+                            .add(ItemLootEntry.lootTableItem(UltraDimItems.BOAR_TUSK.get())
+                                    .apply(SetCount.setCount(RandomValueRange.between(1.0F, 3.0F)))
+                                    .when(KilledByPlayer.killedByPlayer())))
+                    .withPool(LootPool.lootPool()
+                            .setRolls(ConstantRange.exactly(1))
+                            .add(ItemLootEntry.lootTableItem(UltraDimItems.BEASTLY_BOAR_TUSK.get())
+                                    .apply(SetCount.setCount(RandomValueRange.between(0.0F, 1.0F)))
+                                    .when(KilledByPlayer.killedByPlayer())))
+                    .withPool(LootPool.lootPool()
+                            .setRolls(ConstantRange.exactly(1))
+                            .add(ItemLootEntry.lootTableItem(UniversalItems.BASE_ESSENCE.get())
+                                    .apply(SetCount.setCount(RandomValueRange.between(0.0F, 4.0F)))
+                                    .apply(LootingEnchantBonus.lootingMultiplier(RandomValueRange.between(0.0F, 4.0F)))
+                                    .when(KilledByPlayer.killedByPlayer())))
+
+                    .withPool(LootPool.lootPool()
+                            .setRolls(ConstantRange.exactly(1))
+                            .add(ItemLootEntry.lootTableItem(UniversalItems.NORMAL_ESSENCE.get())
+                                    .apply(SetCount.setCount(RandomValueRange.between(0.0F, 4.0F)))
+                                    .apply(LootingEnchantBonus.lootingMultiplier(RandomValueRange.between(0.0F, 4.0F)))
+                                    .when(KilledByPlayer.killedByPlayer())))
+
+                    .withPool(LootPool.lootPool()
+                            .setRolls(ConstantRange.exactly(1))
+                            .add(ItemLootEntry.lootTableItem(UniversalItems.ELECTRIC_ESSENCE.get())
+                                    .apply(SetCount.setCount(RandomValueRange.between(0.0F, 4.0F)))
+                                    .apply(LootingEnchantBonus.lootingMultiplier(RandomValueRange.between(0.0F, 4.0F)))
+                                    .when(KilledByPlayer.killedByPlayer())))
+
+                    .withPool(LootPool.lootPool()
+                            .setRolls(ConstantRange.exactly(1))
+                            .add(ItemLootEntry.lootTableItem(UniversalItems.WATER_ESSENCE.get())
+                                    .apply(SetCount.setCount(RandomValueRange.between(0.0F, 4.0F)))
+                                    .apply(LootingEnchantBonus.lootingMultiplier(RandomValueRange.between(0.0F, 4.0F)))
+                                    .when(KilledByPlayer.killedByPlayer())))
+
+                    .withPool(LootPool.lootPool()
+                            .setRolls(ConstantRange.exactly(1))
+                            .add(ItemLootEntry.lootTableItem(UniversalItems.FIRE_ESSENCE.get())
+                                    .apply(SetCount.setCount(RandomValueRange.between(0.0F, 4.0F)))
+                                    .apply(LootingEnchantBonus.lootingMultiplier(RandomValueRange.between(0.0F, 4.0F)))
+                                    .when(KilledByPlayer.killedByPlayer())))
+
+                    .withPool(LootPool.lootPool()
+                            .setRolls(ConstantRange.exactly(1))
+                            .add(ItemLootEntry.lootTableItem(UniversalItems.GRASS_ESSENCE.get())
+                                    .apply(SetCount.setCount(RandomValueRange.between(0.0F, 4.0F)))
+                                    .apply(LootingEnchantBonus.lootingMultiplier(RandomValueRange.between(0.0F, 4.0F)))
+                                    .when(KilledByPlayer.killedByPlayer())))
+
+                    .withPool(LootPool.lootPool()
+                            .setRolls(ConstantRange.exactly(1))
+                            .add(ItemLootEntry.lootTableItem(UniversalItems.STEEL_ESSENCE.get())
+                                    .apply(SetCount.setCount(RandomValueRange.between(0.0F, 4.0F)))
+                                    .apply(LootingEnchantBonus.lootingMultiplier(RandomValueRange.between(0.0F, 4.0F)))
+                                    .when(KilledByPlayer.killedByPlayer())))
+
+                    .withPool(LootPool.lootPool()
+                            .setRolls(ConstantRange.exactly(1))
+                            .add(ItemLootEntry.lootTableItem(UniversalItems.FAIRY_ESSENCE.get())
+                                    .apply(SetCount.setCount(RandomValueRange.between(0.0F, 4.0F)))
+                                    .apply(LootingEnchantBonus.lootingMultiplier(RandomValueRange.between(0.0F, 4.0F)))
+                                    .when(KilledByPlayer.killedByPlayer())))
+
+                    .withPool(LootPool.lootPool()
+                            .setRolls(ConstantRange.exactly(1))
+                            .add(ItemLootEntry.lootTableItem(UniversalItems.ROCK_ESSENCE.get())
+                                    .apply(SetCount.setCount(RandomValueRange.between(0.0F, 4.0F)))
+                                    .apply(LootingEnchantBonus.lootingMultiplier(RandomValueRange.between(0.0F, 4.0F)))
+                                    .when(KilledByPlayer.killedByPlayer())))
+
+                    .withPool(LootPool.lootPool()
+                            .setRolls(ConstantRange.exactly(1))
+                            .add(ItemLootEntry.lootTableItem(UniversalItems.GROUND_ESSENCE.get())
+                                    .apply(SetCount.setCount(RandomValueRange.between(0.0F, 4.0F)))
+                                    .apply(LootingEnchantBonus.lootingMultiplier(RandomValueRange.between(0.0F, 4.0F)))
+                                    .when(KilledByPlayer.killedByPlayer())))
+
+                    .withPool(LootPool.lootPool()
+                            .setRolls(ConstantRange.exactly(1))
+                            .add(ItemLootEntry.lootTableItem(UniversalItems.DARK_ESSENCE.get())
+                                    .apply(SetCount.setCount(RandomValueRange.between(0.0F, 4.0F)))
+                                    .apply(LootingEnchantBonus.lootingMultiplier(RandomValueRange.between(0.0F, 4.0F)))
+                                    .when(KilledByPlayer.killedByPlayer())))
+
+                    .withPool(LootPool.lootPool()
+                            .setRolls(ConstantRange.exactly(1))
+                            .add(ItemLootEntry.lootTableItem(UniversalItems.FIGHTING_ESSENCE.get())
+                                    .apply(SetCount.setCount(RandomValueRange.between(0.0F, 4.0F)))
+                                    .apply(LootingEnchantBonus.lootingMultiplier(RandomValueRange.between(0.0F, 4.0F)))
+                                    .when(KilledByPlayer.killedByPlayer())))
+
+                    .withPool(LootPool.lootPool()
+                            .setRolls(ConstantRange.exactly(1))
+                            .add(ItemLootEntry.lootTableItem(UniversalItems.BUG_ESSENCE.get())
+                                    .apply(SetCount.setCount(RandomValueRange.between(0.0F, 4.0F)))
+                                    .apply(LootingEnchantBonus.lootingMultiplier(RandomValueRange.between(0.0F, 4.0F)))
+                                    .when(KilledByPlayer.killedByPlayer())))
+
+                    .withPool(LootPool.lootPool()
+                            .setRolls(ConstantRange.exactly(1))
+                            .add(ItemLootEntry.lootTableItem(UniversalItems.DRAGON_ESSENCE.get())
+                                    .apply(SetCount.setCount(RandomValueRange.between(0.0F, 4.0F)))
+                                    .apply(LootingEnchantBonus.lootingMultiplier(RandomValueRange.between(0.0F, 4.0F)))
+                                    .when(KilledByPlayer.killedByPlayer())))
+
+                    .withPool(LootPool.lootPool()
+                            .setRolls(ConstantRange.exactly(1))
+                            .add(ItemLootEntry.lootTableItem(UniversalItems.ICE_ESSENCE.get())
+                                    .apply(SetCount.setCount(RandomValueRange.between(0.0F, 4.0F)))
+                                    .apply(LootingEnchantBonus.lootingMultiplier(RandomValueRange.between(0.0F, 4.0F)))
+                                    .when(KilledByPlayer.killedByPlayer())))
+
+                    .withPool(LootPool.lootPool()
+                            .setRolls(ConstantRange.exactly(1))
+                            .add(ItemLootEntry.lootTableItem(UniversalItems.POISON_ESSENCE.get())
+                                    .apply(SetCount.setCount(RandomValueRange.between(0.0F, 4.0F)))
+                                    .apply(LootingEnchantBonus.lootingMultiplier(RandomValueRange.between(0.0F, 4.0F)))
+                                    .when(KilledByPlayer.killedByPlayer())))
+
+                    .withPool(LootPool.lootPool()
+                            .setRolls(ConstantRange.exactly(1))
+                            .add(ItemLootEntry.lootTableItem(UniversalItems.GHOST_ESSENCE.get())
+                                    .apply(SetCount.setCount(RandomValueRange.between(0.0F, 4.0F)))
+                                    .apply(LootingEnchantBonus.lootingMultiplier(RandomValueRange.between(0.0F, 4.0F)))
+                                    .when(KilledByPlayer.killedByPlayer())))
+
+                    .withPool(LootPool.lootPool()
+                            .setRolls(ConstantRange.exactly(1))
+                            .add(ItemLootEntry.lootTableItem(UniversalItems.PSYCHIC_ESSENCE.get())
+                                    .apply(SetCount.setCount(RandomValueRange.between(0.0F, 4.0F)))
+                                    .apply(LootingEnchantBonus.lootingMultiplier(RandomValueRange.between(0.0F, 4.0F)))
+                                    .when(KilledByPlayer.killedByPlayer())))
+
+                    .withPool(LootPool.lootPool()
+                            .setRolls(ConstantRange.exactly(1))
+                            .add(ItemLootEntry.lootTableItem(UniversalItems.FLYING_ESSENCE.get())
+                                    .apply(SetCount.setCount(RandomValueRange.between(0.0F, 4.0F)))
+                                    .apply(LootingEnchantBonus.lootingMultiplier(RandomValueRange.between(0.0F, 4.0F)))
+                                    .when(KilledByPlayer.killedByPlayer()))));
+
+
         }
 
         @Override
@@ -1019,6 +1179,7 @@ public class IDLootTables extends LootTableProvider {
             EmberwildsEntityTypes.ENTITY_TYPES.getEntries().forEach(e -> entities.add(e.get()));
             DreamlandEntityTypes.ENTITY_TYPES.getEntries().forEach(e -> entities.add(e.get()));
             TerraNataEntityTypes.ENTITY_TYPES.getEntries().forEach(e -> entities.add(e.get()));
+            UltraDimEntityTypes.ENTITY_TYPES.getEntries().forEach(e -> entities.add(e.get()));
 
             return entities;
         }

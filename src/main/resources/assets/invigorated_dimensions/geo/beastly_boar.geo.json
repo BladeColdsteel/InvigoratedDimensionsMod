@@ -1,0 +1,85 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.unknown",
+				"texture_width": 256,
+				"texture_height": 256,
+				"visible_bounds_width": 6,
+				"visible_bounds_height": 4.5,
+				"visible_bounds_offset": [0, 1.75, 0]
+			},
+			"bones": [
+				{
+					"name": "head",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-12, 28, -42], "size": [24, 24, 24], "uv": [0, 72]}
+					]
+				},
+				{
+					"name": "nose",
+					"parent": "head",
+					"pivot": [11, 28, -41],
+					"cubes": [
+						{"origin": [-6, 34, -44], "size": [12, 6, 2], "uv": [108, 40]}
+					]
+				},
+				{
+					"name": "rightTusk",
+					"parent": "head",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [2, 31, -44], "size": [10, 4, 4], "pivot": [7, 31, -43], "rotation": [44.81213, 45.18665, 54.47036], "uv": [96, 132]},
+						{"origin": [5, 28, -47], "size": [8, 4, 4], "pivot": [8, 28, -46], "rotation": [101.71133, 47.76812, 125.07479], "uv": [96, 140]}
+					]
+				},
+				{
+					"name": "leftTusk",
+					"parent": "head",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-12, 31, -44], "size": [10, 4, 4], "pivot": [-7, 31, -43], "rotation": [44.81213, -45.18665, -54.47036], "uv": [124, 132]},
+						{"origin": [-13, 28, -47], "size": [8, 4, 4], "pivot": [-8, 28, -46], "rotation": [101.71133, -47.76812, -125.07479], "uv": [120, 140]}
+					]
+				},
+				{
+					"name": "body",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-15, 18, -18], "size": [30, 24, 48], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "frontLegRight",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-15, 0, -18], "size": [12, 18, 12], "uv": [96, 72]}
+					]
+				},
+				{
+					"name": "frontLegLeft",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [3, 0, -18], "size": [12, 18, 12], "uv": [96, 102]}
+					]
+				},
+				{
+					"name": "backLegRight",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [3, 0, 18], "size": [12, 18, 12], "uv": [0, 120]}
+					]
+				},
+				{
+					"name": "backLegLeft",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-15, 0, 18], "size": [12, 18, 12], "uv": [48, 120]}
+					]
+				}
+			]
+		}
+	]
+}

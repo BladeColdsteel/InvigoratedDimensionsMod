@@ -1,6 +1,7 @@
 package com.bladecoldsteel.invigorateddimensions.util;
 
 import com.bladecoldsteel.invigorateddimensions.celestialrealm.block.custom.FloatingSaplingBlock;
+import com.bladecoldsteel.invigorateddimensions.ultra.block.custom.BeastlyBoarTuskPortalBlock;
 import com.bladecoldsteel.invigorateddimensions.universal.block.custom.GeneralizedPortalBlock;
 import com.bladecoldsteel.invigorateddimensions.world.gen.features.trees.FlyingTree;
 import net.minecraft.block.*;
@@ -40,6 +41,10 @@ public class BlockHelper {
 
     public static Supplier<GeneralizedPortalBlock> portalBlock(Supplier<? extends Block> frameBlock, Supplier<? extends Block> portalBlock, RegistryKey<World> dimensionID, ResourceLocation poi) {
         return () -> new GeneralizedPortalBlock(buildProperties(Material.STONE, 10000.0F, 10000.0F, ToolType.PICKAXE, 4, SoundType.STONE, true).noCollission(), frameBlock, portalBlock, dimensionID, poi);
+    }
+
+    public static Supplier<BeastlyBoarTuskPortalBlock> beastlyBoarPortalBlock() {
+        return () -> new BeastlyBoarTuskPortalBlock(buildProperties(Material.AIR, 10000.0F, 10000.0F, ToolType.PICKAXE, 100, SoundType.STONE, true).noCollission());
     }
 
     public static Supplier<SlabBlock> slabBlock(Material material, float strength, ToolType tool, int harvestLevel, SoundType sound, boolean needsTool) {

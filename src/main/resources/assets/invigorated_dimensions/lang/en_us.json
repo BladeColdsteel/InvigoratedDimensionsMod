@@ -507,6 +507,11 @@
   "block.invigorated_dimensions.metallic_mountains_portal": "Metallic Mountains Portal",
   "item.invigorated_dimensions.metallic_activator": "Metallic Portal Activator",
 
+  "entity.invigorated_dimensions.beastly_boar": "Beastly Boar",
+  "item.invigorated_dimensions.boar_tusk": "Beastly Tusk",
+  "item.invigorated_dimensions.beastly_boar_tusk": "Ultra Beastly Tusk",
+  "block.invigorated_dimensions.beastly_boar_tusk_portal": "Ultra Tusk Portal",
+
   "itemGroup.invigorated_dimensions": "Invigorated Dimensions",
   "itemGroup.invigorated_dimensions_electric_highlands_mod_tab": "ID: Electric Highlands",
   "itemGroup.invigorated_dimensions_watery_depths_mod_tab": "ID: Watery Depths",
@@ -525,6 +530,7 @@
   "itemGroup.invigorated_dimensions_rocky_mod_tab": "ID: Cavernous Cove",
   "itemGroup.invigorated_dimensions_spooky_mod_tab": "ID: Ghastly Marsh",
   "itemGroup.invigorated_dimensions_steel_mod_tab": "ID: Metallic Mountains",
+  "itemGroup.invigorated_dimensions_ultra_mod_tab": "ID: Ultra Dimension",
 
   "biome.invigorated_dimensions.electric_rift": "Electric Rift",
   "biome.invigorated_dimensions.watery_rift": "Watery Rift",

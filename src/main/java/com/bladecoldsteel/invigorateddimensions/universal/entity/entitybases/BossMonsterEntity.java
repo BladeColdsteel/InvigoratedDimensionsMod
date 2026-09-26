@@ -28,6 +28,7 @@ public class BossMonsterEntity extends MonsterEntity {
         TELEPORT,
         EFFECT,
         BREATH,
+        RUSH,
         UNDERGROUND_MOVE,
         UNDERGROUND_ATTACK
     }
