@@ -1,5 +1,7 @@
 package com.bladecoldsteel.invigorateddimensions.world.gen.structure;
 
+import com.bladecoldsteel.invigorateddimensions.overworld.entity.OverworldEntityTypes;
+import com.bladecoldsteel.invigorateddimensions.overworld.entity.neutral.custom.ElementalShrineProtectorsEntity;
 import com.bladecoldsteel.invigorateddimensions.world.gen.InvigoratedPieces;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -7,6 +9,7 @@ import net.minecraft.fluid.Fluids;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.util.Rotation;
+import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.ChunkPos;
 import net.minecraft.util.math.MutableBoundingBox;
@@ -20,6 +23,7 @@ import net.minecraft.world.gen.feature.template.TemplateManager;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.util.List;
 import java.util.Random;
 
 public class ShrinePiece extends AbstractVillagePiece {
@@ -82,6 +86,65 @@ public class ShrinePiece extends AbstractVillagePiece {
             }
         }
 
+        trySpawnProtector(world, random, box);
+
         return placed;
+    }
+
+    private void trySpawnProtector(ISeedReader world, Random random, MutableBoundingBox box) {
+        if (random.nextFloat() > 0.20F) {
+            return;
+        }
+
+        MutableBoundingBox pieceBox = this.getBoundingBox();
+        int minX = Math.max(pieceBox.x0, box.x0);
+        int maxX = Math.min(pieceBox.x1, box.x1);
+        int minY = Math.max(pieceBox.y0, box.y0);
+        int maxY = Math.min(pieceBox.y1, box.y1);
+        int minZ = Math.max(pieceBox.z0, box.z0);
+        int maxZ = Math.min(pieceBox.z1, box.z1);
+
+        if (minX > maxX || minY > maxY || minZ > maxZ) {
+            return;
+        }
+
+        for (int attempt = 0; attempt < 10; attempt++) {
+            int x = minX + random.nextInt(maxX - minX + 1);
+            int y = minY + random.nextInt(maxY - minY + 1);
+            int z = minZ + random.nextInt(maxZ - minZ + 1);
+
+            BlockPos pos = new BlockPos(x, y, z);
+
+            if (!ElementalShrineProtectorsEntity.isValidShrineSpawn(world, pos)) {
+                continue;
+            }
+
+            AxisAlignedBB searchArea = new AxisAlignedBB(pos).inflate(24.0D);
+
+            List<ElementalShrineProtectorsEntity> nearby =
+                    world.getEntitiesOfClass(
+                            ElementalShrineProtectorsEntity.class,
+                            searchArea,
+                            entity -> true
+                    );
+
+            if (nearby.size() >= 3) {
+                return;
+            }
+
+            ElementalShrineProtectorsEntity protector = OverworldEntityTypes.SHRINE_PROTECTOR.get().create(world.getLevel());
+
+            if (protector == null) {
+                return;
+            }
+
+            protector.moveTo(
+                    x + 0.5D, y, z + 0.5D, random.nextFloat() * 360, 0.0F
+            );
+
+            world.addFreshEntity(protector);
+
+            return;
+        }
     }
 }

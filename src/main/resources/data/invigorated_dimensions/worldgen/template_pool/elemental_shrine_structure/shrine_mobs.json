@@ -5,7 +5,7 @@
     {
       "weight": 100,
       "element": {
-        "location": "invigorated_dimensions:shrine/mobs/iron_golems",
+        "location": "invigorated_dimensions:shrine/mobs/cow",
         "processors": "minecraft:empty",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element",

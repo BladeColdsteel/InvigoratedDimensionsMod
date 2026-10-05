@@ -62,6 +62,7 @@ import com.bladecoldsteel.invigorateddimensions.metallicmountains.block.Metallic
 import com.bladecoldsteel.invigorateddimensions.metallicmountains.item.MetallicMountainsItems;
 import com.bladecoldsteel.invigorateddimensions.overworld.entity.OverworldEntityTypes;
 import com.bladecoldsteel.invigorateddimensions.overworld.entity.boss.render.FossilizedTraderRender;
+import com.bladecoldsteel.invigorateddimensions.overworld.entity.neutral.render.ElementalShrineProtectorRenderer;
 import com.bladecoldsteel.invigorateddimensions.overworld.item.OverworldItems;
 import com.bladecoldsteel.invigorateddimensions.terranata.entity.TerraNataEntityTypes;
 import com.bladecoldsteel.invigorateddimensions.terranata.entity.render.GiantEarthmawRender;
@@ -395,6 +396,7 @@ public class InvigoratedDimensions
         //Normal
         RenderingRegistry.registerEntityRenderingHandler(OverworldEntityTypes.FOSSIL_TRADER.get(), FossilizedTraderRender::new);
         RenderingRegistry.registerEntityRenderingHandler(OverworldEntityTypes.EMERALD_PROJECTILE.get(), entity -> new SpriteRenderer<>(entity, itemRenderer));
+        RenderingRegistry.registerEntityRenderingHandler(OverworldEntityTypes.SHRINE_PROTECTOR.get(), ElementalShrineProtectorRenderer::new);
 
         //Electric
         RenderTypeLookup.setRenderLayer(ElectricHighlandsBlocks.ELECTRICALLY_CHARGED_SAPLING.get(), RenderType.cutout());

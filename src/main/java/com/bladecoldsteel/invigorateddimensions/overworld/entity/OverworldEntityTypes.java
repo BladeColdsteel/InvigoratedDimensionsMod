@@ -2,6 +2,7 @@ package com.bladecoldsteel.invigorateddimensions.overworld.entity;
 
 import com.bladecoldsteel.invigorateddimensions.InvigoratedDimensions;
 import com.bladecoldsteel.invigorateddimensions.overworld.entity.boss.custom.FossilizedTraderEntity;
+import com.bladecoldsteel.invigorateddimensions.overworld.entity.neutral.custom.ElementalShrineProtectorsEntity;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
 import net.minecraft.util.ResourceLocation;
@@ -22,7 +23,11 @@ public class OverworldEntityTypes {
     //Monster
 
     //Passive
-
+    public static final RegistryObject<EntityType<ElementalShrineProtectorsEntity>> SHRINE_PROTECTOR =
+            ENTITY_TYPES.register("elemental_shrine_protector",
+                    () -> EntityType.Builder.of(ElementalShrineProtectorsEntity::new,
+                                    EntityClassification.CREATURE).sized(1.0F, 3.0F)
+                            .build(new ResourceLocation(InvigoratedDimensions.MOD_ID, "elemental_shrine_protector").toString()));
     //Projectile
     public static final RegistryObject<EntityType<FossilizedTraderEntity.EmeraldItemProjectile>> EMERALD_PROJECTILE =
             ENTITY_TYPES.register("emerald_projectile",
