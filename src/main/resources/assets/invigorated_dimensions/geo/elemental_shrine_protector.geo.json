@@ -1,0 +1,66 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.unknown",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 4.5,
+				"visible_bounds_offset": [0, 1.75, 0]
+			},
+			"bones": [
+				{
+					"name": "bottomBase",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-3, 0, -3], "size": [6, 8, 6], "uv": [64, 0]}
+					]
+				},
+				{
+					"name": "middleBase",
+					"pivot": [0, 11, 0],
+					"cubes": [
+						{"origin": [-5, 8, -5], "size": [10, 6, 10], "uv": [40, 48]}
+					]
+				},
+				{
+					"name": "topBase",
+					"pivot": [0, 17, 0],
+					"cubes": [
+						{"origin": [-8, 14, -8], "size": [16, 6, 16], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "body",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-6, 20, -4], "size": [12, 20, 8], "uv": [0, 48]}
+					]
+				},
+				{
+					"name": "leftArm",
+					"pivot": [-9, 36, 0],
+					"cubes": [
+						{"origin": [-12, 20, -3], "size": [6, 20, 6], "uv": [52, 22]}
+					]
+				},
+				{
+					"name": "rightArm",
+					"pivot": [9, 36, 0],
+					"cubes": [
+						{"origin": [6, 20, -3], "size": [6, 20, 6], "uv": [40, 64]}
+					]
+				},
+				{
+					"name": "head",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-5, 40, -12], "size": [10, 10, 16], "uv": [0, 22]}
+					]
+				}
+			]
+		}
+	]
+}
