@@ -483,6 +483,7 @@ public class IDItemModels extends IDItemModelProvider {
         itemBlock(UniversalBlocks.UNACTIVATED_RIFT_BLOCK);
         //Boss Keys
         normalItem(EmberwildsItems.FIRE_BOSS_KEY);
+        normalItem(WateryDepthsItems.WATER_BOSS_KEY);
         //Boss Relics
         normalItem(GrassyKnollItems.ANGRY_APPLE);
         normalItem(DreamlandItems.POCKET_WATCH);

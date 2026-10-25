@@ -7,6 +7,7 @@ import com.bladecoldsteel.invigorateddimensions.waterydepths.block.WateryDepthsB
 import com.bladecoldsteel.invigorateddimensions.world.dimension.ModDimensions;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.item.Rarity;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -21,6 +22,9 @@ public class WateryDepthsItems {
             "watery_activator", ITEMS, ItemHelper.activatorItem(ModDimensions.WATERY_DEPTHS, () -> WateryDepthsBlocks.PORTAL.get()),
             TAB
     );
+
+    public static final RegistryObject<Item> WATER_BOSS_KEY = ItemHelper.registerItem(
+            "water_boss_key", ITEMS, new Item.Properties().rarity(Rarity.EPIC), TAB, 16);
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

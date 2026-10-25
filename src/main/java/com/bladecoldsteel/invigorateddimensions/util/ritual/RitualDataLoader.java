@@ -57,6 +57,12 @@ public class RitualDataLoader extends JsonReloadListener {
                         specifics = new RitualDefinition.FireType(fireType);
                         break;
                     }
+                    case FLUID_SACRIFICE: {
+                        JsonObject ritualObj = obj.getAsJsonObject("ritual");
+                        ResourceLocation fluidType = new ResourceLocation(ritualObj.get("fluid_type").getAsString());
+                        specifics = new RitualDefinition.FluidType(fluidType);
+                        break;
+                    }
                     default: System.out.println(
                             "[RitualDataLoader] Ritual type not implemented yet: " + typeId
                     );

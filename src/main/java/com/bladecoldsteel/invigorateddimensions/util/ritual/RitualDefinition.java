@@ -52,6 +52,18 @@ public class RitualDefinition {
         }
     }
 
+    public static class FluidType implements RitualSpecifics {
+        public final ResourceLocation fluidType;
+
+        public FluidType(ResourceLocation fluidType) {
+            this.fluidType = fluidType;
+        }
+
+        public Fluid toFluid() {
+            return ForgeRegistries.FLUIDS.getValue(fluidType);
+        }
+    }
+
     public interface RitualSpecifics {
     }
 }

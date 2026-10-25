@@ -2,9 +2,7 @@ package com.bladecoldsteel.invigorateddimensions.integrations.jei;
 
 import com.bladecoldsteel.invigorateddimensions.InvigoratedDimensions;
 import com.bladecoldsteel.invigorateddimensions.util.ritual.RitualData;
-import com.bladecoldsteel.invigorateddimensions.util.ritual.RitualDataLoader;
 import com.bladecoldsteel.invigorateddimensions.util.ritual.RitualDefinition;
-import com.bladecoldsteel.invigorateddimensions.util.ritual.RitualType;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
 import mezz.jei.api.registration.IRecipeCategoryRegistration;
@@ -12,7 +10,6 @@ import mezz.jei.api.registration.IRecipeRegistration;
 import net.minecraft.util.ResourceLocation;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 @JeiPlugin

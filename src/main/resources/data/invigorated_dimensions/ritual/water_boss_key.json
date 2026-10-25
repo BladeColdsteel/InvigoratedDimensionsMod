@@ -1,0 +1,9 @@
+{
+  "type": "fluid_sacrifice",
+  "dimension": "invigorated_dimensions:watery_depths",
+  "input": "minecraft:grass_block",
+  "ritual": {
+    "fluid_type": "minecraft:water"
+  },
+  "output": "invigorated_dimensions:water_boss_key"
+}

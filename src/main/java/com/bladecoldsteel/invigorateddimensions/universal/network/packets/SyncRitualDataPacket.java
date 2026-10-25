@@ -30,6 +30,9 @@ public class SyncRitualDataPacket {
             if (ritual.getRitualSpecifics() instanceof RitualDefinition.FireType && ritual.getType() == RitualType.FIRE_SACRIFICE) {
                 RitualDefinition.FireType specifics = (RitualDefinition.FireType) ritual.getRitualSpecifics();
                 buf.writeResourceLocation(specifics.fireType);
+            } else if (ritual.getRitualSpecifics() instanceof RitualDefinition.FluidType && ritual.getType() == RitualType.FLUID_SACRIFICE) {
+                RitualDefinition.FluidType specifics = (RitualDefinition.FluidType) ritual.getRitualSpecifics();
+                buf.writeResourceLocation(specifics.fluidType);
             } else {
                 throw new IllegalArgumentException("Unsupported ritual type: " + ritual.getType());
             }
@@ -49,6 +52,9 @@ public class SyncRitualDataPacket {
             if (type == RitualType.FIRE_SACRIFICE) {
                 ResourceLocation specificFire = buf.readResourceLocation();
                 specifics = new RitualDefinition.FireType(specificFire);
+            } else if (type == RitualType.FLUID_SACRIFICE) {
+                ResourceLocation specificWater = buf.readResourceLocation();
+                specifics = new RitualDefinition.FluidType(specificWater);
             } else {
                 throw new IllegalArgumentException("Unsupported ritual type: " + type);
             }

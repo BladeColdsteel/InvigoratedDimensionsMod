@@ -2,6 +2,9 @@
   "invigorated_dimensions.dimension.minecraft.the_nether": "The Nether",
   "invigorated_dimensions.dimension.minecraft.overworld": "The Overworld",
   "invigorated_dimensions.dimension.minecraft.the_end": "The End",
+  "invigorated_dimensions.dimension.invigorated_dimensions.watery_depths": "The Watery Depths",
+  "invigorated_dimensions.dimension.invigorated_dimensions.valley_of_death": "The Valley of Death",
+  "invigorated_dimensions.dimension.invigorated_dimensions.grassy_knoll": "The Grassy Knoll",
 
   "key.categories.invigorated_dimensions": "Invigorated Dimensions Keybinds",
   "key.invigorated_dimensions.drill_up": "Drill Up",
@@ -116,6 +119,7 @@
   "block.invigorated_dimensions.watery_portal_frame": "Watery Portal Frame",
   "block.invigorated_dimensions.watery_depths_portal": "Watery Depths Portal",
   "item.invigorated_dimensions.watery_activator": "Watery Portal Activator",
+  "item.invigorated_dimensions.water_boss_key": "Watery Boss Key",
 
   "block.invigorated_dimensions.embered_logs": "Embered Log",
   "block.invigorated_dimensions.embered_sapling": "Embered Sapling",
