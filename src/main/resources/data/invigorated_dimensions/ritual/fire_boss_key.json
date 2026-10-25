@@ -1,7 +1,7 @@
 {
   "type": "fire_sacrifice",
   "dimension": "minecraft:the_nether",
-  "input": "minecraft:iron_ingot",
+  "input": "minecraft:netherite_ingot",
   "ritual": {
     "fire_type": "minecraft:soul_fire"
   },
