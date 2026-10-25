@@ -21,6 +21,9 @@ public class EmberwildsItems {
     public static final RegistryObject<UniversalTooltipArmorItem> FIRE_LORD_CROWN = ItemHelper.registerTooltipArmor(
             "fire_lord_crown", ITEMS, TAB, IDArmorMaterials.FIRE_LORD_CROWN, EquipmentSlotType.HEAD, new Item.Properties().rarity(Rarity.EPIC), "Relic");
 
+    public static final RegistryObject<Item> FIRE_BOSS_KEY = ItemHelper.registerItem(
+            "fire_boss_key", ITEMS, new Item.Properties().rarity(Rarity.EPIC), TAB, 16);
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

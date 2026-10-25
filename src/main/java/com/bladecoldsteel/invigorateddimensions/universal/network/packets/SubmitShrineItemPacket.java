@@ -7,7 +7,6 @@ import com.bladecoldsteel.invigorateddimensions.universal.entity.tileentity.cust
 import com.bladecoldsteel.invigorateddimensions.util.DimensionInfo;
 import com.bladecoldsteel.invigorateddimensions.util.DimensionInfoDataLoader;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
 import net.minecraft.block.RedstoneLampBlock;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;

@@ -4,6 +4,7 @@ import com.bladecoldsteel.invigorateddimensions.InvigoratedDimensions;
 import com.bladecoldsteel.invigorateddimensions.universal.network.packets.ClientInputPacket;
 import com.bladecoldsteel.invigorateddimensions.universal.network.packets.RotateBlockPacket;
 import com.bladecoldsteel.invigorateddimensions.universal.network.packets.SubmitShrineItemPacket;
+import com.bladecoldsteel.invigorateddimensions.universal.network.packets.SyncRitualDataPacket;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.network.NetworkRegistry;
 import net.minecraftforge.fml.network.simple.SimpleChannel;
@@ -40,6 +41,13 @@ public class InvigoratedDimensionsNetworkHandler {
                 ClientInputPacket::encode,
                 ClientInputPacket::decode,
                 ClientInputPacket::handle
+        );
+        INSTANCE.registerMessage(id++,
+                //Ritual JEI Logic
+                SyncRitualDataPacket.class,
+                SyncRitualDataPacket::encode,
+                SyncRitualDataPacket::decode,
+                SyncRitualDataPacket::handle
         );
     }
 }

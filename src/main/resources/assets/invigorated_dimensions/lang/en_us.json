@@ -1,4 +1,8 @@
 {
+  "invigorated_dimensions.dimension.minecraft.the_nether": "The Nether",
+  "invigorated_dimensions.dimension.minecraft.overworld": "The Overworld",
+  "invigorated_dimensions.dimension.minecraft.the_end": "The End",
+
   "key.categories.invigorated_dimensions": "Invigorated Dimensions Keybinds",
   "key.invigorated_dimensions.drill_up": "Drill Up",
   "block.invigorated_dimensions.crystallized_leaves": "Crystallized_Leaves",
@@ -126,6 +130,7 @@
   "block.invigorated_dimensions.embered_wooden_pressure_plate": "Embered Wooden Pressure Plate",
   "block.invigorated_dimensions.embered_stone_pressure_plate": "Netherrack Pressure Plate",
   "item.invigorated_dimensions.fire_lord_crown": "The Fire Lords Crown",
+  "item.invigorated_dimensions.fire_boss_key": "Embered Boss Key",
   "entity.invigorated_dimensions.fire_lord": "The Fire Lord",
 
   "block.invigorated_dimensions.draconic_logs": "Draconic Log",

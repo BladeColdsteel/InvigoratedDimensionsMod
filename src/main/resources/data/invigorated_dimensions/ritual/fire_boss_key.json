@@ -1,0 +1,9 @@
+{
+  "type": "fire_sacrifice",
+  "dimension": "minecraft:the_nether",
+  "input": "minecraft:iron_ingot",
+  "ritual": {
+    "fire_type": "minecraft:soul_fire"
+  },
+  "output": "invigorated_dimensions:fire_boss_key"
+}
